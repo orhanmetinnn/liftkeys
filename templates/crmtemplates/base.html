@@ -1,0 +1,173 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <style>
+    body {
+      overflow-x: hidden;
+    }
+    .sidebar {
+      width: 280px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #f5f6fa;
+      box-shadow: 2px 0 12px rgb(0 0 0 / 0.1);
+      padding-top: 1rem;
+    }
+    .sidebar .nav-link {
+      color: #6c757d;
+      font-weight: 500;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+      background-color: #3b5bfd;
+      color: white;
+    }
+    .sidebar .nav-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+    .submenu {
+      padding-left: 2rem;
+      margin-top: 4px;
+    }
+    .submenu .nav-link {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #495057;
+    }
+    .submenu .nav-link.active {
+      color: #3b5bfd;
+      font-weight: 600;
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+    <nav class="sidebar d-flex flex-column">
+    <a href="#" class="d-flex align-items-center mb-4 px-3 text-decoration-none">
+      <img src="{% static "image/logo-liftkeys-menu.png" %}" alt="logo" />
+    </a>
+    
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a href="#dashboardSubmenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="dashboardSubmenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:16px; height:16px;">
+                <path d="M4 6h16v2H4zM4 11h16v2H4zM4 16h16v2H4z"/>
+                </svg>
+                Dashboard
+            </a>
+            <ul class="nav flex-column collapse submenu" id="dashboardSubmenu">
+                <li><a href="#" class="nav-link">My Homepage</a></li>
+                <li><a href="#" class="nav-link">My sales</a></li>
+                <li><a href="#" class="nav-link">Sales Analytics</a></li>
+                <li><a href="#" class="nav-link">Call Center Date</a></li>
+                <li><a href="#" class="nav-link">Sales Manager</a></li>
+            </ul>
+        </li>
+
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            Accounts
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            Contacts
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 14c1.66 0 2.99-1.34 2.99-3S16.66 8 15 8s-3 1.34-3 3 1.34 3 3 3z"/></svg>
+            Leads
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16v2H4zM4 8h16v2H4zM4 12h16v2H4z"/></svg>
+            Emails
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-14c-1.1 0-2 .9-2 2v14l7-3 7 3V6c0-1.1-.9-2-2-2z"/></svg>
+            Calendar
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-16c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2z"/></svg>
+            Cases
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2h-12zM6 8h12v2h-12zM6 12h12v2h-12z"/></svg>
+            Activities
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4h18v2H3zM3 8h18v2H3zM3 12h18v2H3z"/></svg>
+            Documents
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/pass/" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/></svg>
+            Users
+            </a>
+        </li>
+    </ul>
+  </nav>
+
+  <main style="margin-left: 280px; padding: 2rem;">
+        {% block content %} {% endblock %}
+
+  </main>
+
+  <script>
+        const currentPath = window.location.pathname;
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+        // href değerini al, bazen tam URL olabilir, basename kısmını al
+        const linkPath = new URL(link.href).pathname;
+
+        if(linkPath === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+        });
+    </script>
+    <script src="{% static "js\bootstrap.bundle.min.js" %}"></script>
+</body>
+</html>
+
+
+

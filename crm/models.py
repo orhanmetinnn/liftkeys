@@ -3,8 +3,7 @@ from django.db import models
 # Create your models here.
 
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from django.contrib.auth import get_user_model
-User = get_user_model()
+
 
 
 
@@ -40,6 +39,10 @@ class CustomUserManager(BaseUserManager):
 from image_cropping import ImageRatioField
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+    ROLE_CHOICES = (
+        ('employee', 'Employee'),
+        ('customer', 'Customer'),   # yani ziyaretçi
+    )
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField(unique=True)
@@ -65,17 +68,19 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 
 class Employee(models.Model):
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='employee_profile')
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    tc_identity = models.CharField(max_length=11, unique=True)
-    birth_date = models.DateField()
-    gender = models.CharField(max_length=10, choices=[("M", "Erkek"), ("F", "Kadın")])
-    email = models.EmailField()
-    phone = models.CharField(max_length=20)
-    address = models.TextField(blank=True, null=True)
-    start_date = models.DateField()
-    is_active = models.BooleanField(default=True)
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='employee_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    first_name = models.CharField(max_length=50,verbose_name='Ad')
+    last_name = models.CharField(max_length=50,verbose_name='Soyad')
+    tc_identity = models.CharField(max_length=11, unique=True,verbose_name='TC Kimlik No')
+    birth_date = models.DateField(verbose_name='Doğum Tarihi')
+    gender = models.CharField(max_length=10, choices=[("M", "Erkek"), ("F", "Kadın")],verbose_name='Cinsiyet')
+    email = models.EmailField(verbose_name='E-posta', unique=True)
+    phone = models.CharField(max_length=20,verbose_name='Telefon Numarası', blank=True, null=True)
+    address = models.TextField(blank=True, null=True,verbose_name='Adres')
+    start_date = models.DateField(verbose_name='İşe Başlama Tarihi', null=True, blank=True)
+    profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True,verbose_name='Profil Resmi')
+    cropping = ImageRatioField('profile_image', '300x300')  # Kırpma oranını burada belirleyin
+    is_active = models.BooleanField(default=True,verbose_name='Aktif Mi?')
 
 
 
