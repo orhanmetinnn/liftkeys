@@ -3963,3 +3963,90 @@ django.template.exceptions.TemplateDoesNotExist: crmtemplates/base.html
 [2025-08-05 20:16:32,679] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
 [2025-08-05 20:16:32,861] WARNING django.request - Not Found: /favicon.ico
 [2025-08-05 20:16:32,861] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 08:28:05,392] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 08:28:05,393] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 08:28:07,071] WARNING django.request - Not Found: /pass/
+[2025-08-06 08:28:07,072] WARNING django.server - "GET /pass/ HTTP/1.1" 404 2586
+[2025-08-06 09:25:18,036] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:19,250] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:19,416] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:20,025] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:20,201] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:20,389] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:26,095] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:26,515] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:25:26,516] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:25:26,965] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:27,084] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:25:27,084] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:25:56,119] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:56,474] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:25:56,476] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:25:56,895] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:57,007] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:25:57,008] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:25:59,540] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:25:59,698] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:25:59,699] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:26:00,096] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:26:00,234] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:26:00,234] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:26:00,576] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:26:00,694] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:26:00,694] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:26:04,532] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:26:05,040] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:26:05,041] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:26:05,233] WARNING django.server - "GET /static/css/crmemployee.css HTTP/1.1" 404 1871
+[2025-08-06 09:26:05,442] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:26:05,442] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:26:37,648] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:26:37,651] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:26:53,649] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:26:53,649] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:27:02,040] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:27:02,040] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:28:49,369] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:28:49,372] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:28:50,245] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:28:50,246] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:30:14,705] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:30:14,705] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:30:19,610] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:30:19,610] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:30:47,882] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:30:47,882] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:30:49,227] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:30:49,228] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:31:07,486] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:31:07,486] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:31:08,315] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:31:08,315] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:32:37,728] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:32:37,728] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:32:38,613] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:32:38,614] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:32:39,488] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:32:39,489] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:33:28,318] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:33:28,318] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:33:29,582] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:33:29,584] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:33:58,665] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:33:58,665] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:33:59,924] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:33:59,925] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:34:14,590] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:34:14,590] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:34:14,937] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:34:14,937] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:34:18,664] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:34:18,664] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:34:24,555] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:34:24,555] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:34:33,085] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:34:33,086] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 09:37:55,575] WARNING django.request - Not Found: /pass/
+[2025-08-06 09:37:55,576] WARNING django.server - "GET /pass/ HTTP/1.1" 404 2586
+[2025-08-06 09:38:28,228] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 09:38:28,228] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604

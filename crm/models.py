@@ -78,7 +78,7 @@ class Employee(models.Model):
     phone = models.CharField(max_length=20,verbose_name='Telefon Numarası', blank=True, null=True)
     address = models.TextField(blank=True, null=True,verbose_name='Adres')
     start_date = models.DateField(verbose_name='İşe Başlama Tarihi', null=True, blank=True)
-    profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True,verbose_name='Profil Resmi')
+    profile_image = models.ImageField(upload_to='employee_images/', blank=True, null=True,verbose_name='Profil Resmi')
     cropping = ImageRatioField('profile_image', '300x300')  # Kırpma oranını burada belirleyin
     is_active = models.BooleanField(default=True,verbose_name='Aktif Mi?')
 

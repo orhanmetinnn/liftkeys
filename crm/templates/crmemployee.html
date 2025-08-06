@@ -2,5 +2,68 @@
 {% block content %}
 {% load static %}
 {% load i18n %}
-<h1>{% trans "Welcome to Liftkeys" %}</h1>
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+<div class="container py-5">
+        <div class="glass-card mx-auto col-lg-10" data-aos="fade-up">
+            <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Çalışan Oluştur</h2>
+
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        {{ form.first_name.label_tag }} {{ form.first_name }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.last_name.label_tag }} {{ form.last_name }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        {{ form.tc_identity.label_tag }} {{ form.tc_identity }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.birth_date.label_tag }} {{ form.birth_date }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        {{ form.gender.label_tag }} {{ form.gender }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.email.label_tag }} {{ form.email }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        {{ form.phone.label_tag }} {{ form.phone }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.start_date.label_tag }} {{ form.start_date }}
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        {{ form.address.label_tag }} {{ form.address }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        {{ form.profile_image.label_tag }} {{ form.profile_image }}
+                    </div>
+
+                    <div class="col-md-6 mb-3 d-flex align-items-center">
+                        <div class="form-check">
+                            {{ form.is_active }} {{ form.is_active.label_tag }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-end">
+                    <button type="submit" class="btn btn-glow px-4 py-2">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 {% endblock %}
+
+
