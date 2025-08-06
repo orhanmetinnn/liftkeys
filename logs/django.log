@@ -4050,3 +4050,7 @@ django.template.exceptions.TemplateDoesNotExist: crmtemplates/base.html
 [2025-08-06 09:37:55,576] WARNING django.server - "GET /pass/ HTTP/1.1" 404 2586
 [2025-08-06 09:38:28,228] WARNING django.request - Not Found: /favicon.ico
 [2025-08-06 09:38:28,228] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2604
+[2025-08-06 16:11:45,748] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 16:11:45,748] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2615
+[2025-08-06 16:11:46,586] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 16:11:46,587] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2615

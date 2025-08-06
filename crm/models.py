@@ -86,6 +86,7 @@ class Employee(models.Model):
 
 
 class JobInfo(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='job_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
     employee = models.OneToOneField(Employee, on_delete=models.CASCADE, related_name='job_info')
     title = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
@@ -97,6 +98,7 @@ class JobInfo(models.Model):
 
 
 class Education(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='education_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='educations')
     school_name = models.CharField(max_length=255)
     degree = models.CharField(max_length=100)
@@ -108,6 +110,7 @@ class Education(models.Model):
 
 
 class Experience(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='experience_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='experiences')
     company_name = models.CharField(max_length=255)
     position = models.CharField(max_length=100)
