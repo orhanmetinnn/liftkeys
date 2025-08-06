@@ -11,7 +11,7 @@ logger = logging.getLogger('django')
 
 
 from django.shortcuts import render, redirect
-from .forms import EmployeeForm  # Formu içeri aktar
+from .forms import EmployeeForm , JobInfoForm  # Formu içeri aktar
 from django.contrib import messages 
 
 def main_view(request):
@@ -27,3 +27,28 @@ def main_view(request):
         form = EmployeeForm()
     
     return render(request, 'crmemployee.html', {'form': form})
+
+
+
+
+def jobinfo_view(request):
+    if request.method == 'POST':
+        formjobinfo = JobInfoForm(request.POST, request.FILES)
+        if formjobinfo.is_valid():
+            formjobinfo.save()
+            messages.success(request, 'Çalışan başarıyla kaydedildi.')
+            return redirect('jobinfo_edit')  # yönlendirme adresini ihtiyacına göre güncelle
+        else:
+            messages.error(request, 'Formda hatalar var. Lütfen düzeltin.')
+    else:
+        formjobinfo = JobInfoForm()  # ← burada doğru form nesnesi oluşturulmalı
+
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+
+
+
+
+
+
+
+

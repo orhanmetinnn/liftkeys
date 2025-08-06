@@ -19,3 +19,37 @@ class EmployeeForm(forms.ModelForm):
             'profile_image': forms.FileInput(attrs={'class': 'form-control'}),
             'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
         }
+
+
+
+
+
+from django import forms
+from .models import JobInfo
+
+class JobInfoForm(forms.ModelForm):
+    class Meta:
+        model = JobInfo
+        fields = '__all__'
+        widgets = {
+            'user': forms.Select(attrs={'class': 'form-select'}),
+            'employee': forms.Select(attrs={'class': 'form-select'}),
+            'title': forms.TextInput(attrs={
+                'class': 'form-control', 
+                'placeholder': 'Pozisyon / Ünvan'
+            }),
+            'department': forms.TextInput(attrs={
+                'class': 'form-control', 
+                'placeholder': 'Departman'
+            }),
+            'manager': forms.Select(attrs={'class': 'form-select'}),
+            'employment_type': forms.Select(attrs={'class': 'form-select'}),
+            'salary': forms.NumberInput(attrs={
+                'class': 'form-control', 
+                'placeholder': 'Aylık maaş (₺)'
+            }),
+            'work_location': forms.TextInput(attrs={
+                'class': 'form-control', 
+                'placeholder': 'Çalışma Lokasyonu (örn. İstanbul, Uzaktan)'
+            }),
+        }

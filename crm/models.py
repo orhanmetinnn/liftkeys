@@ -82,7 +82,8 @@ class Employee(models.Model):
     cropping = ImageRatioField('profile_image', '300x300')  # Kırpma oranını burada belirleyin
     is_active = models.BooleanField(default=True,verbose_name='Aktif Mi?')
 
-
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} ({self.tc_identity})"
 
 
 class JobInfo(models.Model):

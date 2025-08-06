@@ -4054,3 +4054,967 @@ django.template.exceptions.TemplateDoesNotExist: crmtemplates/base.html
 [2025-08-06 16:11:45,748] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2615
 [2025-08-06 16:11:46,586] WARNING django.request - Not Found: /favicon.ico
 [2025-08-06 16:11:46,587] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2615
+[2025-08-06 21:35:47,708] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:35:47,709] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2615
+[2025-08-06 21:45:22,804] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:22,806] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80570
+[2025-08-06 21:45:24,110] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:24,112] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80570
+[2025-08-06 21:45:47,385] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:47,387] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:47,864] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:47,866] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:48,008] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:48,010] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:48,159] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:48,160] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:48,321] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:48,323] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:48,474] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:48,477] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:48,606] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:48,608] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:48,769] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:48,771] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:48,919] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:48,921] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:49,073] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:49,075] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:49,243] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:49,245] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:49,425] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:49,427] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:49,595] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:49,596] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:49,768] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:49,770] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:49,953] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:49,955] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:50,439] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:50,441] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:50,602] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:50,604] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:50,782] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:50,784] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:50,977] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:50,979] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:51,155] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:51,157] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:45:51,338] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmjobinfo.html
+[2025-08-06 21:45:51,340] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 80707
+[2025-08-06 21:51:29,161] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:29,161] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:29,564] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:29,564] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:29,801] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:29,802] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:30,022] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:30,022] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:30,231] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:30,231] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:41,393] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:41,393] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:41,919] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:41,919] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:42,161] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:42,162] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:42,345] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:42,345] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:45,219] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:45,219] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:45,549] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:45,549] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:45,924] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:45,924] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:49,335] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:49,335] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:49,596] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:49,597] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:49,819] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:49,819] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:50,018] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:50,018] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:50,758] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:50,758] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:50,993] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:50,994] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:51:51,212] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:51:51,212] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:52:31,137] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:52:31,138] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:52:31,174] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:52:31,175] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:52:31,779] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:52:31,780] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:52:31,811] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:52:31,812] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:52:31,993] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:52:31,995] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:52:32,026] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:52:32,026] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:52:32,178] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:52:32,180] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:52:32,214] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:52:32,215] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:52:32,389] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:52:32,391] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:52:32,424] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:52:32,425] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:45,877] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:45,879] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:45,909] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:45,910] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:46,898] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:46,900] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:46,928] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:46,929] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:47,169] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:47,171] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:47,202] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:47,203] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:47,408] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:47,409] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:47,443] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:47,443] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:47,577] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:47,579] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:47,611] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:47,611] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:47,753] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:47,755] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:47,786] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:47,786] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:47,929] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:47,931] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:47,962] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:47,963] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:48,114] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:48,116] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:48,150] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:48,151] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:48,314] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:48,316] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:48,345] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:48,345] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:53:48,536] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:53:48,537] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65533
+[2025-08-06 21:53:48,569] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:53:48,570] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:44,768] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:44,771] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:44,799] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:44,799] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:45,201] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:45,204] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:45,232] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:45,233] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:45,409] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:45,412] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:45,443] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:45,443] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:45,592] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:45,595] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:45,628] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:45,629] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:45,769] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:45,771] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:45,799] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:45,800] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:45,953] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:45,956] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:45,985] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:45,986] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:46,153] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:46,156] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:46,185] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:46,185] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:46,345] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:46,348] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:46,380] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:46,380] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:46,529] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:46,531] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:46,565] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:46,565] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:46,713] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:46,716] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:46,748] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:46,748] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:46,906] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:46,908] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:46,940] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:46,941] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:47,097] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:47,100] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:47,130] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:47,130] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:47,298] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:47,300] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:47,331] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:47,332] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:54:47,490] ERROR django.request - Internal Server Error: /jobinfo/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 46, in jobinfo_view
+    return render(request, 'crmjobinfo.html', {'formjobinfo': formjobinfo})
+                                                              ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'formjobinfo' where it is not associated with a value
+[2025-08-06 21:54:47,493] ERROR django.server - "GET /jobinfo/ HTTP/1.1" 500 65487
+[2025-08-06 21:54:47,526] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:54:47,526] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:55:26,754] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:55:26,754] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:55:27,527] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:55:27,527] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
+[2025-08-06 21:55:27,965] WARNING django.request - Not Found: /favicon.ico
+[2025-08-06 21:55:27,966] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 2877
