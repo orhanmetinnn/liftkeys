@@ -3,46 +3,126 @@
 {% load static %}
 {% load i18n %}
 {% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
-<div class="container py-5">
-        <div class="glass-card mx-auto col-lg-10" data-aos="fade-up">
-            <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Çalışan Oluştur</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col">   
+                <div class="container py-4">
+                    <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
+                        <h3 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Çalışan Bilgileri Tanımlama</h2>
 
-            <form method="POST">
-                {% csrf_token %}
-                <div class="row">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
 
-                    <div class="col-md-6 mb-3">
-                        {{ formjobinfo.employee.label_tag }} {{ formjobinfo.employee }}
-                    </div>
+                                <div class="col-md-6 mb-3">
+                                    {{ formjobinfo.employee.label_tag }} {{ formjobinfo.employee }}
+                                </div>
 
-                    <div class="col-md-6 mb-3">
-                        {{ formjobinfo.title.label_tag }} {{ formjobinfo.title }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ formjobinfo.department.label_tag }} {{ formjobinfo.department }}
-                    </div>
+                                <div class="col-md-6 mb-3">
+                                    {{ formjobinfo.title.label_tag }} {{ formjobinfo.title }}
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    {{ formjobinfo.department.label_tag }} {{ formjobinfo.department }}
+                                </div>
 
-                    <div class="col-md-6 mb-3">
-                        {{ formjobinfo.manager.label_tag }} {{ formjobinfo.manager }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ formjobinfo.employment_type.label_tag }} {{ formjobinfo.employment_type }}
-                    </div>
+                                <div class="col-md-6 mb-3">
+                                    {{ formjobinfo.manager.label_tag }} {{ formjobinfo.manager }}
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    {{ formjobinfo.employment_type.label_tag }} {{ formjobinfo.employment_type }}
+                                </div>
 
-                    <div class="col-md-6 mb-3">
-                        {{ formjobinfo.salary.label_tag }} {{ formjobinfo.salary }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ formjobinfo.work_location.label_tag }} {{ formjobinfo.work_location }}
+                                <div class="col-md-6 mb-3">
+                                    {{ formjobinfo.work_location.label_tag }} {{ formjobinfo.work_location }}
+                                </div>
+                            </div>
+
+                            <div class="text-end">
+                                <button type="submit" name="submit_jobinfo" class="btn btn-glow px-4 py-2">Kaydet</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
-                <div class="text-end">
-                    <button type="submit" class="btn btn-glow px-4 py-2">Kaydet</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                    <div class="container py-2">
+                        <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
+                            <h3 class="text-center mb-4"><i class='bx bxs-user-plus'></i>Ünvan Oluştur</h2>
+
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="row">
+
+                                    <div class="col-md-12 mb-3">
+                                        {{ formtitle.name.label_tag }} {{ formtitle.name }}
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="text-end">
+                                    <button type="submit" name="submit_title" class="btn btn-glow px-4 py-2">Kaydet</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="col">
+                <div class="container py-2">
+                    <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
+                        <h3 class="text-center mb-4"><i class='bx bxs-user-plus'></i>Departman Oluştur</h2>
+
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+
+                                <div class="col-md-12 mb-3">
+                                    {{ formdepartment.name.label_tag }} {{ formdepartment.name }}
+                                </div>
+                                
+                            </div>
+
+                            <div class="text-end">
+                                <button type="submit" name="submit_department" class="btn btn-glow px-4 py-2">Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="container py-2">
+                    <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
+                        <h3 class="text-center mb-4"><i class='bx bxs-user-plus'></i>Lokasyon Oluştur</h2>
+
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+
+                                <div class="col-md-12 mb-3">
+                                    {{ formworklocation.name.label_tag }} {{ formworklocation.name }}
+                                </div>
+                                
+                            </div>
+
+                            <div class="text-end">
+                                <button type="submit" name="submit_worklocation" class="btn btn-glow px-4 py-2">Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>

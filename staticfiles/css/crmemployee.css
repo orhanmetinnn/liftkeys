@@ -1,39 +1,60 @@
 body {
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background: #eeeded; /* Beyaz-zemin */
     font-family: 'Inter', sans-serif;
-    color: #fff;
+    color: #333; /* Genel metin rengi */
+    
 }
+
 .glass-card {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+
 }
-.form-control, .form-select {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
 }
+
 .form-control::placeholder {
-    color: rgba(255,255,255,0.5);
+    color: rgba(0, 0, 0, 0.4);
 }
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #999;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 .form-check-label {
     margin-left: 8px;
+    color: #333;
 }
+
 .btn-glow {
-    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(to right, #e0e0e0, #d4d4d4);
     border: none;
-    color: white;
-    transition: 0.3s;
+    color: #222;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-radius: 8px;
 }
+
 .btn-glow:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px #6a11cb;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 label {
     margin-bottom: 5px;
     font-weight: 500;
+    color: #444;
 }

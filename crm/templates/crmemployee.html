@@ -5,60 +5,223 @@
 {% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
 <div class="container py-5">
         <div class="glass-card mx-auto col-lg-10" data-aos="fade-up">
-            <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Çalışan Oluştur</h2>
+            <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">Yeni Kayıt</button>
+                <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">Güncelle</button>
+            </div>
 
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        {{ form.first_name.label_tag }} {{ form.first_name }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.last_name.label_tag }} {{ form.last_name }}
-                    </div>
+            <div>
 
-                    <div class="col-md-6 mb-3">
-                        {{ form.tc_identity.label_tag }} {{ form.tc_identity }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.birth_date.label_tag }} {{ form.birth_date }}
-                    </div>
+                <div  id="form-update" style="display:none;">
+                    <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Çalışan Güncelle</h2>
 
-                    <div class="col-md-6 mb-3">
-                        {{ form.gender.label_tag }} {{ form.gender }}
+                    <div class="mb-3">
+                        <label for="employeeSelect" class="form-label">Çalışan Seçiniz</label>
+                        <select id="employeeSelect" class="form-select" onchange="loadEmployeeData(this.value)">
+                            <option value="" selected>Seçiniz</option>
+                            {% for employee in employee_list %}
+                            <option value="{{ employee.id }}">{{ employee.first_name }} {{ employee.last_name }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.email.label_tag }} {{ form.email }}
-                    </div>
+                    
+                    <form id="updateForm" method="POST" enctype="multipart/form-data">
+                        
+                        {% csrf_token %}
+                        <input type="hidden" id="update_employee_id" name="update_employee_id" value="">
 
-                    <div class="col-md-6 mb-3">
-                        {{ form.phone.label_tag }} {{ form.phone }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.start_date.label_tag }} {{ form.start_date }}
-                    </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.first_name.label_tag }} {{ form_update.first_name }}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.last_name.label_tag }} {{ form_update.last_name }}
+                            </div>
 
-                    <div class="col-md-12 mb-3">
-                        {{ form.address.label_tag }} {{ form.address }}
-                    </div>
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.tc_identity.label_tag }} {{ form_update.tc_identity }}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.birth_date.label_tag }} {{ form_update.birth_date }}
+                            </div>
 
-                    <div class="col-md-6 mb-3">
-                        {{ form.profile_image.label_tag }} {{ form.profile_image }}
-                    </div>
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.gender.label_tag }} {{ form_update.gender }}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.email.label_tag }} {{ form_update.email }}
+                            </div>
 
-                    <div class="col-md-6 mb-3 d-flex align-items-center">
-                        <div class="form-check">
-                            {{ form.is_active }} {{ form.is_active.label_tag }}
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.phone.label_tag }} {{ form_update.phone }}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.start_date.label_tag }} {{ form_update.start_date }}
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                {{ form_update.address.label_tag }} {{ form_update.address }}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                {{ form_create.profile_image.label_tag }} {{ form_create.profile_image }}
+                            </div>
+
+                            <div class="col-md-6 mb-3 d-flex align-items-center">
+                                <div class="form_create-check">
+                                    {{ form_update.is_active }} {{ form_update.is_active.label_tag }}
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" name = "update_submit" class="btn btn-glow">Güncelle</button>
+                    </form>
+                    </form>
+                </div>
+            </div>
+            <div id="form-create">
+                <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Çalışan Oluştur</h2>
+
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.first_name.label_tag }} {{ form_create.first_name }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.last_name.label_tag }} {{ form_create.last_name }}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.tc_identity.label_tag }} {{ form_create.tc_identity }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.birth_date.label_tag }} {{ form_create.birth_date }}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.gender.label_tag }} {{ form_create.gender }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.email.label_tag }} {{ form_create.email }}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.phone.label_tag }} {{ form_create.phone }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.start_date.label_tag }} {{ form_create.start_date }}
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            {{ form_create.address.label_tag }} {{ form_create.address }}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.profile_image.label_tag }} {{ form_create.profile_image }}
+                        </div>
+
+                        <div class="col-md-6 mb-3 d-flex align-items-center">
+                            <div class="form_create-check">
+                                {{ form_create.is_active }} {{ form_create.is_active.label_tag }}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="text-end">
-                    <button type="submit" class="btn btn-glow px-4 py-2">Kaydet</button>
-                </div>
-            </form>
+                    <div class="text-end">
+                        <button type="submit" name = "create_submit" class="btn btn-glow px-4 py-2">Kaydet</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
+    {% if messages %}
+    <div id="message-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <script>
+        function showForm(type) {
+            const createForm = document.getElementById('form-create');
+            const updateForm = document.getElementById('form-update');
+            const btnCreate = document.getElementById('btn-create');
+            const btnUpdate = document.getElementById('btn-update');
+
+            if(type === 'create'){
+                createForm.style.display = 'block';
+                updateForm.style.display = 'none';
+                btnCreate.classList.add('btn-primary', 'active');
+                btnCreate.classList.remove('btn-outline-primary');
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+            } else {
+                createForm.style.display = 'none';
+                updateForm.style.display = 'block';
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+                btnUpdate.classList.add('btn-primary', 'active');
+                btnUpdate.classList.remove('btn-outline-primary');
+            }
+        }
+
+    </script>
+
+    <script>
+        function loadEmployeeData(employeeId) {
+            if (!employeeId) {
+                document.getElementById('updateForm').reset();
+                return;
+            }
+
+            fetch(`/api/employee/${employeeId}/`)
+            .then(response => response.json())
+            .then(data => {
+                // Form alanlarını doldur
+                document.getElementById('update_employee_id').value = data.id;
+                document.getElementById('id_update-first_name').value = data.first_name;
+                document.getElementById('id_update-first_name').value = data.first_name;
+                document.getElementById('id_update-last_name').value = data.last_name;
+                document.getElementById('id_update-tc_identity').value = data.tc_identity;
+                document.getElementById('id_update-birth_date').value = data.birth_date;
+                document.getElementById('id_update-gender').value = data.gender;
+                document.getElementById('id_update-phone').value = data.phone_number;
+                document.getElementById('id_update-email').value = data.email;
+                document.getElementById('id_update-address').value = data.address;
+                document.getElementById('id_update-start_date').value = data.start_date;
+                document.getElementById('id_update-is_active').checked = data.is_active;
+                console.log(`Loaded data for employee ID ${employeeId}:`, data);
+                // ... diğer alanlar varsa onları da ekle
+            });
+            
+        }
+    </script>
+
+    <script>
+        // Sayfa yüklendiğinde mesajları otomatik gizle
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                const container = document.getElementById('message-container');
+                if(container) {
+                    // Bootstrap 5 kullanıyorsan alertleri kapatmak için şöyle yapabilirsin:
+                    [...container.querySelectorAll('.alert')].forEach(alert => {
+                        // fade out efekti için:
+                        alert.classList.remove('show');
+                        alert.classList.add('hide');
+                        // sonra DOM'dan kaldır:
+                        setTimeout(() => alert.remove(), 2000); 
+                    });
+                }
+            }, 4000);  // 4 saniye sonra kaybolur
+        });
+    </script>
+
+
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>

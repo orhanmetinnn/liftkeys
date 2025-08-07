@@ -86,26 +86,64 @@ class Employee(models.Model):
         return f"{self.first_name} {self.last_name} ({self.tc_identity})"
 
 
+
+
+
+class TitlePersonel(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='title_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    name= models.CharField(max_length=250, verbose_name='Unvan Adı')
+
+    def __str__(self):
+            return self.name
+
+
+
+class Department(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='department_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    name = models.CharField(max_length=250, verbose_name='Departman Adı')
+
+    def __str__(self):
+        return self.name
+    
+
+class WorkLocation(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='work_location_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    name = models.CharField(max_length=250, verbose_name='Çalışma Lokasyonu Adı')
+
+    def __str__(self):
+        return self.name
+
+
+
+
+
 class JobInfo(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='job_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
-    employee = models.OneToOneField(Employee, on_delete=models.CASCADE, related_name='job_info')
-    title = models.CharField(max_length=100)
-    department = models.CharField(max_length=100)
-    manager = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL)
-    employment_type = models.CharField(max_length=50, choices=[("Full", "Tam Zamanlı"), ("Part", "Yarı Zamanlı"), ("Contract", "Sözleşmeli")])
-    salary = models.DecimalField(max_digits=10, decimal_places=2)
-    work_location = models.CharField(max_length=255)
+    
+    employee = models.OneToOneField(Employee, on_delete=models.CASCADE, related_name='job_info_as_employee')
+    title = models.ForeignKey(TitlePersonel, on_delete=models.CASCADE, related_name='job_info', verbose_name='Unvan')
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='job_info', verbose_name='Departman')
+
+    manager = models.OneToOneField(Employee, on_delete=models.CASCADE, related_name='job_info_as_manager')
+    
+    
+    employment_type = models.CharField(max_length=50, choices=[
+        ("Full", "Tam Zamanlı"),
+        ("Part", "Yarı Zamanlı"),
+        ("Contract", "Sözleşmeli")
+    ])
+    work_location = models.ForeignKey(WorkLocation, on_delete=models.CASCADE, related_name='job_info', verbose_name='Çalışma Lokasyonu')
 
 
 
 class Education(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='education_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='educations')
-    school_name = models.CharField(max_length=255)
-    degree = models.CharField(max_length=100)
-    field_of_study = models.CharField(max_length=100)
-    start_year = models.IntegerField()
-    end_year = models.IntegerField()
+    school_name = models.CharField(max_length=255,null=True, blank=True,verbose_name='Okul Adı')
+    degree = models.CharField(max_length=100, null=True, blank=True,verbose_name='Derece')
+    field_of_study = models.CharField(max_length=100, null=True, blank=True,verbose_name='Bölüm')
+    start_date = models.DateField(verbose_name="Başlangıç Tarihi", null=True, blank=True)
+    end_date = models.DateField(verbose_name="Bitiş Tarihi", null=True, blank=True)
 
 
 
