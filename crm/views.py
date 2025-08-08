@@ -1,55 +1,89 @@
-from django.shortcuts import render
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect,render
 from django.contrib import messages
 from django.urls import reverse
-from .models import Employee , JobInfo , TitlePersonel, Department, WorkLocation
-# Create your views here.
-import logging
-logger = logging.getLogger('django')
+from .models import Employee , JobInfo , TitlePersonel, Department, WorkLocation , Company
 from django.http import JsonResponse
-# def test_view(request):
-#     logger.warning("Bu bir uyarı mesajıdır.")
-#     logger.error("Bu bir hata mesajıdır.")
-#     return HttpResponse("Log test edildi.")
-
-
-from django.shortcuts import render, redirect
-from .forms import EmployeeForm , JobInfoForm ,TitlePersonelForm, DepartmentForm, WorkLocationForm,EmployeeUpdateForm  # Formu içeri aktar
+from .forms import EmployeeForm , JobInfoForm ,TitlePersonelForm, DepartmentForm, WorkLocationForm,EmployeeUpdateForm , CompanyForm, SectorForm, CountryForm,UpdateCountryForm
+from .forms import UpdateSectorForm # Formu içeri aktar
 from django.contrib import messages 
 from django.db.models import Count
+import logging
+logger = logging.getLogger('django')
+"""
+Personel Alanı
+"""
+
+
+
+import logging
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import Employee , Sector,Country
+from .forms import EmployeeForm, EmployeeUpdateForm
+
+# Logger oluştur
+logger = logging.getLogger(__name__)
 
 def employee_manage_view(request):
-    employee_list = Employee.objects.all()
+    logger.info("Employee yönetim sayfası açıldı.")
+    employee_list = None
     form_create = EmployeeForm(prefix='create')
     form_update = EmployeeUpdateForm(prefix='update')
     selected_employee = None
 
+    try:
+        employee_list = Employee.objects.all()
+        logger.debug(f"{employee_list.count()} çalışan listelendi.")
+    except Exception as e:
+        logger.exception("Çalışan listesi alınırken hata oluştu.")
+        messages.error(request, 'Çalışan listesi alınırken bir hata oluştu.')
+        employee_list = []
+
     if request.method == 'POST':
+        logger.debug(f"Gelen POST verisi: {request.POST}")
+
+        # CREATE işlemi
         if 'create_submit' in request.POST:
+            logger.info("Yeni çalışan ekleme isteği alındı.")
             form_create = EmployeeForm(request.POST, request.FILES, prefix='create')
             if form_create.is_valid():
-                form_create.save()
-                messages.success(request, 'Çalışan başarıyla kaydedildi.')
-                return redirect('employee_create')
+                try:
+                    form_create.save()
+                    logger.info("Yeni çalışan başarıyla kaydedildi.")
+                    messages.success(request, 'Çalışan başarıyla kaydedildi.')
+                    return redirect('employee_create')
+                except Exception as e:
+                    logger.exception("Yeni çalışan kaydedilirken hata oluştu.")
+                    messages.error(request, 'Çalışan kaydedilirken bir hata oluştu.')
             else:
+                logger.warning(f"Yeni çalışan formu geçersiz. Hatalar: {form_create.errors}")
                 messages.error(request, 'Yeni çalışan formunda hata var.')
 
+        # UPDATE işlemi
         elif 'update_submit' in request.POST:
             employee_id = request.POST.get('update_employee_id')
-            print(f"Güncelleme için gelen çalışan ID: {employee_id}")
+            logger.debug(f"Güncelleme için gelen çalışan ID: {employee_id}")
+
             if employee_id:
                 try:
                     selected_employee = Employee.objects.get(pk=employee_id)
                     form_update = EmployeeUpdateForm(request.POST, request.FILES, instance=selected_employee, prefix='update')
                     if form_update.is_valid():
                         form_update.save()
+                        logger.info(f"Çalışan (ID: {employee_id}) bilgileri güncellendi.")
                         messages.success(request, 'Çalışan bilgileri başarıyla güncellendi.')
                         return redirect('employee_create')
                     else:
+                        logger.warning(f"Güncelleme formu geçersiz. Hatalar: {form_update.errors}")
                         messages.error(request, 'Güncelleme formunda hata var.')
                 except Employee.DoesNotExist:
+                    logger.warning(f"Güncellenmek istenen çalışan bulunamadı. ID: {employee_id}")
                     messages.error(request, 'Güncellenecek çalışan bulunamadı.')
+                except Exception as e:
+                    logger.exception(f"Çalışan (ID: {employee_id}) güncellenirken beklenmeyen bir hata oluştu.")
+                    messages.error(request, 'Güncelleme sırasında bir hata oluştu.')
             else:
+                logger.error("Güncelleme isteğinde çalışan ID bilgisi eksik.")
                 messages.error(request, 'Çalışan ID bilgisi eksik.')
 
     context = {
@@ -58,7 +92,9 @@ def employee_manage_view(request):
         'form_update': form_update,
         'selected_employee': selected_employee,
     }
+    logger.debug("Sayfa context verileri hazırlandı.")
     return render(request, 'crmemployee.html', context)
+
 
 def employee_detail_api(request, employee_id):
     employee = get_object_or_404(Employee, pk=employee_id)
@@ -137,6 +173,7 @@ def jobinfo_view(request):
 
 
 def report_employee(request):
+
     employees = Employee.objects.select_related('job_info_as_employee', 'job_info_as_employee__title', 'job_info_as_employee__department', 'job_info_as_employee__work_location', 'job_info_as_employee__manager').all()
 
     total_employees = employees.count()
@@ -171,3 +208,267 @@ def report_employee(request):
     }
 
     return render(request, 'reportemployee.html', context)
+
+
+
+
+
+"""
+Firma Alanı
+"""
+
+def company_manage_view(request):
+    logger.info("Firma yönetim sayfası açıldı.")
+    company_list = None
+    form_create = CompanyForm(prefix='create')
+    form_update = CompanyForm(prefix='update')
+    selected_company = None
+    ulke_list=None
+    sector_list=None
+    try:
+        company_list = Company.objects.all()
+        logger.debug(f"{company_list.count()} firma listelendi.")
+    except Exception as e:
+        logger.exception("Firma listesi alınırken hata oluştu.")
+        messages.error(request, 'Firma listesi alınırken bir hata oluştu.')
+        company_list = []
+
+    try:
+        ulke_list = Country.objects.all()
+        logger.debug(f"{ulke_list.count()} ulke listelendi.")
+    except Exception as e:
+        logger.exception("Ulke listesi alınırken hata oluştu.")
+        messages.error(request, 'Ulke listesi alınırken bir hata oluştu.')
+        ulke_list = []
+
+    try:
+        sector_list = Sector.objects.all()
+        logger.debug(f"{sector_list.count()} sektor listelendi.")
+    except Exception as e:
+        logger.exception("Sektor listesi alınırken hata oluştu.")
+        messages.error(request, 'Sektor listesi alınırken bir hata oluştu.')
+        sector_list = []
+
+
+    if request.method == 'POST':
+        logger.debug(f"Gelen POST verisi: {request.POST}")
+
+        # CREATE işlemi
+        if 'create_submit' in request.POST:
+            logger.info("Yeni firma ekleme isteği alındı.")
+            form_create = CompanyForm(request.POST, prefix='create')
+            if form_create.is_valid():
+                try:
+                    form_create.save()
+                    logger.info("Yeni firma başarıyla kaydedildi.")
+                    messages.success(request, 'Firma başarıyla kaydedildi.')
+                    return redirect('company_manage')  # URL adını kendine göre değiştir
+                except Exception as e:
+                    logger.exception("Yeni firma kaydedilirken hata oluştu.")
+                    messages.error(request, 'Firma kaydedilirken bir hata oluştu.')
+            else:
+                logger.warning(f"Yeni firma formu geçersiz. Hatalar: {form_create.errors}")
+                messages.error(request, 'Yeni firma formunda hata var.')
+
+        # UPDATE işlemi
+        elif 'update_submit' in request.POST:
+            company_id = request.POST.get('update_company_id')
+            logger.debug(f"Güncelleme için gelen firma ID: {company_id}")
+
+            if company_id:
+                try:
+                    selected_company = Company.objects.get(pk=company_id)
+                    form_update = CompanyForm(request.POST, instance=selected_company, prefix='update')
+                    if form_update.is_valid():
+                        form_update.save()
+                        logger.info(f"Firma (ID: {company_id}) bilgileri güncellendi.")
+                        messages.success(request, 'Firma bilgileri başarıyla güncellendi.')
+                        return redirect('company_manage')  # URL adını kendine göre değiştir
+                    else:
+                        logger.warning(f"Güncelleme formu geçersiz. Hatalar: {form_update.errors}")
+                        messages.error(request, 'Güncelleme formunda hata var.')
+                except Company.DoesNotExist:
+                    logger.warning(f"Güncellenmek istenen firma bulunamadı. ID: {company_id}")
+                    messages.error(request, 'Güncellenecek firma bulunamadı.')
+                except Exception as e:
+                    logger.exception(f"Firma (ID: {company_id}) güncellenirken beklenmeyen bir hata oluştu.")
+                    messages.error(request, 'Güncelleme sırasında bir hata oluştu.')
+            else:
+                logger.error("Güncelleme isteğinde firma ID bilgisi eksik.")
+                messages.error(request, 'Firma ID bilgisi eksik.')
+
+
+        elif 'create_country_submit' in request.POST:
+            logger.info("Yeni ülke ekleme isteği alındı.")
+            form_country = CountryForm(request.POST, prefix='country')
+            if form_country.is_valid():
+                try:
+                    form_country.save()
+                    logger.info("Yeni ülke başarıyla kaydedildi.")
+                    messages.success(request, 'Ülke başarıyla kaydedildi.')
+                    return redirect('company_manage')  # URL adını kendine göre değiştir
+                except Exception as e:
+                    logger.exception("Yeni ülke kaydedilirken hata oluştu.")
+                    messages.error(request, 'Ülke kaydedilirken hata oluştu.')
+            else:
+                logger.warning(f"Yeni ülke formu geçersiz. Hatalar: {form_country.errors}")
+                messages.error(request, 'Ülke formunda hata var.')
+
+        elif 'update_country_submit' in request.POST:
+            country_id = request.POST.get('update_country_id')
+            logger.debug(f"Güncelleme için gelen ülke ID: {country_id}")
+            if country_id:
+                try:
+                    selected_country = Country.objects.get(pk=country_id)
+                    form_country = UpdateCountryForm(request.POST, instance=selected_country, prefix='update')
+                    if form_country.is_valid():
+                        form_country.save()
+                        logger.info(f"Ülke (ID: {country_id}) başarıyla güncellendi.")
+                        messages.success(request, 'Ülke başarıyla güncellendi.')
+                        return redirect('company_manage')
+                    else:
+                        logger.warning(f"Güncelleme formu geçersiz. Hatalar: {form_country.errors}")
+                        messages.error(request, 'Ülke güncelleme formunda hata var.')
+                except Country.DoesNotExist:
+                    logger.warning(f"Güncellenmek istenen ülke bulunamadı. ID: {country_id}")
+                    messages.error(request, 'Güncellenecek ülke bulunamadı.')
+                except Exception as e:
+                    logger.exception(f"Ülke (ID: {country_id}) güncellenirken hata oluştu.")
+                    messages.error(request, 'Ülke güncelleme sırasında hata oluştu.')
+            else:
+                logger.error("Ülke güncelleme isteğinde ID eksik.")
+                messages.error(request, 'Ülke ID bilgisi eksik.')
+
+        # SECTOR FORM İŞLEMİ
+        elif 'create_sector_submit' in request.POST:
+            logger.info("Yeni sektör ekleme isteği alındı.")
+            form_sector = SectorForm(request.POST, prefix='sector')
+            if form_sector.is_valid():
+                try:
+                    form_sector.save()
+                    logger.info("Yeni sektör başarıyla kaydedildi.")
+                    messages.success(request, 'Sektör başarıyla kaydedildi.')
+                    return redirect('company_manage')
+                except Exception as e:
+                    logger.exception("Yeni sektör kaydedilirken hata oluştu.")
+                    messages.error(request, 'Sektör kaydedilirken hata oluştu.')
+            else:
+                logger.warning(f"Yeni sektör formu geçersiz. Hatalar: {form_sector.errors}")
+                messages.error(request, 'Sektör formunda hata var.')
+
+        elif 'update_sector_submit' in request.POST:
+            sector_id = request.POST.get('update_sector_id')
+            logger.debug(f"Güncelleme için gelen sektör ID: {sector_id}")
+            if sector_id:
+                try:
+                    selected_sector = Sector.objects.get(pk=sector_id)
+                    form_sector = UpdateSectorForm(request.POST, instance=selected_sector, prefix='update')
+                    if form_sector.is_valid():
+                        form_sector.save()
+                        logger.info(f"Sektör (ID: {sector_id}) başarıyla güncellendi.")
+                        messages.success(request, 'Sektör başarıyla güncellendi.')
+                        return redirect('company_manage')
+                    else:
+                        logger.warning(f"Güncelleme formu geçersiz. Hatalar: {form_sector.errors}")
+                        messages.error(request, 'Sektör güncelleme formunda hata var.')
+                except Sector.DoesNotExist:
+                    logger.warning(f"Güncellenmek istenen sektör bulunamadı. ID: {sector_id}")
+                    messages.error(request, 'Güncellenecek sektör bulunamadı.')
+                except Exception as e:
+                    logger.exception(f"Sektör (ID: {sector_id}) güncellenirken hata oluştu.")
+                    messages.error(request, 'Sektör güncelleme sırasında hata oluştu.')
+            else:
+                logger.error("Sektör güncelleme isteğinde ID eksik.")
+                messages.error(request, 'Sektör ID bilgisi eksik.')
+
+
+
+
+    context = {
+        'company_list': company_list,
+        'form_create': CompanyForm(prefix='create'),
+        'form_update': CompanyForm(prefix='update'),
+        'selected_company': selected_company,
+
+        'form_create_country': CountryForm(prefix='country'),
+        'form_update_country': UpdateCountryForm(prefix='update'),
+        'selected_country': selected_country if 'selected_country' in locals() else None,
+
+        'form_create_sector': SectorForm(prefix='sector'),
+        'form_update_sector': UpdateSectorForm(prefix='update'),
+        'selected_sector': selected_sector if 'selected_sector' in locals() else None,
+        'country_list': ulke_list,
+        'sector_list': sector_list,
+    }
+    logger.debug("Sayfa context verileri hazırlandı.")
+    return render(request, 'firmayonetim/companycreatandupdate.html', context)
+
+
+
+def company_detail_api(request, company_id):
+    company = get_object_or_404(Company, pk=company_id)
+    
+    data = {
+        'id': company.id,
+        'firma_adi': company.firma_adi,
+        'vergi_no': company.vergi_no,
+        'sektor': company.sektor.name if company.sektor else None,
+        'telefon': company.telefon,
+        'telefon2': company.telefon2,
+        'fax': company.fax,
+        'email': company.email,
+        'email2': company.email2,
+        'websitesi': company.websitesi,
+        'adres': company.adres,
+        'sehir': company.sehir,
+        'ilce': company.ilce,
+        'posta_kodu': company.posta_kodu,
+        'ulke': company.ulke.name if company.ulke else None,
+        'kurulus_tarihi': company.kurulus_tarihi.strftime('%Y-%m-%d') if company.kurulus_tarihi else '',
+        'calisan_sayisi': company.calisan_sayisi,
+        'netciiro': str(company.netciiro) if company.netciiro is not None else None,
+        'sektor_alt_bilgisi': company.sektor_alt_bilgisi,
+        'yetkili_adi': company.yetkili_adi,
+        'yetkili_pozisyon': company.yetkili_pozisyon,
+        'yetkili_telefon': company.yetkili_telefon,
+        'yetkili_email': company.yetkili_email,
+        'linkedin': company.linkedin,
+        'twitter': company.twitter,
+        'facebook': company.facebook,
+        'instagram': company.instagram,
+        'aktif_mi': company.aktif_mi,
+        'notlar': company.notlar,
+    }
+    
+    return JsonResponse(data)
+
+
+
+
+
+
+def sector_detail_api(request, sector_id):
+    sector = get_object_or_404(Sector, pk=sector_id)
+
+    data = {
+        'id': sector.id,
+        'name': sector.name,
+        # Eğer user alanını da göstermek istersen:
+        # 'user': sector.user.username if sector.user else None,
+    }
+
+    return JsonResponse(data)
+
+
+def country_detail_api(request, country_id):
+    country = get_object_or_404(Country, pk=country_id)
+
+    data = {
+        'id': country.id,
+        'name': country.name,
+        'code': country.code,
+        # Eğer user alanını da göstermek istersen:
+        # 'user': country.user.username if country.user else None,
+    }
+
+    return JsonResponse(data)

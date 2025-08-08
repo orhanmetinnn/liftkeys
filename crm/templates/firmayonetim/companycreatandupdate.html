@@ -1,0 +1,620 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+<div class="container py-5">
+        <div class="glass-card mx-auto col-lg-10" data-aos="fade-up">
+            <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">Yeni Kayıt</button>
+                <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">Güncelle</button>
+            </div>
+
+            <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#createCountryCollapse" aria-expanded="false" aria-controls="createCountryCollapse">
+                    Ülke Oluştur
+                </button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#updateCountryCollapse" aria-expanded="false" aria-controls="updateCountryCollapse">
+                    Güncelle
+                </button>
+            </div>
+
+            <!-- Ülke Oluştur Formu -->
+            <div class="collapse" id="createCountryCollapse">
+                <div class="card  card-body mb-3">
+                    <form method="POST" action="" novalidate>
+                    {% csrf_token %}
+                    <h5>Yeni Ülke Oluştur</h5>
+                    <div class="mb-3">
+                        {{ form_create_country.name.label_tag }}
+                        {{ form_create_country.name }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_create_country.code.label_tag }}
+                        {{ form_create_country.code }}
+                    </div>
+                    <button type="submit" name="create_country_submit" class="btn btn-danger">Kaydet</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#createCountryCollapse">İptal</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Ülke Güncelle Formu -->
+            <div class="collapse" id="updateCountryCollapse">
+                <div class="card card-body mb-3">
+                    <div class="mb-3">
+                    <label for="countrySelect" class="form-label">Ülke Seçiniz</label>
+                    <select id="countrySelect" class="form-select" onchange="toggleCountryForm(this.value)">
+                        <option value="" selected>Seçiniz</option>
+                        {% for country in country_list %}
+                        <option value="{{ country.id }}">{{ country.name }}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                    <form method="POST" action="" id="updateCountryForm" novalidate>
+                    {% csrf_token %}
+                    <input type="hidden" id="update_country_id" name="update_country_id" value="">
+                    <h5>Ülke Güncelle</h5>
+                    <div class="mb-3">
+                        {{ form_update_country.name.label_tag }}
+                        {{ form_update_country.name }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_update_country.code.label_tag }}
+                        {{ form_update_country.code }}
+                    </div>
+                    <button type="submit" name="update_country_submit" class="btn btn-info">Güncelle</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#updateCountryCollapse">İptal</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#createSectorCollapse" aria-expanded="false" aria-controls="createSectorCollapse">
+                    Sektör Oluştur
+                </button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#updateSectorCollapse" aria-expanded="false" aria-controls="updateSectorCollapse">
+                    Sektör Güncelle
+                </button>
+            </div>
+
+            <!-- Sektör Oluştur Formu -->
+            <div class="collapse" id="createSectorCollapse">
+                <div class="card card-body mb-3">
+                    <form method="POST" action="" novalidate>
+                        {% csrf_token %}
+                        <h5>Yeni Sektör Oluştur</h5>
+                        <div class="mb-3">
+                            {{ form_create_sector.name.label_tag }}
+                            {{ form_create_sector.name }}
+                        </div>
+                        <button type="submit" name="create_sector_submit" class="btn btn-danger">Kaydet</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#createSectorCollapse">İptal</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sektör Güncelle Formu -->
+            <div class="collapse" id="updateSectorCollapse">
+                <div class="card card-body mb-3">
+                    <div class="mb-3">
+                        <label for="sectorSelect" class="form-label">Sektör Seçiniz</label>
+                        <select id="sectorSelect" class="form-select" onchange="toggleSectorForm(this.value)">
+                            <option value="" selected>Seçiniz</option>
+                            {% for sector in sector_list %}
+                                <option value="{{ sector.id }}">{{ sector.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <form method="POST" action="" id="form_update_sector" novalidate>
+                        {% csrf_token %}
+                        <input type="hidden" id="update_sector_id" name="update_sector_id" value="">
+                        <h5>Sektör Güncelle</h5>
+                        <div class="mb-3">
+                            {{ form_update_sector.name.label_tag }}
+                            {{ form_update_sector.name }}
+                        </div>
+                        <button type="submit" name="update_sector_submit" class="btn btn-info">Güncelle</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#updateSectorCollapse">İptal</button>
+                    </form>
+                </div>
+            </div>
+                            
+            
+            
+            <div>
+
+                <div  id="form-update" style="display:none;">
+                    <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Firma Güncelle</h2>
+
+                    <div class="mb-3">
+                        <label for="employeeSelect" class="form-label">Firma Seçiniz</label>
+                        <select id="employeeSelect" class="form-select" onchange="loadEmployeeData(this.value)">
+                            <option value="" selected>Seçiniz</option>
+                            {% for employee in employee_list %}
+                            <option value="{{ employee.id }}">{{ employee.first_name }} {{ employee.last_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <form id="updateForm" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" id="update_company_id" name="update_company_id" value="">
+
+                        <div class="row">
+                            <!-- Firma Adı -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.firma_adi.label_tag }} {{ form_update.firma_adi }}
+                            </div>
+
+                            <!-- Vergi No -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.vergi_no.label_tag }} {{ form_update.vergi_no }}
+                            </div>
+
+                            <!-- Sektör -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.sektor.label_tag }} {{ form_update.sektor }}
+                            </div>
+
+                            <!-- Telefon -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.telefon.label_tag }} {{ form_update.telefon }}
+                            </div>
+
+                            <!-- İkinci Telefon -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.telefon2.label_tag }} {{ form_update.telefon2 }}
+                            </div>
+
+                            <!-- Fax -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.fax.label_tag }} {{ form_update.fax }}
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.email.label_tag }} {{ form_update.email }}
+                            </div>
+
+                            <!-- İkinci Email -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.email2.label_tag }} {{ form_update.email2 }}
+                            </div>
+
+                            <!-- Web Sitesi -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.websitesi.label_tag }} {{ form_update.websitesi }}
+                            </div>
+
+                            <!-- Adres -->
+                            <div class="col-md-12 mb-3">
+                                {{ form_update.adres.label_tag }} {{ form_update.adres }}
+                            </div>
+
+                            <!-- Şehir -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.sehir.label_tag }} {{ form_update.sehir }}
+                            </div>
+
+                            <!-- İlçe -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.ilce.label_tag }} {{ form_update.ilce }}
+                            </div>
+
+                            <!-- Posta Kodu -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.posta_kodu.label_tag }} {{ form_update.posta_kodu }}
+                            </div>
+
+                            <!-- Ülke -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.ulke.label_tag }} {{ form_update.ulke }}
+                            </div>
+
+                            <!-- Kuruluş Tarihi -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.kurulus_tarihi.label_tag }} {{ form_update.kurulus_tarihi }}
+                            </div>
+
+                            <!-- Çalışan Sayısı -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.calisan_sayisi.label_tag }} {{ form_update.calisan_sayisi }}
+                            </div>
+
+                            <!-- Net Ciro -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.netciiro.label_tag }} {{ form_update.netciiro }}
+                            </div>
+
+                            <!-- Sektör Alt Bilgisi -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.sektor_alt_bilgisi.label_tag }} {{ form_update.sektor_alt_bilgisi }}
+                            </div>
+
+                            <!-- Yetkili Adı -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.yetkili_adi.label_tag }} {{ form_update.yetkili_adi }}
+                            </div>
+
+                            <!-- Yetkili Pozisyon -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.yetkili_pozisyon.label_tag }} {{ form_update.yetkili_pozisyon }}
+                            </div>
+
+                            <!-- Yetkili Telefon -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.yetkili_telefon.label_tag }} {{ form_update.yetkili_telefon }}
+                            </div>
+
+                            <!-- Yetkili Email -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.yetkili_email.label_tag }} {{ form_update.yetkili_email }}
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.linkedin.label_tag }} {{ form_update.linkedin }}
+                            </div>
+
+                            <!-- Twitter -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.twitter.label_tag }} {{ form_update.twitter }}
+                            </div>
+
+                            <!-- Facebook -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.facebook.label_tag }} {{ form_update.facebook }}
+                            </div>
+
+                            <!-- Instagram -->
+                            <div class="col-md-6 mb-3">
+                                {{ form_update.instagram.label_tag }} {{ form_update.instagram }}
+                            </div>
+
+                            <!-- Aktif Mi Checkbox -->
+                            <div class="col-md-12 mb-3 d-flex align-items-center">
+                                <div class="form-check">
+                                    {{ form_update.aktif_mi }} {{ form_update.aktif_mi.label_tag }}
+                                </div>
+                            </div>
+
+                            <!-- Notlar -->
+                            <div class="col-md-12 mb-3">
+                                {{ form_update.notlar.label_tag }} {{ form_update.notlar }}
+                            </div>
+                        </div>
+
+                        <button type="submit" name="update_submit" class="btn btn-glow">Güncelle</button>
+                    </form>
+
+                </div>
+            </div>
+            <div id="form-create">
+                <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Firma Oluştur</h2>
+
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <!-- Firma Adı -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.firma_adi.label_tag }} {{ form_create.firma_adi }}
+                        </div>
+
+                        <!-- Vergi No -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.vergi_no.label_tag }} {{ form_create.vergi_no }}
+                        </div>
+
+                        <!-- Sektör -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.sektor.label_tag }} {{ form_create.sektor }}
+                        </div>
+
+                        <!-- Telefon -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.telefon.label_tag }} {{ form_create.telefon }}
+                        </div>
+
+                        <!-- İkinci Telefon -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.telefon2.label_tag }} {{ form_create.telefon2 }}
+                        </div>
+
+                        <!-- Fax -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.fax.label_tag }} {{ form_create.fax }}
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.email.label_tag }} {{ form_create.email }}
+                        </div>
+
+                        <!-- İkinci Email -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.email2.label_tag }} {{ form_create.email2 }}
+                        </div>
+
+                        <!-- Web Sitesi -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.websitesi.label_tag }} {{ form_create.websitesi }}
+                        </div>
+
+                        <!-- Adres -->
+                        <div class="col-md-12 mb-3">
+                            {{ form_create.adres.label_tag }} {{ form_create.adres }}
+                        </div>
+
+                        <!-- Şehir -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.sehir.label_tag }} {{ form_create.sehir }}
+                        </div>
+
+                        <!-- İlçe -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.ilce.label_tag }} {{ form_create.ilce }}
+                        </div>
+
+                        <!-- Posta Kodu -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.posta_kodu.label_tag }} {{ form_create.posta_kodu }}
+                        </div>
+
+                        <!-- Ülke -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.ulke.label_tag }} {{ form_create.ulke }}
+                        </div>
+
+                        <!-- Kuruluş Tarihi -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.kurulus_tarihi.label_tag }} {{ form_create.kurulus_tarihi }}
+                        </div>
+
+                        <!-- Çalışan Sayısı -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.calisan_sayisi.label_tag }} {{ form_create.calisan_sayisi }}
+                        </div>
+
+                        <!-- Net Ciro -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.netciiro.label_tag }} {{ form_create.netciiro }}
+                        </div>
+
+                        <!-- Sektör Alt Bilgisi -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.sektor_alt_bilgisi.label_tag }} {{ form_create.sektor_alt_bilgisi }}
+                        </div>
+
+                        <!-- Yetkili Adı -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.yetkili_adi.label_tag }} {{ form_create.yetkili_adi }}
+                        </div>
+
+                        <!-- Yetkili Pozisyon -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.yetkili_pozisyon.label_tag }} {{ form_create.yetkili_pozisyon }}
+                        </div>
+
+                        <!-- Yetkili Telefon -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.yetkili_telefon.label_tag }} {{ form_create.yetkili_telefon }}
+                        </div>
+
+                        <!-- Yetkili Email -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.yetkili_email.label_tag }} {{ form_create.yetkili_email }}
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.linkedin.label_tag }} {{ form_create.linkedin }}
+                        </div>
+
+                        <!-- Twitter -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.twitter.label_tag }} {{ form_create.twitter }}
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.facebook.label_tag }} {{ form_create.facebook }}
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="col-md-6 mb-3">
+                            {{ form_create.instagram.label_tag }} {{ form_create.instagram }}
+                        </div>
+
+                        <!-- Aktif Mi Checkbox -->
+                        <div class="col-md-12 mb-3 d-flex align-items-center">
+                            <div class="form-check">
+                                {{ form_create.aktif_mi }} {{ form_create.aktif_mi.label_tag }}
+                            </div>
+                        </div>
+
+                        <!-- Notlar -->
+                        <div class="col-md-12 mb-3">
+                            {{ form_create.notlar.label_tag }} {{ form_create.notlar }}
+                        </div>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="submit" name="create_submit" class="btn btn-glow px-4 py-2">Kaydet</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    {% if messages %}
+    <div id="message-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <script>
+        function showForm(type) {
+            const createForm = document.getElementById('form-create');
+            const updateForm = document.getElementById('form-update');
+            const btnCreate = document.getElementById('btn-create');
+            const btnUpdate = document.getElementById('btn-update');
+
+            if(type === 'create'){
+                createForm.style.display = 'block';
+                updateForm.style.display = 'none';
+                btnCreate.classList.add('btn-primary', 'active');
+                btnCreate.classList.remove('btn-outline-primary');
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+            } else {
+                createForm.style.display = 'none';
+                updateForm.style.display = 'block';
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+                btnUpdate.classList.add('btn-primary', 'active');
+                btnUpdate.classList.remove('btn-outline-primary');
+            }
+        }
+
+    </script>
+
+    <script>
+        function loadCompanyData(companyId) {
+            if (!companyId) {
+                document.getElementById('updateForm').reset();
+                return;
+            }
+
+            fetch(`/api/companies/${companyId}/`)
+            .then(response => response.json())
+            .then(data => {
+                // Hidden ID alanı
+                document.getElementById('update_company_id').value = data.id;
+
+                // Temel Bilgiler
+                document.getElementById('id_update-firma_adi').value = data.firma_adi || '';
+                document.getElementById('id_update-vergi_no').value = data.vergi_no || '';
+                document.getElementById('id_update-sektor').value = data.sektor || '';
+                document.getElementById('id_update-telefon').value = data.telefon || '';
+                document.getElementById('id_update-telefon2').value = data.telefon2 || '';
+                document.getElementById('id_update-fax').value = data.fax || '';
+                document.getElementById('id_update-email').value = data.email || '';
+                document.getElementById('id_update-email2').value = data.email2 || '';
+                document.getElementById('id_update-websitesi').value = data.websitesi || '';
+                document.getElementById('id_update-adres').value = data.adres || '';
+                document.getElementById('id_update-sehir').value = data.sehir || '';
+                document.getElementById('id_update-ilce').value = data.ilce || '';
+                document.getElementById('id_update-posta_kodu').value = data.posta_kodu || '';
+                document.getElementById('id_update-ulke').value = data.ulke || '';
+
+                // Ek Bilgiler
+                document.getElementById('id_update-kurulus_tarihi').value = data.kurulus_tarihi || '';
+                document.getElementById('id_update-calisan_sayisi').value = data.calisan_sayisi || '';
+                document.getElementById('id_update-netciiro').value = data.netciiro || '';
+                document.getElementById('id_update-sektor_alt_bilgisi').value = data.sektor_alt_bilgisi || '';
+
+                // Yetkili Kişi Bilgileri
+                document.getElementById('id_update-yetkili_adi').value = data.yetkili_adi || '';
+                document.getElementById('id_update-yetkili_pozisyon').value = data.yetkili_pozisyon || '';
+                document.getElementById('id_update-yetkili_telefon').value = data.yetkili_telefon || '';
+                document.getElementById('id_update-yetkili_email').value = data.yetkili_email || '';
+
+                // Sosyal Medya Hesapları
+                document.getElementById('id_update-linkedin').value = data.linkedin || '';
+                document.getElementById('id_update-twitter').value = data.twitter || '';
+                document.getElementById('id_update-facebook').value = data.facebook || '';
+                document.getElementById('id_update-instagram').value = data.instagram || '';
+
+                // Durum ve Notlar
+                document.getElementById('id_update-aktif_mi').checked = data.aktif_mi || false;
+                document.getElementById('id_update-notlar').value = data.notlar || '';
+
+                console.log(`Loaded data for company ID ${companyId}:`, data);
+            })
+            .catch(error => {
+                console.error('Firma verisi yüklenirken hata oluştu:', error);
+            });
+        }
+    </script>
+
+
+ 
+
+    <script>
+        function toggleSectorForm(sectorId) {
+            if (!sectorId) {
+                document.getElementById('form_update_sector').reset();
+                return;
+            }
+
+            fetch(`/api/sector/${sectorId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('update_sector_id').value = data.id;
+                    // Buradaki input id'leri UpdateSectorForm'un form alanlarına göre ayarlanmalı:
+                    document.getElementById('sector_name').value = data.name || '';
+                    console.log(`Loaded data for sector ID ${sectorId}:`, data);
+                })
+                .catch(error => {
+                    console.error('Error fetching sector data:', error);
+                });
+        }
+    </script>
+
+    <script>
+        function toggleCountryForm(countryId) {
+            if (!countryId) {
+                document.getElementById('updateCountryForm').reset();
+                return;
+            }
+
+            fetch(`/api/country/${countryId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('update_country_id').value = data.id;
+                    document.getElementById('id_update-name').value = data.name || '';
+                    document.getElementById('id_update-code').value = data.code || '';
+                    console.log(`Loaded data for country ID ${countryId}:`, data);
+                });
+        }
+
+    </script>
+
+
+
+
+    <script>
+        // Sayfa yüklendiğinde mesajları otomatik gizle
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                const container = document.getElementById('message-container');
+                if(container) {
+                    // Bootstrap 5 kullanıyorsan alertleri kapatmak için şöyle yapabilirsin:
+                    [...container.querySelectorAll('.alert')].forEach(alert => {
+                        // fade out efekti için:
+                        alert.classList.remove('show');
+                        alert.classList.add('hide');
+                        // sonra DOM'dan kaldır:
+                        setTimeout(() => alert.remove(), 2000); 
+                    });
+                }
+            }, 4000);  // 4 saniye sonra kaybolur
+        });
+    </script>
+
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
+
+

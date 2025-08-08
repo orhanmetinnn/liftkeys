@@ -167,3 +167,78 @@ class Experience(models.Model):
 
 
 
+
+from django.db import models
+
+class Country(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='country_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    name = models.CharField(max_length=100, unique=True)
+    code = models.CharField(max_length=10, blank=True, null=True)  # ISO kod gibi
+
+    def __str__(self):
+        return self.name
+
+class Sector(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='sector_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Company(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='company_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    # Temel Bilgiler
+    firma_adi = models.CharField(max_length=255)
+    vergi_no = models.CharField(max_length=50, unique=True, verbose_name="Vergi Numarası / Kimlik Numarası")
+    sektor = models.ForeignKey(Sector, on_delete=models.SET_NULL, null=True, blank=True)
+    
+    telefon = models.CharField(max_length=30, blank=True, null=True)
+    telefon2 = models.CharField(max_length=30, blank=True, null=True, verbose_name="İkinci Telefon")
+    fax = models.CharField(max_length=30, blank=True, null=True)
+    
+    email = models.EmailField(blank=True, null=True)
+    email2 = models.EmailField(blank=True, null=True, verbose_name="İkinci E-posta")
+    
+    websitesi = models.URLField(blank=True, null=True)
+    
+    adres = models.TextField(blank=True, null=True)
+    sehir = models.CharField(max_length=100, blank=True, null=True)
+    ilce = models.CharField(max_length=100, blank=True, null=True)
+    posta_kodu = models.CharField(max_length=20, blank=True, null=True)
+    ulke = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True, blank=True)
+    
+    # Ek Bilgiler
+    kurulus_tarihi = models.DateField(blank=True, null=True)
+    calisan_sayisi = models.PositiveIntegerField(blank=True, null=True)
+    netciiro = models.DecimalField(max_digits=15, decimal_places=2, blank=True, null=True, verbose_name="Net Ciro")
+    sektor_alt_bilgisi = models.CharField(max_length=255, blank=True, null=True, verbose_name="Sektör Alt Bilgisi")
+    
+    # Yetkili Kişi Bilgileri
+    yetkili_adi = models.CharField(max_length=255, blank=True, null=True)
+    yetkili_pozisyon = models.CharField(max_length=255, blank=True, null=True)
+    yetkili_telefon = models.CharField(max_length=30, blank=True, null=True)
+    yetkili_email = models.EmailField(blank=True, null=True)
+    
+    # Sosyal Medya Hesapları
+    linkedin = models.URLField(blank=True, null=True)
+    twitter = models.URLField(blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+    instagram = models.URLField(blank=True, null=True)
+    
+    # Durum ve Notlar
+    aktif_mi = models.BooleanField(default=True)
+    notlar = models.TextField(blank=True, null=True)
+    
+    
+    def __str__(self):
+        return self.firma_adi
+
+
+
+
+
+
+
+
+

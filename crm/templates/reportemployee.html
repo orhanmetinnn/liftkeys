@@ -73,11 +73,12 @@
                 <tr>
                     <td>
                         {% if emp.profile_image %}
-                            <img src="{{ emp.profile_image.url }}" alt="Profil" class="profile-img" />
+                            <img src="{{ emp.profile_image.url }}" alt="Profil" class="profile-img" style="max-width:100px; max-height:100px; object-fit: contain;" />
                         {% else %}
-                            <img src="https://via.placeholder.com/50" alt="Profil Yok" class="profile-img" />
+                            <img src="https://via.placeholder.com/100" alt="Profil Yok" style="max-width:100px; max-height:100px;" />
                         {% endif %}
                     </td>
+
                     <td>{{ emp.first_name }} {{ emp.last_name }}</td>
                     <td>{{ emp.tc_identity }}</td>
                     <td>{{ emp.email }}</td>

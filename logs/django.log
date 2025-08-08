@@ -6032,3 +6032,458 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 [2025-08-07 14:02:57,868] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 3463
 [2025-08-07 15:15:24,052] WARNING django.request - Not Found: /favicon.ico
 [2025-08-07 15:15:24,052] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 3463
+[2025-08-08 09:29:59,585] WARNING django.request - Not Found: /
+[2025-08-08 09:29:59,586] WARNING django.server - "GET / HTTP/1.1" 404 3412
+[2025-08-08 09:32:59,365] WARNING django.request - Not Found: /employeecreate/report/employee/
+[2025-08-08 09:32:59,366] WARNING django.server - "GET /employeecreate/report/employee/ HTTP/1.1" 404 3523
+[2025-08-08 09:50:37,845] WARNING django.request - Not Found: /pass/
+[2025-08-08 09:50:37,846] WARNING django.server - "GET /pass/ HTTP/1.1" 404 3614
+[2025-08-08 12:40:00,290] WARNING django.request - Not Found: /companies/manage//
+[2025-08-08 12:40:00,290] WARNING django.server - "GET /companies/manage// HTTP/1.1" 404 4223
+[2025-08-08 12:40:02,368] ERROR django.request - Internal Server Error: /companies/manage/
+Traceback (most recent call last):
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\liftkeys\crm\views.py", line 288, in company_manage_view
+    return render(request, 'crmcompany.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crmcompany.html
+[2025-08-08 12:40:02,373] ERROR django.server - "GET /companies/manage/ HTTP/1.1" 500 85139
+[2025-08-08 12:40:19,805] ERROR django.request - Internal Server Error: /companies/manage/
+Traceback (most recent call last):
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\liftkeys\crm\views.py", line 288, in company_manage_view
+    return render(request, 'companycreateandupdate.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: companycreateandupdate.html
+[2025-08-08 12:40:19,809] ERROR django.server - "GET /companies/manage/ HTTP/1.1" 500 85379
+[2025-08-08 12:40:37,972] ERROR django.request - Internal Server Error: /companies/manage/
+Traceback (most recent call last):
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\liftkeys\crm\views.py", line 288, in company_manage_view
+    return render(request, 'firmayonetim/companycreateandupdate.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: firmayonetim/companycreateandupdate.html
+[2025-08-08 12:40:37,981] ERROR django.server - "GET /companies/manage/ HTTP/1.1" 500 85639
+[2025-08-08 12:40:39,687] ERROR django.request - Internal Server Error: /companies/manage/
+Traceback (most recent call last):
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\liftkeys\crm\views.py", line 288, in company_manage_view
+    return render(request, 'firmayonetim/companycreateandupdate.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: firmayonetim/companycreateandupdate.html
+[2025-08-08 12:40:39,690] ERROR django.server - "GET /companies/manage/ HTTP/1.1" 500 85639
+[2025-08-08 12:41:09,847] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 12:41:09,847] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 12:43:00,212] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 12:43:00,212] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 12:43:01,105] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 12:43:01,106] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 12:43:01,988] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 12:43:01,989] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 12:44:39,567] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 12:44:39,567] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 12:45:16,715] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 12:45:16,715] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 12:57:56,574] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 12:57:56,574] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 13:00:21,343] WARNING django.request - Not Found: /companies/manage/companies/manage/
+[2025-08-08 13:00:21,344] WARNING django.server - "GET /companies/manage/companies/manage/ HTTP/1.1" 404 4271
+[2025-08-08 13:00:25,943] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 13:00:25,943] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 13:02:10,481] WARNING django.request - Not Found: /pass/
+[2025-08-08 13:02:10,483] WARNING django.server - "GET /pass/ HTTP/1.1" 404 4184
+[2025-08-08 13:02:13,486] WARNING django.request - Not Found: /companies/manage/test
+[2025-08-08 13:02:13,487] WARNING django.server - "GET /companies/manage/test HTTP/1.1" 404 4232
+[2025-08-08 13:02:15,462] WARNING django.request - Not Found: /pass/
+[2025-08-08 13:02:15,463] WARNING django.server - "GET /pass/ HTTP/1.1" 404 4184
+[2025-08-08 13:16:37,329] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 13:16:37,329] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 13:16:38,262] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 13:16:38,262] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4202
+[2025-08-08 13:31:11,195] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 13:31:11,195] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4789
+[2025-08-08 13:31:27,806] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:31:27,807] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:31:27,905] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:31:28,134] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:31:28,208] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:31:46,760] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:31:46,760] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:31:46,838] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:31:46,865] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:31:46,977] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:32:08,609] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:32:08,609] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:32:08,655] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:32:08,655] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:32:08,732] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:32:30,188] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:32:30,189] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:32:30,265] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:32:30,265] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:32:30,290] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:32:43,851] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:32:43,852] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:32:43,876] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:32:43,906] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:32:43,984] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:33:02,540] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:33:02,541] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:33:02,560] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:33:02,581] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:33:02,696] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:33:02,981] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:33:02,981] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:33:03,124] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:33:03,164] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:33:03,197] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:33:03,380] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:33:03,380] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:33:03,428] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:33:03,493] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:33:03,692] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:33:12,183] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:33:12,184] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:33:12,228] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:33:12,441] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:33:12,471] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:33:19,214] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:33:19,214] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:33:19,266] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:33:19,334] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:33:19,363] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:33:33,900] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:33:33,901] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:33:33,930] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:33:33,960] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:33:33,993] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:34:26,933] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:34:26,935] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:34:27,029] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:34:27,159] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:34:27,193] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:34:27,605] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:34:27,606] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:34:27,653] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:34:27,715] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:34:27,832] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:34:35,971] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 13:34:35,971] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4789
+[2025-08-08 13:35:06,754] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 13:35:06,754] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4789
+[2025-08-08 13:43:29,865] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 13:43:29,865] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4789
+[2025-08-08 13:58:28,835] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:58:28,836] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:58:28,911] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:58:29,270] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:58:29,277] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:59:00,859] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:59:00,859] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:59:00,905] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:59:00,935] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:59:00,978] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:59:08,889] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:59:08,889] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:59:08,938] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:59:08,991] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:59:09,049] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 13:59:51,034] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 13:59:51,034] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 13:59:51,076] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 13:59:51,151] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 13:59:51,223] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:01:32,053] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:01:32,054] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:01:32,104] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:01:32,176] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:01:32,215] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:01:59,573] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:01:59,573] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:01:59,650] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:01:59,712] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:01:59,798] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:02:30,387] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:02:30,390] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:02:30,438] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:02:30,505] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:02:30,606] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:16:17,087] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:16:17,087] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:16:17,148] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:16:17,227] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:16:17,319] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:20:02,121] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:20:02,121] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:20:02,181] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:20:02,207] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:20:02,341] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:21:09,510] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:21:09,510] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:21:09,557] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:21:09,674] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:21:09,727] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:24:24,555] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:24:24,557] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:24:24,564] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:24:24,602] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:24:24,678] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:25:11,851] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:25:11,865] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:25:11,899] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:25:11,931] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:25:12,018] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:33:43,961] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:33:43,962] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:33:44,014] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:33:44,065] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:33:44,087] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:34:25,368] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:34:25,368] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:34:25,428] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:34:25,458] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:34:25,588] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:37:06,337] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:37:06,338] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:37:06,365] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:37:06,404] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:37:06,498] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:37:34,957] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:37:34,957] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:37:35,015] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:37:35,075] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:37:35,112] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:37:42,723] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:37:42,734] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:37:42,749] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:37:42,850] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:37:42,890] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:41:34,868] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:41:34,878] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:41:34,896] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:41:34,960] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:41:35,013] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:43:47,799] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:43:47,800] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:43:47,829] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:43:47,859] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:43:47,979] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:44:12,542] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:44:12,542] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:44:12,563] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:44:12,633] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:44:12,785] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:45:40,444] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:45:40,479] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:45:40,497] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:45:40,616] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:45:40,716] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:46:31,533] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:46:31,537] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:46:31,560] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:46:31,614] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:46:31,766] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:47:33,944] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:47:33,944] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:47:33,985] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:47:34,019] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:47:34,143] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:50:20,175] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:50:20,175] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:50:20,213] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:50:20,291] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:50:20,357] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:51:22,667] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:51:22,669] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:51:22,707] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:51:22,766] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:51:22,848] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:52:03,573] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:52:03,589] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:52:03,589] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:52:03,799] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:52:03,800] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:53:44,399] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:53:44,399] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:53:44,439] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:53:44,461] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:53:44,566] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:54:21,599] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:54:21,601] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:54:21,633] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:54:21,669] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:54:21,712] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:54:27,708] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:54:27,708] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:54:27,740] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:54:27,774] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:54:27,804] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 14:54:32,679] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 14:54:32,679] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 14:54:32,708] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 14:54:32,750] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 14:54:32,856] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:15:05,307] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:15:05,308] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:15:05,323] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:15:05,619] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:15:05,746] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:41:03,588] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 15:41:03,588] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4789
+[2025-08-08 15:48:04,064] ERROR django.request - Internal Server Error: /companies/manage/
+Traceback (most recent call last):
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan.metin.BIM\lk\liftkeys\crm\views.py", line 227, in company_manage_view
+    sector_list=None
+    ^^^^^^
+NameError: name 'sector' is not defined
+[2025-08-08 15:48:04,064] ERROR django.server - "GET /companies/manage/ HTTP/1.1" 500 67804
+[2025-08-08 15:50:24,782] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:50:24,784] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:50:24,852] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:50:25,029] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:50:25,100] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:50:29,737] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:50:29,737] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:50:29,816] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:50:29,828] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:50:29,889] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:52:15,302] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:52:15,302] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:52:15,353] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:52:15,437] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:52:15,473] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:52:42,965] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:52:42,965] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:52:43,021] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:52:43,060] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:52:43,099] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:53:06,517] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:53:06,517] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:53:06,563] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:53:06,599] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:53:06,673] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:55:57,498] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:55:57,498] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:55:57,554] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:55:57,597] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:55:57,694] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 15:58:47,540] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 15:58:47,540] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 15:58:47,595] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 15:58:47,620] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 15:58:47,663] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:01:00,983] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:01:00,983] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:01:01,031] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:01:01,066] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:01:01,183] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:01:19,791] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:01:19,791] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:01:19,988] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:01:19,988] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:01:20,112] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:11:21,273] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:11:21,275] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:11:21,303] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:11:21,340] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:11:21,386] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:13:51,462] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:13:51,463] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:13:51,517] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:13:51,554] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:13:51,660] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:14:00,159] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:14:00,159] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:14:00,181] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:14:00,266] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:14:00,317] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:14:08,352] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:14:08,352] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:14:08,419] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:14:08,510] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:14:08,527] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:14:47,130] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:14:47,137] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:14:47,174] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:14:47,198] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:14:47,241] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:14:57,594] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:14:57,594] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:14:57,649] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:14:57,682] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:14:57,760] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:16:00,942] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:16:00,944] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:16:01,048] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:16:01,109] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:16:01,226] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:16:19,704] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:16:19,705] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:16:20,178] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:16:20,194] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:16:20,237] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-08 16:16:20,455] WARNING django.request - Not Found: /favicon.ico
+[2025-08-08 16:16:20,455] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 4789
+[2025-08-08 16:17:03,832] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-08 16:17:03,833] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4900
+[2025-08-08 16:17:03,931] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-08 16:17:03,951] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-08 16:17:04,344] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
