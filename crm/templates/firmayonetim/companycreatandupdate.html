@@ -129,10 +129,10 @@
 
                     <div class="mb-3">
                         <label for="employeeSelect" class="form-label">Firma Seçiniz</label>
-                        <select id="employeeSelect" class="form-select" onchange="loadEmployeeData(this.value)">
+                        <select id="employeeSelect" class="form-select" onchange="loadCompanyData(this.value)">
                             <option value="" selected>Seçiniz</option>
-                            {% for employee in employee_list %}
-                            <option value="{{ employee.id }}">{{ employee.first_name }} {{ employee.last_name }}</option>
+                            {% for employee in company_list %}
+                            <option value="{{ employee.id }}">{{ employee.firma_adi }} </option>
                             {% endfor %}
                         </select>
                     </div>
@@ -140,148 +140,238 @@
                     <form id="updateForm" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <input type="hidden" id="update_company_id" name="update_company_id" value="">
-
+                            {% if form_update.non_field_errors %}
+                                <div class="alert alert-danger">
+                                    {% for error in form_update.non_field_errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
                         <div class="row">
                             <!-- Firma Adı -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.firma_adi.label_tag }} {{ form_update.firma_adi }}
+                                {% for error in form_update.firma_adi.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Vergi No -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.vergi_no.label_tag }} {{ form_update.vergi_no }}
+                                {% for error in form_update.vergi_no.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Sektör -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.sektor.label_tag }} {{ form_update.sektor }}
+                                {% for error in form_update.sektor.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Telefon -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.telefon.label_tag }} {{ form_update.telefon }}
+                                {% for error in form_update.telefon.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- İkinci Telefon -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.telefon2.label_tag }} {{ form_update.telefon2 }}
+                                {% for error in form_update.telefon2.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Fax -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.fax.label_tag }} {{ form_update.fax }}
+                                {% for error in form_update.fax.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Email -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.email.label_tag }} {{ form_update.email }}
+                                {% for error in form_update.email.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- İkinci Email -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.email2.label_tag }} {{ form_update.email2 }}
+                                {% for error in form_update.email2.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Web Sitesi -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.websitesi.label_tag }} {{ form_update.websitesi }}
+                                {% for error in form_update.websitesi.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Adres -->
                             <div class="col-md-12 mb-3">
                                 {{ form_update.adres.label_tag }} {{ form_update.adres }}
+                                {% for error in form_update.adres.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Şehir -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.sehir.label_tag }} {{ form_update.sehir }}
+                                {% for error in form_update.sehir.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- İlçe -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.ilce.label_tag }} {{ form_update.ilce }}
+                                {% for error in form_update.ilce.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Posta Kodu -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.posta_kodu.label_tag }} {{ form_update.posta_kodu }}
+                                {% for error in form_update.posta_kodu.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Ülke -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.ulke.label_tag }} {{ form_update.ulke }}
+                                {% for error in form_update.ulke.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Kuruluş Tarihi -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.kurulus_tarihi.label_tag }} {{ form_update.kurulus_tarihi }}
+                                {% for error in form_update.kurulus_tarihi.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Çalışan Sayısı -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.calisan_sayisi.label_tag }} {{ form_update.calisan_sayisi }}
+                                {% for error in form_update.calisan_sayisi.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Net Ciro -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.netciiro.label_tag }} {{ form_update.netciiro }}
+                                {% for error in form_update.netciiro.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Sektör Alt Bilgisi -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.sektor_alt_bilgisi.label_tag }} {{ form_update.sektor_alt_bilgisi }}
+                                {% for error in form_update.sektor_alt_bilgisi.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Yetkili Adı -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.yetkili_adi.label_tag }} {{ form_update.yetkili_adi }}
+                                {% for error in form_update.yetkili_adi.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Yetkili Pozisyon -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.yetkili_pozisyon.label_tag }} {{ form_update.yetkili_pozisyon }}
+                                {% for error in form_update.yetkili_pozisyon.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Yetkili Telefon -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.yetkili_telefon.label_tag }} {{ form_update.yetkili_telefon }}
+                                {% for error in form_update.yetkili_telefon.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Yetkili Email -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.yetkili_email.label_tag }} {{ form_update.yetkili_email }}
+                                {% for error in form_update.yetkili_email.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- LinkedIn -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.linkedin.label_tag }} {{ form_update.linkedin }}
+                                {% for error in form_update.linkedin.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Twitter -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.twitter.label_tag }} {{ form_update.twitter }}
+                                {% for error in form_update.twitter.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Facebook -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.facebook.label_tag }} {{ form_update.facebook }}
+                                {% for error in form_update.facebook.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Instagram -->
                             <div class="col-md-6 mb-3">
                                 {{ form_update.instagram.label_tag }} {{ form_update.instagram }}
+                                {% for error in form_update.instagram.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
 
                             <!-- Aktif Mi Checkbox -->
                             <div class="col-md-12 mb-3 d-flex align-items-center">
                                 <div class="form-check">
                                     {{ form_update.aktif_mi }} {{ form_update.aktif_mi.label_tag }}
+                                    {% for error in form_update.aktif_mi.errors %}
+                                        <div class="text-danger small">{{ error }}</div>
+                                    {% endfor %}
                                 </div>
                             </div>
 
                             <!-- Notlar -->
                             <div class="col-md-12 mb-3">
                                 {{ form_update.notlar.label_tag }} {{ form_update.notlar }}
+                                {% for error in form_update.notlar.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
                         </div>
 
@@ -297,145 +387,236 @@
                     {% csrf_token %}
                     <div class="row">
                         <!-- Firma Adı -->
+                        {% if form_create.non_field_errors %}
+                            <div class="alert alert-danger">
+                                {% for error in form_create.non_field_errors %}
+                                    <div>{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
                         <div class="col-md-6 mb-3">
                             {{ form_create.firma_adi.label_tag }} {{ form_create.firma_adi }}
+                            {% for error in form_create.firma_adi.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Vergi No -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.vergi_no.label_tag }} {{ form_create.vergi_no }}
+                            {% for error in form_create.vergi_no.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Sektör -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.sektor.label_tag }} {{ form_create.sektor }}
+                            {% for error in form_create.sektor.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Telefon -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.telefon.label_tag }} {{ form_create.telefon }}
+                            {% for error in form_create.telefon.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- İkinci Telefon -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.telefon2.label_tag }} {{ form_create.telefon2 }}
+                            {% for error in form_create.telefon2.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Fax -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.fax.label_tag }} {{ form_create.fax }}
+                            {% for error in form_create.fax.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Email -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.email.label_tag }} {{ form_create.email }}
+                            {% for error in form_create.email.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- İkinci Email -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.email2.label_tag }} {{ form_create.email2 }}
+                            {% for error in form_create.email2.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Web Sitesi -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.websitesi.label_tag }} {{ form_create.websitesi }}
+                            {% for error in form_create.websitesi.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Adres -->
                         <div class="col-md-12 mb-3">
                             {{ form_create.adres.label_tag }} {{ form_create.adres }}
+                            {% for error in form_create.adres.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Şehir -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.sehir.label_tag }} {{ form_create.sehir }}
+                            {% for error in form_create.sehir.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- İlçe -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.ilce.label_tag }} {{ form_create.ilce }}
+                            {% for error in form_create.ilce.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Posta Kodu -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.posta_kodu.label_tag }} {{ form_create.posta_kodu }}
+                            {% for error in form_create.posta_kodu.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Ülke -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.ulke.label_tag }} {{ form_create.ulke }}
+                            {% for error in form_create.ulke.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Kuruluş Tarihi -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.kurulus_tarihi.label_tag }} {{ form_create.kurulus_tarihi }}
+                            {% for error in form_create.kurulus_tarihi.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Çalışan Sayısı -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.calisan_sayisi.label_tag }} {{ form_create.calisan_sayisi }}
+                            {% for error in form_create.calisan_sayisi.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Net Ciro -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.netciiro.label_tag }} {{ form_create.netciiro }}
+                            {% for error in form_create.netciiro.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Sektör Alt Bilgisi -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.sektor_alt_bilgisi.label_tag }} {{ form_create.sektor_alt_bilgisi }}
+                            {% for error in form_create.sektor_alt_bilgisi.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Yetkili Adı -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.yetkili_adi.label_tag }} {{ form_create.yetkili_adi }}
+                            {% for error in form_create.yetkili_adi.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Yetkili Pozisyon -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.yetkili_pozisyon.label_tag }} {{ form_create.yetkili_pozisyon }}
+                            {% for error in form_create.yetkili_pozisyon.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Yetkili Telefon -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.yetkili_telefon.label_tag }} {{ form_create.yetkili_telefon }}
+                            {% for error in form_create.yetkili_telefon.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Yetkili Email -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.yetkili_email.label_tag }} {{ form_create.yetkili_email }}
+                            {% for error in form_create.yetkili_email.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- LinkedIn -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.linkedin.label_tag }} {{ form_create.linkedin }}
+                            {% for error in form_create.linkedin.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Twitter -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.twitter.label_tag }} {{ form_create.twitter }}
+                            {% for error in form_create.twitter.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Facebook -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.facebook.label_tag }} {{ form_create.facebook }}
+                            {% for error in form_create.facebook.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Instagram -->
                         <div class="col-md-6 mb-3">
                             {{ form_create.instagram.label_tag }} {{ form_create.instagram }}
+                            {% for error in form_create.instagram.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
 
                         <!-- Aktif Mi Checkbox -->
                         <div class="col-md-12 mb-3 d-flex align-items-center">
                             <div class="form-check">
                                 {{ form_create.aktif_mi }} {{ form_create.aktif_mi.label_tag }}
+                                {% for error in form_create.aktif_mi.errors %}
+                                    <div class="text-danger small">{{ error }}</div>
+                                {% endfor %}
                             </div>
                         </div>
 
                         <!-- Notlar -->
                         <div class="col-md-12 mb-3">
                             {{ form_create.notlar.label_tag }} {{ form_create.notlar }}
+                            {% for error in form_create.notlar.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
                         </div>
                     </div>
 
@@ -491,13 +672,12 @@
                 document.getElementById('updateForm').reset();
                 return;
             }
-
             fetch(`/api/companies/${companyId}/`)
             .then(response => response.json())
             .then(data => {
                 // Hidden ID alanı
+                console.log(data);
                 document.getElementById('update_company_id').value = data.id;
-
                 // Temel Bilgiler
                 document.getElementById('id_update-firma_adi').value = data.firma_adi || '';
                 document.getElementById('id_update-vergi_no').value = data.vergi_no || '';

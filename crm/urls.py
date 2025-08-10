@@ -6,6 +6,9 @@ urlpatterns = [
     path('jobinfo/', views.jobinfo_view, name='jobinfo_edit'),
     path('api/employee/<int:employee_id>/', views.employee_detail_api, name='employee_detail_api'),
     path('report/employee/', views.report_employee, name='report_employee'),
+
+
+    
     path('companies/manage/', views.company_manage_view, name='company_manage'),
 
     # Firma detay API'si (JSON döner)
@@ -14,4 +17,5 @@ urlpatterns = [
 
     # Country detay API
     path('api/country/<int:country_id>/', views.country_detail_api, name='country_detail_api'),
+    path('directorycompany/update/', views.directory_company_update, name='directory_company_update'),
 ]

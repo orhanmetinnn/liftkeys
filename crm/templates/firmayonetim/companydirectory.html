@@ -1,0 +1,78 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+    
+    <div class="container py-5">
+        <div class="glass-card mx-auto col-lg-10" data-aos="fade-up">
+            <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">Yeni Kayıt</button>
+                <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">Güncelle</button>
+            </div>
+        </div>
+    </div>
+    {% if messages %}
+    <div id="message-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <script>
+        function showForm(type) {
+            const createForm = document.getElementById('form-create');
+            const updateForm = document.getElementById('form-update');
+            const btnCreate = document.getElementById('btn-create');
+            const btnUpdate = document.getElementById('btn-update');
+
+            if(type === 'create'){
+                createForm.style.display = 'block';
+                updateForm.style.display = 'none';
+                btnCreate.classList.add('btn-primary', 'active');
+                btnCreate.classList.remove('btn-outline-primary');
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+            } else {
+                createForm.style.display = 'none';
+                updateForm.style.display = 'block';
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+                btnUpdate.classList.add('btn-primary', 'active');
+                btnUpdate.classList.remove('btn-outline-primary');
+            }
+        }
+
+    </script>
+
+    <script>
+        // Sayfa yüklendiğinde mesajları otomatik gizle
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                const container = document.getElementById('message-container');
+                if(container) {
+                    // Bootstrap 5 kullanıyorsan alertleri kapatmak için şöyle yapabilirsin:
+                    [...container.querySelectorAll('.alert')].forEach(alert => {
+                        // fade out efekti için:
+                        alert.classList.remove('show');
+                        alert.classList.add('hide');
+                        // sonra DOM'dan kaldır:
+                        setTimeout(() => alert.remove(), 2000); 
+                    });
+                }
+            }, 4000);  // 4 saniye sonra kaybolur
+        });
+    </script>
+
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
+
+

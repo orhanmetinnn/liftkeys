@@ -1,25 +1,24 @@
 from django.shortcuts import get_object_or_404, redirect,render
 from django.contrib import messages
 from django.urls import reverse
-from .models import Employee , JobInfo , TitlePersonel, Department, WorkLocation , Company
+from .models import Employee , JobInfo , TitlePersonel, Department, WorkLocation , Company,DirectoryCompany
 from django.http import JsonResponse
 from .forms import EmployeeForm , JobInfoForm ,TitlePersonelForm, DepartmentForm, WorkLocationForm,EmployeeUpdateForm , CompanyForm, SectorForm, CountryForm,UpdateCountryForm
-from .forms import UpdateSectorForm # Formu içeri aktar
-from django.contrib import messages 
-from django.db.models import Count
+from .forms import UpdateSectorForm,DirectoryCompanyForm
+from django.db.models import Count 
 import logging
+from django.http import HttpResponseServerError
+from .models import Employee , Sector,Country
+from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm
+
+
+
 logger = logging.getLogger('django')
 """
 Personel Alanı
 """
 
 
-
-import logging
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .models import Employee , Sector,Country
-from .forms import EmployeeForm, EmployeeUpdateForm
 
 # Logger oluştur
 logger = logging.getLogger(__name__)
@@ -278,7 +277,7 @@ def company_manage_view(request):
             if company_id:
                 try:
                     selected_company = Company.objects.get(pk=company_id)
-                    form_update = CompanyForm(request.POST, instance=selected_company, prefix='update')
+                    form_update = UpdateCompanyForm(request.POST, instance=selected_company, prefix='update')
                     if form_update.is_valid():
                         form_update.save()
                         logger.info(f"Firma (ID: {company_id}) bilgileri güncellendi.")
@@ -387,7 +386,7 @@ def company_manage_view(request):
     context = {
         'company_list': company_list,
         'form_create': CompanyForm(prefix='create'),
-        'form_update': CompanyForm(prefix='update'),
+        'form_update': UpdateCompanyForm(prefix='update'),
         'selected_company': selected_company,
 
         'form_create_country': CountryForm(prefix='country'),
@@ -472,3 +471,47 @@ def country_detail_api(request, country_id):
     }
 
     return JsonResponse(data)
+
+
+
+
+
+
+
+def directory_company_update(request):
+    """
+    DirectoryCompany nesnesi varsa güncelle, yoksa oluştur.
+    """
+
+    try:
+        # Kullanıcının DirectoryCompany objesini al ya da oluştur (varsa)
+        # directory_company = DirectoryCompany.objects.filter(user=request.user).first()
+
+        if request.method == 'POST':
+            form = DirectoryCompanyForm(request.POST)
+            if form.is_valid():
+                # obj = form.save(commit=False)
+                # # Eğer user alanı boşsa, otomatik doldurabiliriz
+                # if not obj.user:
+                #     obj.user = request.user
+                # obj.save()
+                messages.success(request, "Bilgiler başarıyla kaydedildi.")
+                logger.info(f"DirectoryCompany kaydı güncellendi veya oluşturuldu. User: {request.user}")
+                return redirect('directory_company_update')
+            else:
+                messages.error(request, "Formda hatalar var, lütfen kontrol edin.")
+                logger.warning(f"DirectoryCompany form doğrulama hatası: {form.errors}")
+        else:
+            # form = DirectoryCompanyForm(instance=directory_company)
+            pass
+
+        context = {
+            'form': form
+        }
+        return render(request, 'firmayonetim/companydirectory.html', context)
+
+    except Exception as e:
+        logger.error(f"DirectoryCompany view'da hata: {e}", exc_info=True)
+        return HttpResponseServerError("Bir hata oluştu, lütfen daha sonra tekrar deneyin.")
+    
+

@@ -194,6 +194,74 @@ class CompanyForm(forms.ModelForm):
 
 
 
+class UpdateCompanyForm(forms.ModelForm):
+    class Meta:
+        model = Company
+        fields = '__all__'
+        exclude = ['user']  
+        widgets = {
+            'firma_adi': forms.TextInput(attrs={'class': 'form-control'}),
+            'vergi_no': forms.TextInput(attrs={'class': 'form-control'}),
+            'sektor': forms.Select(attrs={'class': 'form-select'}),
+            'telefon': forms.TextInput(attrs={'class': 'form-control'}),
+            'telefon2': forms.TextInput(attrs={'class': 'form-control'}),
+            'fax': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'email2': forms.EmailInput(attrs={'class': 'form-control'}),
+            'websitesi': forms.URLInput(attrs={'class': 'form-control'}),
+            'adres': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'sehir': forms.TextInput(attrs={'class': 'form-control'}),
+            'ilce': forms.TextInput(attrs={'class': 'form-control'}),
+            'posta_kodu': forms.TextInput(attrs={'class': 'form-control'}),
+            'ulke': forms.Select(attrs={'class': 'form-select'}),
+            'kurulus_tarihi': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
+            'calisan_sayisi': forms.NumberInput(attrs={'class': 'form-control'}),
+            'netciiro': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}),
+            'sektor_alt_bilgisi': forms.TextInput(attrs={'class': 'form-control'}),
+            'yetkili_adi': forms.TextInput(attrs={'class': 'form-control'}),
+            'yetkili_pozisyon': forms.TextInput(attrs={'class': 'form-control'}),
+            'yetkili_telefon': forms.TextInput(attrs={'class': 'form-control'}),
+            'yetkili_email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'linkedin': forms.URLInput(attrs={'class': 'form-control'}),
+            'twitter': forms.URLInput(attrs={'class': 'form-control'}),
+            'facebook': forms.URLInput(attrs={'class': 'form-control'}),
+            'instagram': forms.URLInput(attrs={'class': 'form-control'}),
+            'aktif_mi': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+            'notlar': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
+        }
+        labels = {
+            'firma_adi': 'Firma Adı',
+            'vergi_no': 'Vergi Numarası / Kimlik Numarası',
+            'sektor': 'Sektör',
+            'telefon': 'Telefon',
+            'telefon2': 'İkinci Telefon',
+            'fax': 'Fax',
+            'email': 'E-posta',
+            'email2': 'İkinci E-posta',
+            'websitesi': 'Web Sitesi',
+            'adres': 'Adres',
+            'sehir': 'Şehir',
+            'ilce': 'İlçe',
+            'posta_kodu': 'Posta Kodu',
+            'ulke': 'Ülke',
+            'kurulus_tarihi': 'Kuruluş Tarihi',
+            'calisan_sayisi': 'Çalışan Sayısı',
+            'netciiro': 'Net Ciro',
+            'sektor_alt_bilgisi': 'Sektör Alt Bilgisi',
+            'yetkili_adi': 'Yetkili Adı',
+            'yetkili_pozisyon': 'Yetkili Pozisyon',
+            'yetkili_telefon': 'Yetkili Telefon',
+            'yetkili_email': 'Yetkili E-posta',
+            'linkedin': 'LinkedIn',
+            'twitter': 'Twitter',
+            'facebook': 'Facebook',
+            'instagram': 'Instagram',
+            'aktif_mi': 'Aktif mi?',
+            'notlar': 'Notlar',
+        }
+
+
+
 
 
 
@@ -238,3 +306,42 @@ class UpdateSectorForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control','id':'sector_name','name':'sector_name'}),
         }
+
+
+
+
+
+
+from django import forms
+from .models import DirectoryCompany
+
+class DirectoryCompanyForm(forms.ModelForm):
+    class Meta:
+        model = DirectoryCompany
+        fields = [
+            'companyselection',
+            'first_name',
+            'last_name',
+            'unvan',
+            'telefon',
+            'email',
+            'notlar',
+        ]
+        widgets = {
+            'companyselection': forms.Select(attrs={'class': 'form-select'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ad'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Soyad'}),
+            'unvan': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Unvan / Görev'}),
+            'telefon': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Telefon'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'E-posta'}),
+            'notlar': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Notlar'}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Modelde null=True ve blank=True olan alanlar formda zorunlu değil
+        optional_fields = ['companyselection', 'unvan', 'telefon', 'email', 'notlar']
+        for field_name in optional_fields:
+            if field_name in self.fields:
+                self.fields[field_name].required = False

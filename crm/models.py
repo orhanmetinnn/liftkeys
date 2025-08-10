@@ -176,13 +176,15 @@ class Country(models.Model):
     code = models.CharField(max_length=10, blank=True, null=True)  # ISO kod gibi
 
     def __str__(self):
-        return self.name
+        return self.name 
 
 class Sector(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='sector_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
     name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
+        if self.code:
+            return f"{self.name} ({self.code})"
         return self.name
 
 
@@ -200,7 +202,7 @@ class Company(models.Model):
     email = models.EmailField(blank=True, null=True)
     email2 = models.EmailField(blank=True, null=True, verbose_name="İkinci E-posta")
     
-    websitesi = models.URLField(blank=True, null=True)
+    websitesi = models.CharField(blank=True, null=True)
     
     adres = models.TextField(blank=True, null=True)
     sehir = models.CharField(max_length=100, blank=True, null=True)
@@ -221,10 +223,10 @@ class Company(models.Model):
     yetkili_email = models.EmailField(blank=True, null=True)
     
     # Sosyal Medya Hesapları
-    linkedin = models.URLField(blank=True, null=True)
-    twitter = models.URLField(blank=True, null=True)
-    facebook = models.URLField(blank=True, null=True)
-    instagram = models.URLField(blank=True, null=True)
+    linkedin = models.CharField(blank=True, null=True)
+    twitter = models.CharField(blank=True, null=True)
+    facebook = models.CharField(blank=True, null=True)
+    instagram = models.CharField(blank=True, null=True)
     
     # Durum ve Notlar
     aktif_mi = models.BooleanField(default=True)
@@ -239,6 +241,16 @@ class Company(models.Model):
 
 
 
+    
+class DirectoryCompany(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='directorycompany_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
+    companyselection=models.ForeignKey(Company, on_delete=models.SET_NULL, null=True, blank=True,related_name="Firma_Secimi")
+    first_name = models.CharField(verbose_name='Ad')
+    last_name = models.CharField(verbose_name='Soyad')
+    unvan=models.CharField(blank=True, null=True)
+    telefon = models.CharField(blank=True, null=True)
+    email=models.CharField(blank=True, null=True)
+    notlar=models.TextField(blank=True, null=True)
 
 
 
