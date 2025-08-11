@@ -4,13 +4,160 @@
 {% load i18n %}
     
     <div class="container py-5">
-        <div class="glass-card mx-auto col-lg-10" data-aos="fade-up">
+        <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
             <div class="btn-group mb-4" role="group" aria-label="Form toggle">
                 <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">Yeni Kayıt</button>
-                <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">Güncelle</button>
+                <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">Eklenen Listesi</button>
             </div>
+
+            <div id="form-create">
+                <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Rehber Ekle</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        {% if formrehberekle.non_field_errors %}
+                                <div class="alert alert-danger">
+                                    {% for error in formrehberekle.non_field_errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                        {% endif %}
+
+                        <div class="col-md-6 mb-3">
+                            <label>
+                                {{ formrehberekle.companyselection.label }}
+                                <small class="text-muted">(Zorunlu değil)</small>
+                            </label>
+                            {{ formrehberekle.companyselection }}
+                            {% for error in formrehberekle.companyselection.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.unvan.label_tag }} {{ formrehberekle.unvan }}
+                            {% for error in formrehberekle.unvan.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.first_name.label_tag }} {{ formrehberekle.first_name }}
+                            {% for error in formrehberekle.first_name.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.last_name.label_tag }} {{ formrehberekle.last_name }}
+                            {% for error in formrehberekle.last_name.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.telefon.label_tag }} {{ formrehberekle.telefon }}
+                            {% for error in formrehberekle.telefon.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.email.label_tag }} {{ formrehberekle.email }}
+                            {% for error in formrehberekle.email.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.tarihselection.label_tag }} {{ formrehberekle.tarihselection }}
+                            {% for error in formrehberekle.tarihselection.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.iletisimnedeni.label_tag }} {{ formrehberekle.iletisimnedeni }}
+                            {% for error in formrehberekle.iletisimnedeni.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ formrehberekle.bizi_nereden_buldu.label_tag }} {{ formrehberekle.bizi_nereden_buldu }}
+                            {% for error in formrehberekle.bizi_nereden_buldu.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            {{ formrehberekle.notlar.label_tag }} {{ formrehberekle.notlar }}
+                            {% for error in formrehberekle.notlar.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" name="create_submit" class="btn btn-glow px-4 py-2">Kaydet</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div  id="form-update" style="display:none;">
+                <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i>Eklenen Bilgiler</h2>
+                <div class="table-responsive">
+                    <table id="companyTable" class="table table-striped table-bordered table-hover mt-4">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Firma Seçimi</th>
+                                <th>Ad</th>
+                                <th>Soyad</th>
+                                <th>Ünvan</th>
+                                <th>Telefon</th>
+                                <th>E-posta</th>
+                                <th>Tarih Seçimi</th>
+                                <th>İletişim Nedeni</th>
+                                <th>Bizi Nereden Buldu</th>
+                                <th>Notlar</th>
+                                <th>Oluşturulma Tarihi</th>
+                                <th>Güncellenme Tarihi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for company in all_companies %}
+                            <tr>
+                                <td>{{ company.companyselection }}</td>
+                                <td>{{ company.first_name }}</td>
+                                <td>{{ company.last_name }}</td>
+                                <td>{{ company.unvan|default:"-" }}</td>
+                                <td>{{ company.telefon|default:"-" }}</td>
+                                <td>{{ company.email|default:"-" }}</td>
+                                <td>{{ company.tarihselection|date:"d.m.Y" }}</td>
+                                <td>{{ company.get_iletisimnedeni_display|default:"-" }}</td>
+                                <td>{{ company.get_bizi_nereden_buldu_display|default:"-" }}</td>
+                                <td>{{ company.notlar|default:"-" }}</td>
+                                <td>{{ company.created_at|date:"d.m.Y H:i" }}</td>
+                                <td>{{ company.updated_at|date:"d.m.Y H:i" }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="12" class="text-center">Kayıt bulunamadı.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
         </div>
+
+
     </div>
+
+    
+
+
     {% if messages %}
     <div id="message-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
         {% for message in messages %}
@@ -66,7 +213,34 @@
             }, 4000);  // 4 saniye sonra kaybolur
         });
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>   
+    <script>
+        $(document).ready(function() {
+            $('#companyTable').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "responsive":true,
+                "lengthMenu": [10, 25, 50],
+                "pageLength": 10,
+                "language": {
+                    "search": "Ara:",
+                    "lengthMenu": "Sayfada _MENU_ kayıt göster",
+                    "info": "_TOTAL_ kayıttan _START_ - _END_ arası gösteriliyor",
+                    "paginate": {
+                        "first": "İlk",
+                        "last": "Son",
+                        "next": "Sonraki",
+                        "previous": "Önceki"
+                    },
+                    "zeroRecords": "Eşleşen kayıt bulunamadı",
+                    "infoEmpty": "Gösterilecek kayıt yok",
+                    "infoFiltered": "(_MAX_ kayıt içerisinden filtrelendi)"
+                }
+            });
+        });
+    </script>
 
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

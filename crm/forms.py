@@ -326,15 +326,33 @@ class DirectoryCompanyForm(forms.ModelForm):
             'telefon',
             'email',
             'notlar',
+            'tarihselection',
+            'iletisimnedeni',
+            'bizi_nereden_buldu',  # yeni alan
         ]
+        labels = {
+            'companyselection': 'Firma Seçimi',
+            'first_name': 'Ad',
+            'last_name': 'Soyad',
+            'unvan': 'Ünvan / Görev',
+            'telefon': 'Telefon',
+            'email': 'E-posta',
+            'notlar': 'Notlar',
+            'tarihselection': 'Tarih Seçimi',
+            'iletisimnedeni': 'İletişim Nedeni',
+            'bizi_nereden_buldu': 'Bizi Nereden Buldu',
+        }
         widgets = {
-            'companyselection': forms.Select(attrs={'class': 'form-select'}),
+            'companyselection': forms.Select(attrs={'class': 'form-select','placeholder': 'Mevcut ise seçim yapınız'}),
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ad'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Soyad'}),
             'unvan': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Unvan / Görev'}),
             'telefon': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Telefon'}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'E-posta'}),
+            'iletisimnedeni': forms.Select(attrs={'class': 'form-select'}),
+            'bizi_nereden_buldu': forms.Select(attrs={'class': 'form-select'}),
             'notlar': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Notlar'}),
+            'tarihselection': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
         }
 
     def __init__(self, *args, **kwargs):

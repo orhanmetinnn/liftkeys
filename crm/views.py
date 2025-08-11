@@ -10,7 +10,7 @@ import logging
 from django.http import HttpResponseServerError
 from .models import Employee , Sector,Country
 from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 logger = logging.getLogger('django')
@@ -475,43 +475,41 @@ def country_detail_api(request, country_id):
 
 
 
-
-
-
 def directory_company_update(request):
-    """
-    DirectoryCompany nesnesi varsa güncelle, yoksa oluştur.
-    """
-
     try:
-        # Kullanıcının DirectoryCompany objesini al ya da oluştur (varsa)
-        # directory_company = DirectoryCompany.objects.filter(user=request.user).first()
-
         if request.method == 'POST':
-            form = DirectoryCompanyForm(request.POST)
+            form = DirectoryCompanyForm(request.POST)  # Yeni kayıt
             if form.is_valid():
-                # obj = form.save(commit=False)
-                # # Eğer user alanı boşsa, otomatik doldurabiliriz
-                # if not obj.user:
-                #     obj.user = request.user
-                # obj.save()
+                form.save()
                 messages.success(request, "Bilgiler başarıyla kaydedildi.")
-                logger.info(f"DirectoryCompany kaydı güncellendi veya oluşturuldu. User: {request.user}")
+                logger.info("DirectoryCompany yeni kaydı oluşturuldu.")
                 return redirect('directory_company_update')
             else:
                 messages.error(request, "Formda hatalar var, lütfen kontrol edin.")
                 logger.warning(f"DirectoryCompany form doğrulama hatası: {form.errors}")
         else:
-            # form = DirectoryCompanyForm(instance=directory_company)
-            pass
+            form = DirectoryCompanyForm()  # Boş form
+
+        all_companies_list = DirectoryCompany.objects.all().order_by('-created_at')
+
+        # Sayfalama
+        page = request.GET.get('page', 1)
+        paginator = Paginator(all_companies_list, 10)  # Sayfa başına 10 kayıt
+
+        try:
+            all_companies = paginator.page(page)
+        except PageNotAnInteger:
+            all_companies = paginator.page(1)
+        except EmptyPage:
+            all_companies = paginator.page(paginator.num_pages)
 
         context = {
-            'form': form
+            'formrehberekle': form,
+            'all_companies': all_companies,
         }
+
         return render(request, 'firmayonetim/companydirectory.html', context)
 
     except Exception as e:
         logger.error(f"DirectoryCompany view'da hata: {e}", exc_info=True)
         return HttpResponseServerError("Bir hata oluştu, lütfen daha sonra tekrar deneyin.")
-    
-

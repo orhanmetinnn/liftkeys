@@ -183,8 +183,6 @@ class Sector(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
-        if self.code:
-            return f"{self.name} ({self.code})"
         return self.name
 
 
@@ -243,6 +241,31 @@ class Company(models.Model):
 
     
 class DirectoryCompany(models.Model):
+    ILETISIM_NEDENLERI = [
+        ('teklif', 'Teklif Talebi'),
+        ('destek', 'Destek Talebi'),
+        ('bilgi', 'Bilgi İsteme'),
+        ('is_ortakligi', 'İş Ortaklığı Talebi'),
+        ('satis', 'Satış Temsilcisi Görüşmesi'),
+        ('teknik', 'Teknik Destek'),
+        ('musteri_hizmetleri', 'Müşteri Hizmetleri İletişimi'),
+        ('odeme', 'Ödeme / Faturalandırma'),
+        ('toplanti', 'Toplantı / Randevu Talebi'),
+        ('referans', 'Referans / Tavsiye İsteği'),
+        ('pazarlama', 'Pazarlama / Tanıtım Talebi'),
+        ('diger', 'Diğer'),
+    ]
+
+    BIZI_NEREDEN_BULDU = [
+        ('bizulastik','Biz Ulaştık'),
+        ('arama_motorlari', 'Arama Motorları'),
+        ('internet', 'İnternet / Arama Motorları'),
+        ('sosyal_medya', 'Sosyal Medya'),
+        ('arkadas_tavsiye', 'Arkadaş / Tavsiye'),
+        ('reklam', 'Reklam'),
+        ('fuar', 'Fuar / Etkinlik'),
+        ('diger', 'Diğer'),
+    ]
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='directorycompany_profile', verbose_name='İşlem Yapan Kullanıcı', null=True, blank=True)
     companyselection=models.ForeignKey(Company, on_delete=models.SET_NULL, null=True, blank=True,related_name="Firma_Secimi")
     first_name = models.CharField(verbose_name='Ad')
@@ -251,6 +274,22 @@ class DirectoryCompany(models.Model):
     telefon = models.CharField(blank=True, null=True)
     email=models.CharField(blank=True, null=True)
     notlar=models.TextField(blank=True, null=True)
+    tarihselection=models.DateField(verbose_name='Tarih Seçimi',null=True, blank=True)
+    iletisimnedeni = models.CharField(
+        max_length=50,
+        choices=ILETISIM_NEDENLERI,
+        blank=True,
+        null=True,
+        verbose_name="İletişim Nedeni"
+    )
 
-
+    bizi_nereden_buldu = models.CharField(
+        max_length=50,
+        choices=BIZI_NEREDEN_BULDU,
+        blank=True,
+        null=True,
+        verbose_name="Bizi Nereden Buldu"
+    )
+    created_at = models.DateTimeField(auto_now_add=True,null=True, blank=True)  # Oluşturulma tarihi (sadece ilk kayıtta set edilir)
+    updated_at = models.DateTimeField(auto_now=True,null=True, blank=True) 
 
