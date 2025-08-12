@@ -41,7 +41,7 @@ class EmployeeUpdateForm(forms.ModelForm):
 
 from django import forms
 from .models import JobInfo
-from .models import TitlePersonel, Department, WorkLocation , Country, Sector
+from .models import TitlePersonel, Department, WorkLocation , Country, Sector,Category
 
 
 
@@ -375,7 +375,6 @@ class ProductForm(forms.ModelForm):
             'name',
             'website_image',
             'mobile_image',
-            'offer_pdf',
             'features',
             'stock_code',
             'categories',
@@ -389,7 +388,6 @@ class ProductForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'website_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
             'mobile_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-            'offer_pdf': forms.ClearableFileInput(attrs={'class': 'form-control'}),
             'features': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
             'stock_code': forms.TextInput(attrs={'class': 'form-control'}),
             'categories': forms.SelectMultiple(attrs={'class': 'form-control'}),
@@ -417,8 +415,36 @@ class OptionForm(forms.ModelForm):
 
 
 
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = ['name']
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Kategori adını giriniz'
+            })
+        }
+        labels = {
+            'name': 'Kategori Adı'
+        }
 
 
+
+
+class UpdateCategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = ['name']
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Kategori adını giriniz'
+            })
+        }
+        labels = {
+            'name': 'Kategori Adı'
+        }
 
 
 

@@ -8,8 +8,8 @@ from .forms import UpdateSectorForm,DirectoryCompanyForm
 from django.db.models import Count 
 import logging
 from django.http import HttpResponseServerError
-from .models import Employee , Sector,Country
-from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm
+from .models import Employee , Sector,Country,Product,Category
+from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm,ProductForm,CategoryForm,UpdateCategoryForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -519,29 +519,76 @@ def directory_company_update(request):
 
 
 
+"""
+URUNLER
+"""
+
+
+def product_create_update(request):
+    try:
+        catagory_list = Category.objects.all()
+        logger.debug(f"{catagory_list.count()} firma listelendi.")
+    except Exception as e:
+        logger.exception("Firma listesi alınırken hata oluştu.")
+        messages.error(request, 'Firma listesi alınırken bir hata oluştu.')
+        catagory_list = []
+
+    if request.method == 'POST':
+        if 'create_catagory_submit' in request.POST:
+            form_create=CategoryForm(request.POST,prefix='create')
+            if form_create.is_valid():
+                form_create.save()
+                logger.info("Yeni firma başarıyla kaydedildi.")
+                messages.success(request, 'Firma başarıyla kaydedildi.')
+                return redirect('product_list')  # URL adını kendine göre değiştir
+        elif 'update_catagory_submit' in request.POST:
+            category_id = request.POST.get('update_catagory_id')
+            logger.debug(f"Güncelleme için gelen kategori ID: {category_id}")
+            if category_id:
+                try:
+                    selected_category = Category.objects.get(pk=category_id)
+                    form_update = UpdateCategoryForm(request.POST, instance=selected_category, prefix='update')
+                    if form_update.is_valid():
+                        form_update.save()
+                        logger.info(f"Kategori (ID: {category_id}) başarıyla güncellendi.")
+                        messages.success(request, 'Kategori başarıyla güncellendi.')
+                        return redirect('product_list')  # Burayı kendi yönlendirmene göre değiştir
+                    else:
+                        logger.warning(f"Güncelleme formu geçersiz. Hatalar: {form_update.errors}")
+                        messages.error(request, 'Kategori güncelleme formunda hata var.')
+                except Category.DoesNotExist:
+                    logger.warning(f"Güncellenmek istenen kategori bulunamadı. ID: {category_id}")
+                    messages.error(request, 'Güncellenecek kategori bulunamadı.')
+                except Exception as e:
+                    logger.exception(f"Kategori (ID: {category_id}) güncellenirken hata oluştu: {e}")
+                    messages.error(request, 'Kategori güncelleme sırasında hata oluştu.')
+            else:
+                logger.error("Kategori güncelleme isteğinde ID eksik.")
+                messages.error(request, 'Kategori ID bilgisi eksik.')
+
+    context = {
+        'form': ProductForm(prefix='create'),
+        'formcatogryupdate':UpdateCategoryForm(prefix='update'),
+        'formcreatecatagory':CategoryForm(prefix='create'),
+        'catagory_list':catagory_list,
+    }
+    return render(request, 'urunler/uruncreateandupdate.html', context)
+
+    #     form = ProductForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect('product_list')  # Ürün listesine yönlendir (url adına göre düzenle)
+    # else:
+    #     pass
 
 
 
-# def product_create_update(request, pk=None):
-#     if pk:
-#         product = get_object_or_404(Product, pk=pk)
-#         action = "Güncelle"
-#     else:
-#         product = None
-#         action = "Yeni Ürün Ekle"
 
-#     if request.method == 'POST':
-#         form = ProductForm(request.POST, request.FILES, instance=product)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('product_list')  # Ürün listesine yönlendir (url adına göre düzenle)
-#     else:
-#         form = ProductForm(instance=product)
+def catogory_detail_api(request, category_id):
+    category = get_object_or_404(Category, pk=category_id)
 
-#     context = {
-#         'form': form,
-#         'action': action,
-#     }
-#     return render(request, 'urunler/uruncreateandupdate.html', context)
-
-
+    data = {
+        'id': category.id,
+        'name': category.name,
+    }
+    return JsonResponse(data)

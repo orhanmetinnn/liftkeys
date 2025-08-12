@@ -6985,3 +6985,465 @@ AttributeError: 'Sector' object has no attribute 'code'
 [2025-08-12 14:24:24,385] WARNING django.server - "GET /companies/manage/test HTTP/1.1" 404 5109
 [2025-08-12 14:24:28,086] WARNING django.request - Not Found: /pass/
 [2025-08-12 14:24:28,087] WARNING django.server - "GET /pass/ HTTP/1.1" 404 5061
+[2025-08-12 20:02:59,244] WARNING django.request - Not Found: /
+[2025-08-12 20:02:59,245] WARNING django.server - "GET / HTTP/1.1" 404 5028
+[2025-08-12 20:02:59,339] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 20:02:59,339] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5079
+[2025-08-12 20:05:09,685] WARNING django.request - Not Found: /pass/
+[2025-08-12 20:05:09,685] WARNING django.server - "GET /pass/ HTTP/1.1" 404 5061
+[2025-08-12 20:05:14,939] WARNING django.request - Not Found: /pass/
+[2025-08-12 20:05:14,940] WARNING django.server - "GET /pass/ HTTP/1.1" 404 5061
+[2025-08-12 20:23:53,652] ERROR django.request - Internal Server Error: /urunlercompany/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 567, in product_and_category_page
+    return render(request, 'urunler/tek_sayfa.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: urunler/tek_sayfa.html
+[2025-08-12 20:23:53,654] ERROR django.server - "GET /urunlercompany/ HTTP/1.1" 500 83204
+[2025-08-12 20:25:30,137] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 20:25:30,137] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5348
+[2025-08-12 20:29:55,769] ERROR django.request - Internal Server Error: /urunlercompany/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 539, in product_create_update
+    'form': form,
+            ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+[2025-08-12 20:29:55,771] ERROR django.server - "GET /urunlercompany/ HTTP/1.1" 500 65614
+[2025-08-12 20:31:02,841] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 20:31:02,841] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5629
+[2025-08-12 20:44:31,262] ERROR django.request - Internal Server Error: /urunlercompany/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 531, in product_create_update
+    form_create=ProductForm(request.Post,prefix='create')
+                            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'Post'. Did you mean: 'POST'?
+[2025-08-12 20:44:31,264] ERROR django.server - "POST /urunlercompany/ HTTP/1.1" 500 66799
+[2025-08-12 21:14:57,438] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 21:14:57,443] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5629
+[2025-08-12 21:16:12,816] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 21:16:12,816] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5629
+[2025-08-12 21:16:13,837] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 21:16:13,842] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5629
+[2025-08-12 21:18:12,920] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 21:18:12,924] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5629
+[2025-08-12 21:29:06,413] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:29:06,414] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:30:53,843] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:30:53,843] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:30:57,373] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:30:57,373] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:30:57,414] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:30:57,535] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:30:57,537] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:32:13,721] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:32:13,721] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:32:13,765] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:32:13,921] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:32:13,921] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:34:10,712] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:34:10,716] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:34:10,748] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:34:10,803] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:34:10,823] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:34:10,880] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:34:10,880] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:34:10,914] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:34:10,929] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:34:10,951] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:34:11,024] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:34:11,030] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:34:11,084] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:34:11,102] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:34:11,175] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:34:13,269] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:34:13,269] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:34:14,634] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:34:14,634] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:34:14,648] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:34:14,716] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:34:14,718] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:36:43,877] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:36:43,877] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:37:00,274] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:37:00,274] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:38:36,493] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:38:36,493] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:40:08,316] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:40:08,316] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:41:22,980] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:41:22,980] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:42:44,746] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:42:44,746] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:43:23,120] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:43:23,120] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:43:23,142] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:43:23,196] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:43:23,198] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:43:25,958] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:43:25,958] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:43:25,969] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:43:25,993] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:43:26,005] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:44:39,862] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:44:39,862] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:44:39,867] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:44:39,882] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:44:39,912] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:44:42,116] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:44:42,116] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:44:43,634] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:44:43,635] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:44:43,645] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:44:43,665] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:44:43,677] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:45:19,906] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:45:19,906] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:45:49,043] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:45:49,044] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:45:49,079] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:45:49,182] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:45:49,182] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:45:51,508] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:45:51,508] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:48:05,180] WARNING django.request - Not Found: /urunlercompany/catogory_detail_api/1/
+[2025-08-12 21:48:05,180] WARNING django.server - "GET /urunlercompany/catogory_detail_api/1/ HTTP/1.1" 404 5729
+[2025-08-12 21:50:41,812] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:50:41,812] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:50:41,827] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:50:41,863] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:50:41,877] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:53:52,076] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:53:52,077] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:53:52,096] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:53:52,127] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:53:52,140] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 21:53:56,568] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 21:53:56,569] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 21:53:56,581] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 21:53:56,621] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 21:53:56,624] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:01:33,881] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:01:33,881] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:01:33,898] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:01:33,908] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:01:33,947] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:02:22,548] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:02:22,548] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:02:22,559] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:02:22,594] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:02:22,609] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:02:24,473] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:02:24,474] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:02:24,566] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:02:24,569] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:02:24,637] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:02:24,691] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 22:02:24,691] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5651
+[2025-08-12 22:02:25,459] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:02:25,459] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:02:25,472] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:02:25,503] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:02:25,518] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:02:28,310] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:02:28,312] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 61810
+[2025-08-12 22:03:17,426] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:03:17,427] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:03:17,437] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:03:17,474] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:03:17,477] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:03:17,767] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:03:17,767] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:03:17,782] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:03:17,809] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:03:17,809] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:03:17,926] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:03:17,926] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:03:17,939] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:03:17,957] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:03:17,981] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:03:20,026] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:03:20,027] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 61810
+[2025-08-12 22:03:26,981] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:03:26,982] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:03:26,994] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:03:27,003] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:03:27,033] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:03:27,115] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:03:27,115] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5762
+[2025-08-12 22:03:27,125] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:03:27,161] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:03:27,161] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:03:29,097] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:03:29,097] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 61810
+[2025-08-12 22:03:58,811] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:03:58,811] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:03:58,983] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:03:58,988] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:03:59,146] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:03:59,146] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:03:59,664] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:03:59,669] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:03:59,840] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:03:59,841] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:00,012] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:00,014] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:00,176] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:00,181] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:00,339] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:00,341] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:00,513] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:00,517] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:00,691] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:00,692] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:00,912] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:00,913] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:01,165] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:01,165] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:01,360] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:01,365] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:01,552] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:01,552] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62192
+[2025-08-12 22:04:39,147] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:39,148] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62320
+[2025-08-12 22:04:39,177] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 22:04:39,178] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5651
+[2025-08-12 22:04:40,265] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:40,265] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62320
+[2025-08-12 22:04:40,299] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 22:04:40,300] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5651
+[2025-08-12 22:04:40,513] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:40,513] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62320
+[2025-08-12 22:04:40,540] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 22:04:40,541] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5651
+[2025-08-12 22:04:40,700] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:40,700] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62320
+[2025-08-12 22:04:40,731] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 22:04:40,731] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5651
+[2025-08-12 22:04:40,872] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:40,873] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62320
+[2025-08-12 22:04:40,899] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 22:04:40,899] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5651
+[2025-08-12 22:04:41,027] ERROR django.request - Internal Server Error: /catogory_detail_api/1/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
+[2025-08-12 22:04:41,028] ERROR django.server - "GET /catogory_detail_api/1/ HTTP/1.1" 500 62320
+[2025-08-12 22:04:41,055] WARNING django.request - Not Found: /favicon.ico
+[2025-08-12 22:04:41,055] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5651
+[2025-08-12 22:06:14,748] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:06:14,749] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5764
+[2025-08-12 22:06:14,761] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:06:14,771] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:06:14,808] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-12 22:06:14,894] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-12 22:06:14,895] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5764
+[2025-08-12 22:06:14,910] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-12 22:06:14,950] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-12 22:06:14,967] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904

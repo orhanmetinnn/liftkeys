@@ -330,7 +330,6 @@ class Product(models.Model):
     name = models.CharField(max_length=250, verbose_name="Ürün Adı")
     website_image = models.ImageField(upload_to=product_website_image_path, blank=True, null=True, verbose_name="Web Sitesi Görseli")
     mobile_image = models.ImageField(upload_to=product_mobile_image_path, blank=True, null=True, verbose_name="Mobil Görünüm Görseli")
-    offer_pdf = models.FileField(upload_to=product_offer_pdf_path, blank=True, null=True, verbose_name="Fiyat Teklifi PDF")
     features = models.TextField(blank=True, null=True, verbose_name="Ürün Özellikleri")
     stock_code = models.CharField(max_length=50, unique=True, verbose_name="Stok Kodu")
     categories = models.ManyToManyField(Category, blank=True, verbose_name="Kategoriler")

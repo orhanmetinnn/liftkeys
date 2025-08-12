@@ -10,6 +10,61 @@
                 <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">Eklenen Listesi</button>
             </div>
 
+            <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#createCountryCollapse" aria-expanded="false" aria-controls="createCountryCollapse">
+                    Katagori Oluştur
+                </button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#updateCountryCollapse" aria-expanded="false" aria-controls="updateCountryCollapse">
+                    Katagori Güncelle
+                </button>
+            </div>
+
+            <div class="collapse" id="createCountryCollapse">
+                <div class="card  card-body mb-3">
+                    <form method="POST" action="" novalidate>
+                    {% csrf_token %}
+                    <h5>Yeni Katagori Oluştur</h5>
+                    <div class="mb-3">
+                        {{ formcreatecatagory.name.label_tag }}
+                        {{ formcreatecatagory.name }}
+                    </div>
+
+                    <button type="submit" name="create_catagory_submit" class="btn btn-danger">Kaydet</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#createCountryCollapse">İptal</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="collapse" id="updateCountryCollapse">
+                <div class="card card-body mb-3">
+                    <div class="mb-3">
+                    <label for="catagorySelect" class="form-label">Ülke Seçiniz</label>
+                    <select id="catagorySelect" class="form-select" onchange="toggleCountryForm(this.value)">
+                        <option value="" selected>Seçiniz</option>
+                        {% for catagory in catagory_list %}
+                            <option value="{{ catagory.id }}">{{ catagory.name }}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                    <form method="POST" action="" id="formcatogryupdate" novalidate>
+                        {% csrf_token %}
+                        <input type="hidden"  id="update_catagory_id" name="update_catagory_id" value="">
+                        <h5>Ülke Güncelle</h5>
+                        <div class="mb-3">
+                            {{ formcatogryupdate.name.label_tag }}
+                            {{ formcatogryupdate.name }}
+                        </div>
+
+                        <button type="submit" name="update_catagory_submit" class="btn btn-info">Güncelle</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#updateCountryCollapse">İptal</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
             <div class="container mt-4">
                 <h2>{{ action }}</h2>
                 <form method="post" enctype="multipart/form-data" novalidate>
@@ -38,13 +93,6 @@
                         {% endif %}
                     </div>
 
-                    <div class="mb-3">
-                        {{ form.offer_pdf.label_tag }} 
-                        {{ form.offer_pdf }}
-                        {% if form.offer_pdf.errors %}
-                            <div class="text-danger">{{ form.offer_pdf.errors }}</div>
-                        {% endif %}
-                    </div>
 
                     <div class="mb-3">
                         {{ form.features.label_tag }} 
@@ -167,6 +215,9 @@
     </div>
     {% endif %}
 
+
+
+
     <script>
         function showForm(type) {
             const createForm = document.getElementById('form-create');
@@ -193,7 +244,27 @@
 
     </script>
 
+    
+    <script>
+        function toggleCountryForm(categoryId) {
+            if (!categoryId) {
+                document.getElementById('formcatogryupdate').reset();
+                document.getElementById('update_catagory_id').value = '';
+                return;
+            }
 
+            fetch(`/catogory_detail_api/${categoryId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('update_catagory_id').value = data.id;
+                    document.getElementById('id_update-name').value = data.name || '';
+                    console.log(`Loaded data for category ID ${categoryId}:`, data);
+                })
+                .catch(error => {
+                    console.error('Kategori verisi alınırken hata:', error);
+                });
+        }
+    </script>
 
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
