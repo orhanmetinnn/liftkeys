@@ -18,4 +18,12 @@ urlpatterns = [
     # Country detay API
     path('api/country/<int:country_id>/', views.country_detail_api, name='country_detail_api'),
     path('directorycompany/update/', views.directory_company_update, name='directory_company_update'),
+    # path('urunlercompany/', views.product_create_update, name='product_list'),
 ]
+
+
+
+
+
+
+

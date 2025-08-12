@@ -293,3 +293,67 @@ class DirectoryCompany(models.Model):
     created_at = models.DateTimeField(auto_now_add=True,null=True, blank=True)  # Oluşturulma tarihi (sadece ilk kayıtta set edilir)
     updated_at = models.DateTimeField(auto_now=True,null=True, blank=True) 
 
+
+
+
+
+from django.db import models
+
+def product_website_image_path(instance, filename):
+    return f"products/{instance.id}/website/{filename}"
+
+def product_mobile_image_path(instance, filename):
+    return f"products/{instance.id}/mobile/{filename}"
+
+def product_offer_pdf_path(instance, filename):
+    return f"products/{instance.id}/offers/{filename}"
+
+
+
+
+
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.name
+
+
+
+
+
+
+
+class Product(models.Model):
+    name = models.CharField(max_length=250, verbose_name="Ürün Adı")
+    website_image = models.ImageField(upload_to=product_website_image_path, blank=True, null=True, verbose_name="Web Sitesi Görseli")
+    mobile_image = models.ImageField(upload_to=product_mobile_image_path, blank=True, null=True, verbose_name="Mobil Görünüm Görseli")
+    offer_pdf = models.FileField(upload_to=product_offer_pdf_path, blank=True, null=True, verbose_name="Fiyat Teklifi PDF")
+    features = models.TextField(blank=True, null=True, verbose_name="Ürün Özellikleri")
+    stock_code = models.CharField(max_length=50, unique=True, verbose_name="Stok Kodu")
+    categories = models.ManyToManyField(Category, blank=True, verbose_name="Kategoriler")
+    description = models.TextField(blank=True, null=True, verbose_name="Açıklama")
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Fiyat", default=0.0)
+    is_active = models.BooleanField(default=True, verbose_name="Aktif Mi?")
+    warranty_period = models.CharField(max_length=50, blank=True, null=True, verbose_name="Garanti Süresi")
+    video_url = models.URLField(blank=True, null=True, verbose_name="Tanıtım Videosu URL")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.name
+
+
+class Option(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='options')
+    name = models.CharField(max_length=250, verbose_name="Özellik Adı")  # Ör: "Cam", "Renk", "Ağırlık"
+    value = models.CharField(max_length=250, verbose_name="Değer")       # Ör: "Şeffaf", "Kırmızı", "12 kg"
+    yayinla=models.BooleanField(default=True, verbose_name="Yayınla")
+    def __str__(self):
+        return f"{self.product.name} - {self.name}: {self.value}"
+
+
+
+        

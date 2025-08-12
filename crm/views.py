@@ -513,3 +513,35 @@ def directory_company_update(request):
     except Exception as e:
         logger.error(f"DirectoryCompany view'da hata: {e}", exc_info=True)
         return HttpResponseServerError("Bir hata oluştu, lütfen daha sonra tekrar deneyin.")
+
+
+
+
+
+
+
+
+
+# def product_create_update(request, pk=None):
+#     if pk:
+#         product = get_object_or_404(Product, pk=pk)
+#         action = "Güncelle"
+#     else:
+#         product = None
+#         action = "Yeni Ürün Ekle"
+
+#     if request.method == 'POST':
+#         form = ProductForm(request.POST, request.FILES, instance=product)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('product_list')  # Ürün listesine yönlendir (url adına göre düzenle)
+#     else:
+#         form = ProductForm(instance=product)
+
+#     context = {
+#         'form': form,
+#         'action': action,
+#     }
+#     return render(request, 'urunler/uruncreateandupdate.html', context)
+
+

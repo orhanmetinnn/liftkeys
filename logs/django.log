@@ -6953,3 +6953,35 @@ AttributeError: 'Sector' object has no attribute 'code'
 [2025-08-11 16:09:04,688] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5079
 [2025-08-11 16:09:52,650] WARNING django.request - Not Found: /favicon.ico
 [2025-08-11 16:09:52,650] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5079
+[2025-08-12 14:16:04,731] WARNING django.request - Not Found: /
+[2025-08-12 14:16:04,734] WARNING django.server - "GET / HTTP/1.1" 404 5028
+[2025-08-12 14:18:08,007] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:08,007] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:08,856] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:08,857] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:09,014] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:09,014] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:09,568] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:09,569] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:09,739] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:09,740] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:09,925] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:09,926] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:10,109] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:10,111] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:10,294] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:10,295] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:10,460] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:10,460] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:10,636] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:10,636] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:10,812] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:10,812] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:11,011] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:11,012] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:18:11,196] WARNING django.request - Not Found: /personel_yonetim/
+[2025-08-12 14:18:11,197] WARNING django.server - "GET /personel_yonetim/ HTTP/1.1" 404 5097
+[2025-08-12 14:24:24,383] WARNING django.request - Not Found: /companies/manage/test
+[2025-08-12 14:24:24,385] WARNING django.server - "GET /companies/manage/test HTTP/1.1" 404 5109
+[2025-08-12 14:24:28,086] WARNING django.request - Not Found: /pass/
+[2025-08-12 14:24:28,087] WARNING django.server - "GET /pass/ HTTP/1.1" 404 5061
