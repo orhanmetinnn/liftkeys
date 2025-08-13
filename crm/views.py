@@ -8,8 +8,8 @@ from .forms import UpdateSectorForm,DirectoryCompanyForm
 from django.db.models import Count 
 import logging
 from django.http import HttpResponseServerError
-from .models import Employee , Sector,Country,Product,Category
-from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm,ProductForm,CategoryForm,UpdateCategoryForm
+from .models import Employee , Sector,Country,Product,Category,Product
+from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm,ProductForm,CategoryForm,UpdateCategoryForm,UpdateProductForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -527,19 +527,28 @@ URUNLER
 def product_create_update(request):
     try:
         catagory_list = Category.objects.all()
-        logger.debug(f"{catagory_list.count()} firma listelendi.")
+        logger.debug(f"{catagory_list.count()} katagori listelendi.")
     except Exception as e:
-        logger.exception("Firma listesi alınırken hata oluştu.")
-        messages.error(request, 'Firma listesi alınırken bir hata oluştu.')
+        logger.exception("katagori listesi alınırken hata oluştu.")
+        messages.error(request, 'katagori listesi alınırken bir hata oluştu.')
         catagory_list = []
+
+    try:
+        urun_list = Product.objects.all()
+        logger.debug(f"{urun_list.count()} ürün listelendi.")
+    except Exception as e:
+        logger.exception("ürün listesi alınırken hata oluştu.")
+        messages.error(request, 'ürün listesi alınırken bir hata oluştu.')
+        urun_list = []
+
 
     if request.method == 'POST':
         if 'create_catagory_submit' in request.POST:
             form_create=CategoryForm(request.POST,prefix='create')
             if form_create.is_valid():
                 form_create.save()
-                logger.info("Yeni firma başarıyla kaydedildi.")
-                messages.success(request, 'Firma başarıyla kaydedildi.')
+                logger.info("Yeni katagori başarıyla kaydedildi.")
+                messages.success(request, 'Katagori başarıyla kaydedildi.')
                 return redirect('product_list')  # URL adını kendine göre değiştir
         elif 'update_catagory_submit' in request.POST:
             category_id = request.POST.get('update_catagory_id')
@@ -566,11 +575,61 @@ def product_create_update(request):
                 logger.error("Kategori güncelleme isteğinde ID eksik.")
                 messages.error(request, 'Kategori ID bilgisi eksik.')
 
+
+        elif 'create_product_button' in request.POST:
+            print("burasi çalıştı")
+            form_create = ProductForm(request.POST, request.FILES, prefix='create')  # <-- request.FILES ekledik
+            if form_create.is_valid():
+                form_create.save()
+                logger.info("Yeni ürün başarıyla kaydedildi.")
+                messages.success(request, 'Ürün başarıyla kaydedildi.')
+                return redirect('product_list')
+            else:
+                print(form_create.errors)  # <-- Burada hata mesajlarını yazdırabilirsiniz      
+
+
+
+        elif 'update_product_submit' in request.POST:
+            product_id = request.POST.get('update_product_id')
+            logger.debug(f"Güncelleme için gelen ürün ID: {product_id}")
+
+            if product_id:
+                try:
+                    selected_product = Product.objects.get(pk=product_id)
+                    form_update = UpdateProductForm(
+                        request.POST,
+                        request.FILES,
+                        instance=selected_product,
+                        prefix='update'
+                    )
+
+                    if form_update.is_valid():
+                        form_update.save()
+                        logger.info(f"Ürün (ID: {product_id}) başarıyla güncellendi.")
+                        messages.success(request, 'Ürün başarıyla güncellendi.')
+                        return redirect('product_list')  # kendi sayfana göre değiştir
+                    else:
+                        logger.warning(f"Güncelleme formu geçersiz. Hatalar: {form_update.errors}")
+                        messages.error(request, 'Ürün güncelleme formunda hata var.')
+
+                except Product.DoesNotExist:
+                    logger.warning(f"Güncellenmek istenen ürün bulunamadı. ID: {product_id}")
+                    messages.error(request, 'Güncellenecek ürün bulunamadı.')
+
+                except Exception as e:
+                    logger.exception(f"Ürün (ID: {product_id}) güncellenirken hata oluştu: {e}")
+                    messages.error(request, 'Ürün güncelleme sırasında hata oluştu.')
+            else:
+                logger.error("Ürün güncelleme isteğinde ID eksik.")
+                messages.error(request, 'Ürün ID bilgisi eksik.')
+
     context = {
         'form': ProductForm(prefix='create'),
+        'UpdateProductForm':UpdateProductForm(prefix='update'),
         'formcatogryupdate':UpdateCategoryForm(prefix='update'),
         'formcreatecatagory':CategoryForm(prefix='create'),
         'catagory_list':catagory_list,
+        'urun_list':urun_list,
     }
     return render(request, 'urunler/uruncreateandupdate.html', context)
 
@@ -590,5 +649,25 @@ def catogory_detail_api(request, category_id):
     data = {
         'id': category.id,
         'name': category.name,
+    }
+    return JsonResponse(data)
+
+
+
+def product_detail_api(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    data = {
+        'id': product.id,
+        'name': product.name,
+        'website_image_url': product.website_image.url if product.website_image else None,
+        'mobile_image_url': product.mobile_image.url if product.mobile_image else None,
+        'features': product.features,
+        'stock_code': product.stock_code,
+        'categories': list(product.categories.values_list('id', flat=True)),
+        'description': product.description,
+        'price': str(product.price),  # Decimal JSON’da string olmalı
+        'is_active': product.is_active,
+        'warranty_period': product.warranty_period,
     }
     return JsonResponse(data)

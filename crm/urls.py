@@ -19,7 +19,9 @@ urlpatterns = [
     path('api/country/<int:country_id>/', views.country_detail_api, name='country_detail_api'),
     path('directorycompany/update/', views.directory_company_update, name='directory_company_update'),
     path('urunlercompany/', views.product_create_update, name='product_list'),
-    path('catogory_detail_api/<int:category_id>/',views.catogory_detail_api,name='catogory_detail_api')
+    path('catogory_detail_api/<int:category_id>/',views.catogory_detail_api,name='catogory_detail_api'),
+    path('product_detail_api/<int:product_id>/', views.product_detail_api, name='product_detail_api'),
+
 ]
 
 

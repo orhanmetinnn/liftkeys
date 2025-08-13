@@ -382,7 +382,6 @@ class ProductForm(forms.ModelForm):
             'price',
             'is_active',
             'warranty_period',
-            'video_url',
         ]
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
@@ -395,7 +394,6 @@ class ProductForm(forms.ModelForm):
             'price': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}),
             'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
             'warranty_period': forms.TextInput(attrs={'class': 'form-control'}),
-            'video_url': forms.URLInput(attrs={'class': 'form-control'}),
         }
 
 
@@ -448,65 +446,30 @@ class UpdateCategoryForm(forms.ModelForm):
 
 
 
-
-# from django import forms
-# from .models import Product, Category
-
-# class ProductForm(forms.ModelForm):
-#     class Meta:
-#         model = Product
-#         fields = [
-#             'name',
-#             'website_image',
-#             'mobile_image',
-#             'offer_pdf',
-#             'features',
-#             'stock_code',
-#             'categories',
-#             'description',
-#             'price',
-#             'is_active',
-#             'weight',
-#             'dimensions',
-#             'color',
-#             'warranty_period',
-#             'video_url',
-#             'related_products',
-#         ]
-#         widgets = {
-#             'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ürün adı'}),
-#             'website_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-#             'mobile_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-#             'offer_pdf': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-#             'features': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Ürün özellikleri'}),
-#             'stock_code': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Stok kodu'}),
-#             'categories': forms.SelectMultiple(attrs={'class': 'form-select', 'multiple': True}),
-#             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 4, 'placeholder': 'Açıklama'}),
-#             'price': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}),
-#             'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
-#             'weight': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.001'}),
-#             'dimensions': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'En x Boy x Yükseklik'}),
-#             'color': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Renk'}),
-#             'warranty_period': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Garanti süresi'}),
-#             'video_url': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'Video URL'}),
-#             'related_products': forms.SelectMultiple(attrs={'class': 'form-select', 'multiple': True}),
-#         }
-#         labels = {
-#             'name': 'Ürün Adı',
-#             'website_image': 'Web Sitesi Görseli',
-#             'mobile_image': 'Mobil Görünüm Görseli',
-#             'offer_pdf': 'Fiyat Teklifi PDF',
-#             'features': 'Ürün Özellikleri',
-#             'stock_code': 'Stok Kodu',
-#             'categories': 'Kategoriler',
-#             'description': 'Açıklama',
-#             'price': 'Fiyat',
-#             'is_active': 'Aktif Mi?',
-#             'weight': 'Ağırlık (kg)',
-#             'dimensions': 'Ölçüler (En x Boy x Yükseklik)',
-#             'color': 'Renk',
-#             'warranty_period': 'Garanti Süresi',
-#             'video_url': 'Tanıtım Videosu URL',
-#             'related_products': 'İlgili Ürünler',
-#         }
-
+class UpdateProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = [
+            'name',
+            'website_image',
+            'mobile_image',
+            'features',
+            'stock_code',
+            'categories',
+            'description',
+            'price',
+            'is_active',
+            'warranty_period',
+        ]
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'website_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'mobile_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'features': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'stock_code': forms.TextInput(attrs={'class': 'form-control'}),
+            'categories': forms.SelectMultiple(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
+            'price': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}),
+            'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+            'warranty_period': forms.TextInput(attrs={'class': 'form-control'}),
+        }

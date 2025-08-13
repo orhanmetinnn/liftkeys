@@ -21,7 +21,7 @@
 
             <div class="collapse" id="createCountryCollapse">
                 <div class="card  card-body mb-3">
-                    <form method="POST" action="" novalidate>
+                    <form method="POST" action="">
                     {% csrf_token %}
                     <h5>Yeni Katagori Oluştur</h5>
                     <div class="mb-3">
@@ -38,7 +38,7 @@
             <div class="collapse" id="updateCountryCollapse">
                 <div class="card card-body mb-3">
                     <div class="mb-3">
-                    <label for="catagorySelect" class="form-label">Ülke Seçiniz</label>
+                    <label for="catagorySelect" class="form-label">Katagori Seçiniz</label>
                     <select id="catagorySelect" class="form-select" onchange="toggleCountryForm(this.value)">
                         <option value="" selected>Seçiniz</option>
                         {% for catagory in catagory_list %}
@@ -46,10 +46,10 @@
                         {% endfor %}
                     </select>
                     </div>
-                    <form method="POST" action="" id="formcatogryupdate" novalidate>
+                    <form method="POST" action="" id="formcatogryupdate">
                         {% csrf_token %}
                         <input type="hidden"  id="update_catagory_id" name="update_catagory_id" value="">
-                        <h5>Ülke Güncelle</h5>
+                        <h5>Katagori Güncelle</h5>
                         <div class="mb-3">
                             {{ formcatogryupdate.name.label_tag }}
                             {{ formcatogryupdate.name }}
@@ -65,137 +65,65 @@
 
 
 
-            <div class="container mt-4">
-                <h2>{{ action }}</h2>
-                <form method="post" enctype="multipart/form-data" novalidate>
+            <div class="container mt-4" id="form-create">
+                <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <div class="mb-3">
-                        {{ form.name.label_tag }} 
-                        {{ form.name }}
-                        {% if form.name.errors %}
-                            <div class="text-danger">{{ form.name.errors }}</div>
-                        {% endif %}
-                    </div>
 
-                    <div class="mb-3">
-                        {{ form.website_image.label_tag }} 
-                        {{ form.website_image }}
-                        {% if form.website_image.errors %}
-                            <div class="text-danger">{{ form.website_image.errors }}</div>
-                        {% endif %}
-                    </div>
+                    {% for field in form %}
+                        <div class="mb-3">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {% if field.errors %}
+                                <div class="text-danger">{{ field.errors }}</div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
 
-                    <div class="mb-3">
-                        {{ form.mobile_image.label_tag }} 
-                        {{ form.mobile_image }}
-                        {% if form.mobile_image.errors %}
-                            <div class="text-danger">{{ form.mobile_image.errors }}</div>
-                        {% endif %}
-                    </div>
-
-
-                    <div class="mb-3">
-                        {{ form.features.label_tag }} 
-                        {{ form.features }}
-                        {% if form.features.errors %}
-                            <div class="text-danger">{{ form.features.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.stock_code.label_tag }} 
-                        {{ form.stock_code }}
-                        {% if form.stock_code.errors %}
-                            <div class="text-danger">{{ form.stock_code.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.categories.label_tag }} 
-                        {{ form.categories }}
-                        {% if form.categories.errors %}
-                            <div class="text-danger">{{ form.categories.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.description.label_tag }} 
-                        {{ form.description }}
-                        {% if form.description.errors %}
-                            <div class="text-danger">{{ form.description.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.price.label_tag }} 
-                        {{ form.price }}
-                        {% if form.price.errors %}
-                            <div class="text-danger">{{ form.price.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="form-check mb-3">
-                        {{ form.is_active }} 
-                        {{ form.is_active.label_tag }}
-                        {% if form.is_active.errors %}
-                            <div class="text-danger">{{ form.is_active.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.weight.label_tag }} 
-                        {{ form.weight }}
-                        {% if form.weight.errors %}
-                            <div class="text-danger">{{ form.weight.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.dimensions.label_tag }} 
-                        {{ form.dimensions }}
-                        {% if form.dimensions.errors %}
-                            <div class="text-danger">{{ form.dimensions.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.color.label_tag }} 
-                        {{ form.color }}
-                        {% if form.color.errors %}
-                            <div class="text-danger">{{ form.color.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.warranty_period.label_tag }} 
-                        {{ form.warranty_period }}
-                        {% if form.warranty_period.errors %}
-                            <div class="text-danger">{{ form.warranty_period.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.video_url.label_tag }} 
-                        {{ form.video_url }}
-                        {% if form.video_url.errors %}
-                            <div class="text-danger">{{ form.video_url.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form.related_products.label_tag }} 
-                        {{ form.related_products }}
-                        {% if form.related_products.errors %}
-                            <div class="text-danger">{{ form.related_products.errors }}</div>
-                        {% endif %}
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">{{ action }}</button>
+                    <button type="submit" name="create_product_button" class="btn btn-primary">Kaydet</button>
                     <a href="{% url 'product_list' %}" class="btn btn-secondary ms-2">İptal</a>
                 </form>
             </div>
-            </div>
             
+            <div id="form-update" style="display:none;">
+                    <div class="mb-3">
+                        <label for="productSelect" class="form-label">Ürün Seçiniz</label>
+                        <select id="productSelect" class="form-select" onchange="toggleProductForm(this.value)">
+                            <option value="" selected>Seçiniz</option>
+                            {% for urun in urun_list %}
+                                <option value="{{ urun.id }}">{{ urun.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <form method="POST" enctype="multipart/form-data" id="formproductupdate">
+                        {% csrf_token %}
+                        <input type="hidden" id="update_product_id" name="update_product_id" value="">
+
+                        <h5>Ürün Güncelle</h5>
+
+                        {% for field in form %}
+                            <div class="mb-3">
+                                {{ field.label_tag }}
+                                {{ field }}
+                                {% if field.name == 'website_image' %}
+                                    <img id="website_image_preview" src="" alt="Website Resmi Önizleme" style="max-width:150px; display:none; margin-top:5px;">
+                                {% endif %}
+                                {% if field.name == 'mobile_image' %}
+                                    <img id="mobile_image_preview" src="" alt="Mobil Resmi Önizleme" style="max-width:150px; display:none; margin-top:5px;">
+                                {% endif %}
+                                {% if field.errors %}
+                                    <div class="text-danger">{{ field.errors }}</div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+
+                        <button type="submit" name="update_product_submit" class="btn btn-info">Güncelle</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#updateCountryCollapse">İptal</button>
+                    </form>
+                </div>
+            </div>
+
+
         </div>
 
 
@@ -265,6 +193,68 @@
                 });
         }
     </script>
+
+
+    <script>
+        function toggleProductForm(productId) {
+            const form = document.getElementById('formproductupdate');
+            if (!productId) {
+                form.reset();
+                document.getElementById('website_image_preview').style.display = 'none';
+                document.getElementById('mobile_image_preview').style.display = 'none';
+                document.getElementById('update_product_id').value = '';
+                return;
+            }
+
+            fetch(`/product_detail_api/${productId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Ürün verisi:', data);
+
+                    // Hidden ID alanı
+                    form.querySelector('#update_product_id').value = data.id;
+
+                    // Form alanlarını doldur
+                    form.querySelector('#id_update-name').value = data.name || '';
+                    form.querySelector('#id_update-features').value = data.features || '';
+                    form.querySelector('#id_update-stock_code').value = data.stock_code || '';
+                    form.querySelector('#id_update-description').value = data.description || '';
+                    form.querySelector('#id_update-price').value = data.price || '';
+                    form.querySelector('#id_update-warranty_period').value = data.warranty_period || '';
+                    form.querySelector('#id_update-is_active').checked = data.is_active || false;
+
+                    // Categories (SelectMultiple)
+                    const categoriesSelect = form.querySelector('#id_update-categories');
+                    if (categoriesSelect) {
+                        for (let option of categoriesSelect.options) {
+                            option.selected = data.categories.includes(parseInt(option.value));
+                        }
+                    }
+
+                    // Resim preview
+                    const websitePreview = document.getElementById('website_image_preview');
+                    if (data.website_image_url) {
+                        websitePreview.src = data.website_image_url;
+                        websitePreview.style.display = 'block';
+                    } else {
+                        websitePreview.style.display = 'none';
+                    }
+
+                    const mobilePreview = document.getElementById('mobile_image_preview');
+                    if (data.mobile_image_url) {
+                        mobilePreview.src = data.mobile_image_url;
+                        mobilePreview.style.display = 'block';
+                    } else {
+                        mobilePreview.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Ürün verisi yüklenirken hata oluştu:', error);
+                });
+        }
+    </script>
+
+
 
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

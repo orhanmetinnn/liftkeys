@@ -337,12 +337,12 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Fiyat", default=0.0)
     is_active = models.BooleanField(default=True, verbose_name="Aktif Mi?")
     warranty_period = models.CharField(max_length=50, blank=True, null=True, verbose_name="Garanti Süresi")
-    video_url = models.URLField(blank=True, null=True, verbose_name="Tanıtım Videosu URL")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return self.name
+
 
 
 class Option(models.Model):
@@ -355,4 +355,76 @@ class Option(models.Model):
 
 
 
-        
+
+
+
+
+
+
+
+
+# Fırsat Durumları
+OPPORTUNITY_STATUS_CHOICES = [
+    ('new', 'Yeni'),
+    ('in_progress', 'İşlemde'),
+    ('won', 'Kazanıldı'),
+    ('lost', 'Kaybedildi'),
+]
+
+# Öncelik Seviyesi
+PRIORITY_CHOICES = [
+    ('low', 'Düşük'),
+    ('medium', 'Orta'),
+    ('high', 'Yüksek'),
+]
+
+OPPORTUNITY_STATUS_CHOICES = [
+    ('new', 'Yeni'),
+    ('in_progress', 'İşlemde'),
+    ('won', 'Kazanıldı'),
+    ('lost', 'Kaybedildi'),
+]
+
+# Öncelik Seviyesi
+PRIORITY_CHOICES = [
+    ('low', 'Düşük'),
+    ('medium', 'Orta'),
+    ('high', 'Yüksek'),
+]
+
+# Fırsat Kaynağı
+LEAD_SOURCE_CHOICES = [
+    ('referral', 'Referans'),
+    ('website', 'Web Sitesi'),
+    ('fair', 'Fuar'),
+    ('social_media', 'Sosyal Medya'),
+    ('other', 'Diğer'),
+]
+
+class Opportunity(models.Model):
+    name = models.CharField(max_length=250, verbose_name="Fırsat Adı")
+    company = models.ForeignKey('Company', on_delete=models.CASCADE, verbose_name="Firma")
+    products = models.ManyToManyField('Product', blank=True, verbose_name="Ürünler")  # Birden fazla ürün seçilebilir
+    description = models.TextField(blank=True, null=True, verbose_name="Açıklama / Notlar")
+    status = models.CharField(max_length=20, choices=OPPORTUNITY_STATUS_CHOICES, default='new', verbose_name="Durum")
+    priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='medium', verbose_name="Öncelik")
+    estimated_value = models.DecimalField(max_digits=15, decimal_places=2, blank=True, null=True, verbose_name="Tahmini Değer")
+    expected_close_date = models.DateField(blank=True, null=True, verbose_name="Tahmini Kapanış Tarihi")
+    lead_source = models.CharField(max_length=50, choices=LEAD_SOURCE_CHOICES, blank=True, null=True, verbose_name="Fırsatın Kaynağı")
+    owner = models.ForeignKey('Employee', on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Sorumlu Çalışan")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.company.firma_adi}"
+    
+
+
+
+
+
+
+
+
+
+
