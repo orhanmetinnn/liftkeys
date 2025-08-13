@@ -6,8 +6,15 @@
     <div class="container py-5">
         <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
             <div class="btn-group mb-4" role="group" aria-label="Form toggle">
-                <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">Yeni Kayıt</button>
-                <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">Eklenen Listesi</button>
+                <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">
+                    Yeni Kayıt
+                </button>
+                <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">
+                    Eklenen Listesi
+                </button>
+                <button type="button" id="btn-table" class="btn btn-outline-success" onclick="showForm('table')">
+                    Tablo Göster
+                </button>
             </div>
 
             <div class="btn-group mb-4" role="group" aria-label="Form toggle">
@@ -101,7 +108,7 @@
 
                         <h5>Ürün Güncelle</h5>
 
-                        {% for field in form %}
+                        {% for field in UpdateProductForm %}
                             <div class="mb-3">
                                 {{ field.label_tag }}
                                 {{ field }}
@@ -123,10 +130,44 @@
                 </div>
             </div>
 
+            
+
+            <div id="table-show" style="display:none;">
+                <table id="urunTable" class="table  table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Ürün Adı</th>
+                            <th>Stok Kodu</th>
+                            <th>Fiyat</th>
+                            <th>Aktif</th>
+                            <th>Kategoriler</th>
+                            <th>Oluşturulma Tarihi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for urun in urun_list %}
+                        <tr>
+                            <td>{{ urun.id }}</td>
+                            <td>{{ urun.name }}</td>
+                            <td>{{ urun.stock_code }}</td>
+                            <td>{{ urun.price }}</td>
+                            <td>{% if urun.is_active %}Evet{% else %}Hayır{% endif %}</td>
+                            <td>
+                                {% for cat in urun.categories.all %}
+                                    <span class="badge bg-primary">{{ cat.name }}</span>
+                                {% empty %}
+                                    -
+                                {% endfor %}
+                            </td>
+                            <td>{{ urun.created_at|date:"d.m.Y H:i" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
 
         </div>
-
-
     </div>
 
     
@@ -150,27 +191,56 @@
         function showForm(type) {
             const createForm = document.getElementById('form-create');
             const updateForm = document.getElementById('form-update');
+            const tableShow = document.getElementById('table-show'); // 3. sayfa
             const btnCreate = document.getElementById('btn-create');
             const btnUpdate = document.getElementById('btn-update');
+            const btnTable = document.getElementById('btn-table'); // 3. buton
 
             if(type === 'create'){
                 createForm.style.display = 'block';
                 updateForm.style.display = 'none';
+                tableShow.style.display = 'none';
+
                 btnCreate.classList.add('btn-primary', 'active');
                 btnCreate.classList.remove('btn-outline-primary');
+
                 btnUpdate.classList.remove('btn-primary', 'active');
                 btnUpdate.classList.add('btn-outline-primary');
-            } else {
+
+                btnTable.classList.remove('btn-primary', 'active');
+                btnTable.classList.add('btn-outline-primary');
+
+            } else if(type === 'update'){
                 createForm.style.display = 'none';
                 updateForm.style.display = 'block';
+                tableShow.style.display = 'none';
+
                 btnCreate.classList.remove('btn-primary', 'active');
                 btnCreate.classList.add('btn-outline-primary');
+
                 btnUpdate.classList.add('btn-primary', 'active');
                 btnUpdate.classList.remove('btn-outline-primary');
+
+                btnTable.classList.remove('btn-primary', 'active');
+                btnTable.classList.add('btn-outline-primary');
+
+            } else if(type === 'table'){
+                createForm.style.display = 'none';
+                updateForm.style.display = 'none';
+                tableShow.style.display = 'block';
+
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+
+                btnTable.classList.add('btn-primary', 'active');
+                btnTable.classList.remove('btn-outline-primary');
             }
         }
-
     </script>
+
 
     
     <script>
@@ -198,6 +268,8 @@
     <script>
         function toggleProductForm(productId) {
             const form = document.getElementById('formproductupdate');
+
+            // Eğer ürün seçilmemişse formu sıfırla
             if (!productId) {
                 form.reset();
                 document.getElementById('website_image_preview').style.display = 'none';
@@ -206,15 +278,16 @@
                 return;
             }
 
+            // API'den ürün detaylarını al
             fetch(`/product_detail_api/${productId}/`)
                 .then(response => response.json())
                 .then(data => {
                     console.log('Ürün verisi:', data);
 
-                    // Hidden ID alanı
+                    // Hidden ID alanını doldur
                     form.querySelector('#update_product_id').value = data.id;
 
-                    // Form alanlarını doldur
+                    // Form alanlarını doldur (prefix="update")
                     form.querySelector('#id_update-name').value = data.name || '';
                     form.querySelector('#id_update-features').value = data.features || '';
                     form.querySelector('#id_update-stock_code').value = data.stock_code || '';
@@ -231,7 +304,7 @@
                         }
                     }
 
-                    // Resim preview
+                    // Resim önizlemeleri
                     const websitePreview = document.getElementById('website_image_preview');
                     if (data.website_image_url) {
                         websitePreview.src = data.website_image_url;
@@ -255,7 +328,20 @@
     </script>
 
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            $('#urunTable').DataTable({
+                "paging": true,
+                "pageLength": 10,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true
+            });
+        });
+    </script>
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>

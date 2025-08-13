@@ -7700,3 +7700,122 @@ TypeError: catogory_detail_api() got an unexpected keyword argument 'sector_id'
 [2025-08-13 16:01:05,612] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
 [2025-08-13 16:01:05,685] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
 [2025-08-13 16:01:05,937] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-13 20:43:01,342] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 20:43:01,343] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 20:47:17,752] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 20:47:17,752] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 20:47:23,613] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:47:23,613] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:47:23,665] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-13 20:47:23,783] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-13 20:47:23,783] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-13 20:49:08,299] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:49:08,299] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:49:08,315] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-13 20:49:08,348] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-13 20:49:08,359] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-13 20:51:05,189] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:51:05,189] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:51:05,202] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-13 20:51:05,240] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-13 20:51:05,242] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-13 20:51:32,969] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:51:32,970] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:51:57,837] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-13 20:51:57,842] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:51:57,842] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:51:57,858] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:51:57,859] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:51:57,868] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-13 20:51:57,875] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-13 20:51:57,877] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-13 20:51:59,365] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:51:59,366] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:51:59,463] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-13 20:51:59,510] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-13 20:51:59,522] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-13 20:51:59,592] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 20:51:59,592] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 20:54:58,245] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-08-13 20:54:58,245] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6066
+[2025-08-13 20:54:58,261] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1883
+[2025-08-13 20:54:58,272] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+[2025-08-13 20:54:58,309] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+[2025-08-13 21:09:59,120] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:09:59,121] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:09:59,391] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:09:59,391] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:10:00,740] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:10:00,740] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:10:00,998] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:10:00,998] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:11:09,602] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:11:09,602] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:11:32,943] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:11:32,944] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:11:33,178] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:11:33,178] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:11:33,384] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:11:33,384] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:14:09,189] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:14:09,189] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:14:11,451] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:14:11,451] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:14:25,560] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:14:25,560] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:14:26,992] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:14:26,992] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:14:27,241] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:14:27,241] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:14:27,419] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:14:27,419] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:15:06,016] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:15:06,017] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:15:51,874] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:15:51,874] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:15:52,393] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:15:52,394] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:15:54,049] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:15:54,049] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:15:54,338] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:15:54,339] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:17:16,016] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:17:16,017] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:17:23,933] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:17:23,934] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:18:15,776] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:18:15,777] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:18:26,635] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:18:26,635] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:18:27,178] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:18:27,178] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:18:40,045] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:18:40,045] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:19:01,687] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:19:01,687] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:19:02,324] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:19:02,324] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:19:40,981] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:19:40,982] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:19:58,246] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:19:58,246] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:19:58,805] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:19:58,805] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:20:06,111] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:20:06,111] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:20:27,113] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:20:27,114] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:20:28,910] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:20:28,910] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:20:39,812] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:20:39,813] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:20:40,385] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:20:40,386] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:21:27,242] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:21:27,242] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:21:37,888] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:21:37,889] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:21:50,419] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:21:50,420] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955
+[2025-08-13 21:22:38,187] WARNING django.request - Not Found: /favicon.ico
+[2025-08-13 21:22:38,188] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 5955

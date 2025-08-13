@@ -654,20 +654,23 @@ def catogory_detail_api(request, category_id):
 
 
 
-def product_detail_api(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
 
-    data = {
-        'id': product.id,
-        'name': product.name,
-        'website_image_url': product.website_image.url if product.website_image else None,
-        'mobile_image_url': product.mobile_image.url if product.mobile_image else None,
-        'features': product.features,
-        'stock_code': product.stock_code,
-        'categories': list(product.categories.values_list('id', flat=True)),
-        'description': product.description,
-        'price': str(product.price),  # Decimal JSON’da string olmalı
-        'is_active': product.is_active,
-        'warranty_period': product.warranty_period,
-    }
-    return JsonResponse(data)
+def product_detail_api(request, product_id):
+    try:
+        product = Product.objects.get(pk=product_id)
+        data = {
+            'id': product.id,
+            'name': product.name,
+            'features': product.features,
+            'stock_code': product.stock_code,
+            'description': product.description,
+            'price': str(product.price),
+            'warranty_period': product.warranty_period,
+            'is_active': product.is_active,
+            'categories': list(product.categories.values_list('id', flat=True)),
+            'website_image_url': product.website_image.url if product.website_image else None,
+            'mobile_image_url': product.mobile_image.url if product.mobile_image else None,
+        }
+        return JsonResponse(data)
+    except Product.DoesNotExist:
+        return JsonResponse({'error': 'Ürün bulunamadı'}, status=404)
