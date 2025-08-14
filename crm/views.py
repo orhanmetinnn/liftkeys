@@ -673,6 +673,7 @@ def product_detail_api(request, product_id):
         }
         return JsonResponse(data)
     except Product.DoesNotExist:
+
         return JsonResponse({'error': 'Ürün bulunamadı'}, status=404)
     
 
@@ -702,6 +703,7 @@ def OpportunityDetail(request):
         'Opportunity_list':Opportunity_list
     }
     return render(request, 'fırsatlar/opportunity.html',context)
+
 
 
 

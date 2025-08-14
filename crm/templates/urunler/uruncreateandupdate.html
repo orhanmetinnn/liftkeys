@@ -169,7 +169,44 @@
 
             
 
+<<<<<<< HEAD
 
+=======
+            <div id="table-show" style="display:none;">
+                <table id="urunTable" class="table  table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Ürün Adı</th>
+                            <th>Stok Kodu</th>
+                            <th>Fiyat</th>
+                            <th>Aktif</th>
+                            <th>Kategoriler</th>
+                            <th>Oluşturulma Tarihi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for urun in urun_list %}
+                        <tr>
+                            <td>{{ urun.id }}</td>
+                            <td>{{ urun.name }}</td>
+                            <td>{{ urun.stock_code }}</td>
+                            <td>{{ urun.price }}</td>
+                            <td>{% if urun.is_active %}Evet{% else %}Hayır{% endif %}</td>
+                            <td>
+                                {% for cat in urun.categories.all %}
+                                    <span class="badge bg-primary">{{ cat.name }}</span>
+                                {% empty %}
+                                    -
+                                {% endfor %}
+                            </td>
+                            <td>{{ urun.created_at|date:"d.m.Y H:i" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+>>>>>>> 070b146229395b659cc2286e1cdfcaf332d4ad6f
 
         </div>
     </div>
