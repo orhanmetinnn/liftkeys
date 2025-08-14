@@ -414,7 +414,7 @@ class Opportunity(models.Model):
     owner = models.ForeignKey('Employee', on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Sorumlu Çalışan")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    
     def __str__(self):
         return f"{self.name} - {self.company.firma_adi}"
     

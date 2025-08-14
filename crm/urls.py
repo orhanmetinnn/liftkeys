@@ -21,6 +21,7 @@ urlpatterns = [
     path('urunlercompany/', views.product_create_update, name='product_list'),
     path('catogory_detail_api/<int:category_id>/',views.catogory_detail_api,name='catogory_detail_api'),
     path('product_detail_api/<int:product_id>/', views.product_detail_api, name='product_detail_api'),
+    path('opportunity_detail/',views.OpportunityDetail, name='OpportunityDetail'),
 
 ]
 

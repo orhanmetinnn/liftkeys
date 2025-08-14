@@ -1,0 +1,115 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+    <div class="container">
+        <div class="row">
+            <div class="col">   
+                <div class="container py-4">
+                    <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
+                        <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Fırsatlar</h2>
+                        <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                            <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">
+                                Yeni Kayıt
+                            </button>
+                            <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">
+                                Eklenen Listesi
+                            </button>
+                            <button type="button" id="btn-table" class="btn btn-outline-success" onclick="showForm('table')">
+                                Fırsatlar Listesi Göster
+                            </button>
+                        </div>
+                        <div class="container mt-4" id="form-create">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+
+                                {% for field in formOpportunityCreate %}
+                                    <div class="mb-3">
+                                        {{ field.label_tag }}
+                                        {{ field }}
+                                        {% if field.errors %}
+                                            <div class="text-danger">{{ field.errors }}</div>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+
+                                <button type="submit" name="create_opportunity_submit" class="btn btn-primary">Kaydet</button>
+                                <a href="{% url 'product_list' %}" class="btn btn-secondary ms-2">İptal</a>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <script>
+        function showForm(type) {
+            const createForm = document.getElementById('form-create');
+            const updateForm = document.getElementById('form-update');
+            const tableShow = document.getElementById('table-show'); // 3. sayfa
+            const btnCreate = document.getElementById('btn-create');
+            const btnUpdate = document.getElementById('btn-update');
+            const btnTable = document.getElementById('btn-table'); // 3. buton
+
+            if(type === 'create'){
+                createForm.style.display = 'block';
+                updateForm.style.display = 'none';
+                tableShow.style.display = 'none';
+
+                btnCreate.classList.add('btn-primary', 'active');
+                btnCreate.classList.remove('btn-outline-primary');
+
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+
+                btnTable.classList.remove('btn-primary', 'active');
+                btnTable.classList.add('btn-outline-primary');
+
+            } else if(type === 'update'){
+                createForm.style.display = 'none';
+                updateForm.style.display = 'block';
+                tableShow.style.display = 'none';
+
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+
+                btnUpdate.classList.add('btn-primary', 'active');
+                btnUpdate.classList.remove('btn-outline-primary');
+
+                btnTable.classList.remove('btn-primary', 'active');
+                btnTable.classList.add('btn-outline-primary');
+
+            } else if(type === 'table'){
+                createForm.style.display = 'none';
+                updateForm.style.display = 'none';
+                tableShow.style.display = 'block';
+
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+
+                btnTable.classList.add('btn-primary', 'active');
+                btnTable.classList.remove('btn-outline-primary');
+            }
+        }
+    </script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
+
+

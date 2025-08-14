@@ -473,3 +473,46 @@ class UpdateProductForm(forms.ModelForm):
             'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
             'warranty_period': forms.TextInput(attrs={'class': 'form-control'}),
         }
+
+
+
+
+
+from .models import Opportunity
+class OpportunityForm(forms.ModelForm):
+    class Meta:
+        model = Opportunity
+        fields = [
+            'name', 'company', 'products', 'description', 'status', 'priority',
+            'estimated_value', 'expected_close_date', 'lead_source', 'owner'
+        ]
+        labels = {
+            'name': 'Fırsat Adı',
+            'company': 'Firma',
+            'products': 'Ürünler',
+            'description': 'Açıklama / Notlar',
+            'status': 'Durum',
+            'priority': 'Öncelik',
+            'estimated_value': 'Tahmini Değer',
+            'expected_close_date': 'Tahmini Kapanış Tarihi',
+            'lead_source': 'Fırsatın Kaynağı',
+            'owner': 'Sorumlu Çalışan',
+        }
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'company': forms.Select(attrs={'class': 'form-select'}),
+            'products': forms.SelectMultiple(attrs={'class': 'form-select'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'status': forms.Select(attrs={'class': 'form-select'}),
+            'priority': forms.Select(attrs={'class': 'form-select'}),
+            'estimated_value': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}),
+            'expected_close_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'lead_source': forms.Select(attrs={'class': 'form-select'}),
+            'owner': forms.Select(attrs={'class': 'form-select'}),
+        }
+
+
+
+
+
+

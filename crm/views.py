@@ -8,8 +8,8 @@ from .forms import UpdateSectorForm,DirectoryCompanyForm
 from django.db.models import Count 
 import logging
 from django.http import HttpResponseServerError
-from .models import Employee , Sector,Country,Product,Category,Product
-from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm,ProductForm,CategoryForm,UpdateCategoryForm,UpdateProductForm
+from .models import Employee , Sector,Country,Product,Category,Product,Opportunity
+from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm,ProductForm,CategoryForm,UpdateCategoryForm,UpdateProductForm,OpportunityForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -654,20 +654,55 @@ def catogory_detail_api(request, category_id):
 
 
 
-def product_detail_api(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
 
-    data = {
-        'id': product.id,
-        'name': product.name,
-        'website_image_url': product.website_image.url if product.website_image else None,
-        'mobile_image_url': product.mobile_image.url if product.mobile_image else None,
-        'features': product.features,
-        'stock_code': product.stock_code,
-        'categories': list(product.categories.values_list('id', flat=True)),
-        'description': product.description,
-        'price': str(product.price),  # Decimal JSON’da string olmalı
-        'is_active': product.is_active,
-        'warranty_period': product.warranty_period,
+def product_detail_api(request, product_id):
+    try:
+        product = Product.objects.get(pk=product_id)
+        data = {
+            'id': product.id,
+            'name': product.name,
+            'features': product.features,
+            'stock_code': product.stock_code,
+            'description': product.description,
+            'price': str(product.price),
+            'warranty_period': product.warranty_period,
+            'is_active': product.is_active,
+            'categories': list(product.categories.values_list('id', flat=True)),
+            'website_image_url': product.website_image.url if product.website_image else None,
+            'mobile_image_url': product.mobile_image.url if product.mobile_image else None,
+        }
+        return JsonResponse(data)
+    except Product.DoesNotExist:
+        return JsonResponse({'error': 'Ürün bulunamadı'}, status=404)
+    
+
+
+
+
+
+def OpportunityDetail(request):
+    try:
+        Opportunity_list = Opportunity.objects.all()
+        logger.debug(f"{Opportunity_list.count()} katagori listelendi.")
+    except Exception as e:
+        logger.exception("katagori listesi alınırken hata oluştu.")
+        messages.error(request, 'katagori listesi alınırken bir hata oluştu.')
+        Opportunity_list = []
+    if request.method == 'POST':
+        form_create=OpportunityForm(request.POST,prefix='create')
+        if 'create_opportunity_submit' in request.POST:
+            if form_create.is_valid():
+                form_create.save()
+                logger.info("Yeni katagori başarıyla kaydedildi.")
+                messages.success(request, 'Katagori başarıyla kaydedildi.')
+                return redirect('product_list')  # URL adını kendine göre değiştir
+    
+    context={
+        'formOpportunityCreate':OpportunityForm(prefix='create'),
+        'Opportunity_list':Opportunity_list
     }
-    return JsonResponse(data)
+    return render(request, 'fırsatlar/opportunity.html',context)
+
+
+
+
