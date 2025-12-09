@@ -4,6 +4,8 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #fcfcfc; /* Temiz açık zemin */
+    overflow-x: hidden;
+
 }
 
 /* ANA KAPSAYICI */
