@@ -1,0 +1,498 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load static %}
+{% load i18n %}
+
+{# --- META BLOKLARI --- #}
+{% block title %}
+{% trans "Liftkeys Asansör Sistemleri & Çözümleri | Fotosel" %}
+{% endblock %}
+
+{% block meta_description %}
+{% blocktrans %}
+Liftkeys, güvenilir ve yenilikçi asansör sistemleri çözümleri sunar.
+Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve zemini,
+elektronik ve mekanik bileşenlerle her yolculuğu güvenli ve konforlu hale getiriyoruz.
+{% endblocktrans %}
+{% endblock %}
+
+{% block meta_robots %}index,follow{% endblock %}
+
+{% block meta_keywords %}
+{% trans "asansör sistemleri, asansör yedek parça, aşırı yük sistemi, asansör fren sistemi, asansör fotosel, asansör küpeşte, asansör fanı, pvc zemin kaplamaları, liftkeys" %}
+{% endblock %}
+
+{% block og_type %}website{% endblock %}
+
+{% block og_title %}
+{% trans "Liftkeys | Asansör Sistemleri, Yedek Parçalar ve Çözümler" %}
+{% endblock %}
+
+{% block og_description %}
+{% blocktrans %}
+Türkiye merkezli Liftkeys, asansör sektöründe yenilikçi ve güvenli çözümler sunar.
+Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve zemini,
+elektronik ve mekanik bileşenlerle global tedarikçi.
+{% endblocktrans %}
+{% endblock %}
+
+{% block og_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+{% block tw_title %}
+{% trans "Liftkeys | Güvenilir Asansör Sistemleri" %}
+{% endblock %}
+
+{% block tw_description %}
+{% blocktrans %}
+Liftkeys, yüksek kalite ve güvenlik standartlarıyla asansör parçaları üretir.
+Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve zemini,
+elektronik ve mekanik bileşenlerle çözümler.
+{% endblocktrans %}
+{% endblock %}
+
+{% block tw_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+{# --- CSS BLOĞU BURADA OLMALI (Content'in Dışında ve Üstünde) --- #}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/previewcss/productpage/fotosel.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="canonical" href="https://www.liftkeys.com{{ request.path }}">
+<link rel="alternate" hreflang="tr" href="https://www.liftkeys.com{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="en" href="https://www.liftkeys.com/en{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="de" href="https://www.liftkeys.com/de{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="ru" href="https://www.liftkeys.com/ru{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="ar" href="https://www.liftkeys.com/ar{{ request.path|slice:'3:' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{# --- İÇERİK BLOĞU ŞİMDİ BAŞLIYOR --- #}
+{% block content %}
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Liftkeys",
+        "url": "https://www.liftkeys.com",
+        "logo": "https://www.liftkeys.com/static/image/preview/liftkeys-og.webp",
+        "sameAs": [
+            "https://www.linkedin.com/company/liftkeys",
+            "https://www.instagram.com/liftkeys"
+        ]
+    }
+</script>
+
+
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6">
+                <div class="video-wrapper-web3" onclick="loadYoutube(this)" data-video-id="YOUR_VIDEO_ID_HERE" data-aos="fade-right">
+                    <img src="{% static 'image/pageproduct/fotosel/liftkeys aşırıyük banner.jpeg' %}" alt="Video Kapak" class="video-poster">
+                    <div class="play-btn-modern">
+                        <i class="bi bi-play-fill"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 ps-lg-5">
+                <div class="content-area" data-aos="fade-left" data-aos-delay="200">
+                    <div class="icon-box-orange">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="text-gradient-orange">Işığın Hassasiyeti</span> <br>
+                        Güvenlik Gücü
+                    </h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="security-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2 class="sec-title">
+                    Güvenlik sadece bir fonksiyon değil, <br>
+                    LiftKeys’te bir <span class="text-gradient-orange">standarttır.</span>
+                </h2>
+                <ul class="feature-list">
+                    <li>
+                        <i class="bi bi-broadcast"></i>
+                        <span>LiftKeys kapı sensörleri; yüksek algılama hassasiyeti...</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-broadcast"></i> 
+                        <span>Gelişmiş ışın perdesi teknolojisi sayesinde...</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-file-earmark-check-fill"></i> 
+                        <span><strong>EN81-20 & EN81-70</strong> Standartlarına Uygun...</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="image-stack-wrapper">
+                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-01.webp' %}" alt="Fotosel Kontrol Ünitesi" class="tech-img">
+                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-02.webp' %}" alt="Boy Fotoseli" class="tech-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="tech-gallery-section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-4 mb-4" data-aos="fade-up">
+                <div class="tech-card">
+                    <div class="tech-img-wrapper">
+                        <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-03.webp' %}" alt="Eloksalli Yapı" class="tech-card-img">
+                    </div>
+                    <div class="tech-info-box">
+                        <h5 class="tech-title">Eloksalli Kaplama Yapısı</h5>
+                        <p class="tech-desc">Deliklerdeki plastiklerin şaseyi önleme yeteneği...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="tech-card">
+                    <div class="tech-img-wrapper">
+                        <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-04.webp' %}" alt="Kablo Yapısı" class="tech-card-img">
+                    </div>
+                    <div class="tech-info-box">
+                        <h5 class="tech-title">Yumuşak & Esnek</h5>
+                        <p class="tech-desc">Uzun ömürlü kullanım için tasarlanmış...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="tech-card">
+                    <div class="tech-img-wrapper">
+                        <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-05.webp' %}" alt="Soket Girişleri" class="tech-card-img">
+                    </div>
+                    <div class="tech-info-box">
+                        <h5 class="tech-title" style="color:#333;">Bağlantı Şeması</h5>
+                        <ul class="spec-list">
+                            <li><span class="spec-badge">A</span> RX Giriş Soketi</li>
+                            <li><span class="spec-badge">B</span> TX Giriş Soketi</li>
+                            <li><span class="spec-badge">C</span> Enerji (Power)</li>
+                            <li><span class="spec-badge">D</span> Engel Var</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="sensitivity-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in-right">
+                <div class="dual-img-wrapper">
+                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-07.webp' %}" alt="Kısa Mesafe" class="sensitivity-img">
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="zoom-in-left" data-aos-delay="150">
+                <div class="dual-img-wrapper">
+                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-08.webp' %}" alt="Uzun Mesafe" class="sensitivity-img">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-12">
+                <div class="sensitivity-text-box">
+                    <h3 class="sensitivity-title">
+                        <span class="text-gradient-orange">Kısa ve Uzun Mesafede</span> <br>
+                        Çalışma Hassasiyeti
+                    </h3>
+                    <div class="sensitivity-divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-grid-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="feature-minimal-item">
+                    <div class="feature-ratio-box">
+                        <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-09.webp' %}" alt="Güneşte Çalışır" class="feature-img">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon-circle"><i class="bi bi-sun-fill"></i></div>
+                        <h5 class="feature-title-sm">Güneşte Çalışır</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-minimal-item">
+                    <div class="feature-ratio-box">
+                        <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-10.webp' %}" alt="Tozda Çalışır" class="feature-img">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon-circle"><i class="bi bi-wind"></i></div>
+                        <h5 class="feature-title-sm">Tozda Çalışır</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-minimal-item">
+                    <div class="feature-ratio-box">
+                        <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-11.webp' %}" alt="Kolay Montaj" class="feature-img">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon-circle"><i class="bi bi-tools"></i></div>
+                        <h5 class="feature-title-sm">Kolay Montaj – <br> İnce Tasarım</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-minimal-item">
+                    <div class="feature-ratio-box">
+                        <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-12.webp' %}" alt="Hızlı Tepkime" class="feature-img">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon-circle"><i class="bi bi-lightning-charge-fill"></i></div>
+                        <h5 class="feature-title-sm">Hızlı Tepkime</h5>
+                        <p class="feature-desc-sm">
+                             Kızılötesi diyot sayısı: <br><strong>72 adet</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="manifesto-section">
+    <div class="container">
+        <div class="manifesto-wrapper" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div class="big-quote-icon"><i class="bi bi-quote"></i></div>
+            <h2 class="manifesto-text">
+                Bizim için bu yalnızca bir fotosel değil; <br class="d-none d-md-block">
+                insanların güvenle yolculuk etmesini sağlayan <br>
+                <span class="highlight-wall">görünmez bir güvenlik duvarıdır.</span>
+            </h2>
+            <div class="manifesto-line"></div>
+        </div>
+    </div>
+</section>
+
+<section class="packaging-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up">
+                <div class="tech-drawing-wrapper">
+                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-13.webp' %}" alt="Kutu Boyutları" class="tech-drawing-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 mb-4 mb-md-0" data-aos="flip-up" data-aos-delay="0">
+                <div class="spec-stat-card">
+                    <div class="stat-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+                    <span class="stat-value">8.2 <span class="unit-small">cm</span></span>
+                    <span class="stat-label">Çap (Genişlik)</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 mb-md-0" data-aos="flip-up" data-aos-delay="150">
+                <div class="spec-stat-card">
+                    <div class="stat-icon"><i class="bi bi-rulers"></i></div>
+                    <span class="stat-value">228 <span class="unit-small">cm</span></span>
+                    <span class="stat-label">Toplam Uzunluk</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12" data-aos="flip-up" data-aos-delay="300">
+                <div class="spec-stat-card">
+                    <div class="stat-icon"><i class="bi bi-box-seam-fill"></i></div>
+                    <span class="stat-value">3.1 <span class="unit-small">kg</span></span>
+                    <span class="stat-label">Paket Ağırlığı</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="technical-guide-section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="preview-wrapper" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    
+                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-14.webp' %}" alt="Teknik Çizim Önizleme" class="preview-img">
+                    
+                    <div class="zoom-overlay">
+                        <div class="zoom-icon">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                        <span class="zoom-text">Tam Boyut Görüntüle</span>
+                    </div>
+
+                </div>
+                
+                <div class="text-center mt-2 text-muted small">
+                    <i class="bi bi-info-circle me-1"></i> Detaylı teknik çizim için görsele tıklayın.
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+                
+                <div class="info-card-block">
+                    <h3 class="block-header">TEKNİK ÖZELLİKLER</h3>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Diyot Sayısı</span>
+                            <span class="spec-value">36</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Çalışma Mesafesi</span>
+                            <span class="spec-value">0 – 4000 mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Besleme Gerilimi</span>
+                            <span class="spec-value">220 V</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Işın Sayısı</span>
+                            <span class="spec-value">174</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Kablo Uzunluğu</span>
+                            <span class="spec-value">2.5 m x 2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card-block">
+                    <h3 class="block-header">MONTAJ TALİMATLARI</h3>
+                    <ol class="instruction-list">
+                        <li>
+                            LKS Horus fotosel sisteminin kabin girişinde montajı için asansör projesinin durumuna göre birkaç konum seçilebilir:
+                            <ul class="sub-instruction-list">
+                                <li><span class="sub-badge">a</span> Merkezi açılır kapılarda hareketli panellere bağlanılarak kullanılabilir.</li>
+                                <li><span class="sub-badge">b</span> Yardımcı parçalar ile kabinin dışından dışına kullanılabilir.</li>
+                                <li><span class="sub-badge">c</span> Bir sensör hareketli panele, diğer sensör kabin sabit bazasına bağlanılarak kullanılabilir.</li>
+                            </ul>
+                        </li>
+                        <li>Sensörlerden çıkan TX ve RX kablolarının soketleri power ünitesi üzerindeki uygun girişlere bağlanmalıdır.</li>
+                        <li>Sensör kabloları, paket içerisinden çıkan kablo bağları ile uygun konumlardan sabitlenmelidir.</li>
+                        <li>Sensörler sabitlenirken yalnızca paket içerisinden çıkan bağlantı vidaları kullanılmalıdır.</li>
+                        <li>
+                            <strong>Power ünitesi göstergeleri:</strong> <br>
+                            <i class="bi bi-circle-fill text-success small me-1"></i> Yeşil Işık: Üniteye enerji verildiğini gösterir. <br>
+                            <i class="bi bi-circle-fill text-danger small me-1"></i> Kırmızı Işık: Işın bariyerinde engel olduğunu gösterir.
+                        </li>
+                    </ol>
+
+                    <hr class="my-4" style="opacity: 0.1;">
+
+                    <h3 class="block-header mb-3">PAKET İÇERİĞİ</h3>
+                    <ul class="package-list">
+                        <li><i class="bi bi-check-circle-fill"></i> 2 Adet Fotosel Sensörü (TX + RX)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 1 Adet Power Ünitesi</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 2 Adet Uzatma Kablosu (2.5 m x 2)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 10 Adet Bağlantı Vidası</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 10 Adet Bağlantı Klipsi</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 1 Adet Montaj Kılavuzu</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"> 
+        <div class="modal-content custom-modal-content">
+            <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="modal-body p-0">
+                <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-14.webp' %}" alt="Tam Boy Teknik Çizim" class="full-size-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="cta-offer-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center" data-aos="zoom-in" data-aos-duration="1000">
+                <a href="/contact/" class="offer-btn-link" title="Teklif İste">
+                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-15.webp' %}" alt="Hemen Teklif İste" class="offer-btn-img">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function loadYoutube(element) {
+        // Eğer video zaten yüklendiyse durdur
+        if (element.classList.contains('video-loaded')) return;
+
+        // Video ID'sini al
+        var videoId = element.getAttribute('data-video-id');
+        
+        // Iframe oluştur (Otomatik oynatma açık)
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&showinfo=0';
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        
+        // Poster ve butonu temizle
+        element.innerHTML = '';
+        
+        // Iframe'i ekle
+        element.appendChild(iframe);
+        
+        // Sınıf ekle (Tekrar tıklanmayı önlemek için)
+        element.classList.add('video-loaded');
+    }
+</script>
+
+
+<script>
+  AOS.init({
+    duration: 800,   // Animasyon süresi (ms) - Yumuşak geçiş için ideal
+    easing: 'ease-out-cubic', // Animasyon eğrisi - Robotik değil doğal dursun
+    once: true,      // Sadece bir kere çalışsın (Yukarı çıkıp inince tekrar oynamasın)
+    offset: 100,     // Animasyonun tetiklenmesi için alt kenardan mesafe
+  });
+</script>
+
+{% include "preview/footer.html" %}
+
+
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+    <div class="container-fluid p-5 py-5">
+        <div class="glass-card  col-lg-12" data-aos="fade-up">
+
+            <h3>Oluşturulan Teklifler</h3>
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Firma Adı</th>
+                        <th>İlgili Fırsat</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Toplam Tutar</th>
+                        <th>PDF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for offer in offers %}
+                    <tr>
+                        <td>{{ offer.id }}</td>
+                        <td>{{ offer.company_name }}</td>
+                        <td>{{ offer.opportunity }}</td>
+                        <td>{{ offer.created_at|date:"d.m.Y H:i" }}</td>
+                        <td>
+                            {% with total=0 %}
+                            {% for item in offer.offerproduct_set.all %}
+                                {% with total=total|add:item.final_price %}
+                                {% endwith %}
+                            {% endfor %}
+                            {{ total }}
+                            {% endwith %}
+                        </td>
+                        <td>
+                            <a href="{% url 'offer_pdf' offer.id %}" class="btn btn-sm btn-primary" target="_blank">
+                                PDF İndir
+                            </a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="6" class="text-center">Henüz teklif bulunmamaktadır.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    
+
+
+    {% if messages %}
+    <div id="message-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
+
+

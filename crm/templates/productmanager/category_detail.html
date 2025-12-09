@@ -1,0 +1,99 @@
+{% extends "productpage/productbase.html" %}
+{% load static %}
+{% load product_extras %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/catagory_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-9 order-1 order-lg-1">
+      <div class="row g-3 g-md-4">
+        {% for product in products %}
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+          <div class="card border-0 h-100 shadow-sm">
+            <a href="{% product_url product %}">
+              
+              {# --- RESİM MANTIĞI GÜNCELLENDİ --- #}
+              {% with market_img=product.market_images.all|first %}
+              <img src="{% if product.product_category_image %}{{ product.product_category_image.url }}
+                        {% elif product.website_image %}{{ product.website_image.url }}
+                        {% elif product.mobile_image %}{{ product.mobile_image.url }}
+                        {% elif market_img %}{{ market_img.image.url }}
+                        {% else %}{% static 'img/default-product.png' %}{% endif %}"
+                   class="card-img-top fixed-product-img"
+                   alt="{{ product.name }}">
+              {% endwith %}
+              {# -------------------------------- #}
+
+            </a>
+            <div class="card-body text-center">
+              <p class="small text-uppercase mb-1 mt-1" id="product_category_title_catagory">
+                {% for c in product.categories.all %}
+                  {{ c.name }}{% if not forloop.last %} / {% endif %}
+                {% endfor %}
+              </p>
+              <h2 class="card-title mb-1">
+                <a href="{% product_url product %}" class="text-dark text-decoration-none" id="product_name">
+                  {{ product.name }}
+                </a>
+              </h2>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center">
+          <p class="text-muted">Bu kategoride ürün bulunmamaktadır.</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="col-lg-3 order-2 order-lg-2 mt-4 mt-lg-0">
+      <aside class="right-sidebar shadow-sm rounded-3 p-3 p-lg-4">
+        <h6 class="sidebar-title text-uppercase fw-bold mb-3 mb-lg-4">
+          <i class="bi bi-filter-circle me-2"></i> Kategoriler
+        </h6>
+        <nav class="category-nav">
+          <ul class="list-unstyled">
+            {% for cat in categories %}
+            <li class="mb-2">
+              <a href="{% url 'category_detail' cat.slug %}"
+                 class="category-link {% if selected_category and selected_category.slug == cat.slug %}active{% endif %}">
+                <span>{{ cat.name }}</span>
+                <i class="bi bi-chevron-right ms-auto"></i>
+              </a>
+
+              {% if selected_category and selected_category.slug == cat.slug and subcategories %}
+              <ul class="list-unstyled subcategory-list">
+                {% for sub in subcategories %}
+                <li>
+                  <a href="{% url 'category_detail' sub.slug %}"
+                     class="subcategory-link {% if selected_category.slug == sub.slug %}active{% endif %}">
+                    {{ sub.name }}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script>
+    const priceRange = document.getElementById("priceRange");
+    const priceValue = document.getElementById("priceValue");
+    if (priceRange) {
+        priceRange.addEventListener("input", function () {
+            priceValue.textContent = `$${this.value}`;
+        });
+    }
+</script>
+{% endblock %}

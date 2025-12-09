@@ -1,0 +1,293 @@
+{% load static %}
+{% load i18n %}
+
+<div class="top-bar d-none d-lg-block">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="d-flex">
+      <div class="me-4"><i class="bi bi-telephone-fill"></i> +90 216 450 19 00</div>
+      <div class="me-4"><i class="bi bi-envelope-fill"></i> info@liftkeys.com</div>
+    </div>
+    <div>
+      <a href="https://www.facebook.com/liftkeys" class="ms-2" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/liftkeyscom/" class="ms-1" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/liftkeys/" class="ms-1" target="_blank"><i
+          class="bi bi-linkedin"></i></a>
+      <a href="https://www.youtube.com/@liftkeys" class="ms-1" target="_blank"><i class="bi bi-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="{% static 'image/logo-liftkeys-menu.png' %}" alt="LiftKeys Logo" width="150" height="30">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link text-orange" href="/">{% trans "Ana Sayfa" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about/">{% trans "Hakkımızda" %}</a></li>
+
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="{% url 'category_list' %}" id="productsDropdown" role="button"
+            data-bs-toggle="dropdown">
+            {% trans "Ürünler" %}
+          </a>
+
+          <div class="dropdown-menu w-100 p-0 border-0 shadow-lg mt-0" style="border-radius: 0 0 16px 16px;">
+
+            <div class="d-none d-lg-block">
+              <div class="container-fluid p-0">
+                <div class="mega-menu-container d-flex">
+                  <div class="mega-menu-sidebar">
+                    {% for parent_cat in global_categories %}
+                    <a href="{% url 'category_detail' slug=parent_cat.slug %}"
+                      class="mega-menu-link {% if forloop.first %}active{% endif %}"
+                      data-target="cat-content-{{ parent_cat.id }}">
+                      <span>{{ parent_cat.name }}</span>
+                      <i class="bi bi-chevron-right text-muted" style="font-size: 0.8rem;"></i>
+                    </a>
+                    {% endfor %}
+                  </div>
+
+                  <div class="flex-grow-1 position-relative bg-white">
+                    {% for parent_cat in global_categories %}
+                    <div id="cat-content-{{ parent_cat.id }}"
+                      class="mega-menu-content {% if forloop.first %}active{% endif %} h-100">
+                      <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                        <h5 class="fw-bold text-dark m-0">{{ parent_cat.name }}</h5>
+                        <a href="{% url 'category_detail' slug=parent_cat.slug %}"
+                          class="text-orange small text-decoration-none">
+                          {% trans "Tümünü Gör" %} <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                      <div class="subcategory-grid">
+                        {% for product in parent_cat.featured_products|slice:":12" %}
+                        <a href="{{ product.get_absolute_url }}" class="subcategory-item">
+                          <div class="subcategory-img-wrapper">
+                            {% with market_img=product.market_images.all|first %}
+                            <img src="{% if product.website_image %}{{ product.website_image.url }}
+                                          {% elif product.product_category_image %}{{ product.product_category_image.url }}
+                                          {% elif product.mobile_image %}{{ product.mobile_image.url }}
+                                          {% elif market_img %}{{ market_img.image.url }}
+                                          {% else %}{% static 'img/default-product.png' %}{% endif %}"
+                              alt="{{ product.name }}">
+                            {% endwith %}
+                          </div>
+                          <span
+                            class="fw-semibold small text-truncate w-100 px-2">{{ product.name|truncatechars:20 }}</span>
+                        </a>
+                        {% empty %}
+                        <div class="col-12 text-center py-5">
+                          <p class="text-muted">{% trans "Ürün bulunamadı." %}</p>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-lg-none">
+              {% for parent_cat in global_categories %}
+              <div class="mobile-category-group">
+                <div class="mobile-cat-header" data-bs-toggle="collapse" data-bs-target="#mob-cat-{{ parent_cat.id }}">
+                  <span>{{ parent_cat.name }}</span>
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+
+                <div class="collapse" id="mob-cat-{{ parent_cat.id }}">
+                  <div class="text-end p-2 bg-light">
+                    <a href="{% url 'category_detail' slug=parent_cat.slug %}"
+                      class="small text-orange fw-bold">{% trans "Tümünü Gör" %} ></a>
+                  </div>
+                  <div class="mobile-product-grid">
+                    {% for product in parent_cat.featured_products|slice:":6" %}
+                    <a href="{{ product.get_absolute_url }}" class="mobile-product-item text-decoration-none text-dark">
+                      <div class="ratio ratio-1x1">
+                        {% with market_img=product.market_images.all|first %}
+                        <img src="{% if product.mobile_image %}{{ product.mobile_image.url }}
+                                           {% elif product.website_image %}{{ product.website_image.url }}
+                                           {% elif product.product_category_image %}{{ product.product_category_image.url }}
+                                           {% elif market_img %}{{ market_img.image.url }}
+                                           {% else %}{% static 'img/default-product.png' %}{% endif %}"
+                          class="mobile-product-img w-100 h-100" style="object-fit:cover;" alt="{{ product.name }}">
+                        {% endwith %}
+                      </div>
+                      <div class="p-1">
+                        <small class="d-block text-truncate">{{ product.name }}</small>
+                      </div>
+                    </a>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                {% trans "Çözümlerimiz" %}
+            </a>
+            <ul class="dropdown-menu m2">
+                
+                <li>
+                    <a class="dropdown-item d-flex align-items-center" href="/horus-photocell/">
+                        <i class="bi bi-eye-fill me-2" style="color: #fd7e14; font-size: 1.1rem;"></i> 
+                        LKS Horus Fotosel
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <i class="bi bi-people-fill me-2 text-muted" style="font-size: 1.1rem;"></i> 
+                        Team
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Data Merkezi</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blogs/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/gallery/">Galeri</a></li>
+
+        <li class="nav-item ms-lg-3 d-none d-lg-block">
+          <a class="btn request-quote-btn" href="/contact/">{% trans "İLETİŞİM" %} <i class="bi bi-arrow-right"></i></a>
+        </li>
+        <li class="nav-item ms-lg-3 d-none d-lg-block">
+          <a class="nav-link position-relative" href="{% url 'cart_page' %}">
+            <i class="bi bi-cart3 fs-5"></i>
+            <span id="cart-count-desktop"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<script>
+  /* =========================================
+     1. SEPET SAYISI GÜNCELLEME (API)
+     ========================================= */
+  async function loadCartCount() {
+    try {
+      const res = await fetch("{% url 'cart_summary_api' %}", {
+        credentials: "same-origin"
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const count = data.total_count || 0;
+
+        // Masaüstü Badge
+        const desktopBadge = document.getElementById("cart-count-desktop");
+        if (desktopBadge) desktopBadge.textContent = count;
+
+        // Mobil Badge (Tüm kopyaları güncelle)
+        const mobileBadges = document.querySelectorAll(".mobile-cart-badge");
+        mobileBadges.forEach(badge => {
+          badge.textContent = count;
+          badge.style.display = count > 0 ? 'block' : 'none';
+        });
+      }
+    } catch (err) {
+      console.warn("Sepet verisi alınamadı:", err);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    // --- 🔥 ÇİFT MENÜ SORUNU İÇİN DÜZELTME (Fix Duplicate) 🔥 ---
+    // Eğer sayfada yanlışlıkla 2 tane 'mobile-bottom-nav' varsa, sadece sonuncuyu tut, diğerlerini sil.
+    const bottomNavs = document.querySelectorAll('.mobile-bottom-nav');
+    if (bottomNavs.length > 1) {
+      console.warn("Birden fazla mobil menü tespit edildi, fazlalıklar temizleniyor.");
+      // Sonuncu hariç hepsini kaldır
+      for (let i = 0; i < bottomNavs.length - 1; i++) {
+        bottomNavs[i].remove();
+      }
+    }
+    // -------------------------------------------------------------
+
+    loadCartCount();
+
+    // --- DROPDOWN MENÜ GECİKMELİ KAPANMA ---
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        let closeTimeout;
+
+        const showMenu = () => {
+          clearTimeout(closeTimeout);
+          if (toggle) {
+            const bsInstance = bootstrap.Dropdown.getOrCreateInstance(toggle);
+            bsInstance.show();
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        };
+
+        const hideMenu = () => {
+          closeTimeout = setTimeout(() => {
+            if (toggle) {
+              const bsInstance = bootstrap.Dropdown.getOrCreateInstance(toggle);
+              bsInstance.hide();
+              toggle.setAttribute('aria-expanded', 'false');
+            }
+          }, 400);
+        };
+
+        dropdown.addEventListener('mouseenter', showMenu);
+        dropdown.addEventListener('mouseleave', hideMenu);
+        if (menu) {
+          menu.addEventListener('mouseenter', showMenu);
+          menu.addEventListener('mouseleave', hideMenu);
+        }
+      });
+    }
+
+    // --- MEGA MENU TAB GEÇİŞLERİ ---
+    const menuLinks = document.querySelectorAll('.mega-menu-link');
+    const menuContents = document.querySelectorAll('.mega-menu-content');
+    menuLinks.forEach(link => {
+      link.addEventListener('mouseenter', function () {
+        menuLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        menuContents.forEach(c => c.classList.remove('active'));
+        const targetId = this.getAttribute('data-target');
+        const tContent = document.getElementById(targetId);
+        if (tContent) tContent.classList.add('active');
+      });
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // Animasyon sadece bir kere çalışsın (aşağı-yukarı yapınca tekrar etmesin)
+    offset: 100, // Tetiklenme mesafesi
+    duration: 800 // Animasyon süresi
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>

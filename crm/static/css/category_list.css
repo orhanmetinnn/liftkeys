@@ -1,0 +1,69 @@
+#h1category_list{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#mainblockcategory{
+    margin-top: 300px;
+}
+
+.mainh2category_list{
+    margin-top: 0.5em;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #101010;   /* turuncu renk */
+    line-height: 1.5;
+
+}
+
+#category_list_container{
+    min-width: 280px;
+    min-height: 480px;
+}
+
+
+/* Görsel alanı sabit boyda ve ortalanmış */
+/* Sabit kare alan: 235x235 */
+#category_list_container .category-img-wrapper-235 {
+  width: 235px;
+  height: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;      /* taşmayı kes */
+  background: #fff;
+  margin: 0 auto;        /* kart içinde ortala */
+}
+
+/* Görseli kare alana sığdır */
+#category_list_container .category-img-235 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* taşmadan sığdır (kırpmaz) */
+  display: block;
+}
+
+/* (İstersen doldursun ve kenarlardan kırpsın diye:)
+#category_list_container .category-img-235 { object-fit: cover; }
+*/
+
+
+/* Kategori listesi butonları için turuncu tema */
+#category_list_container .btn-outline-dark {
+    border-color: #f77f00;
+    color: #f77f00;
+}
+
+#category_list_container .btn-outline-dark:hover,
+#category_list_container .btn-outline-dark:focus {
+    background-color: #f77f00;
+    color: #fff;
+    border-color: #f77f00;
+}
+
+
+#btn_category_list{
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 6px;
+}

@@ -1,0 +1,33 @@
+.bg-orange {
+    background: #ff6a00 !important;
+}
+
+.text-orange {
+    color: #ff6a00 !important;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(255, 105, 0, 0.3);
+}
+
+.card {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+.text-orange {
+    color: #ff6a00 !important;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}

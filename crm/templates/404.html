@@ -1,0 +1,51 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}404| Liftkeys{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/404.css' %}">
+{% endblock %}
+{% block meta_description %}
+Aradığınız sayfa bulunamadı. Ana sayfaya dönerek hizmetlerimizi ve içeriklerimizi keşfedebilirsiniz.
+{% endblock %}
+
+{% block meta_robots %}noindex,follow{% endblock %}
+
+{% block meta_keywords %}
+404, sayfa bulunamadı, hata sayfası, liftkeys, ana sayfa, site hatası
+{% endblock %}
+
+{% block og_type %}website{% endblock %}
+{% block og_title %}404 | Sayfa Bulunamadı | Liftkeys{% endblock %}
+{% block og_description %}
+Aradığınız sayfa artık mevcut değil veya yanlış bir bağlantıya tıkladınız. Hemen ana sayfamıza dönün.
+{% endblock %}
+{% block og_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+{% block tw_title %}404 | Sayfa Bulunamadı | Liftkeys{% endblock %}
+{% block tw_description %}
+Aradığınız sayfa bulunamadı. Ana sayfaya dönerek doğru sayfaya kolayca ulaşabilirsiniz.
+{% endblock %}
+{% block tw_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+
+{% block content %}
+    <div class="genel404">
+        <div class="glow"></div>
+        <div class="glow"></div>
+        <h1>404</h1>
+        <h2>{% trans "Sayfa Bulunamadı" %}</h2>
+
+        <p>
+            {% blocktrans %}
+            Üzgünüz! Aradığınız sayfa mevcut değil.
+            Endüstriyel çözümlerimiz için ana sayfaya geri dönebilirsiniz.
+            {% endblocktrans %}
+        </p>
+        <a href="/" class="btn">{% trans "Ana Sayfaya Dön" %}</a>
+    </div>
+
+    {% include "preview/footer.html" %}
+
+{% endblock content %}

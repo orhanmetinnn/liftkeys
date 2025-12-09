@@ -1,0 +1,198 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Ürün Görseli" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var imageModal = document.getElementById('imageModal');
+        imageModal.addEventListener('show.bs.modal', function (event) {
+            var triggerImg = event.relatedTarget;
+            var src = triggerImg.getAttribute('data-img');
+            var modalImg = document.getElementById('modalImage');
+            modalImg.src = src;
+        });
+    });
+</script>
+
+<div class="container-fluid p-5 py-5">
+    <div class="glass-card col-lg-12" data-aos="fade-up">
+
+        <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Ürünler</h2>
+
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Kategori Formu -->
+                <div class="col-md-6">
+                    <h2>{{ title }}</h2>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <!-- 🌍 Çok Dilli Kategori Adı (Tab'lı Yapı) -->
+                        <ul class="nav nav-tabs mb-3" id="langTabs" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active" id="tr-tab" data-bs-toggle="tab" data-bs-target="#tr" type="button">TR</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="en-tab" data-bs-toggle="tab" data-bs-target="#en" type="button">EN</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="de-tab" data-bs-toggle="tab" data-bs-target="#de" type="button">DE</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="fr-tab" data-bs-toggle="tab" data-bs-target="#fr" type="button">FR</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="ar-tab" data-bs-toggle="tab" data-bs-target="#ar" type="button">AR</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="ru-tab" data-bs-toggle="tab" data-bs-target="#ru" type="button">RU</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content mb-3">
+                            <div class="tab-pane fade show active" id="tr">
+                                {{ form.name_tr }}
+                                {% if form.name_tr.errors %}<div class="text-danger">{{ form.name_tr.errors }}</div>{% endif %}
+                            </div>
+                            <div class="tab-pane fade" id="en">
+                                {{ form.name_en }}
+                                {% if form.name_en.errors %}<div class="text-danger">{{ form.name_en.errors }}</div>{% endif %}
+                            </div>
+                            <div class="tab-pane fade" id="de">
+                                {{ form.name_de }}
+                                {% if form.name_de.errors %}<div class="text-danger">{{ form.name_de.errors }}</div>{% endif %}
+                            </div>
+                            <div class="tab-pane fade" id="fr">
+                                {{ form.name_fr }}
+                                {% if form.name_fr.errors %}<div class="text-danger">{{ form.name_fr.errors }}</div>{% endif %}
+                            </div>
+                            <div class="tab-pane fade" id="ar">
+                                {{ form.name_ar }}
+                                {% if form.name_ar.errors %}<div class="text-danger">{{ form.name_ar.errors }}</div>{% endif %}
+                            </div>
+                            <div class="tab-pane fade" id="ru">
+                                {{ form.name_ru }}
+                                {% if form.name_ru.errors %}<div class="text-danger">{{ form.name_ru.errors }}</div>{% endif %}
+                            </div>
+                        </div>
+
+                        <!-- Diğer Alanlar -->
+                        <div class="mb-3">
+                            <label class="form-label">{{ form.parent.label }}</label>
+                            {{ form.parent }}
+                            {% if form.parent.errors %}
+                                <div class="text-danger">{{ form.parent.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-check mb-3">
+                            {{ form.menude_goster }}
+                            <label class="form-check-label">{{ form.menude_goster.label }}</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{{ form.menu_image.label }}</label>
+                            {{ form.menu_image }}
+                            {% if form.menu_image.errors %}
+                                <div class="text-danger">{{ form.menu_image.errors }}</div>
+                            {% endif %}
+                            {% if form.instance.menu_image %}
+                                <div class="mt-2">
+                                    <img src="{{ form.instance.menu_image.url }}" class="img-thumbnail" style="max-height: 100px;" alt="Mevcut Menü Görseli">
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{{ form.ust_menu_image.label }}</label>
+                            {{ form.ust_menu_image }}
+                            {% if form.ust_menu_image.errors %}
+                                <div class="text-danger">{{ form.ust_menu_image.errors }}</div>
+                            {% endif %}
+                            {% if form.instance.ust_menu_image %}
+                                <div class="mt-2">
+                                    <img src="{{ form.instance.ust_menu_image.url }}" class="img-thumbnail" style="max-height: 100px;" alt="Mevcut Üst Menü Görseli">
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        {% if editing %}
+                            <a href="{% url 'category_manage' %}" class="btn btn-secondary">Yeni Ekle</a>
+                        {% endif %}
+                    </form>
+                </div>
+
+                <!-- Kategori Listesi -->
+                <div class="col-md-6">
+                    <h2>Kategori Listesi</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Adı</th>
+                                <th>Üst Kategori</th>
+                                <th>Menüde Göster</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for cat in categories %}
+                                <tr>
+                                    <td>{{ cat.name }}</td>
+                                    <td>{% if cat.parent %}{{ cat.parent.name }}{% else %}-{% endif %}</td>
+                                    <td>{{ cat.menude_goster|yesno:"Evet,Hayır" }}</td>
+                                    <td>
+                                        <a href="{% url 'category_edit' cat.pk %}" class="btn btn-sm btn-warning">Düzenle</a>
+                                    </td>
+                                </tr>
+                            {% empty %}
+                                <tr><td colspan="4" class="text-center">Kategori yok</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% if messages %}
+    <div id="message-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $('#urunTable').DataTable({
+            "paging": true,
+            "pageLength": 10,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+{% endblock %}

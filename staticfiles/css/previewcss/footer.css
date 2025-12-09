@@ -1,0 +1,172 @@
+    :root {
+        --dark-bg: #1e1e1e;
+        --primary-orange: #f36f21;
+        --light-gray: #a0a0a0;
+        --border-color: #333;
+        --footer-bg-darker: #1a1a1a;
+    }
+
+    .footer-section {
+        background-color: var(--footer-bg-darker);
+        color: var(--light-gray);
+        /* Görseldeki gibi ince bir desen eklemek isterseniz aşağıdaki satırı aktifleştirin */
+        /* background-image: url('https_your_subtle_pattern_image.png'); */
+        position: relative;
+    }
+
+    .footer-section h5 {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-section a {
+        color: var(--light-gray);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+        color: var(--primary-orange);
+    }
+
+    /* --- Üst Bilgi Kutucukları --- */
+    .footer-top {
+        background-color: var(--dark-bg);
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .info-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .info-box .icon {
+        background-color: var(--primary-orange);
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+    
+    .info-box .info-text h6 {
+        color: #fff;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .info-box .info-text p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    /* --- Ana Footer İçeriği --- */
+    .footer-main {
+        padding: 4rem 0;
+    }
+
+    .footer-about .logo {
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-about .social-icons a {
+        font-size: 1.2rem;
+        margin-right: 15px;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 0.8rem;
+    }
+    
+    .footer-links ul li a::before {
+        content: '▪';
+        color: var(--primary-orange);
+        margin-right: 10px;
+        font-size: 0.8rem;
+    }
+
+    /* --- Abonelik Formu --- */
+    .subscribe-form .input-group {
+        border-radius: 0;
+    }
+
+    .subscribe-form .form-control {
+        background-color: #fff;
+        border: none;
+        border-radius: 0;
+        padding: 0.75rem 1rem;
+    }
+
+    .subscribe-form .form-control:focus {
+        box-shadow: none;
+        background-color: #fff;
+    }
+
+    .subscribe-form .btn-subscribe {
+        background-color: var(--primary-orange);
+        color: #fff;
+        border: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+    
+    .subscribe-form .btn-subscribe .arrow-box {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 0.75rem;
+        margin-left: 1rem;
+        margin-right: -1.5rem; /* Butonun dışına taşmasını engellemek için */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- Alt Copyright Alanı --- */
+    .footer-bottom {
+        background-color: var(--dark-bg);
+        padding: 1.5rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom .bottom-links a {
+        margin-left: 15px;
+    }
+    .footer-bottom .bottom-links a:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    /* --- Yukarı Çık Butonu --- */
+    #back-to-top {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-orange);
+        color: #fff;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 50px;
+        cursor: pointer;
+        display: none; /* JS ile görünür yapılacak */
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        z-index: 1000;
+    }
+    
+    #back-to-top.show {
+        opacity: 1;
+        display: block;
+    }

@@ -1,0 +1,158 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{{ meta_description|default:"Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar." }}{% endblock %}">
+    <meta name="robots" content="{% block meta_robots %}index,follow{% endblock %}">
+
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+
+
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:site_name" content="Liftkeys">
+    <meta property="og:title" content="{% block og_title %}Liftkeys | Asansör Çözümleri{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}{% if request %}{{ request.build_absolute_uri }}{% else %}https://www.liftkeys.com{% endif %}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% endblock %}">
+
+    {# === Twitter Cards === #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block tw_title %}Liftkeys | Asansör Çözümleri{% endblock %}">
+    <meta name="twitter:description" content="{% block tw_description %}Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.{% endblock %}">
+    <meta name="twitter:image" content="{% block tw_image %}{% endblock %}">
+
+
+
+
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/previwmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font.css' %}">
+
+    {% block extra_css %}{% endblock %}
+
+    <!-- Icon & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="{% static 'js/chart.js' %}"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        /* WhatsApp Widget CSS */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px; /* sayfanın altından uzaklığı */
+            left: 20px;   /* sayfanın solundan uzaklığı */
+            width: 60px;  /* ikon boyutu */
+            height: 60px;
+            z-index: 9999; /* her zaman üstte */
+            border-radius: 50%; /* yuvarlak ikon */
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-widget img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .whatsapp-widget:hover {
+            transform: scale(1.1); /* hover efekti */
+        }
+
+        @media (max-width: 768px) {
+            .mobile-bottom-menu {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #fff;
+                border-top: 1px solid #ddd;
+                padding: 8px 0;
+                z-index: 9999;
+                display: none; /* varsayılan olarak gizli */
+            }
+
+            .mobile-bottom-menu .menu-item {
+                flex: 1;
+                text-align: center;
+                color: #444;
+                font-size: 0.85rem;
+                text-decoration: none;
+            }
+
+            .mobile-bottom-menu .menu-item i {
+                font-size: 1.4rem;
+                display: block;
+                margin-bottom: 4px;
+                color: #f46e21; /* turuncu ikon */
+            }
+            .mobile-bottom-menu {
+                display: flex;
+            }
+            .mobile-bottom-menu {
+                height: 60px; /* alt menü yüksekliği */
+            }
+
+            .whatsapp-widget {
+                bottom: calc(60px + 20px); /* menü + ekstra boşluk */
+            }
+        }
+    </style>
+
+</head>
+<body lang="{{ LANGUAGE_CODE }}">
+    {% include "previewtemplates/previewmenu.html" %}
+    {% block content %}{% endblock %}
+    <a href="https://wa.me/905332880821" 
+        class="whatsapp-widget d-none d-md-block" 
+        target="_blank" 
+        rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+
+    <div class="mobile-bottom-menu d-flex justify-content-around align-items-center d-block d-md-none">
+        <a href="/" class="menu-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Anasayfa</span>
+        </a>
+        <a href="{% url 'category_list' %}" class="menu-item">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Ürünler</span>
+        </a>
+        <a href="/katalog" class="menu-item">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Katalog</span>
+        </a>
+        <a href="https://wa.me/905332880821" class="menu-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="/contact/" class="menu-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>İletişim</span>
+        </a>
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

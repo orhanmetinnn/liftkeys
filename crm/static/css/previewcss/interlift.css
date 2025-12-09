@@ -1,0 +1,366 @@
+.stats-section {
+    position: relative;
+    padding: 100px 0;
+    color: #fff;
+    /* BURAYA KENDİ ARKA PLAN GÖRSELİNİZİ EKLEYİN 
+       Önerilen görsel boyutu: 1920x1080 piksel
+    */
+    background: url('/static/image/preview/liftkeys interliftbacground.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Görsel Üzerindeki Karartma Efekti */
+.stats-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.308);
+    /* Siyah katman ve şeffaflık */
+    z-index: 1;
+
+}
+
+/* İçeriğin overlay'in üzerinde kalmasını sağlar */
+.stats-section .content-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sol Başlık Stilleri */
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.vertical-title {
+    color: #f77f00;
+    /* Kırmızı renk */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.titleinterlift {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* İstatistik Öğeleri */
+.stat-itemliftkeys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.stat-numberinterlift {
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+
+.stat-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    margin-left: 10px;
+}
+
+.stats-section .interlift-fixed {
+    position: absolute;
+    top: 10px;
+    left: 46%;
+    transform: translateX(-50%);
+    font-size: 3.8rem;
+    color: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+    font-weight: 600;
+    /* Kurumsal glow efekti */
+    text-shadow: 0 0 5px #fff, 0 0 10px #d8d7d7, 0 0 15px #c2c1c1;
+    animation: floatUpDown 4s ease-in-out infinite, subtleGlow 3s ease-in-out infinite;
+}
+
+.stats-section .interlift-fixed2 {
+    position: absolute;
+    top: 22%;
+    left: 45.5%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+    font-weight: 600;
+
+    /* Kurumsal glow efekti */
+    text-shadow: 0 0 5px #fff, 0 0 10px #d8d7d7, 0 0 15px #c2c1c1;
+    animation: floatUpDown 4s ease-in-out infinite, subtleGlow 3s ease-in-out infinite;
+}
+
+#liftkeysbooth{
+    position: absolute;
+    top: 78%;
+    left: 46%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+    font-weight: 600;
+}
+
+/* Hafif yukarı-aşağı hareket */
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+/* Hafif ve sofistike glow animasyonu */
+@keyframes subtleGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ccc, 0 0 15px #aaa;
+    }
+
+    50% {
+        text-shadow: 0 0 8px #fff, 0 0 12px #ddd, 0 0 18px #bbb;
+    }
+}
+
+
+
+/* Mobil ve Tablet İçin Uyumluluk (Responsive) */
+
+/* Tablet Görünümü */
+@media (min-width: 768px) and (max-width: 1000.98px) {
+
+    .stats-section {
+        position: relative;
+        padding: 100px 0;
+        color: #fff;
+        /* BURAYA KENDİ ARKA PLAN GÖRSELİNİZİ EKLEYİN 
+        Önerilen görsel boyutu: 1920x1080 piksel
+        */
+        background: url('/static/image/preview/liftkeys interliftbacground.png') no-repeat center center;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .stats-section .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 10, 10, 0.308);
+        /* Siyah katman ve şeffaflık */
+        z-index: 1;
+
+    }
+    .title-wrapper {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .stat-itemliftkeys {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .stat-number {
+        font-size: 3.5rem;
+    }
+
+    .stat-label {
+        writing-mode: horizontal-tb;
+        /* Yazıyı normale döndür */
+        transform: none;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .main-titleinterlift{
+        font-size: 1rem;
+    }
+        .stats-section .interlift-fixed {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.5rem;
+        color: #ffffff;
+        z-index: 10;
+        pointer-events: none;
+        font-weight: 600;
+
+        /* Kurumsal glow efekti */
+        text-shadow: 0 0 5px #fff, 0 0 10px #d8d7d7, 0 0 15px #c2c1c1;
+        animation: floatUpDown 4s ease-in-out infinite, subtleGlow 3s ease-in-out infinite;
+    }
+
+    .stats-section .interlift-fixed2 {
+        position: absolute;
+        top: 9%;
+        left: 45.5%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: #ffffff;
+        z-index: 10;
+        pointer-events: none;
+        font-weight: 600;
+
+        /* Kurumsal glow efekti */
+        text-shadow: 0 0 5px #fff, 0 0 10px #d8d7d7, 0 0 15px #c2c1c1;
+        animation: floatUpDown 4s ease-in-out infinite, subtleGlow 3s ease-in-out infinite;
+    }
+
+    #liftkeysbooth{
+        position: absolute;
+        top: 96%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: #ffffff;
+        z-index: 10;
+        pointer-events: none;
+        font-weight: 600;
+    }
+
+    .main-titleinterlift{
+        font-size: 1.2rem;
+    }
+    .stats-section .content-container {
+        position: relative;
+        z-index: 2;
+        margin-top: 1em;
+    }
+    .countdown-wrapper{
+        left: 50%;
+    }
+}
+
+/* Mobil Görünümü */
+@media (max-width: 767.98px) {
+    .stats-section {
+        padding: 60px 0;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    /* Mobilde her satırda 2 istatistik göstermek için */
+    .stat-itemliftkeys {
+        flex-basis: 50%;
+    }
+
+    .floating-buttons {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        transform: none;
+    }
+
+    .title-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Sayaç kutuları yan yana 2'şer gelsin */
+    .countdown-wrapper .stat-itemliftkeys {
+        margin-bottom: 20px;
+    }
+
+    .stat-numberinterlift {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin: 0;
+        display: block;
+    }
+
+    #interlift-title{
+        margin-top: 2.5em;
+    }
+    .stats-section .interlift-fixed {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.5rem;
+        color: #ffffff;
+        z-index: 10;
+        pointer-events: none;
+        font-weight: 600;
+
+        /* Kurumsal glow efekti */
+        text-shadow: 0 0 5px #fff, 0 0 10px #d8d7d7, 0 0 15px #c2c1c1;
+        animation: floatUpDown 4s ease-in-out infinite, subtleGlow 3s ease-in-out infinite;
+    }
+
+    .stats-section .interlift-fixed2 {
+        position: absolute;
+        top: 9%;
+        left: 45.5%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: #ffffff;
+        z-index: 10;
+        pointer-events: none;
+        font-weight: 600;
+
+        /* Kurumsal glow efekti */
+        text-shadow: 0 0 5px #fff, 0 0 10px #d8d7d7, 0 0 15px #c2c1c1;
+        animation: floatUpDown 4s ease-in-out infinite, subtleGlow 3s ease-in-out infinite;
+    }
+
+    #liftkeysbooth{
+        position: absolute;
+        top: 96%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: #ffffff;
+        z-index: 10;
+        pointer-events: none;
+        font-weight: 600;
+    }
+
+    .main-titleinterlift{
+        font-size: 1.2rem;
+    }
+    .stats-section .content-container {
+        position: relative;
+        z-index: 2;
+        margin-top: 1em;
+    }
+}

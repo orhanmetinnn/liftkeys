@@ -1,0 +1,75 @@
+{% extends "productpage/productbase.html" %}
+
+{% block content %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/chechout.css' %}">
+{% endblock %}
+
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- Sol: İletişim Formu -->
+    <div class="col-lg-7">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-dark text-white rounded-top-4 d-flex align-items-center">
+          <i class="bi bi-envelope-fill me-2"></i>
+          <h4 class="mb-0 fw-bold">İletişim & Sipariş Formu</h4>
+        </div>
+        <div class="card-body p-4">
+          <form method="post" class="row g-3">
+            {% csrf_token %}
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Adınız</label>
+              <input type="text" name="name" class="form-control form-control-lg rounded-3" placeholder="Ad Soyad" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">E-posta</label>
+              <input type="email" name="email" class="form-control form-control-lg rounded-3" placeholder="ornek@mail.com" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Telefon</label>
+              <input type="text" name="phone" class="form-control form-control-lg rounded-3" placeholder="+90 5xx xxx xx xx">
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold">Mesajınız</label>
+              <textarea name="message" class="form-control form-control-lg rounded-3" rows="4" placeholder="Siparişiniz hakkında eklemek istediğiniz not..."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold text-white"
+                      style="background: linear-gradient(90deg, #ff7a00, #ff5400); border:none; font-size:1.1rem; transition:0.3s;">
+                📩 Siparişi Tamamla
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sağ: Sepet Özeti -->
+    <div class="col-lg-5">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-dark text-white rounded-top-4">
+          <h5 class="mb-0 fw-bold"><i class="bi bi-cart3 me-2"></i>Sepetiniz</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          {% for item in cart_items %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-semibold">{{ item.product.name }}</span>
+                <small class="d-block text-muted">x{{ item.qty }}</small>
+              </div>
+            </li>
+          {% empty %}
+            <li class="list-group-item text-center text-muted py-4">
+              <i class="bi bi-emoji-frown fs-3 d-block mb-2"></i> Sepetiniz boş
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

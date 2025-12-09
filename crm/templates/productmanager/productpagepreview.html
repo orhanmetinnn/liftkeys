@@ -1,0 +1,194 @@
+{% extends "productpage/productbase.html" %}
+
+{% block content %}
+{% load static %}
+{% load i18n %}
+
+
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/product_page.css' %}">
+{% endblock %}
+
+<main class="page">
+    <div class="container-xxl">
+      <div class="row g-5 align-items-start">
+        <!-- SOL: Görsel Galeri -->
+        <div class="col-lg-6">
+          <div class="product-media">
+            <!-- ANA GÖRSEL: Buraya ilk görsel gelecek -->
+            <!-- ↓↓↓ kendi görsellerinle değiştir: IMAGE_1.jpg -->
+            <img id="mainImage" src="IMAGE_1.jpg" alt="Ürün görseli" data-index="0" />
+            <div class="media-nav">
+              <button class="media-btn" id="prevBtn" aria-label="Önceki görsel">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="media-btn" id="nextBtn" aria-label="Sonraki görsel">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Thumbnail şerit (çoklu görsel) -->
+          <div class="thumbs" id="thumbs">
+            <!-- Her .thumb içine <img src="..."> koyuyoruz -->
+            <!-- ↓↓↓ kendi görsellerinle değiştir -->
+            <div class="thumb is-active"><img src="IMAGE_1.jpg" alt="Görsel 1"></div>
+            <div class="thumb"><img src="IMAGE_2.jpg" alt="Görsel 2"></div>
+            <div class="thumb"><img src="IMAGE_3.jpg" alt="Görsel 3"></div>
+            <div class="thumb"><img src="IMAGE_4.jpg" alt="Görsel 4"></div>
+            <div class="thumb"><img src="IMAGE_5.jpg" alt="Görsel 5"></div>
+            <div class="thumb"><img src="IMAGE_6.jpg" alt="Görsel 6"></div>
+          </div>
+        </div>
+
+        <!-- SAĞ: Detaylar -->
+        <div class="col-lg-6">
+          <h1 class="product-title">Industrial Pipe</h1>
+          <div class="price h4">₺230.00</div>
+
+          <p class="mb-4" style="color:var(--muted)">
+            Vestibulum tempus enim massa, sed finibus leo consectetur a. Fusce quis vulputate urna, sed iaculis ante.
+            Etiam ultricies nunc augue, non ultrices arcu euismod non.
+          </p>
+
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="qty" aria-label="Adet seçici">
+              <button class="step" id="decr" type="button" aria-label="Azalt">−</button>
+              <input id="qtyInput" type="number" min="1" value="1" inputmode="numeric" />
+              <button class="step" id="incr" type="button" aria-label="Arttır">+</button>
+            </div>
+
+            <button class="btn-cart" type="button">
+              Sepete Ekle
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                <path d="M6 6h0l1.2 8.4c.1.8.8 1.6 1.7 1.6h6.6c.9 0 1.6-.7 1.7-1.6L18 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10" cy="20" r="1.5" fill="currentColor"/>
+                <circle cx="16" cy="20" r="1.5" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="meta">
+            <div class="mb-2"><span class="label">SKU:</span> 03</div>
+            <div class="mb-2"><span class="label">Kategoriler:</span> <span class="chip">Materials</span><span class="chip">Production</span></div>
+            <div class="mb-2"><span class="label">Etiketler:</span> <span class="chip">Business</span><span class="chip">Pipes</span><span class="chip">Storage</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <section class="tabs">
+        <div class="tab-buttons">
+          <button class="active" data-tab="desc">Description</button>
+          <button data-tab="addinfo">Additional information</button>
+          <button data-tab="reviews">Reviews (0)</button>
+        </div>
+
+        <div class="tab-panel active" id="desc">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id magna aliquet, dignissim turpis nec, mollis est.
+            Suspendisse convallis elit. Etiam egestas consequat elit non dictum.
+          </p>
+        </div>
+        <div class="tab-panel" id="addinfo">
+          <ul class="mb-0">
+            <li>Material: Stainless steel</li>
+            <li>Length: 2m</li>
+            <li>Warranty: 24 months</li>
+          </ul>
+        </div>
+        <div class="tab-panel" id="reviews">
+          <p>Henüz yorum yok.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // ---- Çoklu Görsel Kurulumu ----
+    // Burayı kendi görsellerinle güncelle: IMAGE_1.jpg, IMAGE_2.jpg...
+    const imageSources = [
+      "IMAGE_1.jpg",
+      "IMAGE_2.jpg",
+      "IMAGE_3.jpg",
+      "IMAGE_4.jpg",
+      "IMAGE_5.jpg",
+      "IMAGE_6.jpg"
+    ];
+
+    /*
+    Django ile doldurmak istersen:
+    const imageSources = [
+      {% for img in product.images.all %}
+        "{{ img.url }}"{% if not forloop.last %},{% endif %}
+      {% endfor %}
+    ];
+    */
+
+    const mainImage = document.getElementById('mainImage');
+    const thumbsWrap = document.getElementById('thumbs');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function setActive(index){
+      if(index < 0) index = imageSources.length-1;
+      if(index >= imageSources.length) index = 0;
+      mainImage.style.opacity = .3;
+      mainImage.dataset.index = String(index);
+      mainImage.src = imageSources[index];
+      setTimeout(()=> mainImage.style.opacity = 1, 120);
+
+      // thumbs aktif sınıf
+      [...thumbsWrap.children].forEach((el,i)=>{
+        el.classList.toggle('is-active', i===index);
+      });
+    }
+
+    // Thumb tıklama
+    thumbsWrap.addEventListener('click', (e)=>{
+      const item = e.target.closest('.thumb');
+      if(!item) return;
+      const index = [...thumbsWrap.children].indexOf(item);
+      setActive(index);
+    });
+
+    // Ok tuşları ile geçiş
+    document.addEventListener('keydown', (e)=>{
+      const i = Number(mainImage.dataset.index || 0);
+      if(e.key === 'ArrowRight') setActive(i+1);
+      if(e.key === 'ArrowLeft') setActive(i-1);
+    });
+
+    prevBtn.addEventListener('click', ()=> setActive(Number(mainImage.dataset.index||0)-1));
+    nextBtn.addEventListener('click', ()=> setActive(Number(mainImage.dataset.index||0)+1));
+
+    // Başlangıç: dizi ile thumbnail senkronizasyonu
+    (function hydrateThumbs(){
+      const thumbs = [...thumbsWrap.querySelectorAll('.thumb img')];
+      thumbs.forEach((imgEl, i)=>{
+        if(imageSources[i]) imgEl.src = imageSources[i];
+      });
+    })();
+
+    // ---- Adet Stepper ----
+    const qtyInput = document.getElementById('qtyInput');
+    document.getElementById('incr').onclick = ()=> qtyInput.value = Math.max(1, +qtyInput.value + 1);
+    document.getElementById('decr').onclick = ()=> qtyInput.value = Math.max(1, +qtyInput.value - 1);
+
+    // ---- Tabs ----
+    const tabButtons = document.querySelectorAll('.tab-buttons button');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabButtons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        tabButtons.forEach(b=> b.classList.remove('active'));
+        panels.forEach(p=> p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+
+
+{% endblock %}

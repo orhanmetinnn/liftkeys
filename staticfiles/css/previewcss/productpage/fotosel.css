@@ -1,0 +1,1026 @@
+/* FONTLAR */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #fcfcfc; /* Temiz açık zemin */
+}
+
+/* ANA KAPSAYICI */
+.hero-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+/* --- YOUTUBE VİDEO ALANI (WEB3 TARZI) --- */
+.video-wrapper-web3 {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background-color: #000;
+    /* Turuncu "Glow" (Parıltı) Efekti */
+    box-shadow: 0 20px 50px rgba(253, 126, 20, 0.25); 
+    border: 1px solid rgba(253, 126, 20, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover olunca video alanı biraz yukarı kalkar */
+.video-wrapper-web3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(253, 126, 20, 0.35);
+}
+
+/* Kapak Resmi */
+.video-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.video-wrapper-web3:hover .video-poster {
+    opacity: 0.7;
+}
+
+/* Modern Play Butonu */
+.play-btn-modern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(253, 126, 20, 0.9); /* Turuncu */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    box-shadow: 0 0 0 8px rgba(253, 126, 20, 0.2); /* Etrafındaki halka */
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+/* Hover efektinde buton parlar */
+.video-wrapper-web3:hover .play-btn-modern {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: #fd7e14;
+    box-shadow: 0 0 20px rgba(253, 126, 20, 0.6);
+}
+
+/* İframe yüklendiğinde kapak gizlenir */
+.video-loaded .video-poster,
+.video-loaded .play-btn-modern {
+    display: none;
+}
+
+/* --- SAĞ TARAF METİN TASARIMI --- */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+/* Turuncu Web3 İcon */
+.icon-box-orange {
+    width: 60px;
+    height: 60px;
+    background: rgba(253, 126, 20, 0.1); /* Çok açık turuncu zemin */
+    color: #fd7e14; /* Turuncu ikon rengi */
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(253, 126, 20, 0.1);
+}
+
+/* Başlık */
+h1.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* Gradient Metin Efekti */
+.text-gradient-orange {
+    background: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 90%;
+}
+
+.security-section {
+    padding:  0;
+    background-color: #fff; /* Hero griydi, burası beyaz olsun (kontrast) */
+    position: relative;
+}
+
+/* Sol Taraf: Başlık */
+.sec-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Sol Taraf: Liste Yapısı */
+.feature-list {
+    list-style: none; /* Standart noktaları kaldır */
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: flex; /* İkon ve yazıyı hizala */
+    align-items: flex-start;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Liste İkonları (Web3 Tarzı) */
+.feature-list li i {
+    flex-shrink: 0; /* İkonun sıkışmasını engelle */
+    width: 32px;
+    height: 32px;
+    background: rgba(253, 126, 20, 0.15); /* Hafif turuncu zemin */
+    color: #fd7e14; /* Turuncu ikon */
+    border-radius: 50%; /* Yuvarlak */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-top: 2px; /* Yazının ilk satırı ile hizala */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover efektinde ikon parlasın */
+.feature-list li:hover i {
+    background: #fd7e14;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(253, 126, 20, 0.3);
+}
+
+/* Sağ Taraf: Resim Alanı */
+.image-stack-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ortala */
+    gap: 20px; /* İki resim arası boşluk */
+    position: relative;
+}
+
+/* Resimlerin ortak stili */
+.tech-img {
+    width: 100%;
+    max-width: 450px; /* İstenilen genişlik sınırı */
+    height: auto; /* Yükseklik orantılı kalsın */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Çok hafif gölge */
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.tech-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(253, 126, 20, 0.15); /* Hoverda turuncu gölge */
+    border-color: rgba(253, 126, 20, 0.3);
+}
+
+/* Resim Arkası Dekor (Opsiyonel Web3 dokunuşu) */
+.image-stack-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(253, 126, 20, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+.tech-gallery-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+/* 1. DIŞ GRİ KUTU */
+.tech-card {
+    background-color: #f8f9fa; /* Arka plan gri */
+    border-radius: 24px;       /* Köşeler yuvarlak */
+    padding: 20px;             /* İçeriden 20px boşluk (Resim kenara yapışmasın) */
+    height: 100%;              /* Yükseklik eşitleme */
+    display: flex;
+    flex-direction: column;    /* İçindekileri alt alta diz */
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(253, 126, 20, 0.1);
+}
+
+/* 2. RESİM ALANI (Serbest) */
+.tech-img-wrapper {
+    /* Resmi ortalar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Resim ile alttaki yazı arasına boşluk koyar */
+}
+
+.tech-card-img {
+    width: 100%;       /* Genişlik sığsın */
+    object-fit: contain; /* Resmi asla kesme */
+}
+
+/* 3. BEYAZ YAZI KUTUSU (Altta) */
+.tech-info-box {
+    margin-top: 1em;
+    background-color: #fff; /* Beyaz zemin */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+/* Başlık */
+.tech-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fd7e14; /* Turuncu */
+    margin-bottom: 8px;
+}
+
+/* Açıklama */
+.tech-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* LİSTE (A, B, C, D) */
+.spec-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.spec-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.spec-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: #fd7e14;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+/* Resimlerin oranını korumak için opsiyonel */
+.aspect-ratio-box {
+    aspect-ratio: 450/700;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+/* --- HASSASİYET BÖLÜMÜ (680x430px) --- */
+
+.sensitivity-section {
+    padding-bottom: 20px;
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+/* Resim Çerçevesi */
+.dual-img-wrapper {
+    position: relative;
+    /* İŞTE BURASI: 680'e 430 oranını sabitliyoruz */
+    aspect-ratio: 680 / 430; 
+    width: 100%;
+    max-width: 680px; /* Resim kendi boyutundan fazla büyümesin */
+    margin: 0 auto 30px auto; /* Ortala ve alttan boşluk bırak */
+    
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+    
+    /* Modern Web3 Sınır ve Gölge */
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hover Efekti */
+.dual-img-wrapper:hover {
+    transform: translateY(-8px); /* Hafif yukarı kalkar */
+    box-shadow: 0 20px 50px rgba(253, 126, 20, 0.25); /* Turuncu glow */
+    border-color: rgba(253, 126, 20, 0.4);
+}
+
+.sensitivity-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi kutuya tam doldurur */
+    display: block;
+}
+
+/* Alt Yazı Alanı */
+.sensitivity-text-box {
+    max-width: 800px;
+    margin: 10px auto 0 auto;
+    position: relative;
+    padding: 0 15px;
+}
+
+.sensitivity-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #222;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+/* Turuncu Alt Çizgi */
+.sensitivity-divider {
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #fd7e14, #ffc107);
+    border-radius: 10px;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 4px 10px rgba(253, 126, 20, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+.features-grid-section {
+    padding: 60px 0;
+    /* Arka plan rengi yok, sayfanın kendi rengi geçerli */
+}
+
+/* Kapsayıcı Eleman */
+.feature-minimal-item {
+    text-align: center; /* Her şeyi ortala */
+    margin-bottom: 30px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Efekti: Sadece hafif yukarı kalksın */
+.feature-minimal-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Resim Kutusu (339x247px Oranı) */
+.feature-ratio-box {
+    position: relative;
+    aspect-ratio: 339 / 247; /* İstenen oran */
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    
+    /* Modern Web3 Sınır Çizgisi ve Hafif Gölge */
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover'da Resim Çerçevesi Parlasın */
+.feature-minimal-item:hover .feature-ratio-box {
+    box-shadow: 0 15px 30px rgba(253, 126, 20, 0.2);
+    border-color: rgba(253, 126, 20, 0.4);
+}
+
+.feature-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.feature-minimal-item:hover .feature-img {
+    transform: scale(1.05); /* Resim hafif yakınlaşsın */
+}
+
+/* İkon ve Başlık Alanı */
+.feature-content {
+    position: relative;
+}
+
+/* İkon Tasarımı */
+.feature-icon-circle {
+    width: 48px;
+    height: 48px;
+    background: rgba(253, 126, 20, 0.1);
+    color: #fd7e14;
+    border-radius: 50%;
+    display: inline-flex; /* Ortalamak için */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.feature-minimal-item:hover .feature-icon-circle {
+    background: #fd7e14;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(253, 126, 20, 0.3);
+}
+
+/* Başlık */
+.feature-title-sm {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+/* Açıklama Metni (Son maddedeki detaylar için) */
+.feature-desc-sm {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+.manifesto-section {
+    padding-bottom: 20px;
+    background: radial-gradient(circle at center, rgba(253, 126, 20, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.manifesto-wrapper {
+    position: relative;
+    max-width: 950px; /* Çok yayılmasın, derli toplu dursun */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Arka Plandaki Dev Tırnak İşareti (Dekor) */
+.big-quote-icon {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: rgba(253, 126, 20, 0.08); /* Çok silik turuncu */
+    z-index: 0;
+    pointer-events: none;
+    font-family: serif; /* Tırnak işareti serif fontta daha şık durur */
+}
+
+/* Ana Metin */
+.manifesto-text {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+}
+
+/* Vurgulu Kısım (Gradient) */
+.highlight-wall {
+    background: linear-gradient(90deg, #fd7e14, #d63384);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    display: inline-block; /* Gradientin düzgün çalışması için */
+}
+
+/* Altındaki İnce Çizgi */
+.manifesto-line {
+    width: 60px;
+    height: 4px;
+    background: #fd7e14;
+    border-radius: 50px;
+    margin: 30px auto 0 auto;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+.packaging-section {
+    padding: 60px 0;
+    background-color: #fff;
+    /* Teknik bir hava katmak için ince, kesik çizgili bir desen eklenebilir (Opsiyonel) */
+    background-image: radial-gradient(#fd7e14 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0;
+    /* Arka planın çok baskın olmaması için beyaz overlay */
+    background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
+                radial-gradient(#fd7e14 0.5px, transparent 0.5px);
+}
+
+/* Geniş Resim Alanı (1400x113px) */
+.tech-drawing-wrapper {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8f9fa; /* Resim yüklenmezse zemin */
+    border: 1px dashed rgba(0,0,0,0.1); /* Teknik çizim havası için kesik çizgi */
+    padding: 10px; /* Resme çerçeve boşluğu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-drawing-img {
+    width: 100%;
+    height: auto; /* Oranı koru */
+    display: block;
+    /* Resim çok ince olduğu için mobilde çok küçülürse diye min-height verebiliriz ama
+       teknik çizim olduğu için olduğu gibi kalması daha iyidir. */
+}
+
+/* Alt Veri Kartları (Grid) */
+.spec-stat-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.spec-stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(253, 126, 20, 0.3);
+    box-shadow: 0 15px 35px rgba(253, 126, 20, 0.15);
+}
+
+/* İkon Kutusu */
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(253, 126, 20, 0.1);
+    color: #fd7e14;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Değer (Örn: 8.2 cm) */
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #222;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Etiket (Örn: Çap) */
+.stat-label {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Birim (cm, kg) vurgusu */
+.unit-small {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #999;
+    margin-left: 2px;
+}
+
+
+
+
+
+
+
+
+/* --- TEKNİK DETAYLAR VE MONTAJ BÖLÜMÜ --- */
+
+.technical-guide-section {
+    padding: 80px 0;
+}
+
+/* SOL TARAFTAKİ UZUN RESİM (Sticky Özelliği) */
+.tall-image-wrapper {
+    position: sticky;
+    top: 100px; /* Üstten ne kadar boşlukla takip etsin */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tall-tech-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Resim çok uzun olduğu için mobilde ve tablette sığması için ayar */
+    object-fit: cover;
+}
+
+/* SAĞ TARAF: GENEL KART YAPISI */
+.info-card-block {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+}
+
+/* BAŞLIKLAR */
+.block-header {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(253, 126, 20, 0.1);
+    position: relative;
+}
+
+.block-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #fd7e14; /* Turuncu vurgu çizgisi */
+}
+
+/* 1. KISIM: TEKNİK ÖZELLİKLER GRİDİ */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.spec-value {
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 700;
+}
+
+/* 2. KISIM: LİSTE TASARIMLARI (Montaj & Paket) */
+
+/* Numaralı Liste (Montaj) */
+.instruction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: montaj-counter;
+}
+
+.instruction-list > li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.instruction-list > li::before {
+    counter-increment: montaj-counter;
+    content: counter(montaj-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: rgba(253, 126, 20, 0.1);
+    color: #fd7e14;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Alt Liste (a, b, c) */
+.sub-instruction-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.sub-instruction-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.sub-badge {
+    background: #f1f3f5;
+    color: #444;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+/* Paket İçeriği Listesi (Tik İşaretli) */
+.package-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 sütun */
+    gap: 15px;
+}
+
+.package-list li {
+    display: flex;
+    align-items: center;
+    color: #444;
+    font-weight: 500;
+}
+
+.package-list li i {
+    color: #fd7e14;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.preview-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Yükseklik sınırı (Yazılarla denk durması için) */
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: zoom-in; /* Mouse ile üzerine gelince büyüteç çıksın */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Resmin kendisi (Kesilmiş görünüm) */
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi kutuya sığdır, taşanları gizle */
+    object-position: top center; /* Resmin üst kısmı görünsün */
+    transition: transform 0.5s ease;
+}
+
+/* 2. Üzerine Gelince Çıkan "Büyüt" Katmanı */
+.zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Hafif karartma */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Başlangıçta gizli */
+    transition: opacity 0.3s ease;
+}
+
+/* Büyüteç İkonu */
+.zoom-icon {
+    font-size: 3rem;
+    color: #fff;
+    background: #fd7e14; /* Turuncu */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(253, 126, 20, 0.6);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.zoom-text {
+    color: #fff;
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Hover Efektleri */
+.preview-wrapper:hover .zoom-overlay {
+    opacity: 1; /* Görünür yap */
+}
+
+.preview-wrapper:hover .preview-img {
+    transform: scale(1.05); /* Resim hafif büyüsün */
+}
+
+.preview-wrapper:hover .zoom-icon {
+    transform: scale(1); /* İkon büyüsün */
+}
+
+/* 3. MODAL (Açılan Pencere) TASARIMI */
+.custom-modal-content {
+    background-color: transparent; /* Arka plan yok */
+    border: none; /* Çerçeve yok */
+    box-shadow: none;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1056;
+}
+
+.full-size-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+.cta-offer-section {
+    padding-bottom: 25px; /* Alttan biraz fazla boşluk bırakalım ki ferah dursun */
+    text-align: center; /* İçeriği ortalar */
+}
+
+/* Tıklanabilir Kapsayıcı */
+.offer-btn-link {
+    display: inline-block; /* Ortalamak için gerekli */
+    width: 100%;
+    max-width: 376px; /* İstenen Genişlik */
+    /* Yükseklik otomatiktir ama oranı korumak istersek: */
+    aspect-ratio: 376 / 152; 
+    
+    border-radius: 20px; /* Köşeleri yumuşat */
+    overflow: hidden;
+    position: relative;
+    
+    /* Başlangıçta hafif gölge */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 2px solid transparent; /* Kenarlık payı */
+    
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: float-cta 4s ease-in-out infinite; /* Hafifçe süzülme efekti */
+}
+
+/* Hover (Üzerine Gelince) Efekti */
+.offer-btn-link:hover {
+    transform: translateY(-8px) scale(1.02); /* Yukarı kalk ve hafif büyü */
+    /* Web3 Turuncu Glow Efekti */
+    box-shadow: 0 20px 60px rgba(253, 126, 20, 0.4); 
+    border-color: rgba(253, 126, 20, 0.3); /* Kenarlık belirginleşsin */
+}
+
+/* Resim Ayarları */
+.offer-btn-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Resmi bozmadan sığdır */
+    display: block;
+}
+
+/* Hafif Süzülme Animasyonu (Canlılık katar) */
+@keyframes float-cta {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Hover yapınca animasyon dursun, kullanıcıya odaklasın */
+.offer-btn-link:hover {
+    animation: none;
+}
+/* Mobil Uyum */
+@media (max-width: 991px) {
+    .content-area { padding-left: 0; margin-top: 40px; align-items: center; text-align: center; }
+    .hero-title { font-size: 2.5rem; }
+    .sec-title { font-size: 2rem; text-align: center; }
+    .image-stack-wrapper { margin-top: 40px; }
+    .center-connector::before { display: none; } /* Mobilde çizgiyi kaldır */
+    .center-connector { margin: 30px 0; } /* Dikey boşluk ver */
+    .connector-text { font-size: 1.3rem; }
+    .sensitivity-title { font-size: 1.6rem; }
+    /* Mobilde resimler alt alta gelince araları açılsın */
+    .dual-img-wrapper { margin-bottom: 20px; }
+    /* Mobilde 2'li yan yana sığması için fontları biraz kısalım */
+    .feature-title-sm { font-size: 1rem; }
+    .feature-desc-sm { font-size: 0.8rem; }
+    .feature-icon-circle { width: 40px; height: 40px; font-size: 1.1rem; }
+    .manifesto-section { padding: 60px 0; }
+    .manifesto-text { font-size: 1.5rem; line-height: 1.4; }
+    .big-quote-icon { font-size: 5rem; top: -20px; }
+    /* Mobilde kartlar arası boşluk */
+    .col-md-4 { margin-bottom: 15px; } 
+    /* Resim mobilde çok ince kalabilir, biraz padding ile destekliyoruz */
+    .tech-drawing-wrapper { padding: 5px; }
+    /* Mobilde resim sticky olmasın, normal dursun */
+    .tall-image-wrapper { position: relative; top: 0; margin-bottom: 30px; }
+    .package-list { grid-template-columns: 1fr; } /* Mobilde tek sütun */
+    .preview-wrapper { height: 400px; margin-bottom: 30px; }
+}
+
+
+
+
+
+
+
+
+
+

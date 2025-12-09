@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-16 13:21+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\crm\templates\preview\index.html:6
+msgid ""
+"Liftkeys Asansör Sistemleri & Çözümleri | Güvenilir, Sertifikalı ve Global "
+"Ürünler"
+msgstr ""
+"Liftkeys Aufzugssysteme & Lösungen | Zuverlässige, Zertifizierte und Globale "
+"Produkte"
+
+#: .\crm\templates\preview\index.html:10
+#, fuzzy
+#| msgid ""
+#| "Liftkeys, güvenilir ve yenilikçi asansör sistemleri çözümleri sunar. \n"
+#| "Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı "
+#| "ve zemini, \n"
+#| "elektronik ve mekanik bileşenlerle her yolculuğu güvenli ve konforlu hale "
+#| "getiriyoruz."
+msgid ""
+"\n"
+"Liftkeys, güvenilir ve yenilikçi asansör sistemleri çözümleri sunar.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
+"elektronik ve mekanik bileşenlerle her yolculuğu güvenli ve konforlu hale "
+"getiriyoruz.\n"
+msgstr ""
+"Liftkeys bietet zuverlässige und innovative Lösungen für Aufzugssysteme. Von "
+"Überlastsystemen, Bremssystemen, Lichtschranken, Handläufen, Kabinenglas und "
+"Bodenbelägen bis hin zu elektronischen und mechanischen Komponenten – wir "
+"machen jede Fahrt sicher und komfortabel."
+
+#: .\crm\templates\preview\index.html:20
+msgid ""
+"asansör sistemleri, asansör yedek parça, aşırı yük sistemi, asansör fren "
+"sistemi, asansör fotosel, asansör küpeşte, asansör fanı, pvc zemin "
+"kaplamaları, liftkeys"
+msgstr ""
+"Aufzugssysteme, Aufzug Ersatzteile, Überlastsystem, Aufzugsbremssystem, "
+"Aufzug Lichtschranke, Aufzug Handlauf, Aufzugsventilator, PVC Bodenbeläge, "
+"liftkeys"
+
+#: .\crm\templates\preview\index.html:26
+msgid "Liftkeys | Asansör Sistemleri, Yedek Parçalar ve Çözümler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:30
+msgid ""
+"\n"
+"Türkiye merkezli Liftkeys, asansör sektöründe yenilikçi ve güvenli çözümler "
+"sunar.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
+"elektronik ve mekanik bileşenlerle global tedarikçi.\n"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:40
+msgid "Liftkeys | Güvenilir Asansör Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:44
+#, fuzzy
+#| msgid ""
+#| "Liftkeys, güvenilir ve yenilikçi asansör sistemleri çözümleri sunar. \n"
+#| "Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı "
+#| "ve zemini, \n"
+#| "elektronik ve mekanik bileşenlerle her yolculuğu güvenli ve konforlu hale "
+#| "getiriyoruz."
+msgid ""
+"\n"
+"Liftkeys, yüksek kalite ve güvenlik standartlarıyla asansör parçaları "
+"üretir.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
+"elektronik ve mekanik bileşenlerle çözümler.\n"
+msgstr ""
+"Liftkeys bietet zuverlässige und innovative Lösungen für Aufzugssysteme. Von "
+"Überlastsystemen, Bremssystemen, Lichtschranken, Handläufen, Kabinenglas und "
+"Bodenbelägen bis hin zu elektronischen und mechanischen Komponenten – wir "
+"machen jede Fahrt sicher und komfortabel."
+
+#: .\crm\templates\preview\index.html:88
+#, fuzzy
+#| msgid ""
+#| "Liftkeys Asansör Sistemleri & Çözümleri | Güvenilir, Sertifikalı ve "
+#| "Global Ürünler"
+msgid ""
+"Liftkeys, asansör sistemleri ve ekipmanlarında güvenilir, kaliteli ve "
+"yenilikçi çözümler"
+msgstr ""
+"Liftkeys Aufzugssysteme & Lösungen | Zuverlässige, Zertifizierte und Globale "
+"Produkte"
+
+#: .\crm\templates\preview\index.html:92
+msgid "Asansör Sistemleri & Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:98
+msgid ""
+"Liftkeys, yüksek kalite ve güvenlik standartlarıyla <strong>asansör "
+"ekipmanları</strong> ve <strong>yedek parçalar</strong> alanında sektöre "
+"öncülük ediyor. <br> <strong>Aşırı Yük Sistemi, Fren Sistemi, Fotocell, "
+"Küpeşte, Kabin Camı, Kabin Zemini, Kauçuk Tampon, Asansör Etiketleri, "
+"Asansör Elektronik</strong><br> çözümlerimizle her yolculuk güvenli ve "
+"konforlu."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:110
+msgid "Ürünler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:113
+msgid "Katalog"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:109
+msgid "Firma Logo"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:113
+msgid "Fiyat Teklifi"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:114
+msgid "Teklif No"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:115
+msgid "Tarih"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:120
+msgid "Firma"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:121
+msgid "İlgili Kişi"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:122
+msgid "Telefon / E-mail"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:123
+msgid "Adres"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:124
+msgid "Web"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:125
+msgid "Notlar"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:131
+msgid "Resim"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:132
+msgid "Ürün"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:133
+msgid "Adet"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:134
+msgid "Birim Fiyat"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:135
+#, python-format
+msgid "İndirim (%%)"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:136
+msgid "İndirimli Tutar"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:137
+msgid "Toplam"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:157
+msgid "Genel Toplam"
+msgstr ""

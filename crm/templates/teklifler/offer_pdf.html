@@ -1,0 +1,168 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <title>Fiyat Teklifi #{{ offer.id }}</title>
+    <style>
+        @font-face {
+        		font-family: "Dejavu";
+        		src: url('{% static "fonts/DejaVuSans.ttf" %}');
+        }
+        body {
+            font-family: "Dejavu";
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+
+
+        .offer-details {
+            text-align: right;
+        }
+
+        .offer-details h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #F59222;
+            font-weight: bold;
+        }
+
+        .offer-details p {
+            margin: 2px 0;
+            font-size: 14px;
+        }
+
+        /* Firma bilgileri kutusu */
+        .offer-info {
+            border-left: 5px solid #F59222;
+            padding: 15px 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .offer-info p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        /* Ürün tablosu */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        thead {
+            background-color: #F59222;
+            color: #fff;
+        }
+
+        th, td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 13px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fdf2e9;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #888;
+            margin-top: 50px;
+        }
+
+        /* Başlık vurguları */
+        .highlight {
+            color: #F59222;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            {% if offer.banner_image %}
+            <img src="{{ offer.banner_image.url }}" class="logo" alt="{% trans 'Firma Logo' %}">
+            {% endif %}
+        </div>
+        <div class="offer-details">
+            <h1>{% trans "Fiyat Teklifi" %}</h1>
+            <p>{% trans "Teklif No" %}: <span class="highlight">{{ offer.id }}</span></p>
+            <p>{% trans "Tarih" %}: {{ offer.created_at|date:"d-m-Y H:i" }}</p>
+        </div>
+    </div>
+
+    <div class="offer-info">
+        <p><strong>{% trans "Firma" %}:</strong> {{ offer.company_name }}</p>
+        <p><strong>{% trans "İlgili Kişi" %}:</strong> {{ offer.contact_person }}</p>
+        <p><strong>{% trans "Telefon / E-mail" %}:</strong> {{ offer.company_phone }} / {{ offer.company_email }}</p>
+        <p><strong>{% trans "Adres" %}:</strong> {{ offer.company_address }}</p>
+        <p><strong>{% trans "Web" %}:</strong> {{ offer.company_website }}</p>
+        <p><strong>{% trans "Notlar" %}:</strong> {{ offer.notes }}</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans "Resim" %}</th>
+                <th>{% trans "Ürün" %}</th>
+                <th>{% trans "Adet" %}</th>
+                <th>{% trans "Birim Fiyat" %}</th>
+                <th>{% trans "İndirim (%)" %}</th>
+                <th>{% trans "İndirimli Tutar" %}</th>
+                <th>{% trans "Toplam" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for op in offer.offerproduct_set.all %}
+            <tr>
+                <td>
+                    {% if op.product.mobile_image %}
+                    <img src="{{ op.product.mobile_image.url }}" alt="{{ op.product.name }}" style="max-height:50px;">
+                    {% endif %}
+                </td>
+                <td>{{ op.product.name }}</td>
+                <td class="right">{{ op.quantity }}</td>
+                <td class="right">{{ op.product.price }} {{ op.product.currency }}</td>
+                <td class="right">{{ op.discount_percentage }}%</td>
+                <td class="right">{{ op.discount_amount }} {{ op.product.currency }}</td>
+                <td class="right">{{ op.final_price }} {{ op.product.currency }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="total-row">
+                <td colspan="6" class="right">{% trans "Genel Toplam" %}</td>
+                <td class="right">{{ total_price }} {{ offer.offerproduct_set.first.product.currency }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="footer">
+        Bu teklif {{ offer.company_name }} tarafından hazırlanmıştır. Tüm hakları saklıdır.
+    </div>
+</body>
+</html>

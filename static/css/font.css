@@ -1,0 +1,77 @@
+/* ===========================
+   LATIN / CYRILLIC (Roboto)
+   Türkçe, Almanca, İspanyolca, Rusça için
+   =========================== */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* ===========================
+   ARABIC (Noto Kufi Arabic)
+   Arapça için
+   =========================== */
+@font-face {
+    font-family: 'NotoKufiArabic';
+    src: url('../font/NotoKufiArabic/NotoKufiArabic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face {
+    font-family: 'NotoKufiArabicSemiBold';
+    src: url('../font/NotoKufiArabic/NotoKufiArabic-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* ===========================
+   Dil bazlı kullanım
+   =========================== */
+
+
+:root {
+    --bs-font-sans-serif: 'Roboto', sans-serif;
+}
+
+
+/* Türkçe, Almanca, İspanyolca */
+body[lang="tr"],
+body[lang="de"],
+body[lang="es"] {
+    font-family: 'Roboto', sans-serif;
+    direction: ltr;
+    text-align: left;
+}
+
+/* Rusça (Kiril) */
+body[lang="ru"] {
+    font-family: 'Roboto', sans-serif; /* Roboto Cyrillic desteği var */
+    direction: ltr;
+    text-align: left;
+}
+
+/* Arapça */
+body[lang="ar"] {
+    font-family: 'NotoKufiArabic', sans-serif;
+    direction: rtl;
+    text-align: right;
+}

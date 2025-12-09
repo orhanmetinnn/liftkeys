@@ -1,0 +1,131 @@
+:root {
+    --orange: #f77f00;
+    --dark: #1c1c1c;
+    --card: #2a2a2a;
+    --muted: #9aa0a6;
+}
+
+body {
+    color: #f6f7f8;
+}
+
+.page-title {
+    text-align: center;
+    margin: 30px 0 10px;
+    font-weight: 800;
+    font-size: 2rem;
+    -webkit-background-clip: text;
+    color: #f77f00;
+}
+.page-sub {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 40px;
+}
+
+/* Feed yapısı */
+.gallery-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px 60px;
+}
+
+.gallery-card {
+    background: var(--card);
+    border-radius: 16px;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.05);
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.gallery-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,.55), 0 0 0 1px rgba(255,126,41,.2);
+}
+
+/* Başlık alanı (üstte) */
+.gallery-header {
+    padding: 14px 18px;
+    font-weight: 600;
+    color: var(--orange);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* Medya alanı: tam genişlik */
+.gallery-media {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* büyük video/görsel */
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-media img, 
+.gallery-media iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+}
+
+/* Video thumb + play */
+.video-thumb {
+    position: relative;
+    width: 100%; height: 100%;
+    border: 0; padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.video-thumb img { width:100%; height:100%; object-fit: cover; display:block; }
+.video-thumb .play {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: rgba(0,0,0,.5);
+    font-size: 34px;
+    color: var(--orange);
+    box-shadow: 0 6px 20px rgba(0,0,0,.7);
+}
+
+/* Loader */
+#loader {
+    text-align: center;
+    color: var(--orange);
+    font-weight: 600;
+    padding: 16px;
+}
+
+.video-thumb .play {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(0,0,0,.55);
+  box-shadow: 0 6px 20px rgba(0,0,0,.7);
+}
+
+.video-thumb .play svg {
+  width: 36px; height: 36px;
+  fill: var(--orange);
+}
+
+/* Zoom efekti */
+.gallery-media {
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-media img,
+.gallery-media iframe {
+  transition: transform 0.4s ease;
+}
+
+/* Hover'da zoom */
+.gallery-card:hover .gallery-media img {
+  transform: scale(1.08);
+}

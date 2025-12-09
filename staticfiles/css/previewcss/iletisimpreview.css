@@ -1,0 +1,23 @@
+
+
+
+.bg-orange-overlay {
+    background-image: 
+        linear-gradient(rgba(244, 110, 33, 0.521), rgba(244, 112, 33, 0.9)), 
+        url('/static/image/preview/liftkeys asansör iletisim alani.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Mobil görünümde yığıldığında minimum yükseklik sağlar */
+}
+
+/* Bootstrap form elemanlarının kenarlığını kaldırmak için (isteğe bağlı) */
+.form-control, .form-select {
+    border: none;
+}
+
+#iletisimtitle{
+    color: #000000; /* koyu mavi renk */
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+

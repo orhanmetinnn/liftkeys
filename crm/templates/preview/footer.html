@@ -1,0 +1,168 @@
+    
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/previewcss/footer.css' %}">
+{% endblock %}
+
+
+
+
+<footer class="footer-section">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box">
+                        <div class="icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div class="info-text">
+                            <a href="/contact/" style="text-decoration: none; color: inherit;">
+                                <h6>{% trans "Bizi Arayın" %}</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box">
+                        <div class="icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div class="info-text">
+                            <h6>{% trans "Email" %}</h6>
+                            <p><a href="mailto:info@liftkeys.com" aria-label="{% trans 'Liftkeys E-Posta Adresi' %}">info@liftkeys.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box">
+                        <div class="icon"><i class="bi bi-clock-fill"></i></div>
+                        <div class="info-text">
+                            <h6>{% trans "Çalışma Saati" %}</h6>
+                            <p>{% trans "08:00 - 18:15" %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box">
+                        <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div class="info-text">
+                            <h6>{% trans "Lokasyon" %}</h6>
+                            <p>
+                                <a href="https://maps.app.goo.gl/dnH51sheyjyxryeQ8"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="{% trans 'Liftkeys Konumu - İstanbul Pendik' %}">
+                                {% trans "İstanbul Pendik" %}
+                                </a>
+                                <br>
+                                <a href="https://maps.app.goo.gl/konya_karatay_linkini_buraya_ekle"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="{% trans 'Liftkeys Konumu - Konya Karatay' %}">
+                                {% trans "Konya / Karatay" %}
+                                </a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-main">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-about">
+                        <img src="{% static "image/weblogomenu.png" %}" alt="LiftKeys Logo" class="logo">
+                        <p class="mt-3">
+                            {% blocktrans trimmed %}
+                            Liftkeys, Türkiye merkezli bir <strong>asansör yedek parça ve aksesuar üreticisi</strong>dir. 
+                            Müşterilerimize <strong>yüksek kaliteli</strong>, <strong>güvenilir</strong> ve <strong>dayanıklı asansör çözümleri</strong> sunarak sektörün ihtiyaçlarını karşılamayı hedefliyoruz.
+                            {% endblocktrans %}
+                        </p>
+                        <div class="social-icons mt-4">
+                            <a href="https://www.facebook.com/liftkeys"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/liftkeyscom/"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/liftkeys/"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.youtube.com/@liftkeys"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h5>{% trans "Hizmetlerimiz" %}</h5>
+                        <ul>
+                            {% for cat in global_categories %}
+                                <li>
+                                    <a href="{% url 'category_detail' slug=cat.slug %}">
+                                        {{ cat.name }}
+                                    </a>
+                                </li>
+                            {% empty %}
+                                <li>{% trans "Kategori bulunamadı" %}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h5>{% trans "Hızlı Erişim" %}</h5>
+                        <ul>
+                            <li><a href="/about/">{% trans "Hakkımızda" %}</a></li>
+                            <li><a href="/contact/">{% trans "İletişim" %}</a></li>
+                            <li><a href="#">{% trans "Katalog" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">{% trans "Copyright 2025 – Tüm haklar Liftkeys firmasına aittir." %}</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <div class="bottom-links">
+                        <a href="/privacy-policy/">{% trans "Privacy policy." %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <a id="back-to-top" href="#" class="back-to-top">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    
+    <script>
+        // "Yukarı Çık" butonu için JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) { // 300px aşağı kaydırıldığında göster
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>

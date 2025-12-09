@@ -1,0 +1,97 @@
+{% extends "productpage/productbase.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/productpagepreview.css' %}">
+  <link rel="stylesheet" href="{% static 'css/blog_index_web3.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="lk-blog-wrap container py-5">
+  <!-- Başlık alanı -->
+  <header class="lk-hero">
+    <div class="lk-hero-chip">LiftKeys Blog</div>
+    <h1 class="lk-hero-title">{{ page.title }}</h1>
+    {% if page.intro %}
+      <p class="lk-hero-sub">{{ page.intro }}</p>
+    {% endif %}
+  </header>
+
+  <!-- Filtre / arama -->
+  <div class="lk-toolbar d-flex flex-wrap align-items-center gap-2">
+    <form action="" method="get" class="ms-auto lk-search">
+      <input name="q" type="search" class="form-control form-control-lg lk-input"
+             placeholder="Blog içinde ara…">
+    </form>
+  </div>
+
+  <!-- Grid -->
+  {% if posts %}
+    <div class="row g-4 lk-grid">
+      {% for post in posts %}
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="lk-card h-100" data-tilt>
+            <a class="lk-thumb d-block" href="{{ post.url }}" aria-label="{{ post.title }}">
+              {# 1) Kapak görseli varsa onu göster #}
+              {% if post.featured_image %}
+                {% image post.featured_image fill-800x500 class="lk-thumb-img" %}
+              {% else %}
+                {# 2) Yoksa ilk blok görselini dene #}
+                {% with post.body|first as first_block %}
+                  {% if first_block and first_block.block_type == "image" %}
+                    {% image first_block.value fill-800x500 class="lk-thumb-img" %}
+                  {% else %}
+                    {# 3) Hâlâ yoksa placeholder #}
+                    <div class="lk-thumb-ph">
+                      <svg viewBox="0 0 24 24" class="lk-ph-icon" aria-hidden="true">
+                        <path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14m18 0H3m18 0-4.5-6-3.5 4.5-2.5-3L3 19"
+                              fill="none" stroke="currentColor" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  {% endif %}
+                {% endwith %}
+              {% endif %}
+            </a>
+
+            <div class="lk-card-body">
+              <div class="lk-meta">
+                <span class="lk-dot"></span>
+                <time datetime="{{ post.first_published_at|date:'c' }}">
+                  {{ post.first_published_at|date:"d M Y" }}
+                </time>
+              </div>
+
+              <h2 class="lk-title">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </h2>
+
+              {% if post.subtitle %}
+                <p class="lk-excerpt">{{ post.subtitle }}</p>
+              {% endif %}
+
+              <div class="lk-actions">
+                <a class="btn btn-lg lk-btn" href="{{ post.url }}">
+                  Oku
+                  <svg viewBox="0 0 24 24" class="lk-btn-ico" aria-hidden="true">
+                    <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="lk-empty">
+      <div class="lk-empty-chip">Bilgi</div>
+      <h3>Henüz blog yazısı eklenmedi.</h3>
+      <p>İlk içeriğini oluşturduğunda burada görünecek.</p>
+    </div>
+  {% endif %}
+</div>
+
+{% include "preview/footer.html" %}
+{% endblock %}

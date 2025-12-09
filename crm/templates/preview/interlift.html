@@ -1,0 +1,93 @@
+    
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css\previewcss\interlift.css' %}">
+{% endblock %}
+
+
+<div class="container shadow-sm p-1 mb-2 bg-body rounded" data-aos="fade-up" data-aos-duration="1000">
+  <section class="stats-section position-relative">
+    <div class="overlay"></div>
+
+    <!-- En üstte INTERLIFT -->
+    <div class="interlift-fixed">INTERLIFT</div>
+    <div class="interlift-fixed2">We Are There</div>
+
+    <!-- Ortada INTERLIFT -->
+    <div class="container-fluid content-container">
+      <div class="row align-items-center text-center text-lg-start">
+        <!-- Başlık Alanı -->
+        <div class="col-lg-3 col-md-12 mb-4 mb-lg-0" id="interlift-title">
+          <div class="title-wrapper">
+            <span class="vertical-title">LIFTKEYS</span>
+              <h4 class="main-titleinterlift">
+                {% blocktrans trimmed %}
+                <strong>Interlift</strong> 2025’te Yenilikçi Asansör Sistemlerimizi Keşfedin
+                {% endblocktrans %}
+              </h4>
+          </div>
+        </div>
+
+        <!-- Sayaç Alanı -->
+        <div class="col-lg-6 col-md-12 ">
+          <div class="row countdown-wrapper text-center">
+            <div class="col-6 col-sm-3 stat-itemliftkeys">
+              <span id="days" class="stat-numberinterlift">00</span>
+              <span class="stat-label">{% trans "GÜN" %}</span>
+            </div>
+            <div class="col-6 col-sm-3 stat-itemliftkeys">
+              <span id="hours" class="stat-numberinterlift">00</span>
+              <span class="stat-label">{% trans "SAAT" %}</span>
+            </div>
+            <div class="col-6 col-sm-3 stat-itemliftkeys">
+              <span id="minutes" class="stat-numberinterlift">00</span>
+              <span class="stat-label">{% trans "DAKİKA" %}</span>
+            </div>
+            <div class="col-6 col-sm-3 stat-itemliftkeys">
+              <span id="seconds" class="stat-numberinterlift">00</span>
+              <span class="stat-label">{% trans "SANİYE" %}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+          <div class="row countdown-wrapper text-center">
+            <p id="liftkeysbooth">HAL 1 BOOTH A300</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<script>
+// Fuar tarihi (Interlift 14 - 17 Ekim 2025)
+var countDownDate = new Date("Oct 14, 2025 00:00:00").getTime();
+
+// Her 1 saniyede güncelle
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  // Zaman hesapla
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // HTML içine yaz
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  // Süre bitince
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector(".countdown-wrapper").innerHTML = "<h3>Fuar Başladı!</h3>";
+  }
+}, 1000);
+</script>

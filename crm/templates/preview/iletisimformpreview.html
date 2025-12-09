@@ -1,0 +1,134 @@
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css\previewcss\iletisimpreview.css' %}">
+{% endblock %}
+<div class="container my-5 p-0 shadow rounded overflow-hidden">
+    <div class="row g-0">
+        <div class="col-lg-5 text-white d-flex flex-column justify-content-center bg-orange-overlay p-5">
+            <h1 class="display-5 fw-bold mb-3">{% trans "Özel Müşteri Ekipleri ve Esnek Hizmetler" %}</h1>
+            <p class="lead mb-4">
+                {% blocktrans trimmed %}
+                Dünya çapındaki varlığımız, üretim zaman çizelgelerinizin sorunsuz, maliyet etkin ve uyumlu bir şekilde yönetilmesini sağlar.
+                {% endblocktrans %}
+            </p>
+            <a href="#" class="btn btn-dark btn-lg align-self-start">
+                <i class="fa-solid fa-download me-2"></i>
+                {% trans "Broşürünü İndir" %}
+            </a>
+        </div>
+
+        <div class="col-lg-7 bg-white p-5">
+            <p class="fw-bold mb-2" id="iletisimtitle">{% trans "Teklif Talep Et" %}</p>
+            <p class="text-secondary mb-4">
+                {% blocktrans trimmed %}
+                Ucuz ürün sunmuyoruz; doğru ürünü, doğru kaliteyle ve doğru fiyatla sunuyoruz. <br>
+                Kaliteyle tanışmak istersen bize yaz.
+                {% endblocktrans %}
+            </p>
+            
+            <form id="contactForm" method="POST" action="{% url 'contact_form_view_preview' %}" novalidate>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        {{ formiletisimpreview.name }}
+                        {% if formiletisimpreview.name.errors %}
+                            <div class="text-danger small mt-1">{{ formiletisimpreview.name.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ formiletisimpreview.email }}
+                        {% if formiletisimpreview.email.errors %}
+                            <div class="text-danger small mt-1">{{ formiletisimpreview.email.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        {{ formiletisimpreview.phone }}
+                        {% if formiletisimpreview.phone.errors %}
+                            <div class="text-danger small mt-1">{{ formiletisimpreview.phone.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ formiletisimpreview.subject }}
+                        {% if formiletisimpreview.subject.errors %}
+                            <div class="text-danger small mt-1">{{ formiletisimpreview.subject.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    {{ formiletisimpreview.message }}
+                    {% if formiletisimpreview.message.errors %}
+                        <div class="text-danger small mt-1">{{ formiletisimpreview.message.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-dark btn-lg">{% trans "Talebi Gönder" %}</button>
+                </div>
+
+                <div id="formAlertContainer" class="mt-3"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const alertContainer = document.getElementById("formAlertContainer");
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();  // 🚨 Tarayıcının sayfayı yenilemesini durdurur
+
+        const formData = new FormData(form);
+        alertContainer.innerHTML = ""; // Eski mesajları temizle
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": form.querySelector('[name=csrfmiddlewaretoken]').value,
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                alertContainer.innerHTML = `
+                    <div class="alert alert-success alert-dismissible fade show shadow-sm rounded-3" role="alert">
+                        ${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>`;
+                form.reset(); // Formu temizle
+            } else {
+                let errorHtml = "<ul class='mb-0'>";
+                for (let field in data.errors) {
+                    data.errors[field].forEach(err => {
+                        errorHtml += `<li><strong>${field}</strong>: ${err}</li>`;
+                    });
+                }
+                errorHtml += "</ul>";
+                alertContainer.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show shadow-sm rounded-3" role="alert">
+                        Form hatalı:<br>${errorHtml}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>`;
+            }
+        } catch (error) {
+            alertContainer.innerHTML = `
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm rounded-3" role="alert">
+                    Sunucu hatası, lütfen tekrar deneyin.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>`;
+        }
+    });
+});
+</script>

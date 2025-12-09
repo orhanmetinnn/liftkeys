@@ -1,0 +1,443 @@
+{% extends "productpage/productbase.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% load wagtailimages_tags %}
+{% block title %}
+  {% if page.seo_title %}{{ page.seo_title }}
+  {% elif page.product %}{{ page.product.name }}
+  {% else %}{{ page.title }}{% endif %}
+{% endblock %}
+
+{% block meta_description %}
+  {% if page.search_description %}
+    {{ page.search_description }}
+  {% elif page.product and page.product.features %}
+    {{ page.product.features|striptags|truncatewords:25 }}
+  {% else %}
+    Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.
+  {% endif %}
+{% endblock %}
+
+{% block og_title %}
+  {% if page.seo_title %}{{ page.seo_title }}
+  {% elif page.product %}{{ page.product.name }}
+  {% else %}{{ page.title }}{% endif %}
+{% endblock %}
+
+{% block og_description %}
+  {% if page.search_description %}
+    {{ page.search_description }}
+  {% elif page.product and page.product.features %}
+    {{ page.product.features|striptags|truncatewords:25 }}
+  {% else %}
+    Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.
+  {% endif %}
+{% endblock %}
+
+{% block og_image %}
+  {% if page.product and page.product.website_image %}
+    {{ page.product.website_image.url }}
+  {% endif %}
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/product_page.css' %}">
+<link rel="stylesheet" href="{% static 'css/productpagepreview.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="toast-container" class="toast-container"></div>
+<div class="container mt-5" id="mainblockproduct">
+  <div class="row g-5 align-items-start">
+    <!-- SOL: Galeri -->
+    <div class="col-lg-6">
+      <div class="product-media">
+        {% if page.product.website_image %}
+        <img id="mainImage" src="{{ page.product.website_image.url }}" alt="{{ page.product.name }}" data-index="0">
+        {% else %}
+        <img id="mainImage" src="" alt="{{ page.product.name }}" data-index="0" style="opacity:.001">
+        {% endif %}
+
+        <div class="media-nav">
+          <button class="media-btn" id="prevBtn" aria-label="Önceki">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button class="media-btn" id="nextBtn" aria-label="Sonraki">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Thumbs -->
+      <div class="thumbs" id="thumbs">
+        {% if page.product.website_image %}
+        <div class="thumb is-active" data-src="{{ page.product.website_image.url }}">
+          <img src="{{ page.product.website_image.url }}" alt="{{ page.product.name }}">
+        </div>
+        {% endif %}
+
+        {% for img in page.product.market_images.all %}
+        <div class="thumb{% if not page.product.website_image and forloop.first %} is-active{% endif %}"
+          data-src="{{ img.image.url }}">
+          <img src="{{ img.image.url }}" alt="{{ img.alt_text|default:page.product.name }}">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- SAĞ: Ürün Bilgileri -->
+    <div class="col-lg-6">
+      <h1 class="product-title mt-5">{{ page.product.name }}</h1>
+
+      {% if page.product.features %}
+      <p class="mb-4" style="color:#6b7280">{{ page.product.features }}</p>
+      {% endif %}
+
+      <div class="d-flex align-items-center gap-3 mb-3">
+        <div class="qty-container">
+          <button id="decr" class="qty-btn">−</button>
+          <input type="number" id="qtyInput" min="1" value="1">
+          <button id="incr" class="qty-btn">+</button>
+        </div>
+
+        <button class="btn-cart " data-product-id="{{ page.product.id }}" type="button">Sepete Ekle</button>
+      </div>
+
+      <section class="product-questions mt-4 meta">
+        <h4 class="mb-4  fw-bold d-flex align-items-center" id="product-questions-title">
+          <i class="bi bi-ui-checks-grid me-2"></i> Detaylandırma
+        </h4>
+
+        <form id="product-questions-form" class="d-flex flex-column gap-4">
+          {% for q in questions %}
+          <div>
+            <p class=" mb-1" id="question-title">{{ q.question_text }}</p>
+
+            {% if q.question_type == "radio" %}
+            {% for opt in q.options.all %}
+            <div class="form-check mb-1">
+              <input class="form-check-input" type="radio" name="question_{{ q.id }}" value="{{ opt.option_text }}"
+                id="q{{ q.id }}_{{ forloop.counter }}">
+              <label class="form-check-label" for="q{{ q.id }}_{{ forloop.counter }}">{{ opt.option_text }}</label>
+            </div>
+            {% endfor %}
+
+            {% elif q.question_type == "checkbox" %}
+            <div class="d-flex flex-column gap-2">
+              {% for opt in q.options.all %}
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="question_{{ q.id }}" value="{{ opt.option_text }}"
+                  id="q{{ q.id }}_{{ forloop.counter }}">
+                <label class="form-check-label" for="q{{ q.id }}_{{ forloop.counter }}">{{ opt.option_text }}</label>
+              </div>
+              {% endfor %}
+            </div>
+
+            {% elif q.question_type == "button" %}
+            <div class="btn-group flex-wrap d-flex gap-2" role="group">
+              {% for opt in q.options.all %}
+              <input type="radio" class="btn-check" name="question_{{ q.id }}" value="{{ opt.option_text }}"
+                id="btn{{ q.id }}_{{ forloop.counter }}">
+              <label class="btn btn-outline-dark btn-sm"
+                for="btn{{ q.id }}_{{ forloop.counter }}">{{ opt.option_text }}</label>
+              {% endfor %}
+            </div>
+
+            {% elif q.question_type == "text" %}
+            <input type="text" name="question_{{ q.id }}" class="form-control w-50" placeholder="Tercihiniz">
+            {% endif %}
+          </div>
+          {% endfor %}
+        </form>
+      </section>
+
+      <div class="meta mt-4">
+        {% if page.product.stock_code %}
+        <div class="mb-3">
+          <span class="label">SKU:</span> {{ page.product.stock_code }}
+        </div>
+        {% endif %}
+
+        {% if page.product.categories.exists %}
+        <div class="mb-2">
+          <span class="label">Kategoriler:</span>
+          {% for c in page.product.categories.all %}
+          <a href="{% url 'category_detail' c.slug %}" class="chip text-decoration-none category-chip">
+            {{ c.name|default:c }}
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+
+
+    </div>
+  </div>
+
+    <!-- Sekmeler -->
+  <section class="tabs">
+    <div class="tab-buttons text-center justify-content-center mt-4 mb-4">
+      <button class="active" data-tab="desc">Açıklama</button>
+    </div>
+
+    <div class="tab-panel active" id="desc">
+      {% if page.product.description %}
+        {{ page.product.description|linebreaksbr }}
+      {% else %}
+
+        {# === Önce video ve embed bloklarını göster === #}
+        {% for block in page.body %}
+          {% if block.block_type == "video" %}
+            {% with block.value as video_url %}
+              <div class="video-container">
+                {% if "youtube.com/watch" in video_url %}
+                  {% with video_url|cut:"https://www.youtube.com/watch?v=" as video_id %}
+                    <div class="video-wrapper" onclick="loadVideo(this)" data-video="{{ video_url }}">
+                      <img src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg"
+                          alt="Video Thumbnail"
+                          class="video-thumbnail"
+                          onerror="this.onerror=null;this.src='https://img.youtube.com/vi/{{ video_id }}/hqdefault.jpg'">
+                      <button class="play-btn">▶</button>
+                    </div>
+                  {% endwith %}
+                {% else %}
+                  <div class="video-wrapper" onclick="loadVideo(this)" data-video="{{ video_url }}">
+                    <img src="{% static 'img/video-placeholder.jpg' %}"
+                        alt="Video Thumbnail"
+                        class="video-thumbnail">
+                    <button class="play-btn">▶</button>
+                  </div>
+                {% endif %}
+              </div>
+            {% endwith %}
+
+          {% elif block.block_type == "embed" %}
+            {% with block.value.url as video_url %}
+              {% if "youtube.com/watch" in video_url %}
+                {% with video_url|cut:"https://www.youtube.com/watch?v=" as video_id %}
+                  <div class="video-container">
+                    <div class="video-wrapper" onclick="loadVideo(this)" data-video="{{ video_url }}">
+                      <img src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg"
+                          alt="Embed Thumbnail"
+                          class="video-thumbnail"
+                          onerror="this.onerror=null;this.src='https://img.youtube.com/vi/{{ video_id }}/hqdefault.jpg'">
+                      <button class="play-btn">▶</button>
+                    </div>
+                  </div>
+                {% endwith %}
+              {% endif %}
+            {% endwith %}
+          {% endif %}
+        {% endfor %}
+
+        {# === Video/Embed dışındaki blokları render et === #}
+        <div class="content-blocks mt-4">
+          {% for block in page.body %}
+            {% if block.block_type != "video" and block.block_type != "embed" and block.block_type != "image" %}
+              {% if block.block_type == "faq" %}
+                <section class="faq-section">
+                  <h3 class="faq-title text-center mb-4">Sık Sorulan Sorular</h3>
+                  <div class="faq-accordion">
+                    {% for item in block.value %}
+                      <div class="faq-item">
+                        <button class="faq-question" type="button" onclick="toggleFaq(this)">
+                          {{ item.question }}
+                          <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                          {{ item.answer|richtext }}
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </section>
+              {% else %}
+                {{ block }}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {# === Image bloklarını ayrı galeri olarak render et === #}
+        {% if page.body|length > 0 %}
+          <div class="body-gallery">
+            {% for block in page.body %}
+              {% if block.block_type == "image" %}
+                <div class="gallery-item">
+                  {% image block.value max-1200x1200 as rendition %}
+                  <img src="{{ rendition.url }}" alt="{{ block.value.title }}" onclick="openLightbox(this.src)">
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <!-- Lightbox Overlay -->
+        <div id="lightboxOverlay" class="lightbox-overlay" onclick="closeLightbox()">
+          <img id="lightboxImage" class="lightbox-img" src="">
+        </div>
+
+      {% endif %}
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    /* === Quantity Stepper === */
+    const qtyInput = document.getElementById('qtyInput');
+    const incrBtn = document.getElementById('incr');
+    const decrBtn = document.getElementById('decr');
+    if (incrBtn && qtyInput) incrBtn.addEventListener('click', () => qtyInput.value = Math.max(1, +qtyInput.value +
+      1));
+    if (decrBtn && qtyInput) decrBtn.addEventListener('click', () => qtyInput.value = Math.max(1, +qtyInput.value -
+      1));
+
+    /* === Image Gallery === */
+    const thumbsWrap = document.getElementById('thumbs');
+    const mainImage = document.getElementById('mainImage');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function getThumbs() {
+      return thumbsWrap ? Array.from(thumbsWrap.querySelectorAll('.thumb')) : [];
+    }
+
+    function setActive(idx) {
+      const thumbs = getThumbs();
+      if (!thumbs.length) return;
+      if (idx < 0) idx = thumbs.length - 1;
+      if (idx >= thumbs.length) idx = 0;
+
+      thumbs.forEach((t, i) => t.classList.toggle('is-active', i === idx));
+      const imgEl = thumbs[idx].querySelector('img');
+      const src = thumbs[idx].dataset.src || (imgEl ? imgEl.src : null);
+
+      if (src && mainImage) {
+        mainImage.style.opacity = 0.3;
+        mainImage.dataset.index = String(idx);
+        mainImage.src = src;
+        setTimeout(() => mainImage.style.opacity = 1, 150);
+      }
+    }
+
+    if (mainImage && !mainImage.getAttribute('src')) setActive(0);
+    if (thumbsWrap) {
+      thumbsWrap.addEventListener('click', e => {
+        const el = e.target.closest('.thumb');
+        if (!el) return;
+        setActive(getThumbs().indexOf(el));
+      });
+    }
+    if (prevBtn) prevBtn.addEventListener('click', () => setActive((+mainImage.dataset.index || 0) - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => setActive((+mainImage.dataset.index || 0) + 1));
+
+    /* === Tabs === */
+    const tabButtons = document.querySelectorAll('.tab-buttons button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabPanels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const target = document.getElementById(btn.dataset.tab);
+        if (target) target.classList.add('active');
+      });
+    });
+
+    /* === Image Zoom === */
+    const productMedia = document.querySelector(".product-media");
+    if (productMedia && mainImage) {
+      productMedia.addEventListener("mousemove", (e) => {
+        const rect = productMedia.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        mainImage.style.setProperty("--zoom-x", `${x}%`);
+        mainImage.style.setProperty("--zoom-y", `${y}%`);
+      });
+
+      productMedia.addEventListener("mouseenter", () => {
+        productMedia.classList.add("zoom-active");
+      });
+
+      productMedia.addEventListener("mouseleave", () => {
+        productMedia.classList.remove("zoom-active");
+      });
+
+      productMedia.addEventListener("click", () => {
+        productMedia.classList.toggle("zoom-active");
+      });
+    }
+  });
+</script>
+
+<script>
+  function loadVideo(el) {
+    let url = el.getAttribute("data-video");
+    if (!url) return;
+
+    let embedUrl = url;
+
+    // YouTube linkini embed formatına çevir (varsa ?si= parametresini korur)
+    if (url.includes("youtube.com/watch")) {
+      embedUrl = url.replace("watch?v=", "embed/");
+      // autoplay ve mute parametrelerini güvenli şekilde ekle
+      embedUrl += (embedUrl.includes("?") ? "&" : "?") + "autoplay=1&mute=1";
+    }
+
+    el.innerHTML = `<iframe src="${embedUrl}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>`;
+  }
+</script>
+
+<script>
+function toggleFaq(button) {
+  const item = button.parentElement;
+  const answer = item.querySelector(".faq-answer");
+  const icon = button.querySelector(".faq-icon");
+
+  if (item.classList.contains("active")) {
+    item.classList.remove("active");
+    answer.style.maxHeight = null;
+    icon.textContent = "+";
+  } else {
+    // diğerlerini kapat
+    document.querySelectorAll(".faq-item.active").forEach(el => {
+      el.classList.remove("active");
+      el.querySelector(".faq-answer").style.maxHeight = null;
+      el.querySelector(".faq-icon").textContent = "+";
+    });
+    // seçileni aç
+    item.classList.add("active");
+    answer.style.maxHeight = answer.scrollHeight + "px";
+    icon.textContent = "−";
+  }
+}
+</script>
+
+
+<script>
+function openLightbox(src) {
+  const overlay = document.getElementById('lightboxOverlay');
+  const lightboxImage = document.getElementById('lightboxImage');
+  lightboxImage.src = src;
+  overlay.style.display = 'flex';
+}
+
+function closeLightbox() {
+  document.getElementById('lightboxOverlay').style.display = 'none';
+}
+</script>
+
+{% include "preview/footer.html" %}
+{% endblock %}

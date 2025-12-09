@@ -1,0 +1,360 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}Liftkeys Hakkında {% endblock %}
+{% block meta_description %}
+Liftkeys, 2013’ten beri asansör sektörü için Aşırı Yük Sistemi , Fotosel ,Fren Sistemi , Kapı Sensörü , Küpeşte , Cam , Zemin döşemeleri , Kabin Döşemeleri  
+, Aydınlatma Ürünleri , etiketler, Anahtar , Elektronik Kontrol Sistemleri ,Kılavuz Ayakkabıları çözümleri sunar..
+{% endblock %}
+{% block meta_keywords %}
+asansör, aşırı yük sistemi, fotosel, fren sistemi, kapı sensörü, küpeşte, güvenli cam, zemin döşemesi, kabin döşemesi, aydınlatma, etiket, üçgen anahtar, elektronik kontrol sistemleri, kılavuz ayakkabıları, elevator parts, liftkeys
+{% endblock %}
+
+
+{% block canonical %}https://www.liftkeys.com/hakkimizda/{% endblock %}
+{% block og_url %}https://www.liftkeys.com/hakkimizda/{% endblock %}
+{% block og_title %}Hakkımızda | Liftkeys{% endblock %}
+{% block og_description %}{{ block.super }}{% endblock %}
+{% block og_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+
+{% block tw_title %}Hakkımızda | Liftkeys{% endblock %}
+{% block tw_description %}{{ block.super }}{% endblock %}
+{% block tw_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/previewcss/about.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% endblock %}
+
+
+<div class="topline"></div>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<section class="hero" aria-labelledby="about-title">
+    <div class="wrap">
+        <div class="spark" aria-hidden="true"></div>
+        <h1 id="about-title">{% trans "Liftkeys Hakkında" %}</h1>
+        <p class="sub">
+            {% blocktrans trimmed %}
+            Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar ile sektörde öncü bir marka
+            olarak hizmet vermektedir.
+            {% endblocktrans %}
+        </p>
+        <div class="hero-stats">
+            <span class="pill">{% trans "10+ yıl tecrübe" %}</span>
+            <span class="pill">{% trans "50+ ülkeye ihracat" %}</span>
+            <span class="pill">{% trans "3300 m² kapalı alan" %}</span>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<main class="wrap" role="main">
+    <section class="columns" aria-label="{% trans 'Kurumsal İçerik' %}">
+        <article class="card">
+            <span class="tag">{% trans "Misyon & Değer" %}</span>
+            <h3 style="margin-top:.6rem" id="abouth3">{% trans "İnovasyonla Güçlenen, Sektöre Özel Çözümler" %}</h3>
+            <p>
+                {% blocktrans trimmed %}
+                Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar ile sektörde öncü bir marka
+                olarak hizmet vermektedir.
+                Asansör sektöründeki tecrübesini; matbu basım, asansör anahtarı, etiket imalatı ve güvenli cam
+                alanlarına taşıyarak sektörün
+                reklam çalışmalarına inovatif bir değer katmak amacıyla kurulmuştur.
+                {% endblocktrans %}
+            </p>
+            <p>
+                {% blocktrans trimmed %}
+                Uzun süredir asansör sektöründe çeşitli görevlerde hizmet etmiş, asansör komponentleri konusunda
+                tecrübeli bir kadro ile çalışmalarını sürdürmektedir.
+                {% endblocktrans %}
+            </p>
+            <p>
+                {% blocktrans trimmed %}
+                Asansör sektörüne özel kurumsal kimlik çalışması ile yeni kurulmuş veya yeni bir yüze sahip olmak
+                isteyen bütün firmalara ürünleri ile destek
+                vermekte ve markaların kendini en doğru şekilde yansıtacağı ürünler sunmaktadır.
+                {% endblocktrans %}
+            </p>
+        </article>
+
+        <aside class="card" aria-label="{% trans 'Öne Çıkan Başlıklar' %}">
+            <h3>{% trans "Uzmanlık Alanlarımız" %}</h3>
+            <ul style="margin:.6rem 0 0 1.1rem">
+                <li>{% trans "Etiket & Matbu Üretimi" %}</li>
+                <li>{% trans "Üçgen Asansör Anahtarları" %}</li>
+                <li>{% trans "Güvenli Cam & Ayna Çözümleri" %}</li>
+                <li>{% trans "Aydınlatma ve Elektronik" %}</li>
+                <li>{% trans "Zemin (PVC) ve Mekanik" %}</li>
+            </ul>
+            <div style="height:14px"></div>
+            <h3>{% trans "Ürün Sertifikaları" %}</h3>
+            <ul style="margin:.6rem 0 0 1.1rem">
+                <li>{% trans "Yangın Sertifikası" %}</li>
+                <li>{% trans "Kaydırmaz Sertifikası" %}</li>
+                <li>{% trans "Antibakteriyel Sertifikası" %}</li>
+            </ul>
+        </aside>
+    </section>
+
+    {% include "preview/timeline.html" %}
+    {% comment %} <!-- TIMELINE -->
+    <section class="timeline" aria-label="{% trans 'Kilometre Taşları' %}">
+
+        <!-- 2025 - Gelecek Planları -->
+        <div class="t-item">
+            <div class="t-node" aria-hidden="true"></div>
+            <div class="t-card">
+                <div class="t-year">2025</div>
+                <div class="t-title">{% trans "GELECEK PLANLARI" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Ürün yelpazesini daha da genişletme ve ihracat ağını 70+ ülkeye çıkarma hedefi. 
+                    Ar-Ge yatırımları ile yeni nesil akıllı asansör çözümleri geliştirilecek.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2023 - Hedefler -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2023</div>
+                <div class="t-title">{% trans "2023 HEDEFLERİMİZ" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Yeni tesis: 3300 m² kapalı, 1500 m² açık alan. Ürün gamını genişletmek için ekip ve üretim
+                    kapasitesinde büyüme.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2022 - Küpeşte -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2022</div>
+                <div class="t-title">{% trans "KÜPEŞTE" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    81-70 kurallarına uygun, üreticilerin işini kolaylaştıran özel küpeşte dirsekleri 5 farklı renkte
+                    sunuldu.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2021 - ttec -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2021</div>
+                <div class="t-title">{% trans "TTEC DİSTRİBÜTÖRLÜĞÜ" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Türkiye’nin önde gelen kuru tip akü markası ttec’in asansör sektörü distribütörlüğü üstlenildi.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2021 - Havalandırma -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2021</div>
+                <div class="t-title">{% trans "HAVALANDIRMA SİSTEMLERİ" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Kumanda panosu ve kabinler için ekonomik kare fan; geniş alanlar için radyal fan stoklara alındı.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2020 - Elektronik -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2020</div>
+                <div class="t-title">{% trans "ASANSÖR ELEKTRONİK ÜRÜNLER" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Elektronik ürün grubu güçlendirildi: Fotosel, Mekanik & Elektronik Aşırı Yük sistemleri portföye
+                    dahil edildi.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2019 - Decovetro -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2019</div>
+                <div class="t-title">{% trans "DECOVETRO" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Cam dekorasyon ürünleriyle (kesme tahtası, masa/sehpa camı, cam tablo, dekoratif ayna) perakende ve
+                    toptan pazara açılım.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2018 - Zemin -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2018</div>
+                <div class="t-title">{% trans "ASANSÖR ZEMİN MALZEMELERİ" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    PVC hammaddesi ile şık tasarımlı, özgün zemin çözümleri geliştirildi. (Yangın, Kaydırmaz,
+                    Antibakteriyel sertifikaları.)
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2017 - Aydınlatma -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2017</div>
+                <div class="t-title">{% trans "AYDINLATMA ÜRÜNLERİ" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Kabin içi aksesuar kategorisinde; solid aydınlatma difüzörü, LED/spot ve kuyu aydınlatma ürünleri
+                    portföye eklendi.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2015 - Cam -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2015</div>
+                <div class="t-title">{% trans "CAM" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Asansör sektörü için özelleştirilmiş güvenli camlar üretimine başlandı: desenli kabin camları, ayna,
+                    panoramik ve kademeli kapı/kabin camları. 200+ üreticiye hizmet.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2014 - Üçgen Anahtar -->
+        <div class="t-item">
+            <div class="t-node"></div>
+            <div class="t-card">
+                <div class="t-year">2014</div>
+                <div class="t-title">{% trans "ÜÇGEN ANAHTAR" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Dünya standartlarına uygun, her marka kapıyı açabilen üçgen anahtar üretimi yapıldı. Yılda 1M adet
+                    satış ve 50 ülkeye ihracat başarıldı.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2013 - Etiket Tasarım -->
+        <div class="t-item">
+            <div class="t-node" aria-hidden="true"></div>
+            <div class="t-card">
+                <div class="t-year">2013</div>
+                <div class="t-title">{% trans "ETİKET • TASARIM" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Asansör sektörü için tanıtım ve güvenlik yönerge etiketlerinin imalatına başlandı. Yıllık 10M+
+                    etiket kapasitesi ile kısa sürede güçlü bir üretim altyapısı kuruldu.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+        <!-- 2013 - Kuruluş -->
+        <div class="t-item">
+            <div class="t-node" aria-hidden="true"></div>
+            <div class="t-card">
+                <div class="t-year">2013</div>
+                <div class="t-title">{% trans "KURULUŞ" %}</div>
+                <div class="t-body">
+                    {% blocktrans trimmed %}
+                    Kağıttanişler; Alper Koç’un asansör tecrübesi, Gökhan Kurt’un matbaa tecrübesi ile birlikte, kendi
+                    sektörlerine inovatif değer katmak için kurulmuştur.
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+
+    </section> {% endcomment %}
+
+    <!-- CTA -->
+    <section class="cta" aria-label="{% trans 'İletişim Çağrısı' %}">
+        <div>
+            <h3 style="margin:0 0 .2rem">{% trans "Sizin için doğru çözümü birlikte tasarlayalım" %}</h3>
+            <p style="margin:0; color:#FFEFE5">{% trans "Asansör projeleriniz için ölçeklenebilir ve sertifikalı ürün portföyü." %}</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="/contact">{% trans "Bizimle İletişime Geçin" %}</a>
+            <a class="btn ghost" href="/kategori/">{% trans "Ürün Portföyü" %}</a>
+        </div>
+    </section>
+</main>
+
+    {% include "preview/footer.html" %}
+
+<!-- JSON-LD Organization (SEO) -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Liftkeys",
+        "url": "https://www.example.com/",
+        "logo": "https://www.example.com/static/logo.png",
+        "description": "Asansör alanında yenilikçi ürün ve çözümler geliştiren öncü marka.",
+        "foundingDate": "2013",
+        "contactPoint": [{
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["Turkish", "English"]
+        }]
+    }
+</script>
+
+<!-- Reveal on scroll -->
+<script>
+    (function () {
+        const items = document.querySelectorAll('.t-item');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('reveal');
+                    io.unobserve(e.target);
+                }
+            })
+        }, {
+            threshold: .15
+        });
+        items.forEach(i => io.observe(i));
+    })();
+</script>
+{% endblock %}

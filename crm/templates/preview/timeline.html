@@ -1,0 +1,335 @@
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/previewcss/timeline.css' %}">
+{% endblock %}
+
+<div class="timeline-container container">
+    <h4 id="timelineh3">{% trans "LiftKeys Timeline" %}</h4>
+    <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+
+            <!-- 2026 -->
+            <div class="timeline-item" data-year="2026">
+                <div class="timeline-dot"><i class="fas fa-bullseye"></i></div>
+                <div class="timeline-content">
+                    <h3>2026</h3>
+                    <p>
+                        <strong>{% trans "HEDEFLERİMİZ" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Yeni yerimizde (3300 m² kapalı, 1500 m² açık alan) tesisimizi ve ekibimizi büyütüyoruz.
+                        Çok yakında inovatif ürünlerle yanınızda olmaya devam edeceğiz.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2024 – Kauçuk Çözümleri -->
+            <div class="timeline-item timeline-item-highlight" data-year="2024">
+                <div class="timeline-dot"><i class="fas fa-shapes"></i></div>
+                <div class="timeline-content">
+                    <h3>2024</h3>
+                    <p>
+                        <strong>{% trans "KAUÇUK ÇÖZÜMLERİ" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Asansör sektöründe karşılaşılan dört farklı teknik probleme çözüm üreten kauçuk ürünleri portföye eklenmiştir.
+                        Titreşim, darbe, ses ve yüzey koruma alanlarında yüksek performanslı kauçuk çözümleri sunulmuştur.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2024 – Horus & Atlas -->
+            <div class="timeline-item timeline-item-highlight" data-year="2024">
+                <div class="timeline-dot"><i class="fas fa-microchip"></i></div>
+                <div class="timeline-content">
+                    <h3>2024</h3>
+                    <p>
+                        <strong>{% trans "HORUS & ATLAS ÜRÜN GRUBU" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Horus markasıyla asansör kapı fotosellerinin, Atlas markasıyla ise mekanik ve elektronik aşırı yük sistemlerinin
+                        imalatına başlanmış; bu iki ürün grubu ile asansör güvenlik çözümleri güçlendirilmiştir.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2023 – F1 Asansör Frenleri -->
+            <div class="timeline-item timeline-item-highlight" data-year="2023">
+                <div class="timeline-dot"><i class="fas fa-stop-circle"></i></div>
+                <div class="timeline-content">
+                    <h3>2023</h3>
+                    <p>
+                        <strong>{% trans "F1 ASANSÖR FRENLERİ" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Her kapasite ve hızda ihtiyaca özel fren sistemi çözümleri geliştirilmiştir.
+                        500 kg’dan 20 tona, 0,25 m/s’ten 2,5 m/s hıza kadar 6 farklı modelde asansör freni üretilerek,
+                        tüm projelere güvenli ve etkin çözümler sunulmuştur.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2022 – Küpeşte -->
+            <div class="timeline-item" data-year="2022">
+                <div class="timeline-dot"><i class="fas fa-ruler-combined"></i></div>
+                <div class="timeline-content">
+                    <h3>2022</h3>
+                    <p>
+                        <strong>{% trans "KÜPEŞTE" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        81-70 kurallarına uygun, farklı renkte özel üretim küpeşte dirsekleri hizmete sunulmuştur.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2021 – Havalandırma Sistemleri -->
+            <div class="timeline-item" data-year="2021">
+                <div class="timeline-dot"><i class="fas fa-fan"></i></div>
+                <div class="timeline-content">
+                    <h3>2021</h3>
+                    <p>
+                        <strong>{% trans "HAVALANDIRMA SİSTEMLERİ" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Kumanda panosu ve kabinler için kare fan ve radyal fan çözümleri stoklara eklenmiştir.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2019 – Decovetro -->
+            <div class="timeline-item" data-year="2019">
+                <div class="timeline-dot"><i class="fas fa-cube"></i></div>
+                <div class="timeline-content">
+                    <h3>2019</h3>
+                    <p>
+                        <strong>{% trans "DECOVETRO" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Decovetro markası altında; et kesme tahtaları, masa camları, sehpa camları,
+                        cam tablolar, dekoratif aynalar üretilerek ev-dekorasyon sektörüne hizmet verilmiştir.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2018 – Asansör Zemin Malzemeleri -->
+            <div class="timeline-item" data-year="2018">
+                <div class="timeline-dot"><i class="fas fa-th-large"></i></div>
+                <div class="timeline-content">
+                    <h3>2018</h3>
+                    <p>
+                        <strong>{% trans "ASANSÖR ZEMİN MALZEMELERİ" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        PVC hammaddesi ile şık tasarımlı asansör zeminleri üretilmiştir.
+                        Ürün sertifikaları: Yangın, Kaydırmaz, Antibakteriyel.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2017 – Aydınlatma Ürünleri -->
+            <div class="timeline-item" data-year="2017">
+                <div class="timeline-dot"><i class="fas fa-lightbulb"></i></div>
+                <div class="timeline-content">
+                    <h3>2017</h3>
+                    <p>
+                        <strong>{% trans "AYDINLATMA ÜRÜNLERİ" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Kabin içi aksesuarları kategorisinde üreticilere doğru çözümler sunmak için
+                        solid aydınlatma difüzörü, LED, spot ve kuyu aydınlatma ürünleri portföye eklenmiştir.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2015 – Cam -->
+            <div class="timeline-item" data-year="2015">
+                <div class="timeline-dot"><i class="fas fa-glass-whiskey"></i></div>
+                <div class="timeline-content">
+                    <h3>2015</h3>
+                    <p>
+                        <strong>{% trans "CAM" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Asansör sektörü için özelleştirilmiş güvenli cam üretimine başlanmıştır.
+                        Desenli kabin camları, ayna, panoramik, kademeli kapı ve kabin camları ile
+                        yurtiçi ve yurtdışında 200'ün üzerinde üreticiye hizmet verilmiştir.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2014 – Üçgen Anahtar -->
+            <div class="timeline-item" data-year="2014">
+                <div class="timeline-dot"><i class="fas fa-key"></i></div>
+                <div class="timeline-content">
+                    <h3>2014</h3>
+                    <p>
+                        <strong>{% trans "ÜÇGEN ANAHTAR" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Her marka kapıyı açabilen, dünya standartlarına uygun üçgen anahtar üretimi yapılmıştır.
+                        Yılda 1 milyon adet satış yapılarak 50 ülkeye ihracat gerçekleştirilmiştir.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2013 – Etiket / Tasarım -->
+            <div class="timeline-item" data-year="2013">
+                <div class="timeline-dot"><i class="fas fa-tags"></i></div>
+                <div class="timeline-content">
+                    <h3>2013</h3>
+                    <p>
+                        <strong>{% trans "ETİKET - TASARIM" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Asansör sektörü için tanıtım ve güvenlik yönerge etiketlerinin imalatına başlanmış,
+                        yıllık 10 milyonun üzerinde etiket basım kapasitesine ulaşılmıştır.
+                        Baskılı ürünlerdeki tecrübesini yenilikçi dokunuşla kısa sürede yükseltmiştir.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2013 – Kuruluş -->
+            <div class="timeline-item" data-year="2013">
+                <div class="timeline-dot"><i class="fas fa-seedling"></i></div>
+                <div class="timeline-content">
+                    <h3>2013</h3>
+                    <p>
+                        <strong>{% trans "KURULUŞ" %}</strong><br>
+                        {% blocktrans trimmed %}
+                        Kağıttanişler; Alper Koç’un asansör tecrübesi, Gökhan Kurt’un matbaa tecrübesi ile birlikte,
+                        kendi sektörlerine inovatif değer katmak için kurulmuş bir kuruluştur.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineWrapper = document.querySelector('.timeline-wrapper');
+    const timelineItemsWrapper = document.querySelector('.timeline-items');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineLine = document.querySelector('.timeline-line');
+
+    if (!timelineWrapper || !timelineItemsWrapper || !timelineLine) {
+        return;
+    }
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let autoScrollInterval = null;
+
+    const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+    const autoScrollSpeed = isSmallScreen ? 0.4 : 1.0; // mobile'de daha yumuşak
+
+    // Çizgiyi içerik genişliğine ayarla
+    function updateLineWidth() {
+        timelineLine.style.width = timelineItemsWrapper.scrollWidth + "px";
+    }
+
+    updateLineWidth();
+    window.addEventListener("resize", updateLineWidth);
+
+    function stopAutoScroll() {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+        }
+    }
+
+    function startAutoScroll() {
+        if (autoScrollInterval) return;
+
+        autoScrollInterval = setInterval(function() {
+            if (timelineWrapper.scrollLeft + timelineWrapper.offsetWidth >= timelineWrapper.scrollWidth - 1) {
+                timelineWrapper.scrollLeft = 0;
+            } else {
+                timelineWrapper.scrollLeft += autoScrollSpeed;
+            }
+        }, 10);
+    }
+
+    // Mouse ile sürükleme
+    timelineWrapper.addEventListener('mousedown', function(e) {
+        isDown = true;
+        timelineWrapper.classList.add('active');
+        startX = e.pageX - timelineWrapper.offsetLeft;
+        scrollLeft = timelineWrapper.scrollLeft;
+        stopAutoScroll();
+    });
+
+    timelineWrapper.addEventListener('mouseleave', function() {
+        isDown = false;
+        timelineWrapper.classList.remove('active');
+        startAutoScroll();
+    });
+
+    timelineWrapper.addEventListener('mouseup', function() {
+        isDown = false;
+        timelineWrapper.classList.remove('active');
+        startAutoScroll();
+    });
+
+    timelineWrapper.addEventListener('mousemove', function(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - timelineWrapper.offsetLeft;
+        const walk = (x - startX) * 2;
+        timelineWrapper.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch (mobil) sürükleme
+    timelineWrapper.addEventListener('touchstart', function(e) {
+        if (!e.touches || !e.touches.length) return;
+        isDown = true;
+        startX = e.touches[0].pageX - timelineWrapper.offsetLeft;
+        scrollLeft = timelineWrapper.scrollLeft;
+        stopAutoScroll();
+    }, { passive: true });
+
+    timelineWrapper.addEventListener('touchmove', function(e) {
+        if (!isDown || !e.touches || !e.touches.length) return;
+        const x = e.touches[0].pageX - timelineWrapper.offsetLeft;
+        const walk = (x - startX) * 2;
+        timelineWrapper.scrollLeft = scrollLeft - walk;
+        e.preventDefault();
+    }, { passive: false });
+
+    timelineWrapper.addEventListener('touchend', function() {
+        isDown = false;
+        startAutoScroll();
+    });
+
+    // Otomatik kaydırmayı başlat
+    startAutoScroll();
+
+    // IntersectionObserver ile görünürlük animasyonları
+    const observerOptions = {
+        root: timelineWrapper,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, observerOptions);
+
+    timelineItems.forEach(function(item) {
+        observer.observe(item);
+    });
+});
+</script>

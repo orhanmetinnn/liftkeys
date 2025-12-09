@@ -1,0 +1,241 @@
+{% extends "crmtemplates/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/uruncreateandupdate.css' %}">
+{% endblock %}
+
+{% block content %}
+<nav class="navbar appbar">
+  <div class="container-xxl px-3 px-lg-4">
+    <div class="d-flex w-100 align-items-center justify-content-between py-2">
+      <div class="brand"><i class="bi bi-bag-check"></i> {% trans "Ürün Yönetimi" %}</div>
+      <div class="d-flex gap-2">
+        <a class="btn btn-sm btn-light" href="{% url 'product_hub' %}">
+          <i class="bi bi-plus-circle me-1"></i> {% trans "Yeni Ürün" %}
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid px-3 px-lg-4 pb-5">
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }} shadow-sm mb-2">{{ message }}</div>
+  {% endfor %}
+  {% endif %}
+
+  <div class="row g-4">
+    <!-- FORM KISMI -->
+    <div class="col-12 col-lg-6">
+      <div id="productFormCard" class="card card-kurumsal shadow-sm">
+        <div class="card-body">
+          <form method="post" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="action" value="{% if editing %}update{% else %}create{% endif %}">
+            {% if editing %}
+              <input type="hidden" name="product_id" value="{{ current_id }}">
+            {% endif %}
+
+            <!-- ÜRÜN BİLGİLERİ -->
+            <div class="card mb-4">
+              <div class="card-header bg-primary text-white fw-bold">{% trans "Ürün Bilgileri" %}</div>
+              <div class="card-body">
+
+                <!-- DİL SEKMELERİ -->
+                <ul class="nav nav-tabs" id="langTabs" role="tablist">
+                  <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#lang-tr" type="button">🇹🇷 Türkçe</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lang-en" type="button">🇬🇧 English</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lang-ru" type="button">🇷🇺 Русский</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lang-ar" type="button">🇸🇦 العربية</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lang-fr" type="button">🇫🇷 Français</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lang-de" type="button">🇩🇪 Deutsch</button></li>
+                </ul>
+
+                <div class="tab-content mt-3">
+                  <!-- Türkçe -->
+                  <div class="tab-pane fade show active" id="lang-tr">
+                    <div class="mb-3">{{ product_form.name_tr.label_tag }} {{ product_form.name_tr }}</div>
+                    <div class="mb-3">{{ product_form.features_tr.label_tag }} {{ product_form.features_tr }}</div>
+                    <div class="mb-3">{{ product_form.description_tr.label_tag }} {{ product_form.description_tr }}</div>
+                    <div class="mb-3">{{ product_form.warranty_period_tr.label_tag }} {{ product_form.warranty_period_tr }}</div>
+                  </div>
+                  <!-- İngilizce -->
+                  <div class="tab-pane fade" id="lang-en">
+                    <div class="mb-3">{{ product_form.name_en.label_tag }} {{ product_form.name_en }}</div>
+                    <div class="mb-3">{{ product_form.features_en.label_tag }} {{ product_form.features_en }}</div>
+                    <div class="mb-3">{{ product_form.description_en.label_tag }} {{ product_form.description_en }}</div>
+                    <div class="mb-3">{{ product_form.warranty_period_en.label_tag }} {{ product_form.warranty_period_en }}</div>
+                  </div>
+                  <!-- Rusça -->
+                  <div class="tab-pane fade" id="lang-ru">
+                    <div class="mb-3">{{ product_form.name_ru.label_tag }} {{ product_form.name_ru }}</div>
+                    <div class="mb-3">{{ product_form.features_ru.label_tag }} {{ product_form.features_ru }}</div>
+                    <div class="mb-3">{{ product_form.description_ru.label_tag }} {{ product_form.description_ru }}</div>
+                    <div class="mb-3">{{ product_form.warranty_period_ru.label_tag }} {{ product_form.warranty_period_ru }}</div>
+                  </div>
+                  <!-- Arapça -->
+                  <div class="tab-pane fade" id="lang-ar">
+                    <div class="mb-3">{{ product_form.name_ar.label_tag }} {{ product_form.name_ar }}</div>
+                    <div class="mb-3">{{ product_form.features_ar.label_tag }} {{ product_form.features_ar }}</div>
+                    <div class="mb-3">{{ product_form.description_ar.label_tag }} {{ product_form.description_ar }}</div>
+                    <div class="mb-3">{{ product_form.warranty_period_ar.label_tag }} {{ product_form.warranty_period_ar }}</div>
+                  </div>
+                  <!-- Fransızca -->
+                  <div class="tab-pane fade" id="lang-fr">
+                    <div class="mb-3">{{ product_form.name_fr.label_tag }} {{ product_form.name_fr }}</div>
+                    <div class="mb-3">{{ product_form.features_fr.label_tag }} {{ product_form.features_fr }}</div>
+                    <div class="mb-3">{{ product_form.description_fr.label_tag }} {{ product_form.description_fr }}</div>
+                    <div class="mb-3">{{ product_form.warranty_period_fr.label_tag }} {{ product_form.warranty_period_fr }}</div>
+                  </div>
+                  <!-- Almanca -->
+                  <div class="tab-pane fade" id="lang-de">
+                    <div class="mb-3">{{ product_form.name_de.label_tag }} {{ product_form.name_de }}</div>
+                    <div class="mb-3">{{ product_form.features_de.label_tag }} {{ product_form.features_de }}</div>
+                    <div class="mb-3">{{ product_form.description_de.label_tag }} {{ product_form.description_de }}</div>
+                    <div class="mb-3">{{ product_form.warranty_period_de.label_tag }} {{ product_form.warranty_period_de }}</div>
+                  </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    {{ product_form.stock_code.label_tag }} {{ product_form.stock_code }}
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    {{ product_form.price.label_tag }} {{ product_form.price }}
+                  </div>
+                </div>
+                <div class="mb-3">{{ product_form.currency.label_tag }} {{ product_form.currency }}</div>
+                <div class="form-check mb-3">{{ product_form.is_active }} <label class="form-check-label">{{ product_form.is_active.label }}</label></div>
+                <div class="mb-3">{{ product_form.categories.label_tag }} {{ product_form.categories }}</div>
+
+              </div>
+            </div>
+
+            <!-- GÖRSELLER (değişmedi) -->
+            {{ images_formset.management_form }}
+            <div class="card mb-4">
+              <div class="card-header bg-primary text-white fw-bold">{% trans "Görseller" %}</div>
+              <div class="card-body">
+                <div id="images-formset-list">
+                  {% for f in images_formset %}
+                    <div class="border rounded-3 p-3 mb-3 bg-light">
+                      {{ f.id }}
+                      <div class="mb-2">{{ f.image.label_tag }} {{ f.image }}</div>
+                      <div class="mb-2">{{ f.alt_text.label_tag }} {{ f.alt_text }}</div>
+                      {% if images_formset.can_delete %}
+                        <div class="form-check">{{ f.DELETE }} <label class="form-check-label">{% trans "Sil" %}</label></div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+                <button type="button" id="add-image-btn" class="btn btn-outline-primary btn-sm mt-2">
+                  <i class="bi bi-plus-lg"></i> {% trans "Yeni Görsel Ekle" %}
+                </button>
+                <template id="images-empty-form-template">
+                  {% with f=images_formset.empty_form %}
+                    <div class="border rounded-3 p-3 my-2 bg-light">
+                      {{ f.id }}
+                      <div class="mb-2">{{ f.image.label_tag }} {{ f.image }}</div>
+                      <div class="mb-2">{{ f.alt_text.label_tag }} {{ f.alt_text }}</div>
+                      {% if images_formset.can_delete %}
+                        <div class="form-check">{{ f.DELETE }} <label class="form-check-label">{% trans "Sil" %}</label></div>
+                      {% endif %}
+                    </div>
+                  {% endwith %}
+                </template>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2">
+              <a href="{% url 'product_hub' %}" class="btn btn-outline-secondary">{% trans "Temizle" %}</a>
+              <button type="submit" class="btn btn-primary">{% if editing %}{% trans "Kaydet" %}{% else %}{% trans "Oluştur" %}{% endif %}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÜRÜN LİSTESİ (değişmedi) -->
+    <div class="col-12 col-lg-6">
+      <div class="card card-kurumsal">
+        <div class="card-body">
+          <h5 class="mb-3 section-title">{% trans "Ürün Listesi" %}</h5>
+          <div class="table-responsive">
+            <table id="productTable" class="table table-striped table-bordered align-middle">
+              <thead class="table-primary">
+                <tr>
+                  <th>#</th>
+                  <th>{% trans "Görsel" %}</th>
+                  <th>{% trans "Ürün" %}</th>
+                  <th>{% trans "Stok" %}</th>
+                  <th>{% trans "Fiyat" %}</th>
+                  <th>{% trans "Durum" %}</th>
+                  <th>{% trans "İşlem" %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for p in products %}
+                  <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{% if p.website_image %}<img class="thumb-sm" src="{{ p.website_image.url }}">{% endif %}</td>
+                    <td>{{ p.name }}</td>
+                    <td>{{ p.stock_code }}</td>
+                    <td>{{ p.price }} {{ p.currency }}</td>
+                    <td>
+                      {% if p.is_active %}
+                        <span class="badge bg-success">{% trans "Aktif" %}</span>
+                      {% else %}
+                        <span class="badge bg-secondary">{% trans "Pasif" %}</span>
+                      {% endif %}
+                    </td>
+                    <td>
+                      <a href="?id={{ p.id }}" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></a>
+                      <a href="{% url 'product_questions' p.id %}" class="btn btn-sm btn-outline-secondary"><i class="bi bi-question-circle"></i> {% trans "Soruları Yönet" %}</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ==== Görsel formset ekleme ====
+  (function () {
+    const prefix = 'images';
+    const addBtn = document.getElementById('add-image-btn');
+    const list = document.getElementById('images-formset-list');
+    const tmpl = document.getElementById('images-empty-form-template');
+    const totalInput = document.getElementById(`id_${prefix}-TOTAL_FORMS`);
+    if (!addBtn || !tmpl || !list || !totalInput) return;
+
+    addBtn.addEventListener('click', () => {
+      const index = parseInt(totalInput.value, 10);
+      const clone = tmpl.content.cloneNode(true);
+      clone.querySelectorAll('input, select, textarea, label').forEach(el => {
+        ['name', 'id', 'for'].forEach(attr => {
+          const val = el.getAttribute(attr);
+          if (val && val.includes('__prefix__')) {
+            el.setAttribute(attr, val.replace(/__prefix__/g, index));
+          }
+        });
+        if (el.tagName === 'INPUT' && el.type === 'hidden' && el.name.endsWith('-id')) {
+          el.value = '';
+        }
+      });
+      list.appendChild(clone);
+      totalInput.value = index + 1;
+    });
+  })();
+</script>
+
+{% endblock %}

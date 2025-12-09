@@ -1,0 +1,175 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load static %}
+{% load i18n %}
+
+{# ---- SEO ve Meta Blokları (HEAD için) ---- #}
+{% block title %}Liftkeys Galeri | Endüstriyel Çözümler ve Videolar{% endblock %}
+{% block meta_description %}Liftkeys Galeri sayfasında asansör sektörüne yönelik endüstriyel çözümler, projeler, görseller ve videoları keşfedin.{% endblock %}
+{% block meta_robots %}index,follow{% endblock %}
+{% block meta_keywords %}liftkeys, asansör çözümleri, endüstriyel galeri, videolar, görseller, projeler, inovatif ürünler{% endblock %}
+
+{% block og_type %}website{% endblock %}
+{% block og_title %}Liftkeys Galeri | Endüstriyel Çözümler ve Videolar{% endblock %}
+{% block og_description %}Asansör sektörüne dair projeler, inovatif çözümler ve endüstriyel ürünler için görsel ve videolardan oluşan Liftkeys Galeri.{% endblock %}
+{% block og_url %}{{ request.build_absolute_uri }}{% endblock %}
+{% block og_image %}https://www.liftkeys.com/static/images/gallery-cover.jpg{% endblock %}
+
+{% block tw_title %}Liftkeys Galeri | Endüstriyel Çözümler ve Videolar{% endblock %}
+{% block tw_description %}Liftkeys Galeri sayfasında endüstriyel projeler, görseller ve videolar yer almaktadır.{% endblock %}
+{% block tw_image %}https://www.liftkeys.com/static/images/gallery-cover.jpg{% endblock %}
+
+{# ---- Ek CSS (head kısmına eklenir) ---- #}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% endblock %}
+
+{# ---- Asıl içerik (body) ---- #}
+{% block content %}
+
+<div class="gallery-wrap">
+    <h1 class="page-title">⚙️ {% trans "LiftKeys Galeri" %}</h1>
+    <p class="page-sub">{% trans "Endüstriyel ürün portföyümüzden video ve görseller" %}</p>
+
+    <div id="gallery-container"></div>
+
+    <div id="loader">{% trans "Yükleniyor…" %}</div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="playerModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-warning open-yt" target="_blank" rel="noopener">{% trans "YouTube’da Aç" %}</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Kapat" %}</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Bootstrap JS -->
+
+  <!-- Galeri JS -->
+  <script>
+    const PAGE_SIZE = 6; // bir seferde kaç içerik yüklensin
+    let offset = 0, loading = false, finished = false;
+
+    function extractYouTubeId(url){
+      if(!url) return null;
+      const rx=[/v=([a-zA-Z0-9_-]{11})/,/youtu\.be\/([a-zA-Z0-9_-]{11})/,/embed\/([a-zA-Z0-9_-]{11})/,/shorts\/([a-zA-Z0-9_-]{11})/];
+      for(const r of rx){ const m=url.match(r); if(m) return m[1]; }
+      return null;
+    }
+    function toNoCookieEmbed(url){
+      const id=extractYouTubeId(url); if(!id) return null;
+      const origin=encodeURIComponent(window.location.origin);
+      return `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1&origin=${origin}`;
+    }
+    function toWatchUrl(url){
+      const id=extractYouTubeId(url); return id ? `https://www.youtube.com/watch?v=${id}` : (url||'#');
+    }
+
+    function loadItems(){
+      if(loading || finished) return;
+      loading = true;
+      document.getElementById("loader").style.display="block";
+
+      fetch(`/api/gallery-items/?offset=${offset}&limit=${PAGE_SIZE}`)
+        .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+        .then(data => {
+          if(!Array.isArray(data) || data.length===0){
+            finished = true;
+            document.getElementById("loader").innerText = "✅ Tüm içerikler yüklendi";
+            return;
+          }
+
+          const grid = document.getElementById("gallery-container");
+
+          data.forEach(item => {
+            const card = document.createElement("article");
+            card.className = "gallery-card";
+
+            let headerHtml = item.title_tr ? `<div class="gallery-header">${item.title_tr}</div>` : "";
+
+            if(item.type==="image" && item.image){
+              card.innerHTML = `
+                ${headerHtml}
+                <div class="gallery-media">
+                  <img src="${item.image}" alt="Görsel" loading="lazy">
+                </div>`;
+            } else if(item.type==="video" && (item.youtube || item.youtube_thumbnail)){
+              const thumb = item.youtube_thumbnail ? `<img src="${item.youtube_thumbnail}" alt="Video" loading="lazy">`
+                                                   : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#888;">Video</div>`;
+              const embed = toNoCookieEmbed(item.youtube) || "";
+              const watch = toWatchUrl(item.youtube);
+
+              card.innerHTML = `
+                ${headerHtml}
+                <div class="gallery-media">
+                  <button class="video-thumb" data-embed="${embed}" data-watch="${watch}">
+                    ${thumb}
+                    <span class="play">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </span>
+                  </button>
+                </div>`;
+            }
+
+            grid.appendChild(card);
+          });
+
+          offset += data.length;
+          loading = false;
+          document.getElementById("loader").style.display="none";
+        })
+        .catch(err => {
+          console.error(err);
+          loading = false;
+          document.getElementById("loader").innerText = "Bir hata oluştu.";
+        });
+    }
+
+    // IntersectionObserver ile sonsuz kaydırma
+    const sentinel = document.createElement("div");
+    sentinel.id = "sentinel";
+    document.body.appendChild(sentinel);
+
+    const io = new IntersectionObserver((entries) => {
+      if(entries[0].isIntersecting) loadItems();
+    }, { rootMargin: '400px' });
+    io.observe(sentinel);
+
+    // Video modal açma
+    document.addEventListener("click", (e)=>{
+      const btn = e.target.closest(".video-thumb");
+      if(!btn) return;
+      const modalEl = document.getElementById("playerModal");
+      const iframe = modalEl.querySelector("iframe");
+      const ytLink = modalEl.querySelector(".open-yt");
+
+      ytLink.href = btn.dataset.watch || "#";
+      iframe.src = btn.dataset.embed ? (btn.dataset.embed + (btn.dataset.embed.includes("?")?"&":"?") + "autoplay=1") : "";
+
+      new bootstrap.Modal(modalEl).show();
+    });
+    document.getElementById("playerModal").addEventListener("hidden.bs.modal", function(){
+      this.querySelector("iframe").src = "";
+    });
+
+    // İlk yükleme
+    loadItems();
+  </script>
+{% include "preview/footer.html" %}
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+{% endblock %}

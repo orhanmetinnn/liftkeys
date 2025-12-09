@@ -1,0 +1,339 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+    <div class="container">
+        <div class="row">
+            <div class="col">   
+                <div class="container py-4">
+                    <div class="glass-card mx-auto col-lg-12" data-aos="fade-up">
+                        <h2 class="text-center mb-4"><i class='bx bxs-user-plus'></i> Fırsatlar</h2>
+                        <div class="btn-group mb-4" role="group" aria-label="Form toggle">
+                            <button type="button" id="btn-create" class="btn btn-primary active" onclick="showForm('create')">
+                                Yeni Kayıt
+                            </button>
+                            <button type="button" id="btn-update" class="btn btn-outline-primary" onclick="showForm('update')">
+                                Eklenen Listesi
+                            </button>
+                            <button type="button" id="btn-table" class="btn btn-outline-success" onclick="showForm('table')">
+                                Fırsatlar Listesi Göster
+                            </button>
+                        </div>
+
+                        <div id="table-show" style="display:none;">
+                            <div class="card-body">
+
+                                <!-- Filtreleme Seçenekleri -->
+                                <div class="row mb-3">
+                                    <div class="col-md-3">
+                                        <label>Durum:</label>
+                                        <select id="statusFilter" class="form-select">
+                                            <option value="">Tümü</option>
+                                            <option value="Yeni">Yeni</option>
+                                            <option value="İşlemde">İşlemde</option>
+                                            <option value="Kazanıldı">Kazanıldı</option>
+                                            <option value="Kaybedildi">Kaybedildi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Öncelik:</label>
+                                        <select id="priorityFilter" class="form-select">
+                                            <option value="">Tümü</option>
+                                            <option value="Düşük">Düşük</option>
+                                            <option value="Orta">Orta</option>
+                                            <option value="Yüksek">Yüksek</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Fırsat Kaynağı:</label>
+                                        <select id="leadSourceFilter" class="form-select">
+                                            <option value="">Tümü</option>
+                                            <option value="Referans">Referans</option>
+                                            <option value="Web Sitesi">Web Sitesi</option>
+                                            <option value="Fuar">Fuar</option>
+                                            <option value="Sosyal Medya">Sosyal Medya</option>
+                                            <option value="Diğer">Diğer</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Tablo -->
+                                <table id="opportunityTable" class="table table-striped table-bordered">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Fırsat Adı</th>
+                                            <th>Firma</th>
+                                            <th>Ürünler</th>
+                                            <th>Durum</th>
+                                            <th>Öncelik</th>
+                                            <th>Tahmini Değer</th>
+                                            <th>Kapanış Tarihi</th>
+                                            <th>Fırsat Kaynağı</th>
+                                            <th>Sorumlu Çalışan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for opp in Opportunity_list %}
+                                            <tr>
+                                                <td>{{ opp.name }}</td>
+                                                <td>{{ opp.company.firma_adi }}</td>
+                                                <td>
+                                                    {% for product in opp.products.all %}
+                                                        <span class="badge bg-secondary">{{ product.name }}</span>
+                                                    {% empty %}
+                                                        -
+                                                    {% endfor %}
+                                                </td>
+                                                <td>{{ opp.get_status_display }}</td>
+                                                <td>{{ opp.get_priority_display }}</td>
+                                                <td>{{ opp.estimated_value|default:"-" }}</td>
+                                                <td>{{ opp.expected_close_date|date:"d/m/Y"|default:"-" }}</td>
+                                                <td>{{ opp.get_lead_source_display|default:"-" }}</td>
+                                                <td>
+                                                    {% if opp.owner %}
+                                                        {{ opp.owner.first_name }} {{ opp.owner.last_name }}
+                                                    {% else %}
+                                                        -
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+                        <div class="container mt-4" id="form-create">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+
+                                {% for field in formOpportunityCreate %}
+                                    <div class="mb-3">
+                                        {{ field.label_tag }}
+                                        {{ field }}
+                                        {% if field.errors %}
+                                            <div class="text-danger">{{ field.errors }}</div>
+                                        {% endif %}
+
+                                        {% if field.name == "company" %}
+                                            <a href="{% url 'company_manage' %}" class="btn btn-sm btn-outline-primary mt-2">
+                                                Firma Oluştur
+                                            </a>
+                                        {% elif field.name == "products" %}
+                                            <a href="{% url 'product_hub' %}" class="btn btn-sm btn-outline-success mt-2">
+                                                Ürün Oluştur
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+
+                                <button type="submit" name="create_opportunity_submit" class="btn btn-primary">Kaydet</button>
+                                <a href="{% url 'product_hub' %}" class="btn btn-secondary ms-2">İptal</a>
+                            </form>
+                        </div>
+                        
+
+                        <div id="form-update" style="display:none;">
+                            <div class="mb-3">
+                                <label for="productSelect" class="form-label">Fırsat Seçiniz</label>
+                                <select id="productSelect" class="form-select" onchange="toggleOpportunityForm(this.value)">
+                                    <option value="" selected>Seçiniz</option>
+                                    {% for Opportunity in Opportunity_list %}
+                                        <option value="{{ Opportunity.id }}">{{ Opportunity.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <form method="POST" enctype="multipart/form-data" id="formproductupdate">
+                                {% csrf_token %}
+                                <input type="hidden" id="id_update-id" name="update-id" value="">
+
+                                <h5>Ürün Güncelle</h5>
+
+                                {% for field in formOpportunityUpdate %}
+                                    <div class="mb-3">
+                                        {{ field.label_tag }}
+                                        {{ field }}
+                                    </div>
+                                {% endfor %}
+
+                                <button type="submit" name="update_opportunity_submit" class="btn btn-info">Güncelle</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#updateCountryCollapse">İptal</button>
+                            </form>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+    {% if messages %}
+    <div id="message-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <script>
+        function toggleOpportunityForm(opportunityId) {
+            const form = document.getElementById('formproductupdate');
+
+            if (!opportunityId) {
+                form.reset();
+                return;
+            }
+
+            fetch(`/api/opportunity/${opportunityId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Fırsat verisi:', data);
+
+                    // Hidden input (prefix uyumlu)
+                    const hiddenInput = form.querySelector('#id_update-id');
+                    if(hiddenInput) hiddenInput.value = data.id;
+
+                    const mapping = {
+                        'name': data.name,
+                        'company': data.company.id,
+                        'description': data.description,
+                        'status': data.status,
+                        'priority': data.priority,
+                        'estimated_value': data.estimated_value,
+                        'expected_close_date': data.expected_close_date,
+                        'lead_source': data.lead_source,
+                        'owner': data.owner ? data.owner.id : '',
+                    };
+
+                    for (const [field, value] of Object.entries(mapping)) {
+                        const input = form.querySelector(`#id_update-${field}`);
+                        if(input) input.value = value || '';
+                    }
+
+                    // Çoklu ürün seçimi
+                    const productsSelect = form.querySelector('#id_update-products');
+                    if (productsSelect) {
+                        for (let option of productsSelect.options) {
+                            option.selected = data.products.some(p => p.id === parseInt(option.value));
+                        }
+                    }
+                })
+                .catch(error => console.error('Fırsat verisi yüklenirken hata oluştu:', error));
+        }
+    </script>
+
+    
+    <script>
+        function showForm(type) {
+            const createForm = document.getElementById('form-create');
+            const updateForm = document.getElementById('form-update');
+            const tableShow = document.getElementById('table-show'); // 3. sayfa
+            const btnCreate = document.getElementById('btn-create');
+            const btnUpdate = document.getElementById('btn-update');
+            const btnTable = document.getElementById('btn-table'); // 3. buton
+
+            if(type === 'create'){
+                createForm.style.display = 'block';
+                updateForm.style.display = 'none';
+                tableShow.style.display = 'none';
+
+                btnCreate.classList.add('btn-primary', 'active');
+                btnCreate.classList.remove('btn-outline-primary');
+
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+
+                btnTable.classList.remove('btn-primary', 'active');
+                btnTable.classList.add('btn-outline-primary');
+
+            } else if(type === 'update'){
+                createForm.style.display = 'none';
+                updateForm.style.display = 'block';
+                tableShow.style.display = 'none';
+
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+
+                btnUpdate.classList.add('btn-primary', 'active');
+                btnUpdate.classList.remove('btn-outline-primary');
+
+                btnTable.classList.remove('btn-primary', 'active');
+                btnTable.classList.add('btn-outline-primary');
+
+            } else if(type === 'table'){
+                createForm.style.display = 'none';
+                updateForm.style.display = 'none';
+                tableShow.style.display = 'block';
+
+                btnCreate.classList.remove('btn-primary', 'active');
+                btnCreate.classList.add('btn-outline-primary');
+
+                btnUpdate.classList.remove('btn-primary', 'active');
+                btnUpdate.classList.add('btn-outline-primary');
+
+                btnTable.classList.add('btn-primary', 'active');
+                btnTable.classList.remove('btn-outline-primary');
+            }
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#opportunityTable').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "order": [[0, "asc"]],
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Tümü"]],
+                "language": {
+                    "search": "Ara:",
+                    "lengthMenu": "_MENU_ kayıt göster",
+                    "info": "_TOTAL_ kayıttan _START_ - _END_ arası gösteriliyor",
+                    "paginate": {
+                        "first": "İlk",
+                        "last": "Son",
+                        "next": "Sonraki",
+                        "previous": "Önceki"
+                    }
+                }
+            });
+
+            // Durum filtresi
+            $('#statusFilter').on('change', function() {
+                table.column(3).search(this.value).draw();
+            });
+
+            // Öncelik filtresi
+            $('#priorityFilter').on('change', function() {
+                table.column(4).search(this.value).draw();
+            });
+
+            // Fırsat Kaynağı filtresi
+            $('#leadSourceFilter').on('change', function() {
+                table.column(7).search(this.value).draw();
+            });
+        });
+    </script>
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
+
+

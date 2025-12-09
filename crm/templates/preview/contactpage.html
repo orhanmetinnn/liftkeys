@@ -1,0 +1,188 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/previewcss/contactpage.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{% endblock %}
+    
+    
+
+
+    <div class="container my-5">
+        <div class="contact-container">
+            <div class="row">
+                <div class="col-lg-8 p-4">
+                    <div class="form-header mb-5">
+                        <h2 id="h2iletisim">{% trans "Bize Ulaşın" %}</h2>
+                    </div>
+
+                    <form method="post" id="contactForm">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger">
+                                {% for error in form.non_field_errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="yourName" class="form-label">
+                                    {% trans "Adınız" %} <span class="required-star">*</span>
+                                </label>
+                                {{ form.name }}
+                                {% if form.name.errors %}
+                                    <div class="text-danger small">
+                                        {% for error in form.name.errors %}{{ error }}{% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <label for="yourEmail" class="form-label">
+                                    {% trans "E-Posta Adresiniz" %} <span class="required-star">*</span>
+                                </label>
+                                {{ form.email }}
+                                {% if form.email.errors %}
+                                    <div class="text-danger small">
+                                        {% for error in form.email.errors %}{{ error }}{% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <label for="yourSubject" class="form-label">{% trans "Konu" %}</label>
+                                {{ form.subject }}
+                                {% if form.subject.errors %}
+                                    <div class="text-danger small">
+                                        {% for error in form.subject.errors %}{{ error }}{% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <label for="contactNumber" class="form-label">{% trans "Telefon Numaranız" %}</label>
+                                {{ form.phone }}
+                                {% if form.phone.errors %}
+                                    <div class="text-danger small">
+                                        {% for error in form.phone.errors %}{{ error }}{% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">
+                                {% trans "Mesajınız" %} <span class="required-star">*</span>
+                            </label>
+                            {{ form.message }}
+                            {% if form.message.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.message.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-send">{% trans "MESAJ GÖNDER" %}</button>
+                        </div>
+
+                        {% if messages %}
+                            <div class="position-fixed top-0 start-50 translate-middle-x mt-3 z-index-50"
+                                style="width: 90%; max-width: 600px; z-index: 1050; height: 80px;">
+                                {% for message in messages %}
+                                    <div class="alert alert-success alert-dismissible fade show shadow-lg" role="alert">
+                                        <i class="bi bi-check-circle-fill me-2"></i> {{ message }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="{% trans 'Close' %}"></button>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </form>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="contact-details">
+                        <h3>{% trans "İletişim Bilgilerimiz" %}</h3>
+
+                        <div class="contact-item">
+                            <div class="icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div class="info">
+                                <h5>{% trans "E-Posta Gönderin" %}</h5>
+                                <a href="mailto:info@liftkeys.com">info@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div class="info">
+                                <h5>{% trans "Bizi Arayın" %}</h5>
+                                <a href="tel:+90 216 450 19 00">+90 216 450 19 00</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div class="info">
+                                <h5>{% trans "Adresimiz" %}</h5>
+                                <p>
+                                    {% blocktrans trimmed %}
+                                    Ramazan Oğlu Mah. Mekke Sok. No: 4 Kurtköy-Pendik / İSTANBUL Posta Kodu: 34906
+                                    {% endblocktrans %}
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="social-icons">
+                            <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a></li>
+                            <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container my-5 ">
+                    <div class="card shadow-sm rounded">
+                        <div class="card-body p-1">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.3054824259776!2d29.292778346141322!3d40.89759243021045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadbefe57a920f%3A0x57de054883178759!2sLiftkeys!5e0!3m2!1str!2str!4v1757176301177!5m2!1str!2str"
+                                    width="100%" height="500"
+                                    style="border:0; border-radius: 12px;"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                setTimeout(() => {
+                    bootstrap.Alert.getOrCreateInstance(alert).close();
+                }, 5000); // 5000ms = 5 saniye
+            });
+        });
+    </script>
+
+
+    {% include "preview/footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
+
+

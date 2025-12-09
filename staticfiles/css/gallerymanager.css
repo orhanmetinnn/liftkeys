@@ -1,0 +1,40 @@
+/* Kartlara cam efekti */
+.glass-card {
+    background: rgba(40, 40, 40, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Turuncu buton */
+.btn-orange {
+    background: linear-gradient(90deg, #ff7e29, #ff5200);
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+.btn-orange:hover {
+    background: linear-gradient(90deg, #ff944d, #ff6a26);
+    color: #fff;
+}
+
+/* Tablo stilleri */
+table {
+    color: #fff;
+}
+thead {
+    background: linear-gradient(90deg, #ff7e29, #ff5200);
+    color: #fff;
+}
+tbody tr {
+    background: rgba(255, 255, 255, 0.05);
+}
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+h2, h4 {
+    color: #ff7e29;
+    font-weight: 600;
+}

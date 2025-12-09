@@ -1,0 +1,138 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/order.css' %}">
+{% endblock %}
+
+<div class="container-fluid order-container">
+    <h2>📦 Sipariş Listesi</h2>
+    <table class="table align-middle" id="orders-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>#</th>
+                <th>Ad Soyad</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Kullanıcı</th>
+                <th>Oluşturma</th>
+                <th>Durum</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr data-message="{{ order.message|default:"-"|escapejs }}"
+                data-items='[{% for item in order.items.all %}{"product": "{{ item.product|escapejs }}", "qty": "{{ item.qty }}", "answers": "{{ item.answers|escapejs }}"}{% if not forloop.last %},{% endif %}{% endfor %}]'>
+                <td><i class="bi bi-plus-circle toggle-details" style="cursor:pointer"></i></td>
+                <td class="fw-bold">{{ order.id }}</td>
+                <td>{{ order.name }}</td>
+                <td>{{ order.email }}</td>
+                <td>{{ order.phone|default:"-" }}</td>
+                <td>{{ order.user|default:"-" }}</td>
+                <td>{{ order.created_at|date:"d.m.Y H:i" }}</td>
+                <td>
+                    <button class="status-btn {% if order.is_processed %}status-yes{% else %}status-no{% endif %}"
+                        data-url="{% url 'toggle_order_status' order.id %}" onclick="toggleStatus(this)">
+                        {% if order.is_processed %}İşleme Geçti{% else %}Beklemede{% endif %}
+                    </button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="8" class="text-center text-muted py-4">Hiç sipariş bulunamadı.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function formatRow(row) {
+        const message = row.data('message');
+        let items = [];
+        try { items = JSON.parse(row.attr('data-items')); } catch (e) { console.error("JSON parse hatası:", e); }
+
+        let html = `<div class="p-3">
+            <strong>Mesaj:</strong> ${message}<br><br>
+            <strong>Ürünler:</strong>
+            <table class="table table-sm mt-2">
+                <thead><tr><th>Ürün</th><th>Adet</th><th>Cevaplar</th></tr></thead>
+                <tbody>`;
+        items.forEach(item => {
+            html += `<tr>
+                        <td>${item.product}</td>
+                        <td>${item.qty}</td>
+                        <td><code>${item.answers}</code></td>
+                    </tr>`;
+        });
+        html += `</tbody></table></div>`;
+        return html;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const table = $('#orders-table').DataTable({
+            responsive: true,
+            language: { url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/tr.json" },
+            order: [[7, 'asc']],
+            columnDefs: [{ orderable: false, targets: [0, 7] }],
+            pageLength: 10
+        });
+
+        $('#orders-table tbody').on('click', '.toggle-details', function () {
+            const tr = $(this).closest('tr');
+            const row = table.row(tr);
+
+            if (row.child.isShown()) {
+                row.child.hide();
+                $(this).removeClass('bi-dash-circle').addClass('bi-plus-circle');
+            } else {
+                row.child(formatRow(tr)).show();
+                $(this).removeClass('bi-plus-circle').addClass('bi-dash-circle');
+            }
+        });
+    });
+
+    function toggleStatus(btn) {
+        const url = btn.dataset.url;
+        fetch(url, {
+            method: "POST",
+            headers: { "X-CSRFToken": getCookie("csrftoken") },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                if (data.new_status) {
+                    btn.classList.remove("status-no");
+                    btn.classList.add("status-yes");
+                    btn.textContent = "İşleme Geçti";
+                } else {
+                    btn.classList.remove("status-yes");
+                    btn.classList.add("status-no");
+                    btn.textContent = "Beklemede";
+                }
+            }
+        });
+    }
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+{% endblock %}

@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #ff7b00, #ffae42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    color: #aaa;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+}
+
+a.btn {
+    background: linear-gradient(45deg, #ff7b00, #ffae42);
+    color: #1f1f1f;
+    padding: 14px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(255, 123, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+a.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(255, 123, 0, 0.7);
+}
+
+.glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,123,0,0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.glow:nth-child(1) {
+    top: -100px;
+    left: -100px;
+}
+
+.glow:nth-child(2) {
+    bottom: -100px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(255,174,66,0.15) 0%, transparent 70%);
+}

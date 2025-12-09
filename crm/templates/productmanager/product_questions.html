@@ -1,0 +1,241 @@
+{% extends "crmtemplates/base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container py-4">
+  <h3 class="mb-4 text-primary fw-bold">
+    📝 {{ product.name }} – Soru Yönetimi
+  </h3>
+
+  {% if messages %}
+  <div class="mb-3">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} shadow-sm rounded-3">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <form method="post" novalidate class="needs-validation">
+    {% csrf_token %}
+    {{ question_formset.management_form }}
+
+    <div id="questions-formset-list">
+      {% for pair in q_groups %}
+      {% with q_form=pair.q_form optfs=pair.opt_formset %}
+      <div class="question-item p-4 mb-4 rounded-4 shadow-sm border border-2 border-light bg-white">
+        {{ q_form.id }}
+
+        <!-- === Soru Metni (Sekmeli) === -->
+        <ul class="nav nav-tabs mb-3">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#q-{{ q_form.prefix }}-tr" type="button">🇹🇷</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-{{ q_form.prefix }}-en" type="button">🇬🇧</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-{{ q_form.prefix }}-ru" type="button">🇷🇺</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-{{ q_form.prefix }}-ar" type="button">🇸🇦</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-{{ q_form.prefix }}-fr" type="button">🇫🇷</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-{{ q_form.prefix }}-de" type="button">🇩🇪</button></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="q-{{ q_form.prefix }}-tr">{{ q_form.question_text_tr }}</div>
+          <div class="tab-pane fade" id="q-{{ q_form.prefix }}-en">{{ q_form.question_text_en }}</div>
+          <div class="tab-pane fade" id="q-{{ q_form.prefix }}-ru">{{ q_form.question_text_ru }}</div>
+          <div class="tab-pane fade" id="q-{{ q_form.prefix }}-ar">{{ q_form.question_text_ar }}</div>
+          <div class="tab-pane fade" id="q-{{ q_form.prefix }}-fr">{{ q_form.question_text_fr }}</div>
+          <div class="tab-pane fade" id="q-{{ q_form.prefix }}-de">{{ q_form.question_text_de }}</div>
+        </div>
+
+        <div class="mb-3 mt-3">
+          {{ q_form.question_type }}
+        </div>
+
+        <!-- === Şıklar === -->
+        {{ optfs.management_form }}
+        <div class="options-formset-list" data-prefix="options-{{ q_form.prefix }}">
+          {% for opt_form in optfs %}
+          <div class="option-item border rounded p-2 mb-2">
+            {{ opt_form.id }}
+            <ul class="nav nav-tabs mb-2">
+              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#opt-{{ opt_form.prefix }}-tr" type="button">🇹🇷</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-{{ opt_form.prefix }}-en" type="button">🇬🇧</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-{{ opt_form.prefix }}-ru" type="button">🇷🇺</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-{{ opt_form.prefix }}-ar" type="button">🇸🇦</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-{{ opt_form.prefix }}-fr" type="button">🇫🇷</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-{{ opt_form.prefix }}-de" type="button">🇩🇪</button></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="opt-{{ opt_form.prefix }}-tr">{{ opt_form.option_text_tr }}</div>
+              <div class="tab-pane fade" id="opt-{{ opt_form.prefix }}-en">{{ opt_form.option_text_en }}</div>
+              <div class="tab-pane fade" id="opt-{{ opt_form.prefix }}-ru">{{ opt_form.option_text_ru }}</div>
+              <div class="tab-pane fade" id="opt-{{ opt_form.prefix }}-ar">{{ opt_form.option_text_ar }}</div>
+              <div class="tab-pane fade" id="opt-{{ opt_form.prefix }}-fr">{{ opt_form.option_text_fr }}</div>
+              <div class="tab-pane fade" id="opt-{{ opt_form.prefix }}-de">{{ opt_form.option_text_de }}</div>
+            </div>
+
+            {% if optfs.can_delete %}
+              <div class="form-check mt-2">{{ opt_form.DELETE }} <label class="form-check-label text-danger">Sil</label></div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+
+        <button type="button" class="btn btn-outline-primary btn-sm add-option-btn mt-2"
+                data-template-id="options-empty-form-{{ q_form.prefix }}">
+          ➕ Şık Ekle
+        </button>
+
+        <template id="options-empty-form-{{ q_form.prefix }}">
+          {% with empty_opt=optfs.empty_form %}
+          <div class="option-item border rounded p-2 mb-2">
+            <ul class="nav nav-tabs mb-2">
+              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#opt-__prefix__-tr" type="button">🇹🇷</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-__prefix__-en" type="button">🇬🇧</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-__prefix__-ru" type="button">🇷🇺</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-__prefix__-ar" type="button">🇸🇦</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-__prefix__-fr" type="button">🇫🇷</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#opt-__prefix__-de" type="button">🇩🇪</button></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="opt-__prefix__-tr">{{ empty_opt.option_text_tr }}</div>
+              <div class="tab-pane fade" id="opt-__prefix__-en">{{ empty_opt.option_text_en }}</div>
+              <div class="tab-pane fade" id="opt-__prefix__-ru">{{ empty_opt.option_text_ru }}</div>
+              <div class="tab-pane fade" id="opt-__prefix__-ar">{{ empty_opt.option_text_ar }}</div>
+              <div class="tab-pane fade" id="opt-__prefix__-fr">{{ empty_opt.option_text_fr }}</div>
+              <div class="tab-pane fade" id="opt-__prefix__-de">{{ empty_opt.option_text_de }}</div>
+            </div>
+          </div>
+          {% endwith %}
+        </template>
+
+        <div class="form-check mt-3">
+          {{ q_form.DELETE }} <label class="form-check-label text-danger">Bu soruyu sil</label>
+        </div>
+      </div>
+      {% endwith %}
+      {% endfor %}
+    </div>
+
+    <!-- Yeni Soru Ekle Butonu -->
+    <div class="text-center">
+      <button type="button" id="add-question-btn" class="btn btn-outline-primary rounded-pill px-4">
+        ➕ Yeni Soru Ekle
+      </button>
+    </div>
+
+    <!-- YENİ SORU TEMPLATE -->
+    <template id="questions-empty-form-template">
+      {% with q_form=question_formset.empty_form %}
+      <div class="question-item p-4 mb-4 rounded-4 shadow-sm border border-2 border-light bg-white">
+        {{ q_form.id }}
+
+        <ul class="nav nav-tabs mb-3">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#q-questions-__prefix__-tr" type="button">🇹🇷</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-questions-__prefix__-en" type="button">🇬🇧</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-questions-__prefix__-ru" type="button">🇷🇺</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-questions-__prefix__-ar" type="button">🇸🇦</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-questions-__prefix__-fr" type="button">🇫🇷</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#q-questions-__prefix__-de" type="button">🇩🇪</button></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="q-questions-__prefix__-tr">{{ q_form.question_text_tr }}</div>
+          <div class="tab-pane fade" id="q-questions-__prefix__-en">{{ q_form.question_text_en }}</div>
+          <div class="tab-pane fade" id="q-questions-__prefix__-ru">{{ q_form.question_text_ru }}</div>
+          <div class="tab-pane fade" id="q-questions-__prefix__-ar">{{ q_form.question_text_ar }}</div>
+          <div class="tab-pane fade" id="q-questions-__prefix__-fr">{{ q_form.question_text_fr }}</div>
+          <div class="tab-pane fade" id="q-questions-__prefix__-de">{{ q_form.question_text_de }}</div>
+        </div>
+
+        <div class="mb-3 mt-3">{{ q_form.question_type }}</div>
+
+        <div class="options-formset-list" data-prefix="options-questions-__prefix__"></div>
+
+        <button type="button" class="btn btn-outline-primary btn-sm add-option-btn mt-2"
+                data-template-id="options-empty-form-questions-__prefix__">
+          ➕ Şık Ekle
+        </button>
+
+        <div class="form-check mt-3">
+          {{ q_form.DELETE }} <label class="form-check-label text-danger">Bu soruyu sil</label>
+        </div>
+      </div>
+      {% endwith %}
+    </template>
+
+    <div class="d-flex justify-content-between mt-4">
+      <a href="{% url 'product_hub' %}?id={{ product.id }}" class="btn btn-outline-secondary rounded-pill px-4">
+        ← Ürüne Dön
+      </a>
+      <button type="submit" class="btn btn-primary rounded-pill px-4">💾 Kaydet</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  (function () {
+    const addQuestionBtn = document.getElementById("add-question-btn");
+    const questionList = document.getElementById("questions-formset-list");
+    const questionTemplate = document.getElementById("questions-empty-form-template");
+    const totalQInput = document.getElementById("id_questions-TOTAL_FORMS");
+
+    if (addQuestionBtn && questionTemplate && totalQInput) {
+      addQuestionBtn.addEventListener("click", () => {
+        const index = parseInt(totalQInput.value, 10);
+        const clone = questionTemplate.content.cloneNode(true);
+
+        clone.querySelectorAll("[name],[id],[for],[data-template-id],[data-prefix]").forEach(el => {
+          ["name", "id", "for", "data-template-id", "data-prefix"].forEach(attr => {
+            const val = el.getAttribute(attr);
+            if (val && val.includes("__prefix__")) {
+              el.setAttribute(attr, val.replace(/__prefix__/g, index));
+            }
+          });
+          if (el.tagName === "INPUT" && el.type === "hidden" && el.name.endsWith("-id")) {
+            el.value = "";
+          }
+        });
+
+        questionList.appendChild(clone);
+        totalQInput.value = index + 1;
+      });
+    }
+
+    // Şık ekleme (delegation)
+    document.addEventListener("click", function (e) {
+      const addOptBtn = e.target.closest(".add-option-btn");
+      if (!addOptBtn) return;
+
+      const questionItem = addOptBtn.closest(".question-item");
+      const container = questionItem.querySelector(".options-formset-list");
+      if (!container) return;
+
+      const prefix = container.dataset.prefix;
+      let totalInput = document.getElementById(`id_${prefix}-TOTAL_FORMS`);
+      if (!totalInput) {
+        const hiddenInputs = document.createElement("div");
+        hiddenInputs.classList.add("d-none");
+        hiddenInputs.innerHTML = `
+        <input type="hidden" name="${prefix}-TOTAL_FORMS" id="id_${prefix}-TOTAL_FORMS" value="0">
+        <input type="hidden" name="${prefix}-INITIAL_FORMS" value="0">
+        <input type="hidden" name="${prefix}-MIN_NUM_FORMS" value="0">
+        <input type="hidden" name="${prefix}-MAX_NUM_FORMS" value="1000">
+      `;
+        container.appendChild(hiddenInputs);
+        totalInput = hiddenInputs.querySelector(`#id_${prefix}-TOTAL_FORMS`);
+      }
+
+      const index = parseInt(totalInput.value, 10);
+      totalInput.value = index + 1;
+
+      // Basit bir input alanı ekle (sekmesiz)
+      const row = document.createElement("div");
+      row.classList.add("input-group", "mb-2");
+      row.innerHTML = `
+        <input type="text" name="${prefix}-${index}-option_text_tr" class="form-control" placeholder="Şık (Türkçe)">
+      `;
+      container.appendChild(row);
+    });
+  })();
+</script>
+
+{% endblock %}

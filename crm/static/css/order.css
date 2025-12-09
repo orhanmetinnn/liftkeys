@@ -1,0 +1,78 @@
+.order-container {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+        padding: 2rem;
+        margin-top: 1rem;
+        border: 1px solid #e0e6ed;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #004aad;
+        margin-bottom: 1.5rem;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 0 8px;
+    }
+    thead tr {
+        background: #e7edf5;
+        color: #333;
+        border-radius: 12px;
+    }
+    thead th {
+        border: none !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    tbody tr {
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        border-radius: 10px;
+        transition: transform 0.2s ease;
+    }
+    tbody tr:hover {
+        transform: scale(1.01);
+    }
+    .accordion-row {
+        display: none;
+        background: #f8f9fb;
+    }
+    .accordion-content {
+        padding: 1rem 2rem;
+        border-left: 3px solid #007bff;
+    }
+    .status-btn {
+        font-size: 0.8rem;
+        border-radius: 50px;
+        padding: 5px 12px;
+        border: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    .status-yes {
+        background: linear-gradient(135deg, #007bff, #4da3ff);
+        color: white;
+        box-shadow: 0 2px 6px rgba(0,123,255,0.4);
+    }
+    .status-no {
+        background: linear-gradient(135deg, #9ea7b3, #cfd4da);
+        color: #2e3a47;
+    }
+    .accordion-icon {
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #007bff;
+        transition: transform 0.3s ease;
+    }
+    .accordion-icon.rotate {
+        transform: rotate(90deg);
+    }
+    code {
+        background: #eef2f7;
+        padding: 2px 5px;
+        border-radius: 4px;
+    }

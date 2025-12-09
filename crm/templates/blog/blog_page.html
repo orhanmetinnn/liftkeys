@@ -1,0 +1,204 @@
+{% extends "productpage/productbase.html" %}
+{% load static wagtailcore_tags wagtailimages_tags wagtailembeds_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/productpagepreview.css' %}">
+<link rel="stylesheet" href="{% static 'css/blog_page.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="lk-progress" id="lkProgress"></div>
+
+<div class="container py-4 py-lg-5">
+    <!-- Breadcrumb -->
+    <nav class="lk-breadcrumb mb-3" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/">{% trans "Ana Sayfa" %}</a></li>
+            {% for ancestor in page.get_ancestors.specific %}
+            {% if not ancestor.is_root %}
+            <li class="breadcrumb-item"><a href="{{ ancestor.url }}">{{ ancestor.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+        </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="lk-hero mb-3">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+            <div class="chip"><span>📰</span> {% trans "Blog" %}</div>
+            <div class="lk-meta">
+                <span class="me-2">📅 {{ page.first_published_at|date:"d MMMM yyyy" }}</span>
+                <span>⏱️ <span id="lkReadTime">~</span> {% trans "dk okuma" %}</span>
+            </div>
+        </div>
+        <h1 class="lk-title display-5">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="lk-meta mb-1">{{ page.subtitle }}</p>{% endif %}
+    </section>
+
+    {% if page.featured_image %}
+    <div class="lk-cover mb-4 shadow-sm">
+        {% image page.featured_image fill-1200x630 format-webp as cover %}
+        <img src="{{ cover.url }}" width="{{ cover.width }}" height="{{ cover.height }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <!-- Main layout -->
+    <div class="lk-main">
+        <!-- Article -->
+        <article class="lk-article">
+            <div class="lk-body" id="lkArticle">
+                {% if page.body %}
+                {% for block in page.body %}
+                {% if block.block_type == 'heading' %}
+                <h2 id="h{{ forloop.counter }}">{{ block.value }}</h2>
+                {% elif block.block_type == 'paragraph' %}
+                <div class="mb-2">{{ block.value|richtext }}</div>
+                {% elif block.block_type == 'image' %}
+                <figure class="lk-media my-3">
+                    {% image block.value max-1400x900 format-webp as img %}
+                    <img src="{{ img.url }}" width="{{ img.width }}" height="{{ img.height }}" alt="">
+                </figure>
+                {% elif block.block_type == 'video' %}
+                <div class="lk-media my-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="{{ block.value }}" title="video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+                {% elif block.block_type == 'list' %}
+                <ul>
+                    {% for item in block.value %}<li>{{ item }}</li>{% endfor %}
+                </ul>
+                {% elif block.block_type == 'quote' %}
+                <blockquote class="my-3">{{ block.value }}</blockquote>
+                {% elif block.block_type == 'html' %}
+                <div class="my-2">{{ block.value|safe }}</div>
+                {% elif block.block_type == 'embed' %}
+                <div class="lk-media my-3">
+                    <div class="ratio ratio-16x9">
+                        {% include_block block %}
+                    </div>
+                </div>
+                {% elif block.block_type == 'table' %}
+                <div class="lk-table table-responsive my-3">
+                    {{ block.value|richtext }}
+                </div>
+                {% else %}
+                <div class="my-2">{{ block }}</div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+            </div>
+
+            <!-- Share bar -->
+            <div class="lk-share d-flex flex-wrap gap-2 mt-4">
+                <a class="btn btn-sm" target="_blank" rel="noopener"
+                    href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}">LinkedIn</a>
+                <a class="btn btn-sm" target="_blank" rel="noopener"
+                    href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ page.title }}">X</a>
+                <a class="btn btn-sm" target="_blank" rel="noopener"
+                    href="https://wa.me/?text={{ page.title|urlencode }}%20-%20{{ request.build_absolute_uri|urlencode }}">WhatsApp</a>
+                <a class="btn btn-sm" href="#" id="lkCopy">{% trans "Bağlantıyı kopyala" %}</a>
+            </div>
+
+            <!-- Prev/Next -->
+            <div class="lk-nav row g-3 mt-4">
+                <div class="col-12 col-lg-6">
+                    {% with prev=page.get_prev_siblings.live.first %}
+                    {% if prev %}<a href="{{ prev.url }}">⬅️ {% trans "Önceki" %}: {{ prev.title }}</a>{% endif %}
+                    {% endwith %}
+                </div>
+                <div class="col-12 col-lg-6 text-lg-end">
+                    {% with nxt=page.get_next_siblings.live.first %}
+                    {% if nxt %}<a href="{{ nxt.url }}">{% trans "Sonraki" %}: {{ nxt.title }} ➡️</a>{% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="lk-side">
+            <div class="lk-card">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="chip">📑 {% trans "İçindekiler" %}</span>
+                    <button class="btn btn-sm btn-outline-light d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#lkTocWrap">TOC</button>
+                </div>
+                <div id="lkTocWrap" class="mt-2 collapse d-lg-block">
+                    <nav id="lkToc" class="lk-toc small"></nav>
+                </div>
+            </div>
+
+
+
+        </aside>
+    </div>
+</div>
+
+<script>
+    (function () {
+        const progress = document.getElementById('lkProgress');
+        const article = document.getElementById('lkArticle');
+        const toc = document.getElementById('lkToc');
+        const copyBtn = document.getElementById('lkCopy');
+        const readTime = document.getElementById('lkReadTime');
+
+        // Reading progress
+        const onScroll = () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const percent = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+            progress.style.width = percent + '%';
+        };
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+
+        // Build TOC from h2/h3
+        if (article && toc) {
+            const hs = article.querySelectorAll('h2, h3');
+            if (hs.length) {
+                const list = document.createElement('div');
+                hs.forEach((h, i) => {
+                    if (!h.id) {
+                        h.id = 'sec-' + (i + 1);
+                    }
+                    const a = document.createElement('a');
+                    a.href = '#' + h.id;
+                    a.textContent = h.textContent;
+                    a.style.marginLeft = h.tagName === 'H3' ? '1rem' : '0';
+                    list.appendChild(a);
+                });
+                toc.appendChild(list);
+            } else {
+                toc.innerHTML = '<span class="text-secondary">{% trans "Başlık bulunamadı" %}</span>';
+            }
+        }
+
+        // Copy link
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    copyBtn.textContent = '{% trans "Kopyalandı" %}';
+                    setTimeout(() => {
+                        copyBtn.textContent = '{% trans "Bağlantıyı kopyala" %}';
+                    }, 1800);
+                });
+            });
+        }
+
+        // Rough read time (200 wpm)
+        if (article && readTime) {
+            const words = (article.innerText || '').trim().split(/\\s+/).length;
+            const mins = Math.max(1, Math.round(words / 200));
+            readTime.textContent = mins;
+        }
+    })();
+</script>
+
+{% include "preview/footer.html" %}
+{% endblock %}

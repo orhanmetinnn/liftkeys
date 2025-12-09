@@ -1,0 +1,84 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/previewcss/loginorcreate.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{% endblock %}
+    
+    
+
+
+<div class="auth-container">
+
+    <!-- Sol alan -->
+    <div class="auth-image">
+        <div>
+            <h1>Welcome to Our Community!</h1>
+            <p>Connect, Explore & Grow</p>
+        </div>
+    </div>
+
+    <!-- Sağ alan -->
+    <div class="auth-form">
+        <div class="form-box">
+
+            <!-- Giriş Formu -->
+            <div id="loginForm">
+                <h3>Giriş Yap</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="email" name="email" class="form-control" placeholder="E-posta adresiniz" required>
+                    <input type="password" name="password" class="form-control" placeholder="Şifreniz" required>
+                    <button type="submit" name="login_submit" class="btn btn-orange w-100 mt-2">Giriş Yap</button>
+                </form>
+                <p class="mt-3 text-center">Hesabınız yok mu? 
+                    <span class="toggle-link" onclick="showRegister()">Kayıt Ol</span>
+                </p>
+            </div>
+
+            <!-- Kayıt Formu -->
+            <div id="registerForm" style="display:none;">
+                <h3>Kayıt Ol</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="first_name" class="form-control" placeholder="Adınız" required>
+                    <input type="text" name="last_name" class="form-control" placeholder="Soyadınız" required>
+                    <input type="email" name="email" class="form-control" placeholder="E-posta adresiniz" required>
+                    <input type="text" name="phone_number" class="form-control" placeholder="Telefon numaranız">
+                    <input type="password" name="password" class="form-control" placeholder="Şifre oluşturun" required>
+                    <input type="password" name="confirm_password" class="form-control" placeholder="Şifreyi tekrar girin" required>
+                    <button type="submit" name="register_submit" class="btn btn-orange w-100 mt-2">Kayıt Ol</button>
+                </form>
+                <p class="mt-3 text-center">Zaten hesabınız var mı? 
+                    <span class="toggle-link" onclick="showLogin()">Giriş Yap</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+function showRegister() {
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("registerForm").style.display = "block";
+}
+function showLogin() {
+    document.getElementById("registerForm").style.display = "none";
+    document.getElementById("loginForm").style.display = "block";
+}
+</script>
+
+    {% include "preview/footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
+
+

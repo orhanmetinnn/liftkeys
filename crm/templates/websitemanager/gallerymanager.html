@@ -1,0 +1,88 @@
+{% extends "crmtemplates/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/gallerymanager.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h2 class="mb-4 text-center">⚙️ Galeri Yönetimi</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Form -->
+                <div class="glass-card p-4 mb-5">
+                    <h5 class="mb-3">{% if item_id %} İçeriği Güncelle {% else %} Yeni İçerik Ekle {% endif %}</h5>
+                    <form method="post" enctype="multipart/form-data" class="row g-3">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-orange px-4 py-2 rounded-3 shadow">
+                                {% if item_id %} Güncelle {% else %} Kaydet {% endif %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Liste -->
+                <div class="glass-card p-4">
+                    <h4 class="mb-3">📂 Mevcut İçerikler</h4>
+                    <div class="table-responsive">
+                        <table class="table table-borderless align-middle">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tür</th>
+                                    <th>Önizleme</th> <!-- ✅ Buraya yeni sütun eklendi -->
+                                    <th>Başlık (TR)</th>
+                                    <th>Başlık (EN)</th>
+                                    <th>Oluşturulma</th>
+                                    <th class="text-center">İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in items %}
+                                <tr>
+                                    <td>{{ item.id }}</td>
+                                    <td>
+                                        <span class="badge bg-secondary">{{ item.content_type }}</span>
+                                    </td>
+
+                                    <!-- ✅ Buraya senin verdiğin thumbnail kodu -->
+                                    <td>
+                                        {% if item.content_type == "video" %}
+                                            <img src="{{ item.youtube_thumbnail }}" alt="thumbnail" class="img-fluid rounded" width="120">
+                                        {% elif item.image %}
+                                            <img src="{{ item.image.url }}" alt="resim" class="img-fluid rounded" width="120">
+                                        {% endif %}
+                                    </td>
+
+                                    <td>{{ item.title_tr }}</td>
+                                    <td>{{ item.title_en }}</td>
+                                    <td>{{ item.created_at|date:"d.m.Y H:i" }}</td>
+                                    <td class="text-center">
+                                        <a href="{% url 'gallery_manager_edit' item.id %}" 
+                                        class="btn btn-sm btn-outline-light rounded-pill px-3">
+                                        ✏️ Düzenle
+                                        </a>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="7" class="text-center text-muted">Henüz içerik eklenmedi</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
