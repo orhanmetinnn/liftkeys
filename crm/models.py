@@ -29,11 +29,13 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-
     def create_superuser(self, email, password=None, **extra_fields):
         extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', False)
+        extra_fields.setdefault('is_superuser', True) # Admin yetkisi için True olmalı
         return self.create_user(email, password, **extra_fields)
+
+# CustomUser sınıfın aynı kalıyor, sadece create_superuser metodunu 
+# yukarıdaki Manager sınıfına taşıdığından emin ol.
 
 
 from image_cropping import ImageRatioField
