@@ -39,7 +39,6 @@ class CustomUserManager(BaseUserManager):
 
 
 from image_cropping import ImageRatioField
-
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     ROLE_CHOICES = (
         ('employee', 'Employee'),
@@ -455,8 +454,8 @@ class Product(models.Model):
         from crm.models import ProductPage
         qs = ProductPage.objects.filter(product=self)
 
-        print("DEBUG >>> Product:", self.name)
-        print("DEBUG >>> All Pages:", qs.values("id", "title", "locale__language_code"))
+        # print("DEBUG >>> Product:", self.name)
+        # print("DEBUG >>> All Pages:", qs.values("id", "title", "locale__language_code"))
 
         if language_code:
             lang = language_code.split('-')[0]
@@ -466,14 +465,14 @@ class Product(models.Model):
             from django.utils.translation import get_language
             lang = (get_language() or 'tr').split('-')[0]
 
-        print("DEBUG >>> Selected lang:", lang)
+        # print("DEBUG >>> Selected lang:", lang)
 
         page = qs.filter(locale__language_code=lang).first()
-        print("DEBUG >>> Found page:", page)
+        # print("DEBUG >>> Found page:", page)
 
         if not page:
             page = qs.filter(locale__language_code='tr').first()
-            print("DEBUG >>> Fallback page:", page)
+            # print("DEBUG >>> Fallback page:", page)
 
         if not page:
             return "#"
@@ -571,6 +570,7 @@ from wagtail import blocks
 from wagtail.models import Page
 
 class SiteRoot(Page):
+    template = "preview/index.html"
     """Sadece kapsayıcı. İçerik alanı yok."""
     # Root altında açılabilir
     parent_page_types = ['wagtailcore.Page']  # root'ta görünecek

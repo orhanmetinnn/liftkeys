@@ -46,8 +46,7 @@ urlpatterns = [
     path("kategori/<slug:slug>/", views.category_detail, name="category_detail"),
     path("contact-form/preview/", views.contact_form_view_preview, name="contact_form_view_preview"),
     path("about/", views.about_view, name="about"),
-    path("atlas-overload/", views.atlas_overload_view, name="atlas_overload"),
-    path("safety-gear/", views.asansorfren_view, name="asansorfren_view"),
+
     path("privacy-policy/", views.privacy_view, name="gizlilikguvenlik"),
     path("orders/", views.order_list, name="order_list"),
     path("orders/toggle/<int:pk>/", views.toggle_order_status, name="toggle_order_status"),
@@ -57,8 +56,16 @@ urlpatterns = [
     path("api/gallery-items/", views.gallery_items_api, name="gallery_items_api"),  # ✅ yeni
     path("gallery/manager/", views.gallery_manager_view, name="gallery_manager"),
     path("gallery/manager/<int:item_id>/", views.gallery_manager_view, name="gallery_manager_edit"),
-    path("horus-photocell/", views.horusphotocell_view, name="horus_photocell"),
 
+    path("safety-gear/", views.asansorfren_view, name="asansorfren_view"),
+
+    path("atlas-overload/", views.atlas_overload_view, name="atlas_overload"),
+    path("horus-photocell/", views.horusphotocell_view, name="horus_photocell"),
+    path("switch-systems/", views.switchsystems_view, name="switch_systems"),
+    path("zemin/", views.zemin_view, name="zemin_view"),
+    path("fan/", views.fan_view, name="fan_view"),
+    path("guideshoe/", views.paten_view, name="paten_view"),
+    path("solid/", views.solid_view, name="solid_view"),
 ]
 
 

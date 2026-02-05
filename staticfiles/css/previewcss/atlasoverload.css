@@ -1,156 +1,220 @@
-    :root {
-        --lk-orange: #F46E21;
-        --lk-gray-900: #1f2937;
-        --lk-gray-600: #6b7280;
-        --lk-gray-100: #f3f4f6;
-        --lk-border: #e5e7eb;
+:root {
+            --primary-orange: #f37021; /* Görselden alınan yaklaşık renk */
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-text);
+        }
+
+        /* Özel Buton ve Arka Plan Stilleri */
+        .bg-custom-orange {
+            background-color: var(--primary-orange);
+            color: white;
+        }
+
+        .text-custom-orange {
+            color: var(--primary-orange);
+        }
+
+        .btn-custom-orange {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .btn-custom-orange:hover {
+            background-color: #d65a0e; /* Hover durumunda koyulaşma */
+            color: white;
+        }
+
+        /* Navbar Ayarları */
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-orange) !important;
+            font-size: 1.5rem;
+        }
+
+        /* Banner Alanı */
+        .page-header-banner {
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        /* Video/Görsel Alanı Yer Tutucu */
+        .video-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .play-icon {
+            font-size: 4rem;
+            opacity: 0.8;
+        }
+
+        /* Katalog İndir Alanı */
+        .catalog-section {
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        /* Ürün Listesi */
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+            color: #666;
+        }
+        
+        /* Görsel Yer Tutucular (Senin Resimlerin İçin) */
+        .img-placeholder-lg {
+            width: 100%;
+            height: auto;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px; /* Büyük ürün görseli için */
+            margin-bottom: 20px;
+        }
+
+        .img-placeholder-sm {
+            width: 100%;
+            height: auto;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            min-height: 250px;
+        }
+
+        :root {
+        --primary-orange: #f37021;
+        --dark-text: #2c3e50;
     }
 
-    body {
-        background: #fff;
-        color: var(--lk-gray-900);
+    /* Genel Geçiş Efektleri */
+    .transition-all {
+        transition: all 0.4s ease-in-out;
     }
 
-    .lk-hero {
-        border: 1px solid var(--lk-border);
-        border-radius: 18px;
-        padding: 24px;
-        background: #fff;
-    }
-
-    .lk-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        padding: .4rem .75rem;
-        border: 1px dashed var(--lk-orange);
-        border-radius: 999px;
-        font-size: .85rem;
-        color: var(--lk-orange);
-        background: linear-gradient(180deg, #fff, rgba(244, 110, 33, .05));
-    }
-
-    .lk-title {
-        font-weight: 800;
-        letter-spacing: .2px;
-        line-height: 1.15;
-    }
-
-    .lk-sub {
-        color: var(--lk-gray-600);
-    }
-
-    .lk-card {
-        background: #fff;
-        border: 1px solid var(--lk-border);
-        border-radius: 18px;
-        padding: 20px;
-        box-shadow: 0 6px 24px rgba(0, 0, 0, .04);
-    }
-
-    .lk-divider {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--lk-border), transparent);
-    }
-
-    .lk-cta {
-        border-radius: 14px;
-        border: 1px solid var(--lk-orange);
-        background: linear-gradient(180deg, #fff, rgba(244, 110, 33, .08));
-        transition: .2s transform ease;
-    }
-
-    .lk-cta:hover {
-        transform: translateY(-2px);
-    }
-
-    .placeholder-box {
-        border: 2px dashed var(--lk-gray-600);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--lk-gray-600);
-        font-weight: 600;
-        background: #fff;
-    }
-
-    .ph-1200x628 {
-        width: 100%;
-        max-width: 1200px;
-        height: 628px;
-        margin: auto;
-    }
-
-    .ph-800x450 {
-        width: 100%;
-        max-width: 800px;
-        height: 450px;
-    }
-
-    .ph-500x330 {
-        width: 100%;
-        max-width: 500px;
-        height: 330px;
-    }
-
-    .ph-400x270 {
-        width: 100%;
-        max-width: 400px;
-        height: 270px;
-    }
-
-    .lk-badge {
-        font-size: .75rem;
-        border: 1px solid var(--lk-border);
-        padding: .25rem .5rem;
+    /* 1. Başlık Banner Geliştirmesi */
+    .page-header-banner {
+        background: linear-gradient(90deg, var(--primary-orange) 0%, #d65a0e 100%);
+        padding: 25px;
         border-radius: 8px;
-        background: #fff;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        box-shadow: 0 10px 20px rgba(243, 112, 33, 0.2);
     }
 
-    .toc a {
-        text-decoration: none;
-        color: var(--lk-gray-900);
-    }
-
-    .toc a:hover {
-        color: var(--lk-orange);
-    }
-
-    .lk-kicker {
-        font-size: .9rem;
-        color: var(--lk-gray-600);
-    }
-
-
-    .lk-card.list-steps {
-        padding: 24px 32px;
-        /* Kenarlardan uzaklaştırma */
-        list-style: none;
-        counter-reset: step-counter;
-    }
-
-    .lk-card.list-steps li {
+    /* 2. Resim Hover Zoom Efekti */
+    .img-hover-wrapper {
+        overflow: hidden; /* Resim büyüdüğünde dışarı taşmasın */
+        border-radius: 10px;
         position: relative;
-        margin-left: 2.5rem;
-        counter-increment: step-counter;
-        padding-left: .5rem;
-        margin-top: 1em ;
+        cursor: pointer;
     }
 
-    .lk-card.list-steps li::before {
-        content: counter(step-counter);
-        position: absolute;
-        left: -2.5rem;
-        width: 30px;
-        height: 30px;
-        background: var(--lk-orange);
-        color: #fff;
-        font-weight: 700;
+    .img-hover-wrapper img {
+        transition: transform 0.5s ease;
+    }
+
+    .img-hover-wrapper:hover img {
+        transform: scale(1.05); /* Üzerine gelince %5 büyür */
+    }
+
+    /* 3. Video Play Butonu Animasyonu */
+    .play-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.9);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 0.9rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        color: var(--primary-orange);
+        font-size: 2rem;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        animation: pulse-white 2s infinite;
+        transition: transform 0.3s;
+    }
+    
+    .video-placeholder:hover .play-icon-wrapper {
+        transform: scale(1.1);
+        background: #fff;
+    }
+
+    @keyframes pulse-white {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    }
+
+    /* 4. İçindekiler Listesi Tasarımı */
+    .content-list-styled {
+        background-color: #f8f9fa;
+        border-left: 4px solid var(--primary-orange);
+        padding: 20px;
+        border-radius: 0 8px 8px 0;
+    }
+    .content-list-styled ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .content-list-styled li {
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #555;
+    }
+    .content-list-styled li i {
+        color: var(--primary-orange);
+        margin-right: 10px;
+    }
+
+    /* Buton Efekti */
+    .btn-custom-orange {
+        background-color: var(--primary-orange);
+        color: white;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: 0.3s;
+        box-shadow: 0 4px 15px rgba(243, 112, 33, 0.3);
+    }
+    .btn-custom-orange:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(243, 112, 33, 0.4);
+        color: white;
+    }
+    .zoom-img {
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+    
+    /* Hover durumunda hafif bir efekt */
+    .zoom-img:hover {
+        transform: scale(1.02);
+        opacity: 0.95;
+    }
+
+    /* Açılan Modal'ın arka planı */
+    .modal-backdrop.show {
+        opacity: 0.8; /* Arka planı biraz daha karartır */
     }

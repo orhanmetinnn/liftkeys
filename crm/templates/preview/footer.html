@@ -139,30 +139,34 @@
         </div>
     </div>
 </footer>
-    <a id="back-to-top" href="#" class="back-to-top">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
 
-    
-    <script>
-        // "Yukarı Çık" butonu için JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            const backToTopButton = document.getElementById('back-to-top');
+<a id="back-to-top" href="#" class="back-to-top">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) { // 300px aşağı kaydırıldığında göster
+<script>
+    // "Yukarı Çık" butonu için JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            // Sadece ekran genişliği 768px'den büyükse (masaüstü ise) işlem yap
+            // Bu sayede mobilde gereksiz hesaplama yapmaz
+            if (window.innerWidth > 768) {
+                if (window.scrollY > 300) { 
                     backToTopButton.classList.add('show');
                 } else {
                     backToTopButton.classList.remove('show');
                 }
-            });
+            }
+        });
 
-            backToTopButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
-    </script>
+    });
+</script>

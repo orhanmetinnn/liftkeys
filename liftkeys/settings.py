@@ -28,11 +28,17 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = [
-    '3.75.82.93',         # Sunucunun Dış IP'si (AWS Elastic IP vs)
+    '35.157.24.15',         # Sunucunun Dış IP'si (AWS Elastic IP vs)
     'liftkeys.com',       # Domainin (Varsa)
     'www.liftkeys.com',   # www versiyonu
     'localhost',          # Yerel erişim için
     '127.0.0.1'           # Yerel erişim için
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://liftkeys.com',
+    'https://www.liftkeys.com',
+    'https://35.157.24.15'
 ]
 # ALLOWED_HOSTS = ["*"]
 
@@ -91,25 +97,41 @@ WAGTAIL_SITE_NAME = "Liftkeys"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-MIDDLEWARE = [
-    # 1. Cache yazma middleware'i en başta olmalı
-    "wagtailcache.cache.UpdateCacheMiddleware",
+if DEBUG:
+    MIDDLEWARE = [
+        "django.middleware.security.SecurityMiddleware",
+        "django.contrib.sessions.middleware.SessionMiddleware",
+        "django.middleware.locale.LocaleMiddleware", # Dil algılama burada çalışır
+        "django.middleware.common.CommonMiddleware",
+        "django.middleware.csrf.CsrfViewMiddleware",
+        "django.contrib.auth.middleware.AuthenticationMiddleware",
+        "django.contrib.messages.middleware.MessageMiddleware",
+        "django.middleware.clickjacking.XFrameOptionsMiddleware",
+        "wagtail.contrib.redirects.middleware.RedirectMiddleware",
+    ]
+else:
+    MIDDLEWARE = [
+        # 1. Cache GÜNCELLEME (Response) - En başta olmalı
+        "wagtailcache.cache.UpdateCacheMiddleware",
 
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.locale.LocaleMiddleware",  # 🌍 Dil seçimi
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+        "django.middleware.security.SecurityMiddleware",
+        "django.contrib.sessions.middleware.SessionMiddleware",
+        
+        # 2. Dil Algılama - Session'dan sonra, Common'dan önce
+        "django.middleware.locale.LocaleMiddleware", 
+        
+        "django.middleware.common.CommonMiddleware",
+        "django.middleware.csrf.CsrfViewMiddleware",
+        "django.contrib.auth.middleware.AuthenticationMiddleware",
+        "django.contrib.messages.middleware.MessageMiddleware",
+        "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
-    # 2. Wagtail yönlendirme middleware'i
-    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
+        # 3. Wagtail Yönlendirmeleri
+        "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 
-    # 3. Cache okuma middleware'i en sonda olmalı
-    "wagtailcache.cache.FetchFromCacheMiddleware",
-]
+        # 4. Cache GETİRME (Request) - En sonda olmalı
+        "wagtailcache.cache.FetchFromCacheMiddleware",
+    ]
 
 AUTH_USER_MODEL = 'crm.CustomUser'
 
@@ -146,43 +168,42 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
-    
+
+    # 🔥 Mevcut tüm logger'ları sustur
+    'disable_existing_loggers': True,
+
     'formatters': {
         'verbose': {
             'format': '[{asctime}] {levelname} {name} - {message}',
             'style': '{',
         },
-        'simple': {
-            'format': '{levelname}: {message}',
-            'style': '{',
-        },
     },
 
     'handlers': {
+        # ✅ SADECE DOSYA
         'file': {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/django.log'),
             'formatter': 'verbose',
         },
-        'console': {
-            'level': 'WARNING',  # sadece warning ve üzeri loglar terminale düşer
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple',
-        },
+    },
+
+    # 🔥 ROOT LOGGER → console YOK
+    'root': {
+        'handlers': ['file'],
+        'level': 'WARNING',
     },
 
     'loggers': {
+        # Django iç logları da dosyaya
         'django': {
-            'handlers': ['file', 'console'],  # 🔥 ikisine de log yaz
+            'handlers': ['file'],
             'level': 'WARNING',
-            'propagate': True,
+            'propagate': False,
         },
     },
 }
-
-
 
 
 # Database
@@ -277,6 +298,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
+
+
+
+# settings.py dosyasının en alt satırına ekle:
+
+# === DİL ÇEREZ AYARLARI ===
+LANGUAGE_COOKIE_NAME = 'django_language'
+LANGUAGE_COOKIE_AGE = None  # Tarayıcı kapatıldığında dil seçimi sıfırlanır (Test için harika)
+# Canlıya (Production) aldığında üstteki satırı silip alttakini açarsın:
+# LANGUAGE_COOKIE_AGE = 365 * 24 * 60 * 60  # 1 yıl boyunca hatırla
+
+LANGUAGE_COOKIE_PATH = '/'
+LANGUAGE_COOKIE_DOMAIN = None
 
 
 

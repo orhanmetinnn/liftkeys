@@ -13,7 +13,7 @@ from .forms import EmployeeForm, EmployeeUpdateForm,UpdateCompanyForm,ProductFor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 
-logger = logging.getLogger('django')
+# logger = logging.getLogger('django')
 """
 Personel Alanı
 """
@@ -21,6 +21,9 @@ Personel Alanı
 
 
 # Logger oluştur
+import logging
+
+import logging
 logger = logging.getLogger(__name__)
 from functools import wraps
 
@@ -723,7 +726,7 @@ def product_hub(request):
                 messages.success(request, f"‘{product.name}’ başarıyla kaydedildi.")
                 return redirect(f"{reverse('product_hub')}?id={product.id}")
             else:
-                print("Image Formset Errors:", images_formset.errors)
+                # print("Image Formset Errors:", images_formset.errors)
                 messages.error(request, "Lütfen görsel formundaki hataları düzeltin.")
                 return render(request, "urunler/uruncreateandupdate.html", {
                     "products": products,
@@ -735,7 +738,7 @@ def product_hub(request):
 
     except Exception as e:
         # Hata detayını görmek için print ekleyebilirsin
-        print(f"HATA DETAYI: {e}") 
+        # print(f"HATA DETAYI: {e}") 
         messages.error(request, f"Hata oluştu: {e}")
         return redirect(reverse("product_hub"))
 
@@ -865,8 +868,8 @@ def add_to_cart_view(request):
 
 
 def cart_summary_api(request):
-    print("CART_SUMMARY -> Session Key:", request.session.session_key)
-    print("burasi çalıştı")
+    # print("CART_SUMMARY -> Session Key:", request.session.session_key)
+    # print("burasi çalıştı")
     cart = request.session.get("cart", [])
     product_ids = [item["product_id"] for item in cart]
     products = Product.objects.in_bulk(product_ids)
@@ -892,8 +895,8 @@ def cart_summary_api(request):
         })
         total_count += qty
 
-    print("CART_SUMMARY -> Session Key:", request.session.session_key)
-    print("CART_SUMMARY -> Cart:", cart)
+    # print("CART_SUMMARY -> Session Key:", request.session.session_key)
+    # print("CART_SUMMARY -> Cart:", cart)
 
     return JsonResponse({"items": items, "total_count": total_count})
 
@@ -951,7 +954,7 @@ def add_to_cart(request):
     request.session.modified = True
     request.session.save()
 
-    print("🛒 Cart after add:", request.session["cart"], "Session Key:", request.session.session_key)
+    # print("🛒 Cart after add:", request.session["cart"], "Session Key:", request.session.session_key)
 
     total_count = sum(item.get("qty", 1) for item in cart)
     return JsonResponse({"success": True, "cart_count": total_count})
@@ -1241,8 +1244,8 @@ def offer_create(request):
                 messages.error(request, f"Kaydederken hata oluştu: {str(e)}")
         else:
             # Form ve formset hatalarını göster
-            print("Form Hataları:", form.errors)
-            print("Formset Hataları:", formset.errors)
+            # print("Form Hataları:", form.errors)
+            # print("Formset Hataları:", formset.errors)
             messages.error(request, "Formda hata var. Lütfen kontrol edin.")
     else:
         form = OfferForm()
@@ -1335,7 +1338,7 @@ def category_manage(request, pk=None):
             category_obj.user = request.user  # giriş yapan kullanıcıyı kaydet
 
             # 🟢 Debug logları - terminalde görebilirsin
-            print("FORM CLEANED DATA:", form.cleaned_data)
+            # print("FORM CLEANED DATA:", form.cleaned_data)
 
             category_obj.save()
             form.save_m2m()
@@ -1344,7 +1347,7 @@ def category_manage(request, pk=None):
             return redirect('category_manage')
         else:
             # Eğer form valid değilse hataları logla
-            print("FORM ERRORS:", form.errors)
+            # print("FORM ERRORS:", form.errors)
             messages.error(request, "Kategori kaydedilirken hata oluştu.")
 
     categories = Category.objects.all()
@@ -1362,7 +1365,7 @@ def category_manage(request, pk=None):
 
 from django.utils import translation
 def indexpage(request):
-    print(">>> Aktif dil:", translation.get_language())
+    # print(">>> Aktif dil:", translation.get_language())
     # Menüde gösterilecek kategoriler
     menu_categories = Category.objects.filter(menude_goster=True).order_by('name')
 
@@ -1388,7 +1391,7 @@ def contactpage(request):
     for cat in menu_categories:
         cat.products = Product.objects.filter(categories=cat, is_active=True)
     if request.method == "POST":
-        print("post geldi")
+        # print("post geldi")
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()  # Artık güvenli
@@ -1535,29 +1538,8 @@ def about_view(request):
 
 
 
-def atlas_overload_view(request):
-    """
-    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
-    """
-    return render(request, "preview/previewblog/atlasoverload.html")
 
 
-
-def horusphotocell_view(request):
-    """
-    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
-    """
-    return render(request, "preview/previewblog/horusphotocell.html")
-
-
-
-
-
-def asansorfren_view(request):
-    """
-    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
-    """
-    return render(request, "preview/previewblog/frensistem.html")
 
 
 
@@ -1633,7 +1615,20 @@ def gallery_manager_view(request, item_id=None):
 
 
 
+def asansorfren_view(request):
+    """
+    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/frensistem.html")
 
+
+
+
+def atlas_overload_view(request):
+    """
+    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/atlasoverload.html")
 
 
 
@@ -1645,3 +1640,43 @@ def horusphotocell_view(request):
     return render(request, "preview/previewblog/fotosel.html")
 
 
+
+
+def switchsystems_view(request):
+    """
+    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/switchsistemleri.html")
+
+
+
+
+def zemin_view(request):
+    """
+    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/zemin.html")
+
+
+
+def fan_view(request):
+    """
+    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/fan.html")
+
+
+
+def paten_view(request):
+    """
+    Liftkeys Atlas Aşırı Yük Sistemi blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/paten.html")
+
+
+
+def solid_view(request):
+    """
+    Liftkeys Solid Makina blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/solid.html")

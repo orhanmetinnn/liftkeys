@@ -2,11 +2,14 @@
 {% load i18n %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css\previewcss\iletisimpreview.css' %}">
+    <link rel="stylesheet" href="{% static 'css/previewcss/iletisimpreview.css' %}">
 {% endblock %}
+
 <div class="container my-5 p-0 shadow rounded overflow-hidden">
     <div class="row g-0">
-        <div class="col-lg-5 text-white d-flex flex-column justify-content-center bg-orange-overlay p-5">
+        <div class="col-lg-5 text-white d-flex flex-column justify-content-center bg-orange-overlay p-5"
+             style="background-image: linear-gradient(rgba(244, 110, 33, 0.315), rgba(244, 110, 33, 0.479)), url('{% static 'image/preview/iletisim-alani.webp' %}');">
+            
             <h1 class="display-5 fw-bold mb-3">{% trans "Özel Müşteri Ekipleri ve Esnek Hizmetler" %}</h1>
             <p class="lead mb-4">
                 {% blocktrans trimmed %}
@@ -77,17 +80,16 @@
     </div>
 </div>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const alertContainer = document.getElementById("formAlertContainer");
 
     form.addEventListener("submit", async function (e) {
-        e.preventDefault();  // 🚨 Tarayıcının sayfayı yenilemesini durdurur
+        e.preventDefault(); 
 
         const formData = new FormData(form);
-        alertContainer.innerHTML = ""; // Eski mesajları temizle
+        alertContainer.innerHTML = ""; 
 
         try {
             const response = await fetch(form.action, {
@@ -107,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         ${data.message}
                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     </div>`;
-                form.reset(); // Formu temizle
+                form.reset(); 
             } else {
                 let errorHtml = "<ul class='mb-0'>";
                 for (let field in data.errors) {

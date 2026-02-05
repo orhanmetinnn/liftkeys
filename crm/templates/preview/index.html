@@ -82,12 +82,29 @@ elektronik ve mekanik bileşenlerle çözümler.
     
     <div class="hero-bg-wrapper">
         <picture>
-            <source media="(max-width: 768px)" srcset="{% static 'image/preview/mobilliftkeyspreviewpageheaders.png' %}">
-            
-            <img src="{% static 'image/preview/banner-liftkeys-headers.webp' %}" 
-                 alt="Liftkeys Asansör Banner" 
-                 class="hero-bg-img"
-                 fetchpriority="high"> </picture>
+
+            <!-- MOBİL -->
+            <source 
+                media="(max-width: 768px)"
+                srcset="{% static 'image/preview/mobilliftkeyspreviewpageheaders.webp' %}"
+                type="image/webp">
+
+            <!-- DESKTOP -->
+            <source
+                srcset="{% static 'image/preview/banner-liftkeys-headersformlow.webp' %}"
+                type="image/webp">
+
+            <!-- LCP IMAGE -->
+            <img 
+                src="{% static 'image/preview/banner-liftkeys-headersformlow.webp' %}"
+                alt="Liftkeys Asansör Sistemleri ve Çözümleri"
+                class="hero-bg-img"
+                width="1920"
+                height="700"
+                fetchpriority="high"
+                decoding="async">
+                
+        </picture>
     </div>
 
     <div class="overlay"></div>
@@ -212,10 +229,10 @@ elektronik ve mekanik bileşenlerle çözümler.
             <div class="col-lg-6 col-md-12">
                 <div class="image-cluster">
                     <div class="dots-pattern"></div>
-                    <img src="{% static 'image/preview/Asansör-Parçaları-Üreticisi-Liftkeys.webp' %}"
-                        alt="{% trans 'Liftkeys Asansör Parçaları Üreticisi' %}" class="main-image">
-                    <img src="{% static 'image/preview/liftkeys 250300.png' %}"
-                        alt="{% trans 'Liftkeys Üretim Tesisi' %}" class="secondary-image">
+                    <img src="{% static 'image/preview/liftkeys-asansor-parcalari-sevkiyat-ve-lojistik.webp' %}"
+                        alt="{% trans 'Liftkeys markalı asansör parçaları ve aksesuarları taşıyan forklift ile sevkiyat süreci' %}" class="main-image" loading="lazy">
+                    <img src="{% static 'image/preview/liftkeys-kuresel-asansor-teknolojileri-maskotu.webp' %}"
+                        alt="{% trans 'Dünya genelinde hizmet veren Liftkeys asansör teknolojilerini temsil eden robot maskot' %}" class="secondary-image" loading="lazy">
                     <div class="experience-badge">
                         <span id="ex-orange"></span>
                         <p>{% trans "Yıl Deneyim" %}</p>
@@ -304,7 +321,7 @@ elektronik ve mekanik bileşenlerle çözümler.
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="image-cluster">
                     <div class="image-placeholder image-bottom">
-                        <img src="{% static 'image/preview/liftkeys-product.png' %}" alt="">
+                        <img src="{% static 'image/preview/liftkeys-asansor-yedek-parca-uretim-tesisi-ve-lojistik.webp' %}" alt="{% trans "Liftkeys asansör yedek parçaları üretim fabrikası ve ürün sevkiyatı yapan lojistik araçları" %}" loading="lazy">
                     </div>
                     <div class="play-button">
                         <i class="bi bi-play-fill"></i>
@@ -381,8 +398,8 @@ elektronik ve mekanik bileşenlerle çözümler.
         <div class="col-lg-3 col-md-6">
             <div class="service-card">
                 <div class="icon">
-                    <img src="{% static 'image/preview/Lift keys Horus.webp' %}"
-                        alt="{% trans 'Asansör Aşırı Yük Sistemi – Kabin güvenlik sensörü' %}" width="100" height="100">
+                    <img src="{% static 'image/preview/atlas.webp' %} "
+                        alt="{% trans 'Kabin güvenliği için hassas ölçüm yapan asansör aşırı yük (overload) sistemi ve yük sensörü' %}" width="100" height="100" loading="lazy">
                 </div>
 
                 <h2 id="mainh2indexpage">{% trans "Asansör Aşırı Yük Sistemi" %}</h2>
@@ -402,8 +419,8 @@ elektronik ve mekanik bileşenlerle çözümler.
         <div class="col-lg-3 col-md-6">
             <div class="service-card">
                 <div class="icon">
-                    <img src="{% static 'image/preview/Lift Keys Sefety Gear.webp' %}"
-                        alt="{% trans 'Asansör fren sistemi – LiftKeys güvenlik freni' %}">
+                    <img src="{% static 'image/preview/safety gear.webp' %}"
+                        alt="{% trans "500 kg'dan 20 tona kadar kapasite sunan LiftKeys asansör fren sistemi ve ani duruş güvenlik blokları" %}"  width="100" height="100" loading="lazy">
                 </div>
 
                 <h2 id="mainh2indexpage">{% trans "Asansör Fren Sistemi" %}</h2>
@@ -418,15 +435,15 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/horus-photocell/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="/atlas-overload/" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
             <div class="service-card">
                 <div class="icon">
-                    <img src="{% static 'image/preview/liftkeys guide shoes.webp' %}"
-                        alt="{% trans 'Asansör kapı sensörü – LiftKeys fotokontrol sistemi' %}">
+                    <img src="{% static 'image/preview/horus.webp' %}"
+                        alt="{% trans 'Asansör kapı sensörü – LiftKeys fotokontrol sistemi' %}"  width="100" height="100" loading="lazy">
                 </div>
 
                 <h2 id="mainh2indexpage">{% trans "Asansör Kapı Sensörü" %}</h2>
@@ -444,15 +461,15 @@ elektronik ve mekanik bileşenlerle çözümler.
                 </p>
 
 
-                <a href="#" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="/horus-photocell/" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
             <div class="service-card">
                 <div class="icon">
-                    <img src="{% static 'image/preview/lift keys handrail.webp' %}"
-                        alt="{% trans 'Asansör küpeşte – kabin tutunma kolu güvenlik sistemi' %}">
+                    <img src="{% static 'image/preview/handrail.webp' %}"
+                        alt="{% trans 'Krom, bronz, gold ve füme renk seçenekleriyle atölyede anında üretilebilen asansör küpeşte ve tutunma kolu sistemi' %}"  width="100" height="100" loading="lazy">
                 </div>
 
                 <h2 id="mainh2indexpage">{% trans "Asansör Küpeşte" %}</h2>
@@ -479,21 +496,355 @@ elektronik ve mekanik bileşenlerle çözümler.
 
     <div class="row gx-4">
         <div class="col-lg-3 col-md-6">
-            <img src="{% static 'image/preview/liftkeys aşırı yük.webp' %}" alt="{% trans 'LiftKeys Aşırı Yük' %}" class="gallery-image">
+            <img src="{% static 'image/preview/asansor-asiri-yuk-sistemi-ve-overload-sensoru.webp' %}" alt="{% trans 'Kabin güvenliği için hassas ölçüm yapan asansör aşırı yük (overload) sistemi ve yük sensörü' %}" class="gallery-image" loading="lazy">
         </div>
         <div class="col-lg-3 col-md-6">
-            <img src="{% static 'image/preview/liftkeys fren.webp' %}" alt="{% trans 'LiftKeys fren sistemleri' %}" class="gallery-image">
+            <img src="{% static 'image/preview/liftkeys-asansor-fren-sistemi-ve-guvenlik-bloklari.webp' %}" alt="{% trans "500 kg'dan 20 tona kadar kapasite sunan LiftKeys asansör fren sistemi ve ani duruş güvenlik blokları" %}" class="gallery-image" loading="lazy">
         </div>
         <div class="col-lg-3 col-md-6">
-            <img src="{% static 'image/preview/liftkeys fotosel.webp' %}" alt="{% trans 'LiftKeys fotosel' %}" class="gallery-image">
+            <img src="{% static 'image/preview/liftkeys-asansor-kapi-sensoru-ve-isin-perdesi-fotoseli.webp' %}" alt="{% trans 'Yüksek algılama hassasiyetine sahip LiftKeys asansör kapı sensörü ve ışın perdesi teknolojili fotosel' %}" class="gallery-image" loading="lazy">
         </div>
         <div class="col-lg-3 col-md-6">
-            <img src="{% static 'image/preview/liftkeys-kupeste.webp' %}" alt="{% trans 'LiftKeys Küpeşte' %}" class="gallery-image">
+            <img src="{% static 'image/preview/liftkeys-ozel-olcu-asansor-kupeste-ve-tutunma-kolu-sistemi.webp' %}" alt="{% trans 'Krom, bronz, gold ve füme renk seçenekleriyle atölyede anında üretilebilen asansör küpeşte ve tutunma kolu sistemi' %}" class="gallery-image" loading="lazy">
         </div>
     </div>
 
 </div>
 
+
+
+
+
+<div class="container py-5" data-aos="zoom-in-up">
+    <div class="row gy-4 ">
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/floor.webp' %}"
+                        alt="{% trans 'Gerçek mermer şıklığı sunan, 2mm inceliğinde hafif ve ekonomik asansör PVC zemin kaplaması' %}" width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Asansör Zemin Çözümleri" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    Size iki farklı çözümle yanınızdayız. <strong>Premium görünümlü zemin tasarımı</strong> sayesinde, 
+                    152 x 140 cm ölçüsündeki alanlarda özel tasarım mermerlere 3.000 dolar harcamanıza gerek kalmaz. 
+                    Aynı <strong>premium mermer görünümünü</strong> çok daha düşük maliyetle sunuyoruz.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Yalnızca <strong>2 mm kalınlık</strong> ile asansöre gereksiz ağırlık bindirmez, 
+                    montaj sürecini hızlandırır ve taşıma zorluklarını ortadan kaldırır. 
+                    Böylece hem asansör kabinini hem de montaj ustasını gereksiz yüklerden kurtarıyoruz.
+                    {% endblocktrans %}
+                </p>
+
+                <a href="/zemin/" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/rubber.webp' %}"
+                        alt="{% trans "Titreşimi en aza indiren, %100 orijinal ham maddeden üretilmiş dayanıklı asansör kauçuk takozları ve darbe emici lastikler" %}"  width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Rubber Kauçuk Ürünler" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    LiftKeys olarak, ürettiğimiz <strong>asansör kauçuk takozları</strong> ve titreşim sönümleyici ürünlerde %100 orijinal ham madde kullanıyoruz. 
+                    Kaliteyi yalnızca sözle değil, sunduğumuz <strong>kauçuk malzeme orijinallik raporu</strong> ve test belgeleriyle kanıtlıyoruz.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Ürünlerimiz; <strong>ezilme ve deformasyon dayanım testleri</strong> ile <strong>ürün ömür testlerinden</strong> başarıyla geçmiştir. 
+                    Özel olarak geliştirilen metal ve vida yapısı, <strong>uzun kullanım dayanıklılık testleri</strong> ile onaylanmış olup, 
+                    yıllar boyu güvenli bir performans sunar.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Yüksek mühendislik ürünü kauçuklarımız, <strong>darbeyi en iyi şekilde absorbe eder</strong> ve 
+                    <strong>asansör kabin ve makina titreşimini</strong> minimuma indirir. 
+                    Aşınmaya ve ezilmeye karşı üstün direnç göstererek zamanla formunu kaybetmez, asansörünüzün konforunu garanti altına alır.
+                    {% endblocktrans %}
+                </p>
+
+                <a href="/horus-photocell/" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/guide shoes.webp' %}"
+                        alt="{% trans 'Titreşimi önleyen 3 yönlü kauçuk yapılı, ayarlanabilir asansör paten bloğu ve guide shoes' %}"  width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Guide Shoes" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    <strong>LiftKeys Asansör Paten Blokları</strong>, yolcu güvenliğini standart, <strong>sessiz ve konforlu yolculuğu</strong> ise bir zorunluluk haline getirir.
+                    Ürünlerimiz; <strong>asansör kabin titreşimini</strong> azaltmak, seyir konforunu maksimize etmek ve <strong>ray kaynaklı hataları</strong> tolere etmek için özel olarak tasarlanmıştır.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Yenilikçi <strong>3 yönlü kauçuk yapısı</strong> sayesinde, patenin üç yüzeyinde de darbe emici özellik sunar.
+                    Bu teknoloji, standart çelik ve plastik kombinasyonlu patenlere kıyasla çok daha <strong>sessiz, stabil ve pürüzsüz bir asansör seyri</strong> sağlar.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    <strong>Ayarlanabilir paten sertliği</strong> özelliği ile kontrol tamamen sizde.
+                    Arka kısımdaki özel <strong>ayar vidası</strong> sayesinde, patenin sertliğini asansörün çalışma koşullarına ve ray durumuna göre optimize edebilir,
+                    <strong>titreşim seviyesini</strong> istediğiniz hassasiyette ayarlayabilirsiniz.
+                    {% endblocktrans %}
+                </p>
+
+
+                <a href="/guideshoe/" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/light.webp' %}"
+                        alt="{% trans 'Sık açma kapamaya ve titreşime dayanıklı, uzun ömürlü LiftKeys asansör kabin spot aydınlatma sistemi' %}"  width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Kabin İçi Aydınlatmaları" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    Piyasada kullanılan standart spot ışıklar, genellikle ev tipi üretim olduğu için <strong>asansör kabin aydınlatma</strong> koşullarına uygun değildir.
+                    Evlerde günde sadece 1–2 kez çalışan bu ürünler, asansörlerde günde <strong>1000’e varan açma-kapama döngüsüne</strong> maruz kaldığında hızlıca arızalanır.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Biz bu sorunu, "Asansörü seviyoruz ve anlıyoruz" felsefesiyle çözdük.
+                    Mühendislerimiz, sıradan çözümler yerine <strong>asansör için özel tasarlanmış spot aydınlatma</strong> sistemleri geliştirdi.
+                    Ev tipi değil, gerçek bir <strong>LiftKeys mühendislik ürünüdür</strong>.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    <strong>LiftKeys asansör spotları</strong>; yoğun kullanım döngülerine göre test edilmiş,
+                    <strong>kabin titreşimi</strong> ve sürekli çalışma senaryolarına karşı tam dayanıklılık sağlayacak şekilde üretilmiştir.
+                    Sık bozulan ışıklara son verin, gerçek asansör kalitesiyle tanışın.
+                    {% endblocktrans %}
+                </p>
+
+                <a href="#" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row gx-4">
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/mermer-gorunumlu-hafif-asansor-zemin-kaplama-ve-pvc-taban.webp' %}" alt="{% trans 'Gerçek mermer şıklığı sunan, 2mm inceliğinde hafif ve ekonomik asansör PVC zemin kaplaması' %}" class="gallery-image" loading="lazy">
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/liftkeys-darbe-emici-asansor-kaucuk-tamponlari.webp' %}" 
+            alt="{% trans "Titreşimi en aza indiren, %100 orijinal ham maddeden üretilmiş dayanıklı asansör kauçuk takozları ve darbe emici lastikler" %}" class="gallery-image" loading="lazy">
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/ayarlanabilir-asansor-paten-blogu-ve-titresim-onleyici-guide-shoes.webp' %}" alt="{% trans 'Titreşimi önleyen 3 yönlü kauçuk yapılı, ayarlanabilir asansör paten bloğu ve guide shoes' %}" class="gallery-image" loading="lazy">
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/dayanikli-asansor-kabin-spot-aydinlatma-ve-tavan-isiklari.webp' %}" alt="{% trans 'Sık açma kapamaya ve titreşime dayanıklı, uzun ömürlü LiftKeys asansör kabin spot aydınlatma sistemi' %}" class="gallery-image" loading="lazy">
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container py-5" data-aos="zoom-in-up">
+    <div class="row gy-4 ">
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/label.webp' %}"
+                        alt="{% trans 'Denetim ve yeşil etiket için gerekli, yönetmeliğe uygun asansör uyarı etiketleri, metal ve 3D damla etiket çözümleri' %}" width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Asansör Etiketleri" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    Etiket deyip geçmeyin; <strong>asansör uyarı ve talimat etiketleri</strong>, denetimlerden başarıyla geçmenin ve <strong>yeşil etiket</strong> almanın en kritik anahtarıdır.
+                    Yönetmeliklere uygun doğru etiketleme yapılmadığında, hem ciddi güvenlik riskleri oluşur hem de ruhsat süreci başarısız olur.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Ayrıca etiketler, firmanızın kurumsal kimliğini ve reklamını taşıyan en görünür yüzüdür.
+                    LiftKeys olarak, sizin yerinize güncel <strong>asansör yönetmeliklerini</strong> takip ediyor;
+                    kabin içi, kapı üstü, <strong>makine dairesi ve kuyu içi güvenlik etiketlerini</strong> standartlara tam uygun şekilde tasarlıyoruz.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    İhtiyacınıza özel malzeme seçenekleri sunuyoruz: Ekonomik ve dayanıklı <strong>PVC etiketler</strong>, uzun ömürlü <strong>metal etiketler</strong>
+                    ve marka algınızı yükselten premium <strong>3D damla etiket</strong> çözümlerimizle asansörünüze değer katıyoruz.
+                    {% endblocktrans %}
+                </p>
+
+                <a href="/atlas-overload/" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/keys.webp' %}"
+                        alt="{% trans "Titreşimi en aza indiren, %100 orijinal ham maddeden üretilmiş dayanıklı asansör kauçuk takozları ve darbe emici lastikler" %}"  width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Asansör Anahtarı" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    LiftKeys, yıllık 500.000 adet üretim kapasitesiyle 1000’den fazla firmaya <strong>asansör güvenlik anahtarı</strong> ve 
+                    <strong>asansör kilit açma anahtarı</strong> tedarik eden sektörün lider üreticisidir. 
+                    Standartların ötesine geçerek, markanızı her kapı açılışında görünür kılıyoruz.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Marka prestijinizi artırmak için tasarlanan <strong>damla etiketli anahtar</strong> modellerimiz, 
+                    etkileyici <strong>3D logo tasarımı</strong> ve premium yüzeyiyle firmanıza özel olarak üretilir. 
+                    Firmanızın reklamını yapan en şık donanımdır.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Yoğun saha kullanımı için geliştirdiğimiz <strong>kalıplı asansör anahtarları</strong> ise kırılmaya karşı dayanıklı gövde yapısıyla öne çıkar. 
+                    Hem <strong>uzun ömürlü kullanım</strong> hem de seri üretim ihtiyaçlarınız için en sağlam ve ekonomik çözümdür.
+                    {% endblocktrans %}
+                </p>
+
+                <a href="/horus-photocell/" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/guide shoes.webp' %}"
+                        alt="{% trans 'Kırılma durumunda dağılmayan güvenlik teknolojisine sahip, çizilmez ve özel tasarım dekoratif asansör camı' %}"  width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Cam Tasarımları & Güvenli Ayna Teknolojisiİ" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    LiftKeys olarak, asansör kabin içi dekorasyonunda **uzun ömürlü ve dekoratif cam çözümleri** üretiyoruz. 
+                    Tamamen **projeye özel asansör cam tasarımı** sürecimizle; 3000’den fazla desen, renk ve model seçeneği sunarak hayalinizdeki kabini gerçeğe dönüştürüyoruz.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Üretimimizde estetik kadar güvenliği de esas alıyoruz. **Çizilmeye dayanıklı yüzey teknolojisi** sayesinde camlarımız ilk günkü parlaklığını korur. 
+                    Daha da önemlisi, **kırılmaya dayanıklı güvenli cam** ve ayna yapımız, yüksek darbe direnci sağlar.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Gelişmiş güvenlik katmanımız sayesinde, olası bir kırılma anında **cam parçalarının dağılmasını önleyen güvenlik tabakası** devreye girer. 
+                    Parçalar etrafa saçılmaz, kabin içindeki yolcu güvenliği maksimum seviyede korunur. 
+                    LiftKeys ile **güvenli asansör aynası** ve estetiği bir arada yaşayın.
+                    {% endblocktrans %}
+                </p>
+
+
+                <a href="#" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="service-card">
+                <div class="icon">
+                    <img src="{% static 'image/preview/swich.webp' %}"
+                        alt="{% trans 'Asansör güvenliği için kritik makaralı limit switch, resetli ve resetsiz emniyet anahtarları' %}"  width="100" height="100" loading="lazy">
+                </div>
+
+                <h2 id="mainh2indexpage">{% trans "Asansör Switchleri" %}</h2>
+                <p>
+                    {% blocktrans trimmed %}
+                    <strong>Asansör güvenlik anahtarları</strong> ve <strong>limit switch</strong> çözümlerimiz; kapı, güvenlik bölgeleri ve mekanik pozisyonları denetleyerek asansörün güvenli çalışmasını garanti eder.
+                    Sistemin "sinir uçları" olan bu anahtarlar, olası kazaları önlemede kritik rol oynar.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    <strong>Makaralı switch (Roller)</strong>, ray üzerindeki hareketle tetiklenir.
+                    Özellikle <strong>limitleme noktalarında</strong> fiziksel temasla kesin konum bilgisi vererek dayanıklı bir kontrol sağlar.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Yüksek güvenlik gerektiren <strong>regülatör ve acil stop</strong> sistemlerinde <strong>resetli switch (manuel)</strong> kullanılır.
+                    Bu siviçler tetiklendiğinde, hata elle giderilmeden sistemin çalışmasına izin vermez, tam koruma sağlar.
+                    {% endblocktrans %}
+                </p>
+
+                <p>
+                    {% blocktrans trimmed %}
+                    Sürekli operasyonlar için tasarlanan <strong>resetsiz switch (otomatik)</strong> ise temas kesildiğinde kendiliğinden devreye girer.
+                    İnsan müdahalesi gerektirmez, asansörün <strong>hızlı ve seri çalışmasını</strong> sağlar.
+                    {% endblocktrans %}
+                </p>
+
+                <a href="/switch-systems/" class="read-more">{% trans "Detayları Gör" %}</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row gx-4">
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/yonetmelige-uygun-asansor-etiketleri-ve-uyari-levha-setleri.webp' %}" 
+            alt="{% trans 'Denetim ve yeşil etiket için gerekli, yönetmeliğe uygun asansör uyarı etiketleri, metal ve 3D damla etiket çözümleri' %}" 
+            class="gallery-image" loading="lazy">
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/ozel-tasarim-logolu-asansor-kilit-acma-anahtari.webp' %}" 
+            alt="{% trans "Firmanıza özel 3D logolu tasarım sunan, kırılmaya dayanıklı asansör kilit açma ve güvenlik anahtarı" %}" 
+            class="gallery-image" loading="lazy">
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/kirilmaya-dayanikli-dekoratif-asansor-cami-ve-guvenli-ayna.webp' %}" 
+            alt="{% trans 'Kırılma durumunda dağılmayan güvenlik teknolojisine sahip, çizilmez ve özel tasarım dekoratif asansör camı' %}" 
+            class="gallery-image" loading="lazy">
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <img src="{% static 'image/preview/asansor-makarali-limit-switch-ve-guvenlik-anahtari.webp' %}" 
+            alt="{% trans 'Asansör güvenliği için kritik makaralı limit switch, resetli ve resetsiz emniyet anahtarları' %}"
+            class="gallery-image" loading="lazy">
+        </div>
+    </div>
+
+</div>
 
 
 
@@ -573,8 +924,8 @@ elektronik ve mekanik bileşenlerle çözümler.
                 {% endblocktrans %}
             </p>
             <ul class="info-links">
-                <li><a href="#">{% trans "Overload Atlas" %}</a></li>
-                <li><a href="#">{% trans "Horus Photocell" %}</a></li>
+                <li><a href="/atlas-overload/">{% trans "Overload Atlas" %}</a></li>
+                <li><a href="/horus-photocell/">{% trans "Horus Photocell" %}</a></li>
                 <li><a href="#">{% trans "Safety Gear" %}</a></li>
             </ul>
         </div>
@@ -588,7 +939,7 @@ elektronik ve mekanik bileşenlerle çözümler.
             </p>
             <ul class="info-links">
                 <li><a href="#">{% trans "Glass" %}</a></li>
-                <li><a href="#">{% trans "Floor" %}</a></li>
+                <li><a href="/zemin/">{% trans "Floor" %}</a></li>
                 <li><a href="#">{% trans "Light" %}</a></li>
             </ul>
         </div>
@@ -616,12 +967,13 @@ elektronik ve mekanik bileşenlerle çözümler.
             </p>
             <ul class="info-links">
                 <li><a href="#">{% trans "Handrail" %}</a></li>
-                <li><a href="#">{% trans "Guide Shose" %}</a></li>
+                <li><a href="/guideshoe/">{% trans "Guide Shose" %}</a></li>
                 <li><a href="#">{% trans "Mechanical" %}</a></li>
             </ul>
         </div>
     </div>
 </div>
+
 
 
 {% include "preview/timeline.html" %}
@@ -643,9 +995,10 @@ elektronik ve mekanik bileşenlerle çözümler.
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({
-        duration: 1000, // animasyon süresi
-        once: true // sadece bir kez çalışsın
-    });
+            duration: 1000,
+            once: true,
+            offset: 50 // Mobilde daha rahat tetiklenmesi için
+        });
 </script>
 
 <script>
@@ -676,8 +1029,5 @@ elektronik ve mekanik bileşenlerle çözümler.
     });
 </script>
 <!-- AOS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+
 {% endblock %}

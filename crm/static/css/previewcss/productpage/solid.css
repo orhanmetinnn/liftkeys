@@ -1,0 +1,123 @@
+
+/* Play Butonu Nabız Efekti */
+.play-btn-pulse {
+    animation: pulse-orange 2s infinite;
+    box-shadow: 0 0 0 0 rgba(240, 130, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+.play-btn-pulse:hover {
+    transform: scale(1.1);
+    background-color: #fff3e0 !important;
+}
+@keyframes pulse-orange {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(240, 130, 0, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(240, 130, 0, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(240, 130, 0, 0); }
+}
+
+/* Video Kartı Hover */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Buton Hover (Yukarı Kalkma) */
+.hover-lift:hover {
+    transform: translateY(-3px);
+    background-color: #d67400 !important;
+    box-shadow: 0 10px 20px rgba(240, 130, 0, 0.3) !important;
+}
+
+/* Metin Satır Aralığı */
+.leading-relaxed {
+    line-height: 1.6;
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+}
+.hover-underline:hover {
+    text-decoration: underline !important;
+}
+.x-small {
+    font-size: 0.85rem;
+}
+.text-orange {
+    color: #F08200 !important;
+}
+
+
+.x-small {
+    font-size: 0.75rem;
+    line-height: 1.2;
+}
+.text-orange {
+    color: #F08200 !important;
+}
+.border-danger {
+    border-color: #dc3545 !important;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+.text-orange {
+    color: #F08200 !important;
+}
+
+
+.transition-hover {
+    transition: all 0.3s ease;
+}
+.transition-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    background-color: #fff !important;
+    border-color: #F08200 !important;
+}
+.text-orange {
+    color: #F08200 !important;
+}
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+.x-small {
+    font-size: 0.85rem;
+}
+
+.bg-gradient-light {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(240,240,240,0) 100%);
+}
+.text-orange {
+    color: #F08200 !important;
+}
+
+.text-orange { color: #F08200 !important; }
+.bg-gradient-light { background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(255,255,255,0) 70%); }
+
+/* Yeşil Pulse Efekti (Robot Kısmı İçin) */
+.pulse-green { animation: pulse-green-anim 2s infinite; }
+@keyframes pulse-green-anim {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(25, 135, 84, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(25, 135, 84, 0); }
+}
+
+/* Hover Lift */
+.hover-lift:hover { transform: translateY(-5px); background-color: #d67400 !important; }
+
+.accordion-button:not(.collapsed) {
+    color: #F08200 !important;
+    background-color: #fff3e0;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F08200'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(240, 130, 0, 0.25);
+    border-color: #F08200;
+}

@@ -170,3 +170,11 @@
         opacity: 1;
         display: block;
     }
+
+
+    @media (max-width: 768px) {
+        #back-to-top {
+            display: none !important;
+            visibility: hidden !important;
+        }
+    }

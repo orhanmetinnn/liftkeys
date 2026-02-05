@@ -28,18 +28,18 @@
     <meta name="twitter:description" content="{% block tw_description %}Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.{% endblock %}">
     <meta name="twitter:image" content="{% block tw_image %}{% endblock %}">
 
-
-
-
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/previwmenu.css' %}">
     <link rel="stylesheet" href="{% static 'css/font.css' %}">
+    <link 
+    rel="preload"
+    as="image"
+    href="{% static 'image/preview/banner-liftkeys-headersformlow.webp' %}"
+    imagesizes="100vw"
+    fetchpriority="high">
 
     {% block extra_css %}{% endblock %}
 
-    <!-- Icon & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
@@ -48,24 +48,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- AOS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- JS -->
     <script src="{% static 'js/chart.js' %}"></script>
+    
     <style>
+        /* Genel Ayarlar */
         body {
-            overflow-x: hidden;
+            overflow-x: hidden; /* Sayfa genelinde yatay taşmayı engelle */
+            -webkit-tap-highlight-color: transparent;
         }
-        /* WhatsApp Widget CSS */
+
+        /* WhatsApp Widget (Masaüstü ve Mobil Ortak) */
         .whatsapp-widget {
             position: fixed;
-            bottom: 20px; /* sayfanın altından uzaklığı */
-            left: 20px;   /* sayfanın solundan uzaklığı */
-            width: 60px;  /* ikon boyutu */
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
             height: 60px;
-            z-index: 9999; /* her zaman üstte */
-            border-radius: 50%; /* yuvarlak ikon */
+            z-index: 9999;
+            border-radius: 50%;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             transition: transform 0.3s;
@@ -74,65 +76,109 @@
         .whatsapp-widget img {
             width: 100%;
             height: 100%;
+            display: block; /* Resim altındaki boşluğu alır */
         }
 
         .whatsapp-widget:hover {
-            transform: scale(1.1); /* hover efekti */
+            transform: scale(1.1);
         }
 
+        /* --- MOBİL GÖRÜNÜM AYARLARI --- */
         @media (max-width: 768px) {
+            
+            /* Menünün altında içerik kalmasın diye boşluk bırakıyoruz */
+            body {
+                padding-bottom: 70px;
+            }
+
             .mobile-bottom-menu {
-                overflow-x: hidden;
                 position: fixed;
                 bottom: 0;
                 left: 0;
-                right: 0;
+                width: 100%;
+                height: 60px;
                 background: #fff;
-                border-top: 1px solid #ddd;
-                padding: 8px 0;
+                border-top: 1px solid #eaeaea;
                 z-index: 9999;
-                display: none; /* varsayılan olarak gizli */
+                
+                /* Esnek Kutu Ayarları */
+                display: flex;
+                align-items: center;
+                /* justify-content: space-around; -> Bunu kaldırıyoruz ki sığmazsa scroll çalışsın */
+                
+                /* Kaydırma ve Sığdırma Ayarları */
+                overflow-x: auto; /* Sığmazsa yatay kaydır */
+                overflow-y: hidden;
+                white-space: nowrap; /* Öğeleri yan yana tut */
+                -webkit-overflow-scrolling: touch; /* Mobilde akıcı kaydırma */
+                
+                /* Scrollbar'ı gizle (Estetik için) */
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none;  /* IE/Edge */
+            }
+
+            .mobile-bottom-menu::-webkit-scrollbar {
+                display: none; /* Chrome/Safari */
             }
 
             .mobile-bottom-menu .menu-item {
-                flex: 1;
-                text-align: center;
-                color: #444;
-                font-size: 0.85rem;
+                /* Her bir öğe için ayarlar */
+                flex: 1 0 auto; /* Büyüyebilir ama küçülmesin, içeriği kadar yer kaplasın */
+                min-width: 70px; /* Bir butonun alacağı minimum genişlik */
+                padding: 5px 0;
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                color: #555;
                 text-decoration: none;
+                font-size: 11px; /* Yazı boyutu */
+            }
+
+            /* Aktif buton veya hover durumu için (Opsiyonel) */
+            .mobile-bottom-menu .menu-item:active {
+                background-color: #f9f9f9;
             }
 
             .mobile-bottom-menu .menu-item i {
-                font-size: 1.4rem;
-                display: block;
+                font-size: 20px;
                 margin-bottom: 4px;
-                color: #f46e21; /* turuncu ikon */
-            }
-            .mobile-bottom-menu {
-                display: flex;
-            }
-            .mobile-bottom-menu {
-                height: 60px; /* alt menü yüksekliği */
+                color: #f46e21;
+                display: block;
             }
 
+            .mobile-bottom-menu .menu-item span {
+                line-height: 1;
+                display: block;
+            }
+
+            /* Mobilde WhatsApp butonunu yukarı taşıyoruz */
             .whatsapp-widget {
-                bottom: calc(60px + 20px); /* menü + ekstra boşluk */
+                bottom: 80px; 
+                left: auto;
+                right: 15px; /* Mobilde sağ tarafta durması daha ergonomiktir */
+                width: 50px;
+                height: 50px;
             }
         }
     </style>
 
 </head>
 <body lang="{{ LANGUAGE_CODE }}">
+    
     {% include "previewtemplates/previewmenu.html" %}
     {% block content %}{% endblock %}
+    
     <a href="https://wa.me/905332880821" 
-        class="whatsapp-widget d-none d-md-block" 
-        target="_blank" 
-        rel="noopener">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+       class="whatsapp-widget d-none d-md-block" 
+       target="_blank" 
+       rel="noopener">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
 
-    <div class="mobile-bottom-menu d-flex justify-content-around align-items-center d-block d-md-none">
+    <div class="mobile-bottom-menu d-md-none">
         <a href="/" class="menu-item">
             <i class="fa-solid fa-house"></i>
             <span>Anasayfa</span>
@@ -154,6 +200,7 @@
             <span>İletişim</span>
         </a>
     </div>
+
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

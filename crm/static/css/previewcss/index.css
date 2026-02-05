@@ -1,13 +1,13 @@
 @media screen and (min-width: 768px) {
 
     .hero-header {
-    width: 100%;
-    height: 600px;
-    position: relative; /* İçindeki resim buna göre hizalanacak */
-    overflow: hidden;   /* Dışarı taşan kısımları gizle */
-    display: flex;
-    align-items: center; /* İçeriği dikey ortala */
-    /* background: url(...) BURADAN SİLİNDİ - ARTIK HTML'DE */
+        width: 100%;
+        min-height: 60vh;
+        max-height: 700px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
     }
 
     /* --- ARKA PLAN RESMİ (CSS Gibi Davranan HTML Resim) --- */
@@ -24,8 +24,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover; /* Resmi uzatmadan kutuyu doldurur (background-size: cover ile aynı) */
-        object-position: center; /* Resmi ortalar */
-        display: block;
     }
 
     /* --- SİYAH PERDE (Overlay) --- */
@@ -689,10 +687,9 @@
     }
 
     .service-card p {
-        font-size: 0.95rem;
+        font-size: 0.80rem;
         color: #6c757d;
         /* Açıklama metni rengi */
-        line-height: 1.6;
     }
 
     .service-card .read-more {
@@ -873,7 +870,7 @@
 
     .hero-bg-img {
         width: 100%;
-        height: 80%;
+        min-height: 100vh;
         object-fit: cover; /* Resmi uzatmadan kutuyu doldurur (background-size: cover ile aynı) */
         object-position: center; /* Resmi ortalar */
         display: block;

@@ -6,5 +6,5 @@ register = template.Library()
 def product_url(context, product):
     request = context.get("request")
     url = product.get_absolute_url(request=request)
-    print("DEBUG product_url:", product.name, "=>", url)
+    # print("DEBUG product_url:", product.name, "=>", url)
     return url
