@@ -1,0 +1,81 @@
+.play-btn-pulse {
+    animation: pulse-orange 2s infinite;
+    box-shadow: 0 0 0 0 rgba(240, 130, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+.play-btn-pulse:hover {
+    transform: scale(1.1);
+    background-color: #fff3e0 !important;
+}
+@keyframes pulse-orange {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(240, 130, 0, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(240, 130, 0, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(240, 130, 0, 0); }
+}
+
+/* Video Kartı Hover */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Buton Hover (Yukarı Kalkma) */
+.hover-lift:hover {
+    transform: translateY(-3px);
+    background-color: #d67400 !important;
+    box-shadow: 0 10px 20px rgba(240, 130, 0, 0.3) !important;
+}
+
+/* Metin Satır Aralığı */
+.leading-relaxed {
+    line-height: 1.6;
+}
+
+
+.hover-zoom {
+    transition: transform 0.4s ease;
+}
+.detail-card:hover .hover-zoom {
+    transform: scale(1.05);
+}
+
+/* Liste Kartları Hover Efekti */
+.hover-bg-white:hover {
+    background-color: #fff !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-color: #F08200 !important;
+    transform: translateX(5px);
+}
+.transition-all {
+    transition: all 0.3s ease;
+}
+.text-orange {
+    color: #F08200 !important;
+}
+
+
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+.hover-shadow:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    transform: translateY(-5px);
+    background-color: white !important;
+}
+
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    background-color: #d67400 !important;
+    box-shadow: 0 15px 30px rgba(240, 130, 0, 0.3) !important;
+}
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+.hover-shadow:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    border-color: #F08200 !important;
+}

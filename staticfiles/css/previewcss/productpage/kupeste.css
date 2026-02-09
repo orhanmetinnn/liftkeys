@@ -1,0 +1,723 @@
+/* 1. Header Alanı Tasarımı */
+.liftkeys-title-bar {
+    background-color: #F08200;
+    /* Görseldeki tam turuncu ton */
+    color: #ffffff;
+    border-radius: 6px;
+    /* Hafif yuvarlatılmış köşeler */
+    padding: 18px 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Hafif gölge */
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.liftkeys-title-text {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    /* İnce/Light yazı tipi */
+    margin-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* 2. Video/Görsel Alanı Tasarımı */
+.video-thumbnail-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Görselin öne çıkması için gölge */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail-wrapper:hover {
+    transform: scale(1.01);
+    /* Üzerine gelince çok hafif büyür */
+}
+
+/* Play Butonu (CSS ile Çizim) */
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.play-button-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #333;
+    /* Ok rengi */
+    margin-left: 4px;
+    /* Oku görsel olarak ortalamak için */
+}
+
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
+
+/* 3. Sağ Slogan Metni */
+.slogan-container {
+    color: #555;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding-left: 15px;
+}
+
+.slogan-bold {
+    font-weight: 700;
+    color: #333;
+    display: block;
+    /* Alt satıra atar */
+    margin-top: 5px;
+}
+
+
+.product-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.04); /* Çok hafif çerçeve */
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Yumuşak yaylanma efekti */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Kartın üzerine gelince */
+.product-card:hover {
+    transform: translateY(-10px); /* Yukarı kalkma */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Derin gölge */
+    border-color: #F08200; /* Kenarlık turuncu olur */
+}
+
+/* Ürün Görseli */
+.product-card img {
+    transition: transform 0.5s ease;
+    max-height: 160px;
+    object-fit: contain;
+}
+
+.product-card:hover img {
+    transform: scale(1.05); /* Resim hafif büyür */
+}
+
+/* Ürün Başlığı */
+.product-title {
+    font-family: 'Segoe UI', sans-serif;
+    color: #444;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+}
+
+/* Başlık altındaki küçük çizgi */
+.product-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e0e0e0;
+    margin: 10px auto 0;
+    transition: width 0.3s, background 0.3s;
+    border-radius: 2px;
+}
+
+.product-card:hover .product-title::after {
+    width: 60px;
+    background: #F08200; /* Hover'da çizgi uzar ve turuncu olur */
+}
+
+/* CATALOG BUTONU (PREMIUM) */
+.cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.btn-premium-orange {
+    background: linear-gradient(135deg, #F08200 0%, #ff9d3f 100%); /* Degrade Turuncu */
+    color: white;
+    padding: 18px 30px;
+    border-radius: 50px; /* Hap şeklinde buton */
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(240, 130, 0, 0.3); /* Turuncu gölge */
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+.btn-premium-orange:hover {
+    background: linear-gradient(135deg, #d67000 0%, #F08200 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(240, 130, 0, 0.4);
+    color: white;
+}
+
+.btn-premium-orange i, .btn-premium-orange svg {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.btn-premium-orange:hover svg {
+    transform: translateX(-5px); /* İkon sola hafif kayar */
+}
+
+/* ALT METİN ALANI */
+.section-footer-text {
+    max-width: 750px;
+    margin: 0 auto;
+}
+.section-title-large {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+.section-desc {
+    font-size: 1.15rem;
+    color: #6c757d;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+.pipes-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #777; /* Görseldeki gri ton */
+    margin-bottom: 30px;
+    text-align: left; /* Görselde başlık solda */
+}
+
+/* Resimlerin Kapsayıcısı */
+.pipe-image-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Resimlere hafif hover efekti (İstersen kaldırabilirsin) */
+.pipe-image-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+/* Alt Bilgi Metinleri */
+.pipe-footer-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.info-main-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #666; /* Koyu gri */
+    margin-bottom: 10px;
+}
+
+.info-sub-text {
+    font-size: 1.1rem;
+    color: #888; /* Daha açık gri */
+    line-height: 1.6;
+}
+
+
+
+
+/* GENEL ALAN AYARLARI */
+    .tech-section-wrapper {
+        padding: 50px 0;
+        background-color: #fff;
+    }
+
+    /* BAŞLIK */
+    .tech-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        color: #777;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    .tech-header svg {
+        margin-right: 10px;
+    }
+
+    /* SOL TARAFTAKİ BÜYÜK TEKNİK ÇİZİM */
+    .drawing-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding-right: 20px; /* Sağ tarafla mesafe */
+    }
+
+    /* SAĞ TARAFTAKİ ÜRÜN KUTULARI */
+    .elbow-item {
+        display: flex;
+        flex-direction: column; /* Resmi ve yazıyı alt alta kilitler */
+        align-items: center; /* Yatayda tam ortalar */
+        justify-content: flex-end; /* Alt hizaya yaslar */
+        margin-bottom: 25px;
+        transition: transform 0.3s;
+    }
+
+    .elbow-item:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Ürün Resmi Ayarı */
+    .elbow-img {
+        max-height: 100px; /* Resim yüksekliğini sabitledik, hepsi eşit durur */
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 8px; /* Yazı ile resim arası boşluk */
+    }
+
+    /* Ürün İsimleri (Çizgili) */
+    .elbow-name {
+        font-size: 1rem;
+        color: #888;
+        font-weight: 600;
+        border-bottom: 2px solid #ccc; /* Alt çizgi */
+        padding-bottom: 2px;
+        display: inline-block;
+        line-height: 1.2;
+    }
+
+    /* ALT AÇIKLAMA */
+    .footer-desc {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #888;
+        max-width: 800px;
+        margin: 20px auto 0;
+        line-height: 1.5;
+    }
+
+
+
+
+/* Bölüm Arka Planı */
+.color-match-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+/* Sol Taraftaki Resim Listesi */
+.handrail-stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Resimler arası boşluk */
+}
+
+.handrail-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    /* Hafif bir gölge ekleyerek ürünleri öne çıkaralım */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); 
+}
+
+.handrail-img:hover {
+    transform: scale(1.02) translateX(10px); /* Üzerine gelince hafif büyür ve sağa kayar */
+}
+
+/* Sağ Taraftaki Slogan Metni */
+.match-text-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center; /* Dikeyde ortalar */
+    padding-left: 20px;
+}
+
+.match-slogan {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.2rem; /* Büyük ve okunaklı */
+    font-weight: 700; /* Kalın yazı */
+    color: #888; /* Görseldeki gri ton */
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.match-slogan strong {
+    color: #666; /* Bir tık daha koyu vurgu */
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .match-slogan {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 30px;
+        padding-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bölüm Arka Planı (Hafif bir ton farkı ile ayrım yapabiliriz veya beyaz bırakabiliriz) */
+    .combination-section {
+        padding: 60px 0;
+        background-color: #f9f9f9; /* Bir önceki bölüm beyazsa bunu çok hafif gri yapabiliriz */
+    }
+
+    /* Sağ Taraftaki Resim Listesi */
+    .combination-stack-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .combo-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+
+    .combo-img:hover {
+        transform: scale(1.02) translateX(-10px); /* Sola doğru hafif hareket (Yazıya doğru) */
+    }
+
+    /* Sol Taraftaki Slogan Metni */
+    .combo-text-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Yazıyı sağa (resimlere) yaslar */
+        padding-right: 30px; /* Resimlerle arasına biraz mesafe */
+    }
+
+    .combo-slogan {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #888;
+        line-height: 1.3;
+        text-align: right; /* Metni sağa hizala */
+        letter-spacing: -0.5px;
+    }
+
+    .combo-slogan strong {
+        color: #555;
+        font-weight: 700;
+        display: block; /* Alt satıra vurgulu geçiş için */
+    }
+
+    /* Mobil Uyumluluk */
+    @media (max-width: 992px) {
+        .combo-text-wrapper {
+            justify-content: center;
+            padding-right: 0;
+            margin-bottom: 40px; /* Mobilde yazı üstte, resim altta olacağı için boşluk */
+        }
+        .combo-slogan {
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        .combo-img:hover {
+            transform: scale(1.02); /* Mobilde sadece büyüsün, yana kaymasın */
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.measurement-guide-section {
+        padding: 70px 0;
+        background-color: #fff;
+    }
+
+    /* Sol Görsel (Kabin) */
+    .cabin-measure-img {
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Hafif derinlik */
+        width: 100%;
+        height: auto;
+    }
+
+    /* Sağ İçerik Alanı */
+    .guide-content-wrapper {
+        padding-left: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Başlık ve Metinler */
+    .guide-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .guide-text {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    /* Teknik Şema Görseli */
+    .diagram-img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        /* Şemayı biraz belirginleştirmek için hafif kontrast */
+        filter: contrast(1.05); 
+    }
+
+    /* Hesaplama Formülü Kutusu (Görseldeki W - 140 kısmı için ekstra vurgu) */
+    .formula-box {
+        background-color: #f8f9fa;
+        border-left: 4px solid #F08200;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 4px;
+        font-family: monospace;
+        color: #555;
+    }
+    .formula-highlight {
+        font-weight: 700;
+        color: #333;
+        font-size: 1.2rem;
+    }
+
+    /* Mobil Düzenleme */
+    @media (max-width: 992px) {
+        .guide-content-wrapper {
+            padding-left: 0;
+            margin-top: 40px;
+        }
+        .diagram-img {
+            max-width: 80%; /* Mobilde şema çok devasa durmasın */
+            margin: 20px auto 0;
+            display: block;
+        }
+    }
+
+
+
+.assembly-process-section {
+        padding: 60px 0;
+        background-color: #fff;
+    }
+
+    /* Satırlar Arası Boşluk */
+    .process-row {
+        margin-bottom: 60px; /* Her adım arasında boşluk */
+    }
+    .process-row:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Görsel Ayarları */
+    .process-img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        /* Görsellerin net durması için hafif kontrast */
+        transition: transform 0.3s ease;
+    }
+    
+    .process-img:hover {
+        transform: scale(1.02);
+    }
+
+    /* Metin Alanı Ayarları */
+    .process-content {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .process-text {
+        color: #666; /* Görseldeki gri ton */
+        font-size: 1.15rem;
+        line-height: 1.8; /* Okunabilirliği artırmak için satır aralığı */
+        font-weight: 400;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* O-Ring Kısmındaki Vurgu */
+    .highlight-text {
+        font-weight: 600;
+        color: #444;
+    }
+
+    /* Mobil Düzenleme */
+    @media (max-width: 768px) {
+        .process-row {
+            margin-bottom: 40px;
+            text-align: center; /* Mobilde yazılar ortalansın */
+        }
+        .process-content {
+            padding: 0;
+            margin-top: 20px;
+        }
+        /* Mobilde her zaman önce resim, sonra yazı gelsin istersek */
+        .order-mobile-image {
+            order: 1;
+        }
+        .order-mobile-text {
+            order: 2;
+        }
+    }
+
+
+
+
+    .packaging-section {
+        padding: 60px 0;
+        background-color: #fcfcfc; /* Çok hafif gri, kutuyla uyumlu */
+    }
+
+    /* Sol Taraf: Liste Stili */
+    .content-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #777; /* Görseldeki gri başlık rengi */
+        margin-bottom: 20px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .content-list {
+        list-style: none; /* Standart noktaları kaldır */
+        padding: 0;
+        margin: 0;
+    }
+
+    .content-list li {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 15px;
+    }
+
+    /* Liste maddelerinin başına küçük gri nokta koyalım */
+    .content-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #999;
+        font-weight: bold;
+    }
+
+    /* Orta: Kutu Resmi */
+    .box-image {
+        max-width: 100%;
+        height: auto;
+        /* Kutuya hafif bir derinlik katalım */
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+        transition: transform 0.3s;
+    }
+    
+    .box-image:hover {
+        transform: scale(1.03);
+    }
+
+    /* Sağ Taraf: Ölçü Tablosu */
+    .spec-header-large {
+        font-size: 1.5rem;
+        color: #777;
+    }
+    .spec-count {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #666;
+    }
+
+    .spec-subtitle {
+        font-size: 1.1rem;
+        text-decoration: underline;
+        color: #888;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    /* Satırlı Ölçü Yapısı */
+    .spec-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end; /* Alt çizgi hizası için */
+        margin-bottom: 12px;
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .spec-label {
+        font-weight: 400;
+        background-color: #fcfcfc; /* Arka plan rengiyle aynı olsun ki çizgi arkada kalsın */
+        padding-right: 10px;
+        z-index: 1;
+    }
+
+    .spec-value {
+        font-weight: 600;
+        background-color: #fcfcfc;
+        padding-left: 10px;
+        z-index: 1;
+    }
+
+    /* Araya çizgi çekmek için sanal bir eleman */
+    .spec-line {
+        flex-grow: 1;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 5px; /* Yazının biraz altına */
+    }

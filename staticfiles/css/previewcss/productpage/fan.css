@@ -1,0 +1,98 @@
+.play-btn-pulse {
+    animation: pulse-orange 2s infinite;
+    box-shadow: 0 0 0 0 rgba(240, 130, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.play-btn-pulse:hover {
+    transform: scale(1.1);
+    background-color: #fff3e0 !important;
+}
+
+@keyframes pulse-orange {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(240, 130, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(240, 130, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(240, 130, 0, 0);
+    }
+}
+
+/* Ürün Kartı Hover Efekti */
+.product-showcase-card {
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.product-showcase-card:hover {
+    background-color: #fff !important;
+    border-color: #F08200;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-showcase-card:hover img {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Buton Hover */
+.btn:hover {
+    background-color: #d67400 !important;
+    transform: translateY(-2px);
+}
+
+.wind-effect-container img {
+    animation: gentle-wind 3s infinite ease-in-out;
+    transform-origin: bottom center;
+}
+
+@keyframes gentle-wind {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Rüzgar/Sallantı Efekti (Bayraklı görsel için) */
+.wind-effect-container img {
+    animation: gentle-wind 3s infinite ease-in-out;
+    transform-origin: bottom center;
+}
+
+@keyframes gentle-wind {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.text-orange {
+    color: #F08200 !important;
+}
+
+.btn-lg:hover {
+    background-color: #d67400 !important;
+    transform: scale(1.05);
+}
+.text-orange { color: #F08200 !important; }

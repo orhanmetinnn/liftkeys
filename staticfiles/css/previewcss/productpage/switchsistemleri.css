@@ -1,0 +1,200 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* TURUNCU BAŞLIK KISMI */
+.liftkeys-header {
+    background-color: #F08200;
+    /* Görseldeki turuncu tonu */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.liftkeys-header i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* VİDEO/RESİM ALANI */
+.video-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.video-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+/* Play Butonu Efekti */
+.play-btn-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F08200;
+    font-size: 4rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.video-wrapper:hover .play-btn-overlay {
+    background: #fff;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* SAĞ TARAFTAKİ SLOGAN */
+.side-quote {
+    color: #6c757d;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-left: 0px solid #F08200;
+    /* İsteğe bağlı çizgi */
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* ALT KISIM (METİN VE BUTON) */
+.bottom-section {
+    margin-top: 40px;
+    align-items: center;
+}
+
+.standard-text {
+    color: #6c757d;
+    font-size: 1.3rem;
+}
+
+.standard-text strong {
+    color: #495057;
+    font-weight: 700;
+}
+
+/* KATALOG İNDİR BUTONU */
+.catalog-btn {
+    background-color: #F08200;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.catalog-btn:hover {
+    background-color: #d67400;
+    color: white;
+}
+
+.catalog-btn i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+
+.section-title {
+    color: #6c757d;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+
+.section-desc {
+    color: #888;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Öne Çıkan Alıntı Kutusu */
+.feature-quote {
+    border-left: 4px solid #F08200;
+    /* LiftKeys Turuncusu */
+    padding-left: 20px;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    color: #495057;
+    font-weight: 500;
+    font-style: italic;
+    background: linear-gradient(90deg, #fff3e0 0%, transparent 100%);
+    /* Hafif turuncu geçiş */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Başlık Stili */
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Özellik Listesi (Görevi, Çalışma Prensibi vb.) */
+.tech-list-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.tech-list-icon {
+    color: #F08200;
+    font-size: 1.1rem;
+    margin-top: 4px;
+    margin-right: 12px;
+    min-width: 20px;
+}
+
+.tech-label {
+    font-weight: 700;
+    color: #555;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.tech-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Resim Stilleri */
+.showcase-img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Derinlik katan gölge */
+    transition: transform 0.3s ease;
+}
+
+.showcase-img:hover {
+    transform: translateY(-5px);
+    /* Üzerine gelince hafif yukarı kalkar */
+}

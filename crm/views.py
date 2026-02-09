@@ -1680,3 +1680,12 @@ def solid_view(request):
     Liftkeys Solid Makina blog yazısını render eder.
     """
     return render(request, "preview/previewblog/solid.html")
+
+
+
+
+def kupeste_view(request):
+    """
+    Liftkeys Küpeşte blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/kupeste.html")
