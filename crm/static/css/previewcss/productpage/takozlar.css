@@ -1,0 +1,721 @@
+/* Ana Renk Tanımlaması (Görselden alınan turuncu) */
+:root {
+    --liftkeys-orange: #F38002;
+    --liftkeys-dark: #333333;
+}
+
+/* Header Tasarımı */
+.liftkeys-header {
+    background-color: var(--liftkeys-orange);
+    border-radius: 8px; /* Köşeleri hafif yumuşattık */
+}
+
+.header-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Header İkonu (CSS ile basit çizim) */
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    gap: 4px;
+}
+.icon-bar {
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    border-radius: 2px;
+}
+.icon-circle {
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Görsel ve Play Butonu */
+.image-container {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-container:hover {
+    transform: scale(1.02); /* Üzerine gelince hafif büyüme efekti */
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-container:hover .play-button {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255,255,255,0.4);
+}
+
+.play-triangle {
+    width: 0; 
+    height: 0; 
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid var(--liftkeys-orange); /* İkon rengi turuncu */
+    margin-left: 5px; /* Ortalamak için ince ayar */
+}
+
+/* Yazı Alanı */
+.custom-quote {
+    border-left: 5px solid var(--liftkeys-orange);
+    padding-left: 25px;
+}
+
+.custom-quote p {
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.2rem;
+    }
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+    .custom-quote p {
+        font-size: 1.5rem; /* Mobilde yazı boyutu ayarı */
+    }
+}
+
+
+
+.btn-catalog {
+    background-color: var(--liftkeys-orange);
+    color: white;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--liftkeys-orange);
+}
+
+.btn-catalog:hover {
+    background-color: white;
+    color: var(--liftkeys-orange);
+    transform: translateY(-2px); /* Butonun hafif yukarı kalkması */
+}
+
+/* Ürün Kartları */
+.product-item {
+    padding: 15px;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Üzerine gelince hafif yükselme */
+    background-color: #f9f9f9; /* Çok hafif bir arka plan değişimi */
+}
+
+.product-image img {
+    max-height: 180px; /* Resimlerin maksimum yüksekliğini sabitledik */
+    object-fit: contain; /* Resim oranını bozmadan sığdırır */
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); /* Ürünlere hafif gölge vererek 3D hissi katar */
+}
+
+.product-title {
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* Responsive Font Ayarları */
+@media (max-width: 768px) {
+    .btn-catalog {
+        width: 100%; /* Mobilde buton tam genişlik */
+    }
+    
+    .product-image img {
+        max-height: 120px; /* Mobilde resimler biraz daha küçük */
+    }
+}
+
+
+
+
+
+
+
+
+/* --- Makine Takozu Detay Bölümü --- */
+
+/* Özellik Başlıkları */
+.feature-head {
+    color: var(--liftkeys-orange); /* Marka rengi */
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* Özellik Açıklamaları */
+.feature-desc {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* 2500 KG Rozeti */
+.badge-box {
+    background-color: var(--liftkeys-dark);
+    color: var(--liftkeys-orange);
+    font-weight: 800;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Görsel Alanı Dekorasyonu */
+.detail-image-wrapper {
+    padding: 20px;
+}
+
+.bg-circle-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background-color: #f8f9fa; /* Çok açık gri */
+    border-radius: 50%;
+    z-index: 1;
+    border: 1px solid #e9ecef;
+}
+
+.main-product-img {
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2)); /* Güçlü bir gölge ile ürün öne çıkar */
+    transition: transform 0.5s ease;
+}
+
+.detail-image-wrapper:hover .main-product-img {
+    transform: scale(1.05) rotate(2deg); /* Hover'da hafif hareket */
+}
+
+/* Mobil Düzenlemeler */
+@media (max-width: 992px) {
+    .bg-circle-decoration {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .detail-image-wrapper {
+        margin-top: 40px; /* Mobilde görsel ile yazı arasına boşluk */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- L Takoz Bölümü --- */
+
+/* Görsel Dekorasyonu (Kare) */
+.bg-square-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg); /* Hafif eğik kare */
+    width: 320px;
+    height: 320px;
+    background-color: #e2e6ea; /* Koyu gri dekorasyon */
+    border-radius: 20px;
+    z-index: 1;
+    transition: transform 0.6s ease;
+}
+
+.l-mount-image-wrapper:hover .bg-square-decoration {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.1); /* Hover'da düzelip büyüyen efekt */
+}
+
+.l-mount-img {
+    filter: drop-shadow(-10px 10px 20px rgba(0,0,0,0.15));
+    transition: transform 0.3s ease;
+}
+
+.l-mount-image-wrapper:hover .l-mount-img {
+    transform: scale(1.03);
+}
+
+/* Özellik Listesi Stilleri */
+.feature-item-bordered {
+    border-left: 4px solid var(--liftkeys-orange); /* Sol tarafa turuncu çizgi */
+    padding-left: 15px;
+    background: linear-gradient(90deg, rgba(243, 128, 2, 0.05) 0%, rgba(255,255,255,0) 100%); /* Hafif gradient arka plan */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Diğer özellikler için hover efekti */
+.feature-item {
+    padding-left: 15px;
+    border-left: 4px solid transparent; /* Hizalamayı korumak için */
+    transition: border-color 0.3s ease;
+}
+
+.feature-item:hover {
+    border-left: 4px solid #ddd; /* Hover'da gri çizgi belirsin */
+}
+
+@media (max-width: 992px) {
+    .bg-square-decoration {
+        width: 250px;
+        height: 250px;
+    }
+    .feature-item-bordered, .feature-item {
+        padding-left: 0;
+        border-left: none; /* Mobilde çizgiyi kaldırıp düz yapabiliriz */
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+}
+
+
+
+
+/* --- Yuvarlak Takoz Bölümü --- */
+
+/* İkon Kutuları */
+.feature-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.bg-orange {
+    background-color: var(--liftkeys-orange);
+}
+
+/* Ripple (Dalga) Animasyon Efekti - Titreşimi sembolize eder */
+.round-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Görsel alanını sabitleyelim */
+}
+
+.ripple-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--liftkeys-orange);
+    opacity: 0.1;
+    animation: ripple 3s infinite linear;
+}
+
+.xxlarge { width: 350px; height: 350px; animation-delay: 0s; }
+.xlarge { width: 250px; height: 250px; animation-delay: 1s; }
+.large { width: 150px; height: 150px; animation-delay: 2s; }
+
+@keyframes ripple {
+    0% { transform: scale(0.8); opacity: 0.2; }
+    50% { transform: scale(1.1); opacity: 0.05; }
+    100% { transform: scale(0.8); opacity: 0.2; }
+}
+
+.round-product-img {
+    max-height: 300px;
+    transition: transform 0.5s ease;
+}
+
+.round-image-wrapper:hover .round-product-img {
+    transform: rotate(15deg) scale(1.1); /* Hover'da yuvarlanma hissi */
+}
+
+/* Mobil Ayarı */
+@media (max-width: 992px) {
+    .round-image-wrapper {
+        height: auto;
+        padding: 40px 0;
+    }
+    .circle {
+        display: none; /* Mobilde karmaşayı önlemek için dalgaları gizleyebiliriz veya küçültebiliriz */
+    }
+}
+
+
+
+
+
+/* --- MRL Kare Takoz Bölümü --- */
+
+/* Teknik Grid Arka Planı (CSS ile Desen) */
+.tech-grid-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-image: 
+        linear-gradient(#ddd 1px, transparent 1px),
+        linear-gradient(90deg, #ddd 1px, transparent 1px);
+    background-size: 20px 20px; /* Karelerin boyutu */
+    opacity: 0.6;
+    z-index: 0;
+    border: 1px solid #ccc;
+}
+
+/* Dekoratif Çerçeve (Kare vurgusu için) */
+.tech-border-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%); /* Hafif kaydırma */
+    width: 280px;
+    height: 280px;
+    border: 2px dashed var(--liftkeys-orange);
+    z-index: 1;
+    opacity: 0.4;
+    transition: all 0.5s ease;
+}
+
+.mrl-image-wrapper:hover .tech-border-frame {
+    transform: translate(-50%, -50%) rotate(90deg); /* Hover'da çerçeve döner */
+    opacity: 0.8;
+}
+
+.mrl-product-img {
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.mrl-image-wrapper:hover .mrl-product-img {
+    transform: scale(1.05);
+}
+
+/* Metin İçindeki Sayısal Vurgular */
+.tech-highlight {
+    color: var(--liftkeys-orange);
+    font-weight: 700;
+    background-color: rgba(243, 128, 2, 0.1); /* Çok hafif turuncu zemin */
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+/* Liste Stili */
+.tech-item {
+    position: relative;
+    padding-left: 20px;
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--liftkeys-dark); /* Koyu gri nokta */
+    transform: rotate(45deg); /* Kare nokta (elmas) */
+}
+
+@media (max-width: 992px) {
+    .tech-grid-pattern {
+        width: 240px;
+        height: 240px;
+    }
+    .tech-border-frame {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+
+
+
+/* --- Uyarı Bölümü (Koyu Tema) --- */
+
+.warning-section {
+    background-color: #1a1a1a; /* Koyu Gri/Siyah zemin */
+    background-image: radial-gradient(circle at top right, #2c2c2c 0%, #1a1a1a 100%);
+    position: relative;
+}
+
+/* Kart Tasarımı */
+.warning-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Şeffaf beyaz */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Efekti - Kart Parlaması */
+.warning-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Kartın soluna ince bir uyarı çizgisi ekleyelim */
+.warning-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--liftkeys-orange); /* Varsayılan turuncu */
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.warning-card:hover::before {
+    opacity: 1;
+}
+
+/* İkon Kutusu */
+.icon-box {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+/* Metin İyileştirmeleri */
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.6) !important; /* Okunabilirliği artırır */
+    line-height: 1.6;
+}
+
+/* Başlık Vurgusu */
+.text-warning {
+    color: var(--liftkeys-orange) !important;
+}
+
+/* Mobil Ayarlar */
+@media (max-width: 768px) {
+    .warning-card {
+        padding: 20px;
+    }
+    .display-5 {
+        font-size: 2rem; /* Mobilde başlığı küçült */
+    }
+}
+
+
+
+
+
+/* --- Uyarı Bölümü (Beyaz Tema - Light Version) --- */
+
+/* Kart Temel Yapısı */
+.warning-card-light {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef; /* Çok hafif gri çerçeve */
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Çok hafif gölge */
+    border-top: 4px solid #dc3545; /* Varsayılan: Kırmızı Üst Çizgi (Tehlike) */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Turuncu Çizgili Kartlar İçin (Enerji ve Gürültü) */
+.warning-card-light.warning-border-orange {
+    border-top: 4px solid var(--liftkeys-orange);
+}
+
+/* Hover Efekti */
+.warning-card-light:hover {
+    transform: translateY(-8px); /* Yukarı doğru hareket */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* Gölge belirginleşir */
+    border-color: #dee2e6;
+}
+
+/* İkon Kutusu Tasarımı */
+.card-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Yuvarlak ikon kutusu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+/* Bootstrap renklerinin yumuşak tonları (Subtle Backgrounds) */
+.bg-danger-subtle {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.bg-warning-subtle {
+    background-color: rgba(243, 128, 2, 0.1); /* Marka renginin açığı */
+}
+
+/* Mobil için metin genişliği ayarı */
+@media (max-width: 768px) {
+    .warning-section-light .w-75 {
+        width: 100% !important; /* Mobilde yazıyı tam genişlik yap */
+    }
+}
+
+
+
+
+/* --- Uzman Görüşü / Sonuç Bölümü --- */
+
+/* Badge Rengi */
+.bg-orange {
+    background-color: var(--liftkeys-orange) !important;
+}
+
+.text-orange {
+    color: var(--liftkeys-orange) !important;
+}
+
+/* Soru Kutusu */
+.question-box {
+    border-left: 5px solid var(--liftkeys-orange); /* Sol tarafa turuncu çizgi */
+    transition: transform 0.3s ease;
+}
+
+.question-box:hover {
+    transform: translateX(5px); /* Üzerine gelince hafif sağa kayar */
+}
+
+/* Sağ Taraf: Mesaj Kartı Tasarımı */
+.final-message-card {
+    background-color: #333; /* Yedek renk */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    min-height: 400px; /* Yükseklik vererek görsel etkisini artırıyoruz */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arka Plan Gradient Efekti */
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Turuncudan Koyu Griye Geçiş */
+    background: linear-gradient(135deg, var(--liftkeys-orange) 0%, #2c2c2c 100%);
+    opacity: 0.95;
+    z-index: 1;
+}
+
+/* İçerik Kutusu */
+.final-message-card .content-box {
+    z-index: 2; /* Gradientin üzerinde kalması için */
+}
+
+/* İkon Animasyonu */
+.final-message-card i {
+    display: inline-block;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    5% { transform: scale(1.1); }
+    10% { transform: scale(1); }
+    15% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+/* Mobil Düzenleme */
+@media (max-width: 992px) {
+    .final-message-card {
+        margin-top: 30px;
+        min-height: auto;
+        padding: 40px 20px;
+    }
+}
+
+
+/* --- FAQ (Sık Sorulanlar) Bölümü Tasarımı --- */
+
+/* Metin Ayarları */
+.ls-2 {
+    letter-spacing: 2px; /* Harf aralığını açar, şık durur */
+}
+
+/* Accordion Genel Yapısı */
+.custom-accordion .accordion-item {
+    background-color: #f8f9fa; /* Hafif gri zemin */
+    transition: all 0.3s ease;
+}
+
+.custom-accordion .accordion-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important; /* Hover'da gölge artar */
+    background-color: #fff;
+}
+
+/* Accordion Butonu (Kapalı Hali) */
+.custom-accordion .accordion-button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none !important; /* Mavi çizgiyi kaldırır */
+    font-size: 1.1rem;
+}
+
+/* Accordion Butonu (Açık Hali - Active) */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--liftkeys-orange) !important; /* Açılınca yazı turuncu olur */
+    box-shadow: none;
+}
+
+/* İkon Rengi (Açılınca) */
+.custom-accordion .accordion-button:not(.collapsed) i {
+    color: var(--liftkeys-orange) !important;
+}
+
+/* Sağdaki Ok İşareti (Chevron) */
+.custom-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform 0.3s ease;
+}
+
+/* Açılınca Ok İşaretinin Rengi Turuncu Olsun */
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F38002'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}

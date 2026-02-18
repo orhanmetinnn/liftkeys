@@ -67,6 +67,7 @@ urlpatterns = [
     path("guideshoe/", views.paten_view, name="paten_view"),
     path("solid/", views.solid_view, name="solid_view"),
     path("kupeste/", views.kupeste_view, name="kupeste_view"),
+    path("takozlar/", views.takozlar_view, name="takozlar_view"),
 ]
 
 

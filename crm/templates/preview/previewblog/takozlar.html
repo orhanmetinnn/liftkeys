@@ -1,0 +1,819 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load static %}
+{% load i18n %}
+
+{# --- META BLOKLARI (Vibrasyon Takozları İçin Düzenlendi) --- #}
+{% block title %}
+{% trans "LiftKeys Asansör Vibrasyon Takozları | Makine Motor ve Şase Lastikleri" %}
+{% endblock %}
+
+{% block meta_description %}
+{% blocktrans %}
+LiftKeys Vibrasyon Takozları ile asansör gürültüsünü ve titreşimi kaynağında durdurun.
+%100 gerçek kauçuk, 95 Shore sertlik, MRL kare takoz, L tipi ve yuvarlak sönümleyici
+modelleriyle konforu ve halat ömrünü artırın.
+{% endblocktrans %}
+{% endblock %}
+
+{% block meta_robots %}index,follow{% endblock %}
+
+{% block meta_keywords %}
+{% trans "asansör takozu, vibrasyon takozu, asansör titreşim önleyici, makine motor takozu, asansör lastiği, kuyu dibi takoz, MRL takoz, kare takoz, L takoz, asansör ses izolasyonu, liftkeys, 95 shore kauçuk" %}
+{% endblock %}
+
+{% block og_type %}product{% endblock %}
+
+{% block og_title %}
+{% trans "LiftKeys | Asansör Titreşim Önleyici Vibrasyon Takozları" %}
+{% endblock %}
+
+{% block og_description %}
+{% blocktrans %}
+Titreşimi azaltır, konforu artırır.
+Asansör motoru ve kabin için özel üretilmiş, çökme yapmayan gerçek kauçuk takozlar.
+Makinenizi koruyun, gürültüyü yok edin.
+{% endblocktrans %}
+{% endblock %}
+
+{# Ürün grubu görselini (hazırladığımız ilk görsel) kullanıyoruz #}
+{% block og_image %}{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.webp' %}{% endblock %}
+
+{% block tw_title %}
+{% trans "LiftKeys | Asansör Makine ve Motor Takoz Çözümleri" %}
+{% endblock %}
+
+{% block tw_description %}
+{% blocktrans %}
+Ucuz takozun pahalı faturasını ödemeyin.
+Halat ve kasnak ömrünü uzatan, %100 orijinal kauçuktan üretilen LiftKeys takozlarını keşfedin.
+Teknik detaylar için tıklayın.
+{% endblocktrans %}
+{% endblock %}
+
+{% block tw_image %}{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.webp' %}{% endblock %}
+
+{# --- CSS BLOĞU --- #}
+{% block extra_css %}
+{# Senin verdiğin CSS yolunu korudum, ancak dosya adının takozlar.css olduğundan emin ol #}
+<link rel="stylesheet" href="{% static 'css/previewcss/productpage/takozlar.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="canonical" href="https://www.liftkeys.com{{ request.path }}">
+<link rel="alternate" hreflang="tr" href="https://www.liftkeys.com{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="en" href="https://www.liftkeys.com/en{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="de" href="https://www.liftkeys.com/de{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="ru" href="https://www.liftkeys.com/ru{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="ar" href="https://www.liftkeys.com/ar{{ request.path|slice:'3:' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{# --- SCHEMA (JSON-LD) BLOĞU (Takozlara Göre Güncellendi) --- #}
+{% block content %}
+
+<script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "LiftKeys Asansör Vibrasyon Takozları",
+            "image": "https://www.liftkeys.com{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.webp' %}",
+            "description": "95 Shore sertlik değerine sahip, asansör motor ve kabin titreşimlerini sönümleyen, halat ömrünü uzatan profesyonel kauçuk takoz setleri.",
+            "brand": {
+                "@type": "Brand",
+                "name": "LiftKeys"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.liftkeys.com{{ request.path }}",
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2025-12-31"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Anasayfa",
+                "item": "https://www.liftkeys.com/"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Asansör Yedek Parça",
+                "item": "https://liftkeys.com/kategori/"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Vibrasyon Takozları",
+                "item": "https://www.liftkeys.com{{ request.path }}"
+            }]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "Plastik takoz ile kauçuk takoz arasındaki fark nedir?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Plastik takozlar zamanla sertleşir ve kırılır, titreşimi iletir. LiftKeys kauçuk takozları ise özel pişirme tekniğiyle üretilir, elastikiyetini korur ve titreşimi sönümler."
+                }
+            }, {
+                "@type": "Question",
+                "name": "95 Shore sertlik neden önemlidir?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "95 Shore, asansör makinesinin ağır yükü altında takozun ezilip formunu kaybetmemesi için ideal sertliktir. Bu sayede makine terazisi bozulmaz ve halat aşınması engellenir."
+                }
+            }]
+        }
+    ]
+</script>
+
+
+
+
+
+
+<section class="liftkeys-section my-5 overflow-hidden">
+    <div class="container">
+        
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="liftkeys-header d-flex align-items-center p-3 shadow-sm" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="icon-wrapper me-3">
+                        <span class="icon-bar"></span>
+                        <span class="icon-circle"></span>
+                        <span class="icon-bar"></span>
+                    </div>
+                    <h1 class="mb-0 text-white fw-bold header-title h2">LIFTKEYS – Vibrasyon Takozları</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-container position-relative rounded-4 overflow-hidden shadow-lg">
+                    <img src="{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.webp' %}" 
+                         alt="LIFTKEYS Asansör Vibrasyon Takozu - Titreşim önleyici sistem" 
+                         class="img-fluid w-100 object-fit-cover">
+                    
+                    <div class="play-overlay position-absolute top-50 start-50 translate-middle">
+                        <div class="play-button bg-white rounded-circle d-flex justify-content-center align-items-center">
+                            <div class="play-triangle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="content-wrapper p-3">
+                    <blockquote class="custom-quote">
+                        <p class="mb-0 display-6 fw-light text-secondary">
+                            “Titreşimi azaltır,<br>
+                            konforu artırır,<br>
+                            yolculuğunuzu<br>
+                            <span class="text-dark fw-bold">güvenle yumuşatır.”</span>”
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section class="liftkeys-catalog-section py-5 bg-white">
+    <div class="container">
+        
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-8 col-md-7" data-aos="fade-right">
+                <h2 class="fw-normal text-secondary mb-0 h3">
+                    Güvenlik sadece bir fonksiyon değil, <br>
+                    <strong class="text-dark fw-bold">LiftKeys’te bir standarttır.</strong>
+                </h2>
+            </div>
+            
+            <div class="col-lg-4 col-md-5 text-md-end mt-3 mt-md-0" data-aos="fade-left">
+                <a href="#" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                    </svg>
+                    Ürün Kataloğu İndir
+                </a>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            
+            <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="product-item">
+                    <div class="product-image mb-3">
+                        <img src="{% static 'image/pageproduct/takozlar/asansor-makine-takozu.webp' %}" 
+                             alt="Asansör Makine Motor Takozu" 
+                             class="img-fluid" loading="lazy">
+                    </div>
+                    <h3 class="product-title text-muted fs-6 h5">Makine Takozu</h3>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="product-item">
+                    <div class="product-image mb-3">
+                        <img src="{% static 'image/pageproduct/takozlar/dislisiz-makine-takozu.webp' %}" 
+                             alt="Dişlisiz Makine Şase Takozu" 
+                             class="img-fluid" loading="lazy">
+                    </div>
+                    <h3 class="product-title text-muted fs-6 h5">Dişlisiz Makine Takozu</h3>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-item">
+                    <div class="product-image mb-3">
+                        <img src="{% static 'image/pageproduct/takozlar/asansor-l-takoz-tampon.webp' %}" 
+                             alt="Asansör L Tipi Fren Takozu" 
+                             class="img-fluid" loading="lazy">
+                    </div>
+                    <h3 class="product-title text-muted fs-6 h5">L Takoz</h3>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="450">
+                <div class="product-item">
+                    <div class="product-image mb-3">
+                        <img src="{% static 'image/pageproduct/takozlar/asansor-yuvarlak-takoz.webp' %}" 
+                             alt="Titreşim Emici Yuvarlak Takoz" 
+                             class="img-fluid" loading="lazy">
+                    </div>
+                    <h3 class="product-title text-muted fs-6 h5">Yuvarlak Takoz</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="machine-mount-detail py-5 overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 col-md-12 pe-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                
+                <h2 class="display-5 fw-bold mb-3 text-dark">Makine Takozu</h2>
+                
+                <p class="lead fst-italic text-secondary mb-4">
+                    "Titreşime Son, Sessizliğe Davet: <span class="text-dark fw-medium">Liftkeys Mühendislik Harikası Takozlar</span>"
+                </p>
+
+                <p class="mb-4">
+                    Asansör makinelerinizin ömrünü uzatan, konforu zirveye taşıyan teknoloji.
+                </p>
+
+                <div class="features-list">
+                    
+                    <div class="feature-item mb-4">
+                        <h3 class="feature-head h5">Gerçek Kauçuk ve Özel Pişirme:</h3>
+                        <p class="feature-desc">
+                            Sıradan malzemelerin aksine, özel pişirme sistemiyle üretilen gerçek kauçuk yapısı sayesinde yıllarca formunu korur, çatlama yapmaz.
+                        </p>
+                    </div>
+
+                    <div class="feature-item mb-4">
+                        <h3 class="feature-head h5">Akıllı Genleşme Sistemi:</h3>
+                        <p class="feature-desc">
+                            Alt kısımdaki özel delik tasarımı sayesinde baskı anında hem dışa hem içe doğru esneyerek kauçuğun genleşmesini çift yönlü tamamlar; titreşimi kaynağında yok eder.
+                        </p>
+                    </div>
+
+                    <div class="feature-item mb-4">
+                        <h3 class="feature-head h5">Konik Tasarım:</h3>
+                        <p class="feature-desc">
+                            Makinenin ağırlığını ve baskısını sönümleyen konik yapısıyla sarsıntısız bir seyir sunar.
+                        </p>
+                    </div>
+
+                    <div class="feature-item mb-4">
+                        <div class="d-flex align-items-center">
+                            <div class="badge-box me-3">2500 KG</div>
+                            <div>
+                                <h3 class="feature-head mb-1 h5">Baskı Onayı:</h3>
+                                <p class="feature-desc mb-0">
+                                    Dikeyde 2.5 tonluk pres testinden tam not alan dayanıklılık; en ağır yüklerde bile maksimum güvenlik.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 text-center" data-aos="fade-left" data-aos-duration="1200">
+                <div class="detail-image-wrapper position-relative">
+                    <div class="bg-circle-decoration"></div>
+                    <img src="{% static 'image/pageproduct/takozlar/makine-takozu-teknik-detay.webp' %}" 
+                         alt="LiftKeys Makine Takozu - Akıllı genleşme sistemi ve konik tasarım" 
+                         class="img-fluid position-relative z-2 main-product-img" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="l-mount-detail py-5 bg-light overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5 col-md-12 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="l-mount-image-wrapper position-relative">
+                    <div class="bg-square-decoration"></div>
+                    <img src="{% static 'image/pageproduct/takozlar/l-takoz-deprem-guvenligi.webp' %}" 
+                         alt="LIFTKEYS L Tipi Asansör Kabin Sabitleme Takozu - Deprem ve sarsıntı önleyici zırhlı yapı" 
+                         class="img-fluid position-relative z-2 l-mount-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-md-12 ps-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                
+                <h2 class="display-5 fw-bold mb-3 text-dark">L Takoz</h2>
+                
+                <p class="lead fst-italic text-secondary mb-4">
+                    "Deprem Direncinde Yeni Standart: <span class="text-dark fw-medium">Liftkeys Sabitleme Takozları</span>"
+                </p>
+
+                <p class="mb-4">
+                    Sadece sarsıntıyı değil, riskleri de sönümlüyoruz. Kabin güvenliğinde tavizsiz mühendislik.
+                </p>
+
+                <div class="features-list">
+                    
+                    <div class="feature-item-bordered mb-4">
+                        <h3 class="feature-head text-uppercase h5">
+                            <i class="bi bi-shield-check me-2"></i>Zırhlı Yapı (50x50 mm Köşebent):
+                        </h3>
+                        <p class="feature-desc">
+                            5 mm et kalınlığına sahip çelik köşebent içeriğiyle üretilmiştir. Büküm noktalarındaki 8 mm’ye varan mukavemet artışı sayesinde kuvvet testlerinden en yüksek skorla geçmiştir.
+                        </p>
+                    </div>
+
+                    <div class="feature-item mb-4">
+                        <h3 class="feature-head h5">Ayrılmaz Bütünlük:</h3>
+                        <p class="feature-desc">
+                            Sabitleme vidası köşebenti delerek içinden geçer ve çevre kaynağı ile sabitlenir. Bu yöntem, en şiddetli yük testlerinde bile vidanın üründen kopmasını imkansız kılar.
+                        </p>
+                    </div>
+
+                    <div class="feature-item mb-4">
+                        <h3 class="feature-head h5">Deprem Odaklı Tasarım:</h3>
+                        <p class="feature-desc">
+                            Deprem bölgelerinde yaşanan mekanik ayrılma ve kırılma sorunlarına özel olarak geliştirilmiş, sarsıntıyı kabin içine aktarmayan esnek ve güçlü yapı.
+                        </p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3 class="feature-head h5">Özel Pişirilmiş Orijinal Kauçuk:</h3>
+                        <p class="feature-desc">
+                            Yüksek kalite kauçuk ve özel fırınlama süresi, ürünün yıllar geçse de formunu kaybetmemesini ve sönümleme performansını korumasını sağlar.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="round-mount-detail py-5 overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 col-md-12 pe-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                
+                <h2 class="display-5 fw-bold mb-3 text-dark">Yuvarlak Takoz</h2>
+                
+                <p class="lead fst-italic text-secondary mb-4">
+                    "Sessiz Hareket, Kesintisiz Konfor: <span class="text-dark fw-medium">Liftkeys Yatay Sönümleme Teknolojisi</span>"
+                </p>
+
+                <p class="mb-5">
+                    Kabin içindeki titreşimi unutun; yatay sarsıntılara karşı geliştirilen en dirençli çözümle tanışın.
+                </p>
+
+                <div class="round-features">
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="feature-icon-circle bg-orange text-white">
+                                <i class="bi bi-shield-lock-fill"></i> </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h3 class="feature-head h5">Zırhlı Bağlantı Gücü:</h3>
+                            <p class="feature-desc">
+                                40 mm çapındaki ve 4 mm kalınlığındaki özel pullar, gövdeye çepeçevre kaynak yöntemiyle birleştirilmiştir. Kopma direnci maksimum seviyededir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="feature-icon-circle bg-dark text-white">
+                                <i class="bi bi-arrows-move"></i> </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h3 class="feature-head h5">Bağımsız Çalışma Prensibi:</h3>
+                            <p class="feature-desc">
+                                İki bağlantı noktası arasındaki özel sertlikteki kauçuk, kabinden gelen titreşimleri bağımsız emer. "Bağımsız sönümleme" yeteneği yatay sarsıntıyı minimuma indirir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="feature-icon-circle bg-orange text-white">
+                                <i class="bi bi-gear-wide-connected"></i> </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h3 class="feature-head h5">Özel Pişirme ve Formül:</h3>
+                            <p class="feature-desc">
+                                Kauçuğun moleküler yapısını koruyan ileri pişirme tekniği, ürünün elastikiyetini yıllarca kaybetmemesini ve yoğun trafikte bile uzun ömürlü olmasını sağlar.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 text-center mt-4 mt-lg-0" data-aos="fade-left" data-aos-duration="1200">
+                <div class="round-image-wrapper position-relative">
+                    <div class="ripple-background">
+                        <div class="circle xxlarge shade1"></div>
+                        <div class="circle xlarge shade2"></div>
+                        <div class="circle large shade3"></div>
+                    </div>
+                    
+                    <img src="{% static 'image/pageproduct/takozlar/yuvarlak-takoz-yatay-sonumleme.webp' %}" 
+                         alt="LIFTKEYS Yuvarlak Takoz - Yatay titreşim sönümleme sistemi" 
+                         class="img-fluid position-relative z-2 round-product-img" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="mrl-mount-detail py-5 bg-light overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5 col-md-12 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="mrl-image-wrapper position-relative">
+                    <div class="tech-grid-pattern"></div>
+                    <div class="tech-border-frame"></div>
+
+                    <img src="{% static 'image/pageproduct/takozlar/mrl-kare-takoz-95-shore.webp' %}" 
+                         alt="LIFTKEYS MRL Makine Altı Kare Takoz - 95 Shore sertlikte asansör motor takozu" 
+                         class="img-fluid position-relative z-2 mrl-product-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-md-12 ps-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                
+                <h2 class="display-5 fw-bold mb-3 text-dark">MRL Makine Altı Kare Takoz</h2>
+                
+                <p class="lead fst-italic text-secondary mb-4">
+                    "Makinesiz Sistemlerin Sarsılmaz Temeli: <span class="text-dark fw-bold">95 Shore Performansı</span>"
+                </p>
+
+                <p class="mb-4">
+                    MRL asansörlerin dar alanlarda yarattığı yüksek baskı için özel olarak geliştirildi.
+                </p>
+
+                <div class="tech-features-list">
+                    
+                    <div class="tech-item mb-4">
+                        <h3 class="feature-head h5">95 Shore Sertlik:</h3>
+                        <p class="feature-desc">
+                            Kauçuk teknolojisinin en üst sınırlarında yer alan <span class="tech-highlight">95 Shore</span> sertlik derecesi, en ağır makine yükleri altında bile formunu korur; çökme veya yayılma yapmaz.
+                        </p>
+                    </div>
+
+                    <div class="tech-item mb-4">
+                        <h3 class="feature-head h5">Asansör Ömrünce Değişmez Form:</h3>
+                        <p class="feature-desc">
+                            Özel moleküler pişirme teknolojisi sayesinde asansörün kullanım ömrü boyunca şekil değiştirmeden, ilk günkü sönümleme performansıyla çalışır.
+                        </p>
+                    </div>
+
+                    <div class="tech-item mb-4">
+                        <h3 class="feature-head h5">MRL Sistemlere Özel Tasarım:</h3>
+                        <p class="feature-desc">
+                            <span class="tech-highlight">70x70 mm</span> kare formu ve <span class="tech-highlight">M20 cıvata</span> uyumlu delik çapıyla, makinesiz asansör motorlarının montaj noktalarına tam uyum sağlar.
+                        </p>
+                    </div>
+
+                    <div class="tech-item">
+                        <h3 class="feature-head h5">Maksimum Mukavemet:</h3>
+                        <p class="feature-desc">
+                            <span class="tech-highlight">20 mm</span> kalınlığındaki kompakt yapısı, titreşimi sönümlerken makine stabilizasyonunu en üst seviyede tutar.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="warning-section-light py-5 bg-white overflow-hidden">
+    <div class="container">
+        
+        <div class="row text-center mb-5">
+            <div class="col-lg-9 mx-auto" data-aos="fade-down">
+                <h2 class="display-5 fw-bold text-dark mb-3">Ucuz Takozun Pahalı Faturası</h2>
+                <p class="lead text-secondary">
+                    Tasarruf mu Yapıyorsunuz, Yoksa <span class="text-danger fw-bold">Sisteminize Zarar mı Veriyorsunuz?</span>
+                </p>
+                <p class="mb-0 text-muted w-75 mx-auto">
+                    Asansör dünyasında vibrasyon takozları sadece birer "lastik" değildir; sistemin dengesini koruyan birer mühendislik elemanıdır. Ucuz ve plastik ağırlıklı takoz kullanmanın gizli maliyetleri şunlardır:
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+            
+            <div class="col-lg-12">
+                <div class="row g-4">
+                    
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                        <div class="warning-card-light h-100">
+                            <div class="card-icon-wrapper bg-danger-subtle text-danger mb-3">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+                            <h3 class="fw-bold text-dark h5">Halat ve Kasnak Düşmanı</h3>
+                            <p class="text-secondary small mb-0">
+                                Esneyen veya ezilen kalitesiz takozlar, makinenin terazisini bozar. Dengesiz basan halatlar, kasnak kanallarını asimetrik aşındırır ve halat ömrünü %50’ye varan oranda kısaltır.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="warning-card-light h-100 warning-border-orange">
+                            <div class="card-icon-wrapper bg-warning-subtle text-warning mb-3">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <h3 class="fw-bold text-dark h5">Enerji Hırsızı</h3>
+                            <p class="text-secondary small mb-0">
+                                Dengesi bozulan bir makine grubu, her kalkış ve seyirde daha fazla akım çeker. Yanlış takoz seçimi, elektrik faturanızdaki gizli artıştır.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="warning-card-light h-100">
+                            <div class="card-icon-wrapper bg-danger-subtle text-danger mb-3">
+                                <i class="bi bi-shield-x"></i>
+                            </div>
+                            <h3 class="fw-bold text-dark h5">Güvenlik Riski</h3>
+                            <p class="text-secondary small mb-0">
+                                Hava değişimlerinde sertleşen kalitesiz yük takozları, fren senkronizasyonunu bozar. Ani duruşlarda kabin sarsılır, konfor biter ve güvenlik mekanizmaları dengesiz yüklenir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="warning-card-light h-100 warning-border-orange">
+                            <div class="card-icon-wrapper bg-warning-subtle text-warning mb-3">
+                                <i class="bi bi-volume-up-fill"></i>
+                            </div>
+                            <h3 class="fw-bold text-dark h5">Kabin İçi Gürültü ve Uğultu</h3>
+                            <p class="text-secondary small mb-0">
+                                Makine dairesindeki titreşimi yutamayan her takoz, kabin içine uğultu ve titreşim olarak döner. Yolcu konforunu tamamen yok eder.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section class="expert-insight-section py-5 bg-light overflow-hidden">
+    <div class="container">
+        
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-10" data-aos="fade-down">
+                <span class="badge bg-orange text-white mb-3 px-3 py-2 rounded-pill">Uzman Görüşü</span>
+                <h2 class="display-6 fw-bold text-dark mb-3">
+                    "Küçük Tasarruflar, <span class="text-danger">Büyük Arızalar Doğurur.</span>"
+                </h2>
+                <h3 class="h5 text-secondary fst-italic fw-normal">
+                    "Asansörünüzün Kalbi Makineyse, Onu Hayata Bağlayan Damarlar Takozlardır."
+                </h3>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 mb-4 mb-lg-0">
+                
+                <div class="question-box p-4 bg-white rounded-4 shadow-sm mb-4 border-start-orange" data-aos="fade-right">
+                    <h3 class="fw-bold text-dark mb-3 h4">
+                        <i class="bi bi-question-circle-fill text-orange me-2"></i>
+                        Asansörünüz Neden Titriyor ve Uğulduyor?
+                    </h3>
+                    <p class="text-muted mb-0">
+                        Çoğu zaman suçlu motor değil, motorun altındaki <strong>"ucuz"</strong> takozdur!
+                    </p>
+                </div>
+
+                <div class="facts-list" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="bi bi-x-circle-fill text-danger fs-5"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h4 class="fw-bold mb-1 h6">Plastik Takoz Gerçeği</h4>
+                            <p class="text-secondary small mb-0">
+                                Plastik takozlar zamanla ezilir, makinenin dengesini bozar ve halatları tek taraflı yer bitirir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="bi bi-lightning-fill text-warning fs-5"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h4 class="fw-bold mb-1 h6">Enerji Kaybı</h4>
+                            <p class="text-secondary small mb-0">
+                                Dengesiz makine, motorun zorlanmasına ve aşırı enerji tüketimine sebep olur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-4 p-3 bg-white rounded-3 border border-success-subtle">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h4 class="fw-bold text-success mb-1 h6">LiftKeys Çözümü</h4>
+                            <p class="text-secondary small mb-0">
+                                Liftkeys Kauçuk Takozları, <strong>95 Shore sertliği</strong> ve <strong>özel pişirme teknolojisi</strong> ile asla şekil değiştirmez. Makinenizin dengesini korur, halat ömrünü uzatır ve sessizliği garanti eder.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1200">
+                <div class="final-message-card position-relative overflow-hidden rounded-4 text-white text-center p-5">
+                    <div class="overlay-gradient"></div>
+                    
+                    <div class="position-relative z-2 content-box">
+                        <i class="bi bi-shield-check display-3 mb-3 text-white"></i>
+                        <h3 class="fw-bold mb-3 h4">Plastik Değil, <br>Gerçek Kauçuk.</h3>
+                        <p class="opacity-75 mb-4 small">
+                            Halat ömrünü uzatmanın en kolay yolu.
+                        </p>
+                        
+                        <hr class="border-white opacity-50 my-4">
+                        
+                        <p class="fw-light fst-italic mb-0">
+                            "Unutmayın: Takozdan ettiğiniz tasarruf, yarın kasnak ve halat değişimi olarak size geri döner."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="faq-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center" data-aos="fade-down">
+                <span class="text-orange fw-bold text-uppercase small ls-2">Merak Ettikleriniz</span>
+                <h2 class="display-6 fw-bold text-dark mt-2">Sıkça Sorulan Sorular</h2>
+                <p class="text-secondary">
+                    Vibrasyon takozları ve montaj süreci hakkında en çok merak edilen soruların yanıtları.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                
+                <div class="accordion custom-accordion" id="liftkeysFaq">
+                    
+                    <div class="accordion-item mb-3 border-0 shadow-sm rounded-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <i class="bi bi-question-circle-fill text-orange me-3 fs-5"></i>
+                                Plastik takoz ile LiftKeys kauçuk takoz arasındaki fark nedir?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#liftkeysFaq">
+                            <div class="accordion-body text-secondary p-4 pt-0">
+                                Plastik veya düşük kaliteli karışım takozlar zamanla sertleşir, çatlar ve yük altında ezilerek formunu kaybeder. Bu durum titreşimi binaya iletir. <strong>LiftKeys Kauçuk Takozları</strong> ise %100 orijinal kauçuktan, özel pişirme teknolojisiyle üretilir. Yıllar geçse de elastikiyetini korur, titreşimi sönümler ve makine terazisini bozmaz.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3 border-0 shadow-sm rounded-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="bi bi-gear-fill text-orange me-3 fs-5"></i>
+                                "95 Shore" sertlik değeri neden bu kadar önemli?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#liftkeysFaq">
+                            <div class="accordion-body text-secondary p-4 pt-0">
+                                Asansör makineleri çok ağırdır. Çok yumuşak bir takoz (örneğin 60-70 shore) makine altında ezilir ve motorun yana yatmasına sebep olur. <strong>95 Shore</strong>, hem titreşimi sönümleyecek kadar esnek, hem de tonlarca ağırlığı taşıyıp şekil değiştirmeyecek kadar sert olan "altın oran"dır. Halat ve kasnak ömrü için bu sertlik şarttır.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3 border-0 shadow-sm rounded-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="bi bi-clock-history text-orange me-3 fs-5"></i>
+                                Takozların kullanım ömrü ne kadardır?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#liftkeysFaq">
+                            <div class="accordion-body text-secondary p-4 pt-0">
+                                LiftKeys takozları, doğru montaj yapıldığı takdirde <strong>asansörün mekanik ömrü boyunca</strong> hizmet verecek şekilde tasarlanmıştır. Güneş ışığına doğrudan maruz kalmadığı sürece (makine dairesi ortamında) çürüme veya kopma yapmaz.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3 border-0 shadow-sm rounded-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="bi bi-tools text-orange me-3 fs-5"></i>
+                                Montaj sırasında nelere dikkat edilmelidir?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#liftkeysFaq">
+                            <div class="accordion-body text-secondary p-4 pt-0">
+                                En önemli kural, makinenin teraziye alınmasıdır. Takoz somunları sıkılırken makinenin kasnak hizasının kaymamasına dikkat edilmelidir. Ayrıca MRL (Kare) ve Motor (Yuvarlak) takozların, makine şasesindeki delik çaplarına uygun seçildiğinden emin olunmalıdır.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="row mt-5 text-center mb-5" data-aos="fade-up" data-aos-offset="10">
+    <div class="col-12">
+        <a href="/contact/" class="btn btn-lg shadow-lg" 
+            style="background-color: #F08200; color: white; padding: 15px 50px; border-radius: 10px; font-size: 1.5rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 15px; transition: transform 0.2s;">
+            <i class="fa-solid fa-handshake fa-xl"></i>
+            Teklif İste...
+        </a>
+    </div>
+</div>
+
+<script>
+  AOS.init({
+    duration: 800,   // Animasyon süresi (ms) - Yumuşak geçiş için ideal
+    easing: 'ease-out-cubic', // Animasyon eğrisi - Robotik değil doğal dursun
+    once: true,      // Sadece bir kere çalışsın (Yukarı çıkıp inince tekrar oynamasın)
+    offset: 100,     // Animasyonun tetiklenmesi için alt kenardan mesafe
+  });
+</script>
+
+{% include "preview/footer.html" %}
+
+
+
+
+
+
+{% endblock %}

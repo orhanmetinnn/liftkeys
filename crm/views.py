@@ -1689,3 +1689,12 @@ def kupeste_view(request):
     Liftkeys Küpeşte blog yazısını render eder.
     """
     return render(request, "preview/previewblog/kupeste.html")
+
+
+
+def takozlar_view(request):
+    """
+    Liftkeys Takozlar blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/takozlar.html")
+    
