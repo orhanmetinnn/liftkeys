@@ -1575,3 +1575,55 @@
         justify-content: center;
     }
 }
+
+
+
+/* --- Fuar Videoları Bölümü Tasarımı --- */
+
+.video-thumbnail-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.video-thumbnail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Resmin üzerine gelince beliren karanlık alan ve Play butonu */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Yarı saydam siyah */
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px); /* Arkadaki resmi hafif flulaştırır */
+}
+
+.video-thumbnail-card:hover .video-overlay {
+    opacity: 1; /* Hover durumunda görünür olur */
+}
+
+.video-overlay i {
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5)); /* Play butonuna gölge */
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail-card:hover .video-overlay i {
+    transform: scale(1); /* İkon hafifçe büyür */
+}
+
+/* Modal kapatma butonunu beyaz yapma (Karanlık zeminler için) */
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+.btn-close-white:hover {
+    opacity: 1;
+}

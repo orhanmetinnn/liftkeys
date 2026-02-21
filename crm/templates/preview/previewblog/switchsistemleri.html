@@ -150,18 +150,24 @@ Teknik özellikler ve katalog için tıklayın.
     <div class="row align-items-center mb-5">
         
         <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
-            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card">
+    
+            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card"
+                onclick="loadYoutubeVideo(this)" 
+                data-video-id="4hY3EOC1F_8" 
+                style="cursor: pointer;">
+                
                 <img src="{% static 'image/pageproduct/switchsystem/liftkeys-asansor-guvenlik-switch-sistemleri-ve-limit-anahtari-tanitimi.webp' %}" 
-                     class="img-fluid w-100" 
-                     style="object-fit: cover; min-height: 350px;"
-                     alt="Asansör güvenliğini sağlayan LiftKeys limit switch ve emniyet anahtarı sistemleri tanıtım videosu">
+                    class="img-fluid w-100" 
+                    style="object-fit: cover; min-height: 350px;"
+                    alt="Asansör güvenliğini sağlayan LiftKeys limit switch ve emniyet anahtarı sistemleri tanıtım videosu">
                 
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange" 
-                         style="width: 80px; height: 80px; cursor: pointer;">
+                        style="width: 80px; height: 80px;">
                         <i class="fa-solid fa-play fa-2x ps-1" style="color: #F08200;"></i>
                     </div>
                 </div>
+                
             </div>
         </div>
 
@@ -194,6 +200,26 @@ Teknik özellikler ve katalog için tıklayın.
     </div>
 
 </div>
+
+<script>
+    function loadYoutubeVideo(element) {
+        var videoId = element.getAttribute("data-video-id");
+        
+        // Bu tasarımdaki min-height: 350px değerini iframe'e uyarlıyoruz
+        var iframeHTML = `
+            <iframe width="100%" height="100%" style="min-height: 350px;"
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        `;
+        
+        element.innerHTML = iframeHTML;
+    }
+</script>
 <style>
     /* Play Butonu Nabız Efekti */
     .play-btn-pulse {
@@ -665,15 +691,8 @@ Teknik özellikler ve katalog için tıklayın.
     </div>
 </div>
 
-<div class="row mt-5 text-center mb-5" data-aos="fade-up" data-aos-offset="10">
-    <div class="col-12">
-        <a href="/contact/" class="btn btn-lg shadow-lg" 
-            style="background-color: #F08200; color: white; padding: 15px 50px; border-radius: 10px; font-size: 1.5rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 15px; transition: transform 0.2s;">
-            <i class="fa-solid fa-handshake fa-xl"></i>
-            Teklif İste...
-        </a>
-    </div>
-</div>
+{% include "preview/iletisimformpreview.html" %}
+
 
 <style>
     .btn-lg:hover {

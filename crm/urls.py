@@ -68,6 +68,8 @@ urlpatterns = [
     path("solid/", views.solid_view, name="solid_view"),
     path("kupeste/", views.kupeste_view, name="kupeste_view"),
     path("takozlar/", views.takozlar_view, name="takozlar_view"),
+    path("kagittanisleri/", views.kagittanisler_view, name="kagittanisleri_view"),
+
 ]
 
 

@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-03h*26-ff0gikg=qodz$^r#s9+55rw3o$0yu!dq-=7#1^5wu_j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
 
 
 ALLOWED_HOSTS = [
@@ -299,7 +300,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+# settings.py dosyasının en alt kısmına ekleyebilirsin
 
+# Django E-posta (SMTP) Ayarları
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.liftkeys.com'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True  # Port 465 kullandığımız için SSL kullanıyoruz (TLS değil)
+EMAIL_HOST_USER = 'info@liftkeys.com'
+EMAIL_HOST_PASSWORD = 'Alperorhanproje17@'
+DEFAULT_FROM_EMAIL = 'info@liftkeys.com'  # Maillerin kimden gittiğini gösteren adres
 
 
 # settings.py dosyasının en alt satırına ekle:

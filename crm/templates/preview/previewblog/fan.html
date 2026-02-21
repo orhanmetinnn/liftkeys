@@ -159,18 +159,24 @@ Katalog indirmek için tıklayın.
     <div class="row align-items-center mb-5">
         
         <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
-            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card">
+    
+            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card"
+                onclick="loadYoutubeVideo(this)" 
+                data-video-id="xwix6gc0Fg8" 
+                style="cursor: pointer;">
+                
                 <img src="{% static 'image/pageproduct/ventilation/havalandirma-sistemi-video.webp' %}" 
-                     class="img-fluid w-100" 
-                     alt="LiftKeys Asansör Kabin Havalandırma Sistemi ve Fan Teknolojisi"
-                     style="object-fit: cover; min-height: 350px;" loading="lazy">
+                    class="img-fluid w-100" 
+                    alt="LiftKeys Asansör Kabin Havalandırma Sistemi ve Fan Teknolojisi"
+                    style="object-fit: cover; min-height: 350px;" loading="lazy">
                 
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange" 
-                         style="width: 80px; height: 80px; cursor: pointer;">
+                        style="width: 80px; height: 80px;">
                         <i class="fa-solid fa-play fa-2x ps-1" style="color: #F08200;"></i>
                     </div>
                 </div>
+                
             </div>
         </div>
 
@@ -230,6 +236,34 @@ Katalog indirmek için tıklayın.
     </div>
 
 </div>
+
+
+<script>
+    function loadYoutubeVideo(element) {
+        // 1. Tıklanan yapının içindeki video kimliğini (data-video-id) alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // 2. YouTube iframe (video oynatıcı) kodumuzu oluşturuyoruz
+        // Tasarımınla tam uyumlu olması için style kısmına min-height: 350px; ekledik
+        // autoplay=1 parametresi sayesinde video tıklandığı an otomatik oynamaya başlar
+        var iframeHTML = `
+            <iframe width="100%" height="100%" style="min-height: 350px;"
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        `;
+        
+        // 3. Tıklanan alanın içindeki resmi ve Play butonunu temizleyip, 
+        // yerine hazırladığımız bu video oynatıcıyı yerleştiriyoruz
+        element.innerHTML = iframeHTML;
+    }
+</script>
+
+
 <div class="container my-5 py-5">
         
     <div class="row mb-5" data-aos="fade-down">
@@ -418,19 +452,8 @@ Katalog indirmek için tıklayın.
 
     </div>
 
-    <div class="container mb-5 pb-5">
-        <div class="row text-center" data-aos="zoom-in" data-aos-offset="50">
-            <div class="col-12">
-                <a href="/contact/" class="btn btn-lg shadow-lg text-white d-inline-flex align-items-center gap-3 px-5 py-3 rounded-3" 
-                   style="background-color: #F08200; font-size: 1.5rem; font-weight: 600; transition: transform 0.2s;">
-                    <div class="bg-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                        <i class="fa-solid fa-handshake text-orange fs-5"></i>
-                    </div>
-                    Teklif İste...
-                </a>
-            </div>
-        </div>
-    </div>
+{% include "preview/iletisimformpreview.html" %}
+
 
 
 

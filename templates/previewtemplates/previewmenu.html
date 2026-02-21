@@ -7,44 +7,45 @@
 
 <div class="top-bar d-none d-lg-block">
   <div class="container d-flex justify-content-between align-items-center h-100">
-    
+
     <div class="d-flex align-items-center top-contact-info">
       <a href="tel:+902164501900" class="top-link me-4">
-        <i class="bi bi-telephone-fill me-2 text-orange"></i> 
+        <i class="bi bi-telephone-fill me-2 text-orange"></i>
         <span>+90 216 450 19 00</span>
       </a>
       <a href="mailto:info@liftkeys.com" class="top-link">
-        <i class="bi bi-envelope-fill me-2 text-orange"></i> 
+        <i class="bi bi-envelope-fill me-2 text-orange"></i>
         <span>info@liftkeys.com</span>
       </a>
     </div>
-    
+
     <div class="d-flex align-items-center">
-      
+
       <div class="language-wrapper d-flex align-items-center">
-            {% get_current_language as LANGUAGE_CODE %}
-            {% get_available_languages as LANGUAGES %}
-            
-            <i class="bi bi-globe2 text-muted me-1" style="font-size: 0.9rem;"></i>
-            
-            <select onchange="if(this.value) window.location.href=this.value;" 
-                    class="clean-lang-select">
-                {% for lang_code, lang_name in LANGUAGES %}
-                    <option value="{% change_lang lang_code %}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
-                        {{ lang_code|upper }}
-                    </option>
-                {% endfor %}
-            </select>
-            <i class="bi bi-chevron-down ms-1" style="font-size: 0.65rem; color: #888;"></i>
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+
+        <i class="bi bi-globe2 text-muted me-1" style="font-size: 0.9rem;"></i>
+
+        <select onchange="if(this.value) window.location.href=this.value;" class="clean-lang-select">
+          {% for lang_code, lang_name in LANGUAGES %}
+          <option value="{% change_lang lang_code %}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+            {{ lang_code|upper }}
+          </option>
+          {% endfor %}
+        </select>
+        <i class="bi bi-chevron-down ms-1" style="font-size: 0.65rem; color: #888;"></i>
       </div>
 
       <div class="top-divider mx-3"></div>
 
       <div class="social-icons_menu d-flex align-items-center">
-          <a href="https://www.facebook.com/liftkeys" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/liftkeyscom/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/liftkeys/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.youtube.com/@liftkeys" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.facebook.com/liftkeys" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/liftkeyscom/" target="_blank" title="Instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/liftkeys/" target="_blank" title="LinkedIn"><i
+            class="bi bi-linkedin"></i></a>
+        <a href="https://www.youtube.com/@liftkeys" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
       </div>
 
     </div>
@@ -63,22 +64,31 @@
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav align-items-lg-center">
-        
+
         <li class="nav-item">
-            <a class="nav-link {% if request.path == '/' or request.path == '/en/' %}text-orange fw-bold{% endif %}" href="/">
-                {% trans "Ana Sayfa" %}
-            </a>
-        </li>
-        
-        <li class="nav-item">
-            <a class="nav-link {% if '/about/' in request.path %}text-orange fw-bold{% endif %}" href="/about/">
-                {% trans "Hakkımızda" %}
-            </a>
+          <a class="nav-link {% if request.path == '/' or request.path == '/en/' %}text-orange fw-bold{% endif %}"
+            href="/">
+            {% trans "Ana Sayfa" %}
+          </a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link {% if '/about/' in request.path %}text-orange fw-bold{% endif %}" href="/about/">
+            {% trans "Hakkımızda" %}
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link {% if '/kagittanisleri/' in request.path %}text-orange fw-bold{% endif %}"
+            href="/kagittanisleri/">
+            {% trans "Kağıttanişler" %}
+          </a>
+        </li>
+
+
         <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle {% if '/category/' in request.path or '/product/' in request.path %}text-orange fw-bold{% endif %}" 
-             href="{% url 'category_list' %}" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle {% if '/category/' in request.path or '/product/' in request.path %}text-orange fw-bold{% endif %}"
+            href="{% url 'category_list' %}" id="productsDropdown" role="button" data-bs-toggle="dropdown">
             {% trans "Ürünler" %}
           </a>
 
@@ -121,7 +131,8 @@
                               alt="{{ product.name }}">
                             {% endwith %}
                           </div>
-                          <span class="fw-semibold small text-truncate w-100 px-2">{{ product.name|truncatechars:20 }}</span>
+                          <span
+                            class="fw-semibold small text-truncate w-100 px-2">{{ product.name|truncatechars:20 }}</span>
                         </a>
                         {% empty %}
                         <div class="col-12 text-center py-5">
@@ -173,116 +184,129 @@
               {% endfor %}
             </div>
           </div>
-          </li>
+        </li>
 
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle {% if '/horus-photocell/' in request.path or '/atlas-overload/' in request.path %}text-orange fw-bold{% endif %}" 
-               href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {% trans "Çözümlerimiz" %}
-            </a>
-            <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="solutionsDropdown">
-                
-                <li>
-                    <a class="dropdown-item custom-dropdown-item" href="/horus-photocell/">
-                        <div class="icon-box">
-                            <i class="bi bi-eye-fill"></i>
-                        </div>
-                        <div class="text-box">
-                            <span class="item-title">LKS Horus Fotosel</span>
-                            <span class="item-desc">Güvenli kapı sistemleri</span>
-                        </div>
-                    </a>
-                </li>
+          <a class="nav-link dropdown-toggle {% if '/horus-photocell/' in request.path or '/atlas-overload/' in request.path %}text-orange fw-bold{% endif %}"
+            href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Çözümlerimiz" %}
+          </a>
+          <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="solutionsDropdown">
 
-                <li>
-                    <a class="dropdown-item custom-dropdown-item" href="/atlas-overload/">
-                        <div class="icon-box">
-                            <i class="bi bi-speedometer2"></i>
-                        </div>
-                        <div class="text-box">
-                            <span class="item-title">Atlas Aşırı Yük</span>
-                            <span class="item-desc">Hassas yük ölçüm teknolojisi</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item custom-dropdown-item" href="/zemin/">
-                        <div class="icon-box">
-                            <i class="bi bi-layers-fill"></i>
-                        </div>
-                        <div class="text-box">
-                            <span class="item-title">Zemin</span>
-                            <span class="item-desc">Yanmaz ve estetik PVC kaplamalar</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item custom-dropdown-item" href="/switch-systems/">
-                        <div class="icon-box">
-                            <i class="bi bi-toggle-on"></i>
-                        </div>
-                        <div class="text-box">
-                            <span class="item-title">Switch Sistemleri</span>
-                            <span class="item-desc">Limit ve güvenlik anahtar çözümleri</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item custom-dropdown-item" href="/fan/">
-                        <div class="icon-box">
-                            <i class="bi bi-fan"></i>
-                        </div>
-                        <div class="text-box">
-                            <span class="item-title">Havalandırma Sistemleri</span>
-                            <span class="item-desc">Sessiz ve güçlü kabin fanları</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item custom-dropdown-item" href="/guideshoe/">
-                        <div class="icon-box">
-                            <i class="bi bi-collection"></i> 
-                        </div>
-                        <div class="text-box">
-                            <span class="item-title">Ağırlık Paten Sistemleri</span>
-                            <span class="item-desc">Sessiz ve titreşimsiz TPU patenler</span>
-                        </div>
-                    </a>
-                </li>
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/horus-photocell/">
+                <div class="icon-box">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">LKS Horus Fotosel</span>
+                  <span class="item-desc">Güvenli kapı sistemleri</span>
+                </div>
+              </a>
+            </li>
 
-                <li>
-                    <a class="dropdown-item custom-dropdown-item" href="/solid/">
-                        <div class="icon-box">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-                        <div class="text-box">
-                            <span class="item-title">Solid & Polistren Levha</span>
-                            <span class="item-desc">Kırılmaz tavan ve duvar kaplamaları</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                  <a class="dropdown-item custom-dropdown-item" href="/kupeste/">
-                      <div class="icon-box">
-                          <i class="bi bi-grip-horizontal"></i>
-                      </div>
-                      <div class="text-box">
-                          <span class="item-title">Paslanmaz Küpeşte</span>
-                          <span class="item-desc">Modüler sistem ve renk seçenekleri</span>
-                      </div>
-                  </a>
-              </li>
-            </ul>
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/atlas-overload/">
+                <div class="icon-box">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">Atlas Aşırı Yük</span>
+                  <span class="item-desc">Hassas yük ölçüm teknolojisi</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/zemin/">
+                <div class="icon-box">
+                  <i class="bi bi-layers-fill"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">Zemin</span>
+                  <span class="item-desc">Yanmaz ve estetik PVC kaplamalar</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/switch-systems/">
+                <div class="icon-box">
+                  <i class="bi bi-toggle-on"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">Switch Sistemleri</span>
+                  <span class="item-desc">Limit ve güvenlik anahtar çözümleri</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/fan/">
+                <div class="icon-box">
+                  <i class="bi bi-fan"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">Havalandırma Sistemleri</span>
+                  <span class="item-desc">Sessiz ve güçlü kabin fanları</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/guideshoe/">
+                <div class="icon-box">
+                  <i class="bi bi-collection"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">Ağırlık Paten Sistemleri</span>
+                  <span class="item-desc">Sessiz ve titreşimsiz TPU patenler</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/solid/">
+                <div class="icon-box">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">Solid & Polistren Levha</span>
+                  <span class="item-desc">Kırılmaz tavan ve duvar kaplamaları</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item custom-dropdown-item" href="/kupeste/">
+                <div class="icon-box">
+                  <i class="bi bi-grip-horizontal"></i>
+                </div>
+                <div class="text-box">
+                  <span class="item-title">Paslanmaz Küpeşte</span>
+                  <span class="item-desc">Modüler sistem ve renk seçenekleri</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+                <a class="dropdown-item custom-dropdown-item" href="{% url 'takozlar_view' %}">
+                    <div class="icon-box">
+                        <i class="bi bi-activity"></i> </div>
+                    <div class="text-box">
+                        <span class="item-title">Vibrasyon Takozları</span>
+                        <span class="item-desc">Titreşim önleyici kauçuk sönümleyiciler</span>
+                    </div>
+                </a>
+            </li>
+
+          </ul>
         </li>
-        
+
         <li class="nav-item"><a class="nav-link" href="#">Data Merkezi</a></li>
-        
+
         <li class="nav-item">
-            <a class="nav-link {% if '/blogs/' in request.path %}text-orange fw-bold{% endif %}" href="/blogs/">Blog</a>
+          <a class="nav-link {% if '/blogs/' in request.path %}text-orange fw-bold{% endif %}" href="/blogs/">Blog</a>
         </li>
-        
+
         <li class="nav-item">
-            <a class="nav-link {% if '/gallery/' in request.path %}text-orange fw-bold{% endif %}" href="/gallery/">Galeri</a>
+          <a class="nav-link {% if '/gallery/' in request.path %}text-orange fw-bold{% endif %}"
+            href="/gallery/">Galeri</a>
         </li>
 
         <li class="nav-item ms-lg-3 d-none d-lg-block">
@@ -391,7 +415,7 @@
           menuLinks.forEach(l => l.classList.remove('active'));
           this.classList.add('active');
           menuContents.forEach(c => c.classList.remove('active'));
-          
+
           const targetId = this.getAttribute('data-target');
           const tContent = document.getElementById(targetId);
           if (tContent) tContent.classList.add('active');
@@ -407,9 +431,9 @@
     // Mobilde kategoriye (akordiyon) tıklayınca ana menü kapanmasın
     const mobileGroups = document.querySelectorAll('.dropdown-menu .mobile-category-group');
     mobileGroups.forEach(group => {
-        group.addEventListener('click', function (e) {
-            e.stopPropagation(); // Tıklama olayını burada durdur, menüye gönderme
-        });
+      group.addEventListener('click', function (e) {
+        e.stopPropagation(); // Tıklama olayını burada durdur, menüye gönderme
+      });
     });
 
   });

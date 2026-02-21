@@ -4,8 +4,7 @@
 
 {# --- META BLOKLARI --- #}
 {% block title %}
-{% trans "Liftkeys Asansör Sistemleri & Çözümleri | Fotosel" %}
-{% endblock %}
+{% trans "Asansör Fotoseli | Liftkeys Asansör Sistemleri & Çözümleri" %}{% endblock %}
 
 {% block meta_description %}
 {% blocktrans %}
@@ -70,27 +69,34 @@ elektronik ve mekanik bileşenlerle çözümler.
 {% block content %}
 
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
+{
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Liftkeys Asansör Fotoseli",
+    "image": "https://www.liftkeys.com/static/image/preview/liftkeys-og.webp",
+    "description": "Liftkeys asansör kapı sensörleri ve boy fotoselleri. EN81-20 & EN81-70 standartlarına uygun, yüksek algılama hassasiyeti ve hızlı tepkime süresi. Doğrudan üreticiden yüksek kalite.",
+    "brand": {
+        "@type": "Brand",
+        "name": "Liftkeys"
+    },
+    "manufacturer": {
         "@type": "Organization",
         "name": "Liftkeys",
-        "url": "https://www.liftkeys.com",
-        "logo": "https://www.liftkeys.com/static/image/preview/liftkeys-og.webp",
-        "sameAs": [
-            "https://www.linkedin.com/company/liftkeys",
-            "https://www.instagram.com/liftkeys"
-        ]
-    }
+        "url": "https://www.liftkeys.com"
+    },
+    "category": "Asansör Yedek Parça"
+}
 </script>
-
 
 <section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
             
             <div class="col-lg-6">
-                <div class="video-wrapper-web3" onclick="loadYoutube(this)" data-video-id="YOUR_VIDEO_ID_HERE" data-aos="fade-right">
-                    <img src="{% static 'image/pageproduct/fotosel/liftkeys aşırıyük banner .jpeg' %}" alt="Video Kapak" class="video-poster">
+                <div class="video-wrapper-web3" onclick="loadYoutube(this)" data-video-id="PzqvSi8chVE" data-aos="fade-right">
+                    
+                    <img src="{% static 'image/pageproduct/fotosel/liftkeys_asiriyuk_banner.jpeg' %}" alt="Video Kapak" class="video-poster">
+                    
                     <div class="play-btn-modern">
                         <i class="bi bi-play-fill"></i>
                     </div>
@@ -103,8 +109,8 @@ elektronik ve mekanik bileşenlerle çözümler.
                         <i class="bi bi-shield-check"></i>
                     </div>
                     <h1 class="hero-title">
-                        <span class="text-gradient-orange">Işığın Hassasiyeti</span> <br>
-                        Güvenlik Gücü
+                        <span class="text-gradient-orange">Liftkeys Asansör Fotoseli</span> <br>
+                        Işığın Hassasiyeti, Güvenlik Gücü
                     </h1>
                 </div>
             </div>
@@ -441,17 +447,8 @@ elektronik ve mekanik bileşenlerle çözümler.
     </div>
 </div>
 
-<section class="cta-offer-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center" data-aos="zoom-in" data-aos-duration="1000">
-                <a href="/contact/" class="offer-btn-link" title="Teklif İste">
-                    <img src="{% static 'image/pageproduct/fotosel/FOTOSEL URETIM-15.webp' %}" alt="Hemen Teklif İste" class="offer-btn-img">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+{% include "preview/iletisimformpreview.html" %}
+
 
 <script>
     function loadYoutube(element) {
@@ -489,6 +486,28 @@ elektronik ve mekanik bileşenlerle çözümler.
     once: true,      // Sadece bir kere çalışsın (Yukarı çıkıp inince tekrar oynamasın)
     offset: 100,     // Animasyonun tetiklenmesi için alt kenardan mesafe
   });
+
+// YouTube videosunu yükleyen fonksiyon
+function loadYoutube(element) {
+    // 1. Tıklanan div'in içindeki video ID'sini alıyoruz
+    var videoId = element.getAttribute("data-video-id");
+    
+    // 2. Senin test ettiğin ve çalışan o kusursuz iframe kodunu hazırlıyoruz.
+    // Sadece src kısmındaki ID'yi dinamik hale getirdik ve otomatik oynama (autoplay=1) ekledik.
+    var iframeHTML = `
+        <iframe width="100%" height="100%" style="min-height: 315px;"
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    `;
+    
+    // 3. Resmi ve butonu silip yerine bu iframe'i basıyoruz
+    element.innerHTML = iframeHTML;
+}
 </script>
 
 {% include "preview/footer.html" %}

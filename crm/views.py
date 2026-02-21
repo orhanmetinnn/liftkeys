@@ -1383,6 +1383,14 @@ from django.contrib import messages
 from django.shortcuts import redirect
 
 from .forms import ContactForm
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.http import JsonResponse
+from django.core.mail import send_mail # Mail göndermek için eklediğimiz kütüphane
+from django.conf import settings       # Ayarlara ulaşmak için eklediğimiz kütüphane
+from .forms import ContactForm
+from .models import Category, Product  # Kendi modellerin
+
 def contactpage(request):
     # Menüde gösterilecek kategoriler
     menu_categories = Category.objects.filter(menude_goster=True).order_by('name')
@@ -1390,13 +1398,41 @@ def contactpage(request):
     # Her kategoriye bağlı ürünleri attribute olarak ekle
     for cat in menu_categories:
         cat.products = Product.objects.filter(categories=cat, is_active=True)
+        
     if request.method == "POST":
-        # print("post geldi")
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()  # Artık güvenli
+            form.save()  # Veritabanına kaydet
+            
+            # Formdan gelen verileri alıyoruz
+            name = form.cleaned_data.get('name')
+            email = form.cleaned_data.get('email')
+            phone = form.cleaned_data.get('phone', 'Belirtilmedi')
+            subject = form.cleaned_data.get('subject', 'Konu Yok')
+            message = form.cleaned_data.get('message')
+
+            # Gönderilecek Mailin İçeriğini Hazırlıyoruz
+            mail_subject = f"Web Sitesinden Yeni Mesaj: {subject}"
+            mail_body = f"Siteden yeni bir iletişim formu aldınız.\n\n" \
+                        f"Gönderen: {name}\n" \
+                        f"E-posta: {email}\n" \
+                        f"Telefon: {phone}\n\n" \
+                        f"Mesaj:\n{message}"
+
+            # Maili Gönderiyoruz
+            try:
+                send_mail(
+                    mail_subject,                # Konu
+                    mail_body,                   # İçerik
+                    settings.DEFAULT_FROM_EMAIL, # Kimden gideceği
+                    ['info@liftkeys.com'],       # Kime gideceği (Sana gelecek)
+                    fail_silently=False,
+                )
+            except Exception as e:
+                print(f"Mail gönderme hatası: {e}") # Konsolda hatayı görmek için
+
             messages.success(request, "Mesajınız başarıyla gönderildi!")
-            return redirect('contact')  # Aynı sayfa
+            return redirect('contact') 
                 
     else:
         form = ContactForm()
@@ -1408,18 +1444,43 @@ def contactpage(request):
     return render(request, 'preview/contactpage.html', context)
 
 
-
-
 def contact_form_view_preview(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
+            form.save() # Veritabanına kaydet
+            
+            # Formdan gelen verileri alıyoruz
+            name = form.cleaned_data.get('name')
+            email = form.cleaned_data.get('email')
+            phone = form.cleaned_data.get('phone', 'Belirtilmedi')
+            subject = form.cleaned_data.get('subject', 'Konu Yok')
+            message = form.cleaned_data.get('message')
+
+            # Gönderilecek Mailin İçeriğini Hazırlıyoruz
+            mail_subject = f"Önizleme - Web Sitesinden Yeni Mesaj: {subject}"
+            mail_body = f"Siteden yeni bir iletişim formu aldınız.\n\n" \
+                        f"Gönderen: {name}\n" \
+                        f"E-posta: {email}\n" \
+                        f"Telefon: {phone}\n\n" \
+                        f"Mesaj:\n{message}"
+
+            # Maili Gönderiyoruz
+            try:
+                send_mail(
+                    mail_subject,
+                    mail_body,
+                    settings.DEFAULT_FROM_EMAIL,
+                    ['info@liftkeys.com'], # Kime gideceği
+                    fail_silently=False,
+                )
+            except Exception as e:
+                print(f"Mail gönderme hatası (Preview): {e}")
+
             return JsonResponse({"success": True, "message": "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız."})
         else:
             return JsonResponse({"success": False, "errors": form.errors}, status=400)
     return JsonResponse({"success": False, "message": "Geçersiz istek."}, status=405)
-
 
 
 from django.shortcuts import render, redirect, get_object_or_404
@@ -1560,50 +1621,71 @@ def custom_404(request, exception=None):
 
 
 
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import JsonResponse
+from django.contrib import messages
 from .models import GalleryItem
-def gallery_view(request):
-    return render(request, "preview\gallery.html")
+from .forms import GalleryItemForm
 
+# 1. GÖRÜNÜM: Galeri Ana Sayfası
+def gallery_view(request):
+    # DÜZELTME: "\" işareti "/" olarak değiştirildi. 
+    # Linux (Canlı sunucu) ve Windows bu sayede sorunsuz çalışır.
+    return render(request, "preview/gallery.html")
+
+# 2. GÖRÜNÜM: Galeri Öğeleri API'si (Sonsuz kaydırma veya AJAX için)
 def gallery_items_api(request):
     offset = int(request.GET.get("offset", 0))
-    limit  = int(request.GET.get("limit", 12))  # <- İSTEDİĞİN KADAR
+    limit  = int(request.GET.get("limit", 12))  
+    
+    # Öğeleri oluşturulma tarihine göre yeniden eskiye sıralar ve dilimler
     items = GalleryItem.objects.order_by("-created_at")[offset:offset+limit]
+    
+    # API yanıtı için veriyi sözlük (dictionary) formatına çeviriyoruz
     data = [{
         "type": i.content_type,
         "title_tr": i.title_tr,
         "title_en": i.title_en,
         "image": i.image.url if i.image else None,
-        "youtube": i.youtube_embed(),
+        "youtube": i.youtube_embed(), # Modelde tanımlı bir metod olduğu varsayılmıştır
         "youtube_thumbnail": i.youtube_thumbnail,
     } for i in items]
+    
     return JsonResponse(data, safe=False)
 
-
-from .forms import GalleryItemForm
+# 3. GÖRÜNÜM: Galeri Yöneticisi (Ekleme ve Güncelleme)
 def gallery_manager_view(request, item_id=None):
     """
-    Eğer item_id varsa -> update işlemi
-    Eğer item_id yoksa -> create işlemi
+    Eğer url'den item_id gelirse -> update (güncelleme) işlemi yapar.
+    Eğer item_id yoksa -> create (yeni ekleme) işlemi yapar.
     """
+    # Düzenlenecek öğeyi bul veya 404 hatası ver
     if item_id:
         item = get_object_or_404(GalleryItem, id=item_id)
     else:
         item = None
 
     if request.method == "POST":
+        # Formu gelen POST verileri ve Yüklenen Dosyalar (FILES) ile doldur
         form = GalleryItemForm(request.POST, request.FILES, instance=item)
         if form.is_valid():
             form.save()
+            
+            # Başarı mesajlarını belirle
             if item:
                 messages.success(request, "Galeri içeriği başarıyla güncellendi ✅")
             else:
                 messages.success(request, "Yeni galeri içeriği eklendi ✅")
-            return redirect("gallery_manager")  # urls.py’de bu adı vereceğiz
+                
+            return redirect("gallery_manager")  
     else:
+        # GET isteği ise boş veya dolu formu göster
         form = GalleryItemForm(instance=item)
 
-    items = GalleryItem.objects.order_by("-created_at")  # listeleme için
+    # Tabloda göstermek için tüm öğeleri çek
+    items = GalleryItem.objects.order_by("-created_at")  
 
+    # Verileri şablona gönder. DİKKAT: Burada da "/" kullandığından emin ol!
     return render(request, "websitemanager/gallerymanager.html", {
         "form": form,
         "items": items,
@@ -1698,3 +1780,12 @@ def takozlar_view(request):
     """
     return render(request, "preview/previewblog/takozlar.html")
     
+
+
+def kagittanisler_view(request):
+    """
+    Liftkeys Kağıt Tanısler blog yazısını render eder.
+    """
+    return render(request, "preview/kagittanisler.html")
+
+

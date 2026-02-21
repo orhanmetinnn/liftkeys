@@ -1,84 +1,80 @@
 :root {
-    --brand: #F46E21;
-    /* turuncu */
-    --brand-2: #FF8A3D;
-    /* turuncu degrade */
-    --ink: #1C1C1E;
-    /* koyu metin */
-    --muted: #6B7280;
-    /* gri metin */
-    --surface: #0E0E10;
-    /* arka plan (koyu web3) */
-    --glass: rgba(255, 255, 255, 0.06);
-    --glass-stroke: rgba(255, 255, 255, 0.18);
-    --card: rgba(255, 255, 255, 0.08);
-    --grid: rgba(255, 255, 255, 0.05);
+    --brand: #F46E21;        /* Liftkeys Turuncusu */
+    --brand-2: #FF8A3D;      /* Turuncu degrade */
+    --ink: #1F2937;          /* Ana koyu metin (Kömür Grisi) */
+    --ink-light: #4B5563;    /* İkincil yumuşak metin */
+    --surface: #F9FAFB;      /* Açık arka plan */
+    --glass: rgba(255, 255, 255, 0.8);
+    --glass-stroke: rgba(0, 0, 0, 0.06);
+    --card: #FFFFFF;         /* Saf beyaz kartlar */
+    --grid: rgba(0, 0, 0, 0.03); /* Çok hafif arka plan ızgarası */
     --white: #FFFFFF;
-    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* Yumuşatılmış gölge */
     --radius: 18px;
     --radius-lg: 26px;
     --max: 1150px;
 }
 
 /* Reset/typography */
-*,
-*::before,
-*::after {
-    box-sizing: border-box
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background: radial-gradient(1200px 600px at 20% 10%, rgba(244, 110, 33, .10), transparent 60%),
-        radial-gradient(900px 600px at 90% 10%, rgba(255, 255, 255, .06), transparent 60%),
-        var(--surface);
+    /* Ferah, açık renkli radial geçişler */
+    background: radial-gradient(1200px 600px at 20% 10%, rgba(244, 110, 33, 0.06), transparent 60%),
+                radial-gradient(900px 600px at 90% 10%, rgba(255, 255, 255, 1), transparent 60%),
+                var(--surface);
     line-height: 1.6;
+    color: var(--ink-light);
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     line-height: 1.2;
     margin: 0 0 .6rem;
-    color: var(--white);
+    color: var(--ink);
+}
 
+#abouth3 {
+    font-size: 1.8rem;
+    color: var(--ink);
 }
 
 p {
     margin: .3rem 0 1rem;
-    color: white;
+    color: var(--ink-light);
 }
 
 a {
-    color: var(--brand)
+    color: var(--brand);
+    text-decoration: none;
 }
 
 .wrap {
     max-width: var(--max);
     margin: 0 auto;
-    padding: 32px 20px
+    padding: 32px 20px;
 }
 
-/* Subtle infinite gradient line at top (web3 vibe) */
+/* Üstteki ince degrade çizgi */
 .topline {
     position: fixed;
     inset: 0 0 auto 0;
-    height: 3px;
+    height: 4px;
     z-index: 999;
     background: linear-gradient(90deg, transparent, var(--brand), var(--brand-2), transparent);
-    filter: blur(.2px);
-    opacity: .75;
+    opacity: 0.9;
     animation: move 8s linear infinite;
     background-size: 200% 100%;
 }
 
 @keyframes move {
-    to {
-        background-position: 200% 0;
-    }
+    to { background-position: 200% 0; }
 }
 
-/* Decorative background grid */
+/* Arka plan ızgara deseni (Açık temaya uyarlandı) */
 .grid-bg {
     position: fixed;
     inset: 0;
@@ -89,9 +85,10 @@ a {
         linear-gradient(90deg, var(--grid) 1px, transparent 1px);
     background-size: 60px 60px, 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
 }
 
-/* Hero */
+/* Hero Alanı */
 .hero {
     padding: 96px 20px 48px;
     position: relative;
@@ -100,36 +97,26 @@ a {
 
 .hero .wrap {
     position: relative;
-    background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .04));
+    background: rgba(255, 255, 255, 0.6);
     border: 1px solid var(--glass-stroke);
     box-shadow: var(--shadow);
     border-radius: var(--radius-lg);
     padding: 48px;
-    backdrop-filter: blur(10px);
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .35rem .75rem;
-    border-radius: 999px;
-    background: rgba(244, 110, 33, .12);
-    border: 1px solid rgba(244, 110, 33, .35);
-    font-weight: 600;
-    letter-spacing: .2px;
-    font-size: .9rem;
-    color: #FFD7BF;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .hero h1 {
     font-size: clamp(1.9rem, 2.6vw, 3rem);
     margin-top: 1rem;
-    color: white;
+    color: var(--ink);
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .sub {
-    color: white;
+    color: var(--ink-light);
+    font-size: 1.1rem;
 }
 
 .hero-stats {
@@ -140,24 +127,29 @@ a {
 }
 
 .pill {
-    background: var(--glass);
-    border: 1px solid var(--glass-stroke);
-    backdrop-filter: blur(8px);
-    padding: .6rem .9rem;
+    background: var(--white);
+    border: 1px solid rgba(244, 110, 33, 0.2);
+    padding: .6rem 1rem;
     border-radius: 12px;
-    font-size: .92rem;
-    color: #EAEAEA
+    font-size: .95rem;
+    color: var(--brand);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(244, 110, 33, 0.05);
 }
 
-/* About content card */
+/* İçerik Kartları */
 .card {
     background: var(--card);
     border: 1px solid var(--glass-stroke);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 28px;
-    backdrop-filter: blur(8px);
-    color: white;
+    padding: 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .columns {
@@ -169,17 +161,27 @@ a {
 
 .tag {
     display: inline-block;
-    font-size: 1.78rem;
-    letter-spacing: .3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: .5px;
     text-transform: uppercase;
-    color: #ffffff;
-    background: rgba(244, 110, 33, .15);
-    border: 1px dashed rgba(244, 110, 33, .45);
-    padding: .35rem .6rem;
+    color: var(--brand);
+    background: rgba(244, 110, 33, 0.08);
+    border: 1px dashed rgba(244, 110, 33, 0.3);
+    padding: .4rem .8rem;
     border-radius: 8px;
 }
 
-/* Vertical Timeline */
+.card ul {
+    color: var(--ink-light);
+    padding-left: 1.5rem;
+}
+
+.card li {
+    margin-bottom: 0.4rem;
+}
+
+/* Dikey Zaman Çizelgesi (Timeline) */
 .timeline {
     position: relative;
     margin-top: 36px;
@@ -192,7 +194,7 @@ a {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, .25), rgba(255, 255, 255, .05));
+    background: linear-gradient(180deg, rgba(244, 110, 33, 0.3), rgba(0, 0, 0, 0.05));
     border-radius: 2px;
 }
 
@@ -207,7 +209,7 @@ a {
 
 .t-item.reveal {
     opacity: 1;
-    transform: none
+    transform: none;
 }
 
 .t-node {
@@ -217,118 +219,125 @@ a {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #fff, var(--brand) 60%);
-    outline: 8px solid rgba(244, 110, 33, .15);
-    box-shadow: 0 0 0 2px rgba(244, 110, 33, .55), 0 8px 20px rgba(244, 110, 33, .35);
+    background: var(--brand);
+    outline: 6px solid rgba(244, 110, 33, 0.15);
+    box-shadow: 0 4px 10px rgba(244, 110, 33, 0.3);
 }
 
 .t-year {
     font-weight: 800;
-    color: #FFEFE5;
+    color: var(--brand);
     letter-spacing: .4px;
     margin-bottom: .2rem;
 }
 
 .t-title {
     font-weight: 700;
-    color: #FFD7BF;
+    color: var(--ink);
     margin-bottom: .25rem;
 }
 
 .t-body {
-    color: #E8E8EA;
+    color: var(--ink-light);
 }
 
 .t-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03));
+    background: var(--white);
     border: 1px solid var(--glass-stroke);
     border-radius: 14px;
-    padding: 16px 18px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
-/* CTA/footer band */
+/* İletişim Çağrısı (CTA) - Açık temada dikkat çekmesi için Turuncu Blok yapıldı */
 .cta {
     margin: 56px 0 32px;
-    padding: 24px;
+    padding: 32px;
     border-radius: var(--radius-lg);
-    background: linear-gradient(90deg, rgba(244, 110, 33, .18), rgba(244, 110, 33, .06));
-    border: 1px solid rgba(244, 110, 33, .35);
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    box-shadow: 0 15px 35px rgba(244, 110, 33, 0.25);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 24px;
     flex-wrap: wrap;
 }
 
+.cta h3 {
+    color: var(--white) !important;
+}
+
+.cta p {
+    color: rgba(255, 255, 255, 0.9) !important; 
+}
+
+/* Butonlar */
 .btn {
     appearance: none;
     border: none;
     cursor: pointer;
-    padding: .85rem 1.1rem;
+    padding: .85rem 1.4rem;
     border-radius: 12px;
     font-weight: 700;
-    background: linear-gradient(180deg, var(--brand), var(--brand-2));
+    background: var(--brand);
     color: white;
-    box-shadow: 0 8px 24px rgba(244, 110, 33, .35);
+    box-shadow: 0 6px 16px rgba(244, 110, 33, 0.25);
     transition: transform .15s ease, box-shadow .2s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 28px rgba(244, 110, 33, .45)
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(244, 110, 33, 0.35);
 }
 
-.btn.ghost {
+/* CTA içindeki butonlar arka planla kontrast yaratmalı */
+.cta .btn {
+    background: var(--white);
+    color: var(--brand);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta .btn.ghost {
     background: transparent;
-    color: #FFD7BF;
-    border: 1px solid rgba(255, 215, 191, .35)
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+}
+
+.cta .btn.ghost:hover {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive */
 @media (max-width: 920px) {
-    .columns {
-        grid-template-columns: 1fr
-    }
-
-    .hero .wrap {
-        padding: 28px
-    }
+    .columns { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 32px 24px; }
+    .cta { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 640px) {
-    .timeline::before {
-        left: 16px
-    }
-
-    .t-item {
-        padding-left: 58px
-    }
-
-    .t-node {
-        left: 7px
-    }
+    .timeline::before { left: 16px; }
+    .t-item { padding-left: 58px; }
+    .t-node { left: 7px; }
 }
 
-/* Tiny brand spark decoration */
+/* Turuncu parlama efekti (Hafifletildi) */
 .spark {
     position: absolute;
-    right: -30px;
-    top: -30px;
-    width: 160px;
-    height: 160px;
-    filter: blur(16px);
-    background: radial-gradient(circle at 50% 50%, rgba(244, 110, 33, .6), rgba(244, 110, 33, .0) 60%);
-    mix-blend-mode: screen;
+    right: -40px;
+    top: -40px;
+    width: 200px;
+    height: 200px;
+    filter: blur(24px);
+    background: radial-gradient(circle at 50% 50%, rgba(244, 110, 33, 0.15), transparent 60%);
     pointer-events: none;
     animation: float 10s ease-in-out infinite alternate;
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0) translateX(0) scale(1)
-    }
-
-    100% {
-        transform: translateY(10px) translateX(6px) scale(1.06)
-    }
+    0% { transform: translateY(0) translateX(0) scale(1); }
+    100% { transform: translateY(15px) translateX(10px) scale(1.1); }
 }

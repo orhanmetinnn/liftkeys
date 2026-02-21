@@ -13,7 +13,9 @@ class StaticViewSitemap(Sitemap):
 
     def items(self):
         # urls.py içinde name='indexpage', name='contact', name='about' olan path'ler
-        return ['indexpage', 'contact', 'about']
+        return ['indexpage', 'contact', 'about','gizlilikguvenlik','category_list',
+                "atlas_overload","horus_photocell","switch_systems",
+                "zemin_view","fan_view","paten_view","solid_view","kupeste_view","takozlar_view","gallery_view","kagittanisleri_view"]
 
     def location(self, item):
         return reverse(item)

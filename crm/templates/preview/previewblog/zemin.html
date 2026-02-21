@@ -235,18 +235,24 @@ Teknik detaylar ve rulo koleksiyonu için tıklayın.
 
     <div class="row align-items-center mb-5">
         <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right">
-            <div class="position-relative overflow-hidden rounded-3 shadow-lg">
+            
+            <div class="position-relative overflow-hidden rounded-3 shadow-lg"
+                onclick="loadYoutubeVideo(this)" 
+                data-video-id="Tqbw7Ib4Lvc" 
+                style="cursor: pointer;">
+                
                 <img src="{% static 'image/pageproduct/pvcfloor/asansor-zemin-kaplama-uygulamasi.webp' %}" 
-                     class="img-fluid w-100" 
-                     alt="LiftKeys Asansör PVC Zemin Kaplama Uygulaması ve Granit Desenli Zemin"
-                     style="object-fit: cover; min-height: 300px;">
+                    class="img-fluid w-100" 
+                    alt="LiftKeys Asansör PVC Zemin Kaplama Uygulaması ve Granit Desenli Zemin"
+                    style="object-fit: cover; min-height: 300px;">
                 
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <div class="bg-white rounded-circle d-flex align-items-center justify-content-center text-orange play-btn-pulse" 
-                         style="width: 70px; height: 70px; opacity: 0.95; cursor: pointer;">
+                        style="width: 70px; height: 70px; opacity: 0.95;">
                         <i class="fa-solid fa-play fa-2x ps-1"></i>
                     </div>
                 </div>
+                
             </div>
         </div>
 
@@ -270,7 +276,25 @@ Teknik detaylar ve rulo koleksiyonu için tıklayın.
         </div>
     </div>
 </div>
-
+<script>
+    function loadYoutubeVideo(element) {
+        var videoId = element.getAttribute("data-video-id");
+        
+        // Bu videonun kapsayıcısında min-height: 300px olduğu için iframe'e de uyarladık
+        var iframeHTML = `
+            <iframe width="100%" height="100%" style="min-height: 300px;"
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        `;
+        
+        element.innerHTML = iframeHTML;
+    }
+</script>
 <div class="container-fluid py-5 bg-white">
     <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
@@ -780,28 +804,11 @@ Teknik detaylar ve rulo koleksiyonu için tıklayın.
 
 
 
+{% include "preview/iletisimformpreview.html" %}
 
 
 
 
-
-
-
-
-<div class="container mb-5 pb-5">
-    <div class="row text-center" data-aos="fade-up" data-aos-offset="10">
-        <div class="col-12">
-            <div class="p-5 rounded-4 bg-white shadow-lg border border-1" style="border-top: 5px solid var(--lk-orange) !important;">
-                <h2 class="mb-4 text-muted h3">Projeniz için en uygun zemin çözümünü birlikte seçelim.</h2>
-                <a href="/contact/" class="btn btn-lg shadow text-white" 
-                style="background-color: #F08200; padding: 15px 60px; border-radius: 50px; font-size: 1.5rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 15px; transition: transform 0.2s;">
-                    <i class="fa-solid fa-handshake fa-lg"></i>
-                    Teklif İste
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

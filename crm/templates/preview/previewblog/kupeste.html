@@ -166,15 +166,21 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
         <div class="row align-items-center">
             
             <div class="col-lg-8 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
-                <div class="video-thumbnail-wrapper">
+                
+                <div class="video-thumbnail-wrapper" 
+                    onclick="loadYoutubeVideo(this)" 
+                    data-video-id="sRz6UmVh-lM" 
+                    style="cursor: pointer;">
+                    
                     <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-asansor-kupeste.webp' %}" 
-                         alt="Paslanmaz çelik modern asansör küpeşte ve tutamak modeli" 
-                         title="Paslanmaz Çelik Küpeşte" 
-                         class="img-fluid w-100 d-block">
+                        alt="Paslanmaz çelik modern asansör küpeşte ve tutamak modeli" 
+                        title="Paslanmaz Çelik Küpeşte" 
+                        class="img-fluid w-100 d-block">
                     
                     <div class="play-button-overlay">
                         <div class="play-button-icon"></div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -189,6 +195,39 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
         </div>
     </div>
 </section>
+
+
+
+<script>
+    function loadYoutubeVideo(element) {
+        // 1. Tıklanan div'in içindeki video kimliğini (data-video-id) alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // 2. YouTube iframe (video oynatıcı) kodumuzu oluşturuyoruz
+        // Tasarımınla tam uyumlu olması için style kısmına min-height: 350px; ekledik
+        // autoplay=1 parametresi sayesinde video tıklandığı an otomatik oynamaya başlar
+        var iframeHTML = `
+            <iframe width="100%" height="100%" style="min-height: 350px;"
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        `;
+        
+        // 3. Tıklanan alanın içindeki resmi ve Play butonunu tamamen temizleyip, 
+        // yerine hazırladığımız bu video oynatıcıyı yerleştiriyoruz
+        element.innerHTML = iframeHTML;
+    }
+</script>
+
+
+
+
+
+
 
 <section class="py-5" style="background-color: #f9f9f9;"> 
     <div class="container">
@@ -623,20 +662,7 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
     </div>
 </section>
 
-<div class="container mb-5 pb-5">
-    <div class="row text-center" data-aos="fade-up" data-aos-offset="10">
-        <div class="col-12">
-            <div class="p-5 rounded-4 bg-white shadow-lg border border-1" style="border-top: 5px solid var(--lk-orange) !important;">
-                <h2 class="mb-4 text-muted h3">Projeniz için en uygun küpeşte çözümünü birlikte seçelim.</h2>
-                <a href="/contact/" class="btn btn-lg shadow text-white" 
-                style="background-color: #F08200; padding: 15px 60px; border-radius: 50px; font-size: 1.5rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 15px; transition: transform 0.2s;">
-                    <i class="fa-solid fa-handshake fa-lg"></i>
-                    Teklif İste
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+{% include "preview/iletisimformpreview.html" %}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

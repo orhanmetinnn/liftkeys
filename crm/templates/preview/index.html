@@ -169,7 +169,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                         Kendi ailemizi güvenle bindireceğimiz kaliteyi üretiyoruz.
                         {% endblocktrans %}
                     </p>
-                    <a href="#" class="arrow-link d-inline-block">
+                    <a href="#iletisim-alani" class="arrow-link d-inline-block">
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -182,7 +182,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                         Modern üretim teknikleriyle, 35 ülkede 1.200’den fazla müşterimize ihtiyaçlarına özel inovatif çözümler sunuyoruz.
                         {% endblocktrans %}
                     </p>
-                    <a href="#" class="arrow-link d-inline-block">
+                    <a href="#iletisim-alani" class="arrow-link d-inline-block">
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -195,7 +195,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                         Tüm ürünlerimiz titizlikle test edilerek yüksek kalite ve dayanıklılık standartlarıyla üretilmektedir.
                         {% endblocktrans %}
                     </p>
-                    <a href="#" class="arrow-link d-inline-block">
+                    <a href="#iletisim-alani" class="arrow-link d-inline-block">
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -221,6 +221,92 @@ elektronik ve mekanik bileşenlerle çözümler.
 </div>
 
 
+<section class="exhibition-videos-section py-5  overflow-hidden">
+    <div class="container">
+        
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center" data-aos="fade-down">
+                <span class="text-orange fw-bold text-uppercase small ls-2">Global Vizyon</span>
+                <h2 class="display-6 fw-bold text-dark mt-2 h3">Fuar ve Etkinlik Videolarımız</h2>
+                <p class="text-secondary">LiftKeys olarak sektördeki yeniliklerimizi dünya çapındaki fuarlarda sizlerle buluşturuyoruz.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-md-6 col-lg-5" data-aos="fade-right" data-aos-delay="0">
+                <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-sm"
+                     onclick="loadYoutubeVideo(this)" 
+                     data-video-id="Ij9C8v2VXas" 
+                     style="cursor: pointer; min-height: 280px; background-color: #000;">
+                    
+                    <img src="{% static 'image/preview/asansor-istanbul-2025-video.webp' %}" 
+                         class="img-fluid w-100 h-100" 
+                         alt="LiftKeys Asansör İstanbul 2025"
+                         style=";" loading="lazy">
+                    
+                    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;">
+                        <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange shadow" 
+                             style="width: 80px; height: 80px;">
+                            <i class="bi bi-play-fill display-4 ps-2" style="color: #F08200;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-5" data-aos="fade-left" data-aos-delay="100">
+                <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-sm"
+                     onclick="loadYoutubeVideo(this)" 
+                     data-video-id="TFlac_TrW1M" 
+                     style="cursor: pointer; min-height: 280px; background-color: #000;">
+                    
+                    <img src="{% static 'image/preview/interlift-2025-video.webp' %}" 
+                         class="img-fluid w-100 h-100" 
+                         alt="LiftKeys Interlift 2025"
+                         style="" loading="lazy">
+                    
+                    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;">
+                        <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange shadow" 
+                             style="width: 80px; height: 80px;">
+                            <i class="bi bi-play-fill display-4 ps-2" style="color: #F08200;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<script>
+    // Eğer sayfada bu fonksiyon zaten varsa, bu bloğu silebilirsin.
+    function loadYoutubeVideo(element) {
+        // Tıklanan yapının içindeki video kimliğini alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // YouTube iframe kodunu oluşturuyoruz
+        // referrerpolicy="strict-origin-when-cross-origin" senin kodunda vardı, onu aynen tutuyoruz.
+        var iframeHTML = `
+            <iframe width="100%" height="100%" style="min-height: 280px; position: absolute; top:0; left:0; width:100%; height:100%;"
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        `;
+        
+        // Resmi ve butonu temizleyip yerine videoyu basıyoruz
+        element.innerHTML = iframeHTML;
+        
+        // Yeniden tıklanmayı önlemek için cursor'ı normale çeviriyoruz
+        element.style.cursor = "default";
+        // Onclick özelliğini kaldırıyoruz ki tekrar tetiklenmesin
+        element.onclick = null;
+    }
+</script>
 
 
 <section class="about-section section-padding mt-5 mb-5" data-aos="zoom-out" data-aos-duration="1000">
@@ -577,7 +663,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/horus-photocell/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="/takozlar/" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -775,7 +861,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 </p>
 
 
-                <a href="#" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="/solid/" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
