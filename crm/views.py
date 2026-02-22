@@ -1789,3 +1789,60 @@ def kagittanisler_view(request):
     return render(request, "preview/kagittanisler.html")
 
 
+
+
+
+
+
+import csv
+from django.http import HttpResponse
+from .models import Product # Modellerinin olduğu yere göre importu ayarla
+
+def pinterest_catalog_feed(request):
+    """
+    Pinterest'in ürünleri otomatik çekmesi için CSV formatında veri sağlar.
+    """
+    response = HttpResponse(content_type='text/csv; charset=utf-8')
+    response['Content-Disposition'] = 'attachment; filename="pinterest_products.csv"'
+
+    writer = csv.writer(response)
+    
+    # 1. Pinterest Sütun Başlıkları (Fiyat sildik, Toplam 7 Sütun)
+    writer.writerow([
+        'id', 
+        'title', 
+        'description', 
+        'link', 
+        'image_link', 
+        'availability', 
+        'condition'
+    ])
+
+    products = Product.objects.filter(is_active=True)
+
+    for product in products:
+        # Ürün URL'sini oluşturuyoruz
+        product_path = product.get_absolute_url(request=request)
+        full_link = request.build_absolute_uri(product_path) if product_path != "#" else ""
+
+        # Görsel URL'sini oluşturuyoruz
+        if product.website_image:
+            image_link = request.build_absolute_uri(product.website_image.url)
+        else:
+            image_link = ""
+
+        # Açıklama boşsa başlığı kullanıyoruz
+        description = product.description if product.description else product.name
+
+        # 3. Ürün verilerini satır satır yazdırıyoruz (Buradan da fiyatı sildik, Toplam 7 Veri)
+        writer.writerow([
+            product.id,
+            product.name,
+            description,
+            full_link,
+            image_link,
+            'in stock', # availability sütununa denk gelir
+            'new'       # condition sütununa denk gelir
+        ])
+
+    return response

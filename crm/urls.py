@@ -69,6 +69,7 @@ urlpatterns = [
     path("kupeste/", views.kupeste_view, name="kupeste_view"),
     path("takozlar/", views.takozlar_view, name="takozlar_view"),
     path("kagittanisleri/", views.kagittanisler_view, name="kagittanisleri_view"),
+    path('feed/pinterest/', views.pinterest_catalog_feed, name='pinterest_feed'),
 
 ]
 

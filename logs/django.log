@@ -82426,3 +82426,16 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'en
 [2026-02-22 00:46:18,510] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
 [2026-02-22 01:01:37,539] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
 [2026-02-22 01:03:11,921] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:34:25,150] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:34:26,849] WARNING django.request - Not Found: /favicon.ico
+[2026-02-22 21:34:26,849] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 24058
+[2026-02-22 21:34:39,091] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:34:44,381] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:36:19,031] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:36:30,973] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:36:31,104] WARNING django.server - "GET /static/font/NotoKufiArabic/NotoKufiArabic-Regular.ttf HTTP/1.1" 404 2065
+[2026-02-22 21:36:42,468] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:36:42,598] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-02-22 21:36:45,334] WARNING django.request - Not Found: /favicon.ico
+[2026-02-22 21:36:45,334] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 24337
+[2026-02-22 21:36:59,462] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996

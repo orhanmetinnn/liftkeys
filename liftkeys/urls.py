@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
@@ -10,55 +10,61 @@ from django.utils import translation
 from wagtail import urls as wagtail_urls
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.documents import urls as wagtaildocs_urls
-from wagtail import views as wagtail_views # Wagtail görünümü
+from wagtail import views as wagtail_views
 
-# 🔥 1. ÖZEL KARŞILAMA FONKSİYONU
+# 🔥 1. ÖZEL KARŞILAMA FONKSİYONU (Senin Kodun)
 def root_language_handler(request):
     """
     Anasayfaya (/) gelen isteği yakalar.
     - Tarayıcı dili Türkçe değilse (örn: İngilizce) -> /en/ adresine yönlendirir.
     - Tarayıcı dili Türkçe ise -> Olduğu yerde (yönlendirmeden) Wagtail sayfasını gösterir.
     """
-    # 1. Tarayıcının istediği dili bul (Header veya Cookie'den)
     lang = translation.get_language_from_request(request)
 
-    # 2. Eğer dil varsayılan (TR) değilse ve desteklenen bir dilse yönlendir
     if lang != settings.LANGUAGE_CODE and lang in [l[0] for l in settings.LANGUAGES]:
         return redirect(f'/{lang}/')
 
-    # 3. Eğer dil Türkçe ise, Wagtail'ın sayfayı sunmasına izin ver
-    # Wagtail'ın 'serve' fonksiyonunu manuel çağırıyoruz
     return wagtail_views.serve(request, request.path)
 
 
-# 2. STANDART URL'LER
+# 2. STANDART URL'LER (Yönlendirmeyi Buradan Kaldırdık!)
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('cms/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
+    # RedirectView silindi. Artık /tr/ otomatik olarak / adresine YÖNLENDİRİLMEYECEK.
 ]
+
 
 # 3. STATİK DOSYALAR (DEBUG Modu)
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-# 4. KÖK DİZİN YAKALAYICI (En Önemli Kısım)
-# i18n_patterns içine girmeden önce anasayfayı biz yakalıyoruz.
+
+# 4. KÖK DİZİN YAKALAYICI
 urlpatterns += [
-    # Sadece boş '' (anasayfa) için özel fonksiyonumuzu çalıştır
     path('', root_language_handler, name='root_language_handler'),
 ]
 
-# 5. DİĞER SAYFALAR İÇİN WAGTAIL VE I18N
+
+# 5. 🔥 /tr/ İÇİN MANUEL TANIMLAMA (Yeni Eklenen Bölüm)
+# i18n_patterns /tr/ ekini unuttuğu için, /tr/ ile gelen istekleri 
+# 404 hatasına düşmemesi adına manuel olarak Wagtail ve CRM'e bağlıyoruz.
+urlpatterns += [
+    path('tr/search/', include('crm.urls')),
+    path('tr/', include('crm.urls')),
+    path('tr/', include(wagtail_urls)),
+]
+
+
+# 6. DİĞER SAYFALAR İÇİN WAGTAIL VE I18N (/en/, /ar/ vb.)
 urlpatterns += i18n_patterns(
-    path('search/', include('crm.urls')), # Varsa search vb.
+    path('search/', include('crm.urls')), 
     path('', include('crm.urls')), 
-    
-    # Not: Buradaki Wagtail path'i artık anasayfayı ('') yakalamayacak 
-    # çünkü yukarıda biz yakaladık. Alt sayfaları yakalayacak.
     path('', include(wagtail_urls)),
     
+    # Türkçe için otomatik ön eki iptal eder (Ana sayfanın düz / açılmasını sağlar)
     prefix_default_language=False,
 )
