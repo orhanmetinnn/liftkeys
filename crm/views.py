@@ -1790,6 +1790,24 @@ def kagittanisler_view(request):
 
 
 
+def kagittanisler_view(request):
+    """
+    Liftkeys Kağıt Tanısler blog yazısını render eder.
+    """
+    return render(request, "preview/kagittanisler.html")
+
+
+
+
+
+def anahtar_view(request):
+    """
+    Liftkeys Anahtarlar blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/keys.html")
+
+
+
 
 
 
@@ -1846,3 +1864,66 @@ def pinterest_catalog_feed(request):
         ])
 
     return response
+
+import os
+from django.conf import settings
+from django.shortcuts import render
+from django.contrib.staticfiles import finders # En önemli ekleme bu!
+
+def kabincam_view(request):
+    # 1. Django'nun statik bulucusu ile klasörü kesin olarak tespit ediyoruz
+    relative_path = 'image/pageproduct/kabincam'
+    base_dir = finders.find(relative_path)
+
+    # Eğer finders bulamazsa (nadiren geliştirme ortamında olur), manuel yolu deneriz:
+    if not base_dir:
+        base_dir = os.path.join(settings.BASE_DIR, 'static', 'image', 'pageproduct', 'kabincam')
+
+    # KONTROL NOKTASI: Terminalden klasörün bulunup bulunmadığını göreceğiz
+    print("\n" + "="*50)
+    print("PYTHON'UN ARADIĞI YOL :", base_dir)
+    if base_dir and os.path.exists(base_dir):
+        print("DURUM                 : BAŞARILI! Klasör bulundu.")
+    else:
+        print("DURUM                 : HATA! Klasör bulunamadı.")
+    print("="*50 + "\n")
+
+    # 2. Görseldeki isimlerin BİREBİR AYNISI (Büyük-küçük harfe duyarlı!)
+    kategoriler = [
+        'deniz', 'doga', 'pattren', 'Illustrasyon', 'tarihiyerler', 
+        'soyut', 'sehir', 'karisik', 'ralrenkler'
+    ]
+    
+    context = {}
+
+    # Eğer klasör gerçekten bulunabildiyse içini tara
+    if base_dir and os.path.exists(base_dir):
+        for kategori in kategoriler:
+            kategori_yolu = os.path.join(base_dir, kategori)
+            urun_listesi = []
+            
+            # Alt kategori klasörü (örneğin 'deniz') varsa içine gir:
+            if os.path.exists(kategori_yolu):
+                # Sadece klasör olanları (AE101, DOG101 vb.) bul
+                alt_klasorler = [f for f in os.listdir(kategori_yolu) if os.path.isdir(os.path.join(kategori_yolu, f))]
+                
+                for urun_kodu in alt_klasorler:
+                    urun_yolu = os.path.join(kategori_yolu, urun_kodu)
+                    
+                    # İçindeki .webp uzantılı resimleri bul ve say
+                    resimler = [r for r in os.listdir(urun_yolu) if r.endswith('.webp')]
+                    resim_sayisi = len(resimler)
+                    
+                    # Eğer içinde en az 1 resim varsa listeye ekle
+                    if resim_sayisi > 0:
+                        urun_listesi.append({
+                            'kodu': urun_kodu,
+                            'resim_sayisi': resim_sayisi
+                        })
+            
+            # HTML'e gönderirken isimleri hep küçük harf yapıyoruz
+            # Örnek: 'Illustrasyon' -> 'illustrasyon_urunleri'
+            context_adi = f"{kategori.lower()}_urunleri"
+            context[context_adi] = urun_listesi
+
+    return render(request, 'preview/previewblog/kabincam.html', context)

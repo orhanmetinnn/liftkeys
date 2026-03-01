@@ -1,0 +1,575 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load static %}
+{% load i18n %}
+
+{# --- SEO BLOKLARI --- #}
+{% block title %}
+{% trans "LiftKeys | Kurumsal Logolu ve Döküm Asansör Üçgen Anahtarı" %}
+{% endblock %}
+
+{% block meta_description %}
+{% blocktrans %}
+LiftKeys asansör üçgen anahtarı modelleri ile tanışın. Kurumsal logolu estetik damla etiketli tasarımlar ve yüksek tork dirençli kalıptan işlemeli döküm anahtarlar.
+{% endblocktrans %}
+{% endblock %}
+
+{% block meta_robots %}index,follow{% endblock %}
+
+{% block meta_keywords %}
+{% trans "asansör üçgen anahtarı, logolu asansör anahtarı, döküm asansör anahtarı, damla etiketli anahtar, asansör kapı anahtarı, Liftkeys anahtar, EN 81-20 anahtar, 13mm asansör anahtarı" %}
+{% endblock %}
+
+{% block og_type %}product{% endblock %}
+
+{% block og_title %}
+{% trans "LiftKeys | Estetik ve Güvenilir Asansör Üçgen Anahtarı" %}
+{% endblock %}
+
+{% block og_description %}
+{% blocktrans %}
+Firmanıza özel kurumsal renklerde damla etiketli veya kalıptan doğrudan işlenmiş mühürlü döküm asansör anahtarları. EN 81-20 standartlarına tam uyumlu.
+{% endblocktrans %}
+{% endblock %}
+
+{% block og_image %}{% static 'image/pageproduct/anahtar/muhurlu-gelecek-kabartmali-anahtar.jpg' %}{% endblock %}
+
+{% block tw_title %}
+{% trans "LiftKeys | Kurumsal Asansör Üçgen Anahtarı" %}
+{% endblock %}
+
+{% block tw_description %}
+{% blocktrans %}
+Asansör bakım firmalarına ve üreticilerine özel, yüksek kaliteli damla etiketli ve döküm asansör dış kapı anahtarları.
+{% endblocktrans %}
+{% endblock %}
+
+{% block tw_image %}{% static 'image/pageproduct/anahtar/muhurlu-gelecek-kabartmali-anahtar.jpg' %}{% endblock %}
+
+{# --- CSS BLOĞU --- #}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/previewcss/productpage/anahtar.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{# --- İÇERİK BLOĞU --- #}
+{% block content %}
+
+<script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Liftkeys",
+            "url": "https://www.liftkeys.com",
+            "logo": "https://www.liftkeys.com{% static 'image/preview/liftkeys-og.webp' %}",
+            "sameAs": [
+                "https://www.linkedin.com/company/liftkeys",
+                "https://www.instagram.com/liftkeys"
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "LiftKeys Kurumsal Logolu Asansör Üçgen Anahtarı",
+            "image": [
+                "https://www.liftkeys.com{% static 'image/pageproduct/anahtar/asansor-ucgen-anahtari.webp' %}",
+                "https://www.liftkeys.com{% static 'image/pageproduct/anahtar/muhurlu-gelecek-kabartmali-anahtar.webp' %}"
+            ],
+            "description": "Kurumsal kimliğinize uygun damla etiketli veya kalıptan doğrudan işlenmiş logolu döküm asansör üçgen anahtarları. 13mm üçgen yuva ölçüsü ve yüksek tork direnci.",
+            "sku": "LK-ANH-001",
+            "brand": {
+                "@type": "Brand",
+                "name": "LiftKeys"
+            },
+            "category": "Asansör Aksesuarları",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.liftkeys.com{{ request.path }}",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@type": "Organization", "name": "LiftKeys" }
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Asansör üçgen anahtarında hangi tasarım seçenekleri mevcuttur?",
+                    "acceptedAnswer": { 
+                        "@type": "Answer", 
+                        "text": "LiftKeys olarak iki farklı model sunuyoruz: Cam parlaklığı ve 3D derinlik sağlayan 'Damla Etiketli' anahtarlar ve markanın kalıptan doğrudan metale işlendiği yüksek dayanımlı 'Döküm' anahtarlar." 
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Döküm anahtar üretimi için minimum sipariş adedi nedir?",
+                    "acceptedAnswer": { 
+                        "@type": "Answer", 
+                        "text": "Büyük kapı üreticileri için özel olarak tasarladığımız Döküm anahtarlarımızda minimum üretim bandımız 5.000 adettir." 
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Asansör üçgen anahtarının yuva ölçüsü nedir?",
+                    "acceptedAnswer": { 
+                        "@type": "Answer", 
+                        "text": "Anahtarlarımızın üçgen yuva çapı standartlara uygun olarak 13 mm olarak üretilmektedir." 
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://www.liftkeys.com/"
+            },{
+                "@type": "ListItem", "position": 2, "name": "Asansör Aksesuarları", "item": "https://liftkeys.com/kategori/"
+            },{
+                "@type": "ListItem", "position": 3, "name": "Asansör Üçgen Anahtarı", "item": "https://www.liftkeys.com{{ request.path }}"
+            }]
+        }
+    ]
+</script>
+
+
+
+
+
+
+
+<section class="liftkeys-key-section py-5 overflow-hidden">
+    <div class="container">
+        
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="liftkeys-header d-flex align-items-center p-3 shadow-sm rounded-3" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="icon-wrapper me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-key-fill text-white fs-4"></i>
+                    </div>
+                    <h2 class="mb-0 text-white fw-bold h4">LIFTKEYS – Asansör Ağırlık Ray Paten Bloğu</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            
+            <div class="col-lg-8 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+
+                <div class="image-container position-relative rounded-4 overflow-hidden shadow-lg" style="cursor: pointer;">
+                    
+                    <div class="video-thumbnail-wrapper" 
+                        onclick="loadYoutubeVideo(this)" 
+                        data-video-id="sRz6UmVh-lM" 
+                        style="cursor: pointer;">
+                        
+                        <img src="{% static 'image/pageproduct/anahtar/asansor-ucgen-anahtari.webp' %}" 
+                            alt="Paslanmaz çelik modern asansör küpeşte ve tutamak modeli" 
+                            title="Paslanmaz Çelik Küpeşte" 
+                            class="img-fluid w-100 d-block">
+                        
+                        <div class="play-button-overlay">
+                            <div class="play-button-icon"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-4 ps-lg-5" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="content-wrapper">
+                    <p class="display-4 fw-light text-secondary mb-0" style="line-height: 1.2;">
+                        “Nefes<br>
+                        Alan<br>
+                        Kabinler”
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row align-items-center mt-2" data-aos="fade-up" data-aos-duration="1000">
+            
+            <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
+                <p class="mb-0 fs-3 text-secondary">
+                    Yılda <strong class="text-dark fw-bold">500.000</strong> kez<br>
+                    dünyayı güvenle açıyoruz.
+                </p>
+            </div>
+            
+            <div class="col-lg-4 col-md-5 text-md-end">
+                <a href="#" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm px-4 py-3">
+                    <i class="bi bi-book me-2 fs-5"></i>
+                    Ürün Kataloğu İndir
+                </a>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+
+
+<script>
+    function loadYoutubeVideo(element) {
+        // 1. Tıklanan div'in içindeki video kimliğini (data-video-id) alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // 2. YouTube iframe (video oynatıcı) kodumuzu oluşturuyoruz
+        // Tasarımınla tam uyumlu olması için style kısmına min-height: 350px; ekledik
+        // autoplay=1 parametresi sayesinde video tıklandığı an otomatik oynamaya başlar
+        var iframeHTML = `
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/7Nq1wRK1x4Y?si=20haE0WCpKHEMZCG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `;
+        
+        // 3. Tıklanan alanın içindeki resmi ve Play butonunu tamamen temizleyip, 
+        // yerine hazırladığımız bu video oynatıcıyı yerleştiriyoruz
+        element.innerHTML = iframeHTML;
+    }
+</script>
+
+
+
+
+
+<section class="aesthetic-design-section py-5  overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5 col-md-12 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="product-image-wrapper position-relative p-3">
+                    <div class="bg-shape-decoration position-absolute top-50 start-50 translate-middle rounded-circle" style="width: 80%; height: 80%; background-color: #e9ecef; z-index: 0;"></div>
+                    
+                    <img src="{% static 'image/pageproduct/anahtar/estetik-damla-etiketli-anahtar.webp' %}" 
+                         alt="LiftKeys Asansör Anahtarı - Damla etiketli, logolu ve estetik kurumsal tasarımlar" 
+                         class="img-fluid position-relative z-1 drop-shadow-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-md-12 ps-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                
+                <h2 class="display-6 fw-bold mb-4 text-dark h3">Estetik ve Dikkat Çekici Tasarım</h2>
+                
+                <p class="text-secondary mb-3" style="line-height: 1.6;">
+                    Damla etiket teknolojisi, logonuzu veya marka isminizi sadece korumakla kalmaz; ona cam gibi parlak, bombeli ve kristal bir derinlik katar.
+                </p>
+
+                <div class="d-flex align-items-center mb-4">
+                    <i class="bi bi-stars text-orange fs-4 me-3"></i>
+                    <p class="fw-bold text-dark mb-0">Cam Parlaklığı ve 3D Derinlik. saglar</p>
+                </div>
+
+                <p class="text-secondary mb-4" style="line-height: 1.6;">
+                    Bina yönetimine teslim edilen bu anahtarlar, sıradan bir metal parçası değil, bir "mücevher" titizliğinde sunulan kurumsal bir hediyeye dönüşür.
+                </p>
+
+                <p class="text-secondary mb-4" style="line-height: 1.6;">
+                    Az sayıda üretim" imkanıyla, en küçük asansör firmasına bile kendi markasıyla profesyonel görünme şansı tanıyoruz. İstenilen her renkte ve tasarımda üretim yaparak markanızın kurumsal renklerini birebir anahtara yansıtıyoruz.
+                </p>
+
+                <ul class="list-unstyled mb-0">
+                    <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-check-circle-fill text-orange fs-5 me-3 mt-1"></i>
+                        <span class="text-secondary">Stok tutma zorunluluğunu ortadan kaldıran, projeye özel esnek çözümler.</span>
+                    </li>
+                    <li class="d-flex align-items-start">
+                        <i class="bi bi-check-circle-fill text-orange fs-5 me-3 mt-1"></i>
+                        <span class="text-secondary">Kurumsal kimliğinize uygun sınırsız renk seçeneği.</span>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="stamped-future-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 col-md-12 pe-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                
+                <h2 class="display-6 fw-bold mb-2 text-dark h3">"Mühürlü Gelecek"</h2>
+                <p class="lead text-orange fw-medium mb-4 pb-2 border-bottom d-inline-block">
+                    Büyük Üreticilerin Vazgeçilmezi
+                </p>
+
+                <div class="d-flex align-items-start mb-4">
+                    <i class="bi bi-hammer text-secondary fs-5 me-3 mt-1 opacity-50"></i>
+                    <p class="text-secondary mb-0" style="line-height: 1.6;">
+                        Logonuz anahtarın gövdesine kalıptan doğrudan işlenir. Boya değildir, etiket değildir; metalin bir parçasıdır. Silinmez, sökülemez, eskimez.
+                    </p>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <i class="bi bi-shield-lock-fill text-secondary fs-5 me-3 mt-1 opacity-50"></i>
+                    <p class="text-secondary mb-0" style="line-height: 1.6;">
+                        Yüksek tork direnci ile en sert kapı mekanizmalarında bile kusursuz performans.
+                    </p>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <i class="bi bi-boxes text-secondary fs-5 me-3 mt-1 opacity-50"></i>
+                    <p class="text-secondary mb-0" style="line-height: 1.6;">
+                        Minimum 5.000 adetlik üretim bandımızla, büyük kapı üreticilerinin dünya çapındaki tüm projelerinde kalıcı imzası oluyoruz.
+                    </p>
+                </div>
+
+                <div class="highlight-quote mt-4 p-4 rounded-3 bg-light border-start-orange shadow-sm">
+                    <p class="mb-0 fw-bold text-dark fst-italic fs-5">
+                        Kapı var oldukça, markanız orada kalacak.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 col-md-12 text-center" data-aos="fade-left" data-aos-duration="1200">
+                <div class="product-image-wrapper position-relative p-3">
+                    <div class="border-frame-decoration position-absolute top-50 start-50 translate-middle rounded-4 border border-2 border-orange opacity-25" style="width: 90%; height: 90%; z-index: 0;"></div>
+                    
+                    <img src="{% static 'image/pageproduct/anahtar/muhurlu-gelecek-kabartmali-anahtar.webp' %}" 
+                         alt="LiftKeys Mühürlü Gelecek - Büyük üreticiler için logolu, kalıptan işlemeli döküm asansör anahtarı" 
+                         class="img-fluid position-relative z-1 drop-shadow-img" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="technical-specs-section py-5 bg-light overflow-hidden">
+    <div class="container">
+        
+        <div class="row mb-5 text-center">
+            <div class="col-12" data-aos="fade-down" data-aos-duration="1000">
+                <h2 class="display-6 fw-bold text-dark h3 mb-2">Teknik Bilgiler ( Damla )</h2>
+                <div class="mx-auto" style="width: 60px; height: 3px; background-color: var(--liftkeys-orange, #F38002); border-radius: 2px;"></div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch justify-content-center text-center">
+            
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="tech-img-wrapper p-3 bg-white rounded-4 shadow-sm h-100 d-flex align-items-center justify-content-center">
+                    <img src="{% static 'image/pageproduct/anahtar/teknik-olculer-anahtar.webp' %}" 
+                         alt="LiftKeys Asansör Anahtarı Genel Ölçüleri" 
+                         class="img-fluid" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                <div class="tech-img-wrapper p-3 bg-white rounded-4 shadow-sm h-100 d-flex align-items-center justify-content-center">
+                    <img src="{% static 'image/pageproduct/anahtar/ucgen-yuva-olcusu.webp' %}" 
+                         alt="LiftKeys Asansör Anahtarı Üçgen Yuva Çapı 13mm" 
+                         class="img-fluid" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="tech-img-wrapper p-3 bg-white rounded-4 shadow-sm h-100 d-flex align-items-center justify-content-center">
+                    <img src="{% static 'image/pageproduct/anahtar/damla-etiket-taslak.webp' %}" 
+                         alt="LiftKeys Asansör Anahtarı Damla Etiket Tasarım Şablonu" 
+                         class="img-fluid" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+                <div class="tech-img-wrapper p-3 bg-white rounded-4 shadow-sm h-100 d-flex align-items-center justify-content-center">
+                    <img src="{% static 'image/pageproduct/anahtar/ornek-damla-etiketli-anahtar.webp' %}" 
+                         alt="LiftKeys Kurumsal Logolu Damla Etiketli Asansör Anahtarı" 
+                         class="img-fluid" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="technical-specs-casting-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        
+        <div class="row mb-5 text-center">
+            <div class="col-12" data-aos="fade-down" data-aos-duration="1000">
+                <h2 class="display-6 fw-bold text-dark h3 mb-2">Teknik Bilgiler ( Döküm )</h2>
+                <div class="mx-auto" style="width: 60px; height: 3px; background-color: var(--liftkeys-orange, #F38002); border-radius: 2px;"></div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch justify-content-center text-center">
+            
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="tech-img-wrapper p-3 bg-light rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center border-0">
+                    <img src="{% static 'image/pageproduct/anahtar/teknik-olculer-dokum-anahtar.webp' %}" 
+                         alt="LiftKeys Döküm Asansör Anahtarı Genel Ölçüleri" 
+                         class="img-fluid" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                <div class="tech-img-wrapper p-3 bg-light rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center border-0">
+                    <img src="{% static 'image/pageproduct/anahtar/dokum-ucgen-yuva-olcusu.webp' %}" 
+                         alt="LiftKeys Döküm Asansör Anahtarı Üçgen Yuva Çapı 13mm" 
+                         class="img-fluid" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="tech-img-wrapper p-3 bg-light rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center border-0">
+                    <img src="{% static 'image/pageproduct/anahtar/dokum-anahtar-taslak.webp' %}" 
+                         alt="LiftKeys Döküm Anahtar Tasarım Şablonu" 
+                         class="img-fluid" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+                <div class="tech-img-wrapper p-3 bg-light rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center border-0">
+                    <img src="{% static 'image/pageproduct/anahtar/dokum-anahtar-dogru-tasarim.webp' %}" 
+                         alt="LiftKeys Döküm Anahtar Doğru Tasarım Kullanımı" 
+                         class="img-fluid mb-3" loading="lazy">
+                    
+                    <p class="small text-secondary text-start mb-0" style="font-size: 0.85rem; line-height: 1.4;">
+                        Döküm Anahtarda tasarım damlaya göre daha kısıtlıdır. mümkün mertebe az obje ve yazı daha belirgin olmasını sağlayacaktır
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="key-information-section py-5 bg-light overflow-hidden">
+    <div class="container">
+        
+        <div class="row g-4">
+            
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="info-card bg-white p-4 rounded-4 shadow-sm h-100 border-top-orange">
+                    <h3 class="h5 fw-bold text-dark mb-4">
+                        <i class="bi bi-key-fill text-orange me-2"></i>
+                        Üçgen Anahtarın Temel Özellikleri ve Teslimatı
+                    </h3>
+                    <ul class="list-unstyled text-secondary" style="line-height: 1.6;">
+                        <li class="mb-3">
+                            - <strong class="text-dark">Standart Gereklilik:</strong> EN 81-20 ve EN 81-50 asansör standartlarına göre, her asansörün dış kapısında acil durumlarda açılabilmesi için bir kilit mekanizması bulunur.
+                        </li>
+                        <li class="mb-3">
+                            - <strong class="text-dark">Adet ve Teslimat:</strong> Mevzuat gereği, asansör teslimatında genellikle 2 adet anahtar bina sorumlusuna (yöneticiye) tutanakla teslim edilir.
+                        </li>
+                        <li>
+                            - <strong class="text-dark">Eğitim Zorunluluğu:</strong> Anahtarı teslim eden asansör bakım firması, bu anahtarın hangi durumlarda ve nasıl kullanılacağına dair bina yetkilisine uygulamalı kullanma eğitimi vermek ve bunu bir eğitim formu ile kayıt altına almak zorundadır.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="info-card bg-white p-4 rounded-4 shadow-sm h-100 border-top-orange">
+                    <h3 class="h5 fw-bold text-dark mb-4">
+                        <i class="bi bi-exclamation-triangle-fill text-orange me-2"></i>
+                        Kullanım Alanları ve Riskler
+                    </h3>
+                    <ul class="list-unstyled text-secondary" style="line-height: 1.6;">
+                        <li class="mb-2">- Bu anahtar sadece şu iki ana grup tarafından kullanılmalıdır:</li>
+                        <li class="mb-2">- <strong class="text-dark">Asansör Bakım Personeli:</strong> Rutin kontroller ve onarımlar için.</li>
+                        <li>- <strong class="text-dark">Eğitim Almış Bina Görevlisi / İtfaiye:</strong> Asansörde mahsur kalma durumlarında kurtarma operasyonu yapmak için.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="info-card bg-white p-4 rounded-4 shadow-sm h-100 border-top-orange">
+                    <h3 class="h5 fw-bold text-dark mb-4">
+                        <i class="bi bi-eye-fill text-orange me-2"></i>
+                        Dikkat Edilmesi Gereken Kriteler
+                    </h3>
+                    <ul class="list-unstyled text-secondary" style="line-height: 1.6;">
+                        <li class="mb-3">
+                            - <strong class="text-dark">Düşme Tehlikesi:</strong> Anahtar ile dış kapı açıldığında, kabin o katta değilse doğrudan asansör kuyusuna (boşluğa) düşme riski vardır. Bu nedenle kapı açılırken mutlaka kabinin yeri kontrol edilmelidir.
+                        </li>
+                        <li class="mb-3">
+                            - <strong class="text-dark">Yetkisiz Kullanım:</strong> Anahtarın herkesin ulaşabileceği bir yerde değil, sadece yetkili personelin bildiği, kilitli ve güvenli bir dolapta tutulması gerekir.
+                        </li>
+                        <li>
+                            - <strong class="text-dark">Kilit Kontrolü:</strong> Kapı anahtar ile açılıp kapatıldıktan sonra, kapının mekanik olarak kilitlendiğinden mutlaka emin olunmalıdır.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="info-card bg-white p-4 rounded-4 shadow-sm h-100 border-top-orange">
+                    <h3 class="h5 fw-bold text-dark mb-4">
+                        <i class="bi bi-bank text-orange me-2"></i>
+                        Yasal Sorumluluk
+                    </h3>
+                    <ul class="list-unstyled text-secondary" style="line-height: 1.6;">
+                        <li>
+                            - Bina yönetimi, bu anahtarın yetkisiz kişilerin eline geçmesinden veya eğitimsiz kişilerce kullanılması sonucu doğabilecek kazalardan hukuken sorumludur. Bu nedenle, asansör periyodik kontrollerinde (mavi/yeşil etiket süreci) denetçiler genellikle bu anahtarların varlığını ve eğitim durumunu sorgularlar.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 mt-5" data-aos="fade-up" data-aos-duration="800">
+                <div class="alert-custom-box p-4 rounded-4 text-center shadow-sm" style="background-color: #fff3e6; border: 1px solid #ffdcb3;">
+                    <p class="mb-0 fs-5 fw-medium text-dark">
+                        Asansörünüzün acil durum kurtarma talimatının makine dairesinde veya pano yanında asılı olup olmadığını kontrol etmemimizi ister misiniz?
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+{% include "preview/iletisimformpreview.html" %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true // Animasyon sadece bir kere çalışsın (yukarı çıkınca bozulmasın)
+    });
+</script>
+
+
+
+
+{% include "preview/footer.html" %}
+
+{% endblock %}

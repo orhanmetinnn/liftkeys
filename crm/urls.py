@@ -68,8 +68,12 @@ urlpatterns = [
     path("solid/", views.solid_view, name="solid_view"),
     path("kupeste/", views.kupeste_view, name="kupeste_view"),
     path("takozlar/", views.takozlar_view, name="takozlar_view"),
-    path("kagittanisleri/", views.kagittanisler_view, name="kagittanisleri_view"),
     path('feed/pinterest/', views.pinterest_catalog_feed, name='pinterest_feed'),
+    path('keys/', views.anahtar_view, name='keys_view'),
+    path('dekoratif-cam/', views.kabincam_view, name='kabincam_view'),
+
+
+    path("kagittanisleri/", views.kagittanisler_view, name="kagittanisleri_view"),
 
 ]
 

@@ -1,0 +1,270 @@
+/* --- Dekoratif Cam Bölümü CSS --- */
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.play-button-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #333;
+    /* Ok rengi */
+    margin-left: 4px;
+    /* Oku görsel olarak ortalamak için */
+}
+
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Görselin öne çıkması için gölge */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail-wrapper:hover {
+    transform: scale(1.01);
+    /* Üzerine gelince çok hafif büyür */
+}
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
+
+
+
+/* Turuncu Başlık Barı */
+.liftkeys-header {
+    background-color: var(--liftkeys-orange, #F38002);
+}
+
+/* Görsel Üzerindeki Play Butonu ve Hover Tasarımı */
+.video-wrapper {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper:hover {
+    transform: translateY(-5px); /* Üzerine gelince resmi hafif yukarı kaldırır */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.play-btn-pulse {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper:hover .play-btn-pulse {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(243, 128, 2, 0.6) !important; /* Turuncu bir parlama efekti */
+}
+
+/* Alt Sağdaki Ürün Kataloğu Butonu */
+.btn-catalog {
+    background-color: var(--liftkeys-orange, #F38002);
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--liftkeys-orange, #F38002);
+}
+
+.btn-catalog:hover {
+    background-color: white;
+    color: var(--liftkeys-orange, #F38002);
+    transform: translateY(-3px);
+}
+
+/* Mobil Görünüm İnce Ayarları */
+@media (max-width: 992px) {
+    .btn-catalog {
+        width: 100%; /* Mobilde buton ekranı tam kaplasın */
+    }
+    .display-6 {
+        font-size: 1.8rem; /* Mobilde büyük yazıyı biraz küçültelim */
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+/* --- Yeni 9'lu Kategori Buton Sistemi --- */
+
+.custom-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cat-btn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cat-btn .icon-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.cat-btn:hover .icon-box {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Renkli Çerçeveler (Aynen Kalıyor) */
+.border-blue { border-color: #2b82c9 !important; color: #2b82c9 !important; }
+.border-green { border-color: #4caf50 !important; color: #4caf50 !important; }
+.border-purple { border-color: #673ab7 !important; color: #673ab7 !important; }
+.border-teal { border-color: #00838f !important; color: #00838f !important; }
+.border-brown { border-color: #795548 !important; color: #795548 !important; }
+.border-pink { border-color: #e91e63 !important; color: #e91e63 !important; }
+.border-blue-dark { border-color: #1565c0 !important; color: #1565c0 !important; }
+.border-orange { border-color: #ef6c00 !important; color: #ef6c00 !important; }
+.border-dark { border-color: #212121 !important; color: #212121 !important; }
+
+.cat-name {
+    color: #555;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.glass-product-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15) !important;
+}
+
+.product-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.glass-product-card:hover .product-overlay { opacity: 1; }
+
+@media (max-width: 576px) {
+    .custom-category-grid { gap: 5px; }
+    .cat-btn .icon-box { width: 55px; height: 55px; font-size: 1.3rem; }
+    .cat-name { font-size: 0.75rem; }
+}
+
+
+/* Kategori Resim Kutusu Tasarımı */
+.cat-img-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px; /* Modern kare-yuvarlak görünüm */
+    border: 3px solid #e0e0e0;
+    margin-bottom: 12px;
+    overflow: hidden; /* Resmin dışarı taşmaması için */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #f9f9f9;
+}
+
+.cat-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi kutuya sığdırır */
+    transition: transform 0.5s ease;
+}
+
+/* Hover Efektleri */
+.cat-btn:hover .cat-img-box {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.cat-btn:hover .cat-img-box img {
+    transform: scale(1.15); /* Resim hafifçe yaklaşır */
+}
+
+/* Mobilde boyutları optimize etme */
+@media (max-width: 576px) {
+    .cat-img-box {
+        width: 75px;
+        height: 75px;
+        border-radius: 15px;
+    }
+}
+
+
+
+/* --- Ayna ve Mirror TV Bölümü CSS --- */
+
+/* Turuncu dikey vurgu çizgisi */
+.border-start-orange {
+    border-left: 4px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Harf boşluğu (Kurumsal başlıklar için) */
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+/* Resimlere hover yapınca hafif yakınlaşma efekti */
+.hover-zoom {
+    transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover .hover-zoom {
+    transform: scale(1.05);
+}
+
+/* İkonların rengi */
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Mobilde başlık ve resim sıralaması için düzeltme */
+@media (max-width: 991px) {
+    .order-lg-1 { order: 2 !important; } /* Mobilde resim yazının altına insin */
+    .order-lg-2 { order: 1 !important; } /* Mobilde yazı üstte kalsın */
+}
