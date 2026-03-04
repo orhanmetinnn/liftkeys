@@ -1,0 +1,1994 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-04 21:00+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\crm\forms.py:387
+msgid "Kategoriler"
+msgstr ""
+
+#: .\crm\templates\404.html:38
+msgid "Sayfa Bulunamadı"
+msgstr ""
+
+#: .\crm\templates\404.html:41
+msgid ""
+"\n"
+"            Üzgünüz! Aradığınız sayfa mevcut değil.\n"
+"            Endüstriyel çözümlerimiz için ana sayfaya geri dönebilirsiniz.\n"
+"            "
+msgstr ""
+
+#: .\crm\templates\404.html:46
+msgid "Ana Sayfaya Dön"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:18
+#: .\templates\previewtemplates\previewmenu.html:71
+msgid "Ana Sayfa"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:31
+msgid "Blog"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:34
+msgid "dk okuma"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:105
+#: .\crm\templates\blog\blog_page.html:188
+msgid "Bağlantıyı kopyala"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:112
+msgid "Önceki"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:117
+msgid "Sonraki"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:127
+msgid "İçindekiler"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:177
+msgid "Başlık bulunamadı"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:186
+msgid "Kopyalandı"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:48
+msgid "Liftkeys Hakkında"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:50
+msgid ""
+"Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar "
+"ile sektörde öncü bir marka olarak hizmet vermektedir."
+msgstr ""
+
+#: .\crm\templates\preview\about.html:56
+msgid "10+ yıl tecrübe"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:57
+msgid "50+ ülkeye ihracat"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:58
+msgid "3300 m² kapalı alan"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:65
+msgid "Kurumsal İçerik"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:67
+msgid "Misyon & Değer"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:68
+msgid "İnovasyonla Güçlenen, Sektöre Özel Çözümler"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:70
+msgid ""
+"Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar "
+"ile sektörde öncü bir marka olarak hizmet vermektedir. Asansör sektöründeki "
+"tecrübesini; matbu basım, asansör anahtarı, etiket imalatı ve güvenli cam "
+"alanlarına taşıyarak sektörün reklam çalışmalarına inovatif bir değer katmak "
+"amacıyla kurulmuştur."
+msgstr ""
+
+#: .\crm\templates\preview\about.html:79
+msgid ""
+"Uzun süredir asansör sektöründe çeşitli görevlerde hizmet etmiş, asansör "
+"komponentleri konusunda tecrübeli bir kadro ile çalışmalarını sürdürmektedir."
+msgstr ""
+
+#: .\crm\templates\preview\about.html:85
+msgid ""
+"Asansör sektörüne özel kurumsal kimlik çalışması ile yeni kurulmuş veya yeni "
+"bir yüze sahip olmak isteyen bütün firmalara ürünleri ile destek vermekte ve "
+"markaların kendini en doğru şekilde yansıtacağı ürünler sunmaktadır."
+msgstr ""
+
+#: .\crm\templates\preview\about.html:93
+msgid "Öne Çıkan Başlıklar"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:94
+msgid "Uzmanlık Alanlarımız"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:96
+msgid "Etiket & Matbu Üretimi"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:97
+msgid "Üçgen Asansör Anahtarları"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:98
+msgid "Güvenli Cam & Ayna Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:99
+msgid "Aydınlatma ve Elektronik"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:100
+msgid "Zemin (PVC) ve Mekanik"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:103
+msgid "Ürün Sertifikaları"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:105
+msgid "Yangın Sertifikası"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:106
+msgid "Kaydırmaz Sertifikası"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:107
+msgid "Antibakteriyel Sertifikası"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:114
+msgid "İletişim Çağrısı"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:116
+msgid "Sizin için doğru çözümü birlikte tasarlayalım"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:117
+msgid "Asansör projeleriniz için ölçeklenebilir ve sertifikalı ürün portföyü."
+msgstr ""
+
+#: .\crm\templates\preview\about.html:120
+msgid "Bizimle İletişime Geçin"
+msgstr ""
+
+#: .\crm\templates\preview\about.html:121
+msgid "Ürün Portföyü"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:21
+msgid "Bize Ulaşın"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:38
+msgid "Adınız"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:50
+msgid "E-Posta Adresiniz"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:61
+msgid "Konu"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:71
+msgid "Telefon Numaranız"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:83
+msgid "Mesajınız"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:94
+msgid "MESAJ GÖNDER"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:104
+msgid "Close"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:114
+msgid "İletişim Bilgilerimiz"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:119
+msgid "E-Posta Gönderin"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:127
+#: .\crm\templates\preview\footer.html:21
+msgid "Bizi Arayın"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:135
+msgid "Fabrika Adresimiz"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:137
+msgid ""
+"Ramazan Oğlu Mah. Mekke Sok. No: 4 Kurtköy-Pendik / İSTANBUL Posta Kodu: "
+"34906"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:145
+msgid "Depo Adresi"
+msgstr ""
+
+#: .\crm\templates\preview\contactpage.html:147
+msgid ""
+"Fevziçakmak mahallesi Aslım Caddesi Teksan Sanayi Sitesi G Blok NO:71/1B "
+"Karatay / Konya"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:31
+msgid "Email"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:32
+msgid "Liftkeys E-Posta Adresi"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:41
+msgid "Çalışma Saati"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:42
+msgid "08:00 - 18:15"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:51
+msgid "Lokasyon"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:56
+msgid "Liftkeys Konumu - İstanbul Pendik"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:57
+msgid "İstanbul Pendik"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:63
+msgid "Liftkeys Konumu - Konya Karatay"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:64
+msgid "Konya / Karatay"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:82
+msgid ""
+"Liftkeys, Türkiye merkezli bir <strong>asansör yedek parça ve aksesuar "
+"üreticisi</strong>dir. Müşterilerimize <strong>yüksek kaliteli</strong>, "
+"<strong>güvenilir</strong> ve <strong>dayanıklı asansör çözümleri</strong> "
+"sunarak sektörün ihtiyaçlarını karşılamayı hedefliyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:98
+msgid "Hizmetlerimiz"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:107
+msgid "Kategori bulunamadı"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:115
+msgid "Hızlı Erişim"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:117
+#: .\templates\previewtemplates\previewmenu.html:77
+msgid "Hakkımızda"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:118
+msgid "İletişim"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:119
+#: .\crm\templates\preview\index.html:148
+msgid "Katalog"
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:131
+msgid "Copyright 2025 – Tüm haklar Liftkeys firmasına aittir."
+msgstr ""
+
+#: .\crm\templates\preview\footer.html:135
+msgid "Privacy policy."
+msgstr ""
+
+#: .\crm\templates\preview\gallery.html:31
+msgid "LiftKeys Galeri"
+msgstr ""
+
+#: .\crm\templates\preview\gallery.html:32
+msgid "Endüstriyel ürün portföyümüzden video ve görseller"
+msgstr ""
+
+#: .\crm\templates\preview\gallery.html:36
+msgid "Yükleniyor…"
+msgstr ""
+
+#: .\crm\templates\preview\gallery.html:49
+msgid "YouTube’da Aç"
+msgstr ""
+
+#: .\crm\templates\preview\gallery.html:50
+msgid "Kapat"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:13
+msgid "Özel Müşteri Ekipleri ve Esnek Hizmetler"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:15
+msgid ""
+"Dünya çapındaki varlığımız, üretim zaman çizelgelerinizin sorunsuz, maliyet "
+"etkin ve uyumlu bir şekilde yönetilmesini sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:21
+msgid "Broşürünü İndir"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:26
+msgid "Teklif Talep Et"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:28
+msgid ""
+"Ucuz ürün sunmuyoruz; doğru ürünü, doğru kaliteyle ve doğru fiyatla "
+"sunuyoruz. <br> Kaliteyle tanışmak istersen bize yaz."
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:74
+msgid "Talebi Gönder"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:6
+#: .\crm\templates\preview\kagittanisler.html:6
+msgid ""
+"Liftkeys Asansör Sistemleri & Çözümleri | Güvenilir, Sertifikalı ve Global "
+"Ürünler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:10
+#: .\crm\templates\preview\kagittanisler.html:10
+#: .\crm\templates\preview\previewblog\fotosel.html:10
+msgid ""
+"\n"
+"Liftkeys, güvenilir ve yenilikçi asansör sistemleri çözümleri sunar.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
+"elektronik ve mekanik bileşenlerle her yolculuğu güvenli ve konforlu hale "
+"getiriyoruz.\n"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:20
+#: .\crm\templates\preview\kagittanisler.html:20
+#: .\crm\templates\preview\previewblog\fotosel.html:20
+msgid ""
+"asansör sistemleri, asansör yedek parça, aşırı yük sistemi, asansör fren "
+"sistemi, asansör fotosel, asansör küpeşte, asansör fanı, pvc zemin "
+"kaplamaları, liftkeys"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:26
+#: .\crm\templates\preview\kagittanisler.html:26
+#: .\crm\templates\preview\previewblog\fotosel.html:26
+msgid "Liftkeys | Asansör Sistemleri, Yedek Parçalar ve Çözümler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:30
+#: .\crm\templates\preview\kagittanisler.html:30
+#: .\crm\templates\preview\previewblog\fotosel.html:30
+msgid ""
+"\n"
+"Türkiye merkezli Liftkeys, asansör sektöründe yenilikçi ve güvenli çözümler "
+"sunar.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
+"elektronik ve mekanik bileşenlerle global tedarikçi.\n"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:40
+#: .\crm\templates\preview\kagittanisler.html:40
+#: .\crm\templates\preview\previewblog\fotosel.html:40
+msgid "Liftkeys | Güvenilir Asansör Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:44
+#: .\crm\templates\preview\kagittanisler.html:44
+#: .\crm\templates\preview\previewblog\fotosel.html:44
+msgid ""
+"\n"
+"Liftkeys, yüksek kalite ve güvenlik standartlarıyla asansör parçaları "
+"üretir.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
+"elektronik ve mekanik bileşenlerle çözümler.\n"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:118
+msgid ""
+"Liftkeys, asansör sistemleri, kabinleri ve yedek parça ekipmanlarında "
+"güvenilir, kaliteli ve yenilikçi çözümler sunar"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:122
+msgid "Asansör Sistemleri & Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:128
+msgid ""
+"Liftkeys, yüksek kalite ve güvenlik standartlarıyla <strong>asansör "
+"sistemleri</strong>, <strong>kabinleri</strong>, <strong>asansör "
+"ekipmanları</strong> ve <strong>yedek parçalar</strong> alanında kabin "
+"üreticileri ve montaj firmalarının güvenilir iş ortağıdır. <br> <strong "
+">Kabin Üreticilerin Yedek Parça Üreticisi</strong> <br> <strong>Aşırı Yük "
+"Sistemleri, Fren Sistemleri, Fotocell, Küpeşte, Paten ve Plastik Aksamlar, "
+"Kabin Camı, Kabin Zemini, Kauçuk Ekipmanlar, Asansör Etiketleri ile "
+"Aydınlatma, Elektrik ve Mekanik Çözümler</strong> sayesinde asansörleriniz "
+"daha güvenli ve konforlu çalışır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:145
+#: .\templates\previewtemplates\previewmenu.html:92
+msgid "Ürünler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:166
+msgid "Güvenilir Çözümler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:168
+msgid "Kendi ailemizi güvenle bindireceğimiz kaliteyi üretiyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:179
+msgid "Yenilikçi Teknoloji"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:181
+msgid ""
+"Modern üretim teknikleriyle, 35 ülkede 1.200’den fazla müşterimize "
+"ihtiyaçlarına özel inovatif çözümler sunuyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:192
+msgid "Kalite Garantisi"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:194
+msgid ""
+"Tüm ürünlerimiz titizlikle test edilerek yüksek kalite ve dayanıklılık "
+"standartlarıyla üretilmektedir."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:208
+msgid "Yıllık Deneyim"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:211
+msgid ""
+"Deneyimle güçlendik, sevgiyle büyüdük. Birlikte çok daha ileriye gideceğiz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:319
+msgid ""
+"Liftkeys markalı asansör parçaları ve aksesuarları taşıyan forklift ile "
+"sevkiyat süreci"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:321
+msgid ""
+"Dünya genelinde hizmet veren Liftkeys asansör teknolojilerini temsil eden "
+"robot maskot"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:324
+#: .\crm\templates\preview\index.html:988
+msgid "Yıl Deneyim"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:331
+msgid "Biz Kimiz"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:332
+msgid "Güvenilir ve Yenilikçi Asansör Parçaları Üreticisi"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:335
+msgid ""
+"<strong>Liftkeys</strong>, Türkiye merkezli güvenilir bir <strong>asansör "
+"parça ve aksesuar üreticisidir.</strong> Dünya genelindeki asansör "
+"firmalarına <strong>yüksek kaliteli</strong>, <strong>dayanıklı</strong> ve "
+"maliyet avantajı sağlayan çözümler sunmaktayız. Ürün portföyümüzde, farklı "
+"ihtiyaçlara yönelik üç ana kategori bulunmaktadır: <strong>Mekanik</strong>, "
+"<strong>Dekoratif</strong> ve <strong>Elektronik</strong> Ürün Grupları."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:348
+msgid "Elektronik Ürün Grubu"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:351
+msgid "Atlas Aşırı Yük Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:352
+msgid "Horus Photocell Kapı Dedektörleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:353
+msgid "Kabin & Kuyu Aydınlatma"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:354
+msgid "Emniyet Switchleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:355
+msgid "Fan ve Havalandırma"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:361
+msgid "Mekanik Ürün Grubu"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:364
+msgid "Safety Gear (Frenler)"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:365
+msgid "Rubber Vibrasyon Takozları"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:366
+msgid "Guide Shoes (Patenler)"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:367
+msgid "Handrail (Küpeşte)"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:368
+msgid "Acil Açma Anahtarları"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:372
+msgid "Dekoratif Ürün Grubu"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:375
+msgid "Glass & Floor Kaplama"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:376
+msgid "Label Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:384
+msgid "Ürün Kataloğunu İncele"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:391
+msgid "Bizi 7/24 Arayın"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:410
+msgid ""
+"Liftkeys asansör yedek parçaları üretim fabrikası ve ürün sevkiyatı yapan "
+"lojistik araçları"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:419
+msgid "LIFTKEYS"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:421
+msgid "Neden LiftKeys? | <br> Güvenilir Asansör Parçaları ve Yedek Sistemler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:426
+msgid ""
+"<strong>Liftkeys</strong>, Türkiye merkezli, <strong>güvenilir ve yenilikçi "
+"asansör parça üreticisi</strong> olarak global pazarda faaliyet "
+"göstermektedir. Dünya genelindeki asansör firmalarına <strong>yüksek "
+"kaliteli</strong>, <strong>dayanıklı</strong> ve <strong>ekonomik çözümler</"
+"strong> sunuyoruz. Geniş ürün yelpazemizde <strong>asansör aydınlatma "
+"sistemleri</strong>, <strong>fotoseller</strong>, <strong>el tutamakları</"
+"strong>, <strong>PVC zemin kaplamaları</strong>, <strong>bakımsız "
+"bataryalar</strong>, <strong>asansör fanları</strong> ve çeşitli "
+"<strong>mekanik ile elektronik asansör bileşenleri</strong> bulunmaktadır. "
+"Müşterilerimizin farklı ihtiyaçlarına özel çözümler geliştirerek "
+"<strong>asansör güvenliği, enerji verimliliği ve performansını</strong> "
+"artırmayı hedefliyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:446
+msgid "Uzman Kadro"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:448
+msgid ""
+"Deneyimli mühendislerimiz ve uzman üretim ekibimiz ile her projeye özel "
+"çözümler sunuyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:458
+msgid "Kalite Sertifikalı Üretim"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:460
+msgid ""
+"Tüm Liftkeys ürünleri uluslararası kalite standartlarına uygun olarak "
+"üretilmektedir."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:466
+msgid "SİZİ ARAYALIM"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:488
+#: .\crm\templates\preview\index.html:585
+msgid ""
+"Kabin güvenliği için hassas ölçüm yapan asansör aşırı yük (overload) sistemi "
+"ve yük sensörü"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:491
+msgid "Asansör Aşırı Yük Sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:493
+msgid ""
+"Kabin kapasitesinin üstünde yolcu veya yük olduğunda devreye giren "
+"<strong>asansör aşırı yük sistemi</strong> ve <strong>asansör overload "
+"sistemi</strong>, yolcularınızın güvenliğini sağlamak için tasarlanmıştır. "
+"<strong>Asansör yük sensörü</strong> sayesinde sistem, hassas ölçüm yaparak "
+"aşırı yük durumlarında anında uyarı verir ve asansörünüzün güvenli "
+"çalışmasını garanti eder. Yüksek kalite standartlarımız ve güvenlik odaklı "
+"çözümlerimizle, her yolculuğu sorunsuz ve güvenli hale getiriyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:501
+#: .\crm\templates\preview\index.html:524
+#: .\crm\templates\preview\index.html:550
+#: .\crm\templates\preview\index.html:577
+#: .\crm\templates\preview\index.html:631
+#: .\crm\templates\preview\index.html:666
+#: .\crm\templates\preview\index.html:701
+#: .\crm\templates\preview\index.html:736
+#: .\crm\templates\preview\index.html:794
+#: .\crm\templates\preview\index.html:829
+#: .\crm\templates\preview\index.html:864
+#: .\crm\templates\preview\index.html:904
+msgid "Detayları Gör"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:509
+#: .\crm\templates\preview\index.html:588
+msgid ""
+"500 kg'dan 20 tona kadar kapasite sunan LiftKeys asansör fren sistemi ve ani "
+"duruş güvenlik blokları"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:512
+msgid "Asansör Fren Sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:514
+msgid ""
+"<strong>Asansör fren sistemi</strong> çözümleri ile LiftKeys, kabin ve "
+"yolcularınızın güvenliğini ön planda tutar. <strong>Asansör fren</strong> "
+"mekanizmalarımız, ani duruşlarda kabini kontrollü şekilde durdurarak "
+"güvenliği garanti eder. <strong>Asansör fren blokları</strong> yüksek "
+"performans ve dayanıklılık sunar; her yolculuk sorunsuz ve güvenli olur. "
+"<br><br> 500 kg’dan 20 tona, 0,25 m/s’ten 2,5 m/s hıza kadar 6 farklı "
+"modelde fren sistemi üretiyor; tüm kapasite ve hız aralıkları için güvenli "
+"ve yüksek performanslı çözümler sağlıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:532
+msgid "Asansör kapı sensörü – LiftKeys fotokontrol sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:535
+msgid "Asansör Kapı Sensörü"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:537
+msgid ""
+"<strong>LiftKeys asansör kapı sensörleri</strong>; yüksek algılama "
+"hassasiyeti, hızlı tepki süresi ve ince profil tasarımıyla <strong>asansör "
+"kapılarının güvenli kapanmasını</strong> sağlar. Gelişmiş <strong>ışın "
+"perdesi teknolojisi</strong>, kapı alanındaki en küçük hareketi bile "
+"algılayarak kapanmayı engeller. <br><br> Her ürün, LiftKeys’in "
+"“<strong>güvenlik önce gelir</strong>” anlayışıyla tasarlanır ve "
+"<strong>uluslararası standartlara uygun</strong> olarak üretilir. Bizim için "
+"bu yalnızca bir <strong>asansör fotoseli</strong> değil; insanların güvenle "
+"yolculuk etmesini sağlayan <strong>görünmez bir güvenlik duvarıdır</strong>."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:558
+#: .\crm\templates\preview\index.html:594
+msgid ""
+"Krom, bronz, gold ve füme renk seçenekleriyle atölyede anında üretilebilen "
+"asansör küpeşte ve tutunma kolu sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:561
+msgid "Asansör Küpeşte"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:563
+msgid ""
+"Küpeştelerde bağlantı sistemine yeni bir dönem başlatıyoruz. Atölyenizde; "
+"krom, bronz, gold ve füme olmak üzere 4 farklı renkte, ihtiyaca özel "
+"ölçülerde <strong>anında üretim</strong> yapabilirsiniz. <br><br> Bu sistem "
+"ile stok beklemeden ölçüye göre üretim yapar, fazla malzeme alımını "
+"önleyerek <strong>zaman ve maliyet tasarrufu</strong> sağlarsınız. Montaj "
+"süreciniz hızlanır ve projeleriniz daha verimli ilerler. <br><br> "
+"<strong>Asansör tutunma kolu</strong> (handrail) çözümlerimiz, yolcuların "
+"kabin içinde güvenli ve dengede durmasını sağlamak için tasarlanmıştır. "
+"Yüksek kaliteli <strong>küpeştelerimiz</strong>, estetik görünüm, "
+"dayanıklılık ve konforu bir araya getirerek her yolculuğu daha güvenli hale "
+"getirir. <br><br>"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:591
+msgid ""
+"Yüksek algılama hassasiyetine sahip LiftKeys asansör kapı sensörü ve ışın "
+"perdesi teknolojili fotosel"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:611
+#: .\crm\templates\preview\index.html:744
+msgid ""
+"Gerçek mermer şıklığı sunan, 2mm inceliğinde hafif ve ekonomik asansör PVC "
+"zemin kaplaması"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:614
+msgid "Asansör Zemin Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:616
+msgid ""
+"Size iki farklı çözümle yanınızdayız. <strong>Premium görünümlü zemin "
+"tasarımı</strong> sayesinde, 152 x 140 cm ölçüsündeki alanlarda özel tasarım "
+"mermerlere 3.000 dolar harcamanıza gerek kalmaz. Aynı <strong>premium mermer "
+"görünümünü</strong> çok daha düşük maliyetle sunuyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:624
+msgid ""
+"Yalnızca <strong>2 mm kalınlık</strong> ile asansöre gereksiz ağırlık "
+"bindirmez, montaj sürecini hızlandırır ve taşıma zorluklarını ortadan "
+"kaldırır. Böylece hem asansör kabinini hem de montaj ustasını gereksiz "
+"yüklerden kurtarıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:639
+#: .\crm\templates\preview\index.html:748
+#: .\crm\templates\preview\index.html:802
+#, python-format
+msgid ""
+"Titreşimi en aza indiren, %%100 orijinal ham maddeden üretilmiş dayanıklı "
+"asansör kauçuk takozları ve darbe emici lastikler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:642
+msgid "Rubber Kauçuk Ürünler"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:644
+#, python-format
+msgid ""
+"LiftKeys olarak, ürettiğimiz <strong>asansör kauçuk takozları</strong> ve "
+"titreşim sönümleyici ürünlerde %%100 orijinal ham madde kullanıyoruz. "
+"Kaliteyi yalnızca sözle değil, sunduğumuz <strong>kauçuk malzeme orijinallik "
+"raporu</strong> ve test belgeleriyle kanıtlıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:651
+msgid ""
+"Ürünlerimiz; <strong>ezilme ve deformasyon dayanım testleri</strong> ile "
+"<strong>ürün ömür testlerinden</strong> başarıyla geçmiştir. Özel olarak "
+"geliştirilen metal ve vida yapısı, <strong>uzun kullanım dayanıklılık "
+"testleri</strong> ile onaylanmış olup, yıllar boyu güvenli bir performans "
+"sunar."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:659
+msgid ""
+"Yüksek mühendislik ürünü kauçuklarımız, <strong>darbeyi en iyi şekilde "
+"absorbe eder</strong> ve <strong>asansör kabin ve makina titreşimini</"
+"strong> minimuma indirir. Aşınmaya ve ezilmeye karşı üstün direnç göstererek "
+"zamanla formunu kaybetmez, asansörünüzün konforunu garanti altına alır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:674
+#: .\crm\templates\preview\index.html:751
+msgid ""
+"Titreşimi önleyen 3 yönlü kauçuk yapılı, ayarlanabilir asansör paten bloğu "
+"ve guide shoes"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:677
+msgid "Guide Shoes"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:679
+msgid ""
+"<strong>LiftKeys Asansör Paten Blokları</strong>, yolcu güvenliğini "
+"standart, <strong>sessiz ve konforlu yolculuğu</strong> ise bir zorunluluk "
+"haline getirir. Ürünlerimiz; <strong>asansör kabin titreşimini</strong> "
+"azaltmak, seyir konforunu maksimize etmek ve <strong>ray kaynaklı hataları</"
+"strong> tolere etmek için özel olarak tasarlanmıştır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:686
+msgid ""
+"Yenilikçi <strong>3 yönlü kauçuk yapısı</strong> sayesinde, patenin üç "
+"yüzeyinde de darbe emici özellik sunar. Bu teknoloji, standart çelik ve "
+"plastik kombinasyonlu patenlere kıyasla çok daha <strong>sessiz, stabil ve "
+"pürüzsüz bir asansör seyri</strong> sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:693
+msgid ""
+"<strong>Ayarlanabilir paten sertliği</strong> özelliği ile kontrol tamamen "
+"sizde. Arka kısımdaki özel <strong>ayar vidası</strong> sayesinde, patenin "
+"sertliğini asansörün çalışma koşullarına ve ray durumuna göre optimize "
+"edebilir, <strong>titreşim seviyesini</strong> istediğiniz hassasiyette "
+"ayarlayabilirsiniz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:709
+#: .\crm\templates\preview\index.html:754
+msgid ""
+"Sık açma kapamaya ve titreşime dayanıklı, uzun ömürlü LiftKeys asansör kabin "
+"spot aydınlatma sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:712
+msgid "Kabin İçi Aydınlatmaları"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:714
+msgid ""
+"Piyasada kullanılan standart spot ışıklar, genellikle ev tipi üretim olduğu "
+"için <strong>asansör kabin aydınlatma</strong> koşullarına uygun değildir. "
+"Evlerde günde sadece 1–2 kez çalışan bu ürünler, asansörlerde günde "
+"<strong>1000’e varan açma-kapama döngüsüne</strong> maruz kaldığında hızlıca "
+"arızalanır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:721
+msgid ""
+"Biz bu sorunu, \"Asansörü seviyoruz ve anlıyoruz\" felsefesiyle çözdük. "
+"Mühendislerimiz, sıradan çözümler yerine <strong>asansör için özel "
+"tasarlanmış spot aydınlatma</strong> sistemleri geliştirdi. Ev tipi değil, "
+"gerçek bir <strong>LiftKeys mühendislik ürünüdür</strong>."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:729
+msgid ""
+"<strong>LiftKeys asansör spotları</strong>; yoğun kullanım döngülerine göre "
+"test edilmiş, <strong>kabin titreşimi</strong> ve sürekli çalışma "
+"senaryolarına karşı tam dayanıklılık sağlayacak şekilde üretilmiştir. Sık "
+"bozulan ışıklara son verin, gerçek asansör kalitesiyle tanışın."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:768
+#: .\crm\templates\preview\index.html:913
+msgid ""
+"Denetim ve yeşil etiket için gerekli, yönetmeliğe uygun asansör uyarı "
+"etiketleri, metal ve 3D damla etiket çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:771
+msgid "Asansör Etiketleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:773
+msgid ""
+"Etiket deyip geçmeyin; <strong>asansör uyarı ve talimat etiketleri</strong>, "
+"denetimlerden başarıyla geçmenin ve <strong>yeşil etiket</strong> almanın en "
+"kritik anahtarıdır. Yönetmeliklere uygun doğru etiketleme yapılmadığında, "
+"hem ciddi güvenlik riskleri oluşur hem de ruhsat süreci başarısız olur."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:780
+msgid ""
+"Ayrıca etiketler, firmanızın kurumsal kimliğini ve reklamını taşıyan en "
+"görünür yüzüdür. LiftKeys olarak, sizin yerinize güncel <strong>asansör "
+"yönetmeliklerini</strong> takip ediyor; kabin içi, kapı üstü, <strong>makine "
+"dairesi ve kuyu içi güvenlik etiketlerini</strong> standartlara tam uygun "
+"şekilde tasarlıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:788
+msgid ""
+"İhtiyacınıza özel malzeme seçenekleri sunuyoruz: Ekonomik ve dayanıklı "
+"<strong>PVC etiketler</strong>, uzun ömürlü <strong>metal etiketler</strong> "
+"ve marka algınızı yükselten premium <strong>3D damla etiket</strong> "
+"çözümlerimizle asansörünüze değer katıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:805
+msgid "Asansör Anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:807
+msgid ""
+"LiftKeys, yıllık 500.000 adet üretim kapasitesiyle 1000’den fazla firmaya "
+"<strong>asansör güvenlik anahtarı</strong> ve <strong>asansör kilit açma "
+"anahtarı</strong> tedarik eden sektörün lider üreticisidir. Standartların "
+"ötesine geçerek, markanızı her kapı açılışında görünür kılıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:815
+msgid ""
+"Marka prestijinizi artırmak için tasarlanan <strong>damla etiketli anahtar</"
+"strong> modellerimiz, etkileyici <strong>3D logo tasarımı</strong> ve "
+"premium yüzeyiyle firmanıza özel olarak üretilir. Firmanızın reklamını yapan "
+"en şık donanımdır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:823
+msgid ""
+"Yoğun saha kullanımı için geliştirdiğimiz <strong>kalıplı asansör "
+"anahtarları</strong> ise kırılmaya karşı dayanıklı gövde yapısıyla öne "
+"çıkar. Hem <strong>uzun ömürlü kullanım</strong> hem de seri üretim "
+"ihtiyaçlarınız için en sağlam ve ekonomik çözümdür."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:837
+#: .\crm\templates\preview\index.html:923
+msgid ""
+"Kırılma durumunda dağılmayan güvenlik teknolojisine sahip, çizilmez ve özel "
+"tasarım dekoratif asansör camı"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:840
+msgid "Cam Tasarımları & Güvenli Ayna Teknolojisiİ"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:842
+msgid ""
+"LiftKeys olarak, asansör kabin içi dekorasyonunda **uzun ömürlü ve dekoratif "
+"cam çözümleri** üretiyoruz. Tamamen **projeye özel asansör cam tasarımı** "
+"sürecimizle; 3000’den fazla desen, renk ve model seçeneği sunarak "
+"hayalinizdeki kabini gerçeğe dönüştürüyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:849
+msgid ""
+"Üretimimizde estetik kadar güvenliği de esas alıyoruz. **Çizilmeye dayanıklı "
+"yüzey teknolojisi** sayesinde camlarımız ilk günkü parlaklığını korur. Daha "
+"da önemlisi, **kırılmaya dayanıklı güvenli cam** ve ayna yapımız, yüksek "
+"darbe direnci sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:856
+msgid ""
+"Gelişmiş güvenlik katmanımız sayesinde, olası bir kırılma anında **cam "
+"parçalarının dağılmasını önleyen güvenlik tabakası** devreye girer. Parçalar "
+"etrafa saçılmaz, kabin içindeki yolcu güvenliği maksimum seviyede korunur. "
+"LiftKeys ile **güvenli asansör aynası** ve estetiği bir arada yaşayın."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:872
+#: .\crm\templates\preview\index.html:928
+msgid ""
+"Asansör güvenliği için kritik makaralı limit switch, resetli ve resetsiz "
+"emniyet anahtarları"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:875
+msgid "Asansör Switchleri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:877
+msgid ""
+"<strong>Asansör güvenlik anahtarları</strong> ve <strong>limit switch</"
+"strong> çözümlerimiz; kapı, güvenlik bölgeleri ve mekanik pozisyonları "
+"denetleyerek asansörün güvenli çalışmasını garanti eder. Sistemin \"sinir "
+"uçları\" olan bu anahtarlar, olası kazaları önlemede kritik rol oynar."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:884
+msgid ""
+"<strong>Makaralı switch (Roller)</strong>, ray üzerindeki hareketle "
+"tetiklenir. Özellikle <strong>limitleme noktalarında</strong> fiziksel "
+"temasla kesin konum bilgisi vererek dayanıklı bir kontrol sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:891
+msgid ""
+"Yüksek güvenlik gerektiren <strong>regülatör ve acil stop</strong> "
+"sistemlerinde <strong>resetli switch (manuel)</strong> kullanılır. Bu "
+"siviçler tetiklendiğinde, hata elle giderilmeden sistemin çalışmasına izin "
+"vermez, tam koruma sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:898
+msgid ""
+"Sürekli operasyonlar için tasarlanan <strong>resetsiz switch (otomatik)</"
+"strong> ise temas kesildiğinde kendiliğinden devreye girer. İnsan müdahalesi "
+"gerektirmez, asansörün <strong>hızlı ve seri çalışmasını</strong> sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:918
+msgid ""
+"Firmanıza özel 3D logolu tasarım sunan, kırılmaya dayanıklı asansör kilit "
+"açma ve güvenlik anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:941
+msgid "Liftkeys ile Tüm Önde Gelen Asansör Çözümlerinde Güvenilir İş Ortağı"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:946
+msgid ""
+"Yüksek Kaliteli Liftkeys Asansör Bileşenleri <br> Yenilikçi Tasarım ve "
+"Güvenlik Standartları"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:957
+msgid "60 Ülke"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:958
+msgid "Global Elevator Solutions"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:960
+msgid ""
+"Liftkeys, Avrupa, Ortadoğu, Türkiye ve Amerika dahil 60 ülkede asansör "
+"parçaları ihracatı ve tedariki sağlamaktadır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:967
+msgid "8 Fuar"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:968
+msgid "Dünya Çapında Fuarlar"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:970
+msgid ""
+"Liftkeys, uluslararası fuarlarda ürünlerini 8 farklı global etkinlikte "
+"başarıyla tanıtmıştır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:977
+msgid "1,784 Müşteri"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:978
+msgid "Memnun İş Ortaklarımız"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:980
+msgid ""
+"60 ülkede 1,784’den fazla müşterimize güvenilir asansör yedek parça ve "
+"çözümleri sunduk."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:990
+msgid "Sektör Uzmanlığı"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:992
+msgid ""
+"Liftkeys, <span id=\"experience-text\"></span> yıllık sektör deneyimiyle "
+"asansör yedek parça ve bileşenlerinde güvenilir çözümler sunmaktadır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1007
+msgid ""
+"Deneyimli ekibimiz, Liftkeys ile asansör sektöründe güvenli ve verimli "
+"çözümler sunar. Atlas, Horus ve Safety Gear ürünlerimiz, yüksek kalite "
+"standartlarıyla performans ve güvenliği bir araya getirir."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1013
+msgid "Overload Atlas"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1014
+msgid "Horus Photocell"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1015
+msgid "Safety Gear"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1021
+msgid ""
+"Liftkeys, asansörlerde estetik ve güvenliği bir araya getirir. Glass, Floor "
+"ve Light ürünlerimiz ile hem şık tasarım hem de yüksek performans sunuyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1027
+msgid "Glass"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1028
+msgid "Floor"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1029
+msgid "Light"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1035
+msgid ""
+"Liftkeys, asansör komponentlerinde geniş ürün yelpazesi sunar. Rubber, Label "
+"ve Elektronic ürünlerimiz, güvenli, dayanıklı ve yüksek performanslı asansör "
+"çözümleri için idealdir."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1041
+msgid "Rubber"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1042
+msgid "Label"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1043
+msgid "Elektronic"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1049
+msgid ""
+"Liftkeys, deneyimli ekibi ile asansör sektöründe güvenilir ve kaliteli "
+"çözümler sunar. Handrail, Guide Shose ve Mechanical ürünlerimiz, uzun ömürlü "
+"ve güvenli kullanım için tasarlanmıştır."
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1055
+msgid "Handrail"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1056
+msgid "Guide Shose"
+msgstr ""
+
+#: .\crm\templates\preview\index.html:1057
+msgid "Mechanical"
+msgstr ""
+
+#: .\crm\templates\preview\interlift.html:26
+msgid ""
+"<strong>Interlift</strong> 2025’te Yenilikçi Asansör Sistemlerimizi Keşfedin"
+msgstr ""
+
+#: .\crm\templates\preview\interlift.html:38
+msgid "GÜN"
+msgstr ""
+
+#: .\crm\templates\preview\interlift.html:42
+msgid "SAAT"
+msgstr ""
+
+#: .\crm\templates\preview\interlift.html:46
+msgid "DAKİKA"
+msgstr ""
+
+#: .\crm\templates\preview\interlift.html:50
+msgid "SANİYE"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:7
+msgid "LiftKeys Asansör Havalandırma Sistemleri | Sessiz Kabin Fanları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:11
+msgid ""
+"\n"
+"LiftKeys ile asansör kabinlerinde temiz hava sirkülasyonu sağlayın.\n"
+"Yüksek performanslı Cross Flow (Yatay) ve Aksiyel (Kare) fan modellerimiz;\n"
+"sessiz çalışma, güçlü emiş gücü ve kolay montaj özellikleriyle konforu "
+"artırır.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:21
+msgid ""
+"asansör fanı, asansör havalandırma, kabin fanı, cross flow fan, yatay "
+"asansör fanı, aksiyel fan, kare fan, sessiz asansör fanı, liftkeys, asansör "
+"tavan fanı, kabin soğutma"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:27
+msgid "LiftKeys | Asansör Kabin Havalandırma ve Fan Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:31
+msgid ""
+"\n"
+"\"Nefes Alan Kabinler\" için LiftKeys teknolojisi.\n"
+"Sessiz çalışan, yüksek debili yatay ve kare asansör fanları ile yolcu "
+"konforunu garanti altına alın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:41
+msgid "LiftKeys | Sessiz ve Güçlü Asansör Fanları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:45
+msgid ""
+"\n"
+"Asansör havalandırmasında profesyonel çözümler.\n"
+"Yatay (Cross Flow) ve Kare (Aksiyel) fan modellerimizi inceleyin.\n"
+"Katalog indirmek için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:7
+msgid "Asansör Fotoseli | Liftkeys Asansör Sistemleri & Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:7
+msgid "LiftKeys | Dekoratif Asansör Kabin Camı ve Mirror TV Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:11
+msgid ""
+"\n"
+"LiftKeys asansör dekoratif cam ve reflektif ayna (Mirror TV) sistemleri. "
+"Pendulum testli, temperli güvenli camlar ve 500'den fazla desen seçeneği ile "
+"kabinlerinizi özelleştirin.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:19
+msgid ""
+"asansör dekoratif cam, kabin cam kaplama, asansör aynası, reflektif ayna, "
+"mirror tv asansör, temperli asansör camı, sarkaç testli asansör camı, logolu "
+"asansör camı, LiftKeys asansör cam"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:25
+msgid "LiftKeys | Dekoratif Asansör Camı ve Reflektif Ayna (Mirror TV)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:29
+msgid ""
+"\n"
+"Asansörünüzde sanatı ve teknolojiyi buluşturun. 500'den fazla desen "
+"seçeneğine sahip güvenli dekoratif camlar ve çift yönlü Mirror TV "
+"ekranları.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:37
+msgid "LiftKeys | Dekoratif Cam ve Mirror TV Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:41
+msgid ""
+"\n"
+"Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece "
+"bir ayna değil, projenizin dijital imzası olan Mirror TV'yi keşfedin.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:7
+msgid "LiftKeys | Kurumsal Logolu ve Döküm Asansör Üçgen Anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:11
+msgid ""
+"\n"
+"LiftKeys asansör üçgen anahtarı modelleri ile tanışın. Kurumsal logolu "
+"estetik damla etiketli tasarımlar ve yüksek tork dirençli kalıptan işlemeli "
+"döküm anahtarlar.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:19
+msgid ""
+"asansör üçgen anahtarı, logolu asansör anahtarı, döküm asansör anahtarı, "
+"damla etiketli anahtar, asansör kapı anahtarı, Liftkeys anahtar, EN 81-20 "
+"anahtar, 13mm asansör anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:25
+msgid "LiftKeys | Estetik ve Güvenilir Asansör Üçgen Anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:29
+msgid ""
+"\n"
+"Firmanıza özel kurumsal renklerde damla etiketli veya kalıptan doğrudan "
+"işlenmiş mühürlü döküm asansör anahtarları. EN 81-20 standartlarına tam "
+"uyumlu.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:37
+msgid "LiftKeys | Kurumsal Asansör Üçgen Anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:41
+msgid ""
+"\n"
+"Asansör bakım firmalarına ve üreticilerine özel, yüksek kaliteli damla "
+"etiketli ve döküm asansör dış kapı anahtarları.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:7
+msgid "LiftKeys | Paslanmaz Asansör Küpeşte ve Tutamak Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:11
+msgid ""
+"\n"
+"LiftKeys paslanmaz çelik asansör küpeşte modelleri ile tanışın. \n"
+"Kaynaksız O-ring montaj teknolojisi, 5 farklı renk seçeneği (Gold, Krom, "
+"Siyah, Bronz) \n"
+"ve modüler boru sistemleri ile asansörünüze değer katın. Stoktan hemen "
+"teslim.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:21
+msgid ""
+"asansör küpeştesi, paslanmaz tutamak, asansör borusu, gold küpeşte, siyah "
+"asansör tutamağı, asansör içi aksesuar, modüler küpeşte, o-ringli dirsek, "
+"asansör küpeşte montajı, 30mm paslanmaz boru"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:27
+msgid "LiftKeys | Modüler ve Renkli Asansör Küpeşte Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:31
+#, python-format
+msgid ""
+"\n"
+"Kaynak gerektirmeyen, O-ring teknolojili ve %%100 modüler asansör "
+"küpeşteleri. \n"
+"Gold, Krom, Bronz ve Siyah renk seçenekleriyle kabinlerinize modern bir "
+"dokunuş yapın. \n"
+"Teknik detaylar ve kolay montaj rehberi için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:41
+msgid "LiftKeys | Paslanmaz Çelik Asansör Tutamakları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:45
+msgid ""
+"\n"
+"201 kalite paslanmaz çelikten üretilen, vidalı ve O-ringli kolay montaj "
+"küpeşte sistemleri. \n"
+"İstediğiniz renk ve ölçü kombinasyonunu özgürce oluşturun.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:7
+msgid "LiftKeys Asansör Ağırlık Paten Sistemleri | TPU Sessiz Ray Pateni"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:11
+msgid ""
+"\n"
+"LiftKeys TPU hammaddeli asansör ağırlık patenleri ile maksimum konfor ve "
+"sessizlik sağlayın.\n"
+"Çift bayraklı, 50'lik ve 70'lik modellerimiz, yağdanlık uyumlu yapısı ve "
+"yüksek dayanıklılığı ile\n"
+"karşı ağırlık sistemlerinde mükemmel performans sunar.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:21
+msgid ""
+"asansör pateni, ağırlık pateni, ray pateni, tpu paten plastiği, asansör "
+"yedek parça, liftkeys paten, 50lik paten, 70lik paten, 5mm ray pateni, 9mm "
+"ray pateni, yağdanlıklı paten"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:27
+msgid "LiftKeys | Sessiz ve Dayanıklı Asansör Ağırlık Patenleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:31
+msgid ""
+"\n"
+"Asansörünüzde titreşimi ve sesi bitiren teknoloji: LiftKeys TPU Patenler.\n"
+"Özel geometrili iç plastik ve güçlendirilmiş çelik gövde.\n"
+"Hemen inceleyin ve teklif alın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:42
+msgid "LiftKeys | Asansör Karşı Ağırlık Ray Paten Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:46
+msgid ""
+"\n"
+"Asansör konforunu artıran TPU paten teknolojisi.\n"
+"50'lik ve 70'lik (5mm ve 9mm ray uyumlu) modeller.\n"
+"Teknik çizim ve detaylar için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:7
+msgid ""
+"LiftKeys Asansör Kabin Paten Sistemleri | Ayarlanabilir TPU Sessiz Paten"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:11
+msgid ""
+"\n"
+"LiftKeys asansör kabin paten sistemleri; 3 taraflı TPU kauçuk yapısı, "
+"ayarlanabilir sertlik ayarı ve tümleşik yağdanlığı ile maksimum konfor, "
+"güven ve sessiz çalışma sunar.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:19
+msgid ""
+"asansör kabin pateni, kabin ray pateni, tpu asansör pateni, liftkeys paten, "
+"ayarlanabilir asansör pateni, 3 taraflı kauçuk paten, tümleşik yağdanlık, "
+"asansör yedek parça, 50mm paten, 70mm paten, 90mm paten"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:25
+msgid "LiftKeys | Sessiz ve Konforlu Asansör Kabin Paten Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:29
+msgid ""
+"\n"
+"Asansörünüzde titreşimi ve sesi bitiren teknoloji! ±2° esneme, yüksek "
+"kaliteli TPU hammadde ve ayarlanabilir sertlik sunan LiftKeys kabin "
+"patenlerini hemen inceleyin.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:38
+msgid "LiftKeys | Asansör Kabin Paten Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:42
+msgid ""
+"\n"
+"Daha az titreşim, daha az ses! Tümleşik yağdanlıklı ve TPU kauçuk yapılı "
+"LiftKeys kabin patenleri ile asansörünüzde konforu zirveye taşıyın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:7
+msgid "LiftKeys Solid ve Polistren Levha | Kırılmaz Asansör Tavanı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:11
+msgid ""
+"\n"
+"Asansör kabinleri için kırılmaz solid polikarbon ve polistren levhalar.\n"
+"B1 yanmazlık sınıfı, esnek montaj ve camdan 250 kat dayanıklı yapısıyla "
+"güvenliği artırın.\n"
+"Opal ve şeffaf seçenekleriyle LiftKeys kalitesini keşfedin.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:21
+msgid ""
+"solid levha, polikarbon levha, asansör tavanı, asansör tavan plastiği, "
+"kırılmaz cam, polistren levha, asansör içi kaplama, solid polikarbon, b1 "
+"yanmaz levha, liftkeys, opal levha, homlift camı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:27
+msgid "LiftKeys | Asansörün Şeffaf Zırhı: Solid Polikarbon Levha"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:31
+msgid ""
+"\n"
+"Kırılmaz, yanmaz ve esnek. Asansör tavan ve duvarlarında camın yerini alan "
+"güvenli teknoloji.\n"
+"B1 sınıfı alev almaz yapısı ve kolay montaj avantajlarını inceleyin.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:42
+msgid "LiftKeys | Kırılmaz ve Yanmaz Asansör Levhaları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:46
+msgid ""
+"\n"
+"Camdan 250 kat daha sağlam Solid Polikarbon ve Polistren levhalar.\n"
+"Montajı kolay, makasla kesilebilir, B1 sınıfı yanmaz.\n"
+"Detaylar için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:7
+msgid "LiftKeys Asansör Switch Sistemleri | Limit ve Emniyet Anahtarları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:10
+msgid ""
+"\n"
+"LiftKeys, EN81-20 uyumlu asansör switch çözümleri sunar.\n"
+"Makaralı, resetsiz (son durak), otomatik resetli ve yandan baskılı limit "
+"switch\n"
+"modelleriyle asansör güvenliğini ve konforunu en üst düzeye taşıyın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:20
+msgid ""
+"asansör switch sistemleri, limit şalteri, makaralı switch, resetsiz switch, "
+"son durak switch, kuyu dibi switch, yandan baskılı switch, asansör güvenlik "
+"anahtarı, liftkeys, regülatör switch, en81-20 switch"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:26
+msgid "LiftKeys | Asansör Güvenlik Switchleri ve Limit Şalterleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:30
+msgid ""
+"\n"
+"Asansörünüzün görünmez güvenlik muhafızları: LiftKeys Switch Sistemleri.\n"
+"Makaralı, manuel resetli ve dar kuyu çözümleri için yandan baskılı "
+"modeller.\n"
+"EN 60947-5-1 ve IP65 standartlarında üretim.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:41
+msgid "LiftKeys | Asansör Limit Switch ve Güvenlik Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:45
+msgid ""
+"\n"
+"Asansör kuyu güvenliği için profesyonel switch çözümleri.\n"
+"Son durak (resetsiz), hız regülatörü ve kabin üstü emniyet switchleri.\n"
+"Teknik özellikler ve katalog için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:7
+msgid "LiftKeys Asansör Vibrasyon Takozları | Makine Motor ve Şase Lastikleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:11
+#, python-format
+msgid ""
+"\n"
+"LiftKeys Vibrasyon Takozları ile asansör gürültüsünü ve titreşimi kaynağında "
+"durdurun.\n"
+"%%100 gerçek kauçuk, 95 Shore sertlik, MRL kare takoz, L tipi ve yuvarlak "
+"sönümleyici\n"
+"modelleriyle konforu ve halat ömrünü artırın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:21
+msgid ""
+"asansör takozu, vibrasyon takozu, asansör titreşim önleyici, makine motor "
+"takozu, asansör lastiği, kuyu dibi takoz, MRL takoz, kare takoz, L takoz, "
+"asansör ses izolasyonu, liftkeys, 95 shore kauçuk"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:27
+msgid "LiftKeys | Asansör Titreşim Önleyici Vibrasyon Takozları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:31
+msgid ""
+"\n"
+"Titreşimi azaltır, konforu artırır.\n"
+"Asansör motoru ve kabin için özel üretilmiş, çökme yapmayan gerçek kauçuk "
+"takozlar.\n"
+"Makinenizi koruyun, gürültüyü yok edin.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:42
+msgid "LiftKeys | Asansör Makine ve Motor Takoz Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:46
+#, python-format
+msgid ""
+"\n"
+"Ucuz takozun pahalı faturasını ödemeyin.\n"
+"Halat ve kasnak ömrünü uzatan, %%100 orijinal kauçuktan üretilen LiftKeys "
+"takozlarını keşfedin.\n"
+"Teknik detaylar için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:7
+msgid ""
+"LiftKeys PVC Zemin Kaplamaları | Yanmaz, Antibakteriyel Asansör Döşemesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:11
+msgid ""
+"\n"
+"LiftKeys asansör PVC zemin kaplamaları ile güvenliği ve estetiği artırın.\n"
+"Bfl-S1 yanmazlık sertifikası, antibakteriyel yüzey, ses yalıtımı ve özel "
+"tasarım\n"
+"dijital baskı seçenekleriyle asansörünüze değer katan zemin çözümleri.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:21
+msgid ""
+"asansör pvc zemin, asansör taban döşemesi, yanmaz zemin kaplama, "
+"antibakteriyel asansör zemini, liftkeys zemin, asansör dekorasyon, pvc yer "
+"döşemesi, desenli asansör tabanı, en81-20 zemin"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:27
+msgid "LiftKeys | Özel Tasarım ve Yanmaz Asansör PVC Zemin Kaplamaları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:31
+msgid ""
+"\n"
+"Asansörünüz için en güvenli ve şık çözüm: LiftKeys PVC Zeminler.\n"
+"Yangına dayanıklı (Bfl-S1), hijyenik, kaydırmaz ve 3D dijital baskı "
+"teknolojisiyle\n"
+"mermer estetiğini 10'da 1 maliyetle sunuyoruz.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:41
+msgid "LiftKeys | Asansör PVC Zemin ve Taban Döşemeleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:45
+msgid ""
+"\n"
+"Mermer görünümlü, yanmaz ve hafif PVC zemin kaplamaları.\n"
+"LiftKeys ile asansörünüzü kişiselleştirin, güvenliği ve konforu artırın.\n"
+"Teknik detaylar ve rulo koleksiyonu için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:9
+msgid "LiftKeys Timeline"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:20
+msgid "HEDEFLERİMİZ"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:21
+msgid ""
+"Yeni yerimizde (3300 m² kapalı, 1500 m² açık alan) tesisimizi ve ekibimizi "
+"büyütüyoruz. Çok yakında inovatif ürünlerle yanınızda olmaya devam edeceğiz."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:35
+msgid "KAUÇUK ÇÖZÜMLERİ"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:36
+msgid ""
+"Asansör sektöründe karşılaşılan dört farklı teknik probleme çözüm üreten "
+"kauçuk ürünleri portföye eklenmiştir. Titreşim, darbe, ses ve yüzey koruma "
+"alanlarında yüksek performanslı kauçuk çözümleri sunulmuştur."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:50
+msgid "HORUS & ATLAS ÜRÜN GRUBU"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:51
+msgid ""
+"Horus markasıyla asansör kapı fotosellerinin, Atlas markasıyla ise mekanik "
+"ve elektronik aşırı yük sistemlerinin imalatına başlanmış; bu iki ürün grubu "
+"ile asansör güvenlik çözümleri güçlendirilmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:65
+msgid "F1 ASANSÖR FRENLERİ"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:66
+msgid ""
+"Her kapasite ve hızda ihtiyaca özel fren sistemi çözümleri geliştirilmiştir. "
+"500 kg’dan 20 tona, 0,25 m/s’ten 2,5 m/s hıza kadar 6 farklı modelde asansör "
+"freni üretilerek, tüm projelere güvenli ve etkin çözümler sunulmuştur."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:81
+msgid "KÜPEŞTE"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:82
+msgid ""
+"81-70 kurallarına uygun, farklı renkte özel üretim küpeşte dirsekleri "
+"hizmete sunulmuştur."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:95
+msgid "HAVALANDIRMA SİSTEMLERİ"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:96
+msgid ""
+"Kumanda panosu ve kabinler için kare fan ve radyal fan çözümleri stoklara "
+"eklenmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:109
+msgid "DECOVETRO"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:110
+msgid ""
+"Decovetro markası altında; et kesme tahtaları, masa camları, sehpa camları, "
+"cam tablolar, dekoratif aynalar üretilerek ev-dekorasyon sektörüne hizmet "
+"verilmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:124
+msgid "ASANSÖR ZEMİN MALZEMELERİ"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:125
+msgid ""
+"PVC hammaddesi ile şık tasarımlı asansör zeminleri üretilmiştir. Ürün "
+"sertifikaları: Yangın, Kaydırmaz, Antibakteriyel."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:139
+msgid "AYDINLATMA ÜRÜNLERİ"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:140
+msgid ""
+"Kabin içi aksesuarları kategorisinde üreticilere doğru çözümler sunmak için "
+"solid aydınlatma difüzörü, LED, spot ve kuyu aydınlatma ürünleri portföye "
+"eklenmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:154
+msgid "CAM"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:155
+msgid ""
+"Asansör sektörü için özelleştirilmiş güvenli cam üretimine başlanmıştır. "
+"Desenli kabin camları, ayna, panoramik, kademeli kapı ve kabin camları ile "
+"yurtiçi ve yurtdışında 200'ün üzerinde üreticiye hizmet verilmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:170
+msgid "ÜÇGEN ANAHTAR"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:171
+msgid ""
+"Her marka kapıyı açabilen, dünya standartlarına uygun üçgen anahtar üretimi "
+"yapılmıştır. Yılda 1 milyon adet satış yapılarak 50 ülkeye ihracat "
+"gerçekleştirilmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:185
+msgid "ETİKET - TASARIM"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:186
+msgid ""
+"Asansör sektörü için tanıtım ve güvenlik yönerge etiketlerinin imalatına "
+"başlanmış, yıllık 10 milyonun üzerinde etiket basım kapasitesine "
+"ulaşılmıştır. Baskılı ürünlerdeki tecrübesini yenilikçi dokunuşla kısa "
+"sürede yükseltmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:201
+msgid "KURULUŞ"
+msgstr ""
+
+#: .\crm\templates\preview\timeline.html:202
+msgid ""
+"Kağıttanişler; Alper Koç’un asansör tecrübesi, Gökhan Kurt’un matbaa "
+"tecrübesi ile birlikte, kendi sektörlerine inovatif değer katmak için "
+"kurulmuş bir kuruluştur."
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:109
+msgid "Firma Logo"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:113
+msgid "Fiyat Teklifi"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:114
+msgid "Teklif No"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:115
+msgid "Tarih"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:120
+msgid "Firma"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:121
+msgid "İlgili Kişi"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:122
+msgid "Telefon / E-mail"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:123
+msgid "Adres"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:124
+msgid "Web"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:125
+msgid "Notlar"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:131
+msgid "Resim"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:132
+#: .\crm\templates\urunler\uruncreateandupdate.html:174
+msgid "Ürün"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:133
+msgid "Adet"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:134
+msgid "Birim Fiyat"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:135
+#, python-format
+msgid "İndirim (%%)"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:136
+msgid "İndirimli Tutar"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:137
+msgid "Toplam"
+msgstr ""
+
+#: .\crm\templates\teklifler\offer_pdf.html:157
+msgid "Genel Toplam"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:14
+msgid "Ürün Yönetimi"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:17
+msgid "Yeni Ürün"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:45
+msgid "Ürün Bilgileri"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:122
+msgid "Görseller"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:131
+#: .\crm\templates\urunler\uruncreateandupdate.html:146
+msgid "Sil"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:137
+msgid "Yeni Görsel Ekle"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:155
+msgid "Temizle"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:156
+msgid "Kaydet"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:156
+msgid "Oluştur"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:167
+msgid "Ürün Listesi"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:173
+msgid "Görsel"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:175
+msgid "Stok"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:176
+msgid "Fiyat"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:177
+msgid "Durum"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:178
+msgid "İşlem"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:191
+msgid "Aktif"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:193
+msgid "Pasif"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:198
+msgid "Soruları Yönet"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:84
+msgid "Kağıttanişler"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:118
+#: .\templates\previewtemplates\previewmenu.html:161
+msgid "Tümünü Gör"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:139
+msgid "Ürün bulunamadı."
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:192
+msgid "Çözümlerimiz"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:348
+msgid "İLETİŞİM"
+msgstr ""

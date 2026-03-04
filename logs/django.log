@@ -82647,3 +82647,135 @@ django.template.exceptions.TemplateDoesNotExist: senin_html_dosyan.html
 [2026-03-01 21:07:55,139] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
 [2026-03-01 21:07:58,636] WARNING django.request - Not Found: /favicon.ico
 [2026-03-01 21:07:58,636] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25403
+[2026-03-03 19:31:59,392] ERROR django.request - Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\contrib\sitemaps\views.py", line 23, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\contrib\sitemaps\views.py", line 117, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\contrib\sitemaps\__init__.py", line 104, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\contrib\sitemaps\__init__.py", line 124, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\contrib\sitemaps\__init__.py", line 69, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\contrib\sitemaps\__init__.py", line 39, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\sitemaps.py", line 21, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'keys' not found. 'keys' is not a valid view function or pattern name.
+[2026-03-03 19:31:59,394] ERROR django.server - "GET /sitemap.xml HTTP/1.1" 500 115178
+[2026-03-03 19:32:00,167] WARNING django.request - Not Found: /favicon.ico
+[2026-03-03 19:32:00,168] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25403
+[2026-03-04 19:42:10,166] WARNING django.server - "GET /static/image/pageproduct/paten/kabin-paten-sistemleri-video-kapak.webp HTTP/1.1" 404 2116
+[2026-03-04 19:42:12,444] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:42:16,107] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:42:16,107] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:43:27,154] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:43:32,215] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:43:32,215] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:45:55,270] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:46:00,408] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:46:00,408] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:47:17,122] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:47:20,745] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:47:20,745] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:49:26,440] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:49:29,734] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:49:29,734] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:50:41,867] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:50:45,580] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:50:58,953] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:51:03,864] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:51:03,864] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:51:38,020] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:51:41,301] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:51:41,301] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:53:17,531] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:53:20,881] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:53:20,882] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:55:27,690] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:55:32,381] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:55:32,381] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:55:51,887] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:55:55,317] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:55:55,317] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:56:56,242] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:56:59,934] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:57:02,788] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:57:02,788] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 19:59:52,999] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 19:59:56,517] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 19:59:56,518] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:01:33,954] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:01:37,465] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:01:37,465] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:03:01,303] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:03:03,698] WARNING django.server - "GET /static/image/pageproduct/patenkabin/paten-yagdanlik-ozellikleri.webp HTTP/1.1" 404 2110
+[2026-03-04 20:03:04,833] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:03:04,833] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:06:39,793] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:06:43,290] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:06:43,290] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:08:09,951] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:08:24,387] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:08:45,115] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:08:48,735] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:08:48,735] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:13:46,855] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:13:50,174] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:13:50,174] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:24:22,323] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:24:25,864] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:24:25,865] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:25:09,686] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:25:13,997] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:25:16,972] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:25:16,972] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:25:47,680] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:25:51,988] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:25:54,930] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:25:54,931] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:26:36,377] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:26:36,378] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:27:23,282] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:27:24,209] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:27:24,210] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:27:27,005] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 20:27:27,005] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25761
+[2026-03-04 20:27:43,072] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:27:43,192] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:42:53,108] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 20:55:35,832] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 21:00:48,572] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 21:00:48,572] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 25912
+[2026-03-04 21:01:07,486] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 21:08:09,764] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 21:08:09,764] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 26265
+[2026-03-04 21:08:15,685] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 21:08:15,685] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 26265
+[2026-03-04 21:11:46,946] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 21:16:09,993] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 21:16:13,576] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 21:16:13,577] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 26265
+[2026-03-04 21:41:37,776] WARNING django.server - "GET /static/img/default-product.png HTTP/1.1" 404 1996
+[2026-03-04 21:41:41,505] WARNING django.request - Not Found: /favicon.ico
+[2026-03-04 21:41:41,505] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 26265

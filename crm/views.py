@@ -1808,6 +1808,13 @@ def anahtar_view(request):
 
 
 
+def patenkabin_view(request):
+    """
+    Liftkeys Anahtarlar blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/patenkabin.html")
+
+
 
 
 

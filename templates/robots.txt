@@ -1,0 +1,28 @@
+User-agent: *
+
+Disallow: /admin/
+Disallow: /django-admin/
+Disallow: /rosetta/
+
+
+Disallow: /employeecreate/
+Disallow: /jobinfo/
+Disallow: /report/employee/
+Disallow: /companies/manage/
+Disallow: /directorycompany/update/
+
+Disallow: /api/employee/
+Disallow: /api/companies/
+Disallow: /api/sector/
+Disallow: /api/country/
+Disallow: /api/opportunity/
+Disallow: /catogory_detail_api/
+
+Disallow: /opportunity_detail/
+Disallow: /offers/  # Bu kural /offers/create/ ve diğer alt sayfaları da otomatik engeller
+Disallow: /get-products/
+
+Disallow: /categoriesmanage/ # Bu kural /categoriesmanage/<id>/ sayfalarını da kapsar
+Disallow: /crm/messages/     # Bu kural /crm/messages/toggle/ sayfalarını da kapsar
+
+Disallow: /loginorcreate/

@@ -1,0 +1,803 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load static %}
+{% load i18n %}
+
+{# --- 1. ADIM: HAVALANDIRMA İÇİN ÖZEL SEO META ETİKETLERİ (KABİN PATENİ İÇİN GÜNCELLENDİ) --- #}
+{% block title %}
+{% trans "LiftKeys Asansör Kabin Paten Sistemleri | Ayarlanabilir TPU Sessiz Paten" %}
+{% endblock %}
+
+{% block meta_description %}
+{% blocktrans %}
+LiftKeys asansör kabin paten sistemleri; 3 taraflı TPU kauçuk yapısı, ayarlanabilir sertlik ayarı ve tümleşik yağdanlığı ile maksimum konfor, güven ve sessiz çalışma sunar.
+{% endblocktrans %}
+{% endblock %}
+
+{% block meta_robots %}index,follow{% endblock %}
+
+{% block meta_keywords %}
+{% trans "asansör kabin pateni, kabin ray pateni, tpu asansör pateni, liftkeys paten, ayarlanabilir asansör pateni, 3 taraflı kauçuk paten, tümleşik yağdanlık, asansör yedek parça, 50mm paten, 70mm paten, 90mm paten" %}
+{% endblock %}
+
+{% block og_type %}product{% endblock %}
+
+{% block og_title %}
+{% trans "LiftKeys | Sessiz ve Konforlu Asansör Kabin Paten Sistemleri" %}
+{% endblock %}
+
+{% block og_description %}
+{% blocktrans %}
+Asansörünüzde titreşimi ve sesi bitiren teknoloji! ±2° esneme, yüksek kaliteli TPU hammadde ve ayarlanabilir sertlik sunan LiftKeys kabin patenlerini hemen inceleyin.
+{% endblocktrans %}
+{% endblock %}
+
+{# Sosyal medya paylaşım resmi, HTML içerisindeki ana görsel ile güncellendi #}
+{% block og_image %}{% static 'image/pageproduct/patenkabin/agirlik-paten-liftkeys.jpg' %}{% endblock %}
+
+{% block tw_title %}
+{% trans "LiftKeys | Asansör Kabin Paten Sistemleri" %}
+{% endblock %}
+
+{% block tw_description %}
+{% blocktrans %}
+Daha az titreşim, daha az ses! Tümleşik yağdanlıklı ve TPU kauçuk yapılı LiftKeys kabin patenleri ile asansörünüzde konforu zirveye taşıyın.
+{% endblocktrans %}
+{% endblock %}
+
+{% block tw_image %}{% static 'image/pageproduct/patenkabin/agirlik-paten-liftkeys.jpg' %}{% endblock %}
+
+{# --- CSS BLOĞU --- #}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css\previewcss\productpage\patenkabin.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="canonical" href="https://www.liftkeys.com{{ request.path }}">
+<link rel="alternate" hreflang="tr" href="https://www.liftkeys.com{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="en" href="https://www.liftkeys.com/en{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="de" href="https://www.liftkeys.com/de{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="ru" href="https://www.liftkeys.com/ru{{ request.path|slice:'3:' }}">
+<link rel="alternate" hreflang="ar" href="https://www.liftkeys.com/ar{{ request.path|slice:'3:' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{# --- İÇERİK BLOĞU --- #}
+{% block content %}
+
+{# --- 2. ADIM: SCHEMA MARKUP (KABİN PATENİ İÇİN GÜNCELLENDİ) --- #}
+<script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Liftkeys",
+            "url": "https://www.liftkeys.com",
+            "logo": "https://www.liftkeys.com{% static 'image/preview/liftkeys-og.webp' %}",
+            "sameAs": [
+                "https://www.linkedin.com/company/liftkeys",
+                "https://www.instagram.com/liftkeys"
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "LiftKeys Asansör Kabin Pateni",
+            "image": "https://www.liftkeys.com{% static 'image/pageproduct/patenkabin/kabin-paten-sistemleri-video-kapak.webp' %}",
+            "description": "3 taraflı kauçuk yapısı, yüksek kaliteli TPU hammadde ve tümleşik yağdanlık sistemi ile sessiz çalışan, ayarlanabilir asansör kabin pateni.",
+            "brand": {
+                "@type": "Brand",
+                "name": "LiftKeys"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.liftkeys.com{{ request.path }}",
+                "availability": "https://schema.org/InStock",
+                "priceCurrency": "USD",
+                "price": "0.00" 
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Kabin patenlerinde neden TPU hammadde kullanılmaktadır?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TPU malzeme; aşınmaya karşı yüksek dayanıklılığı, esnek yapısı ve sessiz çalışma performansı ile uzun ömürlü ve titreşimsiz bir kullanım sunar."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Ayarlanabilir sertlik ayarı ne işe yarar?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Asansör hızı ve konfor beklentisine göre patenlerin esneklik seviyesi ayarlanabilir. Kontra somunlar ile esneklik kontrol edilerek optimum konfor elde edilir."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "LiftKeys kabin patenleri hangi ölçülerde mevcuttur?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Asansör sisteminize tam uyum sağlamak için 50mm, 70mm ve 90mm paten ölçü seçeneklerimiz bulunmaktadır."
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Anasayfa",
+                "item": "https://www.liftkeys.com/"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Asansör Çözümleri",
+                "item": "https://liftkeys.com/kategori/"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Kabin Paten Sistemleri",
+                "item": "https://www.liftkeys.com{{ request.path }}"
+            }]
+        }
+    ]
+</script>
+
+
+<section class="liftkeys-paten-section py-5 overflow-hidden bg-white">
+    <div class="container">
+        
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="liftkeys-header d-flex align-items-center p-3 shadow-sm rounded-3" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="icon-wrapper me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-gear-wide-connected text-white fs-4"></i>
+                    </div>
+                    <h1 class="mb-0 text-white fw-bold h4">LIFTKEYS – Kabin Paten Sistemleri</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 pb-2">
+            
+
+            <div class="col-lg-8 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                
+                <div class="video-thumbnail-wrapper" 
+                    onclick="loadYoutubeVideo(this)" 
+                    data-video-id="sRz6UmVh-lM" 
+                    style="cursor: pointer;">
+                    
+                    <img src="{% static 'image/pageproduct/patenkabin/kabin-paten-sistemleri-video-kapak.webp' %}" 
+                        alt="LIFTKEYS Kabin Paten Sistemleri - Sessiz çalışma ve tam hakimiyet sunan 3 taraflı kauçuk paten" 
+                        title="LIFTKEYS Kabin Paten Sistemleri" 
+                        class="img-fluid w-100 d-block">
+                    
+                    <div class="play-button-overlay">
+                        <div class="play-button-icon"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 ps-lg-5" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="content-wrapper">
+                    <p class="display-6 fw-light text-secondary mb-0" style="line-height: 1.4;">
+                        “Sessiz çalışma +<br>
+                        tam hakimiyet<br>
+                        3 taraflı kauçuk farkını<br>
+                        net anlatır”
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row align-items-center mt-2" data-aos="fade-up" data-aos-duration="1000">
+            
+            <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
+                <p class="mb-0 fs-3 text-secondary" style="line-height: 1.4;">
+                    Güvenlik sadece bir fonksiyon değil,<br>
+                    <strong class="text-dark fw-bold">LiftKeys’te bir standarttır.</strong>
+                </p>
+            </div>
+            
+            <div class="col-lg-4 col-md-5 text-md-end">
+                <a href="#" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm px-4 py-3 w-100 w-md-auto">
+                    <i class="bi bi-book me-2 fs-5"></i>
+                    Ürün Kataloğu İndir
+                </a>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<script>
+    function loadYoutubeVideo(element) {
+        // 1. Tıklanan yapının içindeki video kimliğini alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // 2. YouTube iframe oynatıcı kodumuzu oluşturuyoruz (Otomatik oynatma aktif)
+        var iframeHTML = `
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/sxwh9OfCUDg?si=tjkrquQcmPtjUJkn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `;
+        
+        // 3. Mevcut içeriği (resim ve play butonu) silip yerine videoyu yerleştiriyoruz
+        element.innerHTML = iframeHTML;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="paten-details-section py-5 bg-light overflow-hidden">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                <div class="pe-lg-4">
+                    <p class="fs-5 text-secondary mb-4" style="line-height: 1.7;">
+                        <strong class="text-dark">Asansör patenlerimiz</strong>, konfor, sessiz çalışma ve maksimum titreşim sönümleme hedeflenerek özel olarak tasarlanmıştır.
+                    </p>
+                    
+                    <p class="text-secondary mb-4" style="line-height: 1.7;">
+                        Ürünlerimiz, üç taraflı kauçuk yapısı sayesinde ray ile temas sırasında oluşan titreşimi etkin şekilde absorbe eder. Bu özellik, kabin hareketi sırasında daha stabil, daha sessiz ve daha konforlu bir sürüş sağlar.
+                    </p>
+                    
+                    <div class="d-flex align-items-start bg-white p-4 rounded-4 shadow-sm mb-0">
+                        <i class="bi bi-shield-check text-orange fs-3 me-3"></i>
+                        <p class="text-secondary mb-0" style="line-height: 1.7;">
+                            En önemli farklarımızdan biri, paten plastiklerinde yüksek kaliteli TPU hammadde kullanılmasıdır. TPU malzeme; aşınmaya karşı dayanıklılığı, esnek yapısı ve sessiz çalışma performansı ile uzun ömürlü ve konforlu bir kullanım sunar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1200">
+                
+                <div class="package-info-card bg-white p-4 rounded-4 shadow-sm border-start-orange mb-4">
+                    <p class="fw-bold text-dark mb-3 fs-6">
+                        Ayrıca sistem, yağdanlık ile birlikte tam set olarak sunulmaktadır.
+                    </p>
+                    
+                    <ul class="list-unstyled text-secondary mb-3 custom-bullet-list">
+                        <li class="mb-2 d-flex align-items-center"><span class="bullet-dot"></span> Tek bir kutu içerisinde:</li>
+                        <li class="mb-2 d-flex align-items-center"><span class="bullet-dot"></span> Paten blokları</li>
+                        <li class="mb-2 d-flex align-items-center"><span class="bullet-dot"></span> Paten plastikleri</li>
+                        <li class="mb-2 d-flex align-items-center"><span class="bullet-dot"></span> Yağdanlık seti</li>
+                    </ul>
+                    
+                    <p class="text-secondary mb-0" style="font-size: 0.95rem; line-height: 1.5;">
+                        birlikte verilerek montaj süreci hızlandırılır, ek parça ihtiyacı ortadan kaldırılır.
+                    </p>
+                </div>
+
+                <div class="result-highlight-card p-4 rounded-4 shadow-sm text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="fw-bold text-white mb-2 h5">Sonuç:</h3>
+                    <p class="mb-0 fw-medium text-white fs-5" style="line-height: 1.4;">
+                        Daha az titreşim, daha az ses, daha fazla konfor ve uzun ömürlü performans.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="independent-rubber-section py-5 bg-light overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 mb-5 mb-lg-0 text-center" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-wrapper d-inline-block position-relative">
+                    <img src="{% static 'image/pageproduct/patenkabin/paten-bagimsiz-kaucuk-sistemi.webp' %}" 
+                         alt="LiftKeys Asansör Pateni - Bağımsız Çalışan Kauçuk Sistemi Parçalarına Ayrılmış Görünüm" 
+                         class="img-fluid w-100 floating-exploded-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border-start-orange position-relative">
+                    <i class="bi bi-quote position-absolute top-0 start-0 text-light opacity-50" style="font-size: 4rem; margin-top: -10px; margin-left: 10px;"></i>
+                    
+                    <p class="text-secondary mb-0 fs-5 position-relative z-1" style="line-height: 1.8;">
+                        Bağımsız çalışan kauçuk sistemi sayesinde oluşan vibrasyonlar asansör kabinine iletilmez ve sistemin sessiz, konforlu çalışması sağlanır.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="paten-mechanics-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+
+            <div class="col-md-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                <div class="mechanic-card-wrapper">
+                    <div class="img-box  ">
+                        <img src="{% static 'image/pageproduct/patenkabin/tumlesik-paten-montaj-kolayligi.webp' %}" 
+                             alt="Tümleşik sistem sayesinde montaj kolaylığı sağlayan asansör kabin pateni" 
+                             class="img-fluid w-100 object-fit-contain mechanic-img">
+                    </div>
+                    <p class="text-secondary fs-6" style="line-height: 1.6;">
+                        tümleşik sitem sayesinde<br>montaj kolaylığı
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                <div class="mechanic-card-wrapper">
+                    <div class="img-box  ">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-saga-sola-hareket-kabiliyeti.webp' %}" 
+                             alt="±2° 3 mm sağa ve sola hareket kabiliyeti ile ray hatalarını telafi eden sistem" 
+                             class="img-fluid w-100 object-fit-contain mechanic-img">
+                    </div>
+                    <p class="text-secondary fs-6 px-lg-2" style="line-height: 1.6;">
+                        ±2° 3 mm ( max ) sağa ve sola hareket kabiliyeti, ray hatalarını telafi ederek sessiz ve konforlu bir çalışma performansı sunar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="mechanic-card-wrapper">
+                    <div class="img-box  ">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-ayarlanabilir-sertlik-ileri-geri.webp' %}" 
+                             alt="Ayarlanabilir sertlik ve ileri-geri hareket kabiliyeti ile üst düzey konfor" 
+                             class="img-fluid w-100 object-fit-contain mechanic-img">
+                    </div>
+                    <p class="text-secondary fs-6 px-lg-2" style="line-height: 1.6;">
+                        Ayarlanabilir sertlik ve ileri–geri hareket kabiliyeti sayesinde ray hataları etkin şekilde sönümlenir ve üst düzey konfor elde edilir.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="adjustable-stiffness-section py-5 bg-light overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 mb-4 mb-lg-0 text-center" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-sm d-inline-block">
+                    <img src="{% static 'image/pageproduct/patenkabin/paten-ayarlanabilir-sertlik-ayari.webp' %}" 
+                         alt="LiftKeys Kabin Pateni - Ayarlanabilir Sertlik Ayarı ve Esneklik Kontrolü" 
+                         class="img-fluid w-100 mechanic-zoom-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                
+                <div class="d-flex align-items-center mb-4">
+                    <div class="icon-box bg-white text-orange shadow-sm rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 50px; height: 50px;">
+                        <i class="bi bi-wrench-adjustable fs-4"></i>
+                    </div>
+                    <h2 class="h4 fw-bold text-dark mb-0">Ayarlanabilir Sertlik Ayarı</h2>
+                </div>
+
+                <p class="text-secondary mb-4 fs-5" style="line-height: 1.7;">
+                    Asansör hızı ve konfor beklentisine göre patenlerin esneklik seviyesi ayarlanabilir yapıdadır.
+                </p>
+
+                <div class="p-4 bg-white rounded-4 shadow-sm border-start-orange">
+                    <p class="text-secondary mb-0" style="line-height: 1.7;">
+                        Kontra somunlar sıkılarak veya gevşetilerek, istenilen esneklik seviyesi kolayca ayarlanabilir. Bu özellik, farklı hız ve kullanım koşullarında optimum konfor ve stabil çalışma sağlar.
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="integrated-oiler-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 pe-lg-5 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
+                
+                <div class="d-flex align-items-center mb-4">
+                    <div class="icon-box bg-light text-orange shadow-sm rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 50px; height: 50px;">
+                        <i class="bi bi-droplet-fill fs-4"></i>
+                    </div>
+                    <h2 class="h4 fw-bold text-dark mb-0">Tümleşik Yağdanlık Sistemi</h2>
+                </div>
+
+                <p class="text-secondary mb-4 fs-5" style="line-height: 1.7;">
+                    Tümleşik yağdanlık sistemi sayesinde rayların doğru ve sürekli yağlanması sağlanırken, ekstra parça montajı ile uğraşmadan zaman kazanılır.
+                </p>
+
+                <div class="p-4 bg-light rounded-4 shadow-sm border-start-orange" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="d-flex align-items-start">
+                        <i class="bi bi-clock-history text-orange fs-4 me-3 mt-1"></i>
+                        <p class="text-secondary mb-0" style="line-height: 1.7;">
+                            Bu yapı, bakım süresini kısaltır ve sistemin daha verimli çalışmasına katkı sağlar.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-lg-6 mb-4 mb-lg-0 text-center order-1 order-lg-2" data-aos="fade-left" data-aos-duration="1200">
+                <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-lg d-inline-block">
+                    <img src="{% static 'image/pageproduct/patenkabin/asansor-paten-tumlesik-yagdanlik-sistemi.webp' %}" 
+                         alt="LIFTKEYS Asansör Paten Tümleşik Yağdanlık Sistemi - Sürekli Ray Yağlama ve Kolay Bakım" 
+                         class="img-fluid w-100 mechanic-zoom-img" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="box-contents-section py-5  overflow-hidden">
+    <div class="container">
+        
+        <div class="row mb-5">
+            <div class="col-12" data-aos="fade-down" data-aos-duration="1000">
+                <h2 class="display-6 fw-bold text-secondary h3 mb-0">Kutu İçeriği</h2>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-end text-center">
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                <div class="content-item-wrapper">
+                    <img src="{% static 'image/pageproduct/patenkabin/paten-kutu-icerigi-4-adet.webp' %}" 
+                         alt="LiftKeys Asansör Pateni - 4 Adet Paten Bloğu" 
+                         class="img-fluid mb-4 content-zoom-img" 
+                         style=" object-fit: contain;" loading="lazy">
+                    <p class="text-secondary fs-5 mb-0" style="line-height: 1.4;">
+                        4 Adet
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                <div class="content-item-wrapper">
+                    <img src="{% static 'image/pageproduct/patenkabin/paten-kutu-icerigi-2-set-yagdanlik.webp' %}" 
+                         alt="LiftKeys Asansör Pateni - 2 Set Yağdanlık" 
+                         class="img-fluid mb-4 content-zoom-img" 
+                         style=" object-fit: contain;" loading="lazy">
+                    <p class="text-secondary fs-5 mb-0" style="line-height: 1.4;">
+                        2 set yagdanlık
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="content-item-wrapper">
+                    <img src="{% static 'image/pageproduct/patenkabin/paten-kutu-icerigi-paketleme.webp' %}" 
+                         alt="LiftKeys Asansör Pateni Kutu Ebatları ve Ağırlığı" 
+                         class="img-fluid mb-4 content-zoom-img" 
+                         style=" object-fit: contain;" loading="lazy">
+                    <p class="text-secondary fs-5 mb-0" style="line-height: 1.4;">
+                        kutu ebetları ve kg bekleniyor
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="tpu-material-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        
+        <div class="row g-4 align-items-center justify-content-center text-center">
+            
+            <div class="col-6 col-md-3 col-lg-2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
+                <img src="{% static 'image/pageproduct/patenkabin/tpu-hammadde-profil.webp' %}" 
+                     alt="LiftKeys TPU Hammadde Paten Profil Görünümü" 
+                     class="img-fluid hover-scale-img" loading="lazy">
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                <img src="{% static 'image/pageproduct/patenkabin/tpu-hammadde-aciklama-kutu.webp' %}" 
+                     alt="Özel Karışımlı Poliüretan TPU Hammadde Özellikleri" 
+                     class="img-fluid w-100 hover-scale-img" loading="lazy">
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <img src="{% static 'image/pageproduct/patenkabin/tpu-hammadde-olculer-set.webp' %}" 
+                     alt="LiftKeys 50mm, 70mm, 90mm Paten Ölçüleri" 
+                     class="img-fluid w-100 hover-scale-img" loading="lazy">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="oiler-features-details-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 pe-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                <div class="content-wrapper">
+                    <h2 class="h4 text-secondary mb-4" style="font-weight: 600;">Yağdanlık</h2>
+                    
+                    <ul class="list-unstyled text-secondary fs-5" style="line-height: 1.8;">
+                        <li class="mb-3 d-flex">
+                            <span class="me-2 fw-bold" style="font-size: 1.2rem;">▪</span>
+                            <span>230 ml yağ haznesi miktarı.</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <span class="me-2 fw-bold" style="font-size: 1.2rem;">▪</span>
+                            <span>Rayı 3 yönden saran ve esit yaglanmasını saglayan keçe sistemi.</span>
+                        </li>
+                        <li class="mb-0 d-flex">
+                            <span class="me-2 fw-bold" style="font-size: 1.2rem;">▪</span>
+                            <span>Diger fren tiplerine uygun baglantı adaptör parçaları.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="image-wrapper d-inline-block position-relative">
+                    <img src="{% static 'image/pageproduct/patenkabin/paten-yagdanlik-ozellikleri.webp' %}" 
+                         alt="LiftKeys Asansör Pateni Yağdanlık - 230ml hazne ve rayı saran keçe sistemi" 
+                         class="img-fluid w-100 mechanic-zoom-img" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="assembly-sequence-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        
+        <div class="row mb-5">
+            <div class="col-12 text-center" data-aos="fade-down" data-aos-duration="1000">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-tools text-orange fs-4 me-2"></i>
+                    <h2 class="h4 fw-bold text-secondary mb-0">Montaj Sıralaması</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 justify-content-center text-center">
+            
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                <div class="assembly-step-wrapper">
+                    <div class="img-box mb-3 d-flex align-items-end justify-content-center" style="height: 400px;">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-montaj-1-govde.webp' %}" alt="Paten Gövdesi Paketten Çıkmış Hali" class="img-fluid step-img" loading="lazy">
+                    </div>
+                    <p class="text-secondary mb-3" style="font-size: 0.95rem;">Paten Gövdesi Paketten Çıkmış Hali</p>
+                    <div class="step-number bg-orange text-white fw-bold rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-sm">1</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="assembly-step-wrapper">
+                    <div class="img-box mb-3 d-flex align-items-end justify-content-center" style="height: 400px;">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-montaj-2-plastikleri.webp' %}" alt="Paten Plastikleri" class="img-fluid step-img" loading="lazy">
+                    </div>
+                    <p class="text-secondary mb-3" style="font-size: 0.95rem;">Paten Plastikleri</p>
+                    <div class="step-number bg-orange text-white fw-bold rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-sm">2</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="assembly-step-wrapper">
+                    <div class="img-box mb-3 d-flex align-items-end justify-content-center" style="height: 400px;">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-montaj-3-ust-kapak.webp' %}" alt="Üst Kapak Sacı" class="img-fluid step-img" loading="lazy">
+                    </div>
+                    <p class="text-secondary mb-3" style="font-size: 0.95rem;">Üst Kapak Sacı</p>
+                    <div class="step-number bg-orange text-white fw-bold rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-sm">3</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="assembly-step-wrapper">
+                    <div class="img-box mb-3 d-flex align-items-end justify-content-center" style="height: 400px;">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-montaj-4-m5x10-civata.webp' %}" alt="M5x10 Cıvata" class="img-fluid step-img" loading="lazy">
+                    </div>
+                    <p class="text-secondary mb-3" style="font-size: 0.95rem;">M5x10 Cıvata</p>
+                    <div class="step-number bg-orange text-white fw-bold rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-sm">4</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="assembly-step-wrapper">
+                    <div class="img-box mb-3 d-flex align-items-end justify-content-center" style="height: 400px;">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-montaj-5-arka-ayar.webp' %}" alt="Arka Hareket Ayar Cıvata" class="img-fluid step-img" loading="lazy">
+                    </div>
+                    <p class="text-secondary mb-3" style="font-size: 0.95rem;">Arka Hareket Ayar Cıvata</p>
+                    <div class="step-number bg-orange text-white fw-bold rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-sm">5</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="assembly-step-wrapper">
+                    <div class="img-box mb-3 d-flex align-items-end justify-content-center" style="height: 400px;">
+                        <img src="{% static 'image/pageproduct/patenkabin/paten-montaj-6-m5x20-civata.webp' %}" alt="M5x20 Cıvata" class="img-fluid step-img" loading="lazy">
+                    </div>
+                    <p class="text-secondary mb-3" style="font-size: 0.95rem;">M5x20 Cıvata</p>
+                    <div class="step-number bg-orange text-white fw-bold rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-sm">6</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="faq-section py-5 bg-light overflow-hidden">
+    <div class="container">
+        
+        <div class="row mb-5 text-center">
+            <div class="col-12" data-aos="fade-down" data-aos-duration="1000">
+                <div class="d-inline-flex align-items-center justify-content-center mb-3">
+                    <div class="icon-box bg-white shadow-sm rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 50px; height: 50px;">
+                        <i class="bi bi-question-circle text-orange fs-4" style="color: var(--liftkeys-orange, #F38002);"></i>
+                    </div>
+                    <h2 class="display-6 fw-bold text-secondary h3 mb-0">Sıkça Sorulan Sorular</h2>
+                </div>
+                <p class="text-secondary fs-5 mt-2">LiftKeys Kabin Paten Sistemleri hakkında en çok merak edilenler.</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1200">
+                <div class="accordion" id="faqAccordion">
+                    
+                    <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-bold text-dark fs-5 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Kabin patenlerinde neden TPU hammadde kullanılmaktadır?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary bg-white" style="line-height: 1.7;">
+                                TPU (Termoplastik Poliüretan) malzeme; aşınmaya karşı yüksek dayanıklılığı, esnek yapısı ve sessiz çalışma performansı ile uzun ömürlü ve titreşimsiz bir kullanım sunar. Standart plastiklere göre asansör seyrini çok daha konforlu hale getirir.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed fw-bold text-dark fs-5 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Ayarlanabilir sertlik ayarı ne işe yarar?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary bg-white" style="line-height: 1.7;">
+                                Asansör hızı ve konfor beklentisine göre patenlerin esneklik seviyesi ayarlanabilir. Kontra somunlar sıkılarak veya gevşetilerek istenilen esneklik elde edilir. Bu özellik, farklı hız ve kullanım koşullarında ray hatalarını sönümleyerek optimum stabilite sağlar.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed fw-bold text-dark fs-5 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Tümleşik yağdanlık sistemi montajda nasıl bir kolaylık sağlar?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary bg-white" style="line-height: 1.7;">
+                                Sistem, yağdanlık ile birlikte tam set olarak sunulmaktadır. Tümleşik yapı sayesinde ekstra yağdanlık montajı ile uğraşmanıza gerek kalmaz, montaj süreci hızlanır ve ek parça ihtiyacı ortadan kalkar.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed fw-bold text-dark fs-5 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                LiftKeys kabin patenleri hangi ölçülerde mevcuttur?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary bg-white" style="line-height: 1.7;">
+                                Asansör sisteminize tam uyum sağlamak için 50mm, 70mm ve 90mm paten ölçü seçeneklerimiz bulunmaktadır.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+{% include "preview/iletisimformpreview.html" %}
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Sayfa yüklendiğinde animasyonları başlatır
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 1000,      // Animasyon süresi
+            once: true,          // Sadece bir kere çalışsın
+            offset: 50,          // Tetiklenme mesafesi
+            easing: 'ease-in-out'
+        });
+    });
+</script>
+
+{% include "preview/footer.html" %}
+
+{% endblock %}
+
+

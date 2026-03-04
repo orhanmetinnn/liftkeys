@@ -4,6 +4,7 @@ from django.conf.urls import handler404
 from .views import custom_404  # views.py'deki fonksiyonu import et
 from .sitemaps import StaticViewSitemap, ProductPageSitemap
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic import TemplateView
 handler404 = custom_404
 sitemaps = {
     "static": StaticViewSitemap,
@@ -68,13 +69,18 @@ urlpatterns = [
     path("solid/", views.solid_view, name="solid_view"),
     path("kupeste/", views.kupeste_view, name="kupeste_view"),
     path("takozlar/", views.takozlar_view, name="takozlar_view"),
-    path('feed/pinterest/', views.pinterest_catalog_feed, name='pinterest_feed'),
     path('keys/', views.anahtar_view, name='keys_view'),
     path('dekoratif-cam/', views.kabincam_view, name='kabincam_view'),
+    path('patenkabin/', views.patenkabin_view, name='patenkabin_view'),
 
 
+    path('feed/pinterest/', views.pinterest_catalog_feed, name='pinterest_feed'),
     path("kagittanisleri/", views.kagittanisler_view, name="kagittanisleri_view"),
-
+    path(
+        'robots.txt', 
+        TemplateView.as_view(template_name="robots.txt", content_type="text/plain"), 
+        name="robots_file"
+    ),
 ]
 
 

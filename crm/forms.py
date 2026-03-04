@@ -853,8 +853,23 @@ OfferProductFormSet = inlineformset_factory(
 
 from django import forms
 from .models import ContactMessage
+from django import forms
+from .models import ContactMessage
+from django.core.exceptions import ValidationError
+
 class ContactForm(forms.ModelForm):
-    
+    # HONEYPOT ALANI: Kullanıcılar görmez, botlar doldurur.
+    # İsmini özellikle 'website' veya 'phone_number_alt' gibi botları çekecek bir şey koyuyoruz.
+    website_url = forms.CharField(
+        required=False, 
+        widget=forms.TextInput(attrs={
+            'style': 'display: none;', # CSS ile gizliyoruz
+            'autocomplete': 'off',
+            'tabindex': '-1' # Klavyeyle form dolduranlar buraya takılmasın diye
+        }),
+        label="Lütfen bu alanı boş bırakın"
+    )
+
     class Meta:
         model = ContactMessage
         fields = ['name', 'email', 'subject', 'phone', 'message']
@@ -890,6 +905,17 @@ class ContactForm(forms.ModelForm):
             }),
         }
 
+    # FORMU DOĞRULAMA (VALIDATION) ADIMI
+    def clean(self):
+        cleaned_data = super().clean()
+        honeypot = cleaned_data.get('website_url')
+
+        # Eğer honeypot alanı doluysa, bu bir bottur!
+        if honeypot:
+            # Botlara anlamlı bir hata mesajı vermiyoruz, form hatalı diyoruz.
+            raise ValidationError("Form gönderiminde şüpheli bir işlem tespit edildi.")
+
+        return cleaned_data
 
 
 from django import forms

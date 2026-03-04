@@ -31,6 +31,7 @@ def root_language_handler(request):
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
+    path('rosetta/', include('rosetta.urls')),
     path('cms/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     # RedirectView silindi. Artık /tr/ otomatik olarak / adresine YÖNLENDİRİLMEYECEK.

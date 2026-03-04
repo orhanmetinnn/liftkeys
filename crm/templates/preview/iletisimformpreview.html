@@ -33,6 +33,8 @@
             
             <form id="contactForm" method="POST" action="{% url 'contact_form_view_preview' %}" novalidate>
                 {% csrf_token %}
+                
+                {{ formiletisimpreview.website_url }}
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         {{ formiletisimpreview.name }}
@@ -112,12 +114,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.reset(); 
             } else {
                 let errorHtml = "<ul class='mb-0'>";
-                for (let field in data.errors) {
-                    data.errors[field].forEach(err => {
-                        errorHtml += `<li><strong>${field}</strong>: ${err}</li>`;
+                
+                // Bot yakalandığında genel hata dönerse (__all__) onu ekranda düzgün göstermek için eklendi
+                if (data.errors['__all__']) {
+                     data.errors['__all__'].forEach(err => {
+                        errorHtml += `<li>${err}</li>`;
                     });
                 }
+
+                // Normal alan hataları
+                for (let field in data.errors) {
+                    if (field !== '__all__') {
+                        data.errors[field].forEach(err => {
+                            errorHtml += `<li><strong>${field}</strong>: ${err}</li>`;
+                        });
+                    }
+                }
                 errorHtml += "</ul>";
+                
                 alertContainer.innerHTML = `
                     <div class="alert alert-danger alert-dismissible fade show shadow-sm rounded-3" role="alert">
                         Form hatalı:<br>${errorHtml}
