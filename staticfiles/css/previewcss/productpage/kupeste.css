@@ -37,6 +37,11 @@
     transform: scale(1.01);
     /* Üzerine gelince çok hafif büyür */
 }
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
 
 /* Play Butonu (CSS ile Çizim) */
 .play-button-overlay {
@@ -66,11 +71,7 @@
     /* Oku görsel olarak ortalamak için */
 }
 
-.video-thumbnail-wrapper:hover .play-button-overlay {
-    transform: translate(-50%, -50%) scale(1.1);
-    /* Hover efektinde buton büyür */
-    background-color: #fff;
-}
+
 
 /* 3. Sağ Slogan Metni */
 .slogan-container {

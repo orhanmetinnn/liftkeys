@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-04 21:00+0300\n"
+"POT-Creation-Date: 2026-03-08 21:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,7 @@ msgid "Ana Sayfaya Dön"
 msgstr ""
 
 #: .\crm\templates\blog\blog_page.html:18
+#: .\crm\templates\preview\previewblog\atlasoverload.html:50
 #: .\templates\previewtemplates\previewmenu.html:71
 msgid "Ana Sayfa"
 msgstr ""
@@ -65,6 +66,7 @@ msgid "Sonraki"
 msgstr ""
 
 #: .\crm\templates\blog\blog_page.html:127
+#: .\crm\templates\preview\previewblog\atlasoverload.html:152
 msgid "İçindekiler"
 msgstr ""
 
@@ -76,41 +78,41 @@ msgstr ""
 msgid "Kopyalandı"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:48
+#: .\crm\templates\preview\about.html:50
 msgid "Liftkeys Hakkında"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:50
+#: .\crm\templates\preview\about.html:52
 msgid ""
 "Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar "
 "ile sektörde öncü bir marka olarak hizmet vermektedir."
 msgstr ""
 
-#: .\crm\templates\preview\about.html:56
+#: .\crm\templates\preview\about.html:58
 msgid "10+ yıl tecrübe"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:57
+#: .\crm\templates\preview\about.html:59
 msgid "50+ ülkeye ihracat"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:58
+#: .\crm\templates\preview\about.html:60
 msgid "3300 m² kapalı alan"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:65
+#: .\crm\templates\preview\about.html:67
 msgid "Kurumsal İçerik"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:67
+#: .\crm\templates\preview\about.html:69
 msgid "Misyon & Değer"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:68
+#: .\crm\templates\preview\about.html:70
 msgid "İnovasyonla Güçlenen, Sektöre Özel Çözümler"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:70
+#: .\crm\templates\preview\about.html:72
 msgid ""
 "Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar "
 "ile sektörde öncü bir marka olarak hizmet vermektedir. Asansör sektöründeki "
@@ -119,143 +121,145 @@ msgid ""
 "amacıyla kurulmuştur."
 msgstr ""
 
-#: .\crm\templates\preview\about.html:79
+#: .\crm\templates\preview\about.html:81
 msgid ""
 "Uzun süredir asansör sektöründe çeşitli görevlerde hizmet etmiş, asansör "
 "komponentleri konusunda tecrübeli bir kadro ile çalışmalarını sürdürmektedir."
 msgstr ""
 
-#: .\crm\templates\preview\about.html:85
+#: .\crm\templates\preview\about.html:87
 msgid ""
 "Asansör sektörüne özel kurumsal kimlik çalışması ile yeni kurulmuş veya yeni "
 "bir yüze sahip olmak isteyen bütün firmalara ürünleri ile destek vermekte ve "
 "markaların kendini en doğru şekilde yansıtacağı ürünler sunmaktadır."
 msgstr ""
 
-#: .\crm\templates\preview\about.html:93
+#: .\crm\templates\preview\about.html:95
 msgid "Öne Çıkan Başlıklar"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:94
+#: .\crm\templates\preview\about.html:96
 msgid "Uzmanlık Alanlarımız"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:96
+#: .\crm\templates\preview\about.html:98
 msgid "Etiket & Matbu Üretimi"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:97
+#: .\crm\templates\preview\about.html:99
 msgid "Üçgen Asansör Anahtarları"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:98
+#: .\crm\templates\preview\about.html:100
 msgid "Güvenli Cam & Ayna Çözümleri"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:99
+#: .\crm\templates\preview\about.html:101
 msgid "Aydınlatma ve Elektronik"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:100
+#: .\crm\templates\preview\about.html:102
 msgid "Zemin (PVC) ve Mekanik"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:103
+#: .\crm\templates\preview\about.html:105
 msgid "Ürün Sertifikaları"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:105
+#: .\crm\templates\preview\about.html:107
 msgid "Yangın Sertifikası"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:106
+#: .\crm\templates\preview\about.html:108
 msgid "Kaydırmaz Sertifikası"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:107
+#: .\crm\templates\preview\about.html:109
 msgid "Antibakteriyel Sertifikası"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:114
+#: .\crm\templates\preview\about.html:116
 msgid "İletişim Çağrısı"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:116
+#: .\crm\templates\preview\about.html:118
 msgid "Sizin için doğru çözümü birlikte tasarlayalım"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:117
+#: .\crm\templates\preview\about.html:119
 msgid "Asansör projeleriniz için ölçeklenebilir ve sertifikalı ürün portföyü."
 msgstr ""
 
-#: .\crm\templates\preview\about.html:120
+#: .\crm\templates\preview\about.html:122
 msgid "Bizimle İletişime Geçin"
 msgstr ""
 
-#: .\crm\templates\preview\about.html:121
+#: .\crm\templates\preview\about.html:123
 msgid "Ürün Portföyü"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:21
+#: .\crm\templates\preview\contactpage.html:24
 msgid "Bize Ulaşın"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:38
+#: .\crm\templates\preview\contactpage.html:43
 msgid "Adınız"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:50
+#: .\crm\templates\preview\contactpage.html:55
 msgid "E-Posta Adresiniz"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:61
+#: .\crm\templates\preview\contactpage.html:66
 msgid "Konu"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:71
+#: .\crm\templates\preview\contactpage.html:76
 msgid "Telefon Numaranız"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:83
+#: .\crm\templates\preview\contactpage.html:88
 msgid "Mesajınız"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:94
+#: .\crm\templates\preview\contactpage.html:108
 msgid "MESAJ GÖNDER"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:104
+#: .\crm\templates\preview\contactpage.html:118
+#: .\crm\templates\preview\previewblog\atlasoverload.html:323
+#: .\crm\templates\preview\previewblog\fotosel.html:443
 msgid "Close"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:114
+#: .\crm\templates\preview\contactpage.html:128
 msgid "İletişim Bilgilerimiz"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:119
+#: .\crm\templates\preview\contactpage.html:133
 msgid "E-Posta Gönderin"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:127
+#: .\crm\templates\preview\contactpage.html:141
 #: .\crm\templates\preview\footer.html:21
 msgid "Bizi Arayın"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:135
+#: .\crm\templates\preview\contactpage.html:149
 msgid "Fabrika Adresimiz"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:137
+#: .\crm\templates\preview\contactpage.html:151
 msgid ""
 "Ramazan Oğlu Mah. Mekke Sok. No: 4 Kurtköy-Pendik / İSTANBUL Posta Kodu: "
 "34906"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:145
+#: .\crm\templates\preview\contactpage.html:159
 msgid "Depo Adresi"
 msgstr ""
 
-#: .\crm\templates\preview\contactpage.html:147
+#: .\crm\templates\preview\contactpage.html:161
 msgid ""
 "Fevziçakmak mahallesi Aslım Caddesi Teksan Sanayi Sitesi G Blok NO:71/1B "
 "Karatay / Konya"
@@ -339,51 +343,51 @@ msgstr ""
 msgid "Privacy policy."
 msgstr ""
 
-#: .\crm\templates\preview\gallery.html:31
+#: .\crm\templates\preview\gallery.html:32
 msgid "LiftKeys Galeri"
 msgstr ""
 
-#: .\crm\templates\preview\gallery.html:32
+#: .\crm\templates\preview\gallery.html:33
 msgid "Endüstriyel ürün portföyümüzden video ve görseller"
 msgstr ""
 
-#: .\crm\templates\preview\gallery.html:36
+#: .\crm\templates\preview\gallery.html:37
 msgid "Yükleniyor…"
 msgstr ""
 
-#: .\crm\templates\preview\gallery.html:49
+#: .\crm\templates\preview\gallery.html:50
 msgid "YouTube’da Aç"
 msgstr ""
 
-#: .\crm\templates\preview\gallery.html:50
+#: .\crm\templates\preview\gallery.html:51
 msgid "Kapat"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:13
+#: .\crm\templates\preview\iletisimformpreview.html:23
 msgid "Özel Müşteri Ekipleri ve Esnek Hizmetler"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:15
+#: .\crm\templates\preview\iletisimformpreview.html:25
 msgid ""
 "Dünya çapındaki varlığımız, üretim zaman çizelgelerinizin sorunsuz, maliyet "
 "etkin ve uyumlu bir şekilde yönetilmesini sağlar."
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:21
+#: .\crm\templates\preview\iletisimformpreview.html:31
 msgid "Broşürünü İndir"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:26
+#: .\crm\templates\preview\iletisimformpreview.html:36
 msgid "Teklif Talep Et"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:28
+#: .\crm\templates\preview\iletisimformpreview.html:38
 msgid ""
 "Ucuz ürün sunmuyoruz; doğru ürünü, doğru kaliteyle ve doğru fiyatla "
 "sunuyoruz. <br> Kaliteyle tanışmak istersen bize yaz."
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:74
+#: .\crm\templates\preview\iletisimformpreview.html:93
 msgid "Talebi Gönder"
 msgstr ""
 
@@ -435,13 +439,13 @@ msgstr ""
 
 #: .\crm\templates\preview\index.html:40
 #: .\crm\templates\preview\kagittanisler.html:40
-#: .\crm\templates\preview\previewblog\fotosel.html:40
+#: .\crm\templates\preview\previewblog\fotosel.html:39
 msgid "Liftkeys | Güvenilir Asansör Sistemleri"
 msgstr ""
 
 #: .\crm\templates\preview\index.html:44
 #: .\crm\templates\preview\kagittanisler.html:44
-#: .\crm\templates\preview\previewblog\fotosel.html:44
+#: .\crm\templates\preview\previewblog\fotosel.html:43
 msgid ""
 "\n"
 "Liftkeys, yüksek kalite ve güvenlik standartlarıyla asansör parçaları "
@@ -475,6 +479,8 @@ msgid ""
 msgstr ""
 
 #: .\crm\templates\preview\index.html:145
+#: .\crm\templates\preview\previewblog\atlasoverload.html:56
+#: .\crm\templates\preview\previewblog\zemin.html:225
 #: .\templates\previewtemplates\previewmenu.html:92
 msgid "Ürünler"
 msgstr ""
@@ -626,6 +632,7 @@ msgid ""
 msgstr ""
 
 #: .\crm\templates\preview\index.html:419
+#: .\crm\templates\preview\previewblog\zemin.html:238
 msgid "LIFTKEYS"
 msgstr ""
 
@@ -707,6 +714,8 @@ msgstr ""
 #: .\crm\templates\preview\index.html:829
 #: .\crm\templates\preview\index.html:864
 #: .\crm\templates\preview\index.html:904
+#: .\crm\templates\preview\previewblog\solid.html:316
+#: .\crm\templates\preview\previewblog\solid.html:674
 msgid "Detayları Gör"
 msgstr ""
 
@@ -1229,6 +1238,499 @@ msgstr ""
 msgid "SANİYE"
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\atlasoverload.html:4
+msgid "Atlas Asansör Aşırı Yük Sistemi | Liftkeys – Hassas Yük Sensörü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:5
+msgid "Atlas Aşırı Yük Sistemi ve Sensörü | Liftkeys Teknoloji"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:6
+msgid ""
+"Liftkeys Atlas Asansör Aşırı Yük Sistemi: Hassas ağırlık ölçümü ile asansör "
+"güvenliğini artırın. Kolay kurulum, yasal uygunluk ve teknik avantajları "
+"keşfedin."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:7
+msgid ""
+"asansör aşırı yük sistemi, overload sensor, asansör yük sensörü, liftkeys "
+"atlas, asansör yük hücresi, load cell, asansör güvenliği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:9
+#: .\crm\templates\preview\previewblog\atlasoverload.html:13
+msgid "Atlas Asansör Aşırı Yük Sistemi | Liftkeys"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:10
+msgid ""
+"Asansör güvenliğinde yeni standart: Liftkeys Atlas Aşırı Yük Sistemi ile "
+"tanışın."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:14
+msgid "Asansör güvenliğinde yeni standart: Liftkeys Atlas."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:21
+msgid "Atlas Asansör Aşırı Yük Sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:26
+msgid ""
+"Liftkeys Atlas Asansör Aşırı Yük Sistemi: Asansörlerde hassas ölçüm, "
+"güvenlik ve yasal uygunluk sağlayan profesyonel çözüm."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:62
+msgid "Atlas Aşırı Yük Sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:91
+msgid "LIFTKEYS – Atlas Asansör Aşırı Yük Sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:107
+msgid "Video"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:119
+msgid ""
+"\"Asansör Güvenliğinde <br> <span class=\"fw-bold text-dark display-6\">Yeni "
+"Standart\"</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:124
+msgid "Yüksek hassasiyetli sensör teknolojisi ile tanışın."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:130
+msgid ""
+"Güvenlik sadece bir fonksiyon değil, <br> <span class=\"fw-bold text-"
+"dark\">LiftKeys'te bir standarttır.</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:135
+#: .\crm\templates\preview\previewblog\fan.html:211
+#: .\crm\templates\preview\previewblog\kabincam.html:199
+#: .\crm\templates\preview\previewblog\keys.html:207
+#: .\crm\templates\preview\previewblog\paten.html:210
+#: .\crm\templates\preview\previewblog\patenkabin.html:213
+#: .\crm\templates\preview\previewblog\solid.html:214
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:233
+#: .\crm\templates\preview\previewblog\takozlar.html:206
+#: .\crm\templates\preview\previewblog\zemin.html:280
+msgid "Ürün Kataloğu İndir"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:144
+msgid "Atlas Cihazı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:154
+msgid "1. Neden Atlas Aşırı Yük Sistemi?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:155
+msgid "2. Teknik Avantajlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:156
+msgid "3. Kullanım Senaryoları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:157
+msgid "4. Kurulum & Kalibrasyon"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:158
+msgid "5. ROI: Yatırımın Geri Dönüşü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:159
+msgid "6. SSS"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:168
+msgid "Neden Atlas?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:173
+msgid ""
+"Asansörlerde kapasite aşımı; ekipman ömrünü kısaltır, arıza oranlarını "
+"yükseltir ve güvenlik riskini artırır. <br><br> <strong>Atlas</strong>, "
+"kabin yükünü <u>milisaniyeler içinde</u> ölçerek sürücüye ve kontrol "
+"paneline doğru geri bildirim verir; aşırı yük durumunda kalkışı engeller "
+"veya uyarı verir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:184
+msgid "Yüksek Güvenlik"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:185
+msgid "Düşük Maliyet"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:194
+msgid "Arıza riskini azaltan Atlas asansör aşırı yük kontrol ünitesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:231
+msgid "TEKNİK ÖLÇÜLER"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:232
+msgid "Kurulum Şeması ve Boyutlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:233
+msgid "(Resimlerin üzerine tıklayarak büyütebilirsiniz)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:239
+msgid "Power Ünitesi (Kontrol Paneli)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:246
+msgid "Ön Görünüm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:251
+msgid ""
+"LiftKeys Atlas asansör aşırı yük sistemi kontrol paneli ve power ünitesi ön "
+"teknik çizimi ve ölçüleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:257
+msgid "Yan Kesit"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:262
+msgid ""
+"LiftKeys Atlas aşırı yük sistemi kontrol ünitesi yan profil derinlik "
+"ölçüleri ve bağlantı noktaları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:269
+msgid "Genişlik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:270
+msgid "Yükseklik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:271
+msgid "Derinlik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:279
+msgid "Ölçüm Sensörü (Load Cell)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:286
+msgid "Profil Görünümü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:291
+msgid ""
+"LiftKeys Atlas halat altı asansör yük ölçüm sensörü ve load cell profil "
+"teknik çizimi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:297
+msgid "Kesit Görünümü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:302
+msgid ""
+"Asansör yük sensörü load cell yan kesit montaj ölçüleri ve vida detayları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:309
+msgid "Montaj Aralığı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:310
+msgid "Toplam Yükseklik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:311
+msgid "Somun:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:364
+#: .\crm\templates\preview\previewblog\atlasoverload.html:373
+msgid "Kurumsal Uyum"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:366
+msgid ""
+"Modern binaların yönetim standartlarına uygun, ölçeklenebilir mimari; çoklu "
+"kabinli sistemlerde merkezi izlemeye hazır yapı."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:380
+#: .\crm\templates\preview\previewblog\atlasoverload.html:389
+msgid "Gelişmiş Güvenlik"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:382
+msgid ""
+"Hassas sensör okuması ile kapı aç/kapa döngülerinde kararlı sonuç ve "
+"maksimum yolcu güvenliği sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:397
+msgid "Teknik Avantajlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:404
+msgid "Hassas Ölçüm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:405
+msgid ""
+"Dinamik yük değişimlerinde bile stabil okuma; yalancı pozitifleri azaltan "
+"gelişmiş filtre seti."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:412
+msgid "Hızlı Entegrasyon"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:413
+msgid ""
+"Mevcut kontrol panelleriyle tam uyumlu I/O; modüler kablo demetiyle 'tak-"
+"çalıştır' özelliği."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:420
+msgid "Dayanıklılık"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:421
+msgid ""
+"Endüstriyel sınıf malzeme, titreşim ve yüksek sıcaklık toleransına sahip "
+"mimari yapı."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:428
+msgid "Kullanım Senaryoları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:437
+msgid "AVM & Otel"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:438
+msgid ""
+"Yoğun insan trafiğinde kapasite aşımlarını proaktif önleme; kullanıcı "
+"memnuniyetini artırır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:449
+msgid "Hastane"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:450
+msgid ""
+"Sedye ve ekipman taşımada hassas ağırlık denetimi; operasyonel güvenlik."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:461
+msgid "Endüstriyel Tesis"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:462
+msgid ""
+"Malzeme ve parça transferlerinde sürekli doğruluk; ekipman ömrünü uzatır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:470
+msgid "Panel Bağlantı Diyagramı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:473
+msgid "Panel Bağlantı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:477
+#: .\crm\templates\preview\previewblog\atlasoverload.html:480
+msgid "Kalibrasyon Ekranı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:488
+msgid "ROI: Yatırımın Geri Dönüşü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:490
+msgid ""
+"Atlas, kapasite aşımı kaynaklı duruşları azalttığı için bakım çağrılarını ve "
+"parça değişimlerini düşürür."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:495
+msgid ""
+"\"Ortalama yoğun bir tesiste sistem, <span class=\"bg-success text-white "
+"px-2 py-1 rounded\">6–12 ay</span> içinde kendini amorti edebilir.\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:506
+msgid "Paket İçeriği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:512
+msgid "1 Adet LKS ATLAS Power Ünitesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:513
+msgid "4 Adet Sensör (Opsiyonel 2/4)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:514
+msgid "8 Adet M12x20 Civata"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:515
+msgid "8 Adet M12 Pul"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:520
+msgid "8 Adet M12 Somun"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:521
+msgid "4 Adet M10 Setiskur"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:522
+msgid "4 Adet M10 Pul & Somun"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:523
+msgid "1 Adet Kullanma Kılavuzu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:543
+msgid "Dikkat Edilecek Hususlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:553
+msgid "Yetkili Personel"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:555
+msgid ""
+"Ürünümüzün emniyetli ve uzun ömürlü kullanılabilmesi için malzemelerin "
+"<strong>MYK belgeli personeller</strong> tarafından bağlanması gerekir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:567
+msgid "Kablo Renk Kodları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:569
+msgid ""
+"Sensörlerin kabloları bağlanırken renklerine özellikle dikkat edilmelidir. "
+"Hatalı bağlantı sensör arızasına yol açabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:581
+msgid "Hassas Kalibrasyon"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:583
+msgid ""
+"Ürün fabrika çıkışlı kalibrelidir. Yeniden hassas kalibrasyon yapılmak "
+"istenirse, belirlenen yükün <strong>kabin içine eşit dağılması</strong> "
+"gerekir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:595
+msgid "Güç Girişi (220V)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:597
+msgid ""
+"220 V besleme voltajının, Power Ünitesinin <u>sol üst köşesinde</u> bulunan "
+"uygun girişe verilmesine özellikle dikkat edilmelidir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:609
+msgid "Program Menüsü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:617
+msgid "Kapasite Ayarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:622
+msgid ""
+"Menü tuşuna basıldığında ekranda gözüken ilk kapasite ayarının yapıldığı "
+"sekmedir. Asansörün taşıma kapasitesini buradan belirlersiniz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:632
+msgid "Sesli Uyarı (Buzzer)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:637
+msgid ""
+"Kart üzerinde bulunan sesli uyarı sistemidir. Açık konumda kalması önerilir, "
+"ancak projeye göre istenirse kapatılabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:647
+#, python-format
+msgid "Minimum Yük Rölesi (%%20)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:652
+#, python-format
+msgid ""
+"Asansörün minimum yük rölesidir. Fabrika çıkış değeri, beyan yükünün "
+"<strong>%%20</strong> oranıdır. <br><em>Örnek: 30 kg altı birinin (çocuk "
+"vb.) asansörü tek başına kullanamaması gibi senaryolar için ayarlanabilir.</"
+"em>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:663
+msgid "Yarım Yük Rölesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:668
+msgid ""
+"Kabinin yarı dolu olduğu bilgisini panoya bildiren röledir. Trafik yönetimi "
+"için kullanılır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:678
+#, python-format
+msgid "%%80 Tam Yük Rölesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:683
+#, python-format
+msgid ""
+"Asansörün <strong>%%80</strong> oranında dolu olduğunu panoya bildiren "
+"röledir. Pano, motor gücü ve kalkış ayarlarını bu bilgiye göre optimize "
+"edebilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:693
+msgid "Aşırı Yük Rölesi (STOP)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\atlasoverload.html:698
+msgid ""
+"Kabin kapasitesine göre beyan edilen yükün ölçüldüğü röledir. Asansör beyan "
+"yükü miktarında dolduğunda <strong>sinyal verir ve asansörün çalışmasına "
+"engel olur.</strong>"
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\fan.html:7
 msgid "LiftKeys Asansör Havalandırma Sistemleri | Sessiz Kabin Fanları"
 msgstr ""
@@ -1273,8 +1775,509 @@ msgid ""
 "Katalog indirmek için tıklayın.\n"
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\fan.html:89
+msgid "LiftKeys Asansör Havalandırma Fanı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:91
+msgid ""
+"Ultra sessiz çalışan, yüksek hava akışına sahip Cross-flow ve Aksiyel "
+"asansör kabin fanları."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:110
+msgid "Asansör fanları ne kadar ses çıkarır?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:113
+msgid ""
+"LiftKeys fanları Ultra Sessiz teknolojisi ile üretilmiştir. Kabin içindeki "
+"yolcuları rahatsız etmeyecek desibel seviyelerinde çalışır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:118
+msgid "Hangi fan modelini seçmeliyim: Yatay mı Kare mi?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:121
+msgid ""
+"Yatay (Cross Flow) fanlar daha geniş bir alana hava üfler ve genellikle kapı "
+"üstlerinde kullanılır. Kare (Aksiyel) fanlar ise tavan montajı için uygundur "
+"ve doğrudan hava akışı sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:132
+#: .\crm\templates\preview\previewblog\zemin.html:224
+msgid "Anasayfa"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:137
+msgid "Asansör Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:142
+msgid "Havalandırma Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:154
+msgid "LIFTKEYS – Havalandırma Sistemleri (Fanlar)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:170
+msgid "LiftKeys Asansör Kabin Havalandırma Sistemi ve Fan Teknolojisi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:187
+msgid ""
+"“Nefes Alan<br> <strong style=\"color: #495057; font-weight: "
+"700;\">Kabinler”</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:200
+msgid ""
+"Güvenlik sadece bir fonksiyon değil,<br> <strong class=\"text-"
+"dark\">LiftKeys’te bir standarttır.</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:220
+msgid "Yatay Tip"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:223
+msgid "LiftKeys Yatay Asansör Fanı - Cross Flow Fan"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:225
+msgid "Cross Flow Fan"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:231
+msgid "Kare Tip"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:234
+msgid "LiftKeys Kare Asansör Tavan Fanı - Aksiyel Fan"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:236
+msgid "Aksiyel Fan"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:276
+msgid "\"Asansör Radyal Fanlarının Temel Özellikleri:\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:293
+msgid "Yüksek Verimlilik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:295
+msgid ""
+"Radyal (santrifüj) yapısı sayesinde havayı dik açıyla yönlendirerek kabin "
+"içine güçlü bir hava sirkülasyonu sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:307
+msgid "Sessiz Çalışma:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:309
+msgid ""
+"Asansör konforunu bozmayacak şekilde düşük desibel seviyelerinde çalışacak "
+"şekilde tasarlanmışlardır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:321
+msgid "Kompakt Tasarım:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:323
+msgid ""
+"Kabin tavanı ile asansör şasisi arasındaki dar boşluklara kolayca monte "
+"edilebilirler."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:335
+msgid "Sürekli Çalışma Uygunluğu:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:337
+msgid ""
+"Özellikle yüksek trafikli binalarda asansörün içindeki havanın her zaman "
+"taze kalmasını sağlamak için uzun süreli çalışmaya dayanıklıdırlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:348
+msgid "LiftKeys Radyal Asansör Fanı Hava Üfleme Performansı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:359
+msgid "Teknik Özellikler ve Ölçüler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:364
+msgid "Asansör Radyal Fan Teknik Çizim Ölçüleri (95mm x 192mm)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:368
+msgid "* 180mm ve 240mm olmak üzere 2 farklı uzunluk seçeneği mevcuttur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:384
+msgid "\"Asansör Kare Fanlarının Temel Özellikleri:\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:388
+msgid "Asansörünüz Sadece \"Hava Atmasın\", Gerçekten Nefes Alsın!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:392
+msgid ""
+"Asansör sektöründe en sık yapılan hatalardan biri, havalandırma seçiminde "
+"sadece fiyata odaklanmaktır. Piyasada yaygın olarak kullanılan 'Kare Fanlar' "
+"hakkında bilmeniz gereken gerçekler:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:403
+msgid "Ucuz ama Yetersiz Olabilir!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:405
+msgid ""
+"Kare fanlar (Aksiyel) havayı döndürür ama kabin içine radyal fanlar kadar "
+"güçlü bir taze hava basıncı oluşturamayabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:412
+msgid "Sirkülasyon Sorunu:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:414
+msgid ""
+"Kabin içindeki kirli havayı dışarı atmak yerine, bazen sadece mevcut havayı "
+"içeride karıştırabilir. Yolcu sayısı arttığında yetersiz kalıp havasızlığa "
+"yol açabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:421
+msgid "Kısa Ömür Riski:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:423
+msgid ""
+"Endüstriyel kullanıma uygun olmayan basit soğutma fanları, asansör gibi "
+"sürekli aktif alanlarda daha çabuk arızalanabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:437
+msgid "Teknik Ölçüler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:441
+msgid "Kare Asansör Fanı Teknik Ölçüleri (120mm x 120mm)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fan.html:449
+msgid "LiftKeys Kare Fan Hava Üfleme Testi"
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\fotosel.html:7
 msgid "Asansör Fotoseli | Liftkeys Asansör Sistemleri & Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:74
+#: .\crm\templates\preview\previewblog\fotosel.html:111
+msgid "Liftkeys Asansör Fotoseli"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:76
+msgid ""
+"Liftkeys asansör kapı sensörleri ve boy fotoselleri. EN81-20 & EN81-70 "
+"standartlarına uygun, yüksek algılama hassasiyeti ve hızlı tepkime süresi. "
+"Doğrudan üreticiden yüksek kalite."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:86
+msgid "Asansör Yedek Parça"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:97
+msgid "Video Kapak"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:112
+msgid "Işığın Hassasiyeti, Güvenlik Gücü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:127
+msgid ""
+"Güvenlik sadece bir fonksiyon değil, <br> LiftKeys’te bir <span class=\"text-"
+"gradient-orange\">standarttır.</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:135
+msgid "LiftKeys kapı sensörleri; yüksek algılama hassasiyeti..."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:139
+msgid "Gelişmiş ışın perdesi teknolojisi sayesinde..."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:143
+msgid "<strong>EN81-20 & EN81-70</strong> Standartlarına Uygun..."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:150
+msgid "Fotosel Kontrol Ünitesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:151
+msgid "Boy Fotoseli"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:166
+msgid "Eloksalli Yapı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:169
+msgid "Eloksalli Kaplama Yapısı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:170
+msgid "Deliklerdeki plastiklerin şaseyi önleme yeteneği..."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:178
+msgid "Kablo Yapısı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:181
+msgid "Yumuşak & Esnek"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:182
+msgid "Uzun ömürlü kullanım için tasarlanmış..."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:190
+msgid "Soket Girişleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:193
+msgid "Bağlantı Şeması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:195
+msgid "RX Giriş Soketi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:196
+msgid "TX Giriş Soketi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:197
+msgid "Enerji (Power)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:198
+msgid "Engel Var"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:214
+msgid "Kısa Mesafe"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:220
+msgid "Uzun Mesafe"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:230
+msgid "Kısa ve Uzun Mesafede"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:231
+msgid "Çalışma Hassasiyeti"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:246
+#: .\crm\templates\preview\previewblog\fotosel.html:250
+msgid "Güneşte Çalışır"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:258
+#: .\crm\templates\preview\previewblog\fotosel.html:262
+msgid "Tozda Çalışır"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:270
+msgid "Kolay Montaj"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:274
+msgid "Kolay Montaj –"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:274
+msgid "İnce Tasarım"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:282
+#: .\crm\templates\preview\previewblog\fotosel.html:286
+msgid "Hızlı Tepkime"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:288
+msgid "Kızılötesi diyot sayısı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:288
+msgid "72 adet"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:302
+msgid ""
+"Bizim için bu yalnızca bir fotosel değil; <br class=\"d-none d-md-block\"> "
+"insanların güvenle yolculuk etmesini sağlayan <br> <span class=\"highlight-"
+"wall\">görünmez bir güvenlik duvarıdır.</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:318
+msgid "Kutu Boyutları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:328
+msgid "Çap (Genişlik)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:335
+msgid "Toplam Uzunluk"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:342
+msgid "Paket Ağırlığı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:357
+msgid "Teknik Çizim Önizleme"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:363
+msgid "Tam Boyut Görüntüle"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:369
+msgid "Detaylı teknik çizim için görsele tıklayın."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:376
+msgid "TEKNİK ÖZELLİKLER"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:379
+msgid "Diyot Sayısı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:383
+msgid "Çalışma Mesafesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:387
+msgid "Besleme Gerilimi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:391
+msgid "Işın Sayısı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:395
+msgid "Kablo Uzunluğu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:402
+msgid "MONTAJ TALİMATLARI"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:405
+msgid ""
+"LKS Horus fotosel sisteminin kabin girişinde montajı için asansör projesinin "
+"durumuna göre birkaç konum seçilebilir:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:407
+msgid ""
+"Merkezi açılır kapılarda hareketli panellere bağlanılarak kullanılabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:408
+msgid "Yardımcı parçalar ile kabinin dışından dışına kullanılabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:409
+msgid ""
+"Bir sensör hareketli panele, diğer sensör kabin sabit bazasına bağlanılarak "
+"kullanılabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:412
+msgid ""
+"Sensörlerden çıkan TX ve RX kablolarının soketleri power ünitesi üzerindeki "
+"uygun girişlere bağlanmalıdır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:413
+msgid ""
+"Sensör kabloları, paket içerisinden çıkan kablo bağları ile uygun "
+"konumlardan sabitlenmelidir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:414
+msgid ""
+"Sensörler sabitlenirken yalnızca paket içerisinden çıkan bağlantı vidaları "
+"kullanılmalıdır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:416
+msgid "Power ünitesi göstergeleri:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:417
+msgid "Yeşil Işık: Üniteye enerji verildiğini gösterir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:418
+msgid "Kırmızı Işık: Işın bariyerinde engel olduğunu gösterir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:424
+msgid "PAKET İÇERİĞİ"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:426
+msgid "2 Adet Fotosel Sensörü (TX + RX)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:427
+msgid "1 Adet Power Ünitesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:428
+msgid "2 Adet Uzatma Kablosu (2.5 m x 2)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:429
+msgid "10 Adet Bağlantı Vidası"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:430
+msgid "10 Adet Bağlantı Klipsi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:431
+msgid "1 Adet Montaj Kılavuzu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\fotosel.html:447
+msgid "Tam Boy Teknik Çizim"
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\kabincam.html:7
@@ -1319,6 +2322,249 @@ msgid ""
 "bir ayna değil, projenizin dijital imzası olan Mirror TV'yi keşfedin.\n"
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\kabincam.html:149
+msgid "LIFTKEYS – Dekoratif Cam"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:160
+msgid ""
+"LIFTKEYS Dekoratif Cam - 500 farklı desen seçeneği ile güvenli asansör kabin "
+"tasarımları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:176
+msgid "“Standartların ötesinde"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:176
+msgid "desen:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:177
+msgid "İster hazır koleksiyonumuzdan seçin,"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:178
+msgid "ister hayalinizdekini birlikte tasarlayalım.”"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:189
+msgid ""
+"Asansör güvenliği ve estetiği söz konusu olduğunda, bu detaylar Liftkeys'in "
+"kalite standartlarını bir üst seviyeye taşıyor. Özellikle Pendulum (Sarkaç) "
+"Testi'nden tam not alması, ürünün darbelere karşı dayanıklılığını ve "
+"uluslararası güvenlik normlarına uygunluğunu tescillemiş oluyor."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:192
+msgid ""
+"Bu teknik üstünlükleri (temperli cam, özel beyaz boya, koruyucu film ve test "
+"başarısı) müşteriye güven veren profesyonel bir dille şu şekilde "
+"özetleyebiliriz:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:212
+msgid "Kategori Seç"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:216
+#: .\crm\templates\preview\previewblog\kabincam.html:220
+#: .\crm\templates\preview\previewblog\kabincam.html:291
+msgid "Deniz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:218
+msgid "LIFTKEYS Asansör Kabin Camı - Deniz ve Okyanus Temalı Desenler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:223
+#: .\crm\templates\preview\previewblog\kabincam.html:227
+#: .\crm\templates\preview\previewblog\kabincam.html:307
+msgid "Doğa"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:225
+msgid "LIFTKEYS Dekoratif Cam - Doğa, Yaprak ve Orman Desenli Kabinler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:230
+#: .\crm\templates\preview\previewblog\kabincam.html:234
+#: .\crm\templates\preview\previewblog\kabincam.html:322
+msgid "Pattren"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:232
+msgid "LIFTKEYS Geometrik Desenli Asansör Camları - Modern Pattern Tasarımlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:237
+#: .\crm\templates\preview\previewblog\kabincam.html:241
+#: .\crm\templates\preview\previewblog\kabincam.html:330
+msgid "Illustrasyon"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:239
+msgid "LIFTKEYS İllüstrasyon Tasarımlı Dekoratif Cam Kabin Kaplamaları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:244
+#: .\crm\templates\preview\previewblog\kabincam.html:248
+#: .\crm\templates\preview\previewblog\kabincam.html:338
+msgid "Tarihi Yerler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:246
+msgid "LIFTKEYS Şehir Simgeleri ve Tarihi Mekan Temalı Kabin Camları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:251
+#: .\crm\templates\preview\previewblog\kabincam.html:255
+#: .\crm\templates\preview\previewblog\kabincam.html:346
+msgid "Soyut"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:253
+msgid "LIFTKEYS Soyut Sanat ve Modern Çizgili Asansör Camı Tasarımları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:258
+#: .\crm\templates\preview\previewblog\kabincam.html:262
+#: .\crm\templates\preview\previewblog\kabincam.html:354
+msgid "Şehir"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:260
+msgid "LIFTKEYS Panoramik Şehir Manzaralı Dekoratif Asansör Camları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:265
+#: .\crm\templates\preview\previewblog\kabincam.html:269
+#: .\crm\templates\preview\previewblog\kabincam.html:362
+msgid "Karışık"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:267
+msgid "LIFTKEYS Karışık Koleksiyon - Özel Tasarım Dekoratif Cam Seçenekleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:272
+#: .\crm\templates\preview\previewblog\kabincam.html:276
+#: .\crm\templates\preview\previewblog\kabincam.html:370
+msgid "Ral Renkler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:274
+msgid "LIFTKEYS Tek Renk RAL Kodlu Temperli ve Lamine Asansör Camları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:295
+#: .\crm\templates\preview\previewblog\kabincam.html:311
+#: .\crm\templates\preview\previewblog\kabincam.html:322
+#: .\crm\templates\preview\previewblog\kabincam.html:330
+#: .\crm\templates\preview\previewblog\kabincam.html:338
+#: .\crm\templates\preview\previewblog\kabincam.html:346
+#: .\crm\templates\preview\previewblog\kabincam.html:354
+#: .\crm\templates\preview\previewblog\kabincam.html:362
+#: .\crm\templates\preview\previewblog\kabincam.html:370
+msgid "İncele"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:380
+msgid "Kategori"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:394
+msgid "Geri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:419
+msgid "Ayna"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:421
+msgid ""
+"Aynaların asansör kabinindeki bu psikolojik ve işlevsel rolü gerçekten çok "
+"stratejik bir detay. Özellikle kapı açıldığında aynayı görmek, kabinin orada "
+"olduğuna dair görsel bir teyit vererek güvenlik algısını pekiştirir (boşluğa "
+"adım atma korkusunu engeller)."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:424
+msgid ""
+"Ayrıca dar alanlarda ayna kullanımı, klostrofobiyi (kapalı alan korkusu) "
+"azaltan en güçlü tasarım hilesidir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:428
+msgid ""
+"Bu derinlikli bakış açısını, sizin önceki teknik detaylarınızla "
+"birleştirerek duygusal ve mantıksal bir tanıtım metni haline getirebiliriz:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:435
+msgid "Asansör Kabininde Ayna Kullanımı - Derinlik ve Güven Algısı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:445
+msgid "Liftkeys Reflektif Ayna ve Mirror TV Teknolojisi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:450
+msgid "Reflektif Ayna"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:451
+msgid "Reflektif Ayna (Mirror TV) Tanıtım Metni"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:453
+msgid "\"Sadece Bir Ayna Değil, Projenizin Dijital İmzası\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:456
+msgid ""
+"İş merkezlerinden lüks konutlara, hastanelerden prestijli plazalara kadar; "
+"Liftkeys Reflektif Aynalar ile teknolojiyi estetikle buluşturuyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:462
+msgid "Çift Yönlü Fonksiyon:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:462
+msgid ""
+"Kapalıyken derinlik katan kusursuz bir ayna, açıkken kristal netliğinde bir "
+"bilgi ekranı."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:466
+msgid "Renk Seçenekleri:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:466
+msgid "Mimari dokuya uyum sağlayan Füme ve Bronz yansıma alternatifleri."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:470
+msgid "İletişim Gücü:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:470
+msgid ""
+"Duyurular, reklamlar, hastane bilgilendirmeleri veya anlık haberler; "
+"yolculuk süresini verimli bir iletişim kanalına dönüştürün."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:474
+msgid "Lüksün Göstergesi:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kabincam.html:474
+msgid ""
+"Modern mimarinin vazgeçilmezi olan Mirror TV teknolojisiyle asansörünüzde "
+"premium bir atmosfer yaratın."
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\keys.html:7
 msgid "LiftKeys | Kurumsal Logolu ve Döküm Asansör Üçgen Anahtarı"
 msgstr ""
@@ -1359,6 +2605,280 @@ msgid ""
 "\n"
 "Asansör bakım firmalarına ve üreticilerine özel, yüksek kaliteli damla "
 "etiketli ve döküm asansör dış kapı anahtarları.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:153
+msgid "LIFTKEYS – Asansör Ağırlık Ray Paten Bloğu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:170
+#: .\crm\templates\preview\previewblog\kupeste.html:180
+msgid "Paslanmaz çelik modern asansör küpeşte ve tutamak modeli"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:171
+#: .\crm\templates\preview\previewblog\kupeste.html:181
+msgid "Paslanmaz Çelik Küpeşte"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:186
+msgid "“Nefes"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:187
+msgid "Alan"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:188
+msgid "Kabinler”"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:199
+msgid "Yılda"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:199
+msgid "kez"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:200
+msgid "dünyayı güvenle açıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:225
+msgid ""
+"LiftKeys Asansör Anahtarı - Damla etiketli, logolu ve estetik kurumsal "
+"tasarımlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:232
+msgid "Estetik ve Dikkat Çekici Tasarım"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:235
+msgid ""
+"Damla etiket teknolojisi, logonuzu veya marka isminizi sadece korumakla "
+"kalmaz; ona cam gibi parlak, bombeli ve kristal bir derinlik katar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:240
+msgid "Cam Parlaklığı ve 3D Derinlik saglar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:244
+msgid ""
+"Bina yönetimine teslim edilen bu anahtarlar, sıradan bir metal parçası "
+"değil, bir 'mücevher' titizliğinde sunulan kurumsal bir hediyeye dönüşür."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:248
+msgid ""
+"Az sayıda üretim imkanıyla, en küçük asansör firmasına bile kendi markasıyla "
+"profesyonel görünme şansı tanıyoruz. İstenilen her renkte ve tasarımda "
+"üretim yaparak markanızın kurumsal renklerini birebir anahtara yansıtıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:254
+msgid "Stok tutma zorunluluğunu ortadan kaldıran, projeye özel esnek çözümler."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:258
+msgid "Kurumsal kimliğinize uygun sınırsız renk seçeneği."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:274
+msgid "\"Mühürlü Gelecek\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:276
+msgid "Büyük Üreticilerin Vazgeçilmezi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:282
+msgid ""
+"Logonuz anahtarın gövdesine kalıptan doğrudan işlenir. Boya değildir, etiket "
+"değildir; metalin bir parçasıdır. Silinmez, sökülemez, eskimez."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:289
+msgid ""
+"Yüksek tork direnci ile en sert kapı mekanizmalarında bile kusursuz "
+"performans."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:296
+msgid ""
+"Minimum 5.000 adetlik üretim bandımızla, büyük kapı üreticilerinin dünya "
+"çapındaki tüm projelerinde kalıcı imzası oluyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:302
+msgid "Kapı var oldukça, markanız orada kalacak."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:313
+msgid ""
+"LiftKeys Mühürlü Gelecek - Büyük üreticiler için logolu, kalıptan işlemeli "
+"döküm asansör anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:327
+msgid "Teknik Bilgiler ( Damla )"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:337
+msgid "LiftKeys Asansör Anahtarı Genel Ölçüleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:345
+msgid "LiftKeys Asansör Anahtarı Üçgen Yuva Çapı 13mm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:353
+msgid "LiftKeys Asansör Anahtarı Damla Etiket Tasarım Şablonu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:361
+msgid "LiftKeys Kurumsal Logolu Damla Etiketli Asansör Anahtarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:375
+msgid "Teknik Bilgiler ( Döküm )"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:385
+msgid "LiftKeys Döküm Asansör Anahtarı Genel Ölçüleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:393
+msgid "LiftKeys Döküm Asansör Anahtarı Üçgen Yuva Çapı 13mm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:401
+msgid "LiftKeys Döküm Anahtar Tasarım Şablonu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:409
+msgid "LiftKeys Döküm Anahtar Doğru Tasarım Kullanımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:413
+msgid ""
+"Döküm Anahtarda tasarım damlaya göre daha kısıtlıdır. mümkün mertebe az obje "
+"ve yazı daha belirgin olmasını sağlayacaktır"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:431
+msgid "Üçgen Anahtarın Temel Özellikleri ve Teslimatı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:435
+msgid "Standart Gereklilik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:435
+msgid ""
+"EN 81-20 ve EN 81-50 asansör standartlarına göre, her asansörün dış "
+"kapısında acil durumlarda açılabilmesi için bir kilit mekanizması bulunur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:438
+msgid "Adet ve Teslimat:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:438
+msgid ""
+"Mevzuat gereği, asansör teslimatında genellikle 2 adet anahtar bina "
+"sorumlusuna (yöneticiye) tutanakla teslim edilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:441
+msgid "Eğitim Zorunluluğu:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:441
+msgid ""
+"Anahtarı teslim eden asansör bakım firması, bu anahtarın hangi durumlarda ve "
+"nasıl kullanılacağına dair bina yetkilisine uygulamalı kullanma eğitimi "
+"vermek ve bunu bir eğitim formu ile kayıt altına almak zorundadır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:451
+msgid "Kullanım Alanları ve Riskler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:454
+msgid "Bu anahtar sadece şu iki ana grup tarafından kullanılmalıdır:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:455
+msgid "Asansör Bakım Personeli:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:455
+msgid "Rutin kontroller ve onarımlar için."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:456
+msgid "Eğitim Almış Bina Görevlisi / İtfaiye:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:456
+msgid "Asansörde mahsur kalma durumlarında kurtarma operasyonu yapmak için."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:465
+msgid "Dikkat Edilmesi Gereken Kriteler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:469
+msgid "Düşme Tehlikesi:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:469
+msgid ""
+"Anahtar ile dış kapı açıldığında, kabin o katta değilse doğrudan asansör "
+"kuyusuna (boşluğa) düşme riski vardır. Bu nedenle kapı açılırken mutlaka "
+"kabinin yeri kontrol edilmelidir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:472
+msgid "Yetkisiz Kullanım:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:472
+msgid ""
+"Anahtarın herkesin ulaşabileceği bir yerde değil, sadece yetkili personelin "
+"bildiği, kilitli ve güvenli bir dolapta tutulması gerekir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:475
+msgid "Kilit Kontrolü:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:475
+msgid ""
+"Kapı anahtar ile açılıp kapatıldıktan sonra, kapının mekanik olarak "
+"kilitlendiğinden mutlaka emin olunmalıdır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:485
+msgid "Yasal Sorumluluk"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:489
+msgid ""
+"Bina yönetimi, bu anahtarın yetkisiz kişilerin eline geçmesinden veya "
+"eğitimsiz kişilerce kullanılması sonucu doğabilecek kazalardan hukuken "
+"sorumludur. Bu nedenle, asansör periyodik kontrollerinde (mavi/yeşil etiket "
+"süreci) denetçiler genellikle bu anahtarların varlığını ve eğitim durumunu "
+"sorgularlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\keys.html:498
+msgid ""
+"Asansörünüzün acil durum kurtarma talimatının makine dairesinde veya pano "
+"yanında asılı olup olmadığını kontrol etmemimizi ister misiniz?"
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\kupeste.html:7
@@ -1409,6 +2929,348 @@ msgid ""
 "İstediğiniz renk ve ölçü kombinasyonunu özgürce oluşturun.\n"
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\kupeste.html:167
+msgid "LIFTKEYS – Küpeşte Seçenekleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:193
+msgid ""
+"“İstediğin Zaman.<br>\n"
+"                    İstediğin Şekilde.<br>\n"
+"                    <span class=\"slogan-bold\">Üretimde Özgürlük”</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:212
+msgid "Dirsek Model Küpeşte"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:213
+msgid "Dirsek Model"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:220
+msgid "Dik Kurtağızı Model"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:221
+msgid "Dik Kurtağızı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:228
+msgid "Alt Kurtağızı Model"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:229
+msgid "Alt Kurtağızı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:240
+msgid "Kataloğu İndir"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:249
+msgid "Asansör Küpeşteleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:251
+msgid ""
+"İnovatif küpeşte çözümlerimiz sayesinde, fabrikanızda talebe göre \n"
+"                    <strong style=\"color:#F08200;\">ölçü, renk ve zamanlama "
+"özgürlüğüyle</strong> \n"
+"                    üretim yapabilirsiniz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:266
+msgid "Borular"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:275
+msgid "Krom, füme, gold, bronz ve siyah asansör boru renkleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:276
+msgid "Boru Renk Seçenekleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:285
+msgid "Paslanmaz boru uzunluk seçenekleri ve ölçü tablosu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:286
+msgid "Boru Uzunlukları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:295
+msgid "30mm çap ve 1mm et kalınlığı boru teknik detay çizimi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:296
+msgid "Teknik Kesit"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:306
+msgid "201 kalite paslanmaz çelikten üretilmektedir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:308
+msgid ""
+"Crom, gold, füme, bronz, ESB ve siyah renk seçenekleri mevcuttur.<br>\n"
+"                    Boru çapı: 30 mm / Et kalınlığı: 1 mm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:327
+msgid "Teknik Çizim ve Özellikler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:337
+msgid "Teknik Çizim"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:347
+#: .\crm\templates\preview\previewblog\kupeste.html:348
+msgid "Krom"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:352
+#: .\crm\templates\preview\previewblog\kupeste.html:353
+msgid "Füme"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:357
+#: .\crm\templates\preview\previewblog\kupeste.html:358
+msgid "Gold"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:365
+#: .\crm\templates\preview\previewblog\kupeste.html:366
+msgid "Bronz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:370
+msgid "Siyah"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:371
+msgid "ESB Siyah"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:381
+msgid ""
+"Dirseklerin duvara temas eden alanı 42 mm, boru çapı ise 30 mm’dir.<br>\n"
+"                    Bu tasarım sayesinde oluşan yük daha geniş bir alana "
+"yayılır; baskı altında dahi eğilme veya\n"
+"                    bükülme problemi yaşanmadan güvenli ve stabil çalışma "
+"sağlanır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:399
+msgid "Krom renk uyumlu asansör küpeşte ve boru takımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:402
+msgid "Füme gri paslanmaz bütünleşik küpeşte seti"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:405
+msgid "Gold altın sarısı uyumlu dirsek ve boru takımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:408
+msgid "Bronz renkli dekoratif asansör tutamağı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:411
+msgid "ESB Siyah renkli modern küpeşte takımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:420
+msgid ""
+"Dirsek ve boru<br>\n"
+"                        aynı renkte üretilebilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:437
+msgid ""
+"Dilediğin<br>\n"
+"                        <strong>renk ve parça kombinasyonunu</strong>\n"
+"                        özgürce oluşturabilirsin."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:448
+msgid "Bronz dirsek ve siyah boru asansör küpeşte kombinasyonu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:451
+msgid "Parlak gümüş dirsekli siyah mat boru tasarımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:454
+msgid "Gold altın dirsek ve siyah gövde küpeşte"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:457
+msgid "Krom paslanmaz başlık ve siyah boru"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:460
+msgid "Sarı metal dirsekli özel tasarım siyah küpeşte"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:476
+msgid "Asansör kabini küpeşte montaj genişliği ölçü alımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:484
+msgid "Doğru Ölçü Nasıl Alınır?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:487
+msgid ""
+"Küpeşte montajı yapılacak alanın ölçülerini belirleyin.<br>\n"
+"                        Küpeşte boyunu netleştirdikten sonra, sağ ve sol "
+"dirsekler için \n"
+"                        <strong>toplam 140 mm ölçüyü</strong> dikkate alın."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:493
+msgid ""
+"Bu ölçüyü toplam küpeşte boyundan düşerek, kullanılacak boru uzunluğunu "
+"doğru şekilde hesaplayabilirsiniz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:497
+msgid "Küpeşte dirsek kesim payı hesaplama şeması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:502
+msgid "Dirsek Payı: 70 mm + 70 mm = 140 mm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:503
+msgid "Boru Kesim Boyu:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:503
+msgid "W (Genişlik) - 140 mm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:519
+msgid "Asansör küpeşte borusu hassas kesim işlemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:526
+msgid ""
+"Mühendisler tarafından yapılan hesaplamalara göre borunuzu doğru ölçüde "
+"kesebilirsiniz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:536
+msgid ""
+"Küpeşte dirseklerine <span class=\"highlight-text\">O-ringler</span> takılır."
+"<br>\n"
+"                        Her bir dirseğe iki adet O-ring yerleştirilmesi, "
+"borunun ileri–geri hareket etmesini engeller."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:540
+msgid ""
+"Ayrıca boru, dirseğe döndürülerek monte edildiğinde, O-ringler sayesinde "
+"borunun dönmesi de önlenmiş olur.<br>\n"
+"                        Bu sistem, küpeştenin sabit, güvenli ve stabil "
+"şekilde çalışmasını sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:547
+msgid "Küpeşte dirseklerine O-ring takılması ve montaj detayları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:556
+msgid "Hazır montajlanmış paslanmaz küpeşte seti"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:563
+msgid ""
+"Kendi fabrikanızda, istediğiniz anda üreteceğiniz küpeşteler sayesinde \n"
+"                        <span class=\"highlight-text\">ölçü uyumsuzluğu, "
+"stok yetersizliği ve çizik</span> \n"
+"                        gibi malzeme sorunlarını tamamen ortadan "
+"kaldırabilirsiniz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:579
+#: .\crm\templates\preview\previewblog\patenkabin.html:436
+msgid "Kutu İçeriği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:581
+msgid "18 sağ dirsek"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:582
+msgid "18 sol dirsek"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:583
+msgid "72 adet oring"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:584
+msgid "36 adet setskur vidası"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:585
+msgid "36 adet sabitleme cıvatası"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:586
+msgid "36 adet sabitleme plakası"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:592
+msgid "LiftKeys asansör küpeşte dirsekleri kutu ambalajı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:599
+msgid "Kutu İçi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:600
+msgid "36 Adet"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:603
+msgid "Kutu Ölçü ve Ağırlık Bilgisi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:607
+msgid "• En"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:609
+#: .\crm\templates\preview\previewblog\kupeste.html:621
+msgid "20 cm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:613
+msgid "• Boy"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:615
+msgid "29 cm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:619
+msgid "• Yükseklik"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:625
+msgid "• Ağırlık"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\kupeste.html:627
+msgid "9 Kg."
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\paten.html:7
 msgid "LiftKeys Asansör Ağırlık Paten Sistemleri | TPU Sessiz Ray Pateni"
 msgstr ""
@@ -1454,6 +3316,266 @@ msgid ""
 "Teknik çizim ve detaylar için tıklayın.\n"
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\paten.html:162
+msgid "LIFTKEYS – Asansör Ağırlık Paten Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:179
+msgid "LiftKeys Asansör Ağırlık Paten Sistemi ve TPU Plastik Teknolojisi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:197
+msgid ""
+"“TPU paten plastiği ile<br>\n"
+"                    <strong style=\"color: #495057; font-weight: 700;\">üst "
+"düzey konfor, sessiz ve dengeli çalışma.”</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:203
+msgid ""
+"<strong class=\"text-dark\">Asansör patenlerimiz,</strong> konfor, sessiz "
+"çalışma ve maksimum titreşim sönümleme hedeflenerek özel olarak "
+"tasarlanmıştır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:228
+msgid "Asansör Ağırlık Pateni Yandan Görünüm ve Yağdanlık Yuvası"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:231
+msgid "Pratik Kurulum"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:233
+msgid ""
+"Yağdanlık montajına hazır yapısı sayesinde ek işlem gerektirmeden hızlı ve "
+"pratik kurulum sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:243
+msgid "Çift Bayraklı Asansör Paten Tasarımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:246
+msgid "Çift Bayraklı Tasarım"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:248
+msgid ""
+"Patenin mekanik dayanımını artırarak bükülme ve kırılma riskini ortadan "
+"kaldırır, gövdeyi güçlendirir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:258
+msgid "Asansör Karşı Ağırlık Süspansiyonunda Paten Montajı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:261
+msgid "Yüksek Mukavemet"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:263
+msgid ""
+"Karşı ağırlık sisteminin her koşulda stabil ve güvenli çalışmasını sağlayan "
+"sağlam yapı."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:277
+msgid "Asansör Ağırlık Ray Paten Bloğu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:286
+msgid "Ray Uyumluluğu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:287
+msgid "5 mm ve 9 mm’lik kılavuz raylarda kullanım imkanı sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:296
+msgid "Sessiz Çalışma"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:297
+msgid ""
+"Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi "
+"sayesinde ses yapmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:306
+msgid "Yüksek Dayanım"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:307
+msgid ""
+"Gövde arkasında bulunan çift bayrak (destek sacı) sayesinde ekstra güç "
+"sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:316
+msgid "Standart Ölçüler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:317
+msgid "Delik ölçüleri (eksenleri) diğer standart patenlere tam uyumludur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:326
+msgid "Konfor Odaklı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:327
+msgid "Kullanım kolaylığı, uzun ömür ve yüksek seyir konforu sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:347
+msgid "Teknik Çizim ve Ölçüler (mm)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:353
+msgid "Ön Görünüş"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:356
+msgid "Asansör Pateni Ön Teknik Çizim"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:363
+msgid "Yan Görünüş"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:366
+msgid "Asansör Pateni Yan Teknik Çizim"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:373
+msgid "Detay Ölçüler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:376
+msgid "Asansör Pateni Detay Teknik Çizim"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:389
+msgid "Paten Yan Profil"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:394
+msgid "TPU Paten Plastiği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:404
+msgid "LiftKeys Asansör Ağırlık Paten Bloğu Kutusu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:407
+msgid "Paketleme Detayları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:409
+msgid "Kutu Ölçü:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:409
+msgid "21x21x14 cm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:410
+msgid "Ağırlık:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:410
+msgid "3.8 Kg."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:411
+msgid "Kutu İçi Adet:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:431
+msgid "Asansör Paten Plastiği Yan Kesit Görünümü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:440
+msgid "TPU Hammadde"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:442
+msgid ""
+"Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi "
+"sayesinde \n"
+"                <strong>ses yapmaz, titreşimi emer.</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:452
+msgid "İhtiyacınıza Uygun Seçenekler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:459
+msgid "Model: 50"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:463
+msgid "50mm Asansör Ray Paten Plastiği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:467
+msgid "P1 5mm Rozeti"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:469
+msgid "P1"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:470
+msgid "5mm Ray İçin"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:478
+msgid "Model: 70"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:482
+msgid "70mm Asansör Ray Paten Plastiği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:486
+msgid "P2 9mm Rozeti"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:488
+msgid "P2"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:489
+msgid "9mm Ray İçin"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:505
+msgid "Ağırlık Patenleri Hakkında Sıkça Sorulan Sorular"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:512
+msgid "TPU paten plastiği neden önemlidir?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:517
+msgid ""
+"TPU (Termoplastik Poliüretan), standart plastiklere göre çok daha yüksek "
+"aşınma direncine sahiptir ve asansör rayındaki titreşimleri emerek sessiz "
+"bir seyir sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:525
+msgid "Hangi ray tipleriyle uyumludur?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\paten.html:530
+msgid ""
+"LiftKeys patenleri, 5mm (50'lik model) ve 9mm (70'lik model) kılavuz raylar "
+"için tam uyumlu olarak üretilmektedir."
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\patenkabin.html:7
 msgid ""
 "LiftKeys Asansör Kabin Paten Sistemleri | Ayarlanabilir TPU Sessiz Paten"
@@ -1495,6 +3617,325 @@ msgid ""
 "\n"
 "Daha az titreşim, daha az ses! Tümleşik yağdanlıklı ve TPU kauçuk yapılı "
 "LiftKeys kabin patenleri ile asansörünüzde konforu zirveye taşıyın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:162
+msgid "LIFTKEYS – Kabin Paten Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:178
+msgid ""
+"LIFTKEYS Kabin Paten Sistemleri - Sessiz çalışma ve tam hakimiyet sunan 3 "
+"taraflı kauçuk paten"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:179
+msgid "LIFTKEYS Kabin Paten Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:191
+msgid ""
+"“Sessiz çalışma +<br>\n"
+"                        tam hakimiyet<br>\n"
+"                        3 taraflı kauçuk farkını<br>\n"
+"                        net anlatır”"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:205
+msgid ""
+"Güvenlik sadece bir fonksiyon değil,<br>\n"
+"                    <strong class=\"text-dark fw-bold\">LiftKeys’te bir "
+"standarttır.</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:229
+msgid ""
+"<strong class=\"text-dark\">Asansör patenlerimiz</strong>, konfor, sessiz "
+"çalışma ve maksimum titreşim sönümleme hedeflenerek özel olarak "
+"tasarlanmıştır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:233
+msgid ""
+"Ürünlerimiz, üç taraflı kauçuk yapısı sayesinde ray ile temas sırasında "
+"oluşan titreşimi etkin şekilde absorbe eder. Bu özellik, kabin hareketi "
+"sırasında daha stabil, daha sessiz ve daha konforlu bir sürüş sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:239
+msgid ""
+"En önemli farklarımızdan biri, paten plastiklerinde yüksek kaliteli TPU "
+"hammadde kullanılmasıdır. TPU malzeme; aşınmaya karşı dayanıklılığı, esnek "
+"yapısı ve sessiz çalışma performansı ile uzun ömürlü ve konforlu bir "
+"kullanım sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:249
+msgid " Ayrıca sistem, yağdanlık ile birlikte tam set olarak sunulmaktadır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:253
+msgid "Tek bir kutu içerisinde:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:254
+msgid "Paten blokları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:255
+msgid "Paten plastikleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:256
+msgid "Yağdanlık seti"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:260
+msgid ""
+"birlikte verilerek montaj süreci hızlandırılır, ek parça ihtiyacı ortadan "
+"kaldırılır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:265
+msgid "Sonuç:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:267
+msgid ""
+"Daha az titreşim, daha az ses, daha fazla konfor ve uzun ömürlü performans."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:284
+msgid ""
+"LiftKeys Asansör Pateni - Bağımsız Çalışan Kauçuk Sistemi Parçalarına "
+"Ayrılmış Görünüm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:294
+msgid ""
+"Bağımsız çalışan kauçuk sistemi sayesinde oluşan vibrasyonlar asansör "
+"kabinine iletilmez ve sistemin sessiz, konforlu çalışması sağlanır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:313
+msgid ""
+"Tümleşik sistem sayesinde montaj kolaylığı sağlayan asansör kabin pateni"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:317
+msgid "tümleşik sitem sayesinde<br>montaj kolaylığı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:326
+msgid ""
+"±2° 3 mm sağa ve sola hareket kabiliyeti ile ray hatalarını telafi eden "
+"sistem"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:330
+msgid ""
+"±2° 3 mm ( max ) sağa ve sola hareket kabiliyeti, ray hatalarını telafi "
+"ederek sessiz ve konforlu bir çalışma performansı sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:339
+msgid ""
+"Ayarlanabilir sertlik ve ileri-geri hareket kabiliyeti ile üst düzey konfor"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:343
+msgid ""
+"Ayarlanabilir sertlik ve ileri–geri hareket kabiliyeti sayesinde ray "
+"hataları etkin şekilde sönümlenir ve üst düzey konfor elde edilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:359
+msgid ""
+"LiftKeys Kabin Pateni - Ayarlanabilir Sertlik Ayarı ve Esneklik Kontrolü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:370
+msgid "Ayarlanabilir Sertlik Ayarı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:374
+msgid ""
+"Asansör hızı ve konfor beklentisine göre patenlerin esneklik seviyesi "
+"ayarlanabilir yapıdadır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:379
+msgid ""
+"Kontra somunlar sıkılarak veya gevşetilerek, istenilen esneklik seviyesi "
+"kolayca ayarlanabilir. Bu özellik, farklı hız ve kullanım koşullarında "
+"optimum konfor ve stabil çalışma sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:401
+msgid "Tümleşik Yağdanlık Sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:405
+msgid ""
+"Tümleşik yağdanlık sistemi sayesinde rayların doğru ve sürekli yağlanması "
+"sağlanırken, ekstra parça montajı ile uğraşmadan zaman kazanılır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:412
+msgid ""
+"Bu yapı, bakım süresini kısaltır ve sistemin daha verimli çalışmasına katkı "
+"sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:422
+msgid ""
+"LIFTKEYS Asansör Paten Tümleşik Yağdanlık Sistemi - Sürekli Ray Yağlama ve "
+"Kolay Bakım"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:445
+msgid "LiftKeys Asansör Pateni - 4 Adet Paten Bloğu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:449
+msgid "4 Adet"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:457
+msgid "LiftKeys Asansör Pateni - 2 Set Yağdanlık"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:461
+msgid "2 set yagdanlık"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:469
+msgid "LiftKeys Asansör Pateni Kutu Ebatları ve Ağırlığı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:473
+msgid "kutu ebetları ve kg bekleniyor"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:489
+msgid "LiftKeys TPU Hammadde Paten Profil Görünümü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:495
+msgid "Özel Karışımlı Poliüretan TPU Hammadde Özellikleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:501
+msgid "LiftKeys 50mm, 70mm, 90mm Paten Ölçüleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:516
+msgid "Yağdanlık"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:521
+msgid "230 ml yağ haznesi miktarı."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:525
+msgid "Rayı 3 yönden saran ve esit yaglanmasını saglayan keçe sistemi."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:529
+msgid "Diger fren tiplerine uygun baglantı adaptör parçaları."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:538
+msgid ""
+"LiftKeys Asansör Pateni Yağdanlık - 230ml hazne ve rayı saran keçe sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:554
+msgid "Montaj Sıralaması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:564
+#: .\crm\templates\preview\previewblog\patenkabin.html:566
+msgid "Paten Gövdesi Paketten Çıkmış Hali"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:574
+#: .\crm\templates\preview\previewblog\patenkabin.html:576
+msgid "Paten Plastikleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:584
+#: .\crm\templates\preview\previewblog\patenkabin.html:586
+msgid "Üst Kapak Sacı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:594
+#: .\crm\templates\preview\previewblog\patenkabin.html:596
+msgid "M5x10 Cıvata"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:604
+#: .\crm\templates\preview\previewblog\patenkabin.html:606
+msgid "Arka Hareket Ayar Cıvata"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:614
+#: .\crm\templates\preview\previewblog\patenkabin.html:616
+msgid "M5x20 Cıvata"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:634
+#: .\crm\templates\preview\previewblog\takozlar.html:716
+msgid "Sıkça Sorulan Sorular"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:636
+msgid "LiftKeys Kabin Paten Sistemleri hakkında en çok merak edilenler."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:647
+msgid "Kabin patenlerinde neden TPU hammadde kullanılmaktadır?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:652
+msgid ""
+"TPU (Termoplastik Poliüretan) malzeme; aşınmaya karşı yüksek dayanıklılığı, "
+"esnek yapısı ve sessiz çalışma performansı ile uzun ömürlü ve titreşimsiz "
+"bir kullanım sunar. Standart plastiklere göre asansör seyrini çok daha "
+"konforlu hale getirir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:660
+msgid "Ayarlanabilir sertlik ayarı ne işe yarar?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:665
+msgid ""
+"Asansör hızı ve konfor beklentisine göre patenlerin esneklik seviyesi "
+"ayarlanabilir. Kontra somunlar sıkılarak veya gevşetilerek istenilen "
+"esneklik elde edilir. Bu özellik, farklı hız ve kullanım koşullarında ray "
+"hatalarını sönümleyerek optimum stabilite sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:673
+msgid "Tümleşik yağdanlık sistemi montajda nasıl bir kolaylık sağlar?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:678
+msgid ""
+"Sistem, yağdanlık ile birlikte tam set olarak sunulmaktadır. Tümleşik yapı "
+"sayesinde ekstra yağdanlık montajı ile uğraşmanıza gerek kalmaz, montaj "
+"süreci hızlanır ve ek parça ihtiyacı ortadan kalkar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:686
+msgid "LiftKeys kabin patenleri hangi ölçülerde mevcuttur?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\patenkabin.html:691
+msgid ""
+"Asansör sisteminize tam uyum sağlamak için 50mm, 70mm ve 90mm paten ölçü "
+"seçeneklerimiz bulunmaktadır."
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\solid.html:7
@@ -1541,11 +3982,443 @@ msgid ""
 "Detaylar için tıklayın.\n"
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\solid.html:172
+msgid "LIFTKEYS – Solid Levha ve Polistren Levha"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:184
+msgid "LiftKeys Solid Polikarbonat Levha - Kırılmaz Asansör Tavan Malzemesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:201
+msgid ""
+"“Kırılmaz Bir Estetik:<br>\n"
+"                    <strong style=\"color: #495057; font-weight: "
+"700;\">Asansörünüzün Şeffaf Zırhı!”</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:207
+msgid ""
+"Camdan <strong class=\"text-dark fs-4\">250 kat</strong>, pleksiden ise "
+"<strong class=\"text-dark fs-4\">30 kat</strong> daha dayanıklıdır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:237
+msgid "Asansör Solid Levha Kırılmazlık Testi ve Güvenlik Camı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:243
+msgid "KIRILMAZ BİR ESTETİK"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:246
+msgid "ASANSÖRÜN ŞEFFAF <strong class=\"text-orange\">ZIRHI!</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:258
+msgid "Kırılmazlık ve Maksimum Güvenlik"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:261
+msgid ""
+"Solid polikarbon, 'kurşun geçirmez cam' yapımında kullanılan ana malzemedir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:268
+msgid "Darbeye Dayanım"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:271
+msgid ""
+"Asansör içi yük taşımalarında veya vandalizm (kasıtlı zarar verme) "
+"durumlarında kesinlikle kırılmaz, çatlamaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:278
+msgid "Yaralanma Riski Sıfır"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:281
+msgid ""
+"Kırılmadığı için kabin içine keskin parçaların dökülme riskini tamamen "
+"ortadan kaldırır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:288
+msgid "Yangına Dayanım (Alev Almazlık)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:291
+msgid ""
+"Malzemenin yangın sırasında alevleri yaymaması ve tutuşmaya karşı dirençli "
+"olmasıdır. 'Zor alevlenici' sınıftaki malzemeler tercih edilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:296
+#: .\crm\templates\preview\previewblog\solid.html:374
+msgid "İlgili Belgeler ve Standartlar:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:301
+#: .\crm\templates\preview\previewblog\solid.html:379
+msgid "EN 13501-1"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:302
+msgid ""
+"Avrupa standartlarında yapı malzemeleri için temel yangın sınıflandırma "
+"belgesidir. (Örn: A2 veya B s1, d0)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:309
+#: .\crm\templates\preview\previewblog\solid.html:386
+msgid "DIN 4102"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:310
+msgid "Alman standartlarına göre yangın dayanım sınıfı."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:333
+msgid "Güvenlik Önceliği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:335
+msgid "Yangın Dayanımı <span class=\"text-secondary\">(B1 Sınıfı)</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:338
+msgid ""
+"Asansör yönetmeliklerinde malzeme güvenliği esastır. Solid polikarbon, güç "
+"tutuşan ve alevi yaymayan yapısıyla hayat kurtarır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:351
+msgid "Alev Almaz & Yaymaz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:353
+msgid ""
+"Yangın anında alevin büyümesine katkıda bulunmaz. Standart plastiklerin "
+"aksine zehirli gaz salınımı minimum düzeydedir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:365
+msgid "Damlama Yapmaz (No Dripping)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:367
+msgid ""
+"En kritik güvenlik özelliğidir. Erime esnasında aşağıya (kuyu dibine) yanan "
+"parçalar damlatmaz, yangının alt katlara sıçramasını engeller."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:380
+msgid "Avrupa Yangın Sınıflandırması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:387
+msgid "Alman B1 (Zor Alevlenici)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:393
+msgid "UL 94"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:394
+msgid "V-0 Üst Düzey Direnç"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:407
+msgid "Standart Plastik ve Solid Polikarbon Yanmazlık Testi Karşılaştırması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:413
+msgid "Standart Plastik"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:417
+msgid "Solid Polikarbon"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:441
+msgid "Nokta LED Görüntüsü (Difüzörsüz)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:444
+msgid "Eski Tip"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:451
+msgid "LiftKeys Solid Difüzörlü Homojen Aydınlatma"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:453
+#: .\crm\templates\preview\previewblog\takozlar.html:675
+msgid "LiftKeys Çözümü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:462
+msgid "Homojen Işık & Göz Konforu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:465
+msgid "Difüzörün en büyük görevi, rahatsız edici LED noktalarını gizlemektir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:472
+msgid "Pürüzsüz Aydınlatma:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:473
+#, python-format
+msgid ""
+"Işığı %%85-90 oranında geçirirken 'nokta nokta' görüntüsünü yok eder. Kabin "
+"içinde yumuşak bir ışık havuzu oluşturur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:479
+msgid "Sararma Yapmaz:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:480
+msgid ""
+"UV korumalı yapısı sayesinde güneş ışığı veya LED ısısıyla sararmaz, ilk "
+"günkü berraklığını korur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:495
+msgid "Hafiflik ve Kolay Montaj"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:498
+msgid ""
+"Camın yarı ağırlığındadır. Asansör kabin ağırlığını (karkas yükünü) artırmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:502
+msgid "Montaj Avantajı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:504
+msgid ""
+"Montajı yapan personel için büyük kolaylık ve güvenlik sağlar. Kırılma riski "
+"olmadan, tek kişiyle bile montaj yapılabilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:513
+msgid "Ağır Cam Montajı vs Hafif Kompozit Panel Montajı Karşılaştırması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:516
+msgid "ASANSÖR KABİNİNDE DEVRİM: YARI AĞIRLIK - TAM VERİMLİLİK!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:538
+msgid "Solid Polikarbon Levha Esneklik ve Bükülme Testi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:545
+msgid "Eğilir, Bükülür, Kırılmaz!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:547
+msgid "Zarar görmeden istenilen şekli alır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:555
+msgid "PRATİK UYGULAMA"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:557
+msgid ""
+"Asansör Kabininde<br>\n"
+"                <span class=\"text-secondary\">Esneklik Devrimi!</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:562
+msgid ""
+"Asansör kabini gibi hassas ve özel ölçüler gerektiren uygulamalarda, "
+"malzemenin kolay işlenebilirliği montaj süresini kısaltır ve maliyetleri "
+"düşürür."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:572
+msgid "Makasla Kesilebilir"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:573
+msgid "Hızlı ve Hassas Ayarlama"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:575
+msgid ""
+"Sert malzemeleri kesmek için gereken özel testerelere veya toz emme "
+"sistemlerine son! Bir terzinin kumaşı kestiği gibi, solid levhayı makasla "
+"keserek anında ölçü revizyonu yapabilirsiniz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:582
+msgid ""
+"\"Beklenmedik ölçü farklılıklarında veya özel nişler oluştururken anında "
+"ayarlama yapma olanağı tanır. Böylece hem zamandan hem işçilikten tasarruf "
+"edersiniz.\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:606
+msgid "Dev Boyutlu Rakı Beyazı (Opal) Solid Polikarbon Levha 2055x3050mm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:611
+msgid "2055 x 3050 mm (1.5mm Kalınlık)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:615
+msgid "Toplam Yüzey Alanı: ~6.25 m² - Tek Parça, Eksiz Kaplama!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:620
+msgid "SOLID POLİKARBON LEVHA"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:621
+msgid "Rakı Beyazı (Opal)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:624
+msgid ""
+"Solid polikarbon levhanın \"Rakı Beyazı\" (Opal) rengi, koruyucu filminin "
+"sökülme anında ortaya çıkan pürüzsüz ve elit bir yüzey sunar. Asansör "
+"tavanındaki LED aydınlatmayı yumuşatarak <strong>homojen bir ışık</strong> "
+"yayarken, tavan arkasındaki tesisatı gizler."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:628
+msgid "Maksimum Verimlilik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:630
+msgid ""
+"Dev boyutları sayesinde tavanı tek parça halinde, ek yeri olmadan "
+"kaplamanıza olanak tanır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:641
+msgid "Homlift'de Kullanılan Özel Sistemli Cam"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:646
+msgid "Göz Kamaştıran Şeffaflık, 3 mm Çözüm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:649
+msgid ""
+"Modern mimaride şeffaflık ve ferahlık, tasarımın anahtar unsurlarından biri "
+"haline gelmiştir. Kullanılan malzemenin güvenliği ve estetiği de büyük önem "
+"taşımaktadır. İşte bu noktada <strong>3 mm şeffaf solid polikarbon levhalar</"
+"strong> devreye giriyor."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:656
+msgid "Görsel Şölen ve Teknik Mükemmeliyet"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:659
+msgid ""
+"<strong>Kristal Berraklık:</strong> Özel olarak seçilmiş 3 mm kalınlığındaki "
+"solid polikarbon levhalar, tıpkı cam gibi pürüzsüz ve yüksek ışık "
+"geçirgenliğine sahiptir. Bu sayede asansör yolcuları, panoramik bir deneyim "
+"yaşayarak dış mekanın tadını kesintisiz bir şekilde çıkarabilirler."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:666
+msgid "Kırılmaz Güvenlik"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:669
+msgid ""
+"Camın aksine, polikarbon darbelere karşı inanılmaz dirençlidir. Potansiyel "
+"çarpma veya darbe anlarında kırılıp parçalanmaz, çatlama ve dağılmaz riski "
+"taşımaz. Bu, özellikle halka açık alanlarda ve yoğun kullanımlı asansörlerde "
+"hayati önem taşır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:687
+msgid "LiftKeys Robotu ve Göz Kamaştıran Şeffaflık"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:691
+msgid ""
+"GÖZ KAMAŞTIRAN<br>\n"
+"                            <span class=\"text-orange\" style=\"font-weight: "
+"800;\">ŞEFFAFLIK</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:713
+msgid "Hemen Teklif İste..."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:728
+msgid "Aklınıza Takılanlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:730
+msgid ""
+"Solid ve Polistren levhalar hakkında en çok merak edilen soruların cevapları."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:743
+msgid "Solid Polikarbon Levha gerçekten kırılmaz mı?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:748
+msgid ""
+"Kesinlikle. Solid polikarbon, camdan <strong>250 kat</strong>, pleksiden "
+"(akrilik) ise <strong>30 kat</strong> daha dayanıklıdır. Çekiç darbelerine, "
+"bükülmelere ve vandalizme karşı üstün direnç gösterir. Asansör kabinlerinde "
+"\"kırılmaz cam\" alternatifi olarak güvenle kullanılır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:757
+msgid "Ürün yangına dayanıklı mı? Asansör yönetmeliğine uygun mu?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:762
+msgid ""
+"Evet, ürünlerimiz <strong>B1 Sınıfı (Zor Alevlenici)</strong> özelliğe "
+"sahiptir. Yangın esnasında alevi yürütmez ve en önemlisi <strong>damlama "
+"yapmaz</strong>. Bu özellikleriyle EN 81-20/50 asansör güvenlik "
+"standartlarına tam uyum sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:771
+msgid "Levhalar sahada nasıl kesilir? Özel ekipman gerekir mi?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:776
+msgid ""
+"Hayır, özel ve ağır ekipmanlara gerek yoktur. Solid levhalarımız esnek "
+"yapısı sayesinde sahada <strong>güçlü bir makasla</strong>, dekupaj "
+"testereyle veya spiralle kolayca kesilebilir. Montaj sırasında oluşabilecek "
+"ölçü hatalarını anında revize edebilirsiniz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:785
+msgid "Temizliği ve bakımı nasıl yapılmalıdır?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\solid.html:790
+msgid ""
+"Temizlik için ılık su, yumuşak bir sünger ve nötr (aşındırıcı olmayan) sıvı "
+"sabun yeterlidir. Yüzeyi çizmemek için kuru bezle silmeyiniz ve tiner/aseton "
+"gibi ağır kimyasallar kullanmayınız."
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:7
 msgid "LiftKeys Asansör Switch Sistemleri | Limit ve Emniyet Anahtarları"
 msgstr ""
 
-#: .\crm\templates\preview\previewblog\switchsistemleri.html:10
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:11
 msgid ""
 "\n"
 "LiftKeys, EN81-20 uyumlu asansör switch çözümleri sunar.\n"
@@ -1554,18 +4427,18 @@ msgid ""
 "modelleriyle asansör güvenliğini ve konforunu en üst düzeye taşıyın.\n"
 msgstr ""
 
-#: .\crm\templates\preview\previewblog\switchsistemleri.html:20
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:21
 msgid ""
 "asansör switch sistemleri, limit şalteri, makaralı switch, resetsiz switch, "
 "son durak switch, kuyu dibi switch, yandan baskılı switch, asansör güvenlik "
 "anahtarı, liftkeys, regülatör switch, en81-20 switch"
 msgstr ""
 
-#: .\crm\templates\preview\previewblog\switchsistemleri.html:26
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:27
 msgid "LiftKeys | Asansör Güvenlik Switchleri ve Limit Şalterleri"
 msgstr ""
 
-#: .\crm\templates\preview\previewblog\switchsistemleri.html:30
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:31
 msgid ""
 "\n"
 "Asansörünüzün görünmez güvenlik muhafızları: LiftKeys Switch Sistemleri.\n"
@@ -1574,16 +4447,448 @@ msgid ""
 "EN 60947-5-1 ve IP65 standartlarında üretim.\n"
 msgstr ""
 
-#: .\crm\templates\preview\previewblog\switchsistemleri.html:41
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:42
 msgid "LiftKeys | Asansör Limit Switch ve Güvenlik Çözümleri"
 msgstr ""
 
-#: .\crm\templates\preview\previewblog\switchsistemleri.html:45
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:46
 msgid ""
 "\n"
 "Asansör kuyu güvenliği için profesyonel switch çözümleri.\n"
 "Son durak (resetsiz), hız regülatörü ve kabin üstü emniyet switchleri.\n"
 "Teknik özellikler ve katalog için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:180
+msgid "LIFTKEYS – Switch Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:198
+msgid ""
+"Asansör güvenliğini sağlayan LiftKeys limit switch ve emniyet anahtarı "
+"sistemleri tanıtım videosu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:213
+msgid ""
+"“Asansörün Görünmez<br>\n"
+"                    <strong style=\"color: #495057; font-weight: "
+"700;\">Güvenlik Muhafızları:</strong><br>\n"
+"                    Switch Sistemleri”"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:224
+msgid ""
+"Güvenlik sadece bir fonksiyon değil,<br>\n"
+"                <strong class=\"text-dark\">LiftKeys’te bir standarttır.</"
+"strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:247
+msgid "LiftKeys Asansör Güvenlik Switch Ailesi - Limit Şalter Modelleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:251
+msgid ""
+"Asansörün Güvenlik Mimarları: <strong style=\"color: #495057;\">Switch "
+"Çeşitleri</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:254
+msgid ""
+"Asansörde her switch aynı görevi yapmaz. Kimisi asansörü durdurur, kimisi "
+"ise bir daha hareket etmesini engeller. İşte aralarındaki hayati farklar:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:268
+msgid "\"Esnek, hızlı ve milyonlarca kez sorunsuz çalışma garantisi.\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:272
+msgid ""
+"1. Makaralı Switch <span style=\"font-weight: 400; font-size: 1.2rem; color: "
+"#777;\">(Standart Sınır Kesici)</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:276
+msgid ""
+"Bu switchler, asansörün normal çalışma düzenindeki <strong>\"gözleridir\"</"
+"strong>. Kabin üzerindeki bir kolun (paten/cam) makaraya çarpmasıyla çalışır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:282
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:352
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:400
+msgid "Görevi:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:283
+msgid ""
+"Asansörün kat hizasını geçtiğini veya limitlere yaklaştığını kontrol "
+"sistemine bildirir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:290
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:408
+msgid "Çalışma Prensibi:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:291
+msgid ""
+"Makara üzerindeki baskı kalktığında (kabin uzaklaştığında), switch içindeki "
+"yay sayesinde kontağını eski haline getirir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:298
+msgid "Kullanım Alanı ve Montaj:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:299
+msgid ""
+"Kat durdurucu veya yavaşlama limitlerinde kullanılır. Döner kafası sayesinde "
+"her açıdan gelen tetikleyiciye uyum sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:311
+msgid ""
+"Makaralı Switch Montajı - Asansör Ray Sistemi Üzerinde Sınır Kesici "
+"Uygulaması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:330
+msgid ""
+"LiftKeys Resetsiz Manuel Resetli Switch - Asansör Son Durak Emniyet Sistemi "
+"ve Kilit Mekanizması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:338
+msgid "\"Sorumluluk alır, hata düzeltilmeden harekete izin vermez!\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:342
+msgid ""
+"2. Resetsiz (Manuel Resetli) Switch <span style=\"font-weight: 400; font-"
+"size: 1.2rem; color: #dc3545;\">- \"Son Durak\"</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:346
+msgid ""
+"Bu switch, asansörün emniyet zincirindeki en sert güvenlik önlemidir. "
+"Genellikle kırmızı renkte olur ve üzerinde mekanik bir kilit mekanizması "
+"bulunur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:353
+msgid ""
+"Asansör tehlikeli bir sınırı (nihai sınırı) aştığında devreyi keser ve "
+"asansörü frenleyerek kilitler."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:360
+msgid "Kritik Fark:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:361
+msgid ""
+"Bu switch bir kez tetiklendiğinde, kabin oradan uzaklaşsa bile sistem "
+"<strong>kendi kendine düzelmez.</strong> Bir teknik personelin makine "
+"dairesine veya kuyuya gidip switch üzerindeki butona basarak elle "
+"resetlemesi gerekir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:368
+msgid "Neden Önemli?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:369
+msgid ""
+"Eğer asansör nihai sınırı geçtiyse, ortada büyük bir arıza var demektir. "
+"Resetsiz switch, arıza giderilmeden asansörün tekrar çalışmasına izin vermez."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:386
+msgid "\"Güvenli duruş, pratik dönüş!\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:390
+msgid ""
+"3. Resetli Switch <span style=\"font-weight: 400; font-size: 1.2rem; color: "
+"#198754;\">(Otomatik Resetli)</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:394
+msgid ""
+"Makaralı switch ile resetsiz switch arasındaki orta yoldur. Güvenlik sağlar "
+"ancak sistemin tamamen kilitlenmesini istemediğiniz noktalarda kullanılır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:401
+msgid "Limit dışı bir hareket algılandığında devreyi anında keser."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:409
+msgid ""
+"Tetikleyici unsur (kabin) switchin üzerinden çekildiğinde, switch kendi iç "
+"mekanizmasıyla otomatik olarak <strong>\"hazır\"</strong> konumuna döner. "
+"Manuel müdahaleye gerek duymaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:416
+msgid "Kullanım Alanı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:417
+msgid "Hız regülatörleri veya geçici güvenlik bölgelerinde tercih edilir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:428
+msgid "Otomatik Resetli Asansör Switchi - Hız Regülatörü Uygulaması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:445
+msgid "Dar Kuyu Asansör Switch Çözümleri - Yandan Baskılı Limit Switch"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:453
+msgid ""
+"Dar Alanların Akıllı Çözümü:<br>\n"
+"                <span style=\"color: #F08200;\">Yandan Baskılı Switchler</"
+"span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:458
+msgid ""
+"Yandan Baskılı Switchler, özellikle asansör kuyusu gibi dar ve montajın zor "
+"olduğu alanlar için geliştirilmiş, mühendislik harikası çözümlerdir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:462
+msgid ""
+"Bu switchler, tetikleyici mekanizmanın switch'in tepesinden değil, yan "
+"yüzeyinden sürtünerek veya çarparak geçmesiyle çalışır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:466
+msgid "GÖREVİ:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:468
+msgid ""
+"Tetikleyici mekanizmaya paralel montaj imkanı sağlar. Yandan gelen baskılara "
+"karşı güçlendirilmiş yapısı, çarpma anındaki sarsıntıyı emer ve stabiliteyi "
+"bozmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:484
+#: .\crm\templates\preview\previewblog\zemin.html:500
+#: .\crm\templates\preview\previewblog\zemin.html:680
+msgid "Teknik Özellikler"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:486
+msgid "Tüm LiftKeys switch serisi için geçerli uluslararası standartlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:496
+msgid "Standardına Uygun"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:497
+msgid "EN 60947-5-1"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:503
+msgid "Koruma Sınıfı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:504
+msgid "IP65"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:510
+msgid "Darbe Dayanımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:511
+msgid "6 kV"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:517
+msgid "Yalıtım Gerilimi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:518
+msgid "500 V"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:524
+msgid "Kontak Yapısı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:525
+msgid "1 NO + 1 NC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:536
+msgid "Özellik"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:537
+msgid "Makaralı Switch"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:538
+msgid "Resetli Switch"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:539
+msgid "Resetsiz Switch (Manuel)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:544
+msgid "Hassasiyet"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:545
+msgid "Orta"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:546
+msgid "Yüksek"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:547
+msgid "En Yüksek (Nihai)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:551
+msgid "Müdahale"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:552
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:553
+msgid "Otomatik düzelir"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:555
+msgid "Elle müdahale şart!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:560
+msgid "Güvenlik Rolü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:561
+msgid "Yönlendirme / Durdurma"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:562
+msgid "Emniyet Devresi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:563
+msgid "Son Savunma Hattı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:570
+msgid "* Tablodaki değerler EN 81-20/50 standartlarına göre belirlenmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:582
+msgid ""
+"\"Asansörün Güvenlik Haritası:<br>\n"
+"                <strong style=\"color: #495057; font-weight: 600;\">Switch "
+"Kullanım Alanları\"</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:587
+msgid ""
+"Asansörde her hareketli ve güvenlik odaklı parça, bir switch ile denetlenir. "
+"İşte sizin sunduğunuz donanımlarda switchlerin hayati görevleri:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:591
+msgid "Kuyu ve Ekipmanları Güvenliği;"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:593
+msgid ""
+"<strong>Kuyu Dibi Merdiveni:</strong> Merdiven yerinden çıkarılmadan veya "
+"doğru konumlanmadan asansörün çalışmasını engeller (Personel güvenliği)."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:598
+msgid "Güvenlik Ekipmanları;"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:600
+msgid ""
+"<strong>Hidrolik Tamponlar:</strong> Kabin veya karşı ağırlık tampona "
+"oturduğunda emniyet devresini keserek sistemi korumaya alır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:603
+msgid ""
+"<strong>Regülatör ve Frenler:</strong> Aşırı hızlanma durumunda mekanik "
+"frenleme başladığı an elektriksel olarak da sistemi durdurur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:608
+msgid "Kabin Üstü ve Altı Emniyeti;"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:610
+msgid ""
+"<strong>Hareketli Kabin Üstü Korkuluk:</strong> Korkuluk kapalıyken veya "
+"yanlış pozisyondayken asansörün normal çalışmasını durdurur, sadece bakım "
+"moduna izin verir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:613
+msgid ""
+"<strong>Dişlisiz (Gearless) Kilitleme Aparatı:</strong> Bakım sırasında "
+"motoru kilitleyen aparatın takılı olup olmadığını denetler."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:618
+msgid "Katlanır Etek Sacları;"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:620
+msgid ""
+"Etek sacı açık veya tam kilitli değilken asansörün güvenli bölge dışına "
+"çıkmasını engeller."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:631
+msgid ""
+"Asansör Switch Sistemleri Kullanım Alanları ve Güvenlik Noktaları Şeması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:644
+msgid "Switch Sistemleri Hakkında Sıkça Sorulan Sorular"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:650
+msgid "Resetsiz (Son Durak) switch neden gereklidir?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:655
+msgid ""
+"Asansörün nihai limitleri aşması durumunda sistemi mekanik olarak kilitler. "
+"Bu, büyük bir arızanın habercisidir ve yetkili personel kontrolü olmadan "
+"asansörün çalışmasını engelleyerek tam güvenlik sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:663
+msgid "Yandan baskılı switchler hangi durumlarda kullanılır?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\switchsistemleri.html:668
+msgid ""
+"Özellikle <strong>dar asansör kuyularında</strong> ve montaj alanının "
+"kısıtlı olduğu durumlarda tercih edilir. Tetikleyici mekanizmanın yandan "
+"sürtünmesiyle çalışarak yerden tasarruf sağlar."
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\takozlar.html:7
@@ -1635,6 +4940,482 @@ msgid ""
 "Teknik detaylar için tıklayın.\n"
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\takozlar.html:151
+msgid "LIFTKEYS – Vibrasyon Takozları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:161
+msgid "LIFTKEYS Asansör Vibrasyon Takozu - Titreşim önleyici sistem"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:176
+msgid ""
+"“Titreşimi azaltır,<br>\n"
+"                            konforu artırır,<br>\n"
+"                            yolculuğunuzu<br>\n"
+"                            <span class=\"text-dark fw-bold\">güvenle "
+"yumuşatır.”</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:196
+msgid ""
+"Güvenlik sadece bir fonksiyon değil, <br>\n"
+"                    <strong class=\"text-dark fw-bold\">LiftKeys’te bir "
+"standarttır.</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:217
+msgid "Asansör Makine Motor Takozu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:220
+#: .\crm\templates\preview\previewblog\takozlar.html:268
+msgid "Makine Takozu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:228
+msgid "Dişlisiz Makine Şase Takozu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:231
+msgid "Dişlisiz Makine Takozu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:239
+msgid "Asansör L Tipi Fren Takozu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:242
+#: .\crm\templates\preview\previewblog\takozlar.html:345
+msgid "L Takoz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:250
+msgid "Titreşim Emici Yuvarlak Takoz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:253
+#: .\crm\templates\preview\previewblog\takozlar.html:401
+msgid "Yuvarlak Takoz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:271
+msgid ""
+"\"Titreşime Son, Sessizliğe Davet: <span class=\"text-dark fw-"
+"medium\">Liftkeys Mühendislik Harikası Takozlar</span>\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:275
+msgid ""
+"Asansör makinelerinizin ömrünü uzatan, konforu zirveye taşıyan teknoloji."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:281
+msgid "Gerçek Kauçuk ve Özel Pişirme:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:283
+msgid ""
+"Sıradan malzemelerin aksine, özel pişirme sistemiyle üretilen gerçek kauçuk "
+"yapısı sayesinde yıllarca formunu korur, çatlama yapmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:288
+msgid "Akıllı Genleşme Sistemi:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:290
+msgid ""
+"Alt kısımdaki özel delik tasarımı sayesinde baskı anında hem dışa hem içe "
+"doğru esneyerek kauçuğun genleşmesini çift yönlü tamamlar; titreşimi "
+"kaynağında yok eder."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:295
+msgid "Konik Tasarım:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:297
+msgid ""
+"Makinenin ağırlığını ve baskısını sönümleyen konik yapısıyla sarsıntısız bir "
+"seyir sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:303
+msgid "2500 KG"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:305
+msgid "Baskı Onayı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:307
+msgid ""
+"Dikeyde 2.5 tonluk pres testinden tam not alan dayanıklılık; en ağır "
+"yüklerde bile maksimum güvenlik."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:320
+msgid "LiftKeys Makine Takozu - Akıllı genleşme sistemi ve konik tasarım"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:338
+msgid ""
+"LIFTKEYS L Tipi Asansör Kabin Sabitleme Takozu - Deprem ve sarsıntı önleyici "
+"zırhlı yapı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:348
+msgid ""
+"\"Deprem Direncinde Yeni Standart: <span class=\"text-dark fw-"
+"medium\">Liftkeys Sabitleme Takozları</span>\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:352
+msgid ""
+"Sadece sarsıntıyı değil, riskleri de sönümlüyoruz. Kabin güvenliğinde "
+"tavizsiz mühendislik."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:359
+msgid "Zırhlı Yapı (50x50 mm Köşebent):"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:362
+msgid ""
+"5 mm et kalınlığına sahip çelik köşebent içeriğiyle üretilmiştir. Büküm "
+"noktalarındaki 8 mm’ye varan mukavemet artışı sayesinde kuvvet testlerinden "
+"en yüksek skorla geçmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:367
+msgid "Ayrılmaz Bütünlük:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:369
+msgid ""
+"Sabitleme vidası köşebenti delerek içinden geçer ve çevre kaynağı ile "
+"sabitlenir. Bu yöntem, en şiddetli yük testlerde bile vidanın üründen "
+"kopmasını imkansız kılar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:374
+msgid "Deprem Odaklı Tasarım:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:376
+msgid ""
+"Deprem bölgelerinde yaşanan mekanik ayrılma ve kırılma sorunlarına özel "
+"olarak geliştirilmiş, sarsıntıyı kabin içine aktarmayan esnek ve güçlü yapı."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:381
+msgid "Özel Pişirilmiş Orijinal Kauçuk:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:383
+msgid ""
+"Yüksek kalite kauçuk ve özel fırınlama süresi, ürünün yıllar geçse de "
+"formunu kaybetmemesini ve sönümleme performansını korumasını sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:404
+msgid ""
+"\"Sessiz Hareket, Kesintisiz Konfor: <span class=\"text-dark fw-"
+"medium\">Liftkeys Yatay Sönümleme Teknolojisi</span>\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:408
+msgid ""
+"Kabin içindeki titreşimi unutun; yatay sarsıntılara karşı geliştirilen en "
+"dirençli çözümle tanışın."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:419
+msgid "Zırhlı Bağlantı Gücü:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:421
+msgid ""
+"40 mm çapındaki ve 4 mm kalınlığındaki özel pullar, gövdeye çepeçevre kaynak "
+"yöntemiyle birleştirilmiştir. Kopma direnci maksimum seviyededir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:432
+msgid "Bağımsız Çalışma Prensibi:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:434
+msgid ""
+"İki bağlantı noktası arasındaki özel sertlikteki kauçuk, kabinden gelen "
+"titreşimleri bağımsız emer. 'Bağımsız sönümleme' yeteneği yatay sarsıntıyı "
+"minimuma indirir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:445
+msgid "Özel Pişirme ve Formül:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:447
+msgid ""
+"Kauçuğun moleküler yapısını koruyan ileri pişirme tekniği, ürünün "
+"elastikiyetini yıllarca kaybetmemesini ve yoğun trafikte bile uzun ömürlü "
+"olmasını sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:464
+msgid "LIFTKEYS Yuvarlak Takoz - Yatay titreşim sönümleme sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:484
+msgid ""
+"LIFTKEYS MRL Makine Altı Kare Takoz - 95 Shore sertlikte asansör motor takozu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:491
+msgid "MRL Makine Altı Kare Takoz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:494
+msgid ""
+"\"Makinesiz Sistemlerin Sarsılmaz Temeli: <span class=\"text-dark fw-"
+"bold\">95 Shore Performansı</span>\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:498
+msgid ""
+"MRL asansörlerin dar alanlarda yarattığı yüksek baskı için özel olarak "
+"geliştirildi."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:504
+msgid "95 Shore Sertlik:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:506
+msgid ""
+"Kauçuk teknolojisinin en üst sınırlarında yer alan <span class=\"tech-"
+"highlight\">95 Shore</span> sertlik derecesi, en ağır makine yükleri altında "
+"bile formunu korur; çökme veya yayılma yapmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:511
+msgid "Asansör Ömrünce Değişmez Form:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:513
+msgid ""
+"Özel moleküler pişirme teknolojisi sayesinde asansörün kullanım ömrü boyunca "
+"şekil değiştirmeden, ilk günkü sönümleme performansıyla çalışır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:518
+msgid "MRL Sistemlere Özel Tasarım:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:520
+msgid ""
+"<span class=\"tech-highlight\">70x70 mm</span> kare formu ve <span "
+"class=\"tech-highlight\">M20 cıvata</span> uyumlu delik çapıyla, makinesiz "
+"asansör motorlarının montaj noktalarına tam uyum sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:525
+msgid "Maksimum Mukavemet:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:527
+msgid ""
+"<span class=\"tech-highlight\">20 mm</span> kalınlığındaki kompakt yapısı, "
+"titreşimi sönümlerken makine stabilizasyonunu en üst seviyede tutar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:544
+msgid "Ucuz Takozun Pahalı Faturası"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:546
+msgid ""
+"Tasarruf mu Yapıyorsunuz, Yoksa <span class=\"text-danger fw-"
+"bold\">Sisteminize Zarar mı Veriyorsunuz?</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:549
+msgid ""
+"Asansör dünyasında vibrasyon takozları sadece birer 'lastik' değildir; "
+"sistemin dengesini koruyan birer mühendislik elemanıdır. Ucuz ve plastik "
+"ağırlıklı takoz kullanmanın gizli maliyetleri şunlardır:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:564
+msgid "Halat ve Kasnak Düşmanı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:566
+#, python-format
+msgid ""
+"Esneyen veya ezilen kalitesiz takozlar, makinenin terazisini bozar. Dengesiz "
+"basan halatlar, kasnak kanallarını asimetrik aşındırır ve halat ömrünü "
+"%%50’ye varan oranda kısaltır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:576
+msgid "Enerji Hırsızı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:578
+msgid ""
+"Dengesi bozulan bir makine grubu, her kalkış ve seyirde daha fazla akım "
+"çeker. Yanlış takoz seçimi, elektrik faturanızdaki gizli artıştır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:588
+msgid "Güvenlik Riski"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:590
+msgid ""
+"Hava değişimlerinde sertleşen kalitesiz yük takozları, fren "
+"senkronizasyonunu bozar. Ani duruşlarda kabin sarsılır, konfor biter ve "
+"güvenlik mekanizmaları dengesiz yüklenir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:600
+msgid "Kabin İçi Gürültü ve Uğultu"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:602
+msgid ""
+"Makine dairesindeki titreşimi yutamayan her takoz, kabin içine uğultu ve "
+"titreşim olarak döner. Yolcu konforunu tamamen yok eder."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:620
+msgid "Uzman Görüşü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:622
+msgid ""
+"\"Küçük Tasarruflar, <span class=\"text-danger\">Büyük Arızalar Doğurur.</"
+"span>\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:625
+msgid ""
+"\"Asansörünüzün Kalbi Makineyse, Onu Hayata Bağlayan Damarlar Takozlardır.\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:637
+msgid "Asansörünüz Neden Titriyor ve Uğulduyor?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:640
+msgid ""
+"Çoğu zaman suçlu motor değil, motorun altındaki <strong>\"ucuz\"</strong> "
+"takozdur!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:651
+msgid "Plastik Takoz Gerçeği"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:653
+msgid ""
+"Plastik takozlar zamanla ezilir, makinenin dengesini bozar ve halatları tek "
+"taraflı yer bitirir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:663
+msgid "Enerji Kaybı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:665
+msgid ""
+"Dengesiz makine, motorun zorlanmasına ve aşırı enerji tüketimine sebep olur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:677
+msgid ""
+"Liftkeys Kauçuk Takozları, <strong>95 Shore sertliği</strong> ve "
+"<strong>özel pişirme teknolojisi</strong> ile asla şekil değiştirmez. "
+"Makinenizin dengesini korur, halat ömrünü uzatır ve sessizliği garanti eder."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:691
+msgid "Plastik Değil, <br>Gerçek Kauçuk."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:693
+msgid "Halat ömrünü uzatmanın en kolay yolu."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:699
+msgid ""
+"\"Unutmayın: Takozdan ettiğiniz tasarruf, yarın kasnak ve halat değişimi "
+"olarak size geri döner.\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:715
+msgid "Merak Ettikleriniz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:718
+msgid ""
+"Vibrasyon takozları ve montaj süreci hakkında en çok merak edilen soruların "
+"yanıtları."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:732
+msgid "Plastik takoz ile LiftKeys kauçuk takoz arasındaki fark nedir?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:737
+#, python-format
+msgid ""
+"Plastik veya düşük kaliteli karışım takozlar zamanla sertleşir, çatlar ve "
+"yük altında ezilerek formunu kaybeder. Bu durum titreşimi binaya iletir. "
+"<strong>LiftKeys Kauçuk Takozları</strong> ise %%100 orijinal kauçuktan, "
+"özel pişirme teknolojisiyle üretilir. Yıllar geçse de elastikiyetini korur, "
+"titreşimi sönümler ve makine terazisini bozmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:746
+msgid "\"95 Shore\" sertlik değeri neden bu kadar önemli?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:751
+msgid ""
+"Asansör makineleri çok ağırdır. Çok yumuşak bir takoz (örneğin 60-70 shore) "
+"makine altında ezilir ve motorun yana yatmasına sebep olur. <strong>95 "
+"Shore</strong>, hem titreşimi sönümleyecek kadar esnek, hem de tonlarca "
+"ağırlığı taşıyıp şekil değiştirmeyecek kadar sert olan \"altın oran\"dır. "
+"Halat ve kasnak ömrü için bu sertlik şarttır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:760
+msgid "Takozların kullanım ömrü ne kadardır?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:765
+msgid ""
+"LiftKeys takozları, doğru montaj yapıldığı takdirde <strong>asansörün "
+"mekanik ömrü boyunca</strong> hizmet verecek şekilde tasarlanmıştır. Güneş "
+"ışığına doğrudan maruz kalmadığı sürece (makine dairesi ortamında) çürüme "
+"veya kopma yapmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:774
+msgid "Montaj sırasında nelere dikkat edilmelidir?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\takozlar.html:779
+msgid ""
+"En önemli kural, makinenin teraziye alınmasıdır. Takoz somunları sıkılırken "
+"makinenin kasnak hizasının kaymamasına dikkat edilmelidir. Ayrıca MRL (Kare) "
+"ve Motor (Yuvarlak) takozların, makine şasesindeki delik çaplarına uygun "
+"seçildiğinden emin olunmalıdır."
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\zemin.html:7
 msgid ""
 "LiftKeys PVC Zemin Kaplamaları | Yanmaz, Antibakteriyel Asansör Döşemesi"
@@ -1679,6 +5460,409 @@ msgid ""
 "Mermer görünümlü, yanmaz ve hafif PVC zemin kaplamaları.\n"
 "LiftKeys ile asansörünüzü kişiselleştirin, güvenliği ve konforu artırın.\n"
 "Teknik detaylar ve rulo koleksiyonu için tıklayın.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:226
+#: .\crm\templates\preview\previewblog\zemin.html:238
+msgid "PVC Zemin Kaplamaları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:253
+msgid "LiftKeys Asansör PVC Zemin Kaplama Uygulaması ve Granit Desenli Zemin"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:268
+msgid ""
+"\"Asansör zemin PVC kaplamaları,<br>\n"
+"                <strong class=\"fw-bold\" style=\"color: #333; text-"
+"decoration: underline; text-decoration-color: var(--lk-orange);\">sadece bir "
+"yer döşemesi değil</strong><br>\n"
+"                asansörün konforunu ve<br>\n"
+"                güvenliğini artırır.\""
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:275
+msgid ""
+"Üstün darbe emme özelliği, PVC teknolojisi ve hafifliği ile asansörünüze "
+"değer katar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:294
+msgid "Koleksiyon 1"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:298
+msgid "Koleksiyon 2"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:316
+msgid "Yangın Dayanımı ve Güvenlik (Bfl-S1)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:318
+msgid ""
+"asansör kuyusu bir baca etkisi yaratabilir. Yangın dayanımlı (Fire-"
+"Retardant) sertifikalı PVC ürünlerimiz, olası bir alev durumunda yanmayı "
+"geciktirir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:330
+msgid "Antibakteriyel ve Hijyenik Yapı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:332
+#, python-format
+msgid ""
+"Sertifikalı antibakteriyel yüzey teknolojimiz, bakteri ve küf oluşumunu %%99 "
+"oranında engeller. Temiz bir nefes ve sağlıklı bir temas noktası sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:344
+msgid "Akustik Fayda: Gürültüye Elveda!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:346
+msgid ""
+"PVC'nin doğal sönümleme özelliği, kabin içindeki yankıyı azaltır. Mekanik "
+"titreşimlerin ve ayak seslerinin bina boşluğuna yayılmasını engeller."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:358
+msgid "Kaydırmazlık: Güvenle Adım Atın!"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:360
+msgid ""
+"Özel dokusu sayesinde ayakkabı tabanını kavrar; çocukların, yaşlıların ve "
+"evcil hayvanların kayıp düşme riskini ortadan kaldırır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:376
+msgid "Tekstil Tabanlı PVC Zemin - Bej Mermer Desen"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:384
+msgid "Katman ve Taban Teknolojisi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:393
+msgid "Yangın Dayanımlı ve Tekstil Tabanlı Mimari PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:395
+msgid ""
+"PVC zeminlerin arkasındaki tekstil/kumaş (non-woven) taban, asansör "
+"montajcıları için aslında gizli bir kahramandır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:405
+msgid "Maksimum Tutunma (Vantuz Etkisi):"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:407
+msgid ""
+"Kumaş lifleri, zemine sürülen yapıştırıcıyı içine hapsederek beton veya "
+"metal zeminle PVC arasında kopmaz bir bağ kurar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:417
+msgid "Zemin Hatalarını Gizler:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:419
+msgid ""
+"Kalın tekstil dokusu, alt zemindeki ufak pürüzleri veya metaldeki hafif "
+"engebeleri emerek üst yüzeyde pürüzsüz bir görüntü sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:435
+#, python-format
+msgid "Saf Kalite: %%100 Orijinal Hammadde Güvencesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:442
+#, python-format
+msgid "%%100 Orijinal (Virjin) Hammadde"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:445
+msgid ""
+"Üretimimizde sadece birinci sınıf, işlenmemiş orijinal hammadde "
+"kullanılmaktadır. Bu sayede ürünümüz çok daha esnek, dayanıklı ve uzun "
+"ömürlüdür."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:452
+msgid "Geri Dönüşüm Malzemesi İçermez"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:455
+msgid ""
+"Geri dönüştürülmüş plastiklerde bulunan ve zamanla yüzeye çıkan sağlığa "
+"zararlı ağır metaller veya atık plastik kalıntıları ürünlerimizde asla yer "
+"almaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:462
+msgid "Kokusuz ve Sağlıklı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:465
+msgid ""
+"Orijinal hammadde kullanımı sayesinde asansör gibi dar alanlarda rahatsız "
+"edici 'plastik kokusu' oluşmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:477
+msgid "LiftKeys PVC Zemin: Yanmazlık, Mermer Doku ve Sertifikalar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:485
+msgid "Güvenlik ve Estetik Bir Arada"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:504
+msgid "PVC Zemin Rulo Ebatları"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:508
+msgid "Rulo Çapı :"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:509
+msgid "Rulo Uzunluğu :"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:509
+msgid "152x1350 cm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:510
+msgid "Rulo Ağırlığı :"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:518
+msgid "Gri Koleksiyon"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:519
+msgid "Gri Mermer Desenli PVC Rulo ve Deseni"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:522
+msgid "Siyah Koleksiyon"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:523
+msgid "Siyah Mermer Desenli PVC Rulo ve Deseni"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:542
+msgid ""
+"$ 3.000 USD Harcamayın;<br>\n"
+"                        <span class=\"text-dark\" style=\"font-size: 1.5rem;"
+"\">Mimari Estetiği 10'da 1 Fiyatına Yakalayın!</span>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:549
+msgid ""
+"Özel tasarım bir asansör için 4-5 çeşit mermer seçmek, hem yüksek maliyet "
+"hem de ağır bir işçilik demektir. Biz, bu lüksü çok daha akılcı bir yolla "
+"sunuyoruz:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:553
+msgid "Özel Baskı Teknolojisi:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:554
+msgid ""
+"En nadide mermer dokularını, ileri teknoloji baskı sistemimizle PVC yüzeyine "
+"birebir yansıtıyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:558
+msgid "10'da 1 Maliyet:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:559
+msgid ""
+"Mermer plakalarına ve zahmetli montaja harcayacağınız binlerce dolar yerine, "
+"aynı ihtişamı bütçenizi yormadan yakalayın."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:563
+msgid "Hafiflik Avantajı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:564
+msgid ""
+"Mermerin asansörünüze bindireceği yüzlerce kiloluk yükten kurtulun; motor "
+"ömrünü uzatın, enerji tasarrufu sağlayın."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:575
+msgid "Bilgisayarda Özel Asansör Zemin Deseni Tasarlayan Mimar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:585
+msgid "Dekoratif PVC Zemin Kaplama Modellerimiz"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:590
+msgid "Bej renkli çiçek motifli dekoratif PVC zemin kaplama"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:591
+msgid "Bej Çiçek Desenli PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:598
+msgid "Mermer dokulu geometrik desenli PVC yer döşemesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:599
+msgid "Geometrik Mermer PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:606
+msgid "Beyaz zemin üzerine siyah yıldız motifli PVC kaplama"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:607
+msgid "Beyaz Yıldız Motifli PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:614
+msgid "Siyah zeminli modern yıldız desenli lüks PVC zemin"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:615
+msgid "Siyah Modern Yıldız PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:622
+msgid "Klasik mermer desenli yıldız figürlü PVC döşeme"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:623
+msgid "Klasik Mermer Yıldız PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:630
+msgid "Siyah mermer görünümlü damarlı lüks PVC kaplama"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:631
+msgid "Siyah Mermer Damarlı PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:638
+msgid "Antik pusula motifli dekoratif PVC yer kaplaması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:639
+msgid "Pusula Desenli PVC Zemin"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:646
+msgid "Siyah üzerine altın işlemeli otantik PVC zemin"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:647
+msgid "Altın İşlemeli Otantik PVC"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:654
+msgid "Geleneksel saray motifli lüks PVC yer döşemesi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:655
+msgid "Saray Modeli PVC Kaplama"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:670
+msgid ""
+"PVC Zemin Kaplama Katmanları ve Teknik Ölçüleri: Koruyucu, Desen ve PVC "
+"Katmanı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:671
+msgid "PVC Zemin Teknik Özellikleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:684
+msgid "Dış Ölçüler:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:685
+msgid "152 cm x 140 cm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:688
+msgid "Desen Alanı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:689
+msgid "90 cm x 90 cm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:692
+msgid "Kalınlık:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:693
+msgid "2 mm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:696
+msgid "Rulo Uzunluğu:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:697
+msgid "152 x 1350 cm"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:700
+msgid "Katman Yapısı:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:701
+msgid "Koruyucu Üst Katman<br>Yüksek Çözünürlüklü Desen<br>Dayanıklı PVC Taban"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:714
+msgid "Sıkça Sorulan Sorular (SSS)"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:721
+msgid "Asansör PVC zemin kaplaması yanmaz özellikli mi?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:726
+msgid ""
+"Evet, LiftKeys PVC zemin kaplamaları <strong>EN 13501-1 standartlarına uygun "
+"Bfl-S1 yanmazlık sertifikasına</strong> sahiptir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:734
+msgid "Asansör zeminine özel logo veya desen baskısı yapılabilir mi?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:739
+msgid ""
+"Kesinlikle. <strong>Dijital baskı teknolojimiz</strong> sayesinde firma "
+"logonuzu, özel mermer desenlerini işleyebiliyoruz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:747
+msgid "PVC zemin kaplaması mermer ve granite göre neden daha avantajlı?"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\zemin.html:752
+msgid ""
+"PVC kaplamalar, gerçek mermere göre <strong>10 kat daha hafif</strong> ve "
+"ekonomiktir. Asansör motoruna binen yüku azaltır."
 msgstr ""
 
 #: .\crm\templates\preview\timeline.html:9

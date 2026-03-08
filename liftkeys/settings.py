@@ -95,12 +95,15 @@ INSTALLED_APPS = [
 
     # Çeviri Yönetimi
     'rosetta', # BURAYI EKLEDİK
+    'django_recaptcha', # reCAPTCHA için gerekli
 ]
 
 WAGTAIL_SITE_NAME = "Liftkeys" 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
-
+# --- GOOGLE RECAPTCHA AYARLARI ---
+RECAPTCHA_PUBLIC_KEY = '6LdD14MsAAAAAGwIGsT4_zIrvnRRYtZ1YqT_HlcM'
+RECAPTCHA_PRIVATE_KEY = '6LdD14MsAAAAAL66zjPdZPYaOpNHhAYV_ya00W6s'
 if DEBUG:
     MIDDLEWARE = [
         "django.middleware.security.SecurityMiddleware",
@@ -278,6 +281,7 @@ LANGUAGES = [
     ('ru', 'Russian'),
     ('fr', 'Français'),
     ('de', 'German'),
+    ('es', 'Spanish'),
 ]
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
@@ -334,3 +338,5 @@ LANGUAGE_COOKIE_DOMAIN = None
 # === ROSETTA (ÇEVİRİ PANELİ) AYARLARI ===
 ROSETTA_SHOW_AT_ADMIN_PANEL = True # Django admin panelinde Rosetta sekmesi oluşturur
 ROSETTA_REQUIRE_AUTHENTICATION = True # Sadece giriş yapmış kullanıcılar görebilir
+
+ROSETTA_AUTO_COMPILE = True # .po dosyaları kaydedildiğinde otomatik olarak .mo'ya çevirir

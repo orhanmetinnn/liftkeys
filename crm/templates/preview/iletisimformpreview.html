@@ -1,6 +1,16 @@
 {% load static %}
 {% load i18n %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css">
+<style>
+    /* Kütüphanenin Bootstrap sütunlarına tam oturması için */
+    #iletisim-alani .iti { width: 100%; } 
+    #iletisim-alani .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags.png");}
+    @media (min-resolution: 2x) {
+        #iletisim-alani .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags@2x.png");}
+    }
+</style>
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/previewcss/iletisimpreview.css' %}">
 {% endblock %}
@@ -16,7 +26,7 @@
                 Dünya çapındaki varlığımız, üretim zaman çizelgelerinizin sorunsuz, maliyet etkin ve uyumlu bir şekilde yönetilmesini sağlar.
                 {% endblocktrans %}
             </p>
-            <a href="#" class="btn btn-dark btn-lg align-self-start">
+            <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-dark btn-lg align-self-start" download>
                 <i class="fa-solid fa-download me-2"></i>
                 {% trans "Broşürünü İndir" %}
             </a>
@@ -72,6 +82,13 @@
                     {% endif %}
                 </div>
 
+                <div class="mb-4 d-flex flex-column align-items-center">
+                    {{ formiletisimpreview.captcha }}
+                    {% if formiletisimpreview.captcha.errors %}
+                        <div class="text-danger small mt-1">{{ formiletisimpreview.captcha.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
                 <div class="d-grid">
                     <button type="submit" class="btn btn-dark btn-lg">{% trans "Talebi Gönder" %}</button>
                 </div>
@@ -82,13 +99,32 @@
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const alertContainer = document.getElementById("formAlertContainer");
 
+    // --- TELEFON ALAN KODU BAŞLATMA ---
+    const phoneInputField = form.querySelector('input[name="phone"]');
+    let phoneInputPlugin;
+
+    if (phoneInputField) {
+        phoneInputPlugin = window.intlTelInput(phoneInputField, {
+            initialCountry: "tr",
+            preferredCountries: ["tr", "de", "us", "gb", "fr", "ru", "ae"],
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js",
+        });
+    }
+    // ---------------------------------
+
     form.addEventListener("submit", async function (e) {
         e.preventDefault(); 
+
+        if (phoneInputPlugin) {
+            phoneInputField.value = phoneInputPlugin.getNumber();
+        }
 
         const formData = new FormData(form);
         alertContainer.innerHTML = ""; 
@@ -112,17 +148,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     </div>`;
                 form.reset(); 
+                // reCAPTCHA'yı sıfırla ki kullanıcı tekrar mesaj atabilsin
+                if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
             } else {
                 let errorHtml = "<ul class='mb-0'>";
                 
-                // Bot yakalandığında genel hata dönerse (__all__) onu ekranda düzgün göstermek için eklendi
                 if (data.errors['__all__']) {
                      data.errors['__all__'].forEach(err => {
                         errorHtml += `<li>${err}</li>`;
                     });
                 }
 
-                // Normal alan hataları
                 for (let field in data.errors) {
                     if (field !== '__all__') {
                         data.errors[field].forEach(err => {
@@ -137,6 +173,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         Form hatalı:<br>${errorHtml}
                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     </div>`;
+                
+                // Form hatalıysa reCAPTCHA'yı sıfırla (Süresi dolmuş olabilir vs.)
+                if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
             }
         } catch (error) {
             alertContainer.innerHTML = `

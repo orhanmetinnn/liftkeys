@@ -31,7 +31,7 @@ Asansörünüzde sanatı ve teknolojiyi buluşturun. 500'den fazla desen seçene
 {% endblocktrans %}
 {% endblock %}
 
-{% block og_image %}{% static 'image/pageproduct/kabincam/liftkeys-dekoratif-cam-kabin.jpg' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/kabincam/liftkeys-dekoratif-cam-kabin.jpg' %}{% endblock %}
 
 {% block tw_title %}
 {% trans "LiftKeys | Dekoratif Cam ve Mirror TV Sistemleri" %}
@@ -43,7 +43,7 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
 {% endblocktrans %}
 {% endblock %}
 
-{% block tw_image %}{% static 'image/pageproduct/kabincam/liftkeys-dekoratif-cam-kabin.jpg' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/kabincam/liftkeys-dekoratif-cam-kabin.jpg' %}{% endblock %}
 
 {# --- CSS BLOĞU --- #}
 {% block extra_css %}
@@ -146,7 +146,7 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
                     <div class="icon-wrapper me-3 d-flex align-items-center justify-content-center">
                         <i class="bi bi-stars text-white fs-4"></i>
                     </div>
-                    <h1 class="mb-0 text-white fw-bold h4">LIFTKEYS – Dekoratif Cam</h1>
+                    <h1 class="mb-0 text-white fw-bold h4">{% trans "LIFTKEYS – Dekoratif Cam" %}</h1>
                 </div>
             </div>
         </div>
@@ -157,7 +157,7 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
                 <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg" style="cursor: pointer;">
                     
                     <img src="{% static 'image/pageproduct/kabincam/liftkeys-dekoratif-cam-kabin.webp' %}" 
-                         alt="LIFTKEYS Dekoratif Cam - 500 farklı desen seçeneği ile güvenli asansör kabin tasarımları" 
+                         alt="{% trans 'LIFTKEYS Dekoratif Cam - 500 farklı desen seçeneği ile güvenli asansör kabin tasarımları' %}" 
                          class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" loading="lazy">
                     
                     <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;">
@@ -173,9 +173,9 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
             <div class="col-lg-5 ps-lg-5" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
                 <div class="content-wrapper">
                     <p class="display-6 fw-light text-secondary mb-0" style="line-height: 1.4;">
-                        “Standartların ötesinde <strong class="text-dark fw-bold">500</strong> desen:<br>
-                        İster hazır koleksiyonumuzdan seçin,<br>
-                        ister hayalinizdekini birlikte tasarlayalım.”
+                        {% trans "“Standartların ötesinde" %} <strong class="text-dark fw-bold">500</strong> {% trans "desen:" %}<br>
+                        {% trans "İster hazır koleksiyonumuzdan seçin," %}<br>
+                        {% trans "ister hayalinizdekini birlikte tasarlayalım.”" %}
                     </p>
                 </div>
             </div>
@@ -186,17 +186,17 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
             
             <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
                 <p class="text-secondary mb-3" style="line-height: 1.6; font-size: 1.05rem;">
-                    Asansör güvenliği ve estetiği söz konusu olduğunda, bu detaylar Liftkeys'in kalite standartlarını bir üst seviyeye taşıyor. Özellikle Pendulum (Sarkaç) Testi'nden tam not alması, ürünün darbelere karşı dayanıklılığını ve uluslararası güvenlik normlarına uygunluğunu tescillemiş oluyor.
+                    {% trans "Asansör güvenliği ve estetiği söz konusu olduğunda, bu detaylar Liftkeys'in kalite standartlarını bir üst seviyeye taşıyor. Özellikle Pendulum (Sarkaç) Testi'nden tam not alması, ürünün darbelere karşı dayanıklılığını ve uluslararası güvenlik normlarına uygunluğunu tescillemiş oluyor." %}
                 </p>
                 <p class="text-secondary mb-0" style="line-height: 1.6; font-size: 1.05rem;">
-                    Bu teknik üstünlükleri (temperli cam, özel beyaz boya, koruyucu film ve test başarısı) müşteriye güven veren profesyonel bir dille şu şekilde özetleyebiliriz:
+                    {% trans "Bu teknik üstünlükleri (temperli cam, özel beyaz boya, koruyucu film ve test başarısı) müşteriye güven veren profesyonel bir dille şu şekilde özetleyebiliriz:" %}
                 </p>
             </div>
             
             <div class="col-lg-4 col-md-5 text-md-end">
-                <a href="#" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm px-4 py-3 w-100 w-md-auto">
+                <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm px-4 py-3 w-100 w-md-auto" download>
                     <i class="bi bi-book me-2 fs-5"></i>
-                    Ürün Kataloğu İndir
+                    {% trans "Ürün Kataloğu İndir" %}
                 </a>
             </div>
             
@@ -205,6 +205,280 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     </div>
 </section>
 
+<section class="category-selection-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-12 text-center" data-aos="fade-up">
+                <h2 class="h3 fw-bold text-secondary mb-4">{% trans "Kategori Seç" %}</h2>
+                
+                <div class="custom-category-grid">
+                    
+                    <button class="cat-btn" onclick="openCategoryModal('deniz', '{% trans 'Deniz' %}')" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="cat-img-box border-blue">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-deniz-serisi.webp' %}" alt="{% trans 'LIFTKEYS Asansör Kabin Camı - Deniz ve Okyanus Temalı Desenler' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Deniz" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('doga', '{% trans 'Doğa' %}')" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="cat-img-box border-green">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-doga-serisi.webp' %}" alt="{% trans 'LIFTKEYS Dekoratif Cam - Doğa, Yaprak ve Orman Desenli Kabinler' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Doğa" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('pattren', '{% trans 'Pattren' %}')" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="cat-img-box border-purple">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-pattren-serisi.webp' %}" alt="{% trans 'LIFTKEYS Geometrik Desenli Asansör Camları - Modern Pattern Tasarımlar' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Pattren" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('illustrasyon', '{% trans 'Illustrasyon' %}')" data-aos="zoom-in" data-aos-delay="250">
+                        <div class="cat-img-box border-teal">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-illustrasyon-serisi.webp' %}" alt="{% trans 'LIFTKEYS İllüstrasyon Tasarımlı Dekoratif Cam Kabin Kaplamaları' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Illustrasyon" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('tarihiyerler', '{% trans 'Tarihi Yerler' %}')" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="cat-img-box border-brown">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-tarihi-yerler-serisi.webp' %}" alt="{% trans 'LIFTKEYS Şehir Simgeleri ve Tarihi Mekan Temalı Kabin Camları' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Tarihi Yerler" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('soyut', '{% trans 'Soyut' %}')" data-aos="zoom-in" data-aos-delay="350">
+                        <div class="cat-img-box border-pink">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-soyut-serisi.webp' %}" alt="{% trans 'LIFTKEYS Soyut Sanat ve Modern Çizgili Asansör Camı Tasarımları' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Soyut" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('sehir', '{% trans 'Şehir' %}')" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="cat-img-box border-blue-dark">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-sehir-serisi.webp' %}" alt="{% trans 'LIFTKEYS Panoramik Şehir Manzaralı Dekoratif Asansör Camları' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Şehir" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('karisik', '{% trans 'Karışık' %}')" data-aos="zoom-in" data-aos-delay="450">
+                        <div class="cat-img-box border-orange">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-karisik-seri.webp' %}" alt="{% trans 'LIFTKEYS Karışık Koleksiyon - Özel Tasarım Dekoratif Cam Seçenekleri' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Karışık" %}</span>
+                    </button>
+
+                    <button class="cat-btn" onclick="openCategoryModal('ralrenkler', '{% trans 'Ral Renkler' %}')" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="cat-img-box border-dark">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-ral-renkler.webp' %}" alt="{% trans 'LIFTKEYS Tek Renk RAL Kodlu Temperli ve Lamine Asansör Camları' %}" loading="lazy">
+                        </div>
+                        <span class="cat-name">{% trans "Ral Renkler" %}</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="hidden-category-data" class="d-none">
+    
+    <div id="data-deniz">
+        <div class="row g-3">
+            {% for urun in deniz_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('deniz', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Deniz' %}')"> 
+                    <img src="{% static 'image/pageproduct/kabincam/deniz/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3">
+                        <span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-doga">
+        <div class="row g-3">
+            {% for urun in doga_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('doga', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Doğa' %}')"> 
+                    <img src="{% static 'image/pageproduct/kabincam/doga/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3">
+                        <span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-pattren">
+        <div class="row g-3">
+            {% for urun in pattren_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('pattren', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Pattren' %}')"><img src="{% static 'image/pageproduct/kabincam/pattren/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-illustrasyon">
+        <div class="row g-3">
+            {% for urun in illustrasyon_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('Illustrasyon', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Illustrasyon' %}')"><img src="{% static 'image/pageproduct/kabincam/Illustrasyon/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-tarihiyerler">
+        <div class="row g-3">
+            {% for urun in tarihiyerler_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('tarihiyerler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Tarihi Yerler' %}')"><img src="{% static 'image/pageproduct/kabincam/tarihiyerler/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-soyut">
+        <div class="row g-3">
+            {% for urun in soyut_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('soyut', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Soyut' %}')"><img src="{% static 'image/pageproduct/kabincam/soyut/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-sehir">
+        <div class="row g-3">
+            {% for urun in sehir_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('sehir', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Şehir' %}')"><img src="{% static 'image/pageproduct/kabincam/sehir/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-karisik">
+        <div class="row g-3">
+            {% for urun in karisik_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('karisik', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Karışık' %}')"><img src="{% static 'image/pageproduct/kabincam/karisik/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="data-ralrenkler">
+        <div class="row g-3">
+            {% for urun in ralrenkler_urunleri %}
+            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('ralrenkler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Ral Renkler' %}')"><img src="{% static 'image/pageproduct/kabincam/ralrenkler/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="categoryProductsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-bottom pb-3">
+                <h5 class="modal-title fw-bold text-dark" id="categoryModalTitle">{% trans "Kategori" %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-light" id="categoryModalBody">
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="previewGalleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-header border-0 pb-0 justify-content-between z-3 position-absolute top-0 w-100 p-3">
+                <button type="button" class="btn btn-sm btn-light rounded-pill shadow-sm px-3 fw-bold" onclick="backToCategoryModal()">
+                    <i class="bi bi-arrow-left me-1"></i> {% trans "Geri" %}
+                </button>
+                <button type="button" class="btn-close btn-close-white fs-4 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 15px;"></button>
+            </div>
+            <div class="modal-body p-0 position-relative">
+                <div id="productGalleryCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="false">
+                    <div class="carousel-inner" id="dynamicCarouselInnerContent">
+                        </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productGalleryCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productGalleryCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="mirror-technology-section py-5  overflow-hidden">
+    <div class="container">
+        
+        <div class="row align-items-center mb-5 pb-lg-5">
+            <div class="col-lg-7 col-md-12 pe-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="display-6 fw-bold text-dark h3 mb-4">{% trans "Ayna" %}</h2>
+                <p class="text-secondary mb-4" style="line-height: 1.7;">
+                    {% trans "Aynaların asansör kabinindeki bu psikolojik ve işlevsel rolü gerçekten çok stratejik bir detay. Özellikle kapı açıldığında aynayı görmek, kabinin orada olduğuna dair görsel bir teyit vererek güvenlik algısını pekiştirir (boşluğa adım atma korkusunu engeller)." %}
+                </p>
+                <p class="text-secondary mb-4" style="line-height: 1.7;">
+                    {% trans "Ayrıca dar alanlarda ayna kullanımı, klostrofobiyi (kapalı alan korkusu) azaltan en güçlü tasarım hilesidir." %}
+                </p>
+                <div class="highlight-info p-3 border-start-orange bg-white shadow-sm rounded-end">
+                    <p class="mb-0 text-dark fst-italic">
+                        {% trans "Bu derinlikli bakış açısını, sizin önceki teknik detaylarınızla birleştirerek duygusal ve mantıksal bir tanıtım metni haline getirebiliriz:" %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 text-center" data-aos="fade-left" data-aos-duration="1200">
+                <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-lg">
+                    <img src="{% static 'image/pageproduct/kabincam/asansor-ayna-tasarimi.webp' %}" 
+                         alt="{% trans 'Asansör Kabininde Ayna Kullanımı - Derinlik ve Güven Algısı' %}" 
+                         class="img-fluid w-100 hover-zoom">
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center pt-lg-5">
+            <div class="col-lg-5 col-md-12 text-center order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-lg">
+                    <img src="{% static 'image/pageproduct/kabincam/asansor-mirror-tv-reflektif-ayna.webp' %}" 
+                         alt="{% trans 'Liftkeys Reflektif Ayna ve Mirror TV Teknolojisi' %}" 
+                         class="img-fluid w-100 hover-zoom">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12 ps-lg-5 order-1 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left" data-aos-duration="1000">
+                <h2 class="display-6 fw-bold text-dark h3 mb-2">{% trans "Reflektif Ayna" %}</h2>
+                <p class="text-orange fw-bold mb-4 small text-uppercase ls-1">{% trans "Reflektif Ayna (Mirror TV) Tanıtım Metni" %}</p>
+                
+                <h3 class="h5 fw-bold text-dark mb-3">{% trans '"Sadece Bir Ayna Değil, Projenizin Dijital İmzası"' %}</h3>
+                
+                <p class="text-secondary mb-4" style="line-height: 1.7;">
+                    {% trans "İş merkezlerinden lüks konutlara, hastanelerden prestijli plazalara kadar; Liftkeys Reflektif Aynalar ile teknolojiyi estetikle buluşturuyoruz." %}
+                </p>
+
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-display text-orange me-3 mt-1"></i>
+                        <span><strong class="text-dark">{% trans "Çift Yönlü Fonksiyon:" %}</strong> {% trans "Kapalıyken derinlik katan kusursuz bir ayna, açıkken kristal netliğinde bir bilgi ekranı." %}</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-palette text-orange me-3 mt-1"></i>
+                        <span><strong class="text-dark">{% trans "Renk Seçenekleri:" %}</strong> {% trans "Mimari dokuya uyum sağlayan Füme ve Bronz yansıma alternatifleri." %}</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-broadcast-pin text-orange me-3 mt-1"></i>
+                        <span><strong class="text-dark">{% trans "İletişim Gücü:" %}</strong> {% trans "Duyurular, reklamlar, hastane bilgilendirmeleri veya anlık haberler; yolculuk süresini verimli bir iletişim kanalına dönüştürün." %}</span>
+                    </li>
+                    <li class="mb-0 d-flex align-items-start">
+                        <i class="bi bi-gem text-orange me-3 mt-1"></i>
+                        <span><strong class="text-dark">{% trans "Lüksün Göstergesi:" %}</strong> {% trans "Modern mimarinin vazgeçilmezi olan Mirror TV teknolojisiyle asansörünüzde premium bir atmosfer yaratın." %}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 
@@ -226,293 +500,6 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
         element.innerHTML = iframeHTML;
     }
 </script>
-
-
-
-
-
-
-<section class="category-selection-section py-5 bg-white overflow-hidden">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-12 text-center" data-aos="fade-up">
-                <h2 class="h3 fw-bold text-secondary mb-4">Kategori Seç</h2>
-                
-                <div class="custom-category-grid">
-                    
-                    <button class="cat-btn" onclick="openCategoryModal('deniz', 'Deniz')" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="cat-img-box border-blue">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-deniz-serisi.webp' %}" alt="LIFTKEYS Asansör Kabin Camı - Deniz ve Okyanus Temalı Desenler" loading="lazy">
-                        </div>
-                        <span class="cat-name">Deniz</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('doga', 'Doğa')" data-aos="zoom-in" data-aos-delay="150">
-                        <div class="cat-img-box border-green">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-doga-serisi.webp' %}" alt="LIFTKEYS Dekoratif Cam - Doğa, Yaprak ve Orman Desenli Kabinler" loading="lazy">
-                        </div>
-                        <span class="cat-name">Doğa</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('pattren', 'Pattren')" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="cat-img-box border-purple">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-pattren-serisi.webp' %}" alt="LIFTKEYS Geometrik Desenli Asansör Camları - Modern Pattern Tasarımlar" loading="lazy">
-                        </div>
-                        <span class="cat-name">Pattren</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('illustrasyon', 'Illustrasyon')" data-aos="zoom-in" data-aos-delay="250">
-                        <div class="cat-img-box border-teal">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-illustrasyon-serisi.webp' %}" alt="LIFTKEYS İllüstrasyon Tasarımlı Dekoratif Cam Kabin Kaplamaları" loading="lazy">
-                        </div>
-                        <span class="cat-name">Illustrasyon</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('tarihiyerler', 'Tarihi Yerler')" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="cat-img-box border-brown">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-tarihi-yerler-serisi.webp' %}" alt="LIFTKEYS Şehir Simgeleri ve Tarihi Mekan Temalı Kabin Camları" loading="lazy">
-                        </div>
-                        <span class="cat-name">Tarihi Yerler</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('soyut', 'Soyut')" data-aos="zoom-in" data-aos-delay="350">
-                        <div class="cat-img-box border-pink">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-soyut-serisi.webp' %}" alt="LIFTKEYS Soyut Sanat ve Modern Çizgili Asansör Camı Tasarımları" loading="lazy">
-                        </div>
-                        <span class="cat-name">Soyut</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('sehir', 'Şehir')" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="cat-img-box border-blue-dark">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-sehir-serisi.webp' %}" alt="LIFTKEYS Panoramik Şehir Manzaralı Dekoratif Asansör Camları" loading="lazy">
-                        </div>
-                        <span class="cat-name">Şehir</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('karisik', 'Karışık')" data-aos="zoom-in" data-aos-delay="450">
-                        <div class="cat-img-box border-orange">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-karisik-seri.webp' %}" alt="LIFTKEYS Karışık Koleksiyon - Özel Tasarım Dekoratif Cam Seçenekleri" loading="lazy">
-                        </div>
-                        <span class="cat-name">Karışık</span>
-                    </button>
-
-                    <button class="cat-btn" onclick="openCategoryModal('ralrenkler', 'Ral Renkler')" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="cat-img-box border-dark">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-ral-renkler.webp' %}" alt="LIFTKEYS Tek Renk RAL Kodlu Temperli ve Lamine Asansör Camları" loading="lazy">
-                        </div>
-                        <span class="cat-name">Ral Renkler</span>
-                    </button>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div id="hidden-category-data" class="d-none">
-    
-    <div id="data-deniz">
-        <div class="row g-3">
-            {% for urun in deniz_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('deniz', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Deniz')"> 
-                    <img src="{% static 'image/pageproduct/kabincam/deniz/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
-                    <div class="product-overlay d-flex flex-column justify-content-end p-3">
-                        <span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
-                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-doga">
-        <div class="row g-3">
-            {% for urun in doga_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('doga', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Doğa')"> 
-                    <img src="{% static 'image/pageproduct/kabincam/doga/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
-                    <div class="product-overlay d-flex flex-column justify-content-end p-3">
-                        <span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
-                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-pattren">
-        <div class="row g-3">
-            {% for urun in pattren_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('pattren', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Pattren')"><img src="{% static 'image/pageproduct/kabincam/pattren/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div></div></div></div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-illustrasyon">
-        <div class="row g-3">
-            {% for urun in illustrasyon_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('Illustrasyon', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Illustrasyon')"><img src="{% static 'image/pageproduct/kabincam/Illustrasyon/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div></div></div></div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-tarihiyerler">
-        <div class="row g-3">
-            {% for urun in tarihiyerler_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('tarihiyerler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Tarihi Yerler')"><img src="{% static 'image/pageproduct/kabincam/tarihiyerler/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div></div></div></div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-soyut">
-        <div class="row g-3">
-            {% for urun in soyut_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('soyut', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Soyut')"><img src="{% static 'image/pageproduct/kabincam/soyut/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div></div></div></div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-sehir">
-        <div class="row g-3">
-            {% for urun in sehir_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('sehir', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Şehir')"><img src="{% static 'image/pageproduct/kabincam/sehir/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div></div></div></div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-karisik">
-        <div class="row g-3">
-            {% for urun in karisik_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('karisik', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Karışık')"><img src="{% static 'image/pageproduct/kabincam/karisik/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div></div></div></div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="data-ralrenkler">
-        <div class="row g-3">
-            {% for urun in ralrenkler_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('ralrenkler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, 'Ral Renkler')"><img src="{% static 'image/pageproduct/kabincam/ralrenkler/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">İncele</span></div></div></div></div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="categoryProductsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content border-0 shadow-lg">
-            <div class="modal-header border-bottom pb-3">
-                <h5 class="modal-title fw-bold text-dark" id="categoryModalTitle">Kategori</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body bg-light" id="categoryModalBody">
-                </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="previewGalleryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content bg-transparent border-0">
-            <div class="modal-header border-0 pb-0 justify-content-between z-3 position-absolute top-0 w-100 p-3">
-                <button type="button" class="btn btn-sm btn-light rounded-pill shadow-sm px-3 fw-bold" onclick="backToCategoryModal()">
-                    <i class="bi bi-arrow-left me-1"></i> Geri
-                </button>
-                <button type="button" class="btn-close btn-close-white fs-4 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 15px;"></button>
-            </div>
-            <div class="modal-body p-0 position-relative">
-                <div id="productGalleryCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="false">
-                    <div class="carousel-inner" id="dynamicCarouselInnerContent">
-                        </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#productGalleryCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#productGalleryCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-{% load static %}
-
-<section class="mirror-technology-section py-5  overflow-hidden">
-    <div class="container">
-        
-        <div class="row align-items-center mb-5 pb-lg-5">
-            <div class="col-lg-7 col-md-12 pe-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
-                <h2 class="display-6 fw-bold text-dark h3 mb-4">Ayna</h2>
-                <p class="text-secondary mb-4" style="line-height: 1.7;">
-                    Aynaların asansör kabinindeki bu psikolojik ve işlevsel rolü gerçekten çok stratejik bir detay. Özellikle kapı açıldığında aynayı görmek, kabinin orada olduğuna dair görsel bir teyit vererek güvenlik algısını pekiştirir (boşluğa adım atma korkusunu engeller).
-                </p>
-                <p class="text-secondary mb-4" style="line-height: 1.7;">
-                    Ayrıca dar alanlarda ayna kullanımı, klostrofobiyi (kapalı alan korkusu) azaltan en güçlü tasarım hilesidir.
-                </p>
-                <div class="highlight-info p-3 border-start-orange bg-white shadow-sm rounded-end">
-                    <p class="mb-0 text-dark fst-italic">
-                        Bu derinlikli bakış açısını, sizin önceki teknik detaylarınızla birleştirerek duygusal ve mantıksal bir tanıtım metni haline getirebiliriz:
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-12 text-center" data-aos="fade-left" data-aos-duration="1200">
-                <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-lg">
-                    <img src="{% static 'image/pageproduct/kabincam/asansor-ayna-tasarimi.webp' %}" 
-                         alt="Asansör Kabininde Ayna Kullanımı - Derinlik ve Güven Algısı" 
-                         class="img-fluid w-100 hover-zoom">
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center pt-lg-5">
-            <div class="col-lg-5 col-md-12 text-center order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1200">
-                <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-lg">
-                    <img src="{% static 'image/pageproduct/kabincam/asansor-mirror-tv-reflektif-ayna.webp' %}" 
-                         alt="Liftkeys Reflektif Ayna ve Mirror TV Teknolojisi" 
-                         class="img-fluid w-100 hover-zoom">
-                </div>
-            </div>
-            <div class="col-lg-7 col-md-12 ps-lg-5 order-1 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left" data-aos-duration="1000">
-                <h2 class="display-6 fw-bold text-dark h3 mb-2">Reflektif Ayna</h2>
-                <p class="text-orange fw-bold mb-4 small text-uppercase ls-1">Reflektif Ayna (Mirror TV) Tanıtım Metni</p>
-                
-                <h3 class="h5 fw-bold text-dark mb-3">"Sadece Bir Ayna Değil, Projenizin Dijital İmzası"</h3>
-                
-                <p class="text-secondary mb-4" style="line-height: 1.7;">
-                    İş merkezlerinden lüks konutlara, hastanelerden prestijli plazalara kadar; Liftkeys Reflektif Aynalar ile teknolojiyi estetikle buluşturuyoruz.
-                </p>
-
-                <ul class="list-unstyled">
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="bi bi-display text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">Çift Yönlü Fonksiyon:</strong> Kapalıyken derinlik katan kusursuz bir ayna, açıkken kristal netliğinde bir bilgi ekranı.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="bi bi-palette text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">Renk Seçenekleri:</strong> Mimari dokuya uyum sağlayan Füme ve Bronz yansıma alternatifleri.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="bi bi-broadcast-pin text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">İletişim Gücü:</strong> Duyurular, reklamlar, hastane bilgilendirmeleri veya anlık haberler; yolculuk süresini verimli bir iletişim kanalına dönüştürün.</span>
-                    </li>
-                    <li class="mb-0 d-flex align-items-start">
-                        <i class="bi bi-gem text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">Lüksün Göstergesi:</strong> Modern mimarinin vazgeçilmezi olan Mirror TV teknolojisiyle asansörünüzde premium bir atmosfer yaratın.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</section>
-
 
 <script>
     var categoryModalObj = null;

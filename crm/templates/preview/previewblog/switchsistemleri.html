@@ -3,8 +3,9 @@
 {% load i18n %}
 
 {# --- META BLOKLARI --- #}
-% block title %}
+{% block title %}
 {% trans "LiftKeys Asansör Switch Sistemleri | Limit ve Emniyet Anahtarları" %}
+{% endblock %}
 
 {% block meta_description %}
 {% blocktrans %}
@@ -35,7 +36,7 @@ EN 60947-5-1 ve IP65 standartlarında üretim.
 {% endblock %}
 
 {# Not: Sosyal medya paylaşımında ürün grubu görselinin çıkması tıklanma oranını artırır #}
-{% block og_image %}{% static 'image/pageproduct/switchsystem/liftkeys-switch-group.jpg' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/switchsystem/liftkeys-switch-group.jpg' %}{% endblock %}
 
 {% block tw_title %}
 {% trans "LiftKeys | Asansör Limit Switch ve Güvenlik Çözümleri" %}
@@ -49,7 +50,7 @@ Teknik özellikler ve katalog için tıklayın.
 {% endblocktrans %}
 {% endblock %}
 
-{% block tw_image %}{% static 'image/pageproduct/switchsystem/liftkeys-switch-group.jpg' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/switchsystem/liftkeys-switch-group.jpg' %}{% endblock %}
 
 {# --- CSS BLOĞU --- #}
 {% block extra_css %}
@@ -129,97 +130,6 @@ Teknik özellikler ve katalog için tıklayın.
         }
     ]
 </script>
-
-<div class="container my-5">
-    
-    <div class="row mb-5" data-aos="fade-down">
-        <div class="col-12">
-            <h1 class="d-flex align-items-center p-3 rounded-3 shadow-sm" 
-                style="background: linear-gradient(90deg, #F08200 0%, #ff9f43 100%); color: white; margin: 0;">
-                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center me-3" 
-                     style="width: 50px; height: 50px; color: #F08200;">
-                    <i class="fa-solid fa-microchip fs-4"></i>
-                </div>
-                <span style="font-weight: 600; letter-spacing: 0.5px; font-size: 1.3rem;">
-                    LIFTKEYS – Switch Sistemleri
-                </span>
-            </h1>
-        </div>
-    </div>
-
-    <div class="row align-items-center mb-5">
-        
-        <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
-    
-            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card"
-                onclick="loadYoutubeVideo(this)" 
-                data-video-id="4hY3EOC1F_8" 
-                style="cursor: pointer;">
-                
-                <img src="{% static 'image/pageproduct/switchsystem/liftkeys-asansor-guvenlik-switch-sistemleri-ve-limit-anahtari-tanitimi.webp' %}" 
-                    class="img-fluid w-100" 
-                    style="object-fit: cover; min-height: 350px;"
-                    alt="Asansör güvenliğini sağlayan LiftKeys limit switch ve emniyet anahtarı sistemleri tanıtım videosu">
-                
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange" 
-                        style="width: 80px; height: 80px;">
-                        <i class="fa-solid fa-play fa-2x ps-1" style="color: #F08200;"></i>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="col-lg-5 ps-lg-5" data-aos="fade-left" data-aos-delay="200">
-            <div class="quote-box ps-4 py-2" style="border-left: 5px solid #F08200;">
-                <h2 class="h3 text-secondary fw-light fst-italic lh-base">
-                    “Asansörün Görünmez<br>
-                    <strong style="color: #495057; font-weight: 700;">Güvenlik Muhafızları:</strong><br>
-                    Switch Sistemleri”
-                </h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="row align-items-center bottom-section p-4 bg-light rounded-4 border">
-        <div class="col-md-8 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="300">
-            <p class="fs-5 text-muted mb-0">
-                Güvenlik sadece bir fonksiyon değil,<br>
-                <strong class="text-dark">LiftKeys’te bir standarttır.</strong>
-            </p>
-        </div>
-
-        <div class="col-md-4 text-md-end" data-aos="fade-up" data-aos-delay="400">
-            <a href="#" class="btn btn-lg shadow-sm text-white d-inline-flex align-items-center gap-2 px-4 py-2 rounded-3 hover-lift" 
-               style="background-color: #F08200; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease;">
-                <i class="fa-solid fa-book-open"></i>
-                Ürün Kataloğu İndir
-            </a>
-        </div>
-    </div>
-
-</div>
-
-<script>
-    function loadYoutubeVideo(element) {
-        var videoId = element.getAttribute("data-video-id");
-        
-        // Bu tasarımdaki min-height: 350px değerini iframe'e uyarlıyoruz
-        var iframeHTML = `
-            <iframe width="100%" height="100%" style="min-height: 350px;"
-                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-        `;
-        
-        element.innerHTML = iframeHTML;
-    }
-</script>
 <style>
     /* Play Butonu Nabız Efekti */
     .play-btn-pulse {
@@ -255,6 +165,78 @@ Teknik özellikler ve katalog için tıklayın.
 </style>
 
 
+
+<div class="container my-5">
+    
+    <div class="row mb-5" data-aos="fade-down">
+        <div class="col-12">
+            <h1 class="d-flex align-items-center p-3 rounded-3 shadow-sm" 
+                style="background: linear-gradient(90deg, #F08200 0%, #ff9f43 100%); color: white; margin: 0;">
+                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                     style="width: 50px; height: 50px; color: #F08200;">
+                    <i class="fa-solid fa-microchip fs-4"></i>
+                </div>
+                <span style="font-weight: 600; letter-spacing: 0.5px; font-size: 1.3rem;">
+                    {% trans "LIFTKEYS – Switch Sistemleri" %}
+                </span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        
+        <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
+    
+            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card"
+                onclick="loadYoutubeVideo(this)" 
+                data-video-id="4hY3EOC1F_8" 
+                style="cursor: pointer;">
+                
+                <img src="{% static 'image/pageproduct/switchsystem/liftkeys-asansor-guvenlik-switch-sistemleri-ve-limit-anahtari-tanitimi.webp' %}" 
+                    class="img-fluid w-100" 
+                    style="object-fit: cover; min-height: 350px;"
+                    alt="{% trans 'Asansör güvenliğini sağlayan LiftKeys limit switch ve emniyet anahtarı sistemleri tanıtım videosu' %}">
+                
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange" 
+                        style="width: 80px; height: 80px;">
+                        <i class="fa-solid fa-play fa-2x ps-1" style="color: #F08200;"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col-lg-5 ps-lg-5" data-aos="fade-left" data-aos-delay="200">
+            <div class="quote-box ps-4 py-2" style="border-left: 5px solid #F08200;">
+                <h2 class="h3 text-secondary fw-light fst-italic lh-base">
+                    {% blocktrans %}“Asansörün Görünmez<br>
+                    <strong style="color: #495057; font-weight: 700;">Güvenlik Muhafızları:</strong><br>
+                    Switch Sistemleri”{% endblocktrans %}
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row align-items-center bottom-section p-4 bg-light rounded-4 border">
+        <div class="col-md-8 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+            <p class="fs-5 text-muted mb-0">
+                {% blocktrans %}Güvenlik sadece bir fonksiyon değil,<br>
+                <strong class="text-dark">LiftKeys’te bir standarttır.</strong>{% endblocktrans %}
+            </p>
+        </div>
+
+        <div class="col-md-4 text-md-end" data-aos="fade-up" data-aos-delay="400">
+            <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-lg shadow-sm text-white d-inline-flex align-items-center gap-2 px-4 py-2 rounded-3 hover-lift" 
+               style="background-color: #F08200; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease;" download>
+                <i class="fa-solid fa-book-open"></i>
+                {% trans "Ürün Kataloğu İndir" %}
+            </a>
+        </div>
+    </div>
+
+</div>
+
 <div class="my-5 py-3"></div>
 
 <div class="container my-5 pt-4">
@@ -262,14 +244,14 @@ Teknik özellikler ve katalog için tıklayın.
         <div class="col-12" data-aos="fade-up">
             <img src="{% static 'image/pageproduct/switchsystem/liftkeys-switch-group.webp' %}" 
                     class="img-fluid" 
-                    alt="LiftKeys Asansör Güvenlik Switch Ailesi - Limit Şalter Modelleri"
+                    alt="{% trans 'LiftKeys Asansör Güvenlik Switch Ailesi - Limit Şalter Modelleri' %}"
                     style="max-height: 350px;">
             
             <h2 class="section-title mt-4">
-                Asansörün Güvenlik Mimarları: <strong style="color: #495057;">Switch Çeşitleri</strong>
+                {% blocktrans %}Asansörün Güvenlik Mimarları: <strong style="color: #495057;">Switch Çeşitleri</strong>{% endblocktrans %}
             </h2>
             <p class="section-desc mt-3">
-                Asansörde her switch aynı görevi yapmaz. Kimisi asansörü durdurur, kimisi ise bir daha hareket etmesini engeller. İşte aralarındaki hayati farklar:
+                {% trans "Asansörde her switch aynı görevi yapmaz. Kimisi asansörü durdurur, kimisi ise bir daha hareket etmesini engeller. İşte aralarındaki hayati farklar:" %}
             </p>
         </div>
     </div>
@@ -283,38 +265,38 @@ Teknik özellikler ve katalog için tıklayın.
         <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
             
             <div class="feature-quote">
-                "Esnek, hızlı ve milyonlarca kez sorunsuz çalışma garantisi."
+                {% trans '"Esnek, hızlı ve milyonlarca kez sorunsuz çalışma garantisi."' %}
             </div>
 
             <h3 class="feature-title">
-                1. Makaralı Switch <span style="font-weight: 400; font-size: 1.2rem; color: #777;">(Standart Sınır Kesici)</span>
+                {% blocktrans %}1. Makaralı Switch <span style="font-weight: 400; font-size: 1.2rem; color: #777;">(Standart Sınır Kesici)</span>{% endblocktrans %}
             </h3>
 
             <p class="text-muted mb-4">
-                Bu switchler, asansörün normal çalışma düzenindeki <strong>"gözleridir"</strong>. Kabin üzerindeki bir kolun (paten/cam) makaraya çarpmasıyla çalışır.
+                {% blocktrans %}Bu switchler, asansörün normal çalışma düzenindeki <strong>"gözleridir"</strong>. Kabin üzerindeki bir kolun (paten/cam) makaraya çarpmasıyla çalışır.{% endblocktrans %}
             </p>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-bullseye tech-list-icon"></i>
                 <div>
-                    <span class="tech-label">Görevi:</span>
-                    <p class="tech-text">Asansörün kat hizasını geçtiğini veya limitlere yaklaştığını kontrol sistemine bildirir.</p>
+                    <span class="tech-label">{% trans "Görevi:" %}</span>
+                    <p class="tech-text">{% trans "Asansörün kat hizasını geçtiğini veya limitlere yaklaştığını kontrol sistemine bildirir." %}</p>
                 </div>
             </div>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-gears tech-list-icon"></i>
                 <div>
-                    <span class="tech-label">Çalışma Prensibi:</span>
-                    <p class="tech-text">Makara üzerindeki baskı kalktığında (kabin uzaklaştığında), switch içindeki yay sayesinde kontağını eski haline getirir.</p>
+                    <span class="tech-label">{% trans "Çalışma Prensibi:" %}</span>
+                    <p class="tech-text">{% trans "Makara üzerindeki baskı kalktığında (kabin uzaklaştığında), switch içindeki yay sayesinde kontağını eski haline getirir." %}</p>
                 </div>
             </div>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-screwdriver-wrench tech-list-icon"></i>
                 <div>
-                    <span class="tech-label">Kullanım Alanı ve Montaj:</span>
-                    <p class="tech-text">Kat durdurucu veya yavaşlama limitlerinde kullanılır. Döner kafası sayesinde her açıdan gelen tetikleyiciye uyum sağlar.</p>
+                    <span class="tech-label">{% trans "Kullanım Alanı ve Montaj:" %}</span>
+                    <p class="tech-text">{% trans "Kat durdurucu veya yavaşlama limitlerinde kullanılır. Döner kafası sayesinde her açıdan gelen tetikleyiciye uyum sağlar." %}</p>
                 </div>
             </div>
 
@@ -326,7 +308,7 @@ Teknik özellikler ve katalog için tıklayın.
                 
                 <img src="{% static 'image/pageproduct/switchsystem/makarali-switch-montaj.webp' %}" 
                         class="img-fluid rounded-4 showcase-img" 
-                        alt="Makaralı Switch Montajı - Asansör Ray Sistemi Üzerinde Sınır Kesici Uygulaması"
+                        alt="{% trans 'Makaralı Switch Montajı - Asansör Ray Sistemi Üzerinde Sınır Kesici Uygulaması' %}"
                         style="max-height: 500px; width: auto;">
             </div>
         </div>
@@ -345,7 +327,7 @@ Teknik özellikler ve katalog için tıklayın.
                 
                 <img src="{% static 'image/pageproduct/switchsystem/resetsiz-switch-montaj.webp' %}"
                         class="img-fluid rounded-4 showcase-img" 
-                        alt="LiftKeys Resetsiz Manuel Resetli Switch - Asansör Son Durak Emniyet Sistemi ve Kilit Mekanizması"
+                        alt="{% trans 'LiftKeys Resetsiz Manuel Resetli Switch - Asansör Son Durak Emniyet Sistemi ve Kilit Mekanizması' %}"
                         style="max-height: 500px; width: auto;">
             </div>
         </div>
@@ -353,38 +335,38 @@ Teknik özellikler ve katalog için tıklayın.
         <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
             
             <div class="feature-quote" style="border-left-color: #dc3545; background: linear-gradient(90deg, #fff5f5 0%, transparent 100%);">
-                "Sorumluluk alır, hata düzeltilmeden harekete izin vermez!"
+                {% trans '"Sorumluluk alır, hata düzeltilmeden harekete izin vermez!"' %}
             </div>
 
             <h3 class="feature-title">
-                2. Resetsiz (Manuel Resetli) Switch <span style="font-weight: 400; font-size: 1.2rem; color: #dc3545;">- "Son Durak"</span>
+                {% blocktrans %}2. Resetsiz (Manuel Resetli) Switch <span style="font-weight: 400; font-size: 1.2rem; color: #dc3545;">- "Son Durak"</span>{% endblocktrans %}
             </h3>
 
             <p class="text-muted mb-4">
-                Bu switch, asansörün emniyet zincirindeki en sert güvenlik önlemidir. Genellikle kırmızı renkte olur ve üzerinde mekanik bir kilit mekanizması bulunur.
+                {% trans "Bu switch, asansörün emniyet zincirindeki en sert güvenlik önlemidir. Genellikle kırmızı renkte olur ve üzerinde mekanik bir kilit mekanizması bulunur." %}
             </p>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-shield-halved tech-list-icon" style="color: #dc3545;"></i>
                 <div>
-                    <span class="tech-label">Görevi:</span>
-                    <p class="tech-text">Asansör tehlikeli bir sınırı (nihai sınırı) aştığında devreyi keser ve asansörü frenleyerek kilitler.</p>
+                    <span class="tech-label">{% trans "Görevi:" %}</span>
+                    <p class="tech-text">{% trans "Asansör tehlikeli bir sınırı (nihai sınırı) aştığında devreyi keser ve asansörü frenleyerek kilitler." %}</p>
                 </div>
             </div>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-lock tech-list-icon" style="color: #dc3545;"></i>
                 <div>
-                    <span class="tech-label">Kritik Fark:</span>
-                    <p class="tech-text">Bu switch bir kez tetiklendiğinde, kabin oradan uzaklaşsa bile sistem <strong>kendi kendine düzelmez.</strong> Bir teknik personelin makine dairesine veya kuyuya gidip switch üzerindeki butona basarak elle resetlemesi gerekir.</p>
+                    <span class="tech-label">{% trans "Kritik Fark:" %}</span>
+                    <p class="tech-text">{% blocktrans %}Bu switch bir kez tetiklendiğinde, kabin oradan uzaklaşsa bile sistem <strong>kendi kendine düzelmez.</strong> Bir teknik personelin makine dairesine veya kuyuya gidip switch üzerindeki butona basarak elle resetlemesi gerekir.{% endblocktrans %}</p>
                 </div>
             </div>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-triangle-exclamation tech-list-icon" style="color: #dc3545;"></i>
                 <div>
-                    <span class="tech-label">Neden Önemli?</span>
-                    <p class="tech-text">Eğer asansör nihai sınırı geçtiyse, ortada büyük bir arıza var demektir. Resetsiz switch, arıza giderilmeden asansörün tekrar çalışmasına izin vermez.</p>
+                    <span class="tech-label">{% trans "Neden Önemli?" %}</span>
+                    <p class="tech-text">{% trans "Eğer asansör nihai sınırı geçtiyse, ortada büyük bir arıza var demektir. Resetsiz switch, arıza giderilmeden asansörün tekrar çalışmasına izin vermez." %}</p>
                 </div>
             </div>
 
@@ -392,7 +374,6 @@ Teknik özellikler ve katalog için tıklayın.
 
     </div>
 </div>
-
 
 <div class="my-5 py-3"></div>
 
@@ -402,38 +383,38 @@ Teknik özellikler ve katalog için tıklayın.
         <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
             
             <div class="feature-quote" style="border-left-color: #198754; background: linear-gradient(90deg, #f0fff4 0%, transparent 100%);">
-                "Güvenli duruş, pratik dönüş!"
+                {% trans '"Güvenli duruş, pratik dönüş!"' %}
             </div>
 
             <h3 class="feature-title">
-                3. Resetli Switch <span style="font-weight: 400; font-size: 1.2rem; color: #198754;">(Otomatik Resetli)</span>
+                {% blocktrans %}3. Resetli Switch <span style="font-weight: 400; font-size: 1.2rem; color: #198754;">(Otomatik Resetli)</span>{% endblocktrans %}
             </h3>
 
             <p class="text-muted mb-4">
-                Makaralı switch ile resetsiz switch arasındaki orta yoldur. Güvenlik sağlar ancak sistemin tamamen kilitlenmesini istemediğiniz noktalarda kullanılır.
+                {% trans "Makaralı switch ile resetsiz switch arasındaki orta yoldur. Güvenlik sağlar ancak sistemin tamamen kilitlenmesini istemediğiniz noktalarda kullanılır." %}
             </p>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-bolt tech-list-icon" style="color: #198754;"></i>
                 <div>
-                    <span class="tech-label">Görevi:</span>
-                    <p class="tech-text">Limit dışı bir hareket algılandığında devreyi anında keser.</p>
+                    <span class="tech-label">{% trans "Görevi:" %}</span>
+                    <p class="tech-text">{% trans "Limit dışı bir hareket algılandığında devreyi anında keser." %}</p>
                 </div>
             </div>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-rotate-right tech-list-icon" style="color: #198754;"></i>
                 <div>
-                    <span class="tech-label">Çalışma Prensibi:</span>
-                    <p class="tech-text">Tetikleyici unsur (kabin) switchin üzerinden çekildiğinde, switch kendi iç mekanizmasıyla otomatik olarak <strong>"hazır"</strong> konumuna döner. Manuel müdahaleye gerek duymaz.</p>
+                    <span class="tech-label">{% trans "Çalışma Prensibi:" %}</span>
+                    <p class="tech-text">{% blocktrans %}Tetikleyici unsur (kabin) switchin üzerinden çekildiğinde, switch kendi iç mekanizmasıyla otomatik olarak <strong>"hazır"</strong> konumuna döner. Manuel müdahaleye gerek duymaz.{% endblocktrans %}</p>
                 </div>
             </div>
 
             <div class="tech-list-item">
                 <i class="fa-solid fa-gauge-high tech-list-icon" style="color: #198754;"></i>
                 <div>
-                    <span class="tech-label">Kullanım Alanı:</span>
-                    <p class="tech-text">Hız regülatörleri veya geçici güvenlik bölgelerinde tercih edilir.</p>
+                    <span class="tech-label">{% trans "Kullanım Alanı:" %}</span>
+                    <p class="tech-text">{% trans "Hız regülatörleri veya geçici güvenlik bölgelerinde tercih edilir." %}</p>
                 </div>
             </div>
         </div>
@@ -444,7 +425,7 @@ Teknik özellikler ve katalog için tıklayın.
                 
                 <img src="{% static 'image/pageproduct/switchsystem/resetli-switch-montaj.webp' %}" 
                         class="img-fluid rounded-4 showcase-img" 
-                        alt="Otomatik Resetli Asansör Switchi - Hız Regülatörü Uygulaması"
+                        alt="{% trans 'Otomatik Resetli Asansör Switchi - Hız Regülatörü Uygulaması' %}"
                         style="max-height: 450px; width: auto;">
             </div>
         </div>
@@ -461,7 +442,7 @@ Teknik özellikler ve katalog için tıklayın.
                 <div class="p-4 bg-white rounded-circle shadow-sm d-inline-block" style="border: 1px solid #eee;">
                 <img src="{% static 'image/pageproduct/switchsystem/yandan-baskili-switch.webp' %}" 
                         class="img-fluid" 
-                        alt="Dar Kuyu Asansör Switch Çözümleri - Yandan Baskılı Limit Switch"
+                        alt="{% trans 'Dar Kuyu Asansör Switch Çözümleri - Yandan Baskılı Limit Switch' %}"
                         style="max-height: 350px;">
                 </div>
         </div>
@@ -469,22 +450,22 @@ Teknik özellikler ve katalog için tıklayın.
         <div class="col-lg-7" data-aos="fade-left">
             
             <h3 class="feature-title" style="font-size: 1.8rem;">
-                Dar Alanların Akıllı Çözümü:<br>
-                <span style="color: #F08200;">Yandan Baskılı Switchler</span>
+                {% blocktrans %}Dar Alanların Akıllı Çözümü:<br>
+                <span style="color: #F08200;">Yandan Baskılı Switchler</span>{% endblocktrans %}
             </h3>
 
             <p class="lead text-muted">
-                Yandan Baskılı Switchler, özellikle asansör kuyusu gibi dar ve montajın zor olduğu alanlar için geliştirilmiş, mühendislik harikası çözümlerdir.
+                {% trans "Yandan Baskılı Switchler, özellikle asansör kuyusu gibi dar ve montajın zor olduğu alanlar için geliştirilmiş, mühendislik harikası çözümlerdir." %}
             </p>
 
             <p class="mb-4" style="color: #555;">
-                Bu switchler, tetikleyici mekanizmanın (switch'in tepesinden değil, yan yüzeyinden sürtünerek veya çarparak geçmesiyle çalışır.
+                {% trans "Bu switchler, tetikleyici mekanizmanın switch'in tepesinden değil, yan yüzeyinden sürtünerek veya çarparak geçmesiyle çalışır." %}
             </p>
 
             <div class="p-3 rounded bg-light border-start border-4 border-warning">
-                <h5 class="fw-bold mb-2"><i class="fa-solid fa-crosshairs me-2 text-warning"></i>GÖREVİ:</h5>
+                <h5 class="fw-bold mb-2"><i class="fa-solid fa-crosshairs me-2 text-warning"></i>{% trans "GÖREVİ:" %}</h5>
                 <p class="mb-0 small text-secondary">
-                    Tetikleyici mekanizmaya paralel montaj imkanı sağlar. Yandan gelen baskılara karşı güçlendirilmiş yapısı, çarpma anındaki sarsıntıyı emer ve stabiliteyi bozmaz.
+                    {% trans "Tetikleyici mekanizmaya paralel montaj imkanı sağlar. Yandan gelen baskılara karşı güçlendirilmiş yapısı, çarpma anındaki sarsıntıyı emer ve stabiliteyi bozmaz." %}
                 </p>
             </div>
 
@@ -500,46 +481,48 @@ Teknik özellikler ve katalog için tıklayın.
     <div class="row justify-content-center mb-4" data-aos="fade-down">
         <div class="col-12 text-center">
             <h2 class="fw-bold" style="color: #495057;">
-                <i class="fa-solid fa-gears text-warning me-2"></i>Teknik Özellikler
+                <i class="fa-solid fa-gears text-warning me-2"></i>{% trans "Teknik Özellikler" %}
             </h2>
-            <p class="text-muted">Tüm LiftKeys switch serisi için geçerli uluslararası standartlar.</p>
+            <p class="text-muted">{% trans "Tüm LiftKeys switch serisi için geçerli uluslararası standartlar." %}</p>
         </div>
     </div>
+
+    
 
     <div class="row g-3 justify-content-center mb-5" data-aos="fade-up">
         
         <div class="col-6 col-md-4 col-lg-3">
             <div class="p-3 border rounded text-center h-100 bg-white shadow-sm" style="border-top: 3px solid #F08200 !important;">
-                <small class="d-block text-muted mb-1">Standardına Uygun</small>
-                <div class="fw-bold text-dark">EN 60947-5-1</div>
+                <small class="d-block text-muted mb-1">{% trans "Standardına Uygun" %}</small>
+                <div class="fw-bold text-dark">{% trans "EN 60947-5-1" %}</div>
             </div>
         </div>
 
         <div class="col-6 col-md-4 col-lg-2">
             <div class="p-3 border rounded text-center h-100 bg-white shadow-sm" style="border-top: 3px solid #F08200 !important;">
-                <small class="d-block text-muted mb-1">Koruma Sınıfı</small>
-                <div class="fw-bold text-dark"><i class="fa-solid fa-shield-cat me-1"></i>IP65</div>
+                <small class="d-block text-muted mb-1">{% trans "Koruma Sınıfı" %}</small>
+                <div class="fw-bold text-dark"><i class="fa-solid fa-shield-cat me-1"></i>{% trans "IP65" %}</div>
             </div>
         </div>
 
         <div class="col-6 col-md-4 col-lg-2">
             <div class="p-3 border rounded text-center h-100 bg-white shadow-sm" style="border-top: 3px solid #F08200 !important;">
-                <small class="d-block text-muted mb-1">Darbe Dayanımı</small>
-                <div class="fw-bold text-dark">6 kV</div>
+                <small class="d-block text-muted mb-1">{% trans "Darbe Dayanımı" %}</small>
+                <div class="fw-bold text-dark">{% trans "6 kV" %}</div>
             </div>
         </div>
 
         <div class="col-6 col-md-4 col-lg-2">
             <div class="p-3 border rounded text-center h-100 bg-white shadow-sm" style="border-top: 3px solid #F08200 !important;">
-                <small class="d-block text-muted mb-1">Yalıtım Gerilimi</small>
-                <div class="fw-bold text-dark">500 V</div>
+                <small class="d-block text-muted mb-1">{% trans "Yalıtım Gerilimi" %}</small>
+                <div class="fw-bold text-dark">{% trans "500 V" %}</div>
             </div>
         </div>
 
             <div class="col-6 col-md-4 col-lg-3">
             <div class="p-3 border rounded text-center h-100 bg-white shadow-sm" style="border-top: 3px solid #F08200 !important;">
-                <small class="d-block text-muted mb-1">Kontak Yapısı</small>
-                <div class="fw-bold text-dark">1 NO + 1 NC</div>
+                <small class="d-block text-muted mb-1">{% trans "Kontak Yapısı" %}</small>
+                <div class="fw-bold text-dark">{% trans "1 NO + 1 NC" %}</div>
             </div>
         </div>
     </div>
@@ -550,41 +533,41 @@ Teknik özellikler ve katalog için tıklayın.
                 <table class="table table-hover table-bordered align-middle text-center mb-0">
                     <thead style="background-color: #343a40; color: white;">
                         <tr>
-                            <th scope="col" class="py-3">Özellik</th>
-                            <th scope="col" class="py-3">Makaralı Switch</th>
-                            <th scope="col" class="py-3">Resetli Switch</th>
-                            <th scope="col" class="py-3" style="background-color: #dc3545;">Resetsiz Switch (Manuel)</th>
+                            <th scope="col" class="py-3">{% trans "Özellik" %}</th>
+                            <th scope="col" class="py-3">{% trans "Makaralı Switch" %}</th>
+                            <th scope="col" class="py-3">{% trans "Resetli Switch" %}</th>
+                            <th scope="col" class="py-3" style="background-color: #dc3545;">{% trans "Resetsiz Switch (Manuel)" %}</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white">
                         <tr>
-                            <td class="fw-bold text-secondary text-start ps-4">Hassasiyet</td>
-                            <td>Orta</td>
-                            <td>Yüksek</td>
-                            <td class="fw-bold text-danger">En Yüksek (Nihai)</td>
+                            <td class="fw-bold text-secondary text-start ps-4">{% trans "Hassasiyet" %}</td>
+                            <td>{% trans "Orta" %}</td>
+                            <td>{% trans "Yüksek" %}</td>
+                            <td class="fw-bold text-danger">{% trans "En Yüksek (Nihai)" %}</td>
                         </tr>
                         
                         <tr>
-                            <td class="fw-bold text-secondary text-start ps-4">Müdahale</td>
-                            <td class="text-success"><i class="fa-solid fa-check me-1"></i>Otomatik düzelir</td>
-                            <td class="text-success"><i class="fa-solid fa-check me-1"></i>Otomatik düzelir</td>
+                            <td class="fw-bold text-secondary text-start ps-4">{% trans "Müdahale" %}</td>
+                            <td class="text-success"><i class="fa-solid fa-check me-1"></i>{% trans "Otomatik düzelir" %}</td>
+                            <td class="text-success"><i class="fa-solid fa-check me-1"></i>{% trans "Otomatik düzelir" %}</td>
                             <td class="bg-light text-danger fw-bold">
-                                <i class="fa-solid fa-hand me-1"></i>Elle müdahale şart!
+                                <i class="fa-solid fa-hand me-1"></i>{% trans "Elle müdahale şart!" %}
                             </td>
                         </tr>
 
                         <tr>
-                            <td class="fw-bold text-secondary text-start ps-4">Güvenlik Rolü</td>
-                            <td>Yönlendirme / Durdurma</td>
-                            <td>Emniyet Devresi</td>
-                            <td class="fw-bold text-danger">Son Savunma Hattı</td>
+                            <td class="fw-bold text-secondary text-start ps-4">{% trans "Güvenlik Rolü" %}</td>
+                            <td>{% trans "Yönlendirme / Durdurma" %}</td>
+                            <td>{% trans "Emniyet Devresi" %}</td>
+                            <td class="fw-bold text-danger">{% trans "Son Savunma Hattı" %}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             
             <div class="mt-3 text-end">
-                <small class="text-muted fst-italic">* Tablodaki değerler EN 81-20/50 standartlarına göre belirlenmiştir.</small>
+                <small class="text-muted fst-italic">{% trans "* Tablodaki değerler EN 81-20/50 standartlarına göre belirlenmiştir." %}</small>
             </div>
         </div>
     </div>
@@ -596,45 +579,45 @@ Teknik özellikler ve katalog için tıklayın.
     <div class="row align-items-center"> <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
             
             <h2 class="mb-4" style="color: #6c757d; font-weight: 300; font-size: 2rem; line-height: 1.2;">
-                "Asansörün Güvenlik Haritası:<br>
-                <strong style="color: #495057; font-weight: 600;">Switch Kullanım Alanları"</strong>
+                {% blocktrans %}"Asansörün Güvenlik Haritası:<br>
+                <strong style="color: #495057; font-weight: 600;">Switch Kullanım Alanları"</strong>{% endblocktrans %}
             </h2>
 
             <p class="lead mb-4" style="font-size: 1.1rem; color: #888;">
-                Asansörde her hareketli ve güvenlik odaklı parça, bir switch ile denetlenir. İşte sizin sunduğunuz donanımlarda switchlerin hayati görevleri:
+                {% trans "Asansörde her hareketli ve güvenlik odaklı parça, bir switch ile denetlenir. İşte sizin sunduğunuz donanımlarda switchlerin hayati görevleri:" %}
             </p>
 
             <div class="mb-4">
-                <h3 class="fw-bold h5" style="color: #F08200;">Kuyu ve Ekipmanları Güvenliği;</h3>
+                <h3 class="fw-bold h5" style="color: #F08200;">{% trans "Kuyu ve Ekipmanları Güvenliği;" %}</h3>
                 <p class="text-muted mb-2">
-                    <strong>Kuyu Dibi Merdiveni:</strong> Merdiven yerinden çıkarılmadan veya doğru konumlanmadan asansörün çalışmasını engeller (Personel güvenliği).
+                    {% blocktrans %}<strong>Kuyu Dibi Merdiveni:</strong> Merdiven yerinden çıkarılmadan veya doğru konumlanmadan asansörün çalışmasını engeller (Personel güvenliği).{% endblocktrans %}
                 </p>
             </div>
 
             <div class="mb-4">
-                <h3 class="fw-bold h5" style="color: #F08200;">Güvenlik Ekipmanları;</h3>
+                <h3 class="fw-bold h5" style="color: #F08200;">{% trans "Güvenlik Ekipmanları;" %}</h3>
                 <p class="text-muted mb-2">
-                    <strong>Hidrolik Tamponlar:</strong> Kabin veya karşı ağırlık tampona oturduğunda emniyet devresini keserek sistemi korumaya alır.
+                    {% blocktrans %}<strong>Hidrolik Tamponlar:</strong> Kabin veya karşı ağırlık tampona oturduğunda emniyet devresini keserek sistemi korumaya alır.{% endblocktrans %}
                 </p>
                 <p class="text-muted mb-2">
-                    <strong>Regülatör ve Frenler:</strong> Aşırı hızlanma durumunda mekanik frenleme başladığı an elektriksel olarak da sistemi durdurur.
-                </p>
-            </div>
-
-            <div class="mb-4">
-                <h3 class="fw-bold h5" style="color: #F08200;">Kabin Üstü ve Altı Emniyeti;</h3>
-                <p class="text-muted mb-2">
-                    <strong>Hareketli Kabin Üstü Korkuluk:</strong> Korkuluk kapalıyken veya yanlış pozisyondayken asansörün normal çalışmasını durdurur, sadece bakım moduna izin verir.
-                </p>
-                <p class="text-muted mb-2">
-                    <strong>Dişlisiz (Gearless) Kilitleme Aparatı:</strong> Bakım sırasında motoru kilitleyen aparatın takılı olup olmadığını denetler.
+                    {% blocktrans %}<strong>Regülatör ve Frenler:</strong> Aşırı hızlanma durumunda mekanik frenleme başladığı an elektriksel olarak da sistemi durdurur.{% endblocktrans %}
                 </p>
             </div>
 
             <div class="mb-4">
-                <h3 class="fw-bold h5" style="color: #F08200;">Katlanır Etek Sacları;</h3>
+                <h3 class="fw-bold h5" style="color: #F08200;">{% trans "Kabin Üstü ve Altı Emniyeti;" %}</h3>
+                <p class="text-muted mb-2">
+                    {% blocktrans %}<strong>Hareketli Kabin Üstü Korkuluk:</strong> Korkuluk kapalıyken veya yanlış pozisyondayken asansörün normal çalışmasını durdurur, sadece bakım moduna izin verir.{% endblocktrans %}
+                </p>
+                <p class="text-muted mb-2">
+                    {% blocktrans %}<strong>Dişlisiz (Gearless) Kilitleme Aparatı:</strong> Bakım sırasında motoru kilitleyen aparatın takılı olup olmadığını denetler.{% endblocktrans %}
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <h3 class="fw-bold h5" style="color: #F08200;">{% trans "Katlanır Etek Sacları;" %}</h3>
                 <p class="text-muted">
-                    Etek sacı açık veya tam kilitli değilken asansörün güvenli bölge dışına çıkmasını engeller.
+                    {% trans "Etek sacı açık veya tam kilitli değilken asansörün güvenli bölge dışına çıkmasını engeller." %}
                 </p>
             </div>
 
@@ -645,7 +628,7 @@ Teknik özellikler ve katalog için tıklayın.
                 
                 <img src="{% static 'image/pageproduct/switchsystem/switch-kullanim-alanlari-birlestirilmis.webp' %}" 
                      class="img-fluid w-100" 
-                     alt="Asansör Switch Sistemleri Kullanım Alanları ve Güvenlik Noktaları Şeması"
+                     alt="{% trans 'Asansör Switch Sistemleri Kullanım Alanları ve Güvenlik Noktaları Şeması' %}"
                      loading="lazy"
                      style="object-fit: contain;">
                      
@@ -658,18 +641,18 @@ Teknik özellikler ve katalog için tıklayın.
 <div class="container my-5">
     <div class="row justify-content-center" data-aos="fade-up">
         <div class="col-lg-10">
-            <h2 class="fw-bold text-center mb-4 text-secondary h3">Switch Sistemleri Hakkında Sıkça Sorulan Sorular</h2>
+            <h2 class="fw-bold text-center mb-4 text-secondary h3">{% trans "Switch Sistemleri Hakkında Sıkça Sorulan Sorular" %}</h2>
             
             <div class="accordion shadow-sm" id="accordionSwitch">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingOne">
                         <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            Resetsiz (Son Durak) switch neden gereklidir?
+                            {% trans "Resetsiz (Son Durak) switch neden gereklidir?" %}
                         </button>
                     </h3>
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionSwitch">
                         <div class="accordion-body text-muted">
-                            Asansörün nihai limitleri aşması durumunda sistemi mekanik olarak kilitler. Bu, büyük bir arızanın habercisidir ve yetkili personel kontrolü olmadan asansörün çalışmasını engelleyerek tam güvenlik sağlar.
+                            {% trans "Asansörün nihai limitleri aşması durumunda sistemi mekanik olarak kilitler. Bu, büyük bir arızanın habercisidir ve yetkili personel kontrolü olmadan asansörün çalışmasını engelleyerek tam güvenlik sağlar." %}
                         </div>
                     </div>
                 </div>
@@ -677,12 +660,12 @@ Teknik özellikler ve katalog için tıklayın.
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                            Yandan baskılı switchler hangi durumlarda kullanılır?
+                            {% trans "Yandan baskılı switchler hangi durumlarda kullanılır?" %}
                         </button>
                     </h3>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSwitch">
                         <div class="accordion-body text-muted">
-                            Özellikle <strong>dar asansör kuyularında</strong> ve montaj alanının kısıtlı olduğu durumlarda tercih edilir. Tetikleyici mekanizmanın yandan sürtünmesiyle çalışarak yerden tasarruf sağlar.
+                            {% blocktrans %}Özellikle <strong>dar asansör kuyularında</strong> ve montaj alanının kısıtlı olduğu durumlarda tercih edilir. Tetikleyici mekanizmanın yandan sürtünmesiyle çalışarak yerden tasarruf sağlar.{% endblocktrans %}
                         </div>
                     </div>
                 </div>
@@ -691,8 +674,40 @@ Teknik özellikler ve katalog için tıklayın.
     </div>
 </div>
 
-{% include "preview/iletisimformpreview.html" %}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include "preview/iletisimformpreview.html" %}
+<script>
+    function loadYoutubeVideo(element) {
+        var videoId = element.getAttribute("data-video-id");
+        
+        // Bu tasarımdaki min-height: 350px değerini iframe'e uyarlıyoruz
+        var iframeHTML = `
+            <iframe width="100%" height="100%" style="min-height: 350px;"
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        `;
+        
+        element.innerHTML = iframeHTML;
+    }
+</script>
 
 <style>
     .btn-lg:hover {

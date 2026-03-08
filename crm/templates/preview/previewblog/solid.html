@@ -35,7 +35,7 @@ B1 sınıfı alev almaz yapısı ve kolay montaj avantajlarını inceleyin.
 {% endblock %}
 
 {# Not: Sosyal medya paylaşım resmi solid levha videosunun kapağı yapıldı #}
-{% block og_image %}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
 
 
 {% block tw_title %}
@@ -49,8 +49,7 @@ Montajı kolay, makasla kesilebilir, B1 sınıfı yanmaz.
 Detaylar için tıklayın.
 {% endblocktrans %}
 {% endblock %}
-
-{% block tw_image %}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
 
 
 {# --- CSS BLOĞU --- #}
@@ -158,6 +157,7 @@ Detaylar için tıklayın.
 
 
 
+
 <div class="container my-5">
     
     <div class="row mb-5" data-aos="fade-down">
@@ -169,7 +169,7 @@ Detaylar için tıklayın.
                     <i class="fa-solid fa-shield-halved fs-4"></i>
                 </div>
                 <span style="font-weight: 600; letter-spacing: 0.5px; font-size: 1.3rem;">
-                    LIFTKEYS – Solid Levha ve Polistren Levha
+                    {% trans "LIFTKEYS – Solid Levha ve Polistren Levha" %}
                 </span>
             </h1>
         </div>
@@ -181,7 +181,7 @@ Detaylar için tıklayın.
             <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card">
                 <img src="{% static 'image/pageproduct/solid/solid-levha-video.webp' %}" 
                      class="img-fluid w-100" 
-                     alt="LiftKeys Solid Polikarbonat Levha - Kırılmaz Asansör Tavan Malzemesi"
+                     alt="{% trans 'LiftKeys Solid Polikarbonat Levha - Kırılmaz Asansör Tavan Malzemesi' %}"
                      style="object-fit: cover; min-height: 350px;"
                      loading="lazy">
                 
@@ -198,20 +198,20 @@ Detaylar için tıklayın.
             
             <div class="quote-box mb-4 ps-4 py-2" style="border-left: 5px solid #F08200;">
                 <h2 class="h3 text-secondary fw-light fst-italic">
-                    “Kırılmaz Bir Estetik:<br>
-                    <strong style="color: #495057; font-weight: 700;">Asansörünüzün Şeffaf Zırhı!”</strong>
+                    {% blocktrans %}“Kırılmaz Bir Estetik:<br>
+                    <strong style="color: #495057; font-weight: 700;">Asansörünüzün Şeffaf Zırhı!”</strong>{% endblocktrans %}
                 </h2>
             </div>
 
             <p class="text-muted fs-5 mb-4 leading-relaxed">
-                Camdan <strong class="text-dark fs-4">250 kat</strong>, pleksiden ise <strong class="text-dark fs-4">30 kat</strong> daha dayanıklıdır.
+                {% blocktrans %}Camdan <strong class="text-dark fs-4">250 kat</strong>, pleksiden ise <strong class="text-dark fs-4">30 kat</strong> daha dayanıklıdır.{% endblocktrans %}
             </p>
 
             <div class="mt-4">
-                <a href="#" class="btn btn-lg shadow-sm text-white d-inline-flex align-items-center gap-2 px-4 py-2 rounded-3 hover-lift" 
-                   style="background-color: #F08200; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease;">
+                <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-lg shadow-sm text-white d-inline-flex align-items-center gap-2 px-4 py-2 rounded-3 hover-lift" 
+                   style="background-color: #F08200; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease;" download>
                     <i class="fa-solid fa-book-open"></i>
-                    Ürün Kataloğu İndir
+                    {% trans "Ürün Kataloğu İndir" %}
                 </a>
             </div>
 
@@ -234,16 +234,16 @@ Detaylar için tıklayın.
                 
                 <img src="{% static 'image/pageproduct/solid/solid-levha-kirilmazlik-testi.webp' %}" 
                         class="img-fluid w-100" 
-                        alt="Asansör Solid Levha Kırılmazlık Testi ve Güvenlik Camı"
+                        alt="{% trans 'Asansör Solid Levha Kırılmazlık Testi ve Güvenlik Camı' %}"
                         style="object-fit: cover; min-height: 500px; filter: brightness(0.8);"
                         loading="lazy">
                 
                 <div class="position-absolute bottom-0 start-0 p-4 w-100 bg-gradient-dark">
                     <h2 class="text-white fw-bold display-6 mb-1" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
-                        KIRILMAZ BİR ESTETİK
+                        {% trans "KIRILMAZ BİR ESTETİK" %}
                     </h2>
                     <h3 class="text-white fw-light h4 mb-0" style="letter-spacing: 2px;">
-                        ASANSÖRÜN ŞEFFAF <strong class="text-orange">ZIRHI!</strong>
+                        {% blocktrans %}ASANSÖRÜN ŞEFFAF <strong class="text-orange">ZIRHI!</strong>{% endblocktrans %}
                     </h3>
                 </div>
 
@@ -255,65 +255,65 @@ Detaylar için tıklayın.
             <div class="mb-4">
                 <h4 class="fw-bold text-dark h5 d-flex align-items-center">
                     <i class="fa-solid fa-shield-cat text-orange me-2"></i>
-                    Kırılmazlık ve Maksimum Güvenlik
+                    {% trans "Kırılmazlık ve Maksimum Güvenlik" %}
                 </h4>
                 <p class="text-muted small ps-4 ms-1 border-start border-2 border-light">
-                    Solid polikarbon, "kurşun geçirmez cam" yapımında kullanılan ana malzemedir.
+                    {% trans "Solid polikarbon, 'kurşun geçirmez cam' yapımında kullanılan ana malzemedir." %}
                 </p>
             </div>
 
             <div class="mb-4">
                 <h4 class="fw-bold text-dark h5 d-flex align-items-center">
                     <i class="fa-solid fa-hammer text-orange me-2"></i>
-                    Darbeye Dayanım
+                    {% trans "Darbeye Dayanım" %}
                 </h4>
                 <p class="text-muted small ps-4 ms-1 border-start border-2 border-light">
-                    Asansör içi yük taşımalarında veya vandalizm (kasıtlı zarar verme) durumlarında kesinlikle kırılmaz, çatlamaz.
+                    {% trans "Asansör içi yük taşımalarında veya vandalizm (kasıtlı zarar verme) durumlarında kesinlikle kırılmaz, çatlamaz." %}
                 </p>
             </div>
 
             <div class="mb-4">
                 <h4 class="fw-bold text-dark h5 d-flex align-items-center">
                     <i class="fa-solid fa-user-shield text-orange me-2"></i>
-                    Yaralanma Riski Sıfır
+                    {% trans "Yaralanma Riski Sıfır" %}
                 </h4>
                 <p class="text-muted small ps-4 ms-1 border-start border-2 border-light">
-                    Kırılmadığı için kabin içine keskin parçaların dökülme riskini tamamen ortadan kaldırır.
+                    {% trans "Kırılmadığı için kabin içine keskin parçaların dökülme riskini tamamen ortadan kaldırır." %}
                 </p>
             </div>
 
             <div class="mb-5">
                 <h4 class="fw-bold text-dark h5 d-flex align-items-center">
                     <i class="fa-solid fa-fire-extinguisher text-orange me-2"></i>
-                    Yangına Dayanım (Alev Almazlık)
+                    {% trans "Yangına Dayanım (Alev Almazlık)" %}
                 </h4>
                 <p class="text-muted small ps-4 ms-1 border-start border-2 border-light">
-                    Malzemenin yangın sırasında alevleri yaymaması ve tutuşmaya karşı dirençli olmasıdır. "Zor alevlenici" sınıftaki malzemeler tercih edilir.
+                    {% trans "Malzemenin yangın sırasında alevleri yaymaması ve tutuşmaya karşı dirençli olmasıdır. 'Zor alevlenici' sınıftaki malzemeler tercih edilir." %}
                 </p>
             </div>
 
             <div class="bg-light p-4 rounded-3 border-start border-4 border-warning">
-                <h5 class="fw-bold text-secondary mb-3">İlgili Belgeler ve Standartlar:</h5>
+                <h5 class="fw-bold text-secondary mb-3">{% trans "İlgili Belgeler ve Standartlar:" %}</h5>
                 
                 <div class="d-flex align-items-start mb-3">
                     <i class="fa-solid fa-certificate text-muted mt-1 me-3"></i>
                     <div>
-                        <strong class="d-block text-dark">EN 13501-1</strong>
-                        <span class="text-muted x-small">Avrupa standartlarında yapı malzemeleri için temel yangın sınıflandırma belgesidir. (Örn: A2 veya B s1, d0)</span>
+                        <strong class="d-block text-dark">{% trans "EN 13501-1" %}</strong>
+                        <span class="text-muted x-small">{% trans "Avrupa standartlarında yapı malzemeleri için temel yangın sınıflandırma belgesidir. (Örn: A2 veya B s1, d0)" %}</span>
                     </div>
                 </div>
 
                 <div class="d-flex align-items-center">
                     <i class="fa-solid fa-file-contract text-muted me-3"></i>
                     <div>
-                        <strong class="d-block text-dark">DIN 4102</strong>
-                        <span class="text-muted x-small">Alman standartlarına göre yangın dayanım sınıfı.</span>
+                        <strong class="d-block text-dark">{% trans "DIN 4102" %}</strong>
+                        <span class="text-muted x-small">{% trans "Alman standartlarına göre yangın dayanım sınıfı." %}</span>
                     </div>
                 </div>
                 
                 <div class="mt-3 text-end">
                     <a href="#" class="text-orange text-decoration-none small fw-bold hover-underline">
-                        Detayları Gör <i class="fa-solid fa-arrow-right ms-1"></i>
+                        {% trans "Detayları Gör" %} <i class="fa-solid fa-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
@@ -330,12 +330,12 @@ Detaylar için tıklayın.
         <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
             
             <div class="mb-4">
-                <span class="badge bg-danger px-3 py-2 mb-2">Güvenlik Önceliği</span>
+                <span class="badge bg-danger px-3 py-2 mb-2">{% trans "Güvenlik Önceliği" %}</span>
                 <h2 class="fw-bold text-dark display-6">
-                    Yangın Dayanımı <span class="text-secondary">(B1 Sınıfı)</span>
+                    {% blocktrans %}Yangın Dayanımı <span class="text-secondary">(B1 Sınıfı)</span>{% endblocktrans %}
                 </h2>
                 <p class="text-muted lead fs-6 mt-3">
-                    Asansör yönetmeliklerinde malzeme güvenliği esastır. Solid polikarbon, güç tutuşan ve alevi yaymayan yapısıyla hayat kurtarır.
+                    {% trans "Asansör yönetmeliklerinde malzeme güvenliği esastır. Solid polikarbon, güç tutuşan ve alevi yaymayan yapısıyla hayat kurtarır." %}
                 </p>
             </div>
 
@@ -348,9 +348,9 @@ Detaylar için tıklayın.
                         </div>
                     </div>
                     <div class="flex-grow-1 ms-3">
-                        <h5 class="fw-bold text-dark mb-1">Alev Almaz & Yaymaz</h5>
+                        <h5 class="fw-bold text-dark mb-1">{% trans "Alev Almaz & Yaymaz" %}</h5>
                         <p class="text-muted small mb-0">
-                            Yangın anında alevin büyümesine katkıda bulunmaz. Standart plastiklerin aksine zehirli gaz salınımı minimum düzeydedir.
+                            {% trans "Yangın anında alevin büyümesine katkıda bulunmaz. Standart plastiklerin aksine zehirli gaz salınımı minimum düzeydedir." %}
                         </p>
                     </div>
                 </div>
@@ -362,36 +362,36 @@ Detaylar için tıklayın.
                         </div>
                     </div>
                     <div class="flex-grow-1 ms-3">
-                        <h5 class="fw-bold text-dark mb-1">Damlama Yapmaz (No Dripping)</h5>
+                        <h5 class="fw-bold text-dark mb-1">{% trans "Damlama Yapmaz (No Dripping)" %}</h5>
                         <p class="text-muted small mb-0">
-                            En kritik güvenlik özelliğidir. Erime esnasında aşağıya (kuyu dibine) yanan parçalar damlatmaz, yangının alt katlara sıçramasını engeller.
+                            {% trans "En kritik güvenlik özelliğidir. Erime esnasında aşağıya (kuyu dibine) yanan parçalar damlatmaz, yangının alt katlara sıçramasını engeller." %}
                         </p>
                     </div>
                 </div>
 
             </div>
 
-            <h6 class="fw-bold text-secondary mb-3">İlgili Belgeler ve Standartlar:</h6>
+            <h6 class="fw-bold text-secondary mb-3">{% trans "İlgili Belgeler ve Standartlar:" %}</h6>
             <div class="row g-2">
                 
                 <div class="col-md-4">
                     <div class="p-2 border rounded bg-white text-center h-100 shadow-sm">
-                        <strong class="d-block text-orange">EN 13501-1</strong>
-                        <span class="d-block x-small text-muted mt-1">Avrupa Yangın Sınıflandırması</span>
+                        <strong class="d-block text-orange">{% trans "EN 13501-1" %}</strong>
+                        <span class="d-block x-small text-muted mt-1">{% trans "Avrupa Yangın Sınıflandırması" %}</span>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="p-2 border rounded bg-white text-center h-100 shadow-sm">
-                        <strong class="d-block text-orange">DIN 4102</strong>
-                        <span class="d-block x-small text-muted mt-1">Alman B1 (Zor Alevlenici)</span>
+                        <strong class="d-block text-orange">{% trans "DIN 4102" %}</strong>
+                        <span class="d-block x-small text-muted mt-1">{% trans "Alman B1 (Zor Alevlenici)" %}</span>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="p-2 border rounded bg-white text-center h-100 shadow-sm">
-                        <strong class="d-block text-orange">UL 94</strong>
-                        <span class="d-block x-small text-muted mt-1">V-0 Üst Düzey Direnç</span>
+                        <strong class="d-block text-orange">{% trans "UL 94" %}</strong>
+                        <span class="d-block x-small text-muted mt-1">{% trans "V-0 Üst Düzey Direnç" %}</span>
                     </div>
                 </div>
 
@@ -404,17 +404,17 @@ Detaylar için tıklayın.
                 
                 <img src="{% static 'image/pageproduct/solid/solid-levha-yangin-testi.webp' %}" 
                         class="img-fluid" 
-                        alt="Standart Plastik ve Solid Polikarbon Yanmazlık Testi Karşılaştırması"
+                        alt="{% trans 'Standart Plastik ve Solid Polikarbon Yanmazlık Testi Karşılaştırması' %}"
                         style="max-height: 550px;"
                         loading="lazy">
                 
                 <div class="bg-dark text-white p-3 d-flex justify-content-around align-items-center">
                     <div class="text-danger">
-                        <i class="fa-solid fa-circle-xmark me-1"></i> Standart Plastik
+                        <i class="fa-solid fa-circle-xmark me-1"></i> {% trans "Standart Plastik" %}
                     </div>
                     <div class="vr bg-secondary"></div>
                     <div class="text-success">
-                        <i class="fa-solid fa-circle-check me-1"></i> Solid Polikarbon
+                        <i class="fa-solid fa-circle-check me-1"></i> {% trans "Solid Polikarbon" %}
                     </div>
                 </div>
 
@@ -438,19 +438,19 @@ Detaylar için tıklayın.
                     <div class="position-relative rounded-3 overflow-hidden shadow-sm">
                         <img src="{% static 'image/pageproduct/solid/asansor-tavan-nokta-led.webp' %}" 
                                 class="img-fluid w-100" 
-                                alt="Nokta LED Görüntüsü (Difüzörsüz)"
+                                alt="{% trans 'Nokta LED Görüntüsü (Difüzörsüz)' %}"
                                 style="filter: grayscale(100%); opacity: 0.7;"
                                 loading="lazy">
-                        <div class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small">Eski Tip</div>
+                        <div class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small">{% trans "Eski Tip" %}</div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="position-relative rounded-3 overflow-hidden shadow-lg border border-warning">
                         <img src="{% static 'image/pageproduct/solid/asansor-tavan-homojen-isik.webp' %}" 
                                 class="img-fluid w-100" 
-                                alt="LiftKeys Solid Difüzörlü Homojen Aydınlatma"
+                                alt="{% trans 'LiftKeys Solid Difüzörlü Homojen Aydınlatma' %}"
                                 loading="lazy">
-                        <div class="position-absolute top-0 start-0 bg-warning text-dark px-2 py-1 small fw-bold">LiftKeys Çözümü</div>
+                        <div class="position-absolute top-0 start-0 bg-warning text-dark px-2 py-1 small fw-bold">{% trans "LiftKeys Çözümü" %}</div>
                     </div>
                 </div>
             </div>
@@ -459,25 +459,25 @@ Detaylar için tıklayın.
         <div class="col-lg-6 order-lg-1" data-aos="fade-right">
             <h3 class="fw-bold text-dark mb-3">
                 <i class="fa-solid fa-lightbulb text-orange me-2"></i>
-                Homojen Işık & Göz Konforu
+                {% trans "Homojen Işık & Göz Konforu" %}
             </h3>
             <p class="text-muted">
-                Difüzörün en büyük görevi, rahatsız edici LED noktalarını gizlemektir.
+                {% trans "Difüzörün en büyük görevi, rahatsız edici LED noktalarını gizlemektir." %}
             </p>
             
             <ul class="list-unstyled mt-3">
                 <li class="mb-3 d-flex">
                     <i class="fa-solid fa-check text-success mt-1 me-3"></i>
                     <div>
-                        <strong>Pürüzsüz Aydınlatma:</strong>
-                        <span class="text-muted small d-block">Işığı %85-90 oranında geçirirken "nokta nokta" görüntüsünü yok eder. Kabin içinde yumuşak bir ışık havuzu oluşturur.</span>
+                        <strong>{% trans "Pürüzsüz Aydınlatma:" %}</strong>
+                        <span class="text-muted small d-block">{% trans "Işığı %85-90 oranında geçirirken 'nokta nokta' görüntüsünü yok eder. Kabin içinde yumuşak bir ışık havuzu oluşturur." %}</span>
                     </div>
                 </li>
                 <li class="d-flex">
                     <i class="fa-solid fa-check text-success mt-1 me-3"></i>
                     <div>
-                        <strong>Sararma Yapmaz:</strong>
-                        <span class="text-muted small d-block">UV korumalı yapısı sayesinde güneş ışığı veya LED ısısıyla sararmaz, ilk günkü berraklığını korur.</span>
+                        <strong>{% trans "Sararma Yapmaz:" %}</strong>
+                        <span class="text-muted small d-block">{% trans "UV korumalı yapısı sayesinde güneş ışığı veya LED ısısıyla sararmaz, ilk günkü berraklığını korur." %}</span>
                     </div>
                 </li>
             </ul>
@@ -492,16 +492,16 @@ Detaylar için tıklayın.
         <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
             <h3 class="fw-bold text-dark mb-3">
                 <i class="fa-solid fa-feather-pointed text-orange me-2"></i>
-                Hafiflik ve Kolay Montaj
+                {% trans "Hafiflik ve Kolay Montaj" %}
             </h3>
             <p class="text-muted mb-4">
-                Camın yarı ağırlığındadır. Asansör kabin ağırlığını (karkas yükünü) artırmaz.
+                {% trans "Camın yarı ağırlığındadır. Asansör kabin ağırlığını (karkas yükünü) artırmaz." %}
             </p>
             
             <div class="p-3 bg-light rounded-3 border-start border-4 border-primary">
-                <h6 class="fw-bold text-primary mb-2">Montaj Avantajı:</h6>
+                <h6 class="fw-bold text-primary mb-2">{% trans "Montaj Avantajı:" %}</h6>
                 <p class="text-muted small mb-0">
-                    Montajı yapan personel için büyük kolaylık ve güvenlik sağlar. Kırılma riski olmadan, tek kişiyle bile montaj yapılabilir.
+                    {% trans "Montajı yapan personel için büyük kolaylık ve güvenlik sağlar. Kırılma riski olmadan, tek kişiyle bile montaj yapılabilir." %}
                 </p>
             </div>
         </div>
@@ -510,10 +510,10 @@ Detaylar için tıklayın.
             <div class="position-relative rounded-4 overflow-hidden shadow-lg">
                 <img src="{% static 'image/pageproduct/solid/solid-levha-montaj-karsilastirma.webp' %}" 
                         class="img-fluid w-100" 
-                        alt="Ağır Cam Montajı vs Hafif Kompozit Panel Montajı Karşılaştırması">
+                        alt="{% trans 'Ağır Cam Montajı vs Hafif Kompozit Panel Montajı Karşılaştırması' %}">
                 
                 <div class="bg-dark text-white text-center py-2">
-                    <span class="small fw-bold letter-spacing-1">ASANSÖR KABİNİNDE DEVRİM: YARI AĞIRLIK - TAM VERİMLİLİK!</span>
+                    <span class="small fw-bold letter-spacing-1">{% trans "ASANSÖR KABİNİNDE DEVRİM: YARI AĞIRLIK - TAM VERİMLİLİK!" %}</span>
                 </div>
             </div>
         </div>
@@ -535,16 +535,16 @@ Detaylar için tıklayın.
                 <div class="rounded-4 overflow-hidden shadow-lg border border-light">
                     <img src="{% static 'image/pageproduct/solid/solid-polikarbon-esneklik-testi.webp' %}" 
                             class="img-fluid w-100" 
-                            alt="Solid Polikarbon Levha Esneklik ve Bükülme Testi"
+                            alt="{% trans 'Solid Polikarbon Levha Esneklik ve Bükülme Testi' %}"
                             style="object-fit: cover;">
                 </div>
 
                 <div class="bg-white p-3 shadow-sm rounded-3 position-absolute start-50 translate-middle-x bottom-0 mb-n4 w-75 text-center border-bottom border-4 border-warning">
                     <span class="fw-bold text-dark d-block">
                         <i class="fa-solid fa-arrows-spin text-orange me-2"></i>
-                        Eğilir, Bükülür, Kırılmaz!
+                        {% trans "Eğilir, Bükülür, Kırılmaz!" %}
                     </span>
-                    <span class="text-muted x-small">Zarar görmeden istenilen şekli alır.</span>
+                    <span class="text-muted x-small">{% trans "Zarar görmeden istenilen şekli alır." %}</span>
                 </div>
 
             </div>
@@ -552,14 +552,14 @@ Detaylar için tıklayın.
 
         <div class="col-lg-6 ps-lg-5 mt-4 mt-lg-0" data-aos="fade-left">
             
-            <span class="text-orange fw-bold letter-spacing-1 small">PRATİK UYGULAMA</span>
+            <span class="text-orange fw-bold letter-spacing-1 small">{% trans "PRATİK UYGULAMA" %}</span>
             <h2 class="fw-bold text-dark display-6 mb-3">
-                Asansör Kabininde<br>
-                <span class="text-secondary">Esneklik Devrimi!</span>
+                {% blocktrans %}Asansör Kabininde<br>
+                <span class="text-secondary">Esneklik Devrimi!</span>{% endblocktrans %}
             </h2>
             
             <p class="text-muted mb-4">
-                Asansör kabini gibi hassas ve özel ölçüler gerektiren uygulamalarda, malzemenin kolay işlenebilirliği montaj süresini kısaltır ve maliyetleri düşürür.
+                {% trans "Asansör kabini gibi hassas ve özel ölçüler gerektiren uygulamalarda, malzemenin kolay işlenebilirliği montaj süresini kısaltır ve maliyetleri düşürür." %}
             </p>
 
             <div class="d-flex align-items-start p-4 bg-light rounded-4 border transition-hover">
@@ -569,17 +569,17 @@ Detaylar için tıklayın.
                     </div>
                 </div>
                 <div class="flex-grow-1 ms-3">
-                    <h3 class="h5 fw-bold text-dark mb-2">Makasla Kesilebilir</h3>
-                    <h4 class="h6 text-secondary fw-bold mb-2">Hızlı ve Hassas Ayarlama</h4>
+                    <h3 class="h5 fw-bold text-dark mb-2">{% trans "Makasla Kesilebilir" %}</h3>
+                    <h4 class="h6 text-secondary fw-bold mb-2">{% trans "Hızlı ve Hassas Ayarlama" %}</h4>
                     <p class="text-muted small mb-0">
-                        Sert malzemeleri kesmek için gereken özel testerelere veya toz emme sistemlerine son! Bir terzinin kumaşı kestiği gibi, solid levhayı makasla keserek anında ölçü revizyonu yapabilirsiniz.
+                        {% trans "Sert malzemeleri kesmek için gereken özel testerelere veya toz emme sistemlerine son! Bir terzinin kumaşı kestiği gibi, solid levhayı makasla keserek anında ölçü revizyonu yapabilirsiniz." %}
                     </p>
                 </div>
             </div>
 
             <div class="mt-4 ps-3 border-start border-3 border-secondary">
                 <p class="fst-italic text-muted small mb-0">
-                    "Beklenmedik ölçü farklılıklarında veya özel nişler oluştururken anında ayarlama yapma olanağı tanır. Böylece hem zamandan hem işçilikten tasarruf edersiniz."
+                    {% trans '"Beklenmedik ölçü farklılıklarında veya özel nişler oluştururken anında ayarlama yapma olanağı tanır. Böylece hem zamandan hem işçilikten tasarruf edersiniz."' %}
                 </p>
             </div>
 
@@ -603,31 +603,31 @@ Detaylar için tıklayın.
                 <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-light">
                     <img src="{% static 'image/pageproduct/solid/solid-levha-opal-raki-beyazi.webp' %}" 
                          class="img-fluid w-100" 
-                         alt="Dev Boyutlu Rakı Beyazı (Opal) Solid Polikarbon Levha 2055x3050mm"
+                         alt="{% trans 'Dev Boyutlu Rakı Beyazı (Opal) Solid Polikarbon Levha 2055x3050mm' %}"
                          loading="lazy">
                     
                     <div class="position-absolute bottom-0 start-0 bg-dark text-white px-4 py-2 rounded-top-end shadow fw-bold">
                         <i class="fa-solid fa-expand me-2 text-orange"></i>
-                        2055 x 3050 mm (1.5mm Kalınlık)
+                        {% trans "2055 x 3050 mm (1.5mm Kalınlık)" %}
                     </div>
                 </div>
                 <p class="text-center text-muted small mt-2 fst-italic">
-                    <i class="fa-solid fa-check-double text-success"></i> Toplam Yüzey Alanı: ~6.25 m² - Tek Parça, Eksiz Kaplama!
+                    <i class="fa-solid fa-check-double text-success"></i> {% trans "Toplam Yüzey Alanı: ~6.25 m² - Tek Parça, Eksiz Kaplama!" %}
                 </p>
             </div>
 
             <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
-                <span class="badge bg-warning text-dark mb-3 px-3 py-2">SOLID POLİKARBON LEVHA</span>
-                <h2 class="fw-bold text-dark mb-4">Rakı Beyazı (Opal)</h2>
+                <span class="badge bg-warning text-dark mb-3 px-3 py-2">{% trans "SOLID POLİKARBON LEVHA" %}</span>
+                <h2 class="fw-bold text-dark mb-4">{% trans "Rakı Beyazı (Opal)" %}</h2>
                 
                 <p class="text-muted fs-6 mb-4" style="line-height: 1.8;">
-                    Solid polikarbon levhanın "Rakı Beyazı" (Opal) rengi, koruyucu filminin sökülme anında ortaya çıkan pürüzsüz ve elit bir yüzey sunar. Asansör tavanındaki LED aydınlatmayı yumuşatarak <strong>homojen bir ışık</strong> yayarken, tavan arkasındaki tesisatı gizler.
+                    {% blocktrans %}Solid polikarbon levhanın "Rakı Beyazı" (Opal) rengi, koruyucu filminin sökülme anında ortaya çıkan pürüzsüz ve elit bir yüzey sunar. Asansör tavanındaki LED aydınlatmayı yumuşatarak <strong>homojen bir ışık</strong> yayarken, tavan arkasındaki tesisatı gizler.{% endblocktrans %}
                 </p>
 
                 <div class="p-3 bg-light rounded-3 border-start border-4 border-warning">
-                    <h6 class="fw-bold text-dark mb-2">Maksimum Verimlilik:</h6>
+                    <h6 class="fw-bold text-dark mb-2">{% trans "Maksimum Verimlilik:" %}</h6>
                     <p class="text-muted small mb-0">
-                        Dev boyutları sayesinde tavanı tek parça halinde, ek yeri olmadan kaplamanıza olanak tanır.
+                        {% trans "Dev boyutları sayesinde tavanı tek parça halinde, ek yeri olmadan kaplamanıza olanak tanır." %}
                     </p>
                 </div>
             </div>
@@ -638,40 +638,40 @@ Detaylar için tıklayın.
             
             <div class="col-lg-7 pe-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
                 
-                <h3 class="fw-bold text-dark mb-4">Homlift'de Kullanılan Özel Sistemli Cam</h3>
+                <h3 class="fw-bold text-dark mb-4">{% trans "Homlift'de Kullanılan Özel Sistemli Cam" %}</h3>
                 
                 <div class="mb-4">
                     <h5 class="fw-bold text-secondary d-flex align-items-center">
                         <i class="fa-solid fa-eye text-orange me-2"></i>
-                        Göz Kamaştıran Şeffaflık, 3 mm Çözüm
+                        {% trans "Göz Kamaştıran Şeffaflık, 3 mm Çözüm" %}
                     </h5>
                     <p class="text-muted" style="text-align: justify;">
-                        Modern mimaride şeffaflık ve ferahlık, tasarımın anahtar unsurlarından biri haline gelmiştir. Kullanılan malzemenin güvenliği ve estetiği de büyük önem taşımaktadır. İşte bu noktada <strong>3 mm şeffaf solid polikarbon levhalar</strong> devreye giriyor.
+                        {% blocktrans %}Modern mimaride şeffaflık ve ferahlık, tasarımın anahtar unsurlarından biri haline gelmiştir. Kullanılan malzemenin güvenliği ve estetiği de büyük önem taşımaktadır. İşte bu noktada <strong>3 mm şeffaf solid polikarbon levhalar</strong> devreye giriyor.{% endblocktrans %}
                     </p>
                 </div>
 
                 <div class="mb-4">
                     <h5 class="fw-bold text-secondary d-flex align-items-center">
                         <i class="fa-solid fa-gem text-orange me-2"></i>
-                        Görsel Şölen ve Teknik Mükemmeliyet
+                        {% trans "Görsel Şölen ve Teknik Mükemmeliyet" %}
                     </h5>
                     <p class="text-muted" style="text-align: justify;">
-                        <strong>Kristal Berraklık:</strong> Özel olarak seçilmiş 3 mm kalınlığındaki solid polikarbon levhalar, tıpkı cam gibi pürüzsüz ve yüksek ışık geçirgenliğine sahiptir. Bu sayede asansör yolcuları, panoramik bir deneyim yaşayarak dış mekanın tadını kesintisiz bir şekilde çıkarabilirler.
+                        {% blocktrans %}<strong>Kristal Berraklık:</strong> Özel olarak seçilmiş 3 mm kalınlığındaki solid polikarbon levhalar, tıpkı cam gibi pürüzsüz ve yüksek ışık geçirgenliğine sahiptir. Bu sayede asansör yolcuları, panoramik bir deneyim yaşayarak dış mekanın tadını kesintisiz bir şekilde çıkarabilirler.{% endblocktrans %}
                     </p>
                 </div>
 
                 <div class="mb-4">
                     <h5 class="fw-bold text-secondary d-flex align-items-center">
                         <i class="fa-solid fa-shield-virus text-orange me-2"></i>
-                        Kırılmaz Güvenlik
+                        {% trans "Kırılmaz Güvenlik" %}
                     </h5>
                     <p class="text-muted" style="text-align: justify;">
-                        Camın aksine, polikarbon darbelere karşı inanılmaz dirençlidir. Potansiyel çarpma veya darbe anlarında kırılıp parçalanmaz, çatlama ve dağılmaz riski taşımaz. Bu, özellikle halka açık alanlarda ve yoğun kullanımlı asansörlerde hayati önem taşır.
+                        {% trans "Camın aksine, polikarbon darbelere karşı inanılmaz dirençlidir. Potansiyel çarpma veya darbe anlarında kırılıp parçalanmaz, çatlama ve dağılmaz riski taşımaz. Bu, özellikle halka açık alanlarda ve yoğun kullanımlı asansörlerde hayati önem taşır." %}
                     </p>
                 </div>
 
                 <a href="#" class="text-orange fw-bold text-decoration-none small">
-                    Detayları Gör <i class="fa-solid fa-arrow-right ms-1"></i>
+                    {% trans "Detayları Gör" %} <i class="fa-solid fa-arrow-right ms-1"></i>
                 </a>
 
             </div>
@@ -684,12 +684,12 @@ Detaylar için tıklayın.
                     <div class="position-relative z-1">
                         <img src="{% static 'image/pageproduct/solid/solid-levha-seffaf-robot.webp' %}" 
                              class="img-fluid mb-3" 
-                             alt="LiftKeys Robotu ve Göz Kamaştıran Şeffaflık"
+                             alt="{% trans 'LiftKeys Robotu ve Göz Kamaştıran Şeffaflık' %}"
                              loading="lazy">
                         
                         <h2 class="fw-bold display-6 text-dark mt-3">
-                            GÖZ KAMAŞTIRAN<br>
-                            <span class="text-orange" style="font-weight: 800;">ŞEFFAFLIK</span>
+                            {% blocktrans %}GÖZ KAMAŞTIRAN<br>
+                            <span class="text-orange" style="font-weight: 800;">ŞEFFAFLIK</span>{% endblocktrans %}
                         </h2>
                         
                         <div class="mt-4">
@@ -708,9 +708,9 @@ Detaylar için tıklayın.
         <div class="row mt-5 pt-4 text-center" data-aos="fade-up">
             <div class="col-12">
                 <a href="/contact/" class="btn btn-lg text-white shadow-lg d-inline-flex align-items-center gap-3 px-5 py-3 rounded-pill hover-lift" 
-                   style="background-color: #F08200; font-weight: 600; font-size: 1.2rem;">
+                    style="background-color: #F08200; font-weight: 600; font-size: 1.2rem;">
                     <i class="fa-solid fa-handshake fa-lg"></i>
-                    Hemen Teklif İste...
+                    {% trans "Hemen Teklif İste..." %}
                 </a>
             </div>
         </div>
@@ -725,9 +725,9 @@ Detaylar için tıklayın.
         <div class="col-lg-8 text-center">
             <h2 class="fw-bold text-secondary mb-3">
                 <i class="fa-solid fa-circle-question text-orange me-2"></i>
-                Aklınıza Takılanlar
+                {% trans "Aklınıza Takılanlar" %}
             </h2>
-            <p class="text-muted">Solid ve Polistren levhalar hakkında en çok merak edilen soruların cevapları.</p>
+            <p class="text-muted">{% trans "Solid ve Polistren levhalar hakkında en çok merak edilen soruların cevapları." %}</p>
         </div>
     </div>
 
@@ -740,12 +740,12 @@ Detaylar için tıklayın.
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button fw-bold text-dark collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
                             <i class="fa-solid fa-shield-halved text-orange me-3 fs-5"></i>
-                            Solid Polikarbon Levha gerçekten kırılmaz mı?
+                            {% trans "Solid Polikarbon Levha gerçekten kırılmaz mı?" %}
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionSolidFAQ">
                         <div class="accordion-body text-muted bg-light small">
-                            Kesinlikle. Solid polikarbon, camdan <strong>250 kat</strong>, pleksiden (akrilik) ise <strong>30 kat</strong> daha dayanıklıdır. Çekiç darbelerine, bükülmelere ve vandalizme karşı üstün direnç gösterir. Asansör kabinlerinde "kırılmaz cam" alternatifi olarak güvenle kullanılır.
+                            {% blocktrans %}Kesinlikle. Solid polikarbon, camdan <strong>250 kat</strong>, pleksiden (akrilik) ise <strong>30 kat</strong> daha dayanıklıdır. Çekiç darbelerine, bükülmelere ve vandalizme karşı üstün direnç gösterir. Asansör kabinlerinde "kırılmaz cam" alternatifi olarak güvenle kullanılır.{% endblocktrans %}
                         </div>
                     </div>
                 </div>
@@ -754,12 +754,12 @@ Detaylar için tıklayın.
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button fw-bold text-dark collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
                             <i class="fa-solid fa-fire-extinguisher text-orange me-3 fs-5"></i>
-                            Ürün yangına dayanıklı mı? Asansör yönetmeliğine uygun mu?
+                            {% trans "Ürün yangına dayanıklı mı? Asansör yönetmeliğine uygun mu?" %}
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSolidFAQ">
                         <div class="accordion-body text-muted bg-light small">
-                            Evet, ürünlerimiz <strong>B1 Sınıfı (Zor Alevlenici)</strong> özelliğe sahiptir. Yangın esnasında alevi yürütmez ve en önemlisi <strong>damlama yapmaz</strong>. Bu özellikleriyle EN 81-20/50 asansör güvenlik standartlarına tam uyum sağlar.
+                            {% blocktrans %}Evet, ürünlerimiz <strong>B1 Sınıfı (Zor Alevlenici)</strong> özelliğe sahiptir. Yangın esnasında alevi yürütmez ve en önemlisi <strong>damlama yapmaz</strong>. Bu özellikleriyle EN 81-20/50 asansör güvenlik standartlarına tam uyum sağlar.{% endblocktrans %}
                         </div>
                     </div>
                 </div>
@@ -768,12 +768,12 @@ Detaylar için tıklayın.
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button fw-bold text-dark collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
                             <i class="fa-solid fa-scissors text-orange me-3 fs-5"></i>
-                            Levhalar sahada nasıl kesilir? Özel ekipman gerekir mi?
+                            {% trans "Levhalar sahada nasıl kesilir? Özel ekipman gerekir mi?" %}
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionSolidFAQ">
                         <div class="accordion-body text-muted bg-light small">
-                            Hayır, özel ve ağır ekipmanlara gerek yoktur. Solid levhalarımız esnek yapısı sayesinde sahada <strong>güçlü bir makasla</strong>, dekupaj testereyle veya spiralle kolayca kesilebilir. Montaj sırasında oluşabilecek ölçü hatalarını anında revize edebilirsiniz.
+                            {% blocktrans %}Hayır, özel ve ağır ekipmanlara gerek yoktur. Solid levhalarımız esnek yapısı sayesinde sahada <strong>güçlü bir makasla</strong>, dekupaj testereyle veya spiralle kolayca kesilebilir. Montaj sırasında oluşabilecek ölçü hatalarını anında revize edebilirsiniz.{% endblocktrans %}
                         </div>
                     </div>
                 </div>
@@ -782,12 +782,12 @@ Detaylar için tıklayın.
                     <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button fw-bold text-dark collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
                             <i class="fa-solid fa-pump-soap text-orange me-3 fs-5"></i>
-                            Temizliği ve bakımı nasıl yapılmalıdır?
+                            {% trans "Temizliği ve bakımı nasıl yapılmalıdır?" %}
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionSolidFAQ">
                         <div class="accordion-body text-muted bg-light small">
-                            Temizlik için ılık su, yumuşak bir sünger ve nötr (aşındırıcı olmayan) sıvı sabun yeterlidir. Yüzeyi çizmemek için kuru bezle silmeyiniz ve tiner/aseton gibi ağır kimyasallar kullanmayınız.
+                            {% trans "Temizlik için ılık su, yumuşak bir sünger ve nötr (aşındırıcı olmayan) sıvı sabun yeterlidir. Yüzeyi çizmemek için kuru bezle silmeyiniz ve tiner/aseton gibi ağır kimyasallar kullanmayınız." %}
                         </div>
                     </div>
                 </div>
@@ -798,7 +798,6 @@ Detaylar için tıklayın.
     </div>
 
 </div>
-
 
 
 

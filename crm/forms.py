@@ -856,10 +856,13 @@ from .models import ContactMessage
 from django import forms
 from .models import ContactMessage
 from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha.widgets import ReCaptchaV2Checkbox
+
 
 class ContactForm(forms.ModelForm):
     # HONEYPOT ALANI: Kullanıcılar görmez, botlar doldurur.
-    # İsmini özellikle 'website' veya 'phone_number_alt' gibi botları çekecek bir şey koyuyoruz.
     website_url = forms.CharField(
         required=False, 
         widget=forms.TextInput(attrs={
@@ -870,9 +873,17 @@ class ContactForm(forms.ModelForm):
         label="Lütfen bu alanı boş bırakın"
     )
 
+    # RECAPTCHA ALANI (Bot kalkanı)
+    captcha = ReCaptchaField(
+        widget=ReCaptchaV2Checkbox(),
+        label='', # Ekranda ekstra "Captcha:" yazmasına gerek yok
+        error_messages={'required': 'Lütfen robot olmadığınızı doğrulayın.'}
+    )
+
     class Meta:
         model = ContactMessage
-        fields = ['name', 'email', 'subject', 'phone', 'message']
+        # fields listesine 'captcha'yı MUTLAKA ekliyoruz
+        fields = ['name', 'email', 'subject', 'phone', 'message', 'captcha']
         widgets = {
             'name': forms.TextInput(attrs={
                 'class': 'form-control',
@@ -912,11 +923,9 @@ class ContactForm(forms.ModelForm):
 
         # Eğer honeypot alanı doluysa, bu bir bottur!
         if honeypot:
-            # Botlara anlamlı bir hata mesajı vermiyoruz, form hatalı diyoruz.
             raise ValidationError("Form gönderiminde şüpheli bir işlem tespit edildi.")
 
         return cleaned_data
-
 
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm

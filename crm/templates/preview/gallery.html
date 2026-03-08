@@ -12,11 +12,12 @@
 {% block og_title %}Liftkeys Galeri | Endüstriyel Çözümler ve Videolar{% endblock %}
 {% block og_description %}Asansör sektörüne dair projeler, inovatif çözümler ve endüstriyel ürünler için görsel ve videolardan oluşan Liftkeys Galeri.{% endblock %}
 {% block og_url %}{{ request.build_absolute_uri }}{% endblock %}
-{% block og_image %}https://www.liftkeys.com/static/images/gallery-cover.jpg{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+
 
 {% block tw_title %}Liftkeys Galeri | Endüstriyel Çözümler ve Videolar{% endblock %}
 {% block tw_description %}Liftkeys Galeri sayfasında endüstriyel projeler, görseller ve videolar yer almaktadır.{% endblock %}
-{% block tw_image %}https://www.liftkeys.com/static/images/gallery-cover.jpg{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
 
 {# ---- Ek CSS (head kısmına eklenir) ---- #}
 {% block extra_css %}

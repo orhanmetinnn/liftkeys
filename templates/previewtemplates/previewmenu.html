@@ -89,248 +89,258 @@
         <li class="nav-item dropdown position-static">
           <a class="nav-link dropdown-toggle {% if '/category/' in request.path or '/product/' in request.path %}text-orange fw-bold{% endif %}"
             href="{% url 'category_list' %}" id="productsDropdown" role="button" data-bs-toggle="dropdown">
-            {% trans "Ürünler" %}
+              {% trans "Ürünler" %}
           </a>
 
           <div class="dropdown-menu w-100 p-0 border-0 shadow-lg mt-0" style="border-radius: 0 0 16px 16px;">
-            <div class="d-none d-lg-block">
-              <div class="container-fluid p-0">
-                <div class="mega-menu-container d-flex">
-                  <div class="mega-menu-sidebar">
-                    {% for parent_cat in global_categories %}
-                    <a href="{% url 'category_detail' slug=parent_cat.slug %}"
-                      class="mega-menu-link {% if forloop.first %}active{% endif %}"
-                      data-target="cat-content-{{ parent_cat.id }}">
-                      <span>{{ parent_cat.name }}</span>
-                      <i class="bi bi-chevron-right text-muted" style="font-size: 0.8rem;"></i>
-                    </a>
-                    {% endfor %}
-                  </div>
-
-                  <div class="flex-grow-1 position-relative bg-white">
-                    {% for parent_cat in global_categories %}
-                    <div id="cat-content-{{ parent_cat.id }}"
-                      class="mega-menu-content {% if forloop.first %}active{% endif %} h-100">
-                      <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
-                        <h5 class="fw-bold text-dark m-0">{{ parent_cat.name }}</h5>
-                        <a href="{% url 'category_detail' slug=parent_cat.slug %}"
-                          class="text-orange small text-decoration-none">
-                          {% trans "Tümünü Gör" %} <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                      <div class="subcategory-grid">
-                        {% for product in parent_cat.featured_products|slice:":12" %}
-                        <a href="{{ product.get_absolute_url }}" class="subcategory-item">
-                          <div class="subcategory-img-wrapper">
-                            {% with market_img=product.market_images.all|first %}
-                            <img src="{% if product.website_image %}{{ product.website_image.url }}
-                                      {% elif product.product_category_image %}{{ product.product_category_image.url }}
-                                      {% elif product.mobile_image %}{{ product.mobile_image.url }}
-                                      {% elif market_img %}{{ market_img.image.url }}
-                                      {% else %}{% static 'img/default-product.png' %}{% endif %}"
-                              alt="{{ product.name }}">
-                            {% endwith %}
+              
+              <div class="d-none d-lg-block">
+                  <div class="container-fluid p-0">
+                      <div class="mega-menu-container d-flex">
+                          <div class="mega-menu-sidebar">
+                              {% for parent_cat in global_categories %}
+                              <a href="{% url 'category_detail' slug=parent_cat.slug %}"
+                                class="mega-menu-link {% if forloop.first %}active{% endif %}"
+                                data-target="cat-content-{{ parent_cat.id }}">
+                                  <span>{{ parent_cat.name }}</span>
+                                  <i class="bi bi-chevron-right text-muted" style="font-size: 0.8rem;"></i>
+                              </a>
+                              {% endfor %}
                           </div>
-                          <span
-                            class="fw-semibold small text-truncate w-100 px-2">{{ product.name|truncatechars:20 }}</span>
-                        </a>
-                        {% empty %}
-                        <div class="col-12 text-center py-5">
-                          <p class="text-muted">{% trans "Ürün bulunamadı." %}</p>
-                        </div>
-                        {% endfor %}
-                      </div>
-                    </div>
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="d-lg-none">
-              {% for parent_cat in global_categories %}
-              <div class="mobile-category-group">
-                <div class="mobile-cat-header" data-bs-toggle="collapse" data-bs-target="#mob-cat-{{ parent_cat.id }}">
-                  <span>{{ parent_cat.name }}</span>
-                  <i class="bi bi-chevron-down"></i>
-                </div>
-
-                <div class="collapse" id="mob-cat-{{ parent_cat.id }}">
-                  <div class="text-end p-2 bg-light">
-                    <a href="{% url 'category_detail' slug=parent_cat.slug %}"
-                      class="small text-orange fw-bold">{% trans "Tümünü Gör" %} ></a>
-                  </div>
-                  <div class="mobile-product-grid">
-                    {% for product in parent_cat.featured_products|slice:":6" %}
-                    <a href="{{ product.get_absolute_url }}" class="mobile-product-item text-decoration-none text-dark">
-                      <div class="ratio ratio-1x1">
-                        {% with market_img=product.market_images.all|first %}
-                        <img src="{% if product.mobile_image %}{{ product.mobile_image.url }}
-                                  {% elif product.website_image %}{{ product.website_image.url }}
-                                  {% elif product.product_category_image %}{{ product.product_category_image.url }}
-                                  {% elif market_img %}{{ market_img.image.url }}
-                                  {% else %}{% static 'img/default-product.png' %}{% endif %}"
-                          class="mobile-product-img w-100 h-100" style="object-fit:cover;" alt="{{ product.name }}">
-                        {% endwith %}
+                          <div class="flex-grow-1 position-relative bg-white">
+                              {% for parent_cat in global_categories %}
+                              <div id="cat-content-{{ parent_cat.id }}"
+                                  class="mega-menu-content {% if forloop.first %}active{% endif %} h-100">
+                                  <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                                      <h5 class="fw-bold text-dark m-0">{{ parent_cat.name }}</h5>
+                                      <a href="{% url 'category_detail' slug=parent_cat.slug %}"
+                                        class="text-orange small text-decoration-none">
+                                          {% trans "Tümünü Gör" %} <i class="bi bi-arrow-right"></i>
+                                      </a>
+                                  </div>
+                                  <div class="subcategory-grid">
+                                      {% for product in parent_cat.featured_products|slice:":12" %}
+                                      <a href="{{ product.get_absolute_url }}" class="subcategory-item">
+                                          <div class="subcategory-img-wrapper">
+                                              {% with market_img=product.market_images.all|first %}
+                                              <img src="{% if product.website_image %}{{ product.website_image.url }}
+                                                        {% elif product.product_category_image %}{{ product.product_category_image.url }}
+                                                        {% elif product.mobile_image %}{{ product.mobile_image.url }}
+                                                        {% elif market_img %}{{ market_img.image.url }}
+                                                        {% else %}{% static 'img/default-product.png' %}{% endif %}"
+                                                  alt="{{ product.name }}">
+                                              {% endwith %}
+                                          </div>
+                                          <span class="fw-semibold small text-truncate w-100 px-2">{{ product.name|truncatechars:20 }}</span>
+                                      </a>
+                                      {% empty %}
+                                      <div class="col-12 text-center py-5">
+                                          <p class="text-muted">{% trans "Ürün bulunamadı." %}</p>
+                                      </div>
+                                      {% endfor %}
+                                  </div>
+                              </div>
+                              {% endfor %}
+                          </div>
                       </div>
-                      <div class="p-1">
-                        <small class="d-block text-truncate">{{ product.name }}</small>
-                      </div>
-                    </a>
-                    {% endfor %}
                   </div>
-                </div>
               </div>
-              {% endfor %}
-            </div>
+
+              <div class="d-lg-none">
+                  <div class="py-2">
+                      {% for parent_cat in global_categories %}
+                      <a href="{% url 'category_detail' slug=parent_cat.slug %}" 
+                        class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4"
+                        style="white-space: normal; color: #333;">
+                          <span class="fw-medium">{{ parent_cat.name }}</span>
+                          <i class="bi bi-chevron-right text-orange"></i>
+                      </a>
+                      {% endfor %}
+                      
+                      <a href="{% url 'category_list' %}" class="dropdown-item text-center py-3 text-orange fw-bold bg-light">
+                          {% trans "Tüm Kategorileri Gör" %}
+                      </a>
+                  </div>
+              </div>
+
           </div>
-        </li>
+      </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown position-static">
           <a class="nav-link dropdown-toggle {% if '/horus-photocell/' in request.path or '/atlas-overload/' in request.path %}text-orange fw-bold{% endif %}"
             href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {% trans "Çözümlerimiz" %}
           </a>
-          <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="solutionsDropdown">
 
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/horus-photocell/">
-                <div class="icon-box">
-                  <i class="bi bi-eye-fill"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">LKS Horus Fotosel</span>
-                  <span class="item-desc">Güvenli kapı sistemleri</span>
-                </div>
-              </a>
-            </li>
+          <div class="dropdown-menu w-100 shadow-lg border-0 mt-0 py-4" aria-labelledby="solutionsDropdown"
+            style="border-radius: 0 0 16px 16px;">
+            <div class="container">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/atlas-overload/">
-                <div class="icon-box">
-                  <i class="bi bi-speedometer2"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">Atlas Aşırı Yük</span>
-                  <span class="item-desc">Hassas yük ölçüm teknolojisi</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/zemin/">
-                <div class="icon-box">
-                  <i class="bi bi-layers-fill"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">Zemin</span>
-                  <span class="item-desc">Yanmaz ve estetik PVC kaplamalar</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/switch-systems/">
-                <div class="icon-box">
-                  <i class="bi bi-toggle-on"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">Switch Sistemleri</span>
-                  <span class="item-desc">Limit ve güvenlik anahtar çözümleri</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/fan/">
-                <div class="icon-box">
-                  <i class="bi bi-fan"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">Havalandırma Sistemleri</span>
-                  <span class="item-desc">Sessiz ve güçlü kabin fanları</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/guideshoe/">
-                <div class="icon-box">
-                  <i class="bi bi-collection"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">Ağırlık Paten Sistemleri</span>
-                  <span class="item-desc">Sessiz ve titreşimsiz TPU patenler</span>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/solid/">
-                <div class="icon-box">
-                  <i class="bi bi-shield-check"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">Solid & Polistren Levha</span>
-                  <span class="item-desc">Kırılmaz tavan ve duvar kaplamaları</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="/kupeste/">
-                <div class="icon-box">
-                  <i class="bi bi-grip-horizontal"></i>
-                </div>
-                <div class="text-box">
-                  <span class="item-title">Paslanmaz Küpeşte</span>
-                  <span class="item-desc">Modüler sistem ve renk seçenekleri</span>
-                </div>
-              </a>
-            </li>
-
-            <li>
-                <a class="dropdown-item custom-dropdown-item" href="{% url 'takozlar_view' %}">
-                    <div class="icon-box">
-                        <i class="bi bi-activity"></i> </div>
-                    <div class="text-box">
-                        <span class="item-title">Vibrasyon Takozları</span>
-                        <span class="item-desc">Titreşim önleyici kauçuk sönümleyiciler</span>
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/horus-photocell/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-eye-fill"></i>
                     </div>
-                </a>
-            </li>
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="{% url 'keys_view' %}">
-                <div class="icon-box">
-                  <i class="bi bi-key"></i>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "LKS Horus Fotosel" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Güvenli kapı sistemleri" %}</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="text-box">
-                  <span class="item-title">Üçgen Anahtar</span>
-                  <span class="item-desc">Standartlara uygun güvenli kilit sistemleri</span>
-                </div>
-              </a>
-            </li>
 
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="{% url 'kabincam_view' %}">
-                <div class="icon-box">
-                  <i class="bi bi-window-stack"></i>
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/atlas-overload/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Atlas Aşırı Yük" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Hassas yük ölçüm teknolojisi" %}</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="text-box">
-                  <span class="item-title">Dekoratif Cam</span>
-                  <span class="item-desc">500 farklı desen seçeneği ile estetik kabinler</span>
-                </div>
-              </a>
-            </li>
 
-            <li>
-              <a class="dropdown-item custom-dropdown-item" href="{% url 'patenkabin_view' %}">
-                <div class="icon-box">
-                  <i class="bi bi-gear-wide-connected"></i>
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/zemin/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-layers-fill"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Zemin" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Yanmaz ve estetik PVC kaplamalar" %}</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="text-box">
-                  <span class="item-title">Kabin Paten Sistemleri</span>
-                  <span class="item-desc">Sessiz çalışma ve titreşim sönümleyici tasarım</span>
-                </div>
-              </a>
-            </li>
 
-          </ul>
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/switch-systems/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-toggle-on"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Switch Sistemleri" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Limit ve güvenlik anahtar çözümleri" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/fan/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-fan"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Havalandırma Sistemleri" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Sessiz ve güçlü kabin fanları" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/guideshoe/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-collection"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Ağırlık Paten Sistemleri" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Sessiz ve titreşimsiz TPU patenler" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/solid/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Solid & Polistren Levha" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Kırılmaz tavan ve duvar kaplamaları" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="/kupeste/">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-grip-horizontal"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Paslanmaz Küpeşte" %}</span>
+                      <span class="item-desc small text-muted">{% trans "Modüler sistem ve renk seçenekleri" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="{% url 'takozlar_view' %}">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-activity"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Vibrasyon Takozları" %}</span>
+                      <span
+                        class="item-desc small text-muted">{% trans "Titreşim önleyici kauçuk sönümleyiciler" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="{% url 'keys_view' %}">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-key"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Üçgen Anahtar" %}</span>
+                      <span
+                        class="item-desc small text-muted">{% trans "Standartlara uygun güvenli kilit sistemleri" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="{% url 'kabincam_view' %}">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-window-stack"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Dekoratif Cam" %}</span>
+                      <span
+                        class="item-desc small text-muted">{% trans "500 farklı desen seçeneği ile estetik kabinler" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="{% url 'patenkabin_view' %}">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-gear-wide-connected"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Kabin Paten Sistemleri" %}</span>
+                      <span
+                        class="item-desc small text-muted">{% trans "Sessiz çalışma ve titreşim sönümleyici tasarım" %}</span>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </li>
 
         <li class="nav-item"><a class="nav-link" href="#">Data Merkezi</a></li>

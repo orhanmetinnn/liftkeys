@@ -36,7 +36,7 @@ Makinenizi koruyun, gürültüyü yok edin.
 {% endblock %}
 
 {# Ürün grubu görselini (hazırladığımız ilk görsel) kullanıyoruz #}
-{% block og_image %}{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.jpg' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.jpg' %}{% endblock %}
 
 {% block tw_title %}
 {% trans "LiftKeys | Asansör Makine ve Motor Takoz Çözümleri" %}
@@ -50,7 +50,7 @@ Teknik detaylar için tıklayın.
 {% endblocktrans %}
 {% endblock %}
 
-{% block tw_image %}{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.jpg' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.jpg' %}{% endblock %}
 
 {# --- CSS BLOĞU --- #}
 {% block extra_css %}
@@ -148,7 +148,7 @@ Teknik detaylar için tıklayın.
                         <span class="icon-circle"></span>
                         <span class="icon-bar"></span>
                     </div>
-                    <h1 class="mb-0 text-white fw-bold header-title h2">LIFTKEYS – Vibrasyon Takozları</h1>
+                    <h1 class="mb-0 text-white fw-bold header-title h2">{% trans "LIFTKEYS – Vibrasyon Takozları" %}</h1>
                 </div>
             </div>
         </div>
@@ -158,7 +158,7 @@ Teknik detaylar için tıklayın.
             <div class="col-lg-7 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
                 <div class="image-container position-relative rounded-4 overflow-hidden shadow-lg">
                     <img src="{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.webp' %}" 
-                         alt="LIFTKEYS Asansör Vibrasyon Takozu - Titreşim önleyici sistem" 
+                         alt="{% trans 'LIFTKEYS Asansör Vibrasyon Takozu - Titreşim önleyici sistem' %}" 
                          class="img-fluid w-100 object-fit-cover">
                     
                     <div class="play-overlay position-absolute top-50 start-50 translate-middle">
@@ -173,10 +173,10 @@ Teknik detaylar için tıklayın.
                 <div class="content-wrapper p-3">
                     <blockquote class="custom-quote">
                         <p class="mb-0 display-6 fw-light text-secondary">
-                            “Titreşimi azaltır,<br>
+                            {% blocktrans %}“Titreşimi azaltır,<br>
                             konforu artırır,<br>
                             yolculuğunuzu<br>
-                            <span class="text-dark fw-bold">güvenle yumuşatır.”</span>”
+                            <span class="text-dark fw-bold">güvenle yumuşatır.”</span>{% endblocktrans %}
                         </p>
                     </blockquote>
                 </div>
@@ -193,17 +193,17 @@ Teknik detaylar için tıklayın.
         <div class="row align-items-center mb-5">
             <div class="col-lg-8 col-md-7" data-aos="fade-right">
                 <h2 class="fw-normal text-secondary mb-0 h3">
-                    Güvenlik sadece bir fonksiyon değil, <br>
-                    <strong class="text-dark fw-bold">LiftKeys’te bir standarttır.</strong>
+                    {% blocktrans %}Güvenlik sadece bir fonksiyon değil, <br>
+                    <strong class="text-dark fw-bold">LiftKeys’te bir standarttır.</strong>{% endblocktrans %}
                 </h2>
             </div>
             
             <div class="col-lg-4 col-md-5 text-md-end mt-3 mt-md-0" data-aos="fade-left">
-                <a href="#" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm">
+                <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm" download>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
                         <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
                     </svg>
-                    Ürün Kataloğu İndir
+                    {% trans "Ürün Kataloğu İndir" %}
                 </a>
             </div>
         </div>
@@ -214,10 +214,10 @@ Teknik detaylar için tıklayın.
                 <div class="product-item">
                     <div class="product-image mb-3">
                         <img src="{% static 'image/pageproduct/takozlar/asansor-makine-takozu.webp' %}" 
-                             alt="Asansör Makine Motor Takozu" 
+                             alt="{% trans 'Asansör Makine Motor Takozu' %}" 
                              class="img-fluid" loading="lazy">
                     </div>
-                    <h3 class="product-title text-muted fs-6 h5">Makine Takozu</h3>
+                    <h3 class="product-title text-muted fs-6 h5">{% trans "Makine Takozu" %}</h3>
                 </div>
             </div>
 
@@ -225,10 +225,10 @@ Teknik detaylar için tıklayın.
                 <div class="product-item">
                     <div class="product-image mb-3">
                         <img src="{% static 'image/pageproduct/takozlar/dislisiz-makine-takozu.webp' %}" 
-                             alt="Dişlisiz Makine Şase Takozu" 
+                             alt="{% trans 'Dişlisiz Makine Şase Takozu' %}" 
                              class="img-fluid" loading="lazy">
                     </div>
-                    <h3 class="product-title text-muted fs-6 h5">Dişlisiz Makine Takozu</h3>
+                    <h3 class="product-title text-muted fs-6 h5">{% trans "Dişlisiz Makine Takozu" %}</h3>
                 </div>
             </div>
 
@@ -236,10 +236,10 @@ Teknik detaylar için tıklayın.
                 <div class="product-item">
                     <div class="product-image mb-3">
                         <img src="{% static 'image/pageproduct/takozlar/asansor-l-takoz-tampon.webp' %}" 
-                             alt="Asansör L Tipi Fren Takozu" 
+                             alt="{% trans 'Asansör L Tipi Fren Takozu' %}" 
                              class="img-fluid" loading="lazy">
                     </div>
-                    <h3 class="product-title text-muted fs-6 h5">L Takoz</h3>
+                    <h3 class="product-title text-muted fs-6 h5">{% trans "L Takoz" %}</h3>
                 </div>
             </div>
 
@@ -247,10 +247,10 @@ Teknik detaylar için tıklayın.
                 <div class="product-item">
                     <div class="product-image mb-3">
                         <img src="{% static 'image/pageproduct/takozlar/asansor-yuvarlak-takoz.webp' %}" 
-                             alt="Titreşim Emici Yuvarlak Takoz" 
+                             alt="{% trans 'Titreşim Emici Yuvarlak Takoz' %}" 
                              class="img-fluid" loading="lazy">
                     </div>
-                    <h3 class="product-title text-muted fs-6 h5">Yuvarlak Takoz</h3>
+                    <h3 class="product-title text-muted fs-6 h5">{% trans "Yuvarlak Takoz" %}</h3>
                 </div>
             </div>
 
@@ -265,46 +265,46 @@ Teknik detaylar için tıklayın.
             
             <div class="col-lg-7 col-md-12 pe-lg-5" data-aos="fade-right" data-aos-duration="1000">
                 
-                <h2 class="display-5 fw-bold mb-3 text-dark">Makine Takozu</h2>
+                <h2 class="display-5 fw-bold mb-3 text-dark">{% trans "Makine Takozu" %}</h2>
                 
                 <p class="lead fst-italic text-secondary mb-4">
-                    "Titreşime Son, Sessizliğe Davet: <span class="text-dark fw-medium">Liftkeys Mühendislik Harikası Takozlar</span>"
+                    {% blocktrans %}"Titreşime Son, Sessizliğe Davet: <span class="text-dark fw-medium">Liftkeys Mühendislik Harikası Takozlar</span>"{% endblocktrans %}
                 </p>
 
                 <p class="mb-4">
-                    Asansör makinelerinizin ömrünü uzatan, konforu zirveye taşıyan teknoloji.
+                    {% trans "Asansör makinelerinizin ömrünü uzatan, konforu zirveye taşıyan teknoloji." %}
                 </p>
 
                 <div class="features-list">
                     
                     <div class="feature-item mb-4">
-                        <h3 class="feature-head h5">Gerçek Kauçuk ve Özel Pişirme:</h3>
+                        <h3 class="feature-head h5">{% trans "Gerçek Kauçuk ve Özel Pişirme:" %}</h3>
                         <p class="feature-desc">
-                            Sıradan malzemelerin aksine, özel pişirme sistemiyle üretilen gerçek kauçuk yapısı sayesinde yıllarca formunu korur, çatlama yapmaz.
+                            {% trans "Sıradan malzemelerin aksine, özel pişirme sistemiyle üretilen gerçek kauçuk yapısı sayesinde yıllarca formunu korur, çatlama yapmaz." %}
                         </p>
                     </div>
 
                     <div class="feature-item mb-4">
-                        <h3 class="feature-head h5">Akıllı Genleşme Sistemi:</h3>
+                        <h3 class="feature-head h5">{% trans "Akıllı Genleşme Sistemi:" %}</h3>
                         <p class="feature-desc">
-                            Alt kısımdaki özel delik tasarımı sayesinde baskı anında hem dışa hem içe doğru esneyerek kauçuğun genleşmesini çift yönlü tamamlar; titreşimi kaynağında yok eder.
+                            {% trans "Alt kısımdaki özel delik tasarımı sayesinde baskı anında hem dışa hem içe doğru esneyerek kauçuğun genleşmesini çift yönlü tamamlar; titreşimi kaynağında yok eder." %}
                         </p>
                     </div>
 
                     <div class="feature-item mb-4">
-                        <h3 class="feature-head h5">Konik Tasarım:</h3>
+                        <h3 class="feature-head h5">{% trans "Konik Tasarım:" %}</h3>
                         <p class="feature-desc">
-                            Makinenin ağırlığını ve baskısını sönümleyen konik yapısıyla sarsıntısız bir seyir sunar.
+                            {% trans "Makinenin ağırlığını ve baskısını sönümleyen konik yapısıyla sarsıntısız bir seyir sunar." %}
                         </p>
                     </div>
 
                     <div class="feature-item mb-4">
                         <div class="d-flex align-items-center">
-                            <div class="badge-box me-3">2500 KG</div>
+                            <div class="badge-box me-3">{% trans "2500 KG" %}</div>
                             <div>
-                                <h3 class="feature-head mb-1 h5">Baskı Onayı:</h3>
+                                <h3 class="feature-head mb-1 h5">{% trans "Baskı Onayı:" %}</h3>
                                 <p class="feature-desc mb-0">
-                                    Dikeyde 2.5 tonluk pres testinden tam not alan dayanıklılık; en ağır yüklerde bile maksimum güvenlik.
+                                    {% trans "Dikeyde 2.5 tonluk pres testinden tam not alan dayanıklılık; en ağır yüklerde bile maksimum güvenlik." %}
                                 </p>
                             </div>
                         </div>
@@ -317,7 +317,7 @@ Teknik detaylar için tıklayın.
                 <div class="detail-image-wrapper position-relative">
                     <div class="bg-circle-decoration"></div>
                     <img src="{% static 'image/pageproduct/takozlar/makine-takozu-teknik-detay.webp' %}" 
-                         alt="LiftKeys Makine Takozu - Akıllı genleşme sistemi ve konik tasarım" 
+                         alt="{% trans 'LiftKeys Makine Takozu - Akıllı genleşme sistemi ve konik tasarım' %}" 
                          class="img-fluid position-relative z-2 main-product-img" loading="lazy">
                 </div>
             </div>
@@ -335,52 +335,52 @@ Teknik detaylar için tıklayın.
                 <div class="l-mount-image-wrapper position-relative">
                     <div class="bg-square-decoration"></div>
                     <img src="{% static 'image/pageproduct/takozlar/l-takoz-deprem-guvenligi.webp' %}" 
-                         alt="LIFTKEYS L Tipi Asansör Kabin Sabitleme Takozu - Deprem ve sarsıntı önleyici zırhlı yapı" 
+                         alt="{% trans 'LIFTKEYS L Tipi Asansör Kabin Sabitleme Takozu - Deprem ve sarsıntı önleyici zırhlı yapı' %}" 
                          class="img-fluid position-relative z-2 l-mount-img" loading="lazy">
                 </div>
             </div>
 
             <div class="col-lg-7 col-md-12 ps-lg-5" data-aos="fade-left" data-aos-duration="1000">
                 
-                <h2 class="display-5 fw-bold mb-3 text-dark">L Takoz</h2>
+                <h2 class="display-5 fw-bold mb-3 text-dark">{% trans "L Takoz" %}</h2>
                 
                 <p class="lead fst-italic text-secondary mb-4">
-                    "Deprem Direncinde Yeni Standart: <span class="text-dark fw-medium">Liftkeys Sabitleme Takozları</span>"
+                    {% blocktrans %}"Deprem Direncinde Yeni Standart: <span class="text-dark fw-medium">Liftkeys Sabitleme Takozları</span>"{% endblocktrans %}
                 </p>
 
                 <p class="mb-4">
-                    Sadece sarsıntıyı değil, riskleri de sönümlüyoruz. Kabin güvenliğinde tavizsiz mühendislik.
+                    {% trans "Sadece sarsıntıyı değil, riskleri de sönümlüyoruz. Kabin güvenliğinde tavizsiz mühendislik." %}
                 </p>
 
                 <div class="features-list">
                     
                     <div class="feature-item-bordered mb-4">
                         <h3 class="feature-head text-uppercase h5">
-                            <i class="bi bi-shield-check me-2"></i>Zırhlı Yapı (50x50 mm Köşebent):
+                            <i class="bi bi-shield-check me-2"></i>{% trans "Zırhlı Yapı (50x50 mm Köşebent):" %}
                         </h3>
                         <p class="feature-desc">
-                            5 mm et kalınlığına sahip çelik köşebent içeriğiyle üretilmiştir. Büküm noktalarındaki 8 mm’ye varan mukavemet artışı sayesinde kuvvet testlerinden en yüksek skorla geçmiştir.
+                            {% trans "5 mm et kalınlığına sahip çelik köşebent içeriğiyle üretilmiştir. Büküm noktalarındaki 8 mm’ye varan mukavemet artışı sayesinde kuvvet testlerinden en yüksek skorla geçmiştir." %}
                         </p>
                     </div>
 
                     <div class="feature-item mb-4">
-                        <h3 class="feature-head h5">Ayrılmaz Bütünlük:</h3>
+                        <h3 class="feature-head h5">{% trans "Ayrılmaz Bütünlük:" %}</h3>
                         <p class="feature-desc">
-                            Sabitleme vidası köşebenti delerek içinden geçer ve çevre kaynağı ile sabitlenir. Bu yöntem, en şiddetli yük testlerinde bile vidanın üründen kopmasını imkansız kılar.
+                            {% trans "Sabitleme vidası köşebenti delerek içinden geçer ve çevre kaynağı ile sabitlenir. Bu yöntem, en şiddetli yük testlerde bile vidanın üründen kopmasını imkansız kılar." %}
                         </p>
                     </div>
 
                     <div class="feature-item mb-4">
-                        <h3 class="feature-head h5">Deprem Odaklı Tasarım:</h3>
+                        <h3 class="feature-head h5">{% trans "Deprem Odaklı Tasarım:" %}</h3>
                         <p class="feature-desc">
-                            Deprem bölgelerinde yaşanan mekanik ayrılma ve kırılma sorunlarına özel olarak geliştirilmiş, sarsıntıyı kabin içine aktarmayan esnek ve güçlü yapı.
+                            {% trans "Deprem bölgelerinde yaşanan mekanik ayrılma ve kırılma sorunlarına özel olarak geliştirilmiş, sarsıntıyı kabin içine aktarmayan esnek ve güçlü yapı." %}
                         </p>
                     </div>
 
                     <div class="feature-item">
-                        <h3 class="feature-head h5">Özel Pişirilmiş Orijinal Kauçuk:</h3>
+                        <h3 class="feature-head h5">{% trans "Özel Pişirilmiş Orijinal Kauçuk:" %}</h3>
                         <p class="feature-desc">
-                            Yüksek kalite kauçuk ve özel fırınlama süresi, ürünün yıllar geçse de formunu kaybetmemesini ve sönümleme performansını korumasını sağlar.
+                            {% trans "Yüksek kalite kauçuk ve özel fırınlama süresi, ürünün yıllar geçse de formunu kaybetmemesini ve sönümleme performansını korumasını sağlar." %}
                         </p>
                     </div>
 
@@ -398,14 +398,14 @@ Teknik detaylar için tıklayın.
             
             <div class="col-lg-7 col-md-12 pe-lg-5" data-aos="fade-right" data-aos-duration="1000">
                 
-                <h2 class="display-5 fw-bold mb-3 text-dark">Yuvarlak Takoz</h2>
+                <h2 class="display-5 fw-bold mb-3 text-dark">{% trans "Yuvarlak Takoz" %}</h2>
                 
                 <p class="lead fst-italic text-secondary mb-4">
-                    "Sessiz Hareket, Kesintisiz Konfor: <span class="text-dark fw-medium">Liftkeys Yatay Sönümleme Teknolojisi</span>"
+                    {% blocktrans %}"Sessiz Hareket, Kesintisiz Konfor: <span class="text-dark fw-medium">Liftkeys Yatay Sönümleme Teknolojisi</span>"{% endblocktrans %}
                 </p>
 
                 <p class="mb-5">
-                    Kabin içindeki titreşimi unutun; yatay sarsıntılara karşı geliştirilen en dirençli çözümle tanışın.
+                    {% trans "Kabin içindeki titreşimi unutun; yatay sarsıntılara karşı geliştirilen en dirençli çözümle tanışın." %}
                 </p>
 
                 <div class="round-features">
@@ -416,9 +416,9 @@ Teknik detaylar için tıklayın.
                                 <i class="bi bi-shield-lock-fill"></i> </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h3 class="feature-head h5">Zırhlı Bağlantı Gücü:</h3>
+                            <h3 class="feature-head h5">{% trans "Zırhlı Bağlantı Gücü:" %}</h3>
                             <p class="feature-desc">
-                                40 mm çapındaki ve 4 mm kalınlığındaki özel pullar, gövdeye çepeçevre kaynak yöntemiyle birleştirilmiştir. Kopma direnci maksimum seviyededir.
+                                {% trans "40 mm çapındaki ve 4 mm kalınlığındaki özel pullar, gövdeye çepeçevre kaynak yöntemiyle birleştirilmiştir. Kopma direnci maksimum seviyededir." %}
                             </p>
                         </div>
                     </div>
@@ -429,9 +429,9 @@ Teknik detaylar için tıklayın.
                                 <i class="bi bi-arrows-move"></i> </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h3 class="feature-head h5">Bağımsız Çalışma Prensibi:</h3>
+                            <h3 class="feature-head h5">{% trans "Bağımsız Çalışma Prensibi:" %}</h3>
                             <p class="feature-desc">
-                                İki bağlantı noktası arasındaki özel sertlikteki kauçuk, kabinden gelen titreşimleri bağımsız emer. "Bağımsız sönümleme" yeteneği yatay sarsıntıyı minimuma indirir.
+                                {% trans "İki bağlantı noktası arasındaki özel sertlikteki kauçuk, kabinden gelen titreşimleri bağımsız emer. 'Bağımsız sönümleme' yeteneği yatay sarsıntıyı minimuma indirir." %}
                             </p>
                         </div>
                     </div>
@@ -442,9 +442,9 @@ Teknik detaylar için tıklayın.
                                 <i class="bi bi-gear-wide-connected"></i> </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h3 class="feature-head h5">Özel Pişirme ve Formül:</h3>
+                            <h3 class="feature-head h5">{% trans "Özel Pişirme ve Formül:" %}</h3>
                             <p class="feature-desc">
-                                Kauçuğun moleküler yapısını koruyan ileri pişirme tekniği, ürünün elastikiyetini yıllarca kaybetmemesini ve yoğun trafikte bile uzun ömürlü olmasını sağlar.
+                                {% trans "Kauçuğun moleküler yapısını koruyan ileri pişirme tekniği, ürünün elastikiyetini yıllarca kaybetmemesini ve yoğun trafikte bile uzun ömürlü olmasını sağlar." %}
                             </p>
                         </div>
                     </div>
@@ -461,7 +461,7 @@ Teknik detaylar için tıklayın.
                     </div>
                     
                     <img src="{% static 'image/pageproduct/takozlar/yuvarlak-takoz-yatay-sonumleme.webp' %}" 
-                         alt="LIFTKEYS Yuvarlak Takoz - Yatay titreşim sönümleme sistemi" 
+                         alt="{% trans 'LIFTKEYS Yuvarlak Takoz - Yatay titreşim sönümleme sistemi' %}" 
                          class="img-fluid position-relative z-2 round-product-img" loading="lazy">
                 </div>
             </div>
@@ -481,50 +481,50 @@ Teknik detaylar için tıklayın.
                     <div class="tech-border-frame"></div>
 
                     <img src="{% static 'image/pageproduct/takozlar/mrl-kare-takoz-95-shore.webp' %}" 
-                         alt="LIFTKEYS MRL Makine Altı Kare Takoz - 95 Shore sertlikte asansör motor takozu" 
+                         alt="{% trans 'LIFTKEYS MRL Makine Altı Kare Takoz - 95 Shore sertlikte asansör motor takozu' %}" 
                          class="img-fluid position-relative z-2 mrl-product-img" loading="lazy">
                 </div>
             </div>
 
             <div class="col-lg-7 col-md-12 ps-lg-5" data-aos="fade-left" data-aos-duration="1000">
                 
-                <h2 class="display-5 fw-bold mb-3 text-dark">MRL Makine Altı Kare Takoz</h2>
+                <h2 class="display-5 fw-bold mb-3 text-dark">{% trans "MRL Makine Altı Kare Takoz" %}</h2>
                 
                 <p class="lead fst-italic text-secondary mb-4">
-                    "Makinesiz Sistemlerin Sarsılmaz Temeli: <span class="text-dark fw-bold">95 Shore Performansı</span>"
+                    {% blocktrans %}"Makinesiz Sistemlerin Sarsılmaz Temeli: <span class="text-dark fw-bold">95 Shore Performansı</span>"{% endblocktrans %}
                 </p>
 
                 <p class="mb-4">
-                    MRL asansörlerin dar alanlarda yarattığı yüksek baskı için özel olarak geliştirildi.
+                    {% trans "MRL asansörlerin dar alanlarda yarattığı yüksek baskı için özel olarak geliştirildi." %}
                 </p>
 
                 <div class="tech-features-list">
                     
                     <div class="tech-item mb-4">
-                        <h3 class="feature-head h5">95 Shore Sertlik:</h3>
+                        <h3 class="feature-head h5">{% trans "95 Shore Sertlik:" %}</h3>
                         <p class="feature-desc">
-                            Kauçuk teknolojisinin en üst sınırlarında yer alan <span class="tech-highlight">95 Shore</span> sertlik derecesi, en ağır makine yükleri altında bile formunu korur; çökme veya yayılma yapmaz.
+                            {% blocktrans %}Kauçuk teknolojisinin en üst sınırlarında yer alan <span class="tech-highlight">95 Shore</span> sertlik derecesi, en ağır makine yükleri altında bile formunu korur; çökme veya yayılma yapmaz.{% endblocktrans %}
                         </p>
                     </div>
 
                     <div class="tech-item mb-4">
-                        <h3 class="feature-head h5">Asansör Ömrünce Değişmez Form:</h3>
+                        <h3 class="feature-head h5">{% trans "Asansör Ömrünce Değişmez Form:" %}</h3>
                         <p class="feature-desc">
-                            Özel moleküler pişirme teknolojisi sayesinde asansörün kullanım ömrü boyunca şekil değiştirmeden, ilk günkü sönümleme performansıyla çalışır.
+                            {% trans "Özel moleküler pişirme teknolojisi sayesinde asansörün kullanım ömrü boyunca şekil değiştirmeden, ilk günkü sönümleme performansıyla çalışır." %}
                         </p>
                     </div>
 
                     <div class="tech-item mb-4">
-                        <h3 class="feature-head h5">MRL Sistemlere Özel Tasarım:</h3>
+                        <h3 class="feature-head h5">{% trans "MRL Sistemlere Özel Tasarım:" %}</h3>
                         <p class="feature-desc">
-                            <span class="tech-highlight">70x70 mm</span> kare formu ve <span class="tech-highlight">M20 cıvata</span> uyumlu delik çapıyla, makinesiz asansör motorlarının montaj noktalarına tam uyum sağlar.
+                            {% blocktrans %}<span class="tech-highlight">70x70 mm</span> kare formu ve <span class="tech-highlight">M20 cıvata</span> uyumlu delik çapıyla, makinesiz asansör motorlarının montaj noktalarına tam uyum sağlar.{% endblocktrans %}
                         </p>
                     </div>
 
                     <div class="tech-item">
-                        <h3 class="feature-head h5">Maksimum Mukavemet:</h3>
+                        <h3 class="feature-head h5">{% trans "Maksimum Mukavemet:" %}</h3>
                         <p class="feature-desc">
-                            <span class="tech-highlight">20 mm</span> kalınlığındaki kompakt yapısı, titreşimi sönümlerken makine stabilizasyonunu en üst seviyede tutar.
+                            {% blocktrans %}<span class="tech-highlight">20 mm</span> kalınlığındaki kompakt yapısı, titreşimi sönümlerken makine stabilizasyonunu en üst seviyede tutar.{% endblocktrans %}
                         </p>
                     </div>
 
@@ -541,12 +541,12 @@ Teknik detaylar için tıklayın.
         
         <div class="row text-center mb-5">
             <div class="col-lg-9 mx-auto" data-aos="fade-down">
-                <h2 class="display-5 fw-bold text-dark mb-3">Ucuz Takozun Pahalı Faturası</h2>
+                <h2 class="display-5 fw-bold text-dark mb-3">{% trans "Ucuz Takozun Pahalı Faturası" %}</h2>
                 <p class="lead text-secondary">
-                    Tasarruf mu Yapıyorsunuz, Yoksa <span class="text-danger fw-bold">Sisteminize Zarar mı Veriyorsunuz?</span>
+                    {% blocktrans %}Tasarruf mu Yapıyorsunuz, Yoksa <span class="text-danger fw-bold">Sisteminize Zarar mı Veriyorsunuz?</span>{% endblocktrans %}
                 </p>
                 <p class="mb-0 text-muted w-75 mx-auto">
-                    Asansör dünyasında vibrasyon takozları sadece birer "lastik" değildir; sistemin dengesini koruyan birer mühendislik elemanıdır. Ucuz ve plastik ağırlıklı takoz kullanmanın gizli maliyetleri şunlardır:
+                    {% trans "Asansör dünyasında vibrasyon takozları sadece birer 'lastik' değildir; sistemin dengesini koruyan birer mühendislik elemanıdır. Ucuz ve plastik ağırlıklı takoz kullanmanın gizli maliyetleri şunlardır:" %}
                 </p>
             </div>
         </div>
@@ -561,9 +561,9 @@ Teknik detaylar için tıklayın.
                             <div class="card-icon-wrapper bg-danger-subtle text-danger mb-3">
                                 <i class="bi bi-gear-wide-connected"></i>
                             </div>
-                            <h3 class="fw-bold text-dark h5">Halat ve Kasnak Düşmanı</h3>
+                            <h3 class="fw-bold text-dark h5">{% trans "Halat ve Kasnak Düşmanı" %}</h3>
                             <p class="text-secondary small mb-0">
-                                Esneyen veya ezilen kalitesiz takozlar, makinenin terazisini bozar. Dengesiz basan halatlar, kasnak kanallarını asimetrik aşındırır ve halat ömrünü %50’ye varan oranda kısaltır.
+                                {% trans "Esneyen veya ezilen kalitesiz takozlar, makinenin terazisini bozar. Dengesiz basan halatlar, kasnak kanallarını asimetrik aşındırır ve halat ömrünü %50’ye varan oranda kısaltır." %}
                             </p>
                         </div>
                     </div>
@@ -573,9 +573,9 @@ Teknik detaylar için tıklayın.
                             <div class="card-icon-wrapper bg-warning-subtle text-warning mb-3">
                                 <i class="bi bi-lightning-charge-fill"></i>
                             </div>
-                            <h3 class="fw-bold text-dark h5">Enerji Hırsızı</h3>
+                            <h3 class="fw-bold text-dark h5">{% trans "Enerji Hırsızı" %}</h3>
                             <p class="text-secondary small mb-0">
-                                Dengesi bozulan bir makine grubu, her kalkış ve seyirde daha fazla akım çeker. Yanlış takoz seçimi, elektrik faturanızdaki gizli artıştır.
+                                {% trans "Dengesi bozulan bir makine grubu, her kalkış ve seyirde daha fazla akım çeker. Yanlış takoz seçimi, elektrik faturanızdaki gizli artıştır." %}
                             </p>
                         </div>
                     </div>
@@ -585,9 +585,9 @@ Teknik detaylar için tıklayın.
                             <div class="card-icon-wrapper bg-danger-subtle text-danger mb-3">
                                 <i class="bi bi-shield-x"></i>
                             </div>
-                            <h3 class="fw-bold text-dark h5">Güvenlik Riski</h3>
+                            <h3 class="fw-bold text-dark h5">{% trans "Güvenlik Riski" %}</h3>
                             <p class="text-secondary small mb-0">
-                                Hava değişimlerinde sertleşen kalitesiz yük takozları, fren senkronizasyonunu bozar. Ani duruşlarda kabin sarsılır, konfor biter ve güvenlik mekanizmaları dengesiz yüklenir.
+                                {% trans "Hava değişimlerinde sertleşen kalitesiz yük takozları, fren senkronizasyonunu bozar. Ani duruşlarda kabin sarsılır, konfor biter ve güvenlik mekanizmaları dengesiz yüklenir." %}
                             </p>
                         </div>
                     </div>
@@ -597,9 +597,9 @@ Teknik detaylar için tıklayın.
                             <div class="card-icon-wrapper bg-warning-subtle text-warning mb-3">
                                 <i class="bi bi-volume-up-fill"></i>
                             </div>
-                            <h3 class="fw-bold text-dark h5">Kabin İçi Gürültü ve Uğultu</h3>
+                            <h3 class="fw-bold text-dark h5">{% trans "Kabin İçi Gürültü ve Uğultu" %}</h3>
                             <p class="text-secondary small mb-0">
-                                Makine dairesindeki titreşimi yutamayan her takoz, kabin içine uğultu ve titreşim olarak döner. Yolcu konforunu tamamen yok eder.
+                                {% trans "Makine dairesindeki titreşimi yutamayan her takoz, kabin içine uğultu ve titreşim olarak döner. Yolcu konforunu tamamen yok eder." %}
                             </p>
                         </div>
                     </div>
@@ -617,12 +617,12 @@ Teknik detaylar için tıklayın.
         
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-10" data-aos="fade-down">
-                <span class="badge bg-orange text-white mb-3 px-3 py-2 rounded-pill">Uzman Görüşü</span>
+                <span class="badge bg-orange text-white mb-3 px-3 py-2 rounded-pill">{% trans "Uzman Görüşü" %}</span>
                 <h2 class="display-6 fw-bold text-dark mb-3">
-                    "Küçük Tasarruflar, <span class="text-danger">Büyük Arızalar Doğurur.</span>"
+                    {% blocktrans %}"Küçük Tasarruflar, <span class="text-danger">Büyük Arızalar Doğurur.</span>"{% endblocktrans %}
                 </h2>
                 <h3 class="h5 text-secondary fst-italic fw-normal">
-                    "Asansörünüzün Kalbi Makineyse, Onu Hayata Bağlayan Damarlar Takozlardır."
+                    {% trans '"Asansörünüzün Kalbi Makineyse, Onu Hayata Bağlayan Damarlar Takozlardır."' %}
                 </h3>
             </div>
         </div>
@@ -634,10 +634,10 @@ Teknik detaylar için tıklayın.
                 <div class="question-box p-4 bg-white rounded-4 shadow-sm mb-4 border-start-orange" data-aos="fade-right">
                     <h3 class="fw-bold text-dark mb-3 h4">
                         <i class="bi bi-question-circle-fill text-orange me-2"></i>
-                        Asansörünüz Neden Titriyor ve Uğulduyor?
+                        {% trans "Asansörünüz Neden Titriyor ve Uğulduyor?" %}
                     </h3>
                     <p class="text-muted mb-0">
-                        Çoğu zaman suçlu motor değil, motorun altındaki <strong>"ucuz"</strong> takozdur!
+                        {% blocktrans %}Çoğu zaman suçlu motor değil, motorun altındaki <strong>"ucuz"</strong> takozdur!{% endblocktrans %}
                     </p>
                 </div>
 
@@ -648,9 +648,9 @@ Teknik detaylar için tıklayın.
                             <i class="bi bi-x-circle-fill text-danger fs-5"></i>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h4 class="fw-bold mb-1 h6">Plastik Takoz Gerçeği</h4>
+                            <h4 class="fw-bold mb-1 h6">{% trans "Plastik Takoz Gerçeği" %}</h4>
                             <p class="text-secondary small mb-0">
-                                Plastik takozlar zamanla ezilir, makinenin dengesini bozar ve halatları tek taraflı yer bitirir.
+                                {% trans "Plastik takozlar zamanla ezilir, makinenin dengesini bozar ve halatları tek taraflı yer bitirir." %}
                             </p>
                         </div>
                     </div>
@@ -660,9 +660,9 @@ Teknik detaylar için tıklayın.
                             <i class="bi bi-lightning-fill text-warning fs-5"></i>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h4 class="fw-bold mb-1 h6">Enerji Kaybı</h4>
+                            <h4 class="fw-bold mb-1 h6">{% trans "Enerji Kaybı" %}</h4>
                             <p class="text-secondary small mb-0">
-                                Dengesiz makine, motorun zorlanmasına ve aşırı enerji tüketimine sebep olur.
+                                {% trans "Dengesiz makine, motorun zorlanmasına ve aşırı enerji tüketimine sebep olur." %}
                             </p>
                         </div>
                     </div>
@@ -672,9 +672,9 @@ Teknik detaylar için tıklayın.
                             <i class="bi bi-check-circle-fill text-success fs-4"></i>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h4 class="fw-bold text-success mb-1 h6">LiftKeys Çözümü</h4>
+                            <h4 class="fw-bold text-success mb-1 h6">{% trans "LiftKeys Çözümü" %}</h4>
                             <p class="text-secondary small mb-0">
-                                Liftkeys Kauçuk Takozları, <strong>95 Shore sertliği</strong> ve <strong>özel pişirme teknolojisi</strong> ile asla şekil değiştirmez. Makinenizin dengesini korur, halat ömrünü uzatır ve sessizliği garanti eder.
+                                {% blocktrans %}Liftkeys Kauçuk Takozları, <strong>95 Shore sertliği</strong> ve <strong>özel pişirme teknolojisi</strong> ile asla şekil değiştirmez. Makinenizin dengesini korur, halat ömrünü uzatır ve sessizliği garanti eder.{% endblocktrans %}
                             </p>
                         </div>
                     </div>
@@ -688,15 +688,15 @@ Teknik detaylar için tıklayın.
                     
                     <div class="position-relative z-2 content-box">
                         <i class="bi bi-shield-check display-3 mb-3 text-white"></i>
-                        <h3 class="fw-bold mb-3 h4">Plastik Değil, <br>Gerçek Kauçuk.</h3>
+                        <h3 class="fw-bold mb-3 h4">{% blocktrans %}Plastik Değil, <br>Gerçek Kauçuk.{% endblocktrans %}</h3>
                         <p class="opacity-75 mb-4 small">
-                            Halat ömrünü uzatmanın en kolay yolu.
+                            {% trans "Halat ömrünü uzatmanın en kolay yolu." %}
                         </p>
                         
                         <hr class="border-white opacity-50 my-4">
                         
                         <p class="fw-light fst-italic mb-0">
-                            "Unutmayın: Takozdan ettiğiniz tasarruf, yarın kasnak ve halat değişimi olarak size geri döner."
+                            {% trans '"Unutmayın: Takozdan ettiğiniz tasarruf, yarın kasnak ve halat değişimi olarak size geri döner."' %}
                         </p>
                     </div>
                 </div>
@@ -707,17 +707,15 @@ Teknik detaylar için tıklayın.
 </section>
 
 
-
-
 <section class="faq-section py-5 bg-white overflow-hidden">
     <div class="container">
         
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center" data-aos="fade-down">
-                <span class="text-orange fw-bold text-uppercase small ls-2">Merak Ettikleriniz</span>
-                <h2 class="display-6 fw-bold text-dark mt-2">Sıkça Sorulan Sorular</h2>
+                <span class="text-orange fw-bold text-uppercase small ls-2">{% trans "Merak Ettikleriniz" %}</span>
+                <h2 class="display-6 fw-bold text-dark mt-2">{% trans "Sıkça Sorulan Sorular" %}</h2>
                 <p class="text-secondary">
-                    Vibrasyon takozları ve montaj süreci hakkında en çok merak edilen soruların yanıtları.
+                    {% trans "Vibrasyon takozları ve montaj süreci hakkında en çok merak edilen soruların yanıtları." %}
                 </p>
             </div>
         </div>
@@ -731,12 +729,12 @@ Teknik detaylar için tıklayın.
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 <i class="bi bi-question-circle-fill text-orange me-3 fs-5"></i>
-                                Plastik takoz ile LiftKeys kauçuk takoz arasındaki fark nedir?
+                                {% trans "Plastik takoz ile LiftKeys kauçuk takoz arasındaki fark nedir?" %}
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#liftkeysFaq">
                             <div class="accordion-body text-secondary p-4 pt-0">
-                                Plastik veya düşük kaliteli karışım takozlar zamanla sertleşir, çatlar ve yük altında ezilerek formunu kaybeder. Bu durum titreşimi binaya iletir. <strong>LiftKeys Kauçuk Takozları</strong> ise %100 orijinal kauçuktan, özel pişirme teknolojisiyle üretilir. Yıllar geçse de elastikiyetini korur, titreşimi sönümler ve makine terazisini bozmaz.
+                                {% blocktrans %}Plastik veya düşük kaliteli karışım takozlar zamanla sertleşir, çatlar ve yük altında ezilerek formunu kaybeder. Bu durum titreşimi binaya iletir. <strong>LiftKeys Kauçuk Takozları</strong> ise %100 orijinal kauçuktan, özel pişirme teknolojisiyle üretilir. Yıllar geçse de elastikiyetini korur, titreşimi sönümler ve makine terazisini bozmaz.{% endblocktrans %}
                             </div>
                         </div>
                     </div>
@@ -745,12 +743,12 @@ Teknik detaylar için tıklayın.
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 <i class="bi bi-gear-fill text-orange me-3 fs-5"></i>
-                                "95 Shore" sertlik değeri neden bu kadar önemli?
+                                {% trans '"95 Shore" sertlik değeri neden bu kadar önemli?' %}
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#liftkeysFaq">
                             <div class="accordion-body text-secondary p-4 pt-0">
-                                Asansör makineleri çok ağırdır. Çok yumuşak bir takoz (örneğin 60-70 shore) makine altında ezilir ve motorun yana yatmasına sebep olur. <strong>95 Shore</strong>, hem titreşimi sönümleyecek kadar esnek, hem de tonlarca ağırlığı taşıyıp şekil değiştirmeyecek kadar sert olan "altın oran"dır. Halat ve kasnak ömrü için bu sertlik şarttır.
+                                {% blocktrans %}Asansör makineleri çok ağırdır. Çok yumuşak bir takoz (örneğin 60-70 shore) makine altında ezilir ve motorun yana yatmasına sebep olur. <strong>95 Shore</strong>, hem titreşimi sönümleyecek kadar esnek, hem de tonlarca ağırlığı taşıyıp şekil değiştirmeyecek kadar sert olan "altın oran"dır. Halat ve kasnak ömrü için bu sertlik şarttır.{% endblocktrans %}
                             </div>
                         </div>
                     </div>
@@ -759,12 +757,12 @@ Teknik detaylar için tıklayın.
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 <i class="bi bi-clock-history text-orange me-3 fs-5"></i>
-                                Takozların kullanım ömrü ne kadardır?
+                                {% trans "Takozların kullanım ömrü ne kadardır?" %}
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#liftkeysFaq">
                             <div class="accordion-body text-secondary p-4 pt-0">
-                                LiftKeys takozları, doğru montaj yapıldığı takdirde <strong>asansörün mekanik ömrü boyunca</strong> hizmet verecek şekilde tasarlanmıştır. Güneş ışığına doğrudan maruz kalmadığı sürece (makine dairesi ortamında) çürüme veya kopma yapmaz.
+                                {% blocktrans %}LiftKeys takozları, doğru montaj yapıldığı takdirde <strong>asansörün mekanik ömrü boyunca</strong> hizmet verecek şekilde tasarlanmıştır. Güneş ışığına doğrudan maruz kalmadığı sürece (makine dairesi ortamında) çürüme veya kopma yapmaz.{% endblocktrans %}
                             </div>
                         </div>
                     </div>
@@ -773,12 +771,12 @@ Teknik detaylar için tıklayın.
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button fw-bold text-dark collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 <i class="bi bi-tools text-orange me-3 fs-5"></i>
-                                Montaj sırasında nelere dikkat edilmelidir?
+                                {% trans "Montaj sırasında nelere dikkat edilmelidir?" %}
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#liftkeysFaq">
                             <div class="accordion-body text-secondary p-4 pt-0">
-                                En önemli kural, makinenin teraziye alınmasıdır. Takoz somunları sıkılırken makinenin kasnak hizasının kaymamasına dikkat edilmelidir. Ayrıca MRL (Kare) ve Motor (Yuvarlak) takozların, makine şasesindeki delik çaplarına uygun seçildiğinden emin olunmalıdır.
+                                {% trans "En önemli kural, makinenin teraziye alınmasıdır. Takoz somunları sıkılırken makinenin kasnak hizasının kaymamasına dikkat edilmelidir. Ayrıca MRL (Kare) ve Motor (Yuvarlak) takozların, makine şasesindeki delik çaplarına uygun seçildiğinden emin olunmalıdır." %}
                             </div>
                         </div>
                     </div>
@@ -788,7 +786,6 @@ Teknik detaylar için tıklayın.
         </div>
     </div>
 </section>
-
 
 {% include "preview/iletisimformpreview.html" %}
 

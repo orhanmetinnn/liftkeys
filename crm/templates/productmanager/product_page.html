@@ -437,6 +437,115 @@ function openLightbox(src) {
 function closeLightbox() {
   document.getElementById('lightboxOverlay').style.display = 'none';
 }
+
+// Bu kodu sayfanın en altındaki script etiketleri arasına ekle
+document.addEventListener("DOMContentLoaded", () => {
+  const cartBtn = document.querySelector('.btn-cart');
+  
+  if (cartBtn) {
+    cartBtn.addEventListener('click', async function(e) {
+      e.preventDefault();
+      
+      const productId = this.getAttribute('data-product-id');
+      const quantity = document.getElementById('qtyInput').value;
+      const form = document.getElementById('product-questions-form');
+      
+      let answers = {};
+      
+      // Kullanıcının seçtiği form cevapları varsa alalım
+      if (form) {
+        const formData = new FormData(form);
+        for (let [key, value] of formData.entries()) {
+            // Eğer checkbox gibi çoklu seçim varsa diziye atarız
+            if (answers[key]) {
+                if (Array.isArray(answers[key])) {
+                    answers[key].push(value);
+                } else {
+                    answers[key] = [answers[key], value];
+                }
+            } else {
+                answers[key] = value;
+            }
+        }
+      }
+
+      // Backend'e gönderilecek JSON paketi
+      const payload = {
+          product_id: productId,
+          qty: quantity,
+          answers: answers
+      };
+
+      try {
+        // urls.py dosyasında tanımladığın isme göre url çekilir
+        const url = "{% url 'add_to_cart_api' %}"; 
+        
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken') // Django güvenlik anahtarı
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+            // Sepet başarılı eklendi! Menüdeki sayıyı güncelle
+            if (typeof loadCartCount === "function") {
+                loadCartCount(); 
+            }
+            showToast("Ürün başarıyla sepete eklendi!");
+        } else {
+            showToast("Hata: " + (result.error || "Ürün eklenemedi."));
+        }
+      } catch (error) {
+        console.error("Fetch Hatası:", error);
+        showToast("Sunucu ile iletişim kurulamadı.");
+      }
+    });
+  }
+});
+
+// CSRF Token okuyucu yardımcı fonksiyon
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
+// Sağ altta çıkan şık bildirim fonksiyonu
+function showToast(message) {
+  const container = document.getElementById('toast-container');
+  if (container) {
+    const toastHtml = `
+      <div class="toast align-items-center text-white bg-dark border-0 show" role="alert" aria-live="assertive" aria-atomic="true" style="margin-bottom: 10px;">
+        <div class="d-flex">
+          <div class="toast-body">
+             ${message}
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" onclick="this.parentElement.parentElement.remove()"></button>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', toastHtml);
+    setTimeout(() => {
+      if(container.lastElementChild) container.lastElementChild.remove();
+    }, 3000);
+  } else {
+    alert(message);
+  }
+}
 </script>
 
 {% include "preview/footer.html" %}

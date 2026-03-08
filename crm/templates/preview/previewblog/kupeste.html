@@ -35,7 +35,7 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
 {% endblocktrans %}
 {% endblock %}
 
-{% block og_image %}{% static 'image/pageproduct/kupeste/paslanmaz-celik-asansor-kupeste.jpg' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/kupeste/paslanmaz-celik-asansor-kupeste.jpg' %}{% endblock %}
 
 {% block tw_title %}
 {% trans "LiftKeys | Paslanmaz Çelik Asansör Tutamakları" %}
@@ -48,7 +48,7 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
 {% endblocktrans %}
 {% endblock %}
 
-{% block tw_image %}{% static 'image/pageproduct/kupeste/liftkeys-paslanmaz-celik-kupeste.jpg' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/kupeste/liftkeys-paslanmaz-celik-kupeste.jpg' %}{% endblock %}
 
 {# --- CSS BLOĞU --- #}
 {% block extra_css %}
@@ -146,6 +146,10 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
     ]
 </script>
 
+
+
+{% load i18n %}
+
 <section class="py-5">
     <div class="container">
         
@@ -160,7 +164,7 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
                 <path d="M18 42C12.5 42 8 46.5 8 52C8 57.5 12.5 62 18 62C23.5 62 28 57.5 28 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
                 <circle cx="18" cy="52" r="2.5" fill="white"/>
             </svg>
-            <h1 class="liftkeys-title-text m-0">LIFTKEYS – Küpeşte Seçenekleri</h1>
+            <h1 class="liftkeys-title-text m-0">{% trans "LIFTKEYS – Küpeşte Seçenekleri" %}</h1>
         </div>
 
         <div class="row align-items-center">
@@ -173,8 +177,8 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
                     style="cursor: pointer;">
                     
                     <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-asansor-kupeste.webp' %}" 
-                        alt="Paslanmaz çelik modern asansör küpeşte ve tutamak modeli" 
-                        title="Paslanmaz Çelik Küpeşte" 
+                        alt="{% trans 'Paslanmaz çelik modern asansör küpeşte ve tutamak modeli' %}" 
+                        title="{% trans 'Paslanmaz Çelik Küpeşte' %}" 
                         class="img-fluid w-100 d-block">
                     
                     <div class="play-button-overlay">
@@ -186,9 +190,9 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
 
             <div class="col-lg-4 col-md-12" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <div class="slogan-container">
-                    “İstediğin Zaman.<br>
+                    {% blocktrans %}“İstediğin Zaman.<br>
                     İstediğin Şekilde.<br>
-                    <span class="slogan-bold">Üretimde Özgürlük”</span>
+                    <span class="slogan-bold">Üretimde Özgürlük”</span>{% endblocktrans %}
                 </div>
             </div>
 
@@ -197,6 +201,449 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
 </section>
 
 
+<section class="py-5" style="background-color: #f9f9f9;"> 
+    <div class="container">
+        
+        <div class="row g-4 mb-5 justify-content-center">
+            
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card text-center">
+                    <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-asansor-kupeste-dirsek.webp' %}" 
+                         alt="{% trans 'Dirsek Model Küpeşte' %}" class="img-fluid">
+                    <span class="product-title">{% trans "Dirsek Model" %}</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card text-center">
+                    <img src="{% static 'image/pageproduct/kupeste/dik-kurtagzi-kupeste-baglanti.webp' %}" 
+                         alt="{% trans 'Dik Kurtağızı Model' %}" class="img-fluid">
+                    <span class="product-title">{% trans "Dik Kurtağızı" %}</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card text-center">
+                    <img src="{% static 'image/pageproduct/kupeste/alt-kurtagzi-kupeste-baglanti.webp' %}" 
+                         alt="{% trans 'Alt Kurtağızı Model' %}" class="img-fluid">
+                    <span class="product-title">{% trans "Alt Kurtağızı" %}</span>
+                </div>
+            </div>
+
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                <div class="cta-card">
+                    <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn-premium-orange" download>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        {% trans "Kataloğu İndir" %}
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center section-footer-text" data-aos="fade-up" data-aos-offset="100">
+                <h3 class="section-title-large">{% trans "Asansör Küpeşteleri" %}</h3>
+                <p class="section-desc">
+                    {% blocktrans %}İnovatif küpeşte çözümlerimiz sayesinde, fabrikanızda talebe göre 
+                    <strong style="color:#F08200;">ölçü, renk ve zamanlama özgürlüğüyle</strong> 
+                    üretim yapabilirsiniz.{% endblocktrans %}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-12">
+                <h3 class="pipes-section-title" data-aos="fade-right">{% trans "Borular" %}</h3>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            
+            <div class="col-md-4 col-sm-12" data-aos="fade-right" data-aos-delay="100">
+                <div class="pipe-image-wrapper">
+                    <img src="{% static 'image/pageproduct/kupeste/boru-renk-secenekleri-dikey.webp' %}" 
+                         alt="{% trans 'Krom, füme, gold, bronz ve siyah asansör boru renkleri' %}" 
+                         title="{% trans 'Boru Renk Seçenekleri' %}"
+                         class="img-fluid"
+                         loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="pipe-image-wrapper">
+                    <img src="{% static 'image/pageproduct/kupeste/boru-uzunluk-olculeri-grafik.webp' %}" 
+                         alt="{% trans 'Paslanmaz boru uzunluk seçenekleri ve ölçü tablosu' %}" 
+                         title="{% trans 'Boru Uzunlukları' %}"
+                         class="img-fluid"
+                         loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12" data-aos="fade-left" data-aos-delay="300">
+                <div class="pipe-image-wrapper">
+                    <img src="{% static 'image/pageproduct/kupeste/boru-kesit-teknik-cizim.webp' %}" 
+                         alt="{% trans '30mm çap ve 1mm et kalınlığı boru teknik detay çizimi' %}" 
+                         title="{% trans 'Teknik Kesit' %}"
+                         class="img-fluid"
+                         loading="lazy">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12 pipe-footer-info" data-aos="fade-up" data-aos-offset="50">
+                <h4 class="info-main-text">{% trans "201 kalite paslanmaz çelikten üretilmektedir." %}</h4>
+                <p class="info-sub-text">
+                    {% blocktrans %}Crom, gold, füme, bronz, ESB ve siyah renk seçenekleri mevcuttur.<br>
+                    Boru çapı: 30 mm / Et kalınlığı: 1 mm{% endblocktrans %}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="tech-section-wrapper">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="tech-header" data-aos="fade-right">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="#F08200"/>
+                        <path d="M20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C16.42 20 20 16.42 20 12Z" fill="#777" fill-opacity="0.5"/>
+                    </svg>
+                    {% trans "Teknik Çizim ve Özellikler" %}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="drawing-container">
+                    <img src="{% static 'image/pageproduct/kupeste/dirsek-teknik-cizim-olculeri.webp' %}" 
+                         alt="{% trans 'Teknik Çizim' %}" 
+                         class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                
+                <div class="row justify-content-center mb-2">
+                    <div class="col-4 elbow-item">
+                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-krom.webp' %}" 
+                             alt="{% trans 'Krom' %}" class="elbow-img">
+                        <span class="elbow-name">{% trans "Krom" %}</span>
+                    </div>
+                    <div class="col-4 elbow-item">
+                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-fume.webp' %}" 
+                             alt="{% trans 'Füme' %}" class="elbow-img">
+                        <span class="elbow-name">{% trans "Füme" %}</span>
+                    </div>
+                    <div class="col-4 elbow-item">
+                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-gold.webp' %}" 
+                             alt="{% trans 'Gold' %}" class="elbow-img">
+                        <span class="elbow-name">{% trans "Gold" %}</span>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-4 elbow-item">
+                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-bronz.webp' %}" 
+                             alt="{% trans 'Bronz' %}" class="elbow-img">
+                        <span class="elbow-name">{% trans "Bronz" %}</span>
+                    </div>
+                    <div class="col-4 elbow-item">
+                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-siyah.webp' %}" 
+                             alt="{% trans 'Siyah' %}" class="elbow-img">
+                        <span class="elbow-name">{% trans "ESB Siyah" %}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <p class="footer-desc" data-aos="fade-up" data-aos-offset="50">
+                    {% blocktrans %}Dirseklerin duvara temas eden alanı 42 mm, boru çapı ise 30 mm’dir.<br>
+                    Bu tasarım sayesinde oluşan yük daha geniş bir alana yayılır; baskı altında dahi eğilme veya
+                    bükülme problemi yaşanmadan güvenli ve stabil çalışma sağlanır.{% endblocktrans %}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="color-match-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 col-md-12" data-aos="fade-right" data-aos-duration="1000">
+                <div class="handrail-stack-container">
+                    
+                    <img src="{% static 'image/pageproduct/kupeste/krom-takim-kupeste-boru-ve-dirsek.webp' %}" 
+                         alt="{% trans 'Krom renk uyumlu asansör küpeşte ve boru takımı' %}" 
+                         class="handrail-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/fume-takim-kupeste-boru-ve-dirsek.webp' %}" 
+                         alt="{% trans 'Füme gri paslanmaz bütünleşik küpeşte seti' %}" 
+                         class="handrail-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/gold-takim-kupeste-boru-ve-dirsek.webp' %}" 
+                         alt="{% trans 'Gold altın sarısı uyumlu dirsek ve boru takımı' %}" 
+                         class="handrail-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/bronz-takim-kupeste-boru-ve-dirsek.webp' %}" 
+                         alt="{% trans 'Bronz renkli dekoratif asansör tutamağı' %}" 
+                         class="handrail-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/siyah-takim-kupeste-boru-ve-dirsek.webp' %}" 
+                         alt="{% trans 'ESB Siyah renkli modern küpeşte takımı' %}" 
+                         class="handrail-img" loading="lazy">
+
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12" data-aos="fade-left" data-aos-delay="200">
+                <div class="match-text-wrapper">
+                    <h2 class="match-slogan">
+                        {% blocktrans %}Dirsek ve boru<br>
+                        aynı renkte üretilebilir.{% endblocktrans %}
+                    </h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="combination-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5 col-md-12 order-1 order-lg-1" data-aos="fade-right" data-aos-delay="200">
+                <div class="combo-text-wrapper">
+                    <h2 class="combo-slogan">
+                        {% blocktrans %}Dilediğin<br>
+                        <strong>renk ve parça kombinasyonunu</strong>
+                        özgürce oluşturabilirsin.{% endblocktrans %}
+                    </h2>
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-md-12 order-2 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="combination-stack-container">
+                    
+                    <img src="{% static 'image/pageproduct/kupeste/kombin-bronz-dirsek-siyah-boru.webp' %}" 
+                         alt="{% trans 'Bronz dirsek ve siyah boru asansör küpeşte kombinasyonu' %}" 
+                         class="combo-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/kombin-gumus-dirsek-siyah-boru.webp' %}" 
+                         alt="{% trans 'Parlak gümüş dirsekli siyah mat boru tasarımı' %}" 
+                         class="combo-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/kombin-gold-dirsek-siyah-boru.webp' %}" 
+                         alt="{% trans 'Gold altın dirsek ve siyah gövde küpeşte' %}" 
+                         class="combo-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/kombin-krom-dirsek-siyah-boru.webp' %}" 
+                         alt="{% trans 'Krom paslanmaz başlık ve siyah boru' %}" 
+                         class="combo-img" loading="lazy">
+                    <img src="{% static 'image/pageproduct/kupeste/kombin-sari-dirsek-siyah-boru.webp' %}" 
+                         alt="{% trans 'Sarı metal dirsekli özel tasarım siyah küpeşte' %}" 
+                         class="combo-img" loading="lazy">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="measurement-guide-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 col-md-12" data-aos="fade-right">
+                <img src="{% static 'image/pageproduct/kupeste/asansor-kabin-kupeste-olcu-alimi.webp' %}" 
+                     alt="{% trans 'Asansör kabini küpeşte montaj genişliği ölçü alımı' %}" 
+                     class="cabin-measure-img"
+                     loading="lazy">
+            </div>
+
+            <div class="col-lg-6 col-md-12" data-aos="fade-left" data-aos-delay="200">
+                <div class="guide-content-wrapper">
+                    
+                    <h3 class="guide-title">{% trans "Doğru Ölçü Nasıl Alınır?" %}</h3>
+                    
+                    <p class="guide-text">
+                        {% blocktrans %}Küpeşte montajı yapılacak alanın ölçülerini belirleyin.<br>
+                        Küpeşte boyunu netleştirdikten sonra, sağ ve sol dirsekler için 
+                        <strong>toplam 140 mm ölçüyü</strong> dikkate alın.{% endblocktrans %}
+                    </p>
+                    
+                    <p class="guide-text">
+                        {% trans "Bu ölçüyü toplam küpeşte boyundan düşerek, kullanılacak boru uzunluğunu doğru şekilde hesaplayabilirsiniz." %}
+                    </p>
+
+                    <img src="{% static 'image/pageproduct/kupeste/dirsek-kesim-payi-teknik-sema.webp' %}" 
+                         alt="{% trans 'Küpeşte dirsek kesim payı hesaplama şeması' %}" 
+                         class="diagram-img"
+                         loading="lazy">
+                    
+                    <div class="formula-box" data-aos="flip-up" data-aos-delay="400">
+                        <div>{% trans "Dirsek Payı: 70 mm + 70 mm = 140 mm" %}</div>
+                        <div class="mt-1">{% trans "Boru Kesim Boyu:" %} <span class="formula-highlight">{% trans "W (Genişlik) - 140 mm" %}</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="assembly-process-section">
+    <div class="container">
+        
+        <div class="row align-items-center process-row">
+            <div class="col-md-6 order-1 order-md-1" data-aos="fade-right">
+                <img src="{% static 'image/pageproduct/kupeste/paslanmaz-boru-kesim-makinesi.webp' %}" 
+                     alt="{% trans 'Asansör küpeşte borusu hassas kesim işlemi' %}" 
+                     class="process-img shadow-sm"
+                     loading="lazy">
+            </div>
+            <div class="col-md-6 order-2 order-md-2" data-aos="fade-left">
+                <div class="process-content">
+                    <p class="process-text">
+                        {% trans "Mühendisler tarafından yapılan hesaplamalara göre borunuzu doğru ölçüde kesebilirsiniz." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center process-row">
+            <div class="col-md-6 order-2 order-md-1" data-aos="fade-right">
+                <div class="process-content">
+                    <p class="process-text">
+                        {% blocktrans %}Küpeşte dirseklerine <span class="highlight-text">O-ringler</span> takılır.<br>
+                        Her bir dirseğe iki adet O-ring yerleştirilmesi, borunun ileri–geri hareket etmesini engeller.{% endblocktrans %}
+                    </p>
+                    <p class="process-text mt-3">
+                        {% blocktrans %}Ayrıca boru, dirseğe döndürülerek monte edildiğinde, O-ringler sayesinde borunun dönmesi de önlenmiş olur.<br>
+                        Bu sistem, küpeştenin sabit, güvenli ve stabil şekilde çalışmasını sağlar.{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                <img src="{% static 'image/pageproduct/kupeste/kupeste-dirsek-oring-montaji.webp' %}" 
+                     alt="{% trans 'Küpeşte dirseklerine O-ring takılması ve montaj detayları' %}" 
+                     class="process-img"
+                     loading="lazy">
+            </div>
+        </div>
+
+        <div class="row align-items-center process-row">
+            <div class="col-md-6 order-1 order-md-1" data-aos="fade-right">
+                <img src="{% static 'image/pageproduct/kupeste/kupeste-tam-montaj-seti.webp' %}" 
+                     alt="{% trans 'Hazır montajlanmış paslanmaz küpeşte seti' %}" 
+                     class="process-img"
+                     loading="lazy">
+            </div>
+            <div class="col-md-6 order-2 order-md-2" data-aos="fade-left">
+                <div class="process-content">
+                    <p class="process-text">
+                        {% blocktrans %}Kendi fabrikanızda, istediğiniz anda üreteceğiniz küpeşteler sayesinde 
+                        <span class="highlight-text">ölçü uyumsuzluğu, stok yetersizliği ve çizik</span> 
+                        gibi malzeme sorunlarını tamamen ortadan kaldırabilirsiniz.{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="packaging-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
+                <h3 class="content-title">{% trans "Kutu İçeriği" %}</h3>
+                <ul class="content-list">
+                    <li>{% trans "18 sağ dirsek" %}</li>
+                    <li>{% trans "18 sol dirsek" %}</li>
+                    <li>{% trans "72 adet oring" %}</li>
+                    <li>{% trans "36 adet setskur vidası" %}</li>
+                    <li>{% trans "36 adet sabitleme cıvatası" %}</li>
+                    <li>{% trans "36 adet sabitleme plakası" %}</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12 text-center mb-4 mb-lg-0" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="{% static 'image/pageproduct/kupeste/liftkeys-dirsek-kutu-ambalaj.webp' %}" 
+                    alt="{% trans 'LiftKeys asansör küpeşte dirsekleri kutu ambalajı' %}"
+                    class="box-image"
+                    loading="lazy">
+            </div>
+
+            <div class="col-lg-4 col-md-12" data-aos="fade-left">
+                <div class="mb-3">
+                    <span class="spec-header-large">{% trans "Kutu İçi" %} </span>
+                    <span class="spec-count">{% trans "36 Adet" %}</span>
+                </div>
+                
+                <span class="spec-subtitle">{% trans "Kutu Ölçü ve Ağırlık Bilgisi" %}</span>
+
+                <div class="spec-wrapper">
+                    <div class="spec-row">
+                        <span class="spec-label">{% trans "• En" %}</span>
+                        <span class="spec-line"></span>
+                        <span class="spec-value">{% trans "20 cm" %}</span>
+                    </div>
+
+                    <div class="spec-row">
+                        <span class="spec-label">{% trans "• Boy" %}</span>
+                        <span class="spec-line"></span>
+                        <span class="spec-value">{% trans "29 cm" %}</span>
+                    </div>
+
+                    <div class="spec-row">
+                        <span class="spec-label">{% trans "• Yükseklik" %}</span>
+                        <span class="spec-line"></span>
+                        <span class="spec-value">{% trans "20 cm" %}</span>
+                    </div>
+
+                    <div class="spec-row">
+                        <span class="spec-label">{% trans "• Ağırlık" %}</span>
+                        <span class="spec-line"></span>
+                        <span class="spec-value">{% trans "9 Kg." %}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% include "preview/iletisimformpreview.html" %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true // Animasyon sadece bir kere çalışsın (yukarı çıkınca bozulmasın)
+    });
+</script>
 
 <script>
     function loadYoutubeVideo(element) {
@@ -222,457 +669,6 @@ Teknik detaylar ve kolay montaj rehberi için tıklayın.
         element.innerHTML = iframeHTML;
     }
 </script>
-
-
-
-
-
-
-
-<section class="py-5" style="background-color: #f9f9f9;"> 
-    <div class="container">
-        
-        <div class="row g-4 mb-5 justify-content-center">
-            
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="product-card text-center">
-                    <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-asansor-kupeste-dirsek.webp' %}" 
-                         alt="Dirsek Model Küpeşte" class="img-fluid">
-                    <span class="product-title">Dirsek Model</span>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="product-card text-center">
-                    <img src="{% static 'image/pageproduct/kupeste/dik-kurtagzi-kupeste-baglanti.webp' %}" 
-                         alt="Dik Kurtağızı Model" class="img-fluid">
-                    <span class="product-title">Dik Kurtağızı</span>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="product-card text-center">
-                    <img src="{% static 'image/pageproduct/kupeste/alt-kurtagzi-kupeste-baglanti.webp' %}" 
-                         alt="Alt Kurtağızı Model" class="img-fluid">
-                    <span class="product-title">Alt Kurtağızı</span>
-                </div>
-            </div>
-
-            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
-                <div class="cta-card">
-                    <a href="#" class="btn-premium-orange">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                        </svg>
-                        Kataloğu İndir
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-12 text-center section-footer-text" data-aos="fade-up" data-aos-offset="100">
-                <h3 class="section-title-large">Asansör Küpeşteleri</h3>
-                <p class="section-desc">
-                    İnovatif küpeşte çözümlerimiz sayesinde, fabrikanızda talebe göre 
-                    <strong style="color:#F08200;">ölçü, renk ve zamanlama özgürlüğüyle</strong> 
-                    üretim yapabilirsiniz.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="py-5 bg-white">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-12">
-                <h3 class="pipes-section-title" data-aos="fade-right">Borular</h3>
-            </div>
-        </div>
-
-        <div class="row align-items-center">
-            
-            <div class="col-md-4 col-sm-12" data-aos="fade-right" data-aos-delay="100">
-                <div class="pipe-image-wrapper">
-                    <img src="{% static 'image/pageproduct/kupeste/boru-renk-secenekleri-dikey.webp' %}" 
-                         alt="Krom, füme, gold, bronz ve siyah asansör boru renkleri" 
-                         title="Boru Renk Seçenekleri"
-                         class="img-fluid"
-                         loading="lazy">
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="pipe-image-wrapper">
-                    <img src="{% static 'image/pageproduct/kupeste/boru-uzunluk-olculeri-grafik.webp' %}" 
-                         alt="Paslanmaz boru uzunluk seçenekleri ve ölçü tablosu" 
-                         title="Boru Uzunlukları"
-                         class="img-fluid"
-                         loading="lazy">
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-12" data-aos="fade-left" data-aos-delay="300">
-                <div class="pipe-image-wrapper">
-                    <img src="{% static 'image/pageproduct/kupeste/boru-kesit-teknik-cizim.webp' %}" 
-                         alt="30mm çap ve 1mm et kalınlığı boru teknik detay çizimi" 
-                         title="Teknik Kesit"
-                         class="img-fluid"
-                         loading="lazy">
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-12 pipe-footer-info" data-aos="fade-up" data-aos-offset="50">
-                <h4 class="info-main-text">201 kalite paslanmaz çelikten üretilmektedir.</h4>
-                <p class="info-sub-text">
-                    Crom, gold, füme, bronz, ESB ve siyah renk seçenekleri mevcuttur.<br>
-                    Boru çapı: 30 mm / Et kalınlığı: 1 mm
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="tech-section-wrapper">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-12">
-                <div class="tech-header" data-aos="fade-right">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="#F08200"/>
-                        <path d="M20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C16.42 20 20 16.42 20 12Z" fill="#777" fill-opacity="0.5"/>
-                    </svg>
-                    Teknik Çizim ve Özellikler
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            
-            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="drawing-container">
-                    <img src="{% static 'image/pageproduct/kupeste/dirsek-teknik-cizim-olculeri.webp' %}" 
-                         alt="Teknik Çizim" 
-                         class="img-fluid">
-                </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                
-                <div class="row justify-content-center mb-2">
-                    <div class="col-4 elbow-item">
-                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-krom.webp' %}" 
-                             alt="Krom" class="elbow-img">
-                        <span class="elbow-name">Krom</span>
-                    </div>
-                    <div class="col-4 elbow-item">
-                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-fume.webp' %}" 
-                             alt="Füme" class="elbow-img">
-                        <span class="elbow-name">Füme</span>
-                    </div>
-                    <div class="col-4 elbow-item">
-                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-gold.webp' %}" 
-                             alt="Gold" class="elbow-img">
-                        <span class="elbow-name">Gold</span>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-4 elbow-item">
-                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-bronz.webp' %}" 
-                             alt="Bronz" class="elbow-img">
-                        <span class="elbow-name">Bronz</span>
-                    </div>
-                    <div class="col-4 elbow-item">
-                        <img src="{% static 'image/pageproduct/kupeste/paslanmaz-celik-dirsek-siyah.webp' %}" 
-                             alt="Siyah" class="elbow-img">
-                        <span class="elbow-name">ESB Siyah</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <p class="footer-desc" data-aos="fade-up" data-aos-offset="50">
-                    Dirseklerin duvara temas eden alanı 42 mm, boru çapı ise 30 mm’dir.<br>
-                    Bu tasarım sayesinde oluşan yük daha geniş bir alana yayılır; baskı altında dahi eğilme veya
-                    bükülme problemi yaşanmadan güvenli ve stabil çalışma sağlanır.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="color-match-section">
-    <div class="container">
-        <div class="row align-items-center">
-            
-            <div class="col-lg-7 col-md-12" data-aos="fade-right" data-aos-duration="1000">
-                <div class="handrail-stack-container">
-                    
-                    <img src="{% static 'image/pageproduct/kupeste/krom-takim-kupeste-boru-ve-dirsek.webp' %}" 
-                         alt="Krom renk uyumlu asansör küpeşte ve boru takımı" 
-                         class="handrail-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/fume-takim-kupeste-boru-ve-dirsek.webp' %}" 
-                         alt="Füme gri paslanmaz bütünleşik küpeşte seti" 
-                         class="handrail-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/gold-takim-kupeste-boru-ve-dirsek.webp' %}" 
-                         alt="Gold altın sarısı uyumlu dirsek ve boru takımı" 
-                         class="handrail-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/bronz-takim-kupeste-boru-ve-dirsek.webp' %}" 
-                         alt="Bronz renkli dekoratif asansör tutamağı" 
-                         class="handrail-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/siyah-takim-kupeste-boru-ve-dirsek.webp' %}" 
-                         alt="ESB Siyah renkli modern küpeşte takımı" 
-                         class="handrail-img" loading="lazy">
-
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-md-12" data-aos="fade-left" data-aos-delay="200">
-                <div class="match-text-wrapper">
-                    <h2 class="match-slogan">
-                        Dirsek ve boru<br>
-                        aynı renkte üretilebilir.
-                    </h2>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="combination-section">
-    <div class="container">
-        <div class="row align-items-center">
-            
-            <div class="col-lg-5 col-md-12 order-1 order-lg-1" data-aos="fade-right" data-aos-delay="200">
-                <div class="combo-text-wrapper">
-                    <h2 class="combo-slogan">
-                        Dilediğin<br>
-                        <strong>renk ve parça kombinasyonunu</strong>
-                        özgürce oluşturabilirsin.
-                    </h2>
-                </div>
-            </div>
-
-            <div class="col-lg-7 col-md-12 order-2 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
-                <div class="combination-stack-container">
-                    
-                    <img src="{% static 'image/pageproduct/kupeste/kombin-bronz-dirsek-siyah-boru.webp' %}" 
-                         alt="Bronz dirsek ve siyah boru asansör küpeşte kombinasyonu" 
-                         class="combo-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/kombin-gumus-dirsek-siyah-boru.webp' %}" 
-                         alt="Parlak gümüş dirsekli siyah mat boru tasarımı" 
-                         class="combo-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/kombin-gold-dirsek-siyah-boru.webp' %}" 
-                         alt="Gold altın dirsek ve siyah gövde küpeşte" 
-                         class="combo-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/kombin-krom-dirsek-siyah-boru.webp' %}" 
-                         alt="Krom paslanmaz başlık ve siyah boru" 
-                         class="combo-img" loading="lazy">
-                    <img src="{% static 'image/pageproduct/kupeste/kombin-sari-dirsek-siyah-boru.webp' %}" 
-                         alt="Sarı metal dirsekli özel tasarım siyah küpeşte" 
-                         class="combo-img" loading="lazy">
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="measurement-guide-section">
-    <div class="container">
-        <div class="row align-items-center">
-            
-            <div class="col-lg-6 col-md-12" data-aos="fade-right">
-                <img src="{% static 'image/pageproduct/kupeste/asansor-kabin-kupeste-olcu-alimi.webp' %}" 
-                     alt="Asansör kabini küpeşte montaj genişliği ölçü alımı" 
-                     class="cabin-measure-img"
-                     loading="lazy">
-            </div>
-
-            <div class="col-lg-6 col-md-12" data-aos="fade-left" data-aos-delay="200">
-                <div class="guide-content-wrapper">
-                    
-                    <h3 class="guide-title">Doğru Ölçü Nasıl Alınır?</h3>
-                    
-                    <p class="guide-text">
-                        Küpeşte montajı yapılacak alanın ölçülerini belirleyin.<br>
-                        Küpeşte boyunu netleştirdikten sonra, sağ ve sol dirsekler için 
-                        <strong>toplam 140 mm ölçüyü</strong> dikkate alın.
-                    </p>
-                    
-                    <p class="guide-text">
-                        Bu ölçüyü toplam küpeşte boyundan düşerek, kullanılacak boru uzunluğunu 
-                        doğru şekilde hesaplayabilirsiniz.
-                    </p>
-
-                    <img src="{% static 'image/pageproduct/kupeste/dirsek-kesim-payi-teknik-sema.webp' %}" 
-                         alt="Küpeşte dirsek kesim payı hesaplama şeması" 
-                         class="diagram-img"
-                         loading="lazy">
-                    
-                    <div class="formula-box" data-aos="flip-up" data-aos-delay="400">
-                        <div>Dirsek Payı: 70 mm + 70 mm = 140 mm</div>
-                        <div class="mt-1">Boru Kesim Boyu: <span class="formula-highlight">W (Genişlik) - 140 mm</span></div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="assembly-process-section">
-    <div class="container">
-        
-        <div class="row align-items-center process-row">
-            <div class="col-md-6 order-1 order-md-1" data-aos="fade-right">
-                <img src="{% static 'image/pageproduct/kupeste/paslanmaz-boru-kesim-makinesi.webp' %}" 
-                     alt="Asansör küpeşte borusu hassas kesim işlemi" 
-                     class="process-img shadow-sm"
-                     loading="lazy">
-            </div>
-            <div class="col-md-6 order-2 order-md-2" data-aos="fade-left">
-                <div class="process-content">
-                    <p class="process-text">
-                        Mühendisler tarafından yapılan hesaplamalara göre borunuzu doğru ölçüde kesebilirsiniz.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center process-row">
-            <div class="col-md-6 order-2 order-md-1" data-aos="fade-right">
-                <div class="process-content">
-                    <p class="process-text">
-                        Küpeşte dirseklerine <span class="highlight-text">O-ringler</span> takılır.<br>
-                        Her bir dirseğe iki adet O-ring yerleştirilmesi, borunun ileri–geri hareket etmesini engeller.
-                    </p>
-                    <p class="process-text mt-3">
-                        Ayrıca boru, dirseğe döndürülerek monte edildiğinde, O-ringler sayesinde borunun dönmesi de önlenmiş olur.<br>
-                        Bu sistem, küpeştenin sabit, güvenli ve stabil şekilde çalışmasını sağlar.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
-                <img src="{% static 'image/pageproduct/kupeste/kupeste-dirsek-oring-montaji.webp' %}" 
-                     alt="Küpeşte dirseklerine O-ring takılması ve montaj detayları" 
-                     class="process-img"
-                     loading="lazy">
-            </div>
-        </div>
-
-        <div class="row align-items-center process-row">
-            <div class="col-md-6 order-1 order-md-1" data-aos="fade-right">
-                <img src="{% static 'image/pageproduct/kupeste/kupeste-tam-montaj-seti.webp' %}" 
-                     alt="Hazır montajlanmış paslanmaz küpeşte seti" 
-                     class="process-img"
-                     loading="lazy">
-            </div>
-            <div class="col-md-6 order-2 order-md-2" data-aos="fade-left">
-                <div class="process-content">
-                    <p class="process-text">
-                        Kendi fabrikanızda, istediğiniz anda üreteceğiniz küpeşteler sayesinde 
-                        <span class="highlight-text">ölçü uyumsuzluğu, stok yetersizliği ve çizik</span> 
-                        gibi malzeme sorunlarını tamamen ortadan kaldırabilirsiniz.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="packaging-section">
-    <div class="container">
-        <div class="row align-items-center">
-            
-            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
-                <h3 class="content-title">Kutu İçeriği</h3>
-                <ul class="content-list">
-                    <li>18 sağ dirsek</li>
-                    <li>18 sol dirsek</li>
-                    <li>72 adet oring</li>
-                    <li>36 adet setskur vidası</li>
-                    <li>36 adet sabitleme cıvatası</li>
-                    <li>36 adet sabitleme plakası</li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-12 text-center mb-4 mb-lg-0" data-aos="zoom-in" data-aos-duration="1000">
-                <img src="{% static 'image/pageproduct/kupeste/liftkeys-dirsek-kutu-ambalaj.webp' %}" 
-                     alt="Liftkeys asansör dirsek ve bağlantı seti 36'lı koli ambalajı" 
-                     class="box-image"
-                     loading="lazy">
-            </div>
-
-            <div class="col-lg-4 col-md-12" data-aos="fade-left">
-                <div class="mb-3">
-                    <span class="spec-header-large">Kutu İçi </span>
-                    <span class="spec-count">36 Adet</span>
-                </div>
-                
-                <span class="spec-subtitle">Kutu Ölçü ve Ağırlık Bilgisi</span>
-
-                <div class="spec-wrapper">
-                    <div class="spec-row">
-                        <span class="spec-label">• En</span>
-                        <span class="spec-line"></span>
-                        <span class="spec-value">20 cm</span>
-                    </div>
-
-                    <div class="spec-row">
-                        <span class="spec-label">• Boy</span>
-                        <span class="spec-line"></span>
-                        <span class="spec-value">29 cm</span>
-                    </div>
-
-                    <div class="spec-row">
-                        <span class="spec-label">• Yükseklik</span>
-                        <span class="spec-line"></span>
-                        <span class="spec-value">20 cm</span>
-                    </div>
-
-                    <div class="spec-row">
-                        <span class="spec-label">• Ağırlık</span>
-                        <span class="spec-line"></span>
-                        <span class="spec-value">9 Kg.</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-{% include "preview/iletisimformpreview.html" %}
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true // Animasyon sadece bir kere çalışsın (yukarı çıkınca bozulmasın)
-    });
-</script>
-
 
 
 

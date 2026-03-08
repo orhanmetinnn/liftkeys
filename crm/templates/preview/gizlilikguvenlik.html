@@ -19,13 +19,15 @@ gizlilik politikası, güvenlik politikası, liftkeys gizlilik, kredi kartı gü
 {% block og_description %}
 Liftkeys’in kişisel verilerinizi nasıl koruduğunu, kredi kartı ve çerez güvenliğini nasıl sağladığını öğrenin. Güvenli alışveriş için tüm detaylar bu sayfada.
 {% endblock %}
-{% block og_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+
 
 {% block tw_title %}Gizlilik ve Güvenlik Politikası | Liftkeys{% endblock %}
 {% block tw_description %}
 Kişisel verilerinizin korunması, kredi kartı güvenliği ve veri gizliliği politikamız hakkında detaylı bilgi edinin. Liftkeys güvenilir alışveriş sunar.
 {% endblock %}
-{% block tw_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+
 
 {% block content %}
 <section class="py-5" style="background-color:#f8f9fa;">

@@ -2,16 +2,20 @@
 {% block content %}
 {% load static %}
 {% load i18n %}
-{% comment %} <h1>{% trans "Welcome to Liftkeys" %}</h1> {% endcomment %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/previewcss/contactpage.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css">
+    <style>
+        .iti { width: 100%; } 
+        .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags.png");}
+        @media (min-resolution: 2x) {
+          .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags@2x.png");}
+        }
+    </style>
 {% endblock %}
     
-    
-
-
     <div class="container my-5">
         <div class="contact-container">
             <div class="row">
@@ -22,6 +26,8 @@
 
                     <form method="post" id="contactForm">
                         {% csrf_token %}
+
+                        {{ form.website_url }}
 
                         {% if form.non_field_errors %}
                             <div class="alert alert-danger">
@@ -89,6 +95,15 @@
                             {% endif %}
                         </div>
 
+                        <div class="mb-4 d-flex flex-column align-items-center">
+                            {{ form.captcha }}
+                            {% if form.captcha.errors %}
+                                <div class="text-danger small mt-1">
+                                    {% for error in form.captcha.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
                         <div>
                             <button type="submit" class="btn btn-send">{% trans "MESAJ GÖNDER" %}</button>
                         </div>
@@ -151,7 +166,6 @@
                             </div>
                         </div>
                         <ul class="social-icons">
-                        <ul class="social-icons">
                             <a href="https://www.facebook.com/liftkeys" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
                             <a href="https://www.instagram.com/liftkeyscom/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
                             <a href="https://www.linkedin.com/company/liftkeys/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -176,17 +190,34 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function(){
             const alerts = document.querySelectorAll('.alert');
             alerts.forEach(alert => {
                 setTimeout(() => {
                     bootstrap.Alert.getOrCreateInstance(alert).close();
-                }, 5000); // 5000ms = 5 saniye
+                }, 5000); 
             });
+
+            const phoneInputField = document.querySelector("#contactNumber"); 
+            const contactForm = document.querySelector("#contactForm");
+
+            if (phoneInputField) {
+                const phoneInput = window.intlTelInput(phoneInputField, {
+                    initialCountry: "tr",
+                    preferredCountries: ["tr", "de", "us", "gb", "fr", "ru", "ae"],
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js",
+                });
+
+                contactForm.addEventListener("submit", function(e) {
+                    const fullNumber = phoneInput.getNumber();
+                    phoneInputField.value = fullNumber;
+                });
+            }
         });
     </script>
-
 
     {% include "preview/footer.html" %}
 
@@ -195,5 +226,3 @@
         AOS.init();
     </script>
 {% endblock %}
-
-

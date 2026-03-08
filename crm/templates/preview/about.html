@@ -15,12 +15,14 @@ asansör, aşırı yük sistemi, fotosel, fren sistemi, kapı sensörü, küpeş
 {% block og_url %}https://www.liftkeys.com/hakkimizda/{% endblock %}
 {% block og_title %}Hakkımızda | Liftkeys{% endblock %}
 {% block og_description %}{{ block.super }}{% endblock %}
-{% block og_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+
 
 
 {% block tw_title %}Hakkımızda | Liftkeys{% endblock %}
 {% block tw_description %}{{ block.super }}{% endblock %}
-{% block tw_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+
 
 
 

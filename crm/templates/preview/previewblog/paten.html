@@ -36,7 +36,7 @@ Hemen inceleyin ve teklif alın.
 {% endblock %}
 
 {# Not: Sosyal medya paylaşım resmi paten videosunun kapağı yapıldı #}
-{% block og_image %}{% static 'image/pageproduct/guideshoe/agirlik-paten-liftkeys.jpg' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/guideshoe/agirlik-paten-liftkeys.jpg' %}{% endblock %}
 
 {% block tw_title %}
 {% trans "LiftKeys | Asansör Karşı Ağırlık Ray Paten Sistemleri" %}
@@ -50,7 +50,7 @@ Teknik çizim ve detaylar için tıklayın.
 {% endblocktrans %}
 {% endblock %}
 
-{% block tw_image %}{% static 'image/pageproduct/guideshoe/agirlik-paten-liftkeys.jpg' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/guideshoe/agirlik-paten-liftkeys.jpg' %}{% endblock %}
 
 {# --- CSS BLOĞU --- #}
 {% block extra_css %}
@@ -159,7 +159,7 @@ Teknik çizim ve detaylar için tıklayın.
                     <i class="fa-solid fa-scale-balanced fs-4"></i>
                 </div>
                 <span style="font-weight: 600; letter-spacing: 0.5px; font-size: 1.3rem;">
-                    LIFTKEYS – Asansör Ağırlık Paten Sistemleri
+                    {% trans "LIFTKEYS – Asansör Ağırlık Paten Sistemleri" %}
                 </span>
             </h1>
         </div>
@@ -176,7 +176,7 @@ Teknik çizim ve detaylar için tıklayın.
                 
                 <img src="{% static 'image/pageproduct/guideshoe/agirlik-paten-video.webp' %}" 
                     class="img-fluid w-100" 
-                    alt="LiftKeys Asansör Ağırlık Paten Sistemi ve TPU Plastik Teknolojisi"
+                    alt="{% trans 'LiftKeys Asansör Ağırlık Paten Sistemi ve TPU Plastik Teknolojisi' %}"
                     style="object-fit: cover; min-height: 350px;"
                     loading="lazy">
                 
@@ -194,24 +194,354 @@ Teknik çizim ve detaylar için tıklayın.
             
             <div class="quote-box mb-4 ps-4 py-2" style="border-left: 5px solid #F08200;">
                 <h2 class="h3 text-secondary fw-light fst-italic">
-                    “TPU paten plastiği ile<br>
-                    <strong style="color: #495057; font-weight: 700;">üst düzey konfor, sessiz ve dengeli çalışma.”</strong>
+                    {% blocktrans %}“TPU paten plastiği ile<br>
+                    <strong style="color: #495057; font-weight: 700;">üst düzey konfor, sessiz ve dengeli çalışma.”</strong>{% endblocktrans %}
                 </h2>
             </div>
 
             <p class="text-muted fs-5 mb-4 leading-relaxed">
-                <strong class="text-dark">Asansör patenlerimiz,</strong> konfor, sessiz çalışma ve maksimum titreşim sönümleme hedeflenerek özel olarak tasarlanmıştır.
+                {% blocktrans %}<strong class="text-dark">Asansör patenlerimiz,</strong> konfor, sessiz çalışma ve maksimum titreşim sönümleme hedeflenerek özel olarak tasarlanmıştır.{% endblocktrans %}
             </p>
 
             <div class="mt-2">
-                <a href="#" class="btn btn-lg shadow-sm text-white d-inline-flex align-items-center gap-2 px-4 py-2 rounded-3 hover-lift" 
-                   style="background-color: #F08200; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease;">
+                <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-lg shadow-sm text-white d-inline-flex align-items-center gap-2 px-4 py-2 rounded-3 hover-lift" 
+                   style="background-color: #F08200; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease;" download>
                     <i class="fa-solid fa-book-open"></i>
-                    Ürün Kataloğu İndir
+                    {% trans "Ürün Kataloğu İndir" %}
                 </a>
             </div>
         </div>
     </div>
+</div>
+
+
+
+<div class="container my-5 py-5">
+        
+    <div class="row g-4 justify-content-center mb-5">
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="detail-card text-center h-100">
+                <div class="img-holder mb-3 rounded-3 overflow-hidden shadow-sm border">
+                    <img src="{% static 'image/pageproduct/guideshoe/paten-yandan-gorunum.webp' %}" 
+                            class="img-fluid w-100 hover-zoom" 
+                            alt="{% trans 'Asansör Ağırlık Pateni Yandan Görünüm ve Yağdanlık Yuvası' %}"
+                            loading="lazy">
+                </div>
+                <h6 class="fw-bold text-dark mt-3">{% trans "Pratik Kurulum" %}</h6>
+                <p class="text-muted small px-2">
+                    {% trans "Yağdanlık montajına hazır yapısı sayesinde ek işlem gerektirmeden hızlı ve pratik kurulum sunar." %}
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="detail-card text-center h-100">
+                <div class="img-holder mb-3 rounded-3 overflow-hidden shadow-sm border">
+                    <img src="{% static 'image/pageproduct/guideshoe/paten-on-gorunum.webp' %}" 
+                            class="img-fluid w-100 hover-zoom" 
+                            alt="{% trans 'Çift Bayraklı Asansör Paten Tasarımı' %}"
+                            loading="lazy">
+                </div>
+                <h6 class="fw-bold text-dark mt-3">{% trans "Çift Bayraklı Tasarım" %}</h6>
+                <p class="text-muted small px-2">
+                    {% trans "Patenin mekanik dayanımını artırarak bükülme ve kırılma riskini ortadan kaldırır, gövdeyi güçlendirir." %}
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="detail-card text-center h-100">
+                <div class="img-holder mb-3 rounded-3 overflow-hidden shadow-sm border">
+                    <img src="{% static 'image/pageproduct/guideshoe/paten-montaj-uygulama.webp' %}" 
+                            class="img-fluid w-100 hover-zoom" 
+                            alt="{% trans 'Asansör Karşı Ağırlık Süspansiyonunda Paten Montajı' %}"
+                            loading="lazy">
+                </div>
+                <h6 class="fw-bold text-dark mt-3">{% trans "Yüksek Mukavemet" %}</h6>
+                <p class="text-muted small px-2">
+                    {% trans "Karşı ağırlık sisteminin her koşulda stabil ve güvenli çalışmasını sağlayan sağlam yapı." %}
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-5 pt-4 border-top">
+        <div class="col-lg-12" data-aos="fade-right">
+            
+            <div class="d-flex align-items-center mb-4">
+                <div class="bg-light p-3 rounded-circle me-3 text-orange shadow-sm">
+                    <i class="fa-solid fa-list-check fs-4"></i>
+                </div>
+                <h2 class="fw-bold text-secondary mb-0">{% trans "Asansör Ağırlık Ray Paten Bloğu" %}</h2>
+            </div>
+
+            <div class="row g-3">
+                
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
+                        <i class="fa-solid fa-ruler-combined text-orange mt-1 me-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">{% trans "Ray Uyumluluğu" %}</strong>
+                            <span class="text-muted small">{% trans "5 mm ve 9 mm’lik kılavuz raylarda kullanım imkanı sağlar." %}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
+                        <i class="fa-solid fa-volume-xmark text-orange mt-1 me-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">{% trans "Sessiz Çalışma" %}</strong>
+                            <span class="text-muted small">{% trans "Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi sayesinde ses yapmaz." %}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
+                        <i class="fa-solid fa-shield-halved text-orange mt-1 me-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">{% trans "Yüksek Dayanım" %}</strong>
+                            <span class="text-muted small">{% trans "Gövde arkasında bulunan çift bayrak (destek sacı) sayesinde ekstra güç sağlar." %}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
+                        <i class="fa-solid fa-bullseye text-orange mt-1 me-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">{% trans "Standart Ölçüler" %}</strong>
+                            <span class="text-muted small">{% trans "Delik ölçüleri (eksenleri) diğer standart patenlere tam uyumludur." %}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
+                        <i class="fa-solid fa-thumbs-up text-orange mt-1 me-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">{% trans "Konfor Odaklı" %}</strong>
+                            <span class="text-muted small">{% trans "Kullanım kolaylığı, uzun ömür ve yüksek seyir konforu sağlar." %}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="container my-5 py-5 bg-white rounded-4 shadow-sm border">
+        
+    <div class="row justify-content-center mb-5">
+        <div class="col-12 text-center mb-4" data-aos="fade-down">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-compass-drafting text-orange fs-2 me-2"></i>
+                <h2 class="fw-bold text-secondary mb-0">{% trans "Teknik Çizim ve Ölçüler (mm)" %}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0" data-aos="zoom-in" data-aos-delay="100">
+            <div class="p-3 border rounded bg-light h-100 hover-shadow">
+                <h6 class="text-muted small mb-2 text-start"><i class="fa-solid fa-ruler-vertical me-1"></i>{% trans "Ön Görünüş" %}</h6>
+                <img src="{% static 'image/pageproduct/guideshoe/paten-teknik-1.webp' %}" 
+                        class="img-fluid w-100" 
+                        alt="{% trans 'Asansör Pateni Ön Teknik Çizim' %}"
+                        style="object-fit: contain; max-height: 300px;">
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="p-3 border rounded bg-light h-100 hover-shadow">
+                <h6 class="text-muted small mb-2 text-start"><i class="fa-solid fa-ruler-horizontal me-1"></i>{% trans "Yan Görünüş" %}</h6>
+                <img src="{% static 'image/pageproduct/guideshoe/paten-teknik-2.webp' %}" 
+                        class="img-fluid w-100" 
+                        alt="{% trans 'Asansör Pateni Yan Teknik Çizim' %}"
+                        style="object-fit: contain; max-height: 300px;">
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="p-3 border rounded bg-light h-100 hover-shadow">
+                <h6 class="text-muted small mb-2 text-start"><i class="fa-solid fa-magnifying-glass-plus me-1"></i>{% trans "Detay Ölçüler" %}</h6>
+                <img src="{% static 'image/pageproduct/guideshoe/paten-teknik-3.webp' %}" 
+                        class="img-fluid w-100" 
+                        alt="{% trans 'Asansör Pateni Detay Teknik Çizim' %}"
+                        style="object-fit: contain; max-height: 300px;">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row g-4 align-items-center justify-content-center mt-2">
+        
+        <div class="col-lg-6">
+            <div class="row g-3">
+                <div class="col-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="p-2 border rounded text-center h-100 bg-light hover-shadow">
+                        <img src="{% static 'image/pageproduct/guideshoe/paten-yan-profil.webp' %}" class="img-fluid" alt="{% trans 'Paten Yan Profil' %}">
+                    </div>
+                </div>
+                <div class="col-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="p-2 border rounded text-center h-100 bg-light hover-shadow">
+                        <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-ic.webp' %}" class="img-fluid" alt="{% trans 'TPU Paten Plastiği' %}">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+            <div class="d-flex align-items-center bg-light p-4 rounded-4 border">
+                <div class="flex-shrink-0 me-4" style="width: 40%;">
+                    <img src="{% static 'image/pageproduct/guideshoe/paten-kutu-ambalaj.webp' %}" class="img-fluid shadow-sm rounded" alt="{% trans 'LiftKeys Asansör Ağırlık Paten Bloğu Kutusu' %}">
+                </div>
+                <div class="flex-grow-1 border-start ps-4 border-warning border-3">
+                    <h5 class="fw-bold text-dark mb-3">{% trans "Paketleme Detayları" %}</h5>
+                    <ul class="list-unstyled text-muted small mb-0">
+                        <li class="mb-2"><i class="fa-solid fa-box-open text-orange me-2"></i><strong>{% trans "Kutu Ölçü:" %}</strong> {% trans "21x21x14 cm" %}</li>
+                        <li class="mb-2"><i class="fa-solid fa-weight-hanging text-orange me-2"></i><strong>{% trans "Ağırlık:" %}</strong> {% trans "3.8 Kg." %}</li>
+                        <li><i class="fa-solid fa-layer-group text-orange me-2"></i><strong>{% trans "Kutu İçi Adet:" %}</strong> ?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container my-5 py-5">
+        
+<div class="row align-items-center">
+    
+    <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+        
+        <div class="text-center mb-4">
+            <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-yan-ince.webp' %}" 
+                    class="img-fluid" 
+                    style="max-height: 250px;" 
+                    alt="{% trans 'Asansör Paten Plastiği Yan Kesit Görünümü' %}">
+        </div>
+
+        <div class="p-4 rounded-4 shadow-sm text-white position-relative overflow-hidden" 
+                style="background: linear-gradient(135deg, #F08200 0%, #ff9f43 100%);">
+            
+            <i class="fa-solid fa-flask position-absolute" 
+                style="font-size: 10rem; opacity: 0.1; right: -20px; bottom: -30px;"></i>
+            
+            <h3 class="fw-bold mb-3">{% trans "TPU Hammadde" %}</h3>
+            <p class="mb-0 fs-5 fw-light" style="line-height: 1.6;">
+                {% blocktrans %}Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi sayesinde 
+                <strong>ses yapmaz, titreşimi emer.</strong>{% endblocktrans %}
+            </p>
+        </div>
+
+    </div>
+
+    <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
+        
+        <h3 class="fw-bold text-secondary mb-4 text-center text-lg-start">
+            {% trans "İhtiyacınıza Uygun Seçenekler" %}
+        </h3>
+
+        <div class="row g-4">
+            
+            <div class="col-md-6">
+                <div class="p-3 border rounded-4 text-center h-100 hover-shadow bg-white">
+                    <div class="badge bg-danger mb-3 px-3 py-2">{% trans "Model: 50" %}</div>
+                    
+                    <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-50mm.webp' %}" 
+                            class="img-fluid mb-3" 
+                            alt="{% trans '50mm Asansör Ray Paten Plastiği' %}">
+                    
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <img src="{% static 'image/pageproduct/guideshoe/icon-p1-5mm.webp' %}" 
+                                class="img-fluid" style="height: 40px;" alt="{% trans 'P1 5mm Rozeti' %}">
+                        <div>
+                            <h5 class="fw-bold text-dark mb-0">{% trans "P1" %}</h5>
+                            <span class="text-muted small">{% trans "5mm Ray İçin" %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="p-3 border rounded-4 text-center h-100 hover-shadow bg-white">
+                    <div class="badge bg-danger mb-3 px-3 py-2">{% trans "Model: 70" %}</div>
+                    
+                    <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-70mm.webp' %}" 
+                            class="img-fluid mb-3" 
+                            alt="{% trans '70mm Asansör Ray Paten Plastiği' %}">
+                    
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <img src="{% static 'image/pageproduct/guideshoe/icon-p2-9mm.webp' %}" 
+                                class="img-fluid" style="height: 40px;" alt="{% trans 'P2 9mm Rozeti' %}">
+                        <div>
+                            <h5 class="fw-bold text-dark mb-0">{% trans "P2" %}</h5>
+                            <span class="text-muted small">{% trans "9mm Ray İçin" %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container my-5">
+    <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-10">
+            <h3 class="fw-bold text-center mb-4 text-secondary">{% trans "Ağırlık Patenleri Hakkında Sıkça Sorulan Sorular" %}</h3>
+            
+            <div class="accordion shadow-sm" id="accordionPaten">
+                
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingPaten1">
+                        <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePaten1">
+                            {% trans "TPU paten plastiği neden önemlidir?" %}
+                        </button>
+                    </h4>
+                    <div id="collapsePaten1" class="accordion-collapse collapse" data-bs-parent="#accordionPaten">
+                        <div class="accordion-body text-muted">
+                            {% trans "TPU (Termoplastik Poliüretan), standart plastiklere göre çok daha yüksek aşınma direncine sahiptir ve asansör rayındaki titreşimleri emerek sessiz bir seyir sağlar." %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingPaten2">
+                        <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePaten2">
+                            {% trans "Hangi ray tipleriyle uyumludur?" %}
+                        </button>
+                    </h4>
+                    <div id="collapsePaten2" class="accordion-collapse collapse" data-bs-parent="#accordionPaten">
+                        <div class="accordion-body text-muted">
+                            {% trans "LiftKeys patenleri, 5mm (50'lik model) ve 9mm (70'lik model) kılavuz raylar için tam uyumlu olarak üretilmektedir." %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% include "preview/iletisimformpreview.html" %}
+
+
 </div>
 
 <script>
@@ -235,334 +565,6 @@ Teknik çizim ve detaylar için tıklayın.
         element.innerHTML = iframeHTML;
     }
 </script>
-
-
-<div class="container my-5 py-5">
-        
-    <div class="row g-4 justify-content-center mb-5">
-        
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="detail-card text-center h-100">
-                <div class="img-holder mb-3 rounded-3 overflow-hidden shadow-sm border">
-                    <img src="{% static 'image/pageproduct/guideshoe/paten-yandan-gorunum.webp' %}" 
-                            class="img-fluid w-100 hover-zoom" 
-                            alt="Asansör Ağırlık Pateni Yandan Görünüm ve Yağdanlık Yuvası"
-                            loading="lazy">
-                </div>
-                <h6 class="fw-bold text-dark mt-3">Pratik Kurulum</h6>
-                <p class="text-muted small px-2">
-                    Yağdanlık montajına hazır yapısı sayesinde ek işlem gerektirmeden hızlı ve pratik kurulum sunar.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="detail-card text-center h-100">
-                <div class="img-holder mb-3 rounded-3 overflow-hidden shadow-sm border">
-                    <img src="{% static 'image/pageproduct/guideshoe/paten-on-gorunum.webp' %}" 
-                            class="img-fluid w-100 hover-zoom" 
-                            alt="Çift Bayraklı Asansör Paten Tasarımı"
-                            loading="lazy">
-                </div>
-                <h6 class="fw-bold text-dark mt-3">Çift Bayraklı Tasarım</h6>
-                <p class="text-muted small px-2">
-                    Patenin mekanik dayanımını artırarak bükülme ve kırılma riskini ortadan kaldırır, gövdeyi güçlendirir.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="detail-card text-center h-100">
-                <div class="img-holder mb-3 rounded-3 overflow-hidden shadow-sm border">
-                    <img src="{% static 'image/pageproduct/guideshoe/paten-montaj-uygulama.webp' %}" 
-                            class="img-fluid w-100 hover-zoom" 
-                            alt="Asansör Karşı Ağırlık Süspansiyonunda Paten Montajı"
-                            loading="lazy">
-                </div>
-                <h6 class="fw-bold text-dark mt-3">Yüksek Mukavemet</h6>
-                <p class="text-muted small px-2">
-                    Karşı ağırlık sisteminin her koşulda stabil ve güvenli çalışmasını sağlayan sağlam yapı.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row mt-5 pt-4 border-top">
-        <div class="col-lg-12" data-aos="fade-right">
-            
-            <div class="d-flex align-items-center mb-4">
-                <div class="bg-light p-3 rounded-circle me-3 text-orange shadow-sm">
-                    <i class="fa-solid fa-list-check fs-4"></i>
-                </div>
-                <h2 class="fw-bold text-secondary mb-0">Asansör Ağırlık Ray Paten Bloğu</h2>
-            </div>
-
-            <div class="row g-3">
-                
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
-                        <i class="fa-solid fa-ruler-combined text-orange mt-1 me-3"></i>
-                        <div>
-                            <strong class="d-block text-dark">Ray Uyumluluğu</strong>
-                            <span class="text-muted small">5 mm ve 9 mm’lik kılavuz raylarda kullanım imkanı sağlar.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
-                        <i class="fa-solid fa-volume-xmark text-orange mt-1 me-3"></i>
-                        <div>
-                            <strong class="d-block text-dark">Sessiz Çalışma</strong>
-                            <span class="text-muted small">Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi sayesinde ses yapmaz.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
-                        <i class="fa-solid fa-shield-halved text-orange mt-1 me-3"></i>
-                        <div>
-                            <strong class="d-block text-dark">Yüksek Dayanım</strong>
-                            <span class="text-muted small">Gövde arkasında bulunan çift bayrak (destek sacı) sayesinde ekstra güç sağlar.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
-                        <i class="fa-solid fa-bullseye text-orange mt-1 me-3"></i>
-                        <div>
-                            <strong class="d-block text-dark">Standart Ölçüler</strong>
-                            <span class="text-muted small">Delik ölçüleri (eksenleri) diğer standart patenlere tam uyumludur.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="d-flex align-items-start p-3 bg-light rounded hover-bg-white border transition-all">
-                        <i class="fa-solid fa-thumbs-up text-orange mt-1 me-3"></i>
-                        <div>
-                            <strong class="d-block text-dark">Konfor Odaklı</strong>
-                            <span class="text-muted small">Kullanım kolaylığı, uzun ömür ve yüksek seyir konforu sağlar.</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-
-
-<div class="container my-5 py-5 bg-white rounded-4 shadow-sm border">
-        
-    <div class="row justify-content-center mb-5">
-        <div class="col-12 text-center mb-4" data-aos="fade-down">
-            <div class="d-flex align-items-center justify-content-center">
-                <i class="fa-solid fa-compass-drafting text-orange fs-2 me-2"></i>
-                <h2 class="fw-bold text-secondary mb-0">Teknik Çizim ve Ölçüler (mm)</h2>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-3 mb-md-0" data-aos="zoom-in" data-aos-delay="100">
-            <div class="p-3 border rounded bg-light h-100 hover-shadow">
-                <h6 class="text-muted small mb-2 text-start"><i class="fa-solid fa-ruler-vertical me-1"></i>Ön Görünüş</h6>
-                <img src="{% static 'image/pageproduct/guideshoe/paten-teknik-1.webp' %}" 
-                        class="img-fluid w-100" 
-                        alt="Asansör Pateni Ön Teknik Çizim"
-                        style="object-fit: contain; max-height: 300px;">
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-3 mb-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="p-3 border rounded bg-light h-100 hover-shadow">
-                <h6 class="text-muted small mb-2 text-start"><i class="fa-solid fa-ruler-horizontal me-1"></i>Yan Görünüş</h6>
-                <img src="{% static 'image/pageproduct/guideshoe/paten-teknik-2.webp' %}" 
-                        class="img-fluid w-100" 
-                        alt="Asansör Pateni Yan Teknik Çizim"
-                        style="object-fit: contain; max-height: 300px;">
-            </div>
-        </div>
-
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="p-3 border rounded bg-light h-100 hover-shadow">
-                <h6 class="text-muted small mb-2 text-start"><i class="fa-solid fa-magnifying-glass-plus me-1"></i>Detay Ölçüler</h6>
-                <img src="{% static 'image/pageproduct/guideshoe/paten-teknik-3.webp' %}" 
-                        class="img-fluid w-100" 
-                        alt="Asansör Pateni Detay Teknik Çizim"
-                        style="object-fit: contain; max-height: 300px;">
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row g-4 align-items-center justify-content-center mt-2">
-        
-        <div class="col-lg-6">
-            <div class="row g-3">
-                <div class="col-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="p-2 border rounded text-center h-100 bg-light hover-shadow">
-                        <img src="{% static 'image/pageproduct/guideshoe/paten-yan-profil.webp' %}" class="img-fluid" alt="Paten Yan Profil">
-                    </div>
-                </div>
-                <div class="col-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="p-2 border rounded text-center h-100 bg-light hover-shadow">
-                        <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-ic.webp' %}" class="img-fluid" alt="TPU Paten Plastiği">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-left">
-            <div class="d-flex align-items-center bg-light p-4 rounded-4 border">
-                <div class="flex-shrink-0 me-4" style="width: 40%;">
-                    <img src="{% static 'image/pageproduct/guideshoe/paten-kutu-ambalaj.webp' %}" class="img-fluid shadow-sm rounded" alt="LiftKeys Asansör Ağırlık Paten Bloğu Kutusu">
-                </div>
-                <div class="flex-grow-1 border-start ps-4 border-warning border-3">
-                    <h5 class="fw-bold text-dark mb-3">Paketleme Detayları</h5>
-                    <ul class="list-unstyled text-muted small mb-0">
-                        <li class="mb-2"><i class="fa-solid fa-box-open text-orange me-2"></i><strong>Kutu Ölçü:</strong> 21x21x14 cm</li>
-                        <li class="mb-2"><i class="fa-solid fa-weight-hanging text-orange me-2"></i><strong>Ağırlık:</strong> 3.8 Kg.</li>
-                        <li><i class="fa-solid fa-layer-group text-orange me-2"></i><strong>Kutu İçi Adet:</strong> ?</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="container my-5 py-5">
-        
-<div class="row align-items-center">
-    
-    <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
-        
-        <div class="text-center mb-4">
-            <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-yan-ince.webp' %}" 
-                    class="img-fluid" 
-                    style="max-height: 250px;" 
-                    alt="Asansör Paten Plastiği Yan Kesit Görünümü">
-        </div>
-
-        <div class="p-4 rounded-4 shadow-sm text-white position-relative overflow-hidden" 
-                style="background: linear-gradient(135deg, #F08200 0%, #ff9f43 100%);">
-            
-            <i class="fa-solid fa-flask position-absolute" 
-                style="font-size: 10rem; opacity: 0.1; right: -20px; bottom: -30px;"></i>
-            
-            <h3 class="fw-bold mb-3">TPU Hammadde</h3>
-            <p class="mb-0 fs-5 fw-light" style="line-height: 1.6;">
-                Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi sayesinde 
-                <strong>ses yapmaz, titreşimi emer.</strong>
-            </p>
-        </div>
-
-    </div>
-
-    <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
-        
-        <h3 class="fw-bold text-secondary mb-4 text-center text-lg-start">
-            İhtiyacınıza Uygun Seçenekler
-        </h3>
-
-        <div class="row g-4">
-            
-            <div class="col-md-6">
-                <div class="p-3 border rounded-4 text-center h-100 hover-shadow bg-white">
-                    <div class="badge bg-danger mb-3 px-3 py-2">Model: 50</div>
-                    
-                    <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-50mm.webp' %}" 
-                            class="img-fluid mb-3" 
-                            alt="50mm Asansör Ray Paten Plastiği">
-                    
-                    <div class="d-flex align-items-center justify-content-center gap-2">
-                        <img src="{% static 'image/pageproduct/guideshoe/icon-p1-5mm.webp' %}" 
-                                class="img-fluid" style="height: 40px;" alt="P1 5mm Rozeti">
-                        <div>
-                            <h5 class="fw-bold text-dark mb-0">P1</h5>
-                            <span class="text-muted small">5mm Ray İçin</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="p-3 border rounded-4 text-center h-100 hover-shadow bg-white">
-                    <div class="badge bg-danger mb-3 px-3 py-2">Model: 70</div>
-                    
-                    <img src="{% static 'image/pageproduct/guideshoe/paten-plastik-70mm.webp' %}" 
-                            class="img-fluid mb-3" 
-                            alt="70mm Asansör Ray Paten Plastiği">
-                    
-                    <div class="d-flex align-items-center justify-content-center gap-2">
-                        <img src="{% static 'image/pageproduct/guideshoe/icon-p2-9mm.webp' %}" 
-                                class="img-fluid" style="height: 40px;" alt="P2 9mm Rozeti">
-                        <div>
-                            <h5 class="fw-bold text-dark mb-0">P2</h5>
-                            <span class="text-muted small">9mm Ray İçin</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="container my-5">
-    <div class="row justify-content-center" data-aos="fade-up">
-        <div class="col-lg-10">
-            <h3 class="fw-bold text-center mb-4 text-secondary">Ağırlık Patenleri Hakkında Sıkça Sorulan Sorular</h3>
-            
-            <div class="accordion shadow-sm" id="accordionPaten">
-                
-                <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingPaten1">
-                        <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePaten1">
-                            TPU paten plastiği neden önemlidir?
-                        </button>
-                    </h4>
-                    <div id="collapsePaten1" class="accordion-collapse collapse" data-bs-parent="#accordionPaten">
-                        <div class="accordion-body text-muted">
-                            TPU (Termoplastik Poliüretan), standart plastiklere göre çok daha yüksek aşınma direncine sahiptir ve asansör rayındaki titreşimleri emerek sessiz bir seyir sağlar.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingPaten2">
-                        <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePaten2">
-                            Hangi ray tipleriyle uyumludur?
-                        </button>
-                    </h4>
-                    <div id="collapsePaten2" class="accordion-collapse collapse" data-bs-parent="#accordionPaten">
-                        <div class="accordion-body text-muted">
-                            LiftKeys patenleri, 5mm (50'lik model) ve 9mm (70'lik model) kılavuz raylar için tam uyumlu olarak üretilmektedir.
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-{% include "preview/iletisimformpreview.html" %}
-
-
-</div>
-
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

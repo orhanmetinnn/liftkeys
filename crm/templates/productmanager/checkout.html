@@ -7,11 +7,19 @@
 
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/chechout.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css">
+  <style>
+    /* Kütüphanenin Bootstrap ile uyumlu tam genişlikte çalışması için ufak bir dokunuş */
+    .iti { width: 100%; } 
+    .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags.png");}
+    @media (min-resolution: 2x) {
+      .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags@2x.png");}
+    }
+  </style>
 {% endblock %}
 
 <div class="container py-5">
   <div class="row g-4">
-    <!-- Sol: İletişim Formu -->
     <div class="col-lg-7">
       <div class="card shadow-lg border-0 rounded-4">
         <div class="card-header bg-dark text-white rounded-top-4 d-flex align-items-center">
@@ -19,7 +27,7 @@
           <h4 class="mb-0 fw-bold">İletişim & Sipariş Formu</h4>
         </div>
         <div class="card-body p-4">
-          <form method="post" class="row g-3">
+          <form method="post" id="checkout-form" class="row g-3">
             {% csrf_token %}
             <div class="col-md-6">
               <label class="form-label fw-semibold">Adınız</label>
@@ -31,7 +39,8 @@
             </div>
             <div class="col-md-6">
               <label class="form-label fw-semibold">Telefon</label>
-              <input type="text" name="phone" class="form-control form-control-lg rounded-3" placeholder="+90 5xx xxx xx xx">
+              <input type="tel" id="phone" class="form-control form-control-lg rounded-3" required>
+              <input type="hidden" id="full_phone" name="phone">
             </div>
             <div class="col-12">
               <label class="form-label fw-semibold">Mesajınız</label>
@@ -48,7 +57,6 @@
       </div>
     </div>
 
-    <!-- Sağ: Sepet Özeti -->
     <div class="col-lg-5">
       <div class="card shadow-lg border-0 rounded-4">
         <div class="card-header bg-dark text-white rounded-top-4">
@@ -72,4 +80,30 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const phoneInputField = document.querySelector("#phone");
+    const fullPhoneInput = document.querySelector("#full_phone");
+    const checkoutForm = document.querySelector("#checkout-form");
+
+    // Kütüphaneyi başlatıyoruz
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      initialCountry: "tr", // Varsayılan olarak Türkiye bayrağı ve +90 gelsin
+      preferredCountries: ["tr", "de", "us", "gb", "fr", "ru", "ae"], // Üstte görünmesini istediğimiz popüler ülkeler
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js", // Formatlama için yardımcı script
+    });
+
+    // Form gönderilmeden hemen önce tetiklenir
+    checkoutForm.addEventListener("submit", function(e) {
+      // Müşterinin girdiği numarayı alan koduyla birleştir (Örn: +905551234567)
+      const fullNumber = phoneInput.getNumber();
+      
+      // Birleşmiş tam numarayı gizli input'a aktarıyoruz
+      // Python'daki views.py dosyan bu gizli input'un name="phone" değerini okuyacak
+      fullPhoneInput.value = fullNumber;
+    });
+  });
+</script>
 {% endblock %}

@@ -833,37 +833,6 @@ from django.contrib import messages
 from .models import Product, ProductQuestion, ProductAnswer
 from .utils import add_to_cart
 
-def add_to_cart_view(request):
-    if request.method == "POST":
-        try:
-            data = json.loads(request.body)  # <-- JSON'u parse et
-            product_id = data.get("product_id")
-            qty = int(data.get("qty", 1))
-            answers = data.get("answers", {})
-
-            product = get_object_or_404(Product, id=product_id)
-
-            # Soruları kaydet
-            for q_id, value in answers.items():
-                q = product.questions.filter(id=q_id).first()
-                if q:
-                    ProductAnswer.objects.create(
-                        product=product,
-                        question=q,
-                        user=request.user if request.user.is_authenticated else None,
-                        session_key=request.session.session_key,
-                        answer_text=", ".join(value) if isinstance(value, list) else value
-                    )
-
-            add_to_cart(request, product.id, answers, qty=qty)
-
-            return JsonResponse({"message": "success"}, status=200)
-
-        except Exception as e:
-            return JsonResponse({"error": str(e)}, status=400)
-
-    return JsonResponse({"error": "Invalid request"}, status=405)
-
 
 
 
@@ -918,48 +887,76 @@ def cart_page(request):
 
 
 import json
-def add_to_cart(request):
-    if not request.session.session_key:
-        request.session.create()
-
-    try:
-        data = json.loads(request.body)
-    except json.JSONDecodeError:
-        return JsonResponse({"error": "Geçersiz veri"}, status=400)
-
-    # 🔑 product_id'yi integera çevir
-    try:
-        product_id = int(data.get("product_id"))
-    except (TypeError, ValueError):
-        return JsonResponse({"error": "Geçersiz product_id"}, status=400)
-
-    qty = int(data.get("qty", 1))
-    answers = data.get("answers", {})
-
-    product = get_object_or_404(Product, id=product_id)
-
-    cart = request.session.get("cart", [])
-
-    found = False
-    for item in cart:
-        if item["product_id"] == product_id and item.get("answers") == answers:
-            item["qty"] = item.get("qty", 1) + qty
-            found = True
-            break
-
-    if not found:
-        cart.append({"product_id": product_id, "answers": answers, "qty": qty})
-
-    request.session["cart"] = cart
-    request.session.modified = True
-    request.session.save()
-
-    # print("🛒 Cart after add:", request.session["cart"], "Session Key:", request.session.session_key)
-
-    total_count = sum(item.get("qty", 1) for item in cart)
-    return JsonResponse({"success": True, "cart_count": total_count})
 
 
+import json
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+# Product ve ProductAnswer modellerinin import edildiğinden emin ol.
+
+def add_to_cart_api(request):
+    if request.method == "POST":
+        # Oturum (session) yoksa oluştur
+        if not request.session.session_key:
+            request.session.create()
+
+        try:
+            # Gelen veriyi oku
+            data = json.loads(request.body)
+            product_id = int(data.get("product_id"))
+            qty = int(data.get("qty", 1))
+            answers = data.get("answers", {})
+
+            # Ürünü veritabanından bul
+            product = get_object_or_404(Product, id=product_id)
+
+            # 1. Müşteri soru cevapladıysa onları veritabanına kaydet
+            for q_id_str, value in answers.items():
+                # 'question_5' gibi gelen anahtardan sadece '5' rakamını alıyoruz
+                q_id = q_id_str.replace('question_', '') if isinstance(q_id_str, str) else q_id_str
+                
+                if str(q_id).isdigit():
+                    q = product.questions.filter(id=int(q_id)).first()
+                    if q:
+                        ProductAnswer.objects.create(
+                            product=product,
+                            question=q,
+                            user=request.user if request.user.is_authenticated else None,
+                            session_key=request.session.session_key,
+                            answer_text=", ".join(value) if isinstance(value, list) else value
+                        )
+
+            # 2. Ürünü Sepete (Session içine) Ekle
+            cart = request.session.get("cart", [])
+            found = False
+            
+            for item in cart:
+                # Sepette bu ürün aynı cevaplarla (opsiyonlarla) varsa sadece sayısını artır
+                if item["product_id"] == product.id and item.get("answers") == answers:
+                    item["qty"] = item.get("qty", 1) + qty
+                    found = True
+                    break
+
+            # Eğer yoksa yeni bir ürün olarak sepete ekle
+            if not found:
+                cart.append({
+                    "product_id": product.id,
+                    "answers": answers,
+                    "qty": qty
+                })
+
+            # Değişiklikleri kaydet
+            request.session["cart"] = cart
+            request.session.modified = True
+
+            # Güncel sepet sayısını döndür
+            total_count = sum(item.get("qty", 1) for item in cart)
+            return JsonResponse({"success": True, "cart_count": total_count}, status=200)
+
+        except Exception as e:
+            return JsonResponse({"success": False, "error": str(e)}, status=400)
+
+    return JsonResponse({"success": False, "error": "Geçersiz istek metodu"}, status=405)
 
 
 def update_cart(request):
@@ -986,11 +983,13 @@ def update_cart(request):
 
 
 from .models import Order, OrderItem
+from django.core.mail import send_mail # Bunu dosyanın en üstüne eklemeyi unutma!
+from django.conf import settings
 
 def cart_checkout(request):
     cart = request.session.get("cart", [])
 
-    # 🟢 Product nesnelerini alalım
+    # Product nesnelerini alalım
     cart_items = []
     for item in cart:
         product = Product.objects.filter(id=item["product_id"]).first()
@@ -1017,7 +1016,15 @@ def cart_checkout(request):
             session_key=request.session.session_key
         )
 
-        # 2️⃣ OrderItem kaydet
+        # 2️⃣ OrderItem kaydet ve Mail içeriğini hazırla
+        mail_body = f"Yeni bir sipariş (Talep) aldınız!\n\n"
+        mail_body += f"Sipariş No: #{order.id}\n"
+        mail_body += f"Müşteri: {name}\n"
+        mail_body += f"E-posta: {email}\n"
+        mail_body += f"Telefon: {phone}\n"
+        mail_body += f"Müşteri Notu: {message_text}\n"
+        mail_body += "-" * 30 + "\nSİPARİŞ EDİLEN ÜRÜNLER:\n"
+
         for item in cart_items:
             OrderItem.objects.create(
                 order=order,
@@ -1025,17 +1032,34 @@ def cart_checkout(request):
                 qty=item["qty"],
                 answers=item["answers"]
             )
+            
+            # Mail'e ürünü ekle
+            mail_body += f"- Ürün: {item['product'].name} | Adet: {item['qty']}\n"
+            if item["answers"]:
+                mail_body += f"  Seçenekler: {item['answers']}\n"
 
-        # 3️⃣ Sepeti temizle
+        mail_body += "-" * 30 + "\nBu e-posta sistem tarafından otomatik gönderilmiştir."
+
+        # 3️⃣ Size Mail Gönderme İşlemi
+        try:
+            send_mail(
+                subject=f"YENİ SİPARİŞ - #{order.id} - {name}",
+                message=mail_body,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=["info@liftkeys.com"], # Buraya KENDİ mail adresini yaz!
+                fail_silently=True, # Hata olursa site çökmesin diye True yapıyoruz
+            )
+        except Exception as e:
+            print("Mail gönderilemedi:", str(e))
+
+        # 4️⃣ Sepeti temizle
         request.session["cart"] = []
         request.session.modified = True
 
-        messages.success(request, f"Siparişiniz başarıyla alındı! Sipariş Numaranız: #{order.id}")
-        return redirect("cart_page")
+        # 5️⃣ BOŞ SEPETE DEĞİL, BAŞARILI SAYFASINA YÖNLENDİR!
+        return render(request, "productmanager/order_success.html", {"order": order})
 
     return render(request, "productmanager/checkout.html", {"cart_items": cart_items})
-
-
 
 
 

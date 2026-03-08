@@ -34,7 +34,7 @@ elektronik ve mekanik bileşenlerle global tedarikçi.
 {% endblocktrans %}
 {% endblock %}
 
-{% block og_image %}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
 
 {% block tw_title %}
 {% trans "Liftkeys | Güvenilir Asansör Sistemleri" %}
@@ -48,7 +48,7 @@ elektronik ve mekanik bileşenlerle çözümler.
 {% endblocktrans %}
 {% endblock %}
 
-{% block tw_image %}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/preview/liftkeys-og.jpg' %}{% endblock %}
 
 {% block content %}
 <script type="application/ld+json">
@@ -144,7 +144,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                             <a href="/kategori/" class="btn primary">
                                 <span>{% trans "Ürünler" %}</span>
                             </a>
-                            <a href="#" class="btn secondary">
+                            <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn secondary" download>
                                 <span>{% trans "Katalog" %}</span>
                             </a>
                         </div>
@@ -1024,7 +1024,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 {% endblocktrans %}
             </p>
             <ul class="info-links">
-                <li><a href="#">{% trans "Glass" %}</a></li>
+                <li><a href="/solid/">{% trans "Glass" %}</a></li>
                 <li><a href="/zemin/">{% trans "Floor" %}</a></li>
                 <li><a href="#">{% trans "Light" %}</a></li>
             </ul>
@@ -1038,7 +1038,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 {% endblocktrans %}
             </p>
             <ul class="info-links">
-                <li><a href="#">{% trans "Rubber" %}</a></li>
+                <li><a href="/takozlar/">{% trans "Rubber" %}</a></li>
                 <li><a href="#">{% trans "Label" %}</a></li>
                 <li><a href="#">{% trans "Elektronic" %}</a></li>
             </ul>

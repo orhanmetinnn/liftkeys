@@ -1,0 +1,369 @@
+/* --- Kabin Paten Sistemleri Bölümü CSS --- */
+
+/* Turuncu Başlık Barı */
+.liftkeys-header {
+    background-color: var(--liftkeys-orange, #F38002);
+}
+
+/* Video/Resim Hover Efekti */
+.image-container {
+    transition: transform 0.4s ease;
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+}
+
+.play-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover .play-button {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(243, 128, 2, 0.5) !important;
+}
+
+/* Ürün Kataloğu Butonu */
+.btn-catalog {
+    background-color: var(--liftkeys-orange, #F38002);
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--liftkeys-orange, #F38002);
+}
+
+.btn-catalog:hover {
+    background-color: white;
+    color: var(--liftkeys-orange, #F38002);
+    transform: translateY(-3px);
+}
+
+/* Mobil Görünüm Optimizasyonu */
+@media (max-width: 992px) {
+    .display-6 {
+        font-size: 2rem; 
+        margin-top: 25px;
+    }
+}
+
+/* --- Paten Detayları CSS --- */
+
+/* Sağ taraftaki kutunun turuncu çizgisi */
+.border-start-orange {
+    border-left: 5px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Görseldeki nokta işaretleri (bullet) için özel tasarım */
+.custom-bullet-list .bullet-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--liftkeys-orange, #F38002);
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+/* Sonuç Kartının Arka Planı ve Hover Efekti */
+.result-highlight-card {
+    background: linear-gradient(135deg, var(--liftkeys-orange, #F38002) 0%, #d66b00 100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(243, 128, 2, 0.3) !important;
+}
+
+
+/* --- Paten Mekanik Özellikleri CSS --- */
+
+/* Resimleri taşıyan kutunun tasarımı */
+.mechanic-card-wrapper .img-box {
+    border: 1px solid #f0f0f0;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Kutuya hover (üzerine gelme) efekti */
+.mechanic-card-wrapper:hover .img-box {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+    border-color: rgba(243, 128, 2, 0.3); /* Liftkeys turuncusu hafifçe çerçevede belirir */
+}
+
+/* Resmin kendi hover efekti */
+.mechanic-img {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mechanic-card-wrapper:hover .mechanic-img {
+    transform: scale(1.05); /* Resim kutunun içinde hafifçe büyür */
+}
+
+/* Mobilde yazıları hizalamak için ufak dokunuş */
+@media (max-width: 768px) {
+    .mechanic-card-wrapper {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* --- Ayarlanabilir Sertlik Bölümü CSS --- */
+
+/* Resme Hover Zoom Efekti */
+.mechanic-zoom-img {
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.image-wrapper:hover .mechanic-zoom-img {
+    transform: scale(1.03); /* Farenin üzerine gelindiğinde resmi çok hafif yakınlaştırır */
+}
+
+/* Yuvarlak İkon Rengi */
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Sol taraftaki vurgu çizgisi (Eğer önceki sayfalardan yoksa diye tekrar ekliyorum) */
+.border-start-orange {
+    border-left: 5px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+
+
+/* --- Tümleşik Yağdanlık Bölümü CSS --- */
+
+/* Resme Hover Yakınlaşma Efekti */
+.mechanic-zoom-img {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.image-wrapper:hover .mechanic-zoom-img {
+    transform: scale(1.05); /* Üzerine gelince resim yumuşakça büyür */
+}
+
+/* Turuncu Vurgular */
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+.border-start-orange {
+    border-left: 5px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Mobil için görsel-yazı sıralaması ayarı */
+@media (max-width: 991px) {
+    .integrated-oiler-section .order-1 {
+        order: 1 !important; /* Mobilde görsel önce gelsin */
+        margin-bottom: 30px;
+    }
+    .integrated-oiler-section .order-2 {
+        order: 2 !important; /* Mobilde yazı görselin altında kalsın */
+    }
+}
+
+
+/* --- Kutu İçeriği Bölümü CSS --- */
+
+/* Resimlere Hover (Yakınlaşma) Efekti */
+.content-item-wrapper {
+    transition: transform 0.4s ease;
+    cursor: default;
+}
+
+.content-item-wrapper:hover {
+    transform: translateY(-8px); /* Üzerine gelince objeler hafifçe yukarı kalkar */
+}
+
+.content-zoom-img {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05)); /* Görsellerin altına çok hafif bir gerçeklik gölgesi ekler */
+}
+
+.content-item-wrapper:hover .content-zoom-img {
+    transform: scale(1.05); /* Resim kendi içinde hafif büyür */
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1)); /* Gölge belirginleşir */
+}
+
+/* Mobilde boşlukları dengelemek için */
+@media (max-width: 768px) {
+    .content-item-wrapper {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* --- TPU Hammadde (Sadece Görsel) Bölümü CSS --- */
+
+.hover-scale-img {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
+    cursor: default;
+}
+
+/* Fare üzerine gelince resimler hafifçe büyür ve netleşir */
+.hover-scale-img:hover {
+    transform: scale(1.05) translateY(-5px);
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1)); /* Hafif ve şık bir derinlik gölgesi */
+}
+
+/* Mobilde görseller arası boşlukları dengelemek için */
+@media (max-width: 991px) {
+    .tpu-material-section .col-12 {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* --- Bağımsız Kauçuk Sistemi CSS --- */
+
+/* Havada süzülme (Floating) efekti */
+@keyframes floatExplodedImage {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px); /* Parçalar yavaşça 12px yukarı çıkar */
+    }
+    100% {
+        transform: translateY(0px); /* Geri aşağı iner */
+    }
+}
+
+.floating-exploded-img {
+    animation: floatExplodedImage 6s ease-in-out infinite; /* 6 saniyede bir sonsuz döngü */
+    filter: drop-shadow(0 20px 25px rgba(0,0,0,0.08)); /* Alta gerçekçi bir gölge ekler */
+}
+
+/* Sol taraftaki kalın turuncu çizgi (Eğer CSS'te önceden varsa bunu eklemene gerek yok) */
+.border-start-orange {
+    border-left: 5px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+
+/* --- Montaj Sıralaması CSS --- */
+
+/* Turuncu Arka Plan ve İkon Rengi */
+.bg-orange {
+    background-color: var(--liftkeys-orange, #F38002) !important;
+}
+
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Sıralama Numaraları (Yuvarlak Butonlar) */
+.step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animasyonları */
+.assembly-step-wrapper {
+    cursor: default;
+}
+
+.assembly-step-wrapper:hover .step-number {
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 8px 15px rgba(243, 128, 2, 0.4) !important;
+}
+
+.step-img {
+    transition: transform 0.4s ease;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.assembly-step-wrapper:hover .step-img {
+    transform: scale(1.08); /* Resim hafifçe büyür */
+}
+
+/* Mobilde boşluk düzenlemesi */
+@media (max-width: 768px) {
+    .assembly-step-wrapper .img-box {
+        height: 150px !important; /* Mobilde görseller çok yer kaplamasın */
+    }
+    .assembly-step-wrapper p {
+        min-height: 45px; /* Yazıların uzunluğundan dolayı butonların kaymasını engeller */
+    }
+}
+
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover .play-button {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Play üçgenini CSS ile çiziyoruz */
+.play-triangle {
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 24px solid var(--liftkeys-orange, #F38002);
+    margin-left: 6px; /* İkonu ortalamak için optik ayar */
+}
+
+/* Play Butonu (CSS ile Çizim) */
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.play-button-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #333;
+    /* Ok rengi */
+    margin-left: 4px;
+    /* Oku görsel olarak ortalamak için */
+}
+
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Görselin öne çıkması için gölge */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail-wrapper:hover {
+    transform: scale(1.01);
+    /* Üzerine gelince çok hafif büyür */
+}
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}

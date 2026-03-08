@@ -1,0 +1,222 @@
+/* --- Anahtar Bölümü Özel Tasarımı --- */
+
+/* Turuncu Başlık Barı */
+.liftkeys-header {
+    background-color: var(--liftkeys-orange, #F38002);
+}
+
+/* Görsel Üzerindeki Play Butonu Tasarımı */
+.image-container {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.02); /* Üzerine gelince resmi hafif büyütür */
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover .play-button {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Play üçgenini CSS ile çiziyoruz */
+.play-triangle {
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 24px solid var(--liftkeys-orange, #F38002);
+    margin-left: 6px; /* İkonu ortalamak için optik ayar */
+}
+
+/* Alt Sağdaki Ürün Kataloğu Butonu */
+.btn-catalog {
+    background-color: var(--liftkeys-orange, #F38002);
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--liftkeys-orange, #F38002);
+}
+
+.btn-catalog:hover {
+    background-color: white;
+    color: var(--liftkeys-orange, #F38002);
+    transform: translateY(-3px);
+}
+
+/* Mobil Görünüm İnce Ayarları */
+@media (max-width: 992px) {
+    .btn-catalog {
+        width: 100%; /* Mobilde buton ekranı tam kaplasın */
+    }
+    .display-4 {
+        font-size: 2.5rem; /* Mobilde büyük yazıyı biraz küçültelim */
+        margin-top: 20px;
+    }
+}
+
+/* --- Estetik Tasarım Bölümü CSS --- */
+
+/* Metin içindeki ikonlar için turuncu renk garantisi */
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Sol taraftaki resim için 3D hissiyatı veren gölge */
+.drop-shadow-img {
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+    transition: transform 0.4s ease;
+}
+
+.product-image-wrapper:hover .drop-shadow-img {
+    transform: translateY(-5px) scale(1.02); /* Üzerine gelince hafif yükselir */
+}
+
+
+
+/* --- Mühürlü Gelecek Bölümü CSS --- */
+
+/* Turuncu Alt Başlık Yazısı */
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Sol taraftaki kalın turuncu çizgi (Vurgu kutusu için) */
+.border-start-orange {
+    border-left: 5px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Görsel arkasındaki dekoratif çerçeve animasyonu */
+.border-frame-decoration {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.product-image-wrapper:hover .border-frame-decoration {
+    transform: translate(-50%, -50%) scale(1.05) rotate(2deg); /* Hafif büyüyüp döner */
+    opacity: 0.5 !important;
+}
+
+
+
+/* --- Teknik Bilgiler Bölümü CSS --- */
+
+/* Resimleri taşıyan beyaz kutuların tasarımı */
+.tech-img-wrapper {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #f0f0f0; /* Çok ince zarif bir çizgi */
+}
+
+/* Hover Efekti (Kart hafif yukarı kalkar ve gölge artar) */
+.tech-img-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(243, 128, 2, 0.3); /* Turuncunun şeffaf haliyle ince bir çerçeve belirir */
+}
+
+/* Kartların içindeki resimlerin taşmamasını garanti altına alır */
+.tech-img-wrapper img {
+    max-height: 200px; /* Çok yüksek görsellerin düzeni bozmasını engeller */
+    object-fit: contain;
+}
+
+/* Mobil için padding ayarı */
+@media (max-width: 768px) {
+    .tech-img-wrapper {
+        padding: 10px !important;
+    }
+    .tech-img-wrapper img {
+        max-height: 120px; /* Mobilde biraz daha derli toplu durur */
+    }
+}
+
+
+/* --- Bilgi Kartları ve Uyarı Bölümü CSS --- */
+
+/* Kartların üst kısmındaki şık turuncu çizgi */
+.border-top-orange {
+    border-top: 4px solid var(--liftkeys-orange, #F38002) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Efekti (Fare ile üzerine gelince kart hafif yükselir) */
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Alt kısımdaki özel mesaj kutusunun hafif parlaması */
+.alert-custom-box {
+    transition: all 0.3s ease;
+}
+
+.alert-custom-box:hover {
+    background-color: var(--liftkeys-orange, #F38002) !important;
+    border-color: var(--liftkeys-orange, #F38002) !important;
+}
+
+.alert-custom-box:hover p {
+    color: #ffffff !important; /* Kutunun üzerine gelince yazı beyaza döner */
+}
+
+
+/* Play Butonu (CSS ile Çizim) */
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.play-button-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #333;
+    /* Ok rengi */
+    margin-left: 4px;
+    /* Oku görsel olarak ortalamak için */
+}
+
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Görselin öne çıkması için gölge */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail-wrapper:hover {
+    transform: scale(1.01);
+    /* Üzerine gelince çok hafif büyür */
+}
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
