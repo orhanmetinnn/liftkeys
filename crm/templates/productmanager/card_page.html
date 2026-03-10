@@ -8,16 +8,13 @@
   <link rel="stylesheet" href="{% static 'css/chechout.css' %}">
 {% endblock %}
 
-
-
 <div class="container py-5">
   <h2 class="fw-bold mb-5 text-center">
-    <i class="bi bi-cart3 text-orange me-2"></i>Sepetiniz
+    <i class="bi bi-cart3 text-orange me-2"></i>{% trans "Sepetiniz" %}
   </h2>
 
   {% if cart_items %}
   <div class="row g-4">
-    <!-- Sol: Ürünler -->
     <div class="col-lg-8">
       {% for item in cart_items %}
       <div class="card shadow-sm border-0 rounded-4 mb-3">
@@ -36,13 +33,13 @@
                 {% endfor %}
               </div>
               {% endif %}
-              <small class="text-muted d-block">Adet: {{ item.qty }}</small>
+              <small class="text-muted d-block">{% trans "Adet:" %} {{ item.qty }}</small>
             </div>
           </div>
 
           <div class="text-end">
             <button class="btn btn-sm btn-outline-danger rounded-3" onclick="removeItem({{ forloop.counter0 }})">
-              <i class="bi bi-trash"></i> Sil
+              <i class="bi bi-trash"></i> {% trans "Sil" %}
             </button>
           </div>
         </div>
@@ -50,17 +47,18 @@
       {% endfor %}
     </div>
 
-    <!-- Sağ: Özet -->
     <div class="col-lg-4">
       <div class="card shadow-lg border-0 rounded-4">
         <div class="card-header bg-dark text-white rounded-top-4">
-          <h5 class="mb-0"><i class="bi bi-receipt me-2"></i> Sipariş Özeti</h5>
+          <h5 class="mb-0"><i class="bi bi-receipt me-2"></i> {% trans "Sipariş Özeti" %}</h5>
         </div>
         <div class="card-body">
-          <p class="mb-3 text-muted">Sepetinizde {{ cart_items|length }} ürün var.</p>
+          <p class="mb-3 text-muted">
+            {% blocktrans with count=cart_items|length %}Sepetinizde {{ count }} ürün var.{% endblocktrans %}
+          </p>
           <a href="{% url 'cart_checkout' %}" class="btn w-100 py-3 rounded-3 fw-bold text-white"
             style="background: linear-gradient(90deg,#ff7a00,#ff5400); border:none; font-size:1.1rem;">
-            <i class="bi bi-box-arrow-right me-2"></i> İletişim Formuna Geç
+            <i class="bi bi-box-arrow-right me-2"></i> {% trans "İletişim Formuna Geç" %}
           </a>
         </div>
       </div>
@@ -70,9 +68,9 @@
   {% else %}
   <div class="text-center py-5">
     <i class="bi bi-emoji-frown fs-1 d-block mb-3 text-muted"></i>
-    <h4 class="text-muted">Sepetiniz boş.</h4>
+    <h4 class="text-muted">{% trans "Sepetiniz boş." %}</h4>
     <a href="/" class="btn btn-outline-dark mt-3 rounded-3">
-      <i class="bi bi-arrow-left"></i> Alışverişe Devam Et
+      <i class="bi bi-arrow-left"></i> {% trans "Alışverişe Devam Et" %}
     </a>
   </div>
   {% endif %}

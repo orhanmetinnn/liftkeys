@@ -1,9 +1,13 @@
 {% extends "productpage/productbase.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Kategoriler - Liftkeys{% endblock %}
+{% block title %}{% trans "Kategoriler - Liftkeys" %}{% endblock %}
+
 {% block meta_description %}
+{% blocktrans trimmed %}
 Asansör sektörüne özel ürün kategorilerini keşfedin: Atlas, Horus, Emniyet Dişlileri, PVC Zemin Kaplamaları ve daha fazlası.
+{% endblocktrans %}
 {% endblock %}
 
 {% block extra_css %}
@@ -13,17 +17,17 @@ Asansör sektörüne özel ürün kategorilerini keşfedin: Atlas, Horus, Emniye
 {% block content %}
 <div class="container my-5">
     <div class="row">
-        <!-- Ana İçerik -->
         <div class="col-lg-9">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <p class="mb-0 text-muted">Kategori Sayısı: {{ categories.count }}</p>
+                <p class="mb-0 text-muted">
+                    {% blocktrans with count=categories.count %}Kategori Sayısı: {{ count }}{% endblocktrans %}
+                </p>
             </div>
 
             <div class="row g-4" id="category_list_container">
                 {% for cat in categories %}
                 <div class="col-md-4 col-sm-6">
                     <div class="card h-100 border-0 shadow-sm">
-                        <!-- Görsel Alanı (sabit 235x235) -->
                         <div class="category-img-wrapper-235">
                             {% if cat.menu_image %}
                             <img src="{{ cat.menu_image.url }}" alt="{{ cat.name }}" class="category-img-235">
@@ -36,7 +40,7 @@ Asansör sektörüne özel ürün kategorilerini keşfedin: Atlas, Horus, Emniye
                             <h2 class="mainh2category_list">{{ cat.name }}</h2>
                             <a href="{% url 'category_detail' cat.slug %}"
                                class="btn btn-outline-dark btn-sm mt-2" id="btn_category_list">
-                                Ürünleri İncele
+                                {% trans "Ürünleri İncele" %}
                             </a>
                         </div>
                     </div>
@@ -45,10 +49,9 @@ Asansör sektörüne özel ürün kategorilerini keşfedin: Atlas, Horus, Emniye
             </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="col-lg-3">
             <div class="mb-5">
-                <h5 id="h1category_list">Categories</h5>
+                <h5 id="h1category_list">{% trans "Kategoriler" %}</h5>
                 <ul class="list-unstyled">
                     {% for cat in categories %}
                     <li>

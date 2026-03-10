@@ -141,7 +141,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                         </p>
 
                         <div class="buttons">
-                            <a href="/kategori/" class="btn primary">
+                            <a href="{% url 'category_list' %}" class="btn primary">
                                 <span>{% trans "Ürünler" %}</span>
                             </a>
                             <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn secondary" download>
@@ -226,9 +226,13 @@ elektronik ve mekanik bileşenlerle çözümler.
         
         <div class="row justify-content-center mb-4">
             <div class="col-lg-8 text-center" data-aos="fade-down">
-                <span class="text-orange fw-bold text-uppercase small ls-2">Global Vizyon</span>
-                <h2 class="display-6 fw-bold text-dark mt-2 h3">Fuar ve Etkinlik Videolarımız</h2>
-                <p class="text-secondary">LiftKeys olarak sektördeki yeniliklerimizi dünya çapındaki fuarlarda sizlerle buluşturuyoruz.</p>
+                <span class="text-orange fw-bold text-uppercase small ls-2">{% trans "Global Vizyon" %}</span>
+                <h2 class="display-6 fw-bold text-dark mt-2 h3">{% trans "Fuar ve Etkinlik Videolarımız" %}</h2>
+                <p class="text-secondary">
+                    {% blocktrans trimmed %}
+                    LiftKeys olarak sektördeki yeniliklerimizi dünya çapındaki fuarlarda sizlerle buluşturuyoruz.
+                    {% endblocktrans %}
+                </p>
             </div>
         </div>
 
@@ -380,7 +384,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     </div>
 
                     <div class="action-area mt-4">
-                        <a href="/kategori/" class="btn btn-primary-custom" title="Liftkeys Asansör Ürün Kataloğu">
+                        <a href="{% url 'category_list' %}" class="btn btn-primary-custom" title="Liftkeys Asansör Ürün Kataloğu">
                             {% trans "Ürün Kataloğunu İncele" %} <i class="bi bi-arrow-right-short"></i>
                         </a>
                         <div class="phone-contact">
@@ -463,7 +467,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 </div>
 
                 <div class="d-flex align-items-center mt-4 pt-2">
-                    <a href="/contact/" class="btn btn-discover">{% trans "SİZİ ARAYALIM" %}</a>
+                    <a href="{% url 'contact' %}" class="btn btn-discover">{% trans "SİZİ ARAYALIM" %}</a>
                     <div class="phone-info d-flex align-items-center ms-4">
                         <i class="bi bi-telephone-fill"></i>
                         <span class="fw-bold ms-2">+90 533 288 08 21</span>
@@ -498,7 +502,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     çözümlerimizle, her yolculuğu sorunsuz ve güvenli hale getiriyoruz.
                     {% endblocktrans %}
                 </p>
-                <a href="/atlas-overload/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'atlas_overload' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -521,7 +525,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/atlas-overload/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="/" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -547,7 +551,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 </p>
 
 
-                <a href="/horus-photocell/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'horus_photocell' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -574,7 +578,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/kupeste/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'kupeste_view' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -628,7 +632,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/zemin/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'zemin_view' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -636,13 +640,13 @@ elektronik ve mekanik bileşenlerle çözümler.
             <div class="service-card">
                 <div class="icon">
                     <img src="{% static 'image/preview/rubber.webp' %}"
-                        alt="{% trans "Titreşimi en aza indiren, %100 orijinal ham maddeden üretilmiş dayanıklı asansör kauçuk takozları ve darbe emici lastikler" %}"  width="100" height="100" loading="lazy">
+                        alt="{% trans "Titreşimi en aza indiren, &#37;100 orijinal ham maddeden üretilmiş dayanıklı asansör kauçuk takozları ve darbe emici lastikler" %}"  width="100" height="100" loading="lazy">
                 </div>
 
                 <h2 id="mainh2indexpage">{% trans "Rubber Kauçuk Ürünler" %}</h2>
                 <p>
                     {% blocktrans trimmed %}
-                    LiftKeys olarak, ürettiğimiz <strong>asansör kauçuk takozları</strong> ve titreşim sönümleyici ürünlerde %100 orijinal ham madde kullanıyoruz. 
+                    LiftKeys olarak, ürettiğimiz <strong>asansör kauçuk takozları</strong> ve titreşim sönümleyici ürünlerde &#37;100 orijinal ham madde kullanıyoruz. 
                     Kaliteyi yalnızca sözle değil, sunduğumuz <strong>kauçuk malzeme orijinallik raporu</strong> ve test belgeleriyle kanıtlıyoruz.
                     {% endblocktrans %}
                 </p>
@@ -663,7 +667,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/takozlar/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'takozlar_view' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -698,7 +702,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 </p>
 
 
-                <a href="/guideshoe/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'paten_view' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -791,7 +795,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/atlas-overload/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'atlas_overload' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -826,7 +830,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/keys/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'keys_view' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -861,7 +865,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 </p>
 
 
-                <a href="/solid/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'solid_view' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -901,7 +905,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="/switch-systems/" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'switch_systems' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -1010,9 +1014,9 @@ elektronik ve mekanik bileşenlerle çözümler.
                 {% endblocktrans %}
             </p>
             <ul class="info-links">
-                <li><a href="/atlas-overload/">{% trans "Overload Atlas" %}</a></li>
-                <li><a href="/horus-photocell/">{% trans "Horus Photocell" %}</a></li>
-                <li><a href="#">{% trans "Safety Gear" %}</a></li>
+                <li><a href="{% url 'atlas_overload' %}">{% trans "Overload Atlas" %}</a></li>
+                <li><a href="{% url 'horus_photocell' %}">{% trans "Horus Photocell" %}</a></li>
+                <li><a href="/">{% trans "Safety Gear" %}</a></li>
             </ul>
         </div>
         <!-- Sütun 2 -->
@@ -1024,9 +1028,9 @@ elektronik ve mekanik bileşenlerle çözümler.
                 {% endblocktrans %}
             </p>
             <ul class="info-links">
-                <li><a href="/solid/">{% trans "Glass" %}</a></li>
-                <li><a href="/zemin/">{% trans "Floor" %}</a></li>
-                <li><a href="#">{% trans "Light" %}</a></li>
+                <li><a href="{% url 'solid_view' %}">{% trans "Glass" %}</a></li>
+                <li><a href="{% url 'zemin_view' %}">{% trans "Floor" %}</a></li>
+                <li><a href="/">{% trans "Light" %}</a></li>
             </ul>
         </div>
         <!-- Sütun 3 -->
@@ -1038,7 +1042,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                 {% endblocktrans %}
             </p>
             <ul class="info-links">
-                <li><a href="/takozlar/">{% trans "Rubber" %}</a></li>
+                <li><a href="{% url "takozlar_view" %}">{% trans "Rubber" %}</a></li>
                 <li><a href="#">{% trans "Label" %}</a></li>
                 <li><a href="#">{% trans "Elektronic" %}</a></li>
             </ul>
@@ -1052,8 +1056,8 @@ elektronik ve mekanik bileşenlerle çözümler.
                 {% endblocktrans %}
             </p>
             <ul class="info-links">
-                <li><a href="/kupeste/">{% trans "Handrail" %}</a></li>
-                <li><a href="/guideshoe/">{% trans "Guide Shose" %}</a></li>
+                <li><a href="{% url 'kupeste_view' %}">{% trans "Handrail" %}</a></li>
+                <li><a href="{% url 'paten_view' %}">{% trans "Guide Shose" %}</a></li>
                 <li><a href="#">{% trans "Mechanical" %}</a></li>
             </ul>
         </div>

@@ -17,7 +17,7 @@
                     <div class="info-box">
                         <div class="icon"><i class="bi bi-telephone-fill"></i></div>
                         <div class="info-text">
-                            <a href="/contact/" style="text-decoration: none; color: inherit;">
+                            <a href="{% url "contact" %}" style="text-decoration: none; color: inherit;">
                                 <h6>{% trans "Bizi Arayın" %}</h6>
                             </a>
                         </div>
@@ -114,9 +114,9 @@
                     <div class="footer-links">
                         <h5>{% trans "Hızlı Erişim" %}</h5>
                         <ul>
-                            <li><a href="/about/">{% trans "Hakkımızda" %}</a></li>
-                            <li><a href="/contact/">{% trans "İletişim" %}</a></li>
-                            <li><a href="#">{% trans "Katalog" %}</a></li>
+                            <li><a href="{% url "about" %}">{% trans "Hakkımızda" %}</a></li>
+                            <li><a href="{% url "contact" %}">{% trans "İletişim" %}</a></li>
+                            <li><a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" download>{% trans "Katalog" %}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
                     <div class="bottom-links">
-                        <a href="/privacy-policy/">{% trans "Privacy policy." %}</a>
+                        <a href="{% url "gizlilikguvenlik" %}">{% trans "Privacy policy." %}</a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 {% extends "productpage/productbase.html" %}
 {% load static wagtailcore_tags wagtailimages_tags %}
 {% load wagtailimages_tags %}
+{% load i18n %}
+
 {% block title %}
   {% if page.seo_title %}{{ page.seo_title }}
   {% elif page.product %}{{ page.product.name }}
@@ -13,7 +15,7 @@
   {% elif page.product and page.product.features %}
     {{ page.product.features|striptags|truncatewords:25 }}
   {% else %}
-    Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.
+    {% trans "Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar." %}
   {% endif %}
 {% endblock %}
 
@@ -29,7 +31,7 @@
   {% elif page.product and page.product.features %}
     {{ page.product.features|striptags|truncatewords:25 }}
   {% else %}
-    Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.
+    {% trans "Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar." %}
   {% endif %}
 {% endblock %}
 
@@ -49,7 +51,6 @@
 <div id="toast-container" class="toast-container"></div>
 <div class="container mt-5" id="mainblockproduct">
   <div class="row g-5 align-items-start">
-    <!-- SOL: Galeri -->
     <div class="col-lg-6">
       <div class="product-media">
         {% if page.product.website_image %}
@@ -59,13 +60,13 @@
         {% endif %}
 
         <div class="media-nav">
-          <button class="media-btn" id="prevBtn" aria-label="Önceki">
+          <button class="media-btn" id="prevBtn" aria-label="{% trans 'Önceki' %}">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
           </button>
-          <button class="media-btn" id="nextBtn" aria-label="Sonraki">
+          <button class="media-btn" id="nextBtn" aria-label="{% trans 'Sonraki' %}">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
@@ -74,7 +75,6 @@
         </div>
       </div>
 
-      <!-- Thumbs -->
       <div class="thumbs" id="thumbs">
         {% if page.product.website_image %}
         <div class="thumb is-active" data-src="{{ page.product.website_image.url }}">
@@ -91,7 +91,6 @@
       </div>
     </div>
 
-    <!-- SAĞ: Ürün Bilgileri -->
     <div class="col-lg-6">
       <h1 class="product-title mt-5">{{ page.product.name }}</h1>
 
@@ -106,12 +105,12 @@
           <button id="incr" class="qty-btn">+</button>
         </div>
 
-        <button class="btn-cart " data-product-id="{{ page.product.id }}" type="button">Sepete Ekle</button>
+        <button class="btn-cart " data-product-id="{{ page.product.id }}" type="button">{% trans "Sepete Ekle" %}</button>
       </div>
 
       <section class="product-questions mt-4 meta">
         <h4 class="mb-4  fw-bold d-flex align-items-center" id="product-questions-title">
-          <i class="bi bi-ui-checks-grid me-2"></i> Detaylandırma
+          <i class="bi bi-ui-checks-grid me-2"></i> {% trans "Detaylandırma" %}
         </h4>
 
         <form id="product-questions-form" class="d-flex flex-column gap-4">
@@ -150,7 +149,7 @@
             </div>
 
             {% elif q.question_type == "text" %}
-            <input type="text" name="question_{{ q.id }}" class="form-control w-50" placeholder="Tercihiniz">
+            <input type="text" name="question_{{ q.id }}" class="form-control w-50" placeholder="{% trans 'Tercihiniz' %}">
             {% endif %}
           </div>
           {% endfor %}
@@ -160,13 +159,13 @@
       <div class="meta mt-4">
         {% if page.product.stock_code %}
         <div class="mb-3">
-          <span class="label">SKU:</span> {{ page.product.stock_code }}
+          <span class="label">{% trans "SKU:" %}</span> {{ page.product.stock_code }}
         </div>
         {% endif %}
 
         {% if page.product.categories.exists %}
         <div class="mb-2">
-          <span class="label">Kategoriler:</span>
+          <span class="label">{% trans "Kategoriler:" %}</span>
           {% for c in page.product.categories.all %}
           <a href="{% url 'category_detail' c.slug %}" class="chip text-decoration-none category-chip">
             {{ c.name|default:c }}
@@ -181,10 +180,9 @@
     </div>
   </div>
 
-    <!-- Sekmeler -->
-  <section class="tabs">
+    <section class="tabs">
     <div class="tab-buttons text-center justify-content-center mt-4 mb-4">
-      <button class="active" data-tab="desc">Açıklama</button>
+      <button class="active" data-tab="desc">{% trans "Açıklama" %}</button>
     </div>
 
     <div class="tab-panel active" id="desc">
@@ -243,7 +241,7 @@
             {% if block.block_type != "video" and block.block_type != "embed" and block.block_type != "image" %}
               {% if block.block_type == "faq" %}
                 <section class="faq-section">
-                  <h3 class="faq-title text-center mb-4">Sık Sorulan Sorular</h3>
+                  <h3 class="faq-title text-center mb-4">{% trans "Sık Sorulan Sorular" %}</h3>
                   <div class="faq-accordion">
                     {% for item in block.value %}
                       <div class="faq-item">
@@ -279,7 +277,6 @@
           </div>
         {% endif %}
 
-        <!-- Lightbox Overlay -->
         <div id="lightboxOverlay" class="lightbox-overlay" onclick="closeLightbox()">
           <img id="lightboxImage" class="lightbox-img" src="">
         </div>
@@ -496,13 +493,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (typeof loadCartCount === "function") {
                 loadCartCount(); 
             }
-            showToast("Ürün başarıyla sepete eklendi!");
+            showToast("{% trans 'Ürün başarıyla sepete eklendi!' %}");
         } else {
-            showToast("Hata: " + (result.error || "Ürün eklenemedi."));
+            showToast("{% trans 'Hata:' %} " + (result.error || "{% trans 'Ürün eklenemedi.' %}"));
         }
       } catch (error) {
         console.error("Fetch Hatası:", error);
-        showToast("Sunucu ile iletişim kurulamadı.");
+        showToast("{% trans 'Sunucu ile iletişim kurulamadı.' %}");
       }
     });
   }

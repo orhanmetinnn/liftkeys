@@ -54,7 +54,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="/">
+    <a class="navbar-brand d-flex align-items-center" href="{% url "indexpage" %}">
       <img src="{% static 'image/logo-liftkeys-menu.png' %}" alt="LiftKeys Logo" width="150" height="30">
     </a>
 
@@ -67,20 +67,20 @@
 
         <li class="nav-item">
           <a class="nav-link {% if request.path == '/' or request.path == '/en/' %}text-orange fw-bold{% endif %}"
-            href="/">
+            href="{% url "indexpage" %}">
             {% trans "Ana Sayfa" %}
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {% if '/about/' in request.path %}text-orange fw-bold{% endif %}" href="/about/">
+          <a class="nav-link {% if '/about/' in request.path %}text-orange fw-bold{% endif %}" href="{% url "about" %}">
             {% trans "Hakkımızda" %}
           </a>
         </li>
 
         <li>
           <a class="nav-link {% if '/kagittanisleri/' in request.path %}text-orange fw-bold{% endif %}"
-            href="/kagittanisleri/">
+            href="{% url "kagittanisleri_view" %}">
             {% trans "Kağıttanişler" %}
           </a>
         </li>
@@ -180,7 +180,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/horus-photocell/">
+                    href="{% url "horus_photocell" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-eye-fill"></i>
                     </div>
@@ -193,7 +193,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/atlas-overload/">
+                    href="{% url "atlas_overload" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-speedometer2"></i>
                     </div>
@@ -206,7 +206,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/zemin/">
+                    href="{% url "zemin_view" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-layers-fill"></i>
                     </div>
@@ -219,7 +219,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/switch-systems/">
+                    href="{% url "switch_systems" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-toggle-on"></i>
                     </div>
@@ -232,7 +232,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/fan/">
+                    href="{% url "fan_view" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-fan"></i>
                     </div>
@@ -245,7 +245,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/guideshoe/">
+                    href="{% url "paten_view" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-collection"></i>
                     </div>
@@ -258,7 +258,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/solid/">
+                    href="{% url "solid_view" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-shield-check"></i>
                     </div>
@@ -271,7 +271,7 @@
 
                 <div class="col">
                   <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
-                    href="/kupeste/">
+                    href="{% url "kupeste_view" %}">
                     <div class="icon-box me-3">
                       <i class="bi bi-grip-horizontal"></i>
                     </div>
@@ -351,11 +351,11 @@
 
         <li class="nav-item">
           <a class="nav-link {% if '/gallery/' in request.path %}text-orange fw-bold{% endif %}"
-            href="/gallery/">Galeri</a>
+            href="{% url 'gallery_view' %}">Galeri</a>
         </li>
 
         <li class="nav-item ms-lg-3 d-none d-lg-block">
-          <a class="btn request-quote-btn" href="/contact/">{% trans "İLETİŞİM" %} <i class="bi bi-arrow-right"></i></a>
+          <a class="btn request-quote-btn" href="{% url 'contact' %}">{% trans "İLETİŞİM" %} <i class="bi bi-arrow-right"></i></a>
         </li>
         <li class="nav-item ms-lg-3 d-none d-lg-block">
           <a class="nav-link position-relative" href="{% url 'cart_page' %}">

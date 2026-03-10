@@ -1,6 +1,7 @@
 {% extends "productpage/productbase.html" %}
 {% load static %}
 {% load product_extras %}
+{% load i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/catagory_detail.css' %}">
@@ -45,7 +46,7 @@
         </div>
         {% empty %}
         <div class="col-12 text-center">
-          <p class="text-muted">Bu kategoride ürün bulunmamaktadır.</p>
+          <p class="text-muted">{% trans "Bu kategoride ürün bulunmamaktadır." %}</p>
         </div>
         {% endfor %}
       </div>
@@ -54,7 +55,7 @@
     <div class="col-lg-3 order-2 order-lg-2 mt-4 mt-lg-0">
       <aside class="right-sidebar shadow-sm rounded-3 p-3 p-lg-4">
         <h6 class="sidebar-title text-uppercase fw-bold mb-3 mb-lg-4">
-          <i class="bi bi-filter-circle me-2"></i> Kategoriler
+          <i class="bi bi-filter-circle me-2"></i> {% trans "Kategoriler" %}
         </h6>
         <nav class="category-nav">
           <ul class="list-unstyled">
