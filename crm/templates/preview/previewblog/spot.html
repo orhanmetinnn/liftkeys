@@ -1,0 +1,403 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load static %}
+{% load i18n %}
+
+{# --- SEO BLOKLARI --- #}
+{% block title %}
+{% trans "LiftKeys | Profesyonel Asansör Aydınlatma ve LED Spot Sistemleri" %}
+{% endblock %}
+
+{% block meta_description %}
+{% blocktrans %}
+LiftKeys 220V kendinden sürücülü asansör spot sistemleri: Alev almaz ABS kasa, homojen ışık dağılımı ve on-board driver teknolojisi ile güvenli ve uzun ömürlü aydınlatma.
+{% endblocktrans %}
+{% endblock %}
+
+{% block meta_robots %}index,follow{% endblock %}
+
+{% block meta_keywords %}
+{% trans "asansör spot lamba, asansör aydınlatma sistemleri, 220V asansör led spot, yanmaz asansör spotu, asansör tavan aydınlatma, on-board driver spot, asansör led pcb, LiftKeys aydınlatma" %}
+{% endblock %}
+
+{% block og_type %}product{% endblock %}
+
+{% block og_title %}
+{% trans "LiftKeys | Güvenli ve Estetik Asansör LED Spot Çözümleri" %}
+{% endblock %}
+
+{% block og_description %}
+{% blocktrans %}
+Asansörlere özel tasarlanmış, harici sürücü gerektirmeyen 220V LED spotlar. Yanmaz kasa ve yüksek verimlilik sunan profesyonel aydınlatma teknolojisi.
+{% endblocktrans %}
+{% endblock %}
+
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/spot/liftkeys-aydinlatma-spot-sistemleri.webp' %}{% endblock %}
+
+{% block tw_title %}
+{% trans "LiftKeys | Profesyonel Asansör Aydınlatma Sistemleri" %}
+{% endblock %}
+
+{% block tw_description %}
+{% blocktrans %}
+220V on-board driver ve alev almaz kasa teknolojisiyle asansör kabinleri için en güvenli aydınlatma çözümü.
+{% endblocktrans %}
+{% endblock %}
+
+{% block tw_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'image/pageproduct/spot/liftkeys-aydinlatma-spot-sistemleri.webp' %}{% endblock %}
+
+{# --- CSS BLOĞU --- #}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/previewcss/productpage/spot.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{# --- İÇERİK BLOĞU --- #}
+{% block content %}
+
+<script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Liftkeys",
+            "url": "https://www.liftkeys.com",
+            "logo": "https://www.liftkeys.com{% static 'image/preview/liftkeys-og.webp' %}",
+            "sameAs": [
+                "https://www.linkedin.com/company/liftkeys",
+                "https://www.instagram.com/liftkeys"
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "LiftKeys Profesyonel Asansör LED Spot Sistemleri",
+            "image": [
+                "https://www.liftkeys.com{% static 'image/pageproduct/spot/liftkeys-aydinlatma-spot-sistemleri.webp' %}",
+                "https://www.liftkeys.com{% static 'image/pageproduct/spot/asansor-spot-modelleri.webp' %}"
+            ],
+            "description": "220V kendinden sürücülü (on-board driver), alev almaz ABS kasalı ve homojen ışık dağılımlı profesyonel asansör kabin aydınlatma sistemi.",
+            "sku": "LK-SPT-001",
+            "brand": {
+                "@type": "Brand",
+                "name": "LiftKeys"
+            },
+            "category": "Asansör Aydınlatma Sistemleri",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.liftkeys.com{{ request.path }}",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@type": "Organization", "name": "LiftKeys" }
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Neden 220V kendinden sürücülü asansör spotu tercih edilmelidir?",
+                    "acceptedAnswer": { 
+                        "@type": "Answer", 
+                        "text": "On-board driver teknolojisi sayesinde harici driver ihtiyacı ortadan kalkar, montaj kolaylaşır ve sistem daha kompakt hale gelerek arıza riskini minimize eder." 
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Asansör spotlarında güvenlik nasıl sağlanıyor?",
+                    "acceptedAnswer": { 
+                        "@type": "Answer", 
+                        "text": "Ürünlerimiz yangın yürütmeyen ABS kasa yapısına sahiptir. Şaseye elektrik kaçağı riskini önleyen tam izolasyonlu ve dış müdahaleye kapalı bir yapı sunar." 
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "LED spotların ömrü ne kadardır?",
+                    "acceptedAnswer": { 
+                        "@type": "Answer", 
+                        "text": "LED'lerin yüksek kalite PCB üzerine doğrudan dizildiği özel tasarım ve dengeli ısı dağılımı sayesinde maksimum verimlilik ve uzun çalışma ömrü sağlanır." 
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://www.liftkeys.com/"
+            },{
+                "@type": "ListItem", "position": 2, "name": "Aydınlatma Sistemleri", "item": "https://liftkeys.com/kategori/aydinlatma/"
+            },{
+                "@type": "ListItem", "position": 3, "name": "Asansör Spot Sistemleri", "item": "https://www.liftkeys.com{{ request.path }}"
+            }]
+        }
+    ]
+</script>
+
+
+<section class="lighting-spot-section py-5 overflow-hidden bg-white">
+    <div class="container">
+        
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="liftkeys-header d-flex align-items-center p-3 shadow-sm rounded-3" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="icon-wrapper me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-brightness-high text-white fs-4"></i>
+                    </div>
+                    <h1 class="mb-0 text-white fw-bold h4">{% trans "LIFTKEYS – Aydınlatma / Spot Sistemleri" %}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 pb-2">
+            
+            <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg" 
+                    onclick="loadYoutubeVideo(this)" 
+                    data-video-id="xwix6gc0Fg8" 
+                    style="cursor: pointer; min-height: 350px;">
+                    
+                    <img src="{% static 'image/pageproduct/spot/liftkeys-aydinlatma-spot-sistemleri.webp' %}" 
+                        class="img-fluid w-100" 
+                        alt="{% trans 'LiftKeys Asansör Aydınlatma Teknolojisi' %}"
+                        style="object-fit: cover; min-height: 350px;" loading="lazy">
+                    
+                    <div class="play-overlay position-absolute top-50 start-50 translate-middle">
+                        <div class="play-button bg-white rounded-circle d-flex justify-content-center align-items-center shadow-lg" 
+                            style="width: 80px; height: 80px;">
+                            <i class="bi bi-play-fill display-4 ps-2" style="color: #F38002;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 ps-lg-5" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="content-wrapper">
+                    <p class="display-6 fw-light text-secondary mb-0" style="line-height: 1.4;">
+                        {% blocktrans %}“Asansörlere Özel<br>Aydınlatma Teknolojisi”{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+<section class="spot-features-section py-5 overflow-hidden">
+    <div class="container">
+        
+        <div class="row align-items-center mb-5 pb-lg-3" data-aos="fade-down" data-aos-duration="1000">
+            <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
+                <p class="mb-0 fs-3 text-secondary" style="line-height: 1.4;">
+                    {% blocktrans %}Güvenlik sadece bir fonksiyon değil,<br><strong class="text-dark fw-bold">LiftKeys’te bir standarttır.</strong>{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="col-lg-4 col-md-5 text-md-end">
+                <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm px-4 py-3 w-100 w-md-auto">
+                    <i class="bi bi-book me-2 fs-5"></i>
+                    {% trans "Ürün Kataloğu İndir" %}
+                </a>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-4">
+            <div class="col-lg-7 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-wrapper d-inline-block position-relative">
+                    <img src="{% static 'image/pageproduct/spot/asansor-spot-modelleri.webp' %}" 
+                         alt="{% trans 'LiftKeys Asansörler için tasarlanan, hareketin temposuna ayak uyduran spotlar' %}" 
+                         class="img-fluid w-100 spot-zoom-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-5 ps-lg-5" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <p class="display-6 fw-light text-secondary mb-0" style="line-height: 1.4; font-size: 2rem;">
+                    {% blocktrans %}Asansörler için<br>tasarlanan, hareketin<br>temposuna ayak<br>uyduran spotlar{% endblocktrans %}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="professional-lighting-section py-5 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-wrapper d-inline-block position-relative">
+                    <img src="{% static 'image/pageproduct/spot/spot-profesyonel-aydinlatma.webp' %}" 
+                         alt="{% trans 'LiftKeys Asansör Spotları - 220V Kendinden Sürücülü, Uzun Ömürlü ve Alev Almaz Kasa' %}" 
+                         class="img-fluid w-100 spot-zoom-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="content-wrapper pe-lg-4">
+                    <p class="text-secondary mb-0 fs-5" style="line-height: 1.8;">
+                        {% trans "Asansörler için tasarlanan, hareketin temposuna ayak uyduran spotlar: 220V ile çalışan, kendi sürücüsüne sahip, uzun ömürlü, alev almaz kasasıyla fark yaratır. Her gün binlerce açılıp kapanmaya hazır, sorunsuz performansın adı. İki farklı seri ile asansörlerinize özel, gerçek profesyonel aydınlatma." %}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="led-technology-section py-5 overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 pe-lg-5 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
+                <div class="content-wrapper">
+                    <p class="text-secondary fs-5 mb-3" style="line-height: 1.6;">
+                        {% trans "LED’lerin doğrudan yüksek kalite PCB üzerine dizildiği özel tasarım sayesinde ürünlerimiz maksimum verimlilik ve uzun ömür sunar." %}
+                    </p>
+                    
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.6;">
+                        {% trans "Entegre on-board driver sistemi sayesinde harici driver kullanımına gerek kalmaz." %}
+                    </p>
+
+                    <div class="ms-lg-2 mb-4">
+                        <p class="text-secondary fs-5 mb-3" style="line-height: 1.6;">{% trans "Isı dağılımı daha dengeli olur" %}</p>
+                        <p class="text-secondary fs-5 mb-3" style="line-height: 1.6;">{% trans "LED ömrü maksimum seviyeye çıkar" %}</p>
+                        <p class="text-secondary fs-5 mb-3" style="line-height: 1.6;">{% trans "Harici driver ihtiyacı ortadan kalkar" %}</p>
+                    </div>
+
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.6;">
+                        {% trans "On-board driver teknolojisi ile çalışan sistem, daha kompakt," %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 text-center mb-5 mb-lg-0 order-1 order-lg-2" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="image-wrapper d-inline-block position-relative rounded-4 overflow-hidden shadow-lg">
+                    <img src="{% static 'image/pageproduct/spot/led-pcb-onboard-driver.webp' %}" 
+                         alt="{% trans 'LiftKeys LED PCB On-board Driver Teknolojisi ve Asansör Tavan Aydınlatması' %}" 
+                         class="img-fluid w-100 spot-zoom-img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="spot-installation-details py-5 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 text-center mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-wrapper d-inline-block position-relative">
+                    <img src="{% static 'image/pageproduct/spot/spot-montaj-yay-sistemi.webp' %}" 
+                         alt="{% trans 'Asansörlere Özel Tasarlanmış Profesyonel Aydınlatma ve Montaj Sistemi' %}" 
+                         class="img-fluid w-100 spot-zoom-img" loading="lazy">
+                </div>
+            </div>
+
+            <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="content-wrapper pe-lg-3">
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.6;">
+                        {% trans "Asansörlere Özel Tasarlanmış Profesyonel Aydınlatma" %}
+                    </p>
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.6;">
+                        {% trans "Ürünlerimiz, yangın yürütmeyen ve alev almayan özel EBS kasa yapısı ile üretilmiştir. Bu sayede güvenli ve dayanıklı bir kullanım sunar." %}
+                    </p>
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.6;">
+                        {% trans "Özel olarak tasarlanan homojen ışık dağılımlı difüzör, LED noktalarının görünmesini engeller ve kabin içerisinde yumuşak, dengeli ve göz yormayan bir aydınlatma sağlar." %}
+                    </p>
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.6;">
+                        {% trans "Arka kısmında bulunan pratik montaj yay sistemi sayesinde ürünler kolayca monte edilir ve kabin tavanına hızlı bir şekilde sabitlenir." %}
+                    </p>
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.6;">
+                        {% trans "Bu özellikler sayesinde ürünlerimiz;" %}
+                    </p>
+                    <p class="text-secondary fs-5 mb-0" style="line-height: 1.6;">
+                        {% trans "Asansör kullanımına uygun uzun ömürlü tasarım sunarak asansör kabinleri için profesyonel bir aydınlatma çözümü oluşturur." %}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="container guvenlik-alani py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-4">
+            <h2>{% trans "Güvenlik Önlemleri" %}</h2>
+            <p>{% trans "Ürünlerimiz 220V ile çalıştığı için maksimum güvenlik prensibiyle tasarlanmıştır. Tüm gövde yapısı yangın yürütmeyen ABS kasa malzemesinden üretilmiştir." %}</p>
+            <p>{% trans "Ürün içerisinde bulunan on-board driver sistemi, kasa içerisinde tamamen kapalı yapıdadır ve dışarıdan müdahaleye karşı korumalıdır. Bu sayede elektriksel güvenlik en üst seviyede tutulur." %}</p>
+            <p>{% trans "ABS kasa yapısı sayesinde ürün, şaseye elektrik kaçakları oluşturmayacak şekilde izole edilmiştir. Böylece asansör kabinlerinde güvenli ve sorunsuz kullanım sağlanır." %}</p>
+            <p>{% trans "Bu tasarım sayesinde:" %}</p>
+            <ul>
+                <li>{% trans "Elektriksel güvenlik maksimum seviyededir" %}</li>
+                <li>{% trans "Şaseye kaçak elektrik riski ortadan kaldırılmıştır" %}</li>
+                <li>{% trans "Dış müdahaleye karşı korumalı elektronik yapı" %}</li>
+                <li>{% trans "Yangın yürütmeyen ve alev almayan kasa" %}</li>
+            </ul>
+            <p>{% trans "Sonuç olarak ürünlerimiz asansör uygulamaları için güvenli, dayanıklı ve uzun ömürlü bir aydınlatma çözümü sunar." %}</p>
+        </div>
+        
+        <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center text-start">
+            <img src="{% static 'image/pageproduct/spot/spot-aydinlatma-ve-renk-secenekleri.webp' %}" 
+                 alt="{% trans 'Güvenli ve dayanıklı yanmaz ABS kasa asansör spot aydınlatma ürünü' %}" 
+                 class="img-fluid mb-4" 
+                 style="max-width: 85%;">
+            
+            <div class="w-100 ps-md-4">
+                <div class="lejant-oge">
+                    <span class="renk-noktasi nokta-kirmizi"></span>
+                    <span>{% trans "Güvenli ve dayanıklı kasa yapısı" %}</span>
+                </div>
+                <div class="lejant-oge">
+                    <span class="renk-noktasi nokta-sari"></span>
+                    <span>{% trans "Homojen ve iz bırakmayan ışık dağılımı" %}</span>
+                </div>
+                <div class="lejant-oge">
+                    <span class="renk-noktasi nokta-lacivert"></span>
+                    <span>{% trans "Hızlı ve kolay montaj imkanı" %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% include "preview/iletisimformpreview.html" %}
+
+<script>
+    function loadYoutubeVideo(element) {
+        // 1. Tıklanan div'in içindeki video kimliğini (data-video-id) alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // 2. YouTube iframe (video oynatıcı) kodumuzu oluşturuyoruz
+        // Tasarımınla tam uyumlu olması için style kısmına min-height: 350px; ekledik
+        // autoplay=1 parametresi sayesinde video tıklandığı an otomatik oynamaya başlar
+        var iframeHTML = `
+            <iframe width=100% height="350" src="https://www.youtube.com/embed/jHW_zMDO6dQ?si=a7-OmDueKy-14Ygw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `;
+        
+        // 3. Tıklanan alanın içindeki resmi ve Play butonunu tamamen temizleyip, 
+        // yerine hazırladığımız bu video oynatıcıyı yerleştiriyoruz
+        element.innerHTML = iframeHTML;
+    }
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true // Animasyon sadece bir kere çalışsın (yukarı çıkınca bozulmasın)
+    });
+</script>
+
+
+
+
+{% include "preview/footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}400 | Geçersiz İstek | Liftkeys{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/404.css' %}">
+{% endblock %}
+
+{% block meta_description %}
+Sunucuya gönderilen istek geçersiz. Lütfen işleminizi kontrol edip tekrar deneyin.
+{% endblock %}
+
+{% block meta_robots %}noindex,nofollow{% endblock %}
+
+{% block meta_keywords %}
+400, geçersiz istek, bad request, liftkeys, hata
+{% endblock %}
+
+{% block og_type %}website{% endblock %}
+{% block og_title %}400 | Geçersiz İstek | Liftkeys{% endblock %}
+{% block og_description %}
+İsteğiniz sunucu tarafından anlaşılamadı. Lütfen bağlantınızı kontrol edin.
+{% endblock %}
+{% block og_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+{% block tw_title %}400 | Geçersiz İstek | Liftkeys{% endblock %}
+{% block tw_description %}
+İsteğiniz sunucu tarafından anlaşılamadı. Lütfen bağlantınızı kontrol edin.
+{% endblock %}
+{% block tw_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+{% block content %}
+    <div class="genel404">
+        <div class="glow"></div>
+        <div class="glow"></div>
+        <h1>400</h1>
+        <h2>{% trans "Geçersiz İstek" %}</h2>
+
+        <p>
+            {% blocktrans %}
+            Tarayıcınızın gönderdiği istek sunucumuz tarafından anlaşılamadı. 
+            Lütfen adresi kontrol edip tekrar deneyin veya ana sayfaya geri dönün.
+            {% endblocktrans %}
+        </p>
+        <a href="/" class="btn">{% trans "Ana Sayfaya Dön" %}</a>
+    </div>
+
+    {% include "preview/footer.html" %}
+{% endblock content %}

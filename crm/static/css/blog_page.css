@@ -66,15 +66,12 @@ body {
 .lk-table td, .lk-table th { border-color: var(--lk-border) !important; }
 
 /* Sidebar */
-.lk-card {
-  border: 1px solid var(--lk-border);
-  background: #fff;
-  border-radius: 16px;
-  padding: 1rem;
-  color: #000;
+
+
+.lk-toc a:hover { 
+  background: #fff3e6; 
+  color: var(--lk-deep-orange); 
 }
-.lk-toc a { color: #000; text-decoration: none; font-size: .95rem; padding: .3rem .25rem; border-radius: 8px; }
-.lk-toc a:hover { background: #fff3e6; color: var(--lk-deep-orange); }
 
 /* Share bar */
 .lk-share .btn {
@@ -109,3 +106,114 @@ body {
   background: #fafafa;
   font-size: .85rem;
 }
+
+
+.lk-toc-wrapper {
+  position: relative;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+/* Sol taraftaki ince dikey kılavuz çizgisi */
+.lk-toc-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 11px;
+  width: 2px;
+  background: var(--lk-border);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+/* Genel Başlık Bağlantı Ayarları */
+.toc-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--lk-grey-500);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.5rem 0.4rem 2rem;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Başlıkların yanındaki nokta (ikon) */
+.toc-item::before {
+  content: '';
+  position: absolute;
+  left: 7px; /* Kılavuz çizgisinin tam ortasına hizalar */
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid var(--lk-grey-300);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Üzerine gelme (Hover) Efekti */
+.toc-item:hover {
+  background: #fafafa;
+  color: var(--lk-grey-900);
+  transform: translateX(4px); /* Modern sağa kayma animasyonu */
+}
+
+.toc-item:hover::before {
+  border-color: var(--lk-orange);
+  background: var(--lk-orange);
+  box-shadow: 0 0 0 3px rgba(247, 127, 0, 0.2); /* Turuncu parlama efekti */
+}
+
+/* Ana Başlık (H2) Özelleştirmesi */
+.toc-h2 {
+  font-weight: 600;
+  color: var(--lk-grey-800);
+  margin-top: 8px;
+}
+
+/* Alt Başlık (H3) Özelleştirmesi (Hiyerarşi) */
+.toc-h3 {
+  font-size: 0.9rem;
+  padding-left: 2.8rem; /* Daha içeride görünmesini sağlar */
+}
+
+/* H3'ler için daha küçük ve belirgin nokta */
+.toc-h3::before {
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-width: 2px;
+  border-color: var(--lk-border);
+}
+
+.btn-share {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* İkonlar için yuvarlak düğme genişliği */
+  height: 40px;
+  border-radius: 50% !important; /* Düğmeleri tam yuvarlak yapar */
+  border: 1px solid var(--lk-border);
+  background: #fff;
+  color: var(--lk-grey-500);
+  transition: all 0.3s ease;
+}
+
+/* Kopyala butonu metin içerdiği için oval ve esnek olmalı */
+.btn-share.copy-link {
+  width: auto;
+  padding: 0 16px;
+  border-radius: 20px !important; 
+}
+
+/* Fareyle üzerine gelindiğinde (Hover) Marka Renkleri */
+.btn-share.linkedin:hover { background: #0a66c2; border-color: #0a66c2; color: #fff; transform: translateY(-3px); }
+.btn-share.x-twitter:hover { background: #000000; border-color: #000000; color: #fff; transform: translateY(-3px); }
+.btn-share.facebook:hover { background: #1877f2; border-color: #1877f2; color: #fff; transform: translateY(-3px); }
+.btn-share.whatsapp:hover { background: #25d366; border-color: #25d366; color: #fff; transform: translateY(-3px); }
+.btn-share.telegram:hover { background: #26a5e4; border-color: #26a5e4; color: #fff; transform: translateY(-3px); }
+.btn-share.copy-link:hover { background: var(--lk-orange); border-color: var(--lk-orange); color: #fff; box-shadow: var(--lk-glow); }

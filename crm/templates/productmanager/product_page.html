@@ -45,6 +45,35 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/product_page.css' %}">
 <link rel="stylesheet" href="{% static 'css/productpagepreview.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> <style>
+  .btn-whatsapp-rect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 4px; /* Dikdörtgen format için az kavisli */
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Sepete ekle ve miktar kutusunun toplam genişliği kadar olması için */
+    max-width: 285px; /* İsteğe bağlı: Butonun çok uzamasını engeller */
+    border: none;
+    gap: 10px;
+  }
+
+  .btn-whatsapp-rect:hover {
+    background-color: #128C7E;
+    color: white;
+    text-decoration: none;
+  }
+
+  .btn-whatsapp-rect i {
+    font-size: 1.2rem;
+  }
+</style>
 {% endblock %}
 
 {% block content %}
@@ -92,21 +121,31 @@
     </div>
 
     <div class="col-lg-6">
-      <h1 class="product-title mt-5">{{ page.product.name }}</h1>
+          <h1 class="product-title mt-5">{{ page.product.name }}</h1>
 
-      {% if page.product.features %}
-      <p class="mb-4" style="color:#6b7280">{{ page.product.features }}</p>
-      {% endif %}
+          {% if page.product.features %}
+          <p class="mb-4" style="color:#6b7280">{{ page.product.features }}</p>
+          {% endif %}
 
-      <div class="d-flex align-items-center gap-3 mb-3">
+          <div class="d-flex flex-column gap-2 mb-3"> <div class="d-flex align-items-center gap-3">
         <div class="qty-container">
           <button id="decr" class="qty-btn">−</button>
           <input type="number" id="qtyInput" min="1" value="1">
           <button id="incr" class="qty-btn">+</button>
         </div>
 
-        <button class="btn-cart " data-product-id="{{ page.product.id }}" type="button">{% trans "Sepete Ekle" %}</button>
+        <button class="btn-cart" data-product-id="{{ page.product.id }}" type="button">
+          {% trans "Sepete Ekle" %}
+        </button>
       </div>
+
+      <a href="https://api.whatsapp.com/send/?phone=905332880821&text={% blocktrans with name=page.product.name %}Merhaba, {{ name }} hakkında bilgi almak istiyorum.{% endblocktrans %}&type=phone_number&app_absent=0" 
+        target="_blank" 
+        class="btn-whatsapp-rect">
+        <i class="bi bi-whatsapp"></i> 
+        {% trans "WHATSAPP" %}
+      </a>
+    </div>
 
       <section class="product-questions mt-4 meta">
         <h4 class="mb-4  fw-bold d-flex align-items-center" id="product-questions-title">

@@ -1839,7 +1839,11 @@ def patenkabin_view(request):
     return render(request, "preview/previewblog/patenkabin.html")
 
 
-
+def spot_view(request):
+    """
+    Liftkeys Spot blog yazısını render eder.
+    """
+    return render(request, "preview/previewblog/spot.html")
 
 
 

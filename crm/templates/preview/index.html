@@ -403,7 +403,7 @@ elektronik ve mekanik bileşenlerle çözümler.
     </div>
 </section>
 
-
+{% include "preview/iletisimformpreview.html" %}
 
 <section class="about-company py-5 mt-5 mb-5" data-aos="zoom-out">
     <div class="container">
@@ -478,7 +478,7 @@ elektronik ve mekanik bileşenlerle çözümler.
     </div>
 </section>
 
-{% include "preview/iletisimformpreview.html" %}
+
 
 <br>
 
@@ -737,7 +737,7 @@ elektronik ve mekanik bileşenlerle çözümler.
                     {% endblocktrans %}
                 </p>
 
-                <a href="#" class="read-more">{% trans "Detayları Gör" %}</a>
+                <a href="{% url 'spot_view' %}" class="read-more">{% trans "Detayları Gör" %}</a>
             </div>
         </div>
 
@@ -1030,7 +1030,7 @@ elektronik ve mekanik bileşenlerle çözümler.
             <ul class="info-links">
                 <li><a href="{% url 'solid_view' %}">{% trans "Glass" %}</a></li>
                 <li><a href="{% url 'zemin_view' %}">{% trans "Floor" %}</a></li>
-                <li><a href="/">{% trans "Light" %}</a></li>
+                <li><a href="{% url 'spot_view' %}">{% trans "Light" %}</a></li>
             </ul>
         </div>
         <!-- Sütun 3 -->

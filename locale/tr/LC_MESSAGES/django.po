@@ -8,19 +8,85 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-10 22:33+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2026-04-05 19:18+0300\n"
+"PO-Revision-Date: 2026-03-22 16:08+0300\n"
+"Last-Translator: Orhan Metin <orhanmetinnn@outlook.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.3\n"
 
 #: .\crm\forms.py:387 .\crm\templates\productmanager\category_detail.html:58
 #: .\crm\templates\productmanager\category_list.html:54
 msgid "Kategoriler"
+msgstr ""
+
+#: .\crm\forms.py:873
+msgid "Lütfen bu alanı boş bırakın"
+msgstr ""
+
+#: .\crm\forms.py:880
+msgid "Lütfen robot olmadığınızı doğrulayın."
+msgstr ""
+
+#: .\crm\forms.py:891
+msgid "Adınızı giriniz"
+msgstr ""
+
+#: .\crm\forms.py:897
+msgid "E-posta adresinizi giriniz"
+msgstr ""
+
+#: .\crm\forms.py:903
+msgid "Konu giriniz"
+msgstr ""
+
+#: .\crm\forms.py:908
+msgid "Telefon numaranızı giriniz"
+msgstr ""
+
+#: .\crm\forms.py:914
+msgid "Bize birkaç kelime yazın"
+msgstr ""
+
+#: .\crm\forms.py:927
+msgid "Form gönderiminde şüpheli bir işlem tespit edildi."
+msgstr ""
+
+#: .\crm\templates\400.html:38
+msgid "Geçersiz İstek"
+msgstr ""
+
+#: .\crm\templates\400.html:41
+msgid ""
+"\n"
+"            Tarayıcınızın gönderdiği istek sunucumuz tarafından "
+"anlaşılamadı. \n"
+"            Lütfen adresi kontrol edip tekrar deneyin veya ana sayfaya geri "
+"dönün.\n"
+"            "
+msgstr ""
+
+#: .\crm\templates\400.html:46 .\crm\templates\403.html:46
+#: .\crm\templates\404.html:46 .\crm\templates\500.html:46
+#: .\crm\templates\productmanager\order_success.html:26
+msgid "Ana Sayfaya Dön"
+msgstr ""
+
+#: .\crm\templates\403.html:38
+msgid "Erişim Reddedildi"
+msgstr ""
+
+#: .\crm\templates\403.html:41
+msgid ""
+"\n"
+"            Üzgünüz, bu sayfayı görüntülemek için gerekli yetkilere sahip "
+"değilsiniz. \n"
+"            Lütfen yetkili bir hesapla giriş yapın veya ana sayfaya dönün.\n"
+"            "
 msgstr ""
 
 #: .\crm\templates\404.html:38
@@ -35,18 +101,27 @@ msgid ""
 "            "
 msgstr ""
 
-#: .\crm\templates\404.html:46
-#: .\crm\templates\productmanager\order_success.html:26
-msgid "Ana Sayfaya Dön"
+#: .\crm\templates\500.html:38
+msgid "Sunucu Hatası"
+msgstr ""
+
+#: .\crm\templates\500.html:41
+msgid ""
+"\n"
+"            Üzgünüz! Sunucularımızda beklenmeyen bir sorun meydana geldi. \n"
+"            Teknik ekibimiz sorunu çözmek için çalışıyor. Lütfen kısa bir "
+"süre sonra tekrar deneyin veya ana sayfaya dönün.\n"
+"            "
 msgstr ""
 
 #: .\crm\templates\blog\blog_page.html:18
 #: .\crm\templates\preview\previewblog\atlasoverload.html:50
-#: .\templates\previewtemplates\previewmenu.html:71
+#: .\templates\previewtemplates\previewmenu.html:106
 msgid "Ana Sayfa"
 msgstr ""
 
 #: .\crm\templates\blog\blog_page.html:31
+#: .\templates\previewtemplates\previewmenu.html:398
 msgid "Blog"
 msgstr ""
 
@@ -54,32 +129,36 @@ msgstr ""
 msgid "dk okuma"
 msgstr ""
 
-#: .\crm\templates\blog\blog_page.html:105
-#: .\crm\templates\blog\blog_page.html:188
-msgid "Bağlantıyı kopyala"
+#: .\crm\templates\blog\blog_page.html:97
+msgid "Bu içeriği paylaş:"
 msgstr ""
 
-#: .\crm\templates\blog\blog_page.html:112
-#: .\crm\templates\productmanager\product_page.html:63
+#: .\crm\templates\blog\blog_page.html:126
+#: .\crm\templates\blog\blog_page.html:220
+msgid "Kopyala"
+msgstr ""
+
+#: .\crm\templates\blog\blog_page.html:135
+#: .\crm\templates\productmanager\product_page.html:92
 msgid "Önceki"
 msgstr ""
 
-#: .\crm\templates\blog\blog_page.html:117
-#: .\crm\templates\productmanager\product_page.html:69
+#: .\crm\templates\blog\blog_page.html:140
+#: .\crm\templates\productmanager\product_page.html:98
 msgid "Sonraki"
 msgstr ""
 
-#: .\crm\templates\blog\blog_page.html:127
+#: .\crm\templates\blog\blog_page.html:150
 #: .\crm\templates\preview\previewblog\atlasoverload.html:152
 msgid "İçindekiler"
 msgstr ""
 
-#: .\crm\templates\blog\blog_page.html:177
+#: .\crm\templates\blog\blog_page.html:208
 msgid "Başlık bulunamadı"
 msgstr ""
 
-#: .\crm\templates\blog\blog_page.html:186
-msgid "Kopyalandı"
+#: .\crm\templates\blog\blog_page.html:218
+msgid "Kopyalandı!"
 msgstr ""
 
 #: .\crm\templates\preview\about.html:50
@@ -272,8 +351,6 @@ msgid ""
 msgstr ""
 
 #: .\crm\templates\preview\footer.html:31
-#, fuzzy
-#| msgid "Email:"
 msgid "Email"
 msgstr "Telefon"
 
@@ -331,7 +408,7 @@ msgid "Hızlı Erişim"
 msgstr ""
 
 #: .\crm\templates\preview\footer.html:117
-#: .\templates\previewtemplates\previewmenu.html:77
+#: .\templates\previewtemplates\previewmenu.html:112
 msgid "Hakkımızda"
 msgstr ""
 
@@ -490,7 +567,7 @@ msgstr ""
 #: .\crm\templates\preview\index.html:145
 #: .\crm\templates\preview\previewblog\atlasoverload.html:56
 #: .\crm\templates\preview\previewblog\zemin.html:225
-#: .\templates\previewtemplates\previewmenu.html:92
+#: .\templates\previewtemplates\previewmenu.html:127
 msgid "Ürünler"
 msgstr ""
 
@@ -1404,6 +1481,7 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\paten.html:210
 #: .\crm\templates\preview\previewblog\patenkabin.html:213
 #: .\crm\templates\preview\previewblog\solid.html:214
+#: .\crm\templates\preview\previewblog\spot.html:201
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:233
 #: .\crm\templates\preview\previewblog\takozlar.html:206
 #: .\crm\templates\preview\previewblog\zemin.html:280
@@ -1901,7 +1979,7 @@ msgid "Asansör Çözümleri"
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\fan.html:142
-#: .\templates\previewtemplates\previewmenu.html:240
+#: .\templates\previewtemplates\previewmenu.html:275
 msgid "Havalandırma Sistemleri"
 msgstr ""
 
@@ -2694,7 +2772,7 @@ msgid ""
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\keys.html:153
-msgid "LIFTKEYS – Asansör Ağırlık Ray Paten Bloğu"
+msgid "LIFTKEYS – Asansör Anahtarı "
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\keys.html:170
@@ -4500,6 +4578,226 @@ msgid ""
 "gibi ağır kimyasallar kullanmayınız."
 msgstr ""
 
+#: .\crm\templates\preview\previewblog\spot.html:7
+msgid "LiftKeys | Profesyonel Asansör Aydınlatma ve LED Spot Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:11
+msgid ""
+"\n"
+"LiftKeys 220V kendinden sürücülü asansör spot sistemleri: Alev almaz ABS "
+"kasa, homojen ışık dağılımı ve on-board driver teknolojisi ile güvenli ve "
+"uzun ömürlü aydınlatma.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:19
+msgid ""
+"asansör spot lamba, asansör aydınlatma sistemleri, 220V asansör led spot, "
+"yanmaz asansör spotu, asansör tavan aydınlatma, on-board driver spot, "
+"asansör led pcb, LiftKeys aydınlatma"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:25
+msgid "LiftKeys | Güvenli ve Estetik Asansör LED Spot Çözümleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:29
+msgid ""
+"\n"
+"Asansörlere özel tasarlanmış, harici sürücü gerektirmeyen 220V LED spotlar. "
+"Yanmaz kasa ve yüksek verimlilik sunan profesyonel aydınlatma teknolojisi.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:37
+msgid "LiftKeys | Profesyonel Asansör Aydınlatma Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:41
+msgid ""
+"\n"
+"220V on-board driver ve alev almaz kasa teknolojisiyle asansör kabinleri "
+"için en güvenli aydınlatma çözümü.\n"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:148
+msgid "LIFTKEYS – Aydınlatma / Spot Sistemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:163
+msgid "LiftKeys Asansör Aydınlatma Teknolojisi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:178
+msgid "“Asansörlere Özel<br>Aydınlatma Teknolojisi”"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:194
+msgid ""
+"Güvenlik sadece bir fonksiyon değil,<br><strong class=\"text-dark fw-"
+"bold\">LiftKeys’te bir standarttır.</strong>"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:210
+msgid ""
+"LiftKeys Asansörler için tasarlanan, hareketin temposuna ayak uyduran spotlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:217
+msgid ""
+"Asansörler için<br>tasarlanan, hareketin<br>temposuna ayak<br>uyduran spotlar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:232
+msgid ""
+"LiftKeys Asansör Spotları - 220V Kendinden Sürücülü, Uzun Ömürlü ve Alev "
+"Almaz Kasa"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:240
+msgid ""
+"Asansörler için tasarlanan, hareketin temposuna ayak uyduran spotlar: 220V "
+"ile çalışan, kendi sürücüsüne sahip, uzun ömürlü, alev almaz kasasıyla fark "
+"yaratır. Her gün binlerce açılıp kapanmaya hazır, sorunsuz performansın adı. "
+"İki farklı seri ile asansörlerinize özel, gerçek profesyonel aydınlatma."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:256
+msgid ""
+"LED’lerin doğrudan yüksek kalite PCB üzerine dizildiği özel tasarım "
+"sayesinde ürünlerimiz maksimum verimlilik ve uzun ömür sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:260
+msgid ""
+"Entegre on-board driver sistemi sayesinde harici driver kullanımına gerek "
+"kalmaz."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:264
+msgid "Isı dağılımı daha dengeli olur"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:265
+msgid "LED ömrü maksimum seviyeye çıkar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:266
+msgid "Harici driver ihtiyacı ortadan kalkar"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:270
+msgid "On-board driver teknolojisi ile çalışan sistem, daha kompakt,"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:278
+msgid ""
+"LiftKeys LED PCB On-board Driver Teknolojisi ve Asansör Tavan Aydınlatması"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:293
+msgid "Asansörlere Özel Tasarlanmış Profesyonel Aydınlatma ve Montaj Sistemi"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:301
+msgid "Asansörlere Özel Tasarlanmış Profesyonel Aydınlatma"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:304
+msgid ""
+"Ürünlerimiz, yangın yürütmeyen ve alev almayan özel EBS kasa yapısı ile "
+"üretilmiştir. Bu sayede güvenli ve dayanıklı bir kullanım sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:307
+msgid ""
+"Özel olarak tasarlanan homojen ışık dağılımlı difüzör, LED noktalarının "
+"görünmesini engeller ve kabin içerisinde yumuşak, dengeli ve göz yormayan "
+"bir aydınlatma sağlar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:310
+msgid ""
+"Arka kısmında bulunan pratik montaj yay sistemi sayesinde ürünler kolayca "
+"monte edilir ve kabin tavanına hızlı bir şekilde sabitlenir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:313
+msgid "Bu özellikler sayesinde ürünlerimiz;"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:316
+msgid ""
+"Asansör kullanımına uygun uzun ömürlü tasarım sunarak asansör kabinleri için "
+"profesyonel bir aydınlatma çözümü oluşturur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:328
+msgid "Güvenlik Önlemleri"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:329
+msgid ""
+"Ürünlerimiz 220V ile çalıştığı için maksimum güvenlik prensibiyle "
+"tasarlanmıştır. Tüm gövde yapısı yangın yürütmeyen ABS kasa malzemesinden "
+"üretilmiştir."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:330
+msgid ""
+"Ürün içerisinde bulunan on-board driver sistemi, kasa içerisinde tamamen "
+"kapalı yapıdadır ve dışarıdan müdahaleye karşı korumalıdır. Bu sayede "
+"elektriksel güvenlik en üst seviyede tutulur."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:331
+msgid ""
+"ABS kasa yapısı sayesinde ürün, şaseye elektrik kaçakları oluşturmayacak "
+"şekilde izole edilmiştir. Böylece asansör kabinlerinde güvenli ve sorunsuz "
+"kullanım sağlanır."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:332
+msgid "Bu tasarım sayesinde:"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:334
+msgid "Elektriksel güvenlik maksimum seviyededir"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:335
+msgid "Şaseye kaçak elektrik riski ortadan kaldırılmıştır"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:336
+msgid "Dış müdahaleye karşı korumalı elektronik yapı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:337
+msgid "Yangın yürütmeyen ve alev almayan kasa"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:339
+msgid ""
+"Sonuç olarak ürünlerimiz asansör uygulamaları için güvenli, dayanıklı ve "
+"uzun ömürlü bir aydınlatma çözümü sunar."
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:344
+msgid "Güvenli ve dayanıklı yanmaz ABS kasa asansör spot aydınlatma ürünü"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:351
+msgid "Güvenli ve dayanıklı kasa yapısı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:355
+msgid "Homojen ve iz bırakmayan ışık dağılımı"
+msgstr ""
+
+#: .\crm\templates\preview\previewblog\spot.html:359
+msgid "Hızlı ve kolay montaj imkanı"
+msgstr ""
+
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:7
 msgid "LiftKeys Asansör Switch Sistemleri | Limit ve Emniyet Anahtarları"
 msgstr ""
@@ -5951,132 +6249,132 @@ msgid ""
 "ekonomiktir. Asansör motoruna binen yüku azaltır."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:9
+#: .\crm\templates\preview\timeline.html:10
 msgid "LiftKeys Timeline"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:20
+#: .\crm\templates\preview\timeline.html:21
 msgid "HEDEFLERİMİZ"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:21
+#: .\crm\templates\preview\timeline.html:22
 msgid ""
 "Yeni yerimizde (3300 m² kapalı, 1500 m² açık alan) tesisimizi ve ekibimizi "
 "büyütüyoruz. Çok yakında inovatif ürünlerle yanınızda olmaya devam edeceğiz."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:35
+#: .\crm\templates\preview\timeline.html:36
 msgid "KAUÇUK ÇÖZÜMLERİ"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:36
+#: .\crm\templates\preview\timeline.html:37
 msgid ""
 "Asansör sektöründe karşılaşılan dört farklı teknik probleme çözüm üreten "
 "kauçuk ürünleri portföye eklenmiştir. Titreşim, darbe, ses ve yüzey koruma "
 "alanlarında yüksek performanslı kauçuk çözümleri sunulmuştur."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:50
+#: .\crm\templates\preview\timeline.html:51
 msgid "HORUS & ATLAS ÜRÜN GRUBU"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:51
+#: .\crm\templates\preview\timeline.html:52
 msgid ""
 "Horus markasıyla asansör kapı fotosellerinin, Atlas markasıyla ise mekanik "
 "ve elektronik aşırı yük sistemlerinin imalatına başlanmış; bu iki ürün grubu "
 "ile asansör güvenlik çözümleri güçlendirilmiştir."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:65
+#: .\crm\templates\preview\timeline.html:66
 msgid "F1 ASANSÖR FRENLERİ"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:66
+#: .\crm\templates\preview\timeline.html:67
 msgid ""
 "Her kapasite ve hızda ihtiyaca özel fren sistemi çözümleri geliştirilmiştir. "
 "500 kg’dan 20 tona, 0,25 m/s’ten 2,5 m/s hıza kadar 6 farklı modelde asansör "
 "freni üretilerek, tüm projelere güvenli ve etkin çözümler sunulmuştur."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:81
+#: .\crm\templates\preview\timeline.html:82
 msgid "KÜPEŞTE"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:82
+#: .\crm\templates\preview\timeline.html:83
 msgid ""
 "81-70 kurallarına uygun, farklı renkte özel üretim küpeşte dirsekleri "
 "hizmete sunulmuştur."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:95
+#: .\crm\templates\preview\timeline.html:96
 msgid "HAVALANDIRMA SİSTEMLERİ"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:96
+#: .\crm\templates\preview\timeline.html:97
 msgid ""
 "Kumanda panosu ve kabinler için kare fan ve radyal fan çözümleri stoklara "
 "eklenmiştir."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:109
+#: .\crm\templates\preview\timeline.html:110
 msgid "DECOVETRO"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:110
+#: .\crm\templates\preview\timeline.html:111
 msgid ""
 "Decovetro markası altında; et kesme tahtaları, masa camları, sehpa camları, "
 "cam tablolar, dekoratif aynalar üretilerek ev-dekorasyon sektörüne hizmet "
 "verilmiştir."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:124
+#: .\crm\templates\preview\timeline.html:125
 msgid "ASANSÖR ZEMİN MALZEMELERİ"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:125
+#: .\crm\templates\preview\timeline.html:126
 msgid ""
 "PVC hammaddesi ile şık tasarımlı asansör zeminleri üretilmiştir. Ürün "
 "sertifikaları: Yangın, Kaydırmaz, Antibakteriyel."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:139
+#: .\crm\templates\preview\timeline.html:140
 msgid "AYDINLATMA ÜRÜNLERİ"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:140
+#: .\crm\templates\preview\timeline.html:141
 msgid ""
 "Kabin içi aksesuarları kategorisinde üreticilere doğru çözümler sunmak için "
 "solid aydınlatma difüzörü, LED, spot ve kuyu aydınlatma ürünleri portföye "
 "eklenmiştir."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:154
+#: .\crm\templates\preview\timeline.html:155
 msgid "CAM"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:155
+#: .\crm\templates\preview\timeline.html:156
 msgid ""
 "Asansör sektörü için özelleştirilmiş güvenli cam üretimine başlanmıştır. "
 "Desenli kabin camları, ayna, panoramik, kademeli kapı ve kabin camları ile "
 "yurtiçi ve yurtdışında 200'ün üzerinde üreticiye hizmet verilmiştir."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:170
+#: .\crm\templates\preview\timeline.html:171
 msgid "ÜÇGEN ANAHTAR"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:171
+#: .\crm\templates\preview\timeline.html:172
 msgid ""
 "Her marka kapıyı açabilen, dünya standartlarına uygun üçgen anahtar üretimi "
 "yapılmıştır. Yılda 1 milyon adet satış yapılarak 50 ülkeye ihracat "
 "gerçekleştirilmiştir."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:185
+#: .\crm\templates\preview\timeline.html:186
 msgid "ETİKET - TASARIM"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:186
+#: .\crm\templates\preview\timeline.html:187
 msgid ""
 "Asansör sektörü için tanıtım ve güvenlik yönerge etiketlerinin imalatına "
 "başlanmış, yıllık 10 milyonun üzerinde etiket basım kapasitesine "
@@ -6084,11 +6382,11 @@ msgid ""
 "sürede yükseltmiştir."
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:201
+#: .\crm\templates\preview\timeline.html:202
 msgid "KURULUŞ"
 msgstr ""
 
-#: .\crm\templates\preview\timeline.html:202
+#: .\crm\templates\preview\timeline.html:203
 msgid ""
 "Kağıttanişler; Alper Koç’un asansör tecrübesi, Gökhan Kurt’un matbaa "
 "tecrübesi ile birlikte, kendi sektörlerine inovatif değer katmak için "
@@ -6136,8 +6434,6 @@ msgid "Bu kategoride ürün bulunmamaktadır."
 msgstr ""
 
 #: .\crm\templates\productmanager\category_list.html:5
-#, fuzzy
-#| msgid "Welcome to Liftkeys"
 msgid "Kategoriler - Liftkeys"
 msgstr "Liftkeys Hoşgeldiniz"
 
@@ -6169,8 +6465,6 @@ msgid "E-posta"
 msgstr ""
 
 #: .\crm\templates\productmanager\checkout.html:41
-#, fuzzy
-#| msgid "Telefon:"
 msgid "Telefon"
 msgstr "Telefon"
 
@@ -6212,47 +6506,56 @@ msgstr ""
 msgid "Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar."
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:108
+#: .\crm\templates\productmanager\product_page.html:138
 msgid "Sepete Ekle"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:113
-msgid "Detaylandırma"
+#: .\crm\templates\productmanager\product_page.html:142
+#, python-format
+msgid "Merhaba, %(name)s hakkında bilgi almak istiyorum."
+msgstr ""
+
+#: .\crm\templates\productmanager\product_page.html:146
+msgid "WHATSAPP"
 msgstr ""
 
 #: .\crm\templates\productmanager\product_page.html:152
+msgid "Detaylandırma"
+msgstr ""
+
+#: .\crm\templates\productmanager\product_page.html:191
 msgid "Tercihiniz"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:162
+#: .\crm\templates\productmanager\product_page.html:201
 msgid "SKU:"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:168
+#: .\crm\templates\productmanager\product_page.html:207
 msgid "Kategoriler:"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:185
+#: .\crm\templates\productmanager\product_page.html:224
 msgid "Açıklama"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:244
+#: .\crm\templates\productmanager\product_page.html:283
 msgid "Sık Sorulan Sorular"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:496
+#: .\crm\templates\productmanager\product_page.html:535
 msgid "Ürün başarıyla sepete eklendi!"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:498
+#: .\crm\templates\productmanager\product_page.html:537
 msgid "Hata:"
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:498
+#: .\crm\templates\productmanager\product_page.html:537
 msgid "Ürün eklenemedi."
 msgstr ""
 
-#: .\crm\templates\productmanager\product_page.html:502
+#: .\crm\templates\productmanager\product_page.html:541
 msgid "Sunucu ile iletişim kurulamadı."
 msgstr ""
 
@@ -6398,118 +6701,134 @@ msgstr ""
 msgid "Soruları Yönet"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:84
+#: .\templates\previewtemplates\previewmenu.html:119
 msgid "Kağıttanişler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:119
+#: .\templates\previewtemplates\previewmenu.html:154
 msgid "Tümünü Gör"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:139
+#: .\templates\previewtemplates\previewmenu.html:174
 msgid "Ürün bulunamadı."
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:162
+#: .\templates\previewtemplates\previewmenu.html:197
 msgid "Tüm Kategorileri Gör"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:173
+#: .\templates\previewtemplates\previewmenu.html:208
 msgid "Çözümlerimiz"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:188
+#: .\templates\previewtemplates\previewmenu.html:223
 msgid "LKS Horus Fotosel"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:189
+#: .\templates\previewtemplates\previewmenu.html:224
 msgid "Güvenli kapı sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:201
+#: .\templates\previewtemplates\previewmenu.html:236
 msgid "Atlas Aşırı Yük"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:202
+#: .\templates\previewtemplates\previewmenu.html:237
 msgid "Hassas yük ölçüm teknolojisi"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:214
+#: .\templates\previewtemplates\previewmenu.html:249
 msgid "Zemin"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:215
+#: .\templates\previewtemplates\previewmenu.html:250
 msgid "Yanmaz ve estetik PVC kaplamalar"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:227
+#: .\templates\previewtemplates\previewmenu.html:262
 msgid "Switch Sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:228
+#: .\templates\previewtemplates\previewmenu.html:263
 msgid "Limit ve güvenlik anahtar çözümleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:241
+#: .\templates\previewtemplates\previewmenu.html:276
 msgid "Sessiz ve güçlü kabin fanları"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:253
+#: .\templates\previewtemplates\previewmenu.html:288
 msgid "Ağırlık Paten Sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:254
+#: .\templates\previewtemplates\previewmenu.html:289
 msgid "Sessiz ve titreşimsiz TPU patenler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:266
+#: .\templates\previewtemplates\previewmenu.html:301
 msgid "Solid & Polistren Levha"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:267
+#: .\templates\previewtemplates\previewmenu.html:302
 msgid "Kırılmaz tavan ve duvar kaplamaları"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:279
+#: .\templates\previewtemplates\previewmenu.html:314
 msgid "Paslanmaz Küpeşte"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:280
+#: .\templates\previewtemplates\previewmenu.html:315
 msgid "Modüler sistem ve renk seçenekleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:292
+#: .\templates\previewtemplates\previewmenu.html:327
 msgid "Vibrasyon Takozları"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:294
+#: .\templates\previewtemplates\previewmenu.html:329
 msgid "Titreşim önleyici kauçuk sönümleyiciler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:306
+#: .\templates\previewtemplates\previewmenu.html:341
 msgid "Üçgen Anahtar"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:308
+#: .\templates\previewtemplates\previewmenu.html:343
 msgid "Standartlara uygun güvenli kilit sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:320
+#: .\templates\previewtemplates\previewmenu.html:355
 msgid "Dekoratif Cam"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:322
+#: .\templates\previewtemplates\previewmenu.html:357
 msgid "500 farklı desen seçeneği ile estetik kabinler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:334
+#: .\templates\previewtemplates\previewmenu.html:369
 msgid "Kabin Paten Sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:336
+#: .\templates\previewtemplates\previewmenu.html:371
 msgid "Sessiz çalışma ve titreşim sönümleyici tasarım"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:358
+#: .\templates\previewtemplates\previewmenu.html:382
+msgid "Aydınlatma / Spot Sistemleri"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:384
+msgid "On-board driver teknolojisi ve alev almaz ABS kasa"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:395
+msgid "Data Merkezi"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:403
+msgid "Galeri"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:407
 msgid "İLETİŞİM"
 msgstr ""

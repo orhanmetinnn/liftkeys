@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-03h*26-ff0gikg=qodz$^r#s9+55rw3o$0yu!dq-=7#1^5wu_j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
 
 
 
@@ -216,22 +217,30 @@ LOGGING = {
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# --- VERİTABANI (DATABASE) AYARLARI ---
+
 if DEBUG:
-    DB_PORT = '3307'
-    DB_HOST = '127.0.0.1'
+    # YEREL (LOCAL) GELİŞTİRME AYARLARI
+    DB_PORT = '3306'               # Artık tünel (3307) yok, standart MySQL portu
+    DB_HOST = '127.0.0.1'          # Kendi bilgisayarımız
+    DB_USER = 'root'               # Yerel MySQL kullanıcı adın
+    DB_PASSWORD = 'Suskun404.'     # Yerel MySQL şifren
 else:
+    # CANLI SUNUCU (PRODUCTION) AYARLARI
     DB_PORT = '3306'
     DB_HOST = 'localhost'
+    DB_USER = 'liftkeys_user'      # Sunucudaki MySQL kullanıcı adı
+    DB_PASSWORD = 'LiftSuskunKeys404.' # Sunucudaki MySQL şifresi
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'liftkeys_db',
-        'USER': 'liftkeys_user',
-        'PASSWORD': 'LiftSuskunKeys404.',
+        'NAME': 'liftkeys_db',     # İki ortamda da aynı veritabanı adını (liftkeys_db) kullanıyoruz
+        'USER': DB_USER,           # Yukarıdaki if/else bloğundan otomatik gelir
+        'PASSWORD': DB_PASSWORD,   # Yukarıdaki if/else bloğundan otomatik gelir
         'HOST': DB_HOST,
         'PORT': DB_PORT,
-        'CONN_MAX_AGE': 600, # 🔥 KRİTİK AYAR: Bağlantıyı 10 dakika (600sn) canlı tut.
+        'CONN_MAX_AGE': 600,       # 🔥 KRİTİK AYAR: Bağlantıyı 10 dakika (600sn) canlı tut.
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
@@ -240,7 +249,6 @@ DATABASES = {
         },
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
@@ -283,9 +291,12 @@ LANGUAGES = [
     ('de', 'German'),
     ('es', 'Spanish'),
 ]
+
+
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
+
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES 
 
 # Static files (CSS, JavaScript, Images)

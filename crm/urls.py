@@ -1,10 +1,10 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 from django.conf.urls import handler404
 from .views import custom_404  # views.py'deki fonksiyonu import et
 from .sitemaps import StaticViewSitemap, ProductPageSitemap
 from django.contrib.sitemaps.views import sitemap
-from django.views.generic import TemplateView
+from django.views.generic import RedirectView, TemplateView
 handler404 = custom_404
 sitemaps = {
     "static": StaticViewSitemap,
@@ -53,7 +53,7 @@ urlpatterns = [
     path("orders/", views.order_list, name="order_list"),
     path("orders/toggle/<int:pk>/", views.toggle_order_status, name="toggle_order_status"),
     path("404/", views.custom_404, name="test-404"),
-    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps, 'template_name': 'custom_sitemap.xml', 'content_type': 'application/xml'}, name='django.contrib.sitemaps.views.sitemap'),
     path("gallery/", views.gallery_view, name="gallery_view"),
     path("api/gallery-items/", views.gallery_items_api, name="gallery_items_api"),  # ✅ yeni
     path("gallery/manager/", views.gallery_manager_view, name="gallery_manager"),
@@ -73,6 +73,7 @@ urlpatterns = [
     path('keys/', views.anahtar_view, name='keys_view'),
     path('dekoratif-cam/', views.kabincam_view, name='kabincam_view'),
     path('patenkabin/', views.patenkabin_view, name='patenkabin_view'),
+    path('spot/', views.spot_view, name='spot_view'),
 
 
     path('feed/pinterest/', views.pinterest_catalog_feed, name='pinterest_feed'),
@@ -82,6 +83,8 @@ urlpatterns = [
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"), 
         name="robots_file"
     ),
+
+    re_path(r'^urun/.*$', RedirectView.as_view(pattern_name='category_list', permanent=True)),
 ]
 
 

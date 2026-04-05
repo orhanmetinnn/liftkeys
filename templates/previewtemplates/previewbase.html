@@ -12,6 +12,7 @@
     <meta name="robots" content="{% block meta_robots %}index,follow{% endblock %}">
 
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <link rel="icon" href="{% static 'image/favicon.png' %}" type="image/png" sizes="192x192">
 
 
     <meta property="og:locale" content="tr_TR">
@@ -19,7 +20,8 @@
     <meta property="og:site_name" content="Liftkeys">
     <meta property="og:title" content="{% block og_title %}Liftkeys | Asansör Çözümleri{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.{% endblock %}">
-    <meta property="og:url" content="{% block og_url %}{% if request %}{{ request.build_absolute_uri }}{% else %}https://www.liftkeys.com{% endif %}{% endblock %}">
+    {# og:url kısmı canonical ile uyumlu olması için güncellendi #}
+    <meta property="og:url" content="{% block og_url %}{% if request %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% else %}https://www.liftkeys.com{% endif %}{% endblock %}">
     <meta property="og:image" content="{% block og_image %}{% endblock %}">
 
     {# === Twitter Cards === #}
@@ -31,6 +33,43 @@
     <meta name="p:domain_verify" content="f550624007a3bfb0a5a46ed5124ffcc1"/>
     <meta name="yandex-verification" content="ac7fd23aeecd844c" />
 
+    {# === SEO & Hreflang Tags (Yeni Eklenen Bölüm) === #}
+    {# === SEO & Hreflang Tags (Akıllı Versiyon) === #}
+    <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+
+    {% if page %}
+        {# 1. DURUM: Bu bir Wagtail sayfasıysa (Wagtail mantığı çalışır) #}
+        <link rel="alternate" hreflang="{{ page.locale.language_code }}" href="{{ page.full_url }}">
+        
+        {% for translation in page.get_translations.live %}
+            <link rel="alternate" hreflang="{{ translation.locale.language_code }}" href="{{ translation.full_url }}">
+        {% endfor %}
+        
+        {% if page.locale.language_code == 'en' %}
+            <link rel="alternate" hreflang="x-default" href="{{ page.full_url }}">
+        {% else %}
+            {% for translation in page.get_translations.live %}
+                {% if translation.locale.language_code == 'en' %}
+                    <link rel="alternate" hreflang="x-default" href="{{ translation.full_url }}">
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+    {% elif request.resolver_match and not request.resolver_match.kwargs and not request.resolver_match.args and request.resolver_match.url_name != 'wagtail_serve' %}
+        {# 2. DURUM: Bu statik, parametre almayan bir Django sayfasıysa (Örn: /iletisim/) #}
+        {% get_available_languages as LANGUAGES %}
+        {% for lang_code, lang_name in LANGUAGES %}
+            {% language lang_code %}
+                <link rel="alternate" hreflang="{{ lang_code }}" href="{{ request.scheme }}://{{ request.get_host }}{% url request.resolver_match.view_name %}" />
+            {% endlanguage %}
+        {% endfor %}
+
+        {% language 'en' %}
+            <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{% url request.resolver_match.view_name %}" />
+        {% endlanguage %}
+    {% endif %}
+    {# 3. DURUM: Eğer link 404 veriyorsa veya hatalıysa, kod hiçbir şey yapmaz ve sayfanın çökmesini engeller. #}
+    {# ============================================== #}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/previwmenu.css' %}">
     <link rel="stylesheet" href="{% static 'css/font.css' %}">
@@ -175,7 +214,6 @@
 
         gtag('config', 'G-NZYRLJ01K0');
     </script>
-    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -191,21 +229,15 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1349190047248073&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-597BKQM3');</script>
-    <!-- End Google Tag Manager -->
-</head>
+    </head>
 <body lang="{{ LANGUAGE_CODE }}">
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-597BKQM3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     {% include "previewtemplates/previewmenu.html" %}
     {% block content %}{% endblock %}
     

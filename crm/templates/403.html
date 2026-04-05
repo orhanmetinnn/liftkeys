@@ -1,0 +1,50 @@
+{% extends "previewtemplates/previewbase.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}403 | Erişim Reddedildi | Liftkeys{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/404.css' %}">
+{% endblock %}
+
+{% block meta_description %}
+Bu sayfayı görüntüleme yetkiniz bulunmamaktadır.
+{% endblock %}
+
+{% block meta_robots %}noindex,nofollow{% endblock %}
+
+{% block meta_keywords %}
+403, erişim reddedildi, yetkisiz erişim, liftkeys, hata
+{% endblock %}
+
+{% block og_type %}website{% endblock %}
+{% block og_title %}403 | Erişim Reddedildi | Liftkeys{% endblock %}
+{% block og_description %}
+Bu içeriğe erişim yetkiniz yok. Farklı bir hesapla giriş yapabilir veya ana sayfaya dönebilirsiniz.
+{% endblock %}
+{% block og_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+{% block tw_title %}403 | Erişim Reddedildi | Liftkeys{% endblock %}
+{% block tw_description %}
+Bu içeriğe erişim yetkiniz yok. Ana sayfaya dönerek sitemizi keşfetmeye devam edebilirsiniz.
+{% endblock %}
+{% block tw_image %}{% static 'image/preview/liftkeys-og.webp' %}{% endblock %}
+
+{% block content %}
+    <div class="genel404">
+        <div class="glow"></div>
+        <div class="glow"></div>
+        <h1>403</h1>
+        <h2>{% trans "Erişim Reddedildi" %}</h2>
+
+        <p>
+            {% blocktrans %}
+            Üzgünüz, bu sayfayı görüntülemek için gerekli yetkilere sahip değilsiniz. 
+            Lütfen yetkili bir hesapla giriş yapın veya ana sayfaya dönün.
+            {% endblocktrans %}
+        </p>
+        <a href="/" class="btn">{% trans "Ana Sayfaya Dön" %}</a>
+    </div>
+
+    {% include "preview/footer.html" %}
+{% endblock content %}

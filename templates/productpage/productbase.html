@@ -12,6 +12,7 @@
     <meta name="robots" content="{% block meta_robots %}index,follow{% endblock %}">
 
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <link rel="icon" href="{% static 'image/favicon.png' %}" type="image/png" sizes="192x192">
 
 
     <meta property="og:locale" content="tr_TR">
@@ -19,7 +20,8 @@
     <meta property="og:site_name" content="Liftkeys">
     <meta property="og:title" content="{% block og_title %}Liftkeys | Asansör Çözümleri{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar.{% endblock %}">
-    <meta property="og:url" content="{% block og_url %}{% if request %}{{ request.build_absolute_uri }}{% else %}https://www.liftkeys.com{% endif %}{% endblock %}">
+    {# og:url Wagtail page objesi üzerinden güncellendi #}
+    <meta property="og:url" content="{% block og_url %}{% if page %}{{ page.full_url }}{% else %}https://www.liftkeys.com{% endif %}{% endblock %}">
     <meta property="og:image" content="{% block og_image %}{% endblock %}">
 
     {# === Twitter Cards === #}
@@ -29,8 +31,28 @@
     <meta name="twitter:image" content="{% block tw_image %}{% endblock %}">    
     <meta name="yandex-verification" content="ac7fd23aeecd844c" />
 
+    {# === Wagtail SEO & Hreflang Tags (Güncellenmiş Akıllı Versiyon) === #}
+    {% if page %}
+    <link rel="canonical" href="{{ page.full_url }}">
 
-    <!-- CSS -->
+    <link rel="alternate" hreflang="{{ page.locale.language_code }}" href="{{ page.full_url }}">
+    
+    {% for translation in page.get_translations.live %}
+        <link rel="alternate" hreflang="{{ translation.locale.language_code }}" href="{{ translation.full_url }}">
+    {% endfor %}
+    
+    {% if page.locale.language_code == 'en' %}
+        <link rel="alternate" hreflang="x-default" href="{{ page.full_url }}">
+    {% else %}
+        {% for translation in page.get_translations.live %}
+            {% if translation.locale.language_code == 'en' %}
+                <link rel="alternate" hreflang="x-default" href="{{ translation.full_url }}">
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endif %}
+    {# ============================================== #}
+
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/font.css' %}">
     <link rel="stylesheet" href="{% static 'css/previwmenu.css' %}">
@@ -38,18 +60,15 @@
 
     {% block extra_css %}{% endblock %}
 
-    <!-- Icon & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- AOS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <meta name="google-site-verification" content="hFkRj-P0sBD_2d6NwF56hp124kAJWzSGszNVLHu_ois" />
-    <!-- JS -->
-        <style>
+    <style>
         body {
             overflow-x: hidden;
         }
@@ -123,7 +142,6 @@
 
         gtag('config', 'G-NZYRLJ01K0');
     </script>
-    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -139,20 +157,15 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1349190047248073&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
-     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-597BKQM3');</script>
-    <!-- End Google Tag Manager -->
-</head>
+    </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-597BKQM3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     {% include "previewtemplates/previewmenu.html" %}
     {% block content %}
     

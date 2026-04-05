@@ -1,0 +1,6 @@
+# AWS gizli anahtarlarını içeren dosyalar
+crm/management/commands/category_translate.py
+crm/management/commands/product_translate.py
+crm/management/commands/wagtail_translate.py
+dilceviri.py
+translate_blogs.py

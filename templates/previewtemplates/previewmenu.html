@@ -22,20 +22,55 @@
     <div class="d-flex align-items-center">
 
       <div class="language-wrapper d-flex align-items-center">
+        {% load i18n %} 
         {% get_current_language as LANGUAGE_CODE %}
         {% get_available_languages as LANGUAGES %}
 
         <i class="bi bi-globe2 text-muted me-1" style="font-size: 0.9rem;"></i>
 
-        <select onchange="if(this.value) window.location.href=this.value;" class="clean-lang-select">
+        {% csrf_token %}
+
+        <select class="clean-lang-select" onchange="switchLanguage(this)">
           {% for lang_code, lang_name in LANGUAGES %}
-          <option value="{% change_lang lang_code %}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
-            {{ lang_code|upper }}
-          </option>
+            <option value="{{ lang_code }}" data-url="{% change_lang lang_code %}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+              {{ lang_code|upper }}
+            </option>
           {% endfor %}
         </select>
+        
         <i class="bi bi-chevron-down ms-1" style="font-size: 0.65rem; color: #888;"></i>
       </div>
+
+      <script>
+      function switchLanguage(selectElement) {
+          var selectedOption = selectElement.options[selectElement.selectedIndex];
+          var langCode = selectedOption.value;
+          var targetUrl = selectedOption.getAttribute('data-url'); // Senin etiketinin hazırladığı temiz URL
+          var csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+          // Arka planda Django'ya sadece "çerezi ayarla" demek için veri hazırlıyoruz
+          var formData = new URLSearchParams();
+          formData.append('language', langCode);
+          formData.append('csrfmiddlewaretoken', csrfToken);
+
+          // Django'nun set_language adresine sayfa yenilenmeden (sessizce) istek atıyoruz
+          fetch("{% url 'set_language' %}", {
+              method: 'POST',
+              body: formData,
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+              }
+          }).then(function() {
+              // Django arka planda çerezi başarıyla ayarladı!
+              // Şimdi Django'nun müdahale etmesine izin vermeden doğrudan temiz URL'ye gidiyoruz.
+              window.location.href = targetUrl;
+          }).catch(function(error) {
+              // Beklenmedik bir hata olursa bile URL'ye gitmeyi dene
+              console.error('Dil değiştirme hatası:', error);
+              window.location.href = targetUrl;
+          });
+      }
+      </script>
 
       <div class="top-divider mx-3"></div>
 
@@ -337,21 +372,35 @@
                     </div>
                   </a>
                 </div>
+                <div class="col">
+                  <a class="dropdown-item custom-dropdown-item h-100 d-flex align-items-start p-3 rounded-3"
+                    href="{% url 'spot_view' %}">
+                    <div class="icon-box me-3">
+                      <i class="bi bi-brightness-high"></i>
+                    </div>
+                    <div class="text-box">
+                      <span class="item-title d-block fw-bold">{% trans "Aydınlatma / Spot Sistemleri" %}</span>
+                      <span class="item-desc small text-muted">
+                        {% trans "On-board driver teknolojisi ve alev almaz ABS kasa" %}
+                      </span>
+                    </div>
+                  </a>
+                </div>
 
               </div>
             </div>
           </div>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="#">Data Merkezi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">{% trans "Data Merkezi" %}</a></li>
 
         <li class="nav-item">
-          <a class="nav-link {% if '/blogs/' in request.path %}text-orange fw-bold{% endif %}" href="/blogs/">Blog</a>
+          <a class="nav-link {% if '/blogs/' in request.path %}text-orange fw-bold{% endif %}" href="/blogs/">{% trans "Blog" %}</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link {% if '/gallery/' in request.path %}text-orange fw-bold{% endif %}"
-            href="{% url 'gallery_view' %}">Galeri</a>
+            href="{% url 'gallery_view' %}">{% trans "Galeri" %}</a>
         </li>
 
         <li class="nav-item ms-lg-3 d-none d-lg-block">

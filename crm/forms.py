@@ -859,7 +859,7 @@ from django.core.exceptions import ValidationError
 from django.core.exceptions import ValidationError
 from django_recaptcha.fields import ReCaptchaField
 from django_recaptcha.widgets import ReCaptchaV2Checkbox
-
+from django.utils.translation import gettext_lazy as _
 
 class ContactForm(forms.ModelForm):
     # HONEYPOT ALANI: Kullanıcılar görmez, botlar doldurur.
@@ -870,14 +870,14 @@ class ContactForm(forms.ModelForm):
             'autocomplete': 'off',
             'tabindex': '-1' # Klavyeyle form dolduranlar buraya takılmasın diye
         }),
-        label="Lütfen bu alanı boş bırakın"
+        label=_("Lütfen bu alanı boş bırakın")  # Çeviri eklendi
     )
 
     # RECAPTCHA ALANI (Bot kalkanı)
     captcha = ReCaptchaField(
         widget=ReCaptchaV2Checkbox(),
         label='', # Ekranda ekstra "Captcha:" yazmasına gerek yok
-        error_messages={'required': 'Lütfen robot olmadığınızı doğrulayın.'}
+        error_messages={'required': _('Lütfen robot olmadığınızı doğrulayın.')} # Çeviri eklendi
     )
 
     class Meta:
@@ -888,30 +888,30 @@ class ContactForm(forms.ModelForm):
             'name': forms.TextInput(attrs={
                 'class': 'form-control',
                 'id': 'yourName',
-                'placeholder': 'Adınızı giriniz',
+                'placeholder': _('Adınızı giriniz'),  # Çeviri eklendi
                 'required': True
             }),
             'email': forms.EmailInput(attrs={
                 'class': 'form-control',
                 'id': 'yourEmail',
-                'placeholder': 'E-posta adresinizi giriniz',
+                'placeholder': _('E-posta adresinizi giriniz'),  # Çeviri eklendi
                 'required': True
             }),
             'subject': forms.TextInput(attrs={
                 'class': 'form-control',
                 'id': 'yourSubject',
-                'placeholder': 'Konu giriniz'
+                'placeholder': _('Konu giriniz')  # Çeviri eklendi
             }),
             'phone': forms.TextInput(attrs={
                 'class': 'form-control',
                 'id': 'contactNumber',
-                'placeholder': 'Telefon numaranızı giriniz'
+                'placeholder': _('Telefon numaranızı giriniz')  # Çeviri eklendi
             }),
             'message': forms.Textarea(attrs={
                 'class': 'form-control',
                 'id': 'message',
                 'rows': 5,
-                'placeholder': 'Bize birkaç kelime yazın',
+                'placeholder': _('Bize birkaç kelime yazın'),  # Çeviri eklendi
                 'required': True
             }),
         }
@@ -923,10 +923,10 @@ class ContactForm(forms.ModelForm):
 
         # Eğer honeypot alanı doluysa, bu bir bottur!
         if honeypot:
-            raise ValidationError("Form gönderiminde şüpheli bir işlem tespit edildi.")
+            # Hata mesajına da çeviri ekledik
+            raise ValidationError(_("Form gönderiminde şüpheli bir işlem tespit edildi."))
 
         return cleaned_data
-
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from .models import CustomUser
