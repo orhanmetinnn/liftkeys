@@ -1,4 +1,4 @@
-{% extends "previewtemplates/previewbase.html" %}
+﻿{% extends "previewtemplates/previewbase.html" %}
 {% load static %}
 {% load i18n %}
 
@@ -9,7 +9,8 @@
 
 {% block meta_description %}
 {% blocktrans %}
-LiftKeys asansör dekoratif cam ve reflektif ayna (Mirror TV) sistemleri. Pendulum testli, temperli güvenli camlar ve 500'den fazla desen seçeneği ile kabinlerinizi özelleştirin.
+LiftKeys asansör dekoratif cam ve reflektif ayna (Mirror TV) sistemleri. Pendulum testli, temperli güvenli camlar ve
+500'den fazla desen seçeneği ile kabinlerinizi özelleştirin.
 {% endblocktrans %}
 {% endblock %}
 
@@ -27,7 +28,8 @@ LiftKeys asansör dekoratif cam ve reflektif ayna (Mirror TV) sistemleri. Pendul
 
 {% block og_description %}
 {% blocktrans %}
-Asansörünüzde sanatı ve teknolojiyi buluşturun. 500'den fazla desen seçeneğine sahip güvenli dekoratif camlar ve çift yönlü Mirror TV ekranları.
+Asansörünüzde sanatı ve teknolojiyi buluşturun. 500'den fazla desen seçeneğine sahip güvenli dekoratif camlar ve çift
+yönlü Mirror TV ekranları.
 {% endblocktrans %}
 {% endblock %}
 
@@ -39,7 +41,8 @@ Asansörünüzde sanatı ve teknolojiyi buluşturun. 500'den fazla desen seçene
 
 {% block tw_description %}
 {% blocktrans %}
-Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece bir ayna değil, projenizin dijital imzası olan Mirror TV'yi keşfedin.
+Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece bir ayna değil, projenizin dijital imzası
+olan Mirror TV'yi keşfedin.
 {% endblocktrans %}
 {% endblock %}
 
@@ -57,8 +60,7 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
 {% block content %}
 
 <script type="application/ld+json">
-    [
-        {
+    [{
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Liftkeys",
@@ -88,35 +90,37 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
                 "@type": "Offer",
                 "url": "https://www.liftkeys.com{{ request.path }}",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@type": "Organization", "name": "LiftKeys" }
+                "seller": {
+                    "@type": "Organization",
+                    "name": "LiftKeys"
+                }
             }
         },
         {
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-                {
+            "mainEntity": [{
                     "@type": "Question",
                     "name": "Asansör dekoratif camlarında kaç farklı desen seçeneği var?",
-                    "acceptedAnswer": { 
-                        "@type": "Answer", 
-                        "text": "Standartların ötesinde 500'den fazla desen seçeneğimiz mevcuttur. Deniz, doğa, şehir, soyut, illüstrasyon gibi çeşitli kategorilerimizden seçim yapabilir veya hayalinizdeki tasarımı bize ürettirebilirsiniz." 
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Standartların ötesinde 500'den fazla desen seçeneğimiz mevcuttur. Deniz, doğa, şehir, soyut, illüstrasyon gibi çeşitli kategorilerimizden seçim yapabilir veya hayalinizdeki tasarımı bize ürettirebilirsiniz."
                     }
                 },
                 {
                     "@type": "Question",
                     "name": "LiftKeys asansör camları güvenli midir?",
-                    "acceptedAnswer": { 
-                        "@type": "Answer", 
-                        "text": "Evet, kesinlikle. Camlarımız temperli özelliktedir, özel koruyucu film içerir ve darbelere karşı uluslararası bir norm olan Pendulum (Sarkaç) Testi'nden tam not alarak güvenliğini tescillemiştir." 
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Evet, kesinlikle. Camlarımız temperli özelliktedir, özel koruyucu film içerir ve darbelere karşı uluslararası bir norm olan Pendulum (Sarkaç) Testi'nden tam not alarak güvenliğini tescillemiştir."
                     }
                 },
                 {
                     "@type": "Question",
                     "name": "Mirror TV (Reflektif Ayna) asansörde ne işe yarar?",
-                    "acceptedAnswer": { 
-                        "@type": "Answer", 
-                        "text": "Mirror TV çift yönlü bir fonksiyona sahiptir. Ekran kapalıyken derinlik katan kusursuz bir ayna olarak görünür; açıkken ise duyurular, reklamlar veya bilgilendirmeler yayınlayabileceğiniz yüksek çözünürlüklü dijital bir ekrana dönüşür." 
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Mirror TV çift yönlü bir fonksiyona sahiptir. Ekran kapalıyken derinlik katan kusursuz bir ayna olarak görünür; açıkken ise duyurular, reklamlar veya bilgilendirmeler yayınlayabileceğiniz yüksek çözünürlüklü dijital bir ekrana dönüşür."
                     }
                 }
             ]
@@ -125,11 +129,20 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-                "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://www.liftkeys.com/"
-            },{
-                "@type": "ListItem", "position": 2, "name": "Asansör Çözümleri", "item": "https://liftkeys.com/kategori/"
-            },{
-                "@type": "ListItem", "position": 3, "name": "Dekoratif Cam ve Aynalar", "item": "https://www.liftkeys.com{{ request.path }}"
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Anasayfa",
+                "item": "https://www.liftkeys.com/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Asansör Çözümleri",
+                "item": "https://liftkeys.com/kategori/"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Dekoratif Cam ve Aynalar",
+                "item": "https://www.liftkeys.com{{ request.path }}"
             }]
         }
     ]
@@ -139,10 +152,11 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
 
 <section class="liftkeys-glass-section py-5 overflow-hidden">
     <div class="container">
-        
+
         <div class="row mb-4">
             <div class="col-12">
-                <div class="liftkeys-header d-flex align-items-center p-3 shadow-sm rounded-3" data-aos="fade-down" data-aos-duration="1000">
+                <div class="liftkeys-header d-flex align-items-center p-3 shadow-sm rounded-3" data-aos="fade-down"
+                    data-aos-duration="1000">
                     <div class="icon-wrapper me-3 d-flex align-items-center justify-content-center">
                         <i class="bi bi-stars text-white fs-4"></i>
                     </div>
@@ -152,38 +166,43 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
         </div>
 
         <div class="row align-items-center mb-5">
-            
+
             <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
-                <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg" style="cursor: pointer;">
-                    
-                    <img src="{% static 'image/pageproduct/kabincam/liftkeys-dekoratif-cam-kabin.webp' %}" 
-                         alt="{% trans 'LIFTKEYS Dekoratif Cam - 500 farklı desen seçeneği ile güvenli asansör kabin tasarımları' %}" 
-                         class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" loading="lazy">
-                    
+                <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg"
+                    onclick="loadYoutubeVideo(this)"
+                    data-video-id="BURAYA_VIDEO_ID_GELECEK"
+                    style="cursor: pointer;">
+
+                    <img src="{% static 'image/pageproduct/kabincam/liftkeys-dekoratif-cam-kabin.webp' %}"
+                        alt="{% trans 'LIFTKEYS Dekoratif Cam - 500 farklı desen seçeneği ile güvenli asansör kabin tasarımları' %}"
+                        class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" loading="lazy">
+
                     <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;">
-                        <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange shadow" 
-                             style="width: 80px; height: 80px;">
-                            <i class="bi bi-play-fill display-4 ps-2" style="color: var(--liftkeys-orange, #F38002);"></i>
+                        <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange shadow"
+                            style="width: 80px; height: 80px;">
+                            <i class="bi bi-play-fill display-4 ps-2"
+                                style="color: var(--liftkeys-orange, #F38002);"></i>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
             <div class="col-lg-5 ps-lg-5" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
                 <div class="content-wrapper">
                     <p class="display-6 fw-light text-secondary mb-0" style="line-height: 1.4;">
-                        {% trans "“Standartların ötesinde" %} <strong class="text-dark fw-bold">500</strong> {% trans "desen:" %}<br>
+                        {% trans "“Standartların ötesinde" %} <strong class="text-dark fw-bold">500</strong>
+                        {% trans "desen:" %}<br>
                         {% trans "İster hazır koleksiyonumuzdan seçin," %}<br>
                         {% trans "ister hayalinizdekini birlikte tasarlayalım.”" %}
                     </p>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="row align-items-end mt-2" data-aos="fade-up" data-aos-duration="1000">
-            
+
             <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
                 <p class="text-secondary mb-3" style="line-height: 1.6; font-size: 1.05rem;">
                     {% trans "Asansör güvenliği ve estetiği söz konusu olduğunda, bu detaylar Liftkeys'in kalite standartlarını bir üst seviyeye taşıyor. Özellikle Pendulum (Sarkaç) Testi'nden tam not alması, ürünün darbelere karşı dayanıklılığını ve uluslararası güvenlik normlarına uygunluğunu tescillemiş oluyor." %}
@@ -192,14 +211,16 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
                     {% trans "Bu teknik üstünlükleri (temperli cam, özel beyaz boya, koruyucu film ve test başarısı) müşteriye güven veren profesyonel bir dille şu şekilde özetleyebiliriz:" %}
                 </p>
             </div>
-            
+
             <div class="col-lg-4 col-md-5 text-md-end">
-                <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm px-4 py-3 w-100 w-md-auto" download>
+                <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}"
+                    class="btn btn-catalog d-inline-flex align-items-center justify-content-center shadow-sm px-4 py-3 w-100 w-md-auto"
+                    download>
                     <i class="bi bi-book me-2 fs-5"></i>
                     {% trans "Ürün Kataloğu İndir" %}
                 </a>
             </div>
-            
+
         </div>
 
     </div>
@@ -210,68 +231,95 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
         <div class="row mb-5">
             <div class="col-lg-12 text-center" data-aos="fade-up">
                 <h2 class="h3 fw-bold text-secondary mb-4">{% trans "Kategori Seç" %}</h2>
-                
+
                 <div class="custom-category-grid">
-                    
-                    <button class="cat-btn" onclick="openCategoryModal('deniz', '{% trans 'Deniz' %}')" data-aos="zoom-in" data-aos-delay="100">
+
+                    <button class="cat-btn" onclick="openCategoryModal('deniz', '{% trans 'Deniz' %}')"
+                        data-aos="zoom-in" data-aos-delay="100">
                         <div class="cat-img-box border-blue">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-deniz-serisi.webp' %}" alt="{% trans 'LIFTKEYS Asansör Kabin Camı - Deniz ve Okyanus Temalı Desenler' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-deniz-serisi.webp' %}"
+                                alt="{% trans 'LIFTKEYS Asansör Kabin Camı - Deniz ve Okyanus Temalı Desenler' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Deniz" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('doga', '{% trans 'Doğa' %}')" data-aos="zoom-in" data-aos-delay="150">
+                    <button class="cat-btn" onclick="openCategoryModal('doga', '{% trans 'Doğa' %}')" data-aos="zoom-in"
+                        data-aos-delay="150">
                         <div class="cat-img-box border-green">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-doga-serisi.webp' %}" alt="{% trans 'LIFTKEYS Dekoratif Cam - Doğa, Yaprak ve Orman Desenli Kabinler' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-doga-serisi.webp' %}"
+                                alt="{% trans 'LIFTKEYS Dekoratif Cam - Doğa, Yaprak ve Orman Desenli Kabinler' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Doğa" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('pattren', '{% trans 'Pattren' %}')" data-aos="zoom-in" data-aos-delay="200">
+                    <button class="cat-btn" onclick="openCategoryModal('pattren', '{% trans 'Pattren' %}')"
+                        data-aos="zoom-in" data-aos-delay="200">
                         <div class="cat-img-box border-purple">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-pattren-serisi.webp' %}" alt="{% trans 'LIFTKEYS Geometrik Desenli Asansör Camları - Modern Pattern Tasarımlar' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-pattren-serisi.webp' %}"
+                                alt="{% trans 'LIFTKEYS Geometrik Desenli Asansör Camları - Modern Pattern Tasarımlar' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Pattren" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('illustrasyon', '{% trans 'Illustrasyon' %}')" data-aos="zoom-in" data-aos-delay="250">
+                    <button class="cat-btn" onclick="openCategoryModal('illustrasyon', '{% trans 'Illustrasyon' %}')"
+                        data-aos="zoom-in" data-aos-delay="250">
                         <div class="cat-img-box border-teal">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-illustrasyon-serisi.webp' %}" alt="{% trans 'LIFTKEYS İllüstrasyon Tasarımlı Dekoratif Cam Kabin Kaplamaları' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-illustrasyon-serisi.webp' %}"
+                                alt="{% trans 'LIFTKEYS İllüstrasyon Tasarımlı Dekoratif Cam Kabin Kaplamaları' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Illustrasyon" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('tarihiyerler', '{% trans 'Tarihi Yerler' %}')" data-aos="zoom-in" data-aos-delay="300">
+                    <button class="cat-btn" onclick="openCategoryModal('tarihiyerler', '{% trans 'Tarihi Yerler' %}')"
+                        data-aos="zoom-in" data-aos-delay="300">
                         <div class="cat-img-box border-brown">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-tarihi-yerler-serisi.webp' %}" alt="{% trans 'LIFTKEYS Şehir Simgeleri ve Tarihi Mekan Temalı Kabin Camları' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-tarihi-yerler-serisi.webp' %}"
+                                alt="{% trans 'LIFTKEYS Şehir Simgeleri ve Tarihi Mekan Temalı Kabin Camları' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Tarihi Yerler" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('soyut', '{% trans 'Soyut' %}')" data-aos="zoom-in" data-aos-delay="350">
+                    <button class="cat-btn" onclick="openCategoryModal('soyut', '{% trans 'Soyut' %}')"
+                        data-aos="zoom-in" data-aos-delay="350">
                         <div class="cat-img-box border-pink">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-soyut-serisi.webp' %}" alt="{% trans 'LIFTKEYS Soyut Sanat ve Modern Çizgili Asansör Camı Tasarımları' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-soyut-serisi.webp' %}"
+                                alt="{% trans 'LIFTKEYS Soyut Sanat ve Modern Çizgili Asansör Camı Tasarımları' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Soyut" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('sehir', '{% trans 'Şehir' %}')" data-aos="zoom-in" data-aos-delay="400">
+                    <button class="cat-btn" onclick="openCategoryModal('sehir', '{% trans 'Şehir' %}')"
+                        data-aos="zoom-in" data-aos-delay="400">
                         <div class="cat-img-box border-blue-dark">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-sehir-serisi.webp' %}" alt="{% trans 'LIFTKEYS Panoramik Şehir Manzaralı Dekoratif Asansör Camları' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-sehir-serisi.webp' %}"
+                                alt="{% trans 'LIFTKEYS Panoramik Şehir Manzaralı Dekoratif Asansör Camları' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Şehir" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('karisik', '{% trans 'Karışık' %}')" data-aos="zoom-in" data-aos-delay="450">
+                    <button class="cat-btn" onclick="openCategoryModal('karisik', '{% trans 'Karışık' %}')"
+                        data-aos="zoom-in" data-aos-delay="450">
                         <div class="cat-img-box border-orange">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-karisik-seri.webp' %}" alt="{% trans 'LIFTKEYS Karışık Koleksiyon - Özel Tasarım Dekoratif Cam Seçenekleri' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-karisik-seri.webp' %}"
+                                alt="{% trans 'LIFTKEYS Karışık Koleksiyon - Özel Tasarım Dekoratif Cam Seçenekleri' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Karışık" %}</span>
                     </button>
 
-                    <button class="cat-btn" onclick="openCategoryModal('ralrenkler', '{% trans 'Ral Renkler' %}')" data-aos="zoom-in" data-aos-delay="500">
+                    <button class="cat-btn" onclick="openCategoryModal('ralrenkler', '{% trans 'Ral Renkler' %}')"
+                        data-aos="zoom-in" data-aos-delay="500">
                         <div class="cat-img-box border-dark">
-                            <img src="{% static 'image/pageproduct/kabincam/kategori-ral-renkler.webp' %}" alt="{% trans 'LIFTKEYS Tek Renk RAL Kodlu Temperli ve Lamine Asansör Camları' %}" loading="lazy">
+                            <img src="{% static 'image/pageproduct/kabincam/kategori-ral-renkler.webp' %}"
+                                alt="{% trans 'LIFTKEYS Tek Renk RAL Kodlu Temperli ve Lamine Asansör Camları' %}"
+                                loading="lazy">
                         </div>
                         <span class="cat-name">{% trans "Ral Renkler" %}</span>
                     </button>
@@ -283,16 +331,22 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
 </section>
 
 <div id="hidden-category-data" class="d-none">
-    
+
     <div id="data-deniz">
         <div class="row g-3">
             {% for urun in deniz_urunleri %}
             <div class="col-6 col-md-4 col-lg-3">
-                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('deniz', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Deniz' %}')"> 
-                    <img src="{% static 'image/pageproduct/kabincam/deniz/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('deniz', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Deniz' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/deniz/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100"
+                        style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px;"
+                        loading="lazy">
                     <div class="product-overlay d-flex flex-column justify-content-end p-3">
-                        <span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
-                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div>
+                        <span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
                     </div>
                 </div>
             </div>
@@ -304,11 +358,17 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
         <div class="row g-3">
             {% for urun in doga_urunleri %}
             <div class="col-6 col-md-4 col-lg-3">
-                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('doga', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Doğa' %}')"> 
-                    <img src="{% static 'image/pageproduct/kabincam/doga/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('doga', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Doğa' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/doga/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100"
+                        style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px;"
+                        loading="lazy">
                     <div class="product-overlay d-flex flex-column justify-content-end p-3">
-                        <span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
-                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div>
+                        <span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
                     </div>
                 </div>
             </div>
@@ -319,7 +379,17 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     <div id="data-pattren">
         <div class="row g-3">
             {% for urun in pattren_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('pattren', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Pattren' %}')"><img src="{% static 'image/pageproduct/kabincam/pattren/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('pattren', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Pattren' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/pattren/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3"><span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -327,7 +397,18 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     <div id="data-illustrasyon">
         <div class="row g-3">
             {% for urun in illustrasyon_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('Illustrasyon', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Illustrasyon' %}')"><img src="{% static 'image/pageproduct/kabincam/Illustrasyon/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('Illustrasyon', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Illustrasyon' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/Illustrasyon/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3"><span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -335,7 +416,18 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     <div id="data-tarihiyerler">
         <div class="row g-3">
             {% for urun in tarihiyerler_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('tarihiyerler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Tarihi Yerler' %}')"><img src="{% static 'image/pageproduct/kabincam/tarihiyerler/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('tarihiyerler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Tarihi Yerler' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/tarihiyerler/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px      ;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3"><span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -343,7 +435,18 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     <div id="data-soyut">
         <div class="row g-3">
             {% for urun in soyut_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('soyut', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Soyut' %}')"><img src="{% static 'image/pageproduct/kabincam/soyut/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('soyut', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Soyut' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/soyut/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px      ;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3"><span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -351,7 +454,18 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     <div id="data-sehir">
         <div class="row g-3">
             {% for urun in sehir_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('sehir', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Şehir' %}')"><img src="{% static 'image/pageproduct/kabincam/sehir/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('sehir', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Şehir' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/sehir/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px      ;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3"><span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -359,7 +473,18 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     <div id="data-karisik">
         <div class="row g-3">
             {% for urun in karisik_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('karisik', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Karışık' %}')"><img src="{% static 'image/pageproduct/kabincam/karisik/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('karisik', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Karışık' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/karisik/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px      ;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3"><span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -367,7 +492,18 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     <div id="data-ralrenkler">
         <div class="row g-3">
             {% for urun in ralrenkler_urunleri %}
-            <div class="col-6 col-md-4 col-lg-3"><div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative" onclick="openGalleryModal('ralrenkler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Ral Renkler' %}')"><img src="{% static 'image/pageproduct/kabincam/ralrenkler/' %}{{ urun.kodu }}/sayfa_1.webp" class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy"><div class="product-overlay d-flex flex-column justify-content-end p-3"><span class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span><div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span class="small">{% trans "İncele" %}</span></div></div></div></div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="glass-product-card shadow-sm rounded-4 overflow-hidden position-relative"
+                    onclick="openGalleryModal('ralrenkler', '{{ urun.kodu }}', {{ urun.resim_sayisi|default:6 }}, '{% trans 'Ral Renkler' %}')">
+                    <img src="{% static 'image/pageproduct/kabincam/ralrenkler/' %}{{ urun.kodu }}/sayfa_1.webp"
+                        class="img-fluid w-100" style="aspect-ratio: 3/4; object-fit: contain; background-color: #ffffff; padding: 5px      ;" loading="lazy">
+                    <div class="product-overlay d-flex flex-column justify-content-end p-3"><span
+                            class="badge bg-white text-dark mb-2 align-self-start shadow-sm fs-6">{{ urun.kodu }}</span>
+                        <div class="d-flex align-items-center text-white"><i class="bi bi-search me-2"></i> <span
+                                class="small">{% trans "İncele" %}</span></div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -381,29 +517,39 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-light" id="categoryModalBody">
-                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="modal fade" id="previewGalleryModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content bg-transparent border-0">
-            <div class="modal-header border-0 pb-0 justify-content-between z-3 position-absolute top-0 w-100 p-3">
-                <button type="button" class="btn btn-sm btn-light rounded-pill shadow-sm px-3 fw-bold" onclick="backToCategoryModal()">
+        <!-- Burada style eklendi -->
+        <div class="modal-content bg-transparent border-0" style="max-height: 100vh; overflow: hidden;">
+            <div class="modal-header border-0 pb-0 justify-content-between z-3 position-absolute top-0 w-100 p-3">  
+                <button type="button" class="btn btn-sm btn-light rounded-pill shadow-sm px-3 fw-bold"
+                    onclick="backToCategoryModal()">
                     <i class="bi bi-arrow-left me-1"></i> {% trans "Geri" %}
                 </button>
-                <button type="button" class="btn-close btn-close-white fs-4 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 15px;"></button>
+                <button type="button" class="btn-close btn-close-white fs-4 shadow-sm" data-bs-dismiss="modal"
+                    aria-label="Close"
+                    style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 15px;"></button>
             </div>
             <div class="modal-body p-0 position-relative">
-                <div id="productGalleryCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="false">
+                <div id="productGalleryCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden"
+                    data-bs-ride="false">
                     <div class="carousel-inner" id="dynamicCarouselInnerContent">
-                        </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#productGalleryCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+                        <!-- İçerik JS ile buraya gelecek -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productGalleryCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 shadow"
+                            aria-hidden="true"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#productGalleryCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productGalleryCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3 shadow"
+                            aria-hidden="true"></span>
                     </button>
                 </div>
             </div>
@@ -413,7 +559,7 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
 
 <section class="mirror-technology-section py-5  overflow-hidden">
     <div class="container">
-        
+
         <div class="row align-items-center mb-5 pb-lg-5">
             <div class="col-lg-7 col-md-12 pe-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
                 <h2 class="display-6 fw-bold text-dark h3 mb-4">{% trans "Ayna" %}</h2>
@@ -431,27 +577,31 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
             </div>
             <div class="col-lg-5 col-md-12 text-center" data-aos="fade-left" data-aos-duration="1200">
                 <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-lg">
-                    <img src="{% static 'image/pageproduct/kabincam/asansor-ayna-tasarimi.webp' %}" 
-                         alt="{% trans 'Asansör Kabininde Ayna Kullanımı - Derinlik ve Güven Algısı' %}" 
-                         class="img-fluid w-100 hover-zoom">
+                    <img src="{% static 'image/pageproduct/kabincam/asansor-ayna-tasarimi.webp' %}"
+                        alt="{% trans 'Asansör Kabininde Ayna Kullanımı - Derinlik ve Güven Algısı' %}"
+                        class="img-fluid w-100 hover-zoom">
                 </div>
             </div>
         </div>
 
         <div class="row align-items-center pt-lg-5">
-            <div class="col-lg-5 col-md-12 text-center order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1200">
+            <div class="col-lg-5 col-md-12 text-center order-2 order-lg-1" data-aos="fade-right"
+                data-aos-duration="1200">
                 <div class="image-wrapper position-relative rounded-4 overflow-hidden shadow-lg">
-                    <img src="{% static 'image/pageproduct/kabincam/asansor-mirror-tv-reflektif-ayna.webp' %}" 
-                         alt="{% trans 'Liftkeys Reflektif Ayna ve Mirror TV Teknolojisi' %}" 
-                         class="img-fluid w-100 hover-zoom">
+                    <img src="{% static 'image/pageproduct/kabincam/asansor-mirror-tv-reflektif-ayna.webp' %}"
+                        alt="{% trans 'Liftkeys Reflektif Ayna ve Mirror TV Teknolojisi' %}"
+                        class="img-fluid w-100 hover-zoom">
                 </div>
             </div>
-            <div class="col-lg-7 col-md-12 ps-lg-5 order-1 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left" data-aos-duration="1000">
+            <div class="col-lg-7 col-md-12 ps-lg-5 order-1 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left"
+                data-aos-duration="1000">
                 <h2 class="display-6 fw-bold text-dark h3 mb-2">{% trans "Reflektif Ayna" %}</h2>
-                <p class="text-orange fw-bold mb-4 small text-uppercase ls-1">{% trans "Reflektif Ayna (Mirror TV) Tanıtım Metni" %}</p>
-                
-                <h3 class="h5 fw-bold text-dark mb-3">{% trans '"Sadece Bir Ayna Değil, Projenizin Dijital İmzası"' %}</h3>
-                
+                <p class="text-orange fw-bold mb-4 small text-uppercase ls-1">
+                    {% trans "Reflektif Ayna (Mirror TV) Tanıtım Metni" %}</p>
+
+                <h3 class="h5 fw-bold text-dark mb-3">{% trans '"Sadece Bir Ayna Değil, Projenizin Dijital İmzası"' %}
+                </h3>
+
                 <p class="text-secondary mb-4" style="line-height: 1.7;">
                     {% trans "İş merkezlerinden lüks konutlara, hastanelerden prestijli plazalara kadar; Liftkeys Reflektif Aynalar ile teknolojiyi estetikle buluşturuyoruz." %}
                 </p>
@@ -459,19 +609,23 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
                 <ul class="list-unstyled">
                     <li class="mb-3 d-flex align-items-start">
                         <i class="bi bi-display text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">{% trans "Çift Yönlü Fonksiyon:" %}</strong> {% trans "Kapalıyken derinlik katan kusursuz bir ayna, açıkken kristal netliğinde bir bilgi ekranı." %}</span>
+                        <span><strong class="text-dark">{% trans "Çift Yönlü Fonksiyon:" %}</strong>
+                            {% trans "Kapalıyken derinlik katan kusursuz bir ayna, açıkken kristal netliğinde bir bilgi ekranı." %}</span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
                         <i class="bi bi-palette text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">{% trans "Renk Seçenekleri:" %}</strong> {% trans "Mimari dokuya uyum sağlayan Füme ve Bronz yansıma alternatifleri." %}</span>
+                        <span><strong class="text-dark">{% trans "Renk Seçenekleri:" %}</strong>
+                            {% trans "Mimari dokuya uyum sağlayan Füme ve Bronz yansıma alternatifleri." %}</span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
                         <i class="bi bi-broadcast-pin text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">{% trans "İletişim Gücü:" %}</strong> {% trans "Duyurular, reklamlar, hastane bilgilendirmeleri veya anlık haberler; yolculuk süresini verimli bir iletişim kanalına dönüştürün." %}</span>
+                        <span><strong class="text-dark">{% trans "İletişim Gücü:" %}</strong>
+                            {% trans "Duyurular, reklamlar, hastane bilgilendirmeleri veya anlık haberler; yolculuk süresini verimli bir iletişim kanalına dönüştürün." %}</span>
                     </li>
                     <li class="mb-0 d-flex align-items-start">
                         <i class="bi bi-gem text-orange me-3 mt-1"></i>
-                        <span><strong class="text-dark">{% trans "Lüksün Göstergesi:" %}</strong> {% trans "Modern mimarinin vazgeçilmezi olan Mirror TV teknolojisiyle asansörünüzde premium bir atmosfer yaratın." %}</span>
+                        <span><strong class="text-dark">{% trans "Lüksün Göstergesi:" %}</strong>
+                            {% trans "Modern mimarinin vazgeçilmezi olan Mirror TV teknolojisiyle asansörünüzde premium bir atmosfer yaratın." %}</span>
                     </li>
                 </ul>
             </div>
@@ -487,14 +641,13 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     function loadYoutubeVideo(element) {
         // 1. Tıklanan div'in içindeki video kimliğini (data-video-id) alıyoruz
         var videoId = element.getAttribute("data-video-id");
-        
+
         // 2. YouTube iframe (video oynatıcı) kodumuzu oluşturuyoruz
         // Tasarımınla tam uyumlu olması için style kısmına min-height: 350px; ekledik
         // autoplay=1 parametresi sayesinde video tıklandığı an otomatik oynamaya başlar
         var iframeHTML = `
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/7Nq1wRK1x4Y?si=20haE0WCpKHEMZCG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        `;
-        
+<iframe width="100%"  height="315" src="https://www.youtube.com/embed/-klTbM04INk?si=UpSEB2QHJDBzFH23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        `;
+
         // 3. Tıklanan alanın içindeki resmi ve Play butonunu tamamen temizleyip, 
         // yerine hazırladığımız bu video oynatıcıyı yerleştiriyoruz
         element.innerHTML = iframeHTML;
@@ -517,38 +670,41 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     function openCategoryModal(categoryId, categoryName) {
         currentCategoryId = categoryId;
         currentCategoryName = categoryName;
-        
+
         // Başlığı güncelle
         document.getElementById('categoryModalTitle').innerText = categoryName + " Modelleri";
-        
+
         // İlgili div'in içindeki ürün HTML'ini alıp modalın içine bas
         var hiddenData = document.getElementById('data-' + categoryId);
         if (hiddenData) {
             document.getElementById('categoryModalBody').innerHTML = hiddenData.innerHTML;
         } else {
-            document.getElementById('categoryModalBody').innerHTML = "<p class='text-center text-muted py-5'>Bu kategoride henüz ürün bulunmuyor.</p>";
+            document.getElementById('categoryModalBody').innerHTML =
+                "<p class='text-center text-muted py-5'>Bu kategoride henüz ürün bulunmuyor.</p>";
         }
-        
+
         // Modalı göster
         categoryModalObj.show();
     }
 
     // 2. Ürün Galerisi Modalı Açma Fonksiyonu
+    // 2. Ürün Galerisi Modalı Açma Fonksiyonu
     function openGalleryModal(categoryFolderName, productCode, imageCount, categoryName) {
         // Önceki modalı kapat ki üst üste binmesinler
         categoryModalObj.hide();
-        
+
         var carouselInner = document.getElementById('dynamicCarouselInnerContent');
-        carouselInner.innerHTML = ''; 
-        
+        carouselInner.innerHTML = '';
+
         var basePath = "{% static 'image/pageproduct/kabincam/' %}" + categoryFolderName + "/" + productCode + "/";
         var carouselHTML = '';
 
         for (var i = 1; i <= imageCount; i++) {
-            var activeClass = (i === 1) ? 'active' : ''; 
+            var activeClass = (i === 1) ? 'active' : '';
             carouselHTML += `
                 <div class="carousel-item ${activeClass}">
-                    <img src="${basePath}sayfa_${i}.webp" class="d-block w-100" alt="${productCode} - Tasarım ${i}" style="object-fit: contain; max-height: 85vh; background-color: #f8f9fa;">
+                    <!-- Yükseklik 70vh'ye düşürüldü ve margin eklendi -->
+                    <img src="${basePath}sayfa_${i}.webp" class="d-block w-100" alt="${productCode} - Tasarım ${i}" style="object-fit: contain; max-height: 70vh; margin: 0 auto; background-color: #f8f9fa;">
                     <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
                         <h4 class="text-white mb-0 ms-2">${productCode} <span class="fs-6 fw-light text-white-50 ms-2">| ${categoryName} Serisi - Görsel ${i}/${imageCount}</span></h4>
                     </div>
@@ -556,7 +712,7 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
             `;
         }
         carouselInner.innerHTML = carouselHTML;
-        
+
         // Galeriyi aç
         galleryModalObj.show();
     }
@@ -565,7 +721,7 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
     function backToCategoryModal() {
         galleryModalObj.hide(); // Galeriyi kapat
         // Hafızada tuttuğumuz son kategoriyi tekrar aç
-        setTimeout(function() {
+        setTimeout(function () {
             openCategoryModal(currentCategoryId, currentCategoryName);
         }, 400); // Kapanma animasyonu bitene kadar bekle
     }
@@ -573,9 +729,6 @@ Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece
 
 
 {% include "preview/iletisimformpreview.html" %}
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({
         duration: 1000,

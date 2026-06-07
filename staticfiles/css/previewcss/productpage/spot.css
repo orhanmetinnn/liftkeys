@@ -1,0 +1,276 @@
+/* --- Aydınlatma / Spot Sistemleri Bölümü CSS --- */
+
+/* Video/Resim Hover Efekti */
+.lighting-spot-section .image-container {
+    transition: transform 0.4s ease;
+}
+
+.lighting-spot-section .image-container:hover {
+    transform: translateY(-5px);
+}
+
+.lighting-spot-section .play-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lighting-spot-section .image-container:hover .play-button {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(243, 128, 2, 0.5) !important;
+}
+.liftkeys-header {
+    background-color: #F38002!important;
+    /* Eğer arkadaki içeriğin hafif bulanık görünmesini (cam efekti) istersen şunu da ekleyebilirsin: */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Çok hafif bir kenarlık derinliği artırır */
+}
+/* Mobilde büyük metin (Alıntı) boyutu ayarı */
+@media (max-width: 992px) {
+    .lighting-spot-section .display-6 {
+        font-size: 2rem; 
+        margin-top: 25px;
+        text-align: center;
+    }
+}
+
+/* 2. Video/Görsel Alanı Tasarımı */
+.video-thumbnail-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Görselin öne çıkması için gölge */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail-wrapper:hover {
+    transform: scale(1.01);
+    /* Üzerine gelince çok hafif büyür */
+}
+.video-thumbnail-wrapper:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Hover efektinde buton büyür */
+    background-color: #fff;
+}
+
+/* Play Butonu (CSS ile Çizim) */
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.play-button-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #333;
+    /* Ok rengi */
+    margin-left: 4px;
+    /* Oku görsel olarak ortalamak için */
+}
+
+/* --- Spot Modelleri Bölümü CSS --- */
+
+.spot-zoom-img {
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s ease;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.05)); /* Şeffaf görsele organik gölge */
+}
+
+.spot-features-section .image-wrapper:hover .spot-zoom-img {
+    transform: scale(1.05) translateY(-5px); /* Hafifçe büyür ve havaya kalkar */
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+/* Mobilde yazıyı ortalamak için ince ayar */
+@media (max-width: 991px) {
+    .spot-features-section .display-6 {
+        text-align: center;
+        font-size: 1.75rem !important;
+    }
+    .spot-features-section .text-md-end {
+        text-align: center !important;
+    }
+}
+
+/* --- Garantili Turuncu Katalog Butonu --- */
+.btn-catalog {
+    background-color: #F38002 !important; /* Arka planı kesin turuncu yapar */
+    color: #ffffff !important; /* Yazıyı kesin beyaz yapar */
+    font-weight: 600 !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid #F38002 !important; /* Kenarlığı turuncu yapar */
+}
+
+/* Üzerine gelince tersine dönsün (İçi beyaz, yazısı turuncu) */
+.btn-catalog:hover {
+    background-color: #ffffff !important;
+    color: #F38002 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(243, 128, 2, 0.2) !important; /* Turuncu parlama */
+}
+
+
+/* --- Detayları Gör Linki CSS --- */
+
+.details-link {
+    color: var(--liftkeys-orange, #F38002);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.details-link:hover {
+    color: #d66b00; /* Üzerine gelince biraz daha koyu turuncu olur */
+    transform: translateX(5px); /* Üzerine gelince ok yönünde (sağa doğru) hafifçe kayar */
+}
+
+
+
+
+/* --- Driver Seçenekleri Bölümü CSS --- */
+
+/* Turuncu Vurgular */
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+.border-start-orange {
+    border-left: 5px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Sürücü Kartları */
+.driver-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+/* Hover Animasyonları (Üzerine gelince kartlar hafifçe havaya kalkar) */
+.driver-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    background-color: #ffffff !important; /* Üzerine gelince içi beyaza döner (Gri zeminde fark edilmesi için) */
+}
+
+/* İkonlar */
+.driver-card .icon-box i {
+    opacity: 0.9;
+}
+
+/* Mobilde başlık ve resim sıralaması için düzeltme */
+@media (max-width: 991px) {
+    .driver-options-section .h2.h3 {
+        font-size: 2rem !important;
+    }
+}
+
+
+/* --- Aydınlatma ve Renk Seçenekleri Bölümü CSS --- */
+
+/* Turuncu Vurgular */
+.text-orange {
+    color: var(--liftkeys-orange, #F38002) !important;
+}
+
+.border-start-orange {
+    border-left: 5px solid var(--liftkeys-orange, #F38002) !important;
+}
+
+/* Renk Noktaları (Görseldeki gibi dairesel renkler) */
+.bg-blue { background-color: #3399FF !important; } /* Geliştirilmiş premium mavi */
+.bg-red { background-color: #FF4D4D !important; }  /* Geliştirilmiş premium kırmızı */
+
+.color-dot {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+/* Fare üzerine gelince noktaların parlaması efekti */
+.specific-colors .color-item:hover .color-dot {
+    transform: scale(1.25);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2) !important;
+}
+
+.color-dots-row .color-dot:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3) !important;
+}
+
+/* Mobilde başlık ve resim sıralaması için düzeltme */
+@media (max-width: 991px) {
+    .lighting-features-colors .col-lg-6.pe-lg-5 {
+        margin-top: 30px;
+    }
+}
+
+.guvenlik-alani {
+        color: #7a7d81; /* Görseldeki gri tonuna yakın bir renk */
+        font-family: Arial, sans-serif;
+    }
+    
+    .guvenlik-alani h2 {
+        color: #8c8f94;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    
+    .guvenlik-alani p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+    
+    .guvenlik-alani ul {
+        list-style-type: none; /* Varsayılan noktaları kaldırıyoruz */
+        padding-left: 0;
+        margin-bottom: 1.2rem;
+    }
+
+    .guvenlik-alani ul li {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 0.3rem;
+    }
+
+    /* Listeler için görseldeki gibi küçük gri noktalar ekliyoruz */
+    .guvenlik-alani ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #7a7d81;
+    }
+
+    /* Resmin altındaki renkli noktaların stili */
+    .lejant-oge {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        color: #7a7d81;
+    }
+    
+    .renk-noktasi {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    
+    .nokta-kirmizi { background-color: #e6192b; }
+    .nokta-sari { background-color: #ffe600; }
+    .nokta-lacivert { background-color: #2b3a7a; }

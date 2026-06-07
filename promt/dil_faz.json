@@ -1,0 +1,35 @@
+{
+  "role": "Senior Django & Wagtail Developer",
+  "task": "Fix the infinite redirect loop in i18n language switching for the default language.",
+  "project_context": {
+    "frameworks": "Django 5.x, Wagtail",
+    "i18n_settings": {
+      "default_language": "tr",
+      "prefix_default_language": false,
+      "middleware": "LocaleMiddleware is active",
+      "cookie_setting": "LANGUAGE_COOKIE_NAME is configured"
+    },
+    "custom_routing": "urls.py has a 'root_language_handler' function for the root ('/') path. It checks 'translation.get_language_from_request(request)' and redirects foreign browsers (e.g., 'en') to '/en/'.",
+    "template_tags": "A custom tag 'change_lang' in 'lang_helper.py' calculates the translated Wagtail page URL."
+  },
+  "the_bug": {
+    "description": "Users with an English browser visit the site and are successfully redirected to '/en/'. However, when they click the 'TR' language switcher link to return to Turkish, they are trapped in a loop.",
+    "root_cause": "The 'TR' link simply points to the root URL ('/'). Since 'prefix_default_language=False', there is no language prefix in the URL. Django's LocaleMiddleware falls back to the browser's Accept-Language header ('en'). The 'root_language_handler' sees 'en' again and immediately redirects the user back to '/en/'. The user cannot switch to Turkish."
+  },
+  "required_solution": {
+    "strategy": "Implement Django's built-in cookie-based language setting mechanism ('set_language' view). Instead of simple <a> tag links, the language switcher must use a POST request to save the selected language code into the session/cookie before redirecting.",
+    "instructions_for_claude": [
+      "1. Locate the frontend template file containing the language switcher links (e.g., base.html, header.html).",
+      "2. Replace the simple <a href=\"/tr/\"> links with a hidden form pointing to \"{% url 'set_language' %}\" with POST method.",
+      "3. Use a JavaScript function attached to the <a> tags' onclick events. This function must dynamically fill the hidden form's 'language' input with the target language code, and the 'next' input with the URL provided by the '{% change_lang target_lang %}' template tag.",
+      "4. Submit the form via JavaScript so Django sets the 'django_language' cookie and redirects the user.",
+      "5. Ensure CSRF tokens are included in the hidden form."
+    ],
+    "code_blueprint": {
+      "html_form": "<form id='language-form' action='{% url \"set_language\" %}' method='post' style='display: none;'>{% csrf_token %}<input type='hidden' name='next' id='lang-next' value=''><input type='hidden' name='language' id='lang-code' value=''></form>",
+      "js_function": "<script>function switchLang(lang, targetUrl) { document.getElementById('lang-code').value = lang; document.getElementById('lang-next').value = targetUrl; document.getElementById('language-form').submit(); }</script>",
+      "html_links": "<a href='#' onclick='switchLang(\"tr\", \"{% change_lang \"tr\" %}\"); return false;'>TR</a>"
+    }
+  },
+  "output_requirement": "Provide the exact code snippets needed to update the frontend HTML files to implement this POST-based language switcher. Explain briefly how the cookie bypasses the LocaleMiddleware browser check."
+}

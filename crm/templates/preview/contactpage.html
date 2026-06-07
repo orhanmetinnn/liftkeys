@@ -139,14 +139,14 @@
                             <div class="icon"><i class="bi bi-telephone-fill"></i></div>
                             <div class="info">
                                 <h5>{% trans "Bizi Arayın" %}</h5>
-                                <a href="tel:+90 216 450 19 00">+90 216 450 19 00</a>
+                                <a href="tel:+902164501900">+90 216 450 19 00</a>
                             </div>
                         </div>
 
                         <div class="contact-item">
                             <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
                             <div class="info">
-                                <h5>{% trans "Fabrika Adresimiz" %}</h5>
+                                <h5>{% trans "Fabrika Adresi" %}</h5>
                                 <p>
                                     {% blocktrans trimmed %}
                                     Ramazan Oğlu Mah. Mekke Sok. No: 4 Kurtköy-Pendik / İSTANBUL Posta Kodu: 34906
@@ -155,7 +155,8 @@
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="icon"><i class="bi bi-buildings-fill"></i></div> <div class="info">
+                            <div class="icon"><i class="bi bi-buildings-fill"></i></div> 
+                            <div class="info">
                                 <h5>{% trans "Depo Adresi" %}</h5>
                                 <p>
                                     {% blocktrans trimmed %}
@@ -165,30 +166,132 @@
                                 </p>
                             </div>
                         </div>
-                        <ul class="social-icons">
+                        <div class="social-icons">
                             <a href="https://www.facebook.com/liftkeys" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
                             <a href="https://www.instagram.com/liftkeyscom/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
                             <a href="https://www.linkedin.com/company/liftkeys/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                             <a href="https://www.youtube.com/@liftkeys" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="container my-5 ">
-                    <div class="card shadow-sm rounded">
-                        <div class="card-body p-1">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.3054824259776!2d29.292778346141322!3d40.89759243021045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadbefe57a920f%3A0x57de054883178759!2sLiftkeys!5e0!3m2!1str!2str!4v1757176301177!5m2!1str!2str"
-                                    width="100%" height="500"
-                                    style="border:0; border-radius: 12px;"
-                                    allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+
+        <!-- İletişim Ağacı / Departmanlar (Hiyerarşik Ağaç Görünümü) -->
+        <div class="contact-tree-container my-5">
+            <div class="text-center mb-5">
+                <h3 style="color: #ff6600; font-weight: 700; text-transform: uppercase;">{% trans "Organizasyon Yapımız" %}</h3>
+                <p class="text-muted">{% trans "İhtiyacınıza en uygun departmanımızla iletişime geçebilirsiniz." %}</p>
+            </div>
+
+            <div class="tree-wrapper">
+                <div class="tree">
+                    <ul>
+                        <li>
+                            <!-- Kademe 1: Şirket Kökü -->
+                            <div class="tree-node root-node" data-aos="fade-down">
+                                <div class="node-content text-center">
+                                    <i class="bi bi-building-fill mb-2 d-block" style="font-size: 2rem; color: #ff6600;"></i>
+                                    <h4 class="mb-0 justify-content-center">LIFTKEYS</h4>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <!-- Kademe 2: Genel Yönetim -->
+                                    <div class="tree-node mgmt-node" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="node-content">
+                                            <h4><i class="bi bi-briefcase-fill me-2"></i>{% trans "GENEL YÖNETİM" %}</h4>
+                                            <div class="personnel-item">
+                                                <span class="personnel-name">{% trans "Alper Koç" %}</span>
+                                                <a href="tel:+905333694569" class="personnel-phone"><i class="bi bi-telephone me-1"></i>+90 533 369 45 69</a>
+                                            </div>
+                                            <div class="personnel-item mt-2">
+                                                <span class="personnel-name">{% trans "Gökhan Kurt" %}</span>
+                                                <a href="tel:+905068704605" class="personnel-phone"><i class="bi bi-telephone me-1"></i>+90 506 870 46 05</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul>
+                                        <!-- Kademe 3: Departmanlar -->
+                                        <li>
+                                            <div class="tree-node dept-node" data-aos="fade-up" data-aos-delay="200">
+                                                <div class="node-content">
+                                                    <h4><i class="bi bi-tags-fill me-2"></i><span>{% trans "ETİKET & BASILI MATERYALLER" %}</span></h4>
+                                                    <div class="personnel-item">
+                                                        <span class="personnel-name">{% trans "Osman Güler" %}</span>
+                                                        <a href="tel:+905332880821" class="personnel-phone"><i class="bi bi-telephone me-1"></i>+90 533 288 08 21</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tree-node dept-node" data-aos="fade-up" data-aos-delay="300">
+                                                <div class="node-content">
+                                                    <h4><i class="bi bi-window-sidebar me-2"></i>{% trans "CAM SATIŞ" %}</h4>
+                                                    <div class="personnel-item">
+                                                        <span class="personnel-name">{% trans "Eyüp Toy" %}</span>
+                                                        <a href="tel:+905332880822" class="personnel-phone"><i class="bi bi-telephone me-1"></i>+90 533 288 08 22</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tree-node dept-node" data-aos="fade-up" data-aos-delay="400">
+                                                <div class="node-content">
+                                                    <h4><i class="bi bi-cart-fill me-2"></i>{% trans "GENEL SATIŞ" %}</h4>
+                                                    <div class="personnel-item">
+                                                        <span class="personnel-name">{% trans "Orhan Aslan" %}</span>
+                                                        <a href="tel:+905359777333" class="personnel-phone"><i class="bi bi-telephone me-1"></i>+90 535 977 73 33</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tree-node dept-node" data-aos="fade-up" data-aos-delay="500">
+                                                <div class="node-content">
+                                                    <h4><i class="bi bi-calculator-fill me-2"></i>{% trans "MUHASEBE" %}</h4>
+                                                    <div class="personnel-item">
+                                                        <span class="personnel-name">{% trans "Emine Emen" %}</span>
+                                                        <a href="tel:+905433414426" class="personnel-phone"><i class="bi bi-telephone me-1"></i>+90 543 341 44 26</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tree-node dept-node" data-aos="fade-up" data-aos-delay="600">
+                                                <div class="node-content">
+                                                    <h4><i class="bi bi-box-seam-fill me-2"></i>{% trans "DEPO" %}</h4>
+                                                    <div class="personnel-item">
+                                                        <span class="personnel-name">{% trans "Sedad Üzümcü" %}</span>
+                                                        <a href="tel:+905436235678" class="personnel-phone"><i class="bi bi-telephone me-1"></i>+90 543 623 56 78</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="card map-card rounded">
+                <div class="card-body p-1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.3054824259776!2d29.292778346141322!3d40.89759243021045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadbefe57a920f%3A0x57de054883178759!2sLiftkeys!5e0!3m2!1str!2str!4v1757176301177!5m2!1str!2str"
+                            width="100%" height="500"
+                            style="border:0; border-radius: 12px;"
+                            allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>

@@ -204,7 +204,63 @@
                 width: 50px;
                 height: 50px;
             }
+
         }
+        .custom-modal {
+    display: none; /* ÖNEMLİ: Başlangıçta gizli olsun */
+    position: fixed; 
+    z-index: 99999; 
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    
+    /* Flex yapısını burada tutuyoruz */
+    display: none; /* Default olarak none kalsın */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    /* margin'i sildik, çünkü flex ile ortalıyoruz */
+}
+/* Kapatma Çarpısı */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover { color: #f00; }
+
+/* Modal İçindeki Butonlar */
+.modal-content .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+/* Renkler (Sitenize uyumlu hale getirilebilir) */
+.modal-content .btn-primary { background: #d35400; color: #fff; } /* Örnek: Turuncu */
+.modal-content .btn-secondary { background: #34495e; color: #fff; } /* Örnek: Koyu Gri */
+
+.modal-content .btn:hover { opacity: 0.9; transform: translateY(-2px); }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZYRLJ01K0"></script>
         <script>
@@ -257,10 +313,19 @@
             <i class="fa-solid fa-cart-shopping"></i>
             <span>Ürünler</span>
         </a>
-        <a href="/katalog" class="menu-item">
+        <button type="button" class="menu-item" onclick="openModal()" style="border: none; background: none; cursor: pointer; display: flex; align-items: center; gap: 8px;">
             <i class="fa-solid fa-file-pdf"></i>
-            <span>Katalog</span>
-        </a>
+            <span>{% trans "Katalog" %}</span>
+        </button>
+                                    <script>
+                            function openModal() {
+                                document.getElementById('myModal').style.display = 'flex';
+                            }
+
+                            function closeModal() {
+                                document.getElementById('myModal').style.display = 'none';
+                            }
+                            </script>
         <a href="https://wa.me/905332880821" class="menu-item">
             <i class="fa-brands fa-whatsapp"></i>
             <span>WhatsApp</span>
@@ -270,7 +335,20 @@
             <span>İletişim</span>
         </a>
     </div>
-
+                            <div id="myModal" class="custom-modal">
+                            <div class="modal-content">
+                                <span onclick="closeModal()" class="close">&times;</span>                               
+                                <h4 style="margin-bottom: 20px;">{% trans "Katalog İndir" %}</h4>
+                                <p>{% trans "Lütfen indirmek istediğiniz dili seçin:" %}</p>
+                                
+                                <a href="{% static 'dosyalar/FIYAT LISTESI-TR 23042025.pdf' %}" class="btn btn-primary" download>
+                                    {% trans "Türkçe Katalog (PDF)" %}
+                                </a>
+                                <a href="{% static 'dosyalar/Price List-EN 11282025.pdf' %}" class="btn btn-secondary" download>
+                                    {% trans "İngilizce Katalog (PDF)" %}
+                                </a>
+                            </div>
+                        </div>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

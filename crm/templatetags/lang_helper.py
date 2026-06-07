@@ -1,43 +1,46 @@
 from django import template
-from django.urls import translate_url
-from wagtail.models import Locale
+from django.conf import settings
+import re
 
 register = template.Library()
+
+# 2 harfli dil prefix'i: /en/, /ar/, /tr/ vb.
+_LANG_PREFIX = re.compile(r'^/([a-z]{2})/')
+
 
 @register.simple_tag(takes_context=True)
 def change_lang(context, lang=None):
     """
-    Hem Wagtail sayfalarını hem de standart Django sayfalarını
-    hedef dile çevirir.
+    Mevcut URL'nin dil prefix'ini değiştirerek hedef dile ait URL'yi döndürür.
+
+    Örnekler:
+      /en/solid/  + 'ar' → /ar/solid/
+      /ar/solid/  + 'tr' → /solid/
+      /solid/     + 'en' → /en/solid/
+      /           + 'ar' → /ar/
+      /en/en/     + 'ar' → /ar/   (recursive stripping — eski bug kalıntısı da düzeltilir)
+
+    Wagtail veya translate_url'e bağımlı değil; her durumda çalışır ve çift prefix üretemez.
     """
     request = context.get('request')
-    page = context.get('page') # Wagtail, mevcut sayfayı context'e 'page' olarak koyar
-    
-    # 1. SENARYO: Eğer bu bir Wagtail Sayfası ise (Örn: Anasayfa, Hakkımızda, Ürünler)
-    if page:
-        try:
-            # Hedef dilin Locale objesini bul (Örn: 'en', 'tr')
-            target_locale = Locale.objects.get(language_code=lang)
-            
-            # Mevcut sayfanın o dildeki çevirisini bul
-            translated_page = page.get_translation_or_none(target_locale)
-            
-            # Eğer çevirisi varsa ve yayındaysa onun URL'sini döndür
-            if translated_page and translated_page.live:
-                return translated_page.url
-        except:
-            # Bir hata olursa (dil bulunamazsa vs.) aşağıdaki standart yönteme geç
-            pass
+    default_lang = settings.LANGUAGE_CODE  # 'tr'
+    supported = {l[0] for l in settings.LANGUAGES}
 
-    # 2. SENARYO: Wagtail sayfası değilse (Örn: Arama sonuçları, Sepet, Admin paneli)
-    # veya sayfanın çevirisi henüz oluşturulmamışsa standart Django çevirisi yap.
-    try:
-        if request:
-            url = translate_url(request.path, lang)
-            if url:
-                return url
-    except:
-        pass
+    if not request:
+        return '/' if lang == default_lang else f'/{lang}/'
 
-    # 3. SENARYO: Hiçbir şey çalışmazsa ana sayfaya at
-    return f"/{lang}/"
+    # Mevcut path'ten TÜM dil prefix'lerini recursive olarak soy.
+    # Hem /tr/ (manuel route) hem /en/ /ar/ vb. prefix'lerini temizler.
+    # Döngü: /en/en/solid/ → /en/solid/ → /solid/ → çıkış
+    path = request.path
+    while True:
+        m = _LANG_PREFIX.match(path)
+        if m and m.group(1) in supported:
+            path = path[len(f'/{m.group(1)}'):]
+        else:
+            break
+
+    # Hedef dil prefix'ini ekle
+    if lang == default_lang:
+        return path           # Türkçe: prefix yok  →  /solid/
+    return f'/{lang}{path}'   # Diğer:  /{lang}/path → /ar/solid/

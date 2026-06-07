@@ -1,0 +1,103 @@
+{
+  "prompt_details": {
+    "role": "Uzman Frontend Geliştirici",
+    "goal": "Liftkeys projesinin '127.0.0.1:8000/contact/' adresindeki iletişim sayfasının tasarımını modernize etmek. Tasarımın %100 mobil uyumlu (responsive) olması kritik bir gereksinimdir.",
+    "design_language": {
+      "colors": [
+        "Beyaz (Ana zemin ve ferahlık için ağırlıklı renk)",
+        "Turuncu (Kurumsal marka logosuna uygun, vurgular, ikonlar ve butonlar için ana renk)",
+        "Açık/Orta Gri (Sadece metin okunabilirliği, ince çizgiler ve yumuşak gölgeler için)"
+      ],
+      "style_vibe": "Siyah veya koyu tonlar KESİNLİKLE KULLANILMAYACAK. Tamamen aydınlık, ferah, beyaz ve turuncu ağırlıklı, Liftkeys marka logosuna entegre, B2B kurumsal kimliğini yansıtan modern bir tasarım."
+    },
+    "requirements": {
+      "contact_form": {
+        "status": "Mevcut yapı korunacak, UI olarak aydınlık temada modernize edilecek.",
+        "fields": [
+          "Adınız (Zorunlu)",
+          "E-Posta Adresiniz (Zorunlu)",
+          "Konu",
+          "Telefon Numarası (Ülke kodu seçicili)",
+          "Mesajınız (Zorunlu textarea)"
+        ],
+        "extra_elements": [
+          "reCAPTCHA alanı (mockup olarak div eklenecek)"
+        ],
+        "action_button": "Turuncu renkli, dikkat çekici 'MESAJ GÖNDER' butonu."
+      },
+      "contact_tree": {
+        "layout_instructions": "Masaüstünde yan yana veya hiyerarşik, aydınlık beyaz arka plana sahip, ince gri çizgiler veya çok hafif gölgelerle ayrılmış ferah kartlar. Mobilde alt alta düzenli yığılma (stacking) yapısı.",
+        "departments": [
+          {
+            "department_name": "GENEL YÖNETİM",
+            "personnel": [
+              {
+                "name": "Alper Koç",
+                "phone": "+90 533 369 45 69"
+              },
+              {
+                "name": "Gökhan Kurt",
+                "phone": "+90 506 870 46 05"
+              }
+            ]
+          },
+          {
+            "department_name": "ETİKET VE BASILI MATERYALLER SATIŞ",
+            "personnel": [
+              {
+                "name": "Osman Güler",
+                "phone": "+90 533 288 08 21"
+              }
+            ]
+          },
+          {
+            "department_name": "CAM SATIŞ",
+            "personnel": [
+              {
+                "name": "Eyüp Toy",
+                "phone": "+90 533 288 08 22"
+              }
+            ]
+          },
+          {
+            "department_name": "GENEL SATIŞ",
+            "personnel": [
+              {
+                "name": "Orhan Aslan",
+                "phone": "+90 535 977 73 33"
+              }
+            ]
+          },
+          {
+            "department_name": "MUHASEBE",
+            "personnel": [
+              {
+                "name": "Emine Emen",
+                "phone": "+90 543 341 44 26"
+              }
+            ]
+          },
+          {
+            "department_name": "DEPO",
+            "personnel": [
+              {
+                "name": "Sedad Üzümcü",
+                "phone": "+90 543 623 56 78"
+              }
+            ]
+          }
+        ]
+      },
+      "existing_contact_info": {
+        "status": "Eski siyah/karanlık kart tasarımı tamamen İPTAL edilecek. Yerine, genel tasarıma uygun şekilde aydınlık, beyaz zeminli ve turuncu ikonlu ferah bir bilgi alanı tasarlanacak.",
+        "components": [
+          "Genel E-posta",
+          "Fabrika Adresi",
+          "Depo Adresi",
+          "Sosyal Medya İkonları"
+        ]
+      }
+    },
+    "expected_output": "Sayfanın HTML ve CSS kodları. Mobil görünümler (Media Queries veya ilgili framework sınıfları) eksiksiz olmalıdır."
+  }
+}

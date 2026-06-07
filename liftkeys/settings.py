@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-03h*26-ff0gikg=qodz$^r#s9+55rw3o$0yu!dq-=7#1^5wu_j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 
@@ -291,12 +291,9 @@ LANGUAGES = [
     ('de', 'German'),
     ('es', 'Spanish'),
 ]
-
-
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
-
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES 
 
 # Static files (CSS, JavaScript, Images)
@@ -334,9 +331,7 @@ DEFAULT_FROM_EMAIL = 'info@liftkeys.com'  # Maillerin kimden gittiğini göstere
 
 # === DİL ÇEREZ AYARLARI ===
 LANGUAGE_COOKIE_NAME = 'django_language'
-LANGUAGE_COOKIE_AGE = None  # Tarayıcı kapatıldığında dil seçimi sıfırlanır (Test için harika)
-# Canlıya (Production) aldığında üstteki satırı silip alttakini açarsın:
-# LANGUAGE_COOKIE_AGE = 365 * 24 * 60 * 60  # 1 yıl boyunca hatırla
+LANGUAGE_COOKIE_AGE = 365 * 24 * 60 * 60  # 1 yıl — tarayıcı kapansa da dil tercihi korunur
 
 LANGUAGE_COOKIE_PATH = '/'
 LANGUAGE_COOKIE_DOMAIN = None

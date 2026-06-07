@@ -13,12 +13,71 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/previewcss/iletisimpreview.css' %}">
+    
+<style>
+/* Modal Arka Planı */
+.custom-modal {
+    display: none; /* ÖNEMLİ: Başlangıçta gizli olsun */
+    position: fixed; 
+    z-index: 99999; 
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    
+    /* Flex yapısını burada tutuyoruz */
+    display: none; /* Default olarak none kalsın */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    /* margin'i sildik, çünkü flex ile ortalıyoruz */
+}
+/* Kapatma Çarpısı */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover { color: #f00; }
+
+/* Modal İçindeki Butonlar */
+.modal-content .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+/* Renkler (Sitenize uyumlu hale getirilebilir) */
+.modal-content .btn-primary { background: #d35400; color: #fff; } /* Örnek: Turuncu */
+.modal-content .btn-secondary { background: #34495e; color: #fff; } /* Örnek: Koyu Gri */
+
+.modal-content .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+</style>
 {% endblock %}
 
 <div id="iletisim-alani" class="container my-5 p-0 shadow rounded overflow-hidden" style="scroll-margin-top: 100px;">
     <div class="row g-0">
         <div class="col-lg-5 text-white d-flex flex-column justify-content-center bg-orange-overlay p-5"
-             style="background-image: linear-gradient(rgba(244, 110, 33, 0.315), rgba(244, 110, 33, 0.479)), url('{% static 'image/preview/iletisim-alani.webp' %}');">
+            style="background-image: linear-gradient(rgba(244, 110, 33, 0.315), rgba(244, 110, 33, 0.479)), url('{% static 'image/preview/iletisim-alani.webp' %}');">
             
             <h1 class="display-5 fw-bold mb-3">{% trans "Özel Müşteri Ekipleri ve Esnek Hizmetler" %}</h1>
             <p class="lead mb-4">
@@ -26,12 +85,35 @@
                 Dünya çapındaki varlığımız, üretim zaman çizelgelerinizin sorunsuz, maliyet etkin ve uyumlu bir şekilde yönetilmesini sağlar.
                 {% endblocktrans %}
             </p>
-            <a href="{% static 'dosyalar/liftkeys-kataloglar.zip' %}" class="btn btn-dark btn-lg align-self-start" download>
+
+            <button type="button" class="btn btn-dark btn-lg align-self-start" onclick="openModal()">
                 <i class="fa-solid fa-download me-2"></i>
                 {% trans "Broşürünü İndir" %}
-            </a>
-        </div>
+                                            <script>
+                            function openModal() {
+                                document.getElementById('myModal').style.display = 'flex';
+                            }
 
+                            function closeModal() {
+                                document.getElementById('myModal').style.display = 'none';
+                            }
+                            </script>
+            </button>
+        </div>
+                                <div id="myModal" class="custom-modal">
+                            <div class="modal-content">
+                                <span onclick="closeModal()" class="close">&times;</span>                               
+                                <h4 style="margin-bottom: 20px;">{% trans "Katalog İndir" %}</h4>
+                                <p>{% trans "Lütfen indirmek istediğiniz dili seçin:" %}</p>
+                                
+                                <a href="{% static 'dosyalar/FIYAT LISTESI-TR 23042025.pdf' %}" class="btn btn-primary" download>
+                                    {% trans "Türkçe Katalog (PDF)" %}
+                                </a>
+                                <a href="{% static 'dosyalar/Price List-EN 11282025.pdf' %}" class="btn btn-secondary" download>
+                                    {% trans "İngilizce Katalog (PDF)" %}
+                                </a>
+                            </div>
+                        </div>
         <div class="col-lg-7 bg-white p-5">
             <p class="fw-bold mb-2" id="iletisimtitle">{% trans "Teklif Talep Et" %}</p>
             <p class="text-secondary mb-4">

@@ -1,8 +1,9 @@
 .contact-container {
     background-color: #ffffff;
     padding: 2rem;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
-    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border: 1px solid #f1f3f5;
 }
 
 /* Sol Taraf: Form Başlığı */
@@ -11,39 +12,55 @@
     color: #212529;
 }
 
+#h2iletisim {
+    color: #ff6600; /* Turuncu renk */
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 /* Form Elemanları */
 .form-control {
-    border: none;
-    border-bottom: 1px solid #ced4da;
-    border-radius: 0;
-    padding-left: 0;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px 15px;
     box-shadow: none !important;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
 }
 .form-control:focus {
-    border-color: #f77f00;
+    border-color: #ff6600;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.15) !important;
 }
 .form-label {
-    font-weight: 500;
-    color: #555;
-    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
 }
 .form-label .required-star {
-    color: red;
+    color: #ff6600;
 }
 
 /* Gönder Butonu */
 .btn-send {
     background-color: #ff6600;
     color: white;
-    font-weight: 600;
-    padding: 12px 30px;
-    border-radius: 5px;
+    font-weight: 700;
+    padding: 14px 35px;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
 }
 .btn-send:hover {
     background-color: #e65c00;
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 102, 0, 0.3);
 }
 
 /* Captcha Stili */
@@ -57,24 +74,28 @@
     user-select: none;
 }
 
-/* Sağ Taraf: İletişim Detayları */
+/* Sağ Taraf: İletişim Detayları (Aydınlık Tema) */
 .contact-details {
-    background-color: #212529;
-    color: #f8f9fa;
+    background-color: #ffffff;
+    color: #212529;
     padding: 2.5rem;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 100%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f3f5;
 }
 .contact-details h3 {
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 2rem;
+    color: #212529;
+    font-size: 1.75rem;
 }
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #495057;
+    border-bottom: 1px solid #e9ecef;
 }
 .contact-item:last-child {
     margin-bottom: 0;
@@ -82,46 +103,53 @@
     padding-bottom: 0;
 }
 .contact-item .icon {
-    background-color: #343a40;
+    background-color: #fff3e6;
+    color: #ff6600;
     min-width: 50px;
     min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 1.2rem;
-    margin-right: 1rem;
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
+    transition: all 0.3s ease;
+}
+.contact-item:hover .icon {
+    background-color: #ff6600;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 .contact-item .info h5 {
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
-    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #343a40;
 }
 .contact-item .info a, .contact-item .info p {
     margin-bottom: 0;
-    font-size: 0.9rem;
-    color: #adb5bd;
+    font-size: 0.95rem;
+    color: #6c757d;
     text-decoration: none;
     transition: color 0.3s ease;
+    line-height: 1.5;
 }
 .contact-item .info a:hover {
-    color: #f77f00;
+    color: #ff6600;
 }
 
 /* Sosyal Medya İkonları */
 .social-icons {
-    list-style: none;
-    padding: 0;
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
 }
-.social-icons li a {
-    color: #adb5bd;
+.social-icons a {
+    color: #ff6600;
     font-size: 1.2rem;
-    background-color: #343a40;
-    width: 40px;
-    height: 40px;
+    background-color: #fff3e6;
+    width: 45px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,15 +157,319 @@
     text-decoration: none;
     transition: all 0.3s ease;
 }
-.social-icons li a:hover {
-    background-color: #f77f00;
+.social-icons a:hover {
+    background-color: #ff6600;
     color: white;
     transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
 }
 
-#h2iletisim{
-    color: #f77f00; /* Turuncu renk */
-    font-size: 2.5rem;
+/* İletişim Ağacı / Departmanlar (Ağaç Görünümü) */
+.contact-tree-container {
+    margin-top: 4rem;
+}
+
+.tree-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
+
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 10px 0 10px;
+    transition: all 0.5s;
+}
+
+/* Horizontal lines */
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #ff6600;
+    width: 50%;
+    height: 20px;
+    z-index: -1;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #ff6600;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li:last-child::before {
+    border-right: 2px solid #ff6600;
+    border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+/* Vertical line down from parent */
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #ff6600;
+    width: 0;
+    height: 20px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Tree Nodes */
+.tree-node {
+    background: #ffffff;
+    border: 1px solid #ff6600;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 200px;
+    max-width: 260px;
+    position: relative;
+    z-index: 1;
+}
+
+.tree-node:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 102, 0, 0.2);
+}
+
+/* Kademe 1: Kök düğüm */
+.root-node {
+    border-width: 2px;
+    min-width: 220px;
+    background: linear-gradient(135deg, #fff8f3 0%, #ffffff 100%);
+}
+
+/* Kademe 2: Yönetim düğümü */
+.mgmt-node {
+    border-width: 2px;
+    min-width: 240px;
+    background-color: #fff8f3;
+}
+
+/* Kademe 3: Departman düğümleri */
+.dept-node {
+    min-width: 180px;
+    max-width: 220px;
+}
+
+.node-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.root-node .node-content {
+    text-align: center;
+}
+
+.tree-node h4 {
+    color: #ff6600;
+    font-size: 0.92rem;
     font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #fff3e6;
+    padding-bottom: 0.75rem;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+.root-node h4 {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.2rem;
+    justify-content: center;
+}
+
+.mgmt-node h4 {
+    font-size: 1rem;
+}
+
+.personnel-item {
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #ff6600;
+}
+
+.personnel-item:last-child {
+    margin-bottom: 0;
+}
+
+.personnel-name {
+    font-weight: 700;
+    color: #343a40;
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+
+.personnel-phone {
+    color: #6c757d;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.personnel-phone i {
+    color: #ff6600;
+}
+
+.personnel-phone:hover {
+    color: #ff6600;
+}
+
+/* Mobile: Dikey hiyerarşik ağaç */
+@media (max-width: 1200px) {
+    .tree-wrapper {
+        justify-content: flex-start;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .tree ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0;
+    }
+
+    .tree li {
+        padding: 0;
+        padding-left: 28px;
+        position: relative;
+        display: block;
+        text-align: left;
+        margin-top: 16px;
+    }
+
+    .tree li::before, .tree li::after, .tree ul ul::before {
+        display: none;
+    }
+
+    /* Kademe 2: GENEL YÖNETİM kapsayıcı UL */
+    .tree > ul > li > ul {
+        border-left: 2px solid #ff6600;
+        margin-left: 16px;
+        padding-bottom: 10px;
+    }
+
+    .tree > ul > li > ul > li {
+        margin-top: 16px;
+    }
+
+    .tree > ul > li > ul > li::before {
+        content: '';
+        position: absolute;
+        top: 22px;
+        left: 0;
+        width: 28px;
+        border-top: 2px solid #ff6600;
+        display: block;
+    }
+
+    /* Kademe 3: Departman kapsayıcı UL */
+    .tree > ul > li > ul > li > ul {
+        border-left: 2px solid #ffa366;
+        margin-left: 24px;
+        padding-bottom: 10px;
+    }
+
+    .tree > ul > li > ul > li > ul > li {
+        margin-top: 14px;
+    }
+
+    .tree > ul > li > ul > li > ul > li::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 24px;
+        border-top: 2px dashed #ffa366;
+        display: block;
+    }
+
+    /* Kök için dikey çizgi kaldır */
+    .tree > ul {
+        border-left: none;
+        margin-left: 0;
+    }
+
+    .tree-node {
+        width: 100%;
+        max-width: 360px;
+        min-width: unset;
+    }
+
+    .dept-node {
+        max-width: 340px;
+    }
+
+    .root-node {
+        margin-left: 0;
+    }
+}
+
+/* Harita Alanı */
+.map-card {
+    border: 1px solid #f1f3f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+    .contact-details {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    .department-grid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\orhan\\\\liftkeys\\\\liftkeys\" -Force)",
+      "Bash(Select-Object Name, Mode)",
+      "Bash(python manage.py shell -c ' *)",
+      "Bash(python manage.py shell -c \"exec\\(open\\('update_seo.py'\\).read\\(\\)\\)\")",
+      "Bash(del *)",
+      "Bash(python -c ' *)",
+      "Bash(python manage.py collectstatic --noinput,)",
+      "Bash(python manage.py check --deploy)",
+      "Bash(python manage.py check)",
+      "Bash(python *)",
+      "Bash(py -m django --version)",
+      "Bash(python3 -c \"import django; print\\(django.__version__\\)\")"
+    ]
+  }
+}

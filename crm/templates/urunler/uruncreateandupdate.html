@@ -29,7 +29,6 @@
   {% endif %}
 
   <div class="row g-4">
-    <!-- FORM KISMI -->
     <div class="col-12 col-lg-6">
       <div id="productFormCard" class="card card-kurumsal shadow-sm">
         <div class="card-body">
@@ -40,12 +39,10 @@
               <input type="hidden" name="product_id" value="{{ current_id }}">
             {% endif %}
 
-            <!-- ÜRÜN BİLGİLERİ -->
             <div class="card mb-4">
               <div class="card-header bg-primary text-white fw-bold">{% trans "Ürün Bilgileri" %}</div>
               <div class="card-body">
 
-                <!-- DİL SEKMELERİ -->
                 <ul class="nav nav-tabs" id="langTabs" role="tablist">
                   <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#lang-tr" type="button">🇹🇷 Türkçe</button></li>
                   <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lang-en" type="button">🇬🇧 English</button></li>
@@ -56,42 +53,36 @@
                 </ul>
 
                 <div class="tab-content mt-3">
-                  <!-- Türkçe -->
                   <div class="tab-pane fade show active" id="lang-tr">
                     <div class="mb-3">{{ product_form.name_tr.label_tag }} {{ product_form.name_tr }}</div>
                     <div class="mb-3">{{ product_form.features_tr.label_tag }} {{ product_form.features_tr }}</div>
                     <div class="mb-3">{{ product_form.description_tr.label_tag }} {{ product_form.description_tr }}</div>
                     <div class="mb-3">{{ product_form.warranty_period_tr.label_tag }} {{ product_form.warranty_period_tr }}</div>
                   </div>
-                  <!-- İngilizce -->
                   <div class="tab-pane fade" id="lang-en">
                     <div class="mb-3">{{ product_form.name_en.label_tag }} {{ product_form.name_en }}</div>
                     <div class="mb-3">{{ product_form.features_en.label_tag }} {{ product_form.features_en }}</div>
                     <div class="mb-3">{{ product_form.description_en.label_tag }} {{ product_form.description_en }}</div>
                     <div class="mb-3">{{ product_form.warranty_period_en.label_tag }} {{ product_form.warranty_period_en }}</div>
                   </div>
-                  <!-- Rusça -->
                   <div class="tab-pane fade" id="lang-ru">
                     <div class="mb-3">{{ product_form.name_ru.label_tag }} {{ product_form.name_ru }}</div>
                     <div class="mb-3">{{ product_form.features_ru.label_tag }} {{ product_form.features_ru }}</div>
                     <div class="mb-3">{{ product_form.description_ru.label_tag }} {{ product_form.description_ru }}</div>
                     <div class="mb-3">{{ product_form.warranty_period_ru.label_tag }} {{ product_form.warranty_period_ru }}</div>
                   </div>
-                  <!-- Arapça -->
                   <div class="tab-pane fade" id="lang-ar">
                     <div class="mb-3">{{ product_form.name_ar.label_tag }} {{ product_form.name_ar }}</div>
                     <div class="mb-3">{{ product_form.features_ar.label_tag }} {{ product_form.features_ar }}</div>
                     <div class="mb-3">{{ product_form.description_ar.label_tag }} {{ product_form.description_ar }}</div>
                     <div class="mb-3">{{ product_form.warranty_period_ar.label_tag }} {{ product_form.warranty_period_ar }}</div>
                   </div>
-                  <!-- Fransızca -->
                   <div class="tab-pane fade" id="lang-fr">
                     <div class="mb-3">{{ product_form.name_fr.label_tag }} {{ product_form.name_fr }}</div>
                     <div class="mb-3">{{ product_form.features_fr.label_tag }} {{ product_form.features_fr }}</div>
                     <div class="mb-3">{{ product_form.description_fr.label_tag }} {{ product_form.description_fr }}</div>
                     <div class="mb-3">{{ product_form.warranty_period_fr.label_tag }} {{ product_form.warranty_period_fr }}</div>
                   </div>
-                  <!-- Almanca -->
                   <div class="tab-pane fade" id="lang-de">
                     <div class="mb-3">{{ product_form.name_de.label_tag }} {{ product_form.name_de }}</div>
                     <div class="mb-3">{{ product_form.features_de.label_tag }} {{ product_form.features_de }}</div>
@@ -109,14 +100,27 @@
                     {{ product_form.price.label_tag }} {{ product_form.price }}
                   </div>
                 </div>
-                <div class="mb-3">{{ product_form.currency.label_tag }} {{ product_form.currency }}</div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        {{ product_form.currency.label_tag }} {{ product_form.currency }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">{% trans "Menü Sırası" %}</label>
+                        {{ product_form.order }}
+                        {% if product_form.order.errors %}
+                            <div class="text-danger mt-1">{{ product_form.order.errors }}</div>
+                        {% endif %}
+                        <small class="text-muted" style="font-size: 0.75rem;">{% trans "Küçük sayılar menüde önce gösterilir." %}</small>
+                    </div>
+                </div>
+
                 <div class="form-check mb-3">{{ product_form.is_active }} <label class="form-check-label">{{ product_form.is_active.label }}</label></div>
                 <div class="mb-3">{{ product_form.categories.label_tag }} {{ product_form.categories }}</div>
 
               </div>
             </div>
 
-            <!-- GÖRSELLER (değişmedi) -->
             {{ images_formset.management_form }}
             <div class="card mb-4">
               <div class="card-header bg-primary text-white fw-bold">{% trans "Görseller" %}</div>
@@ -160,7 +164,6 @@
       </div>
     </div>
 
-    <!-- ÜRÜN LİSTESİ (değişmedi) -->
     <div class="col-12 col-lg-6">
       <div class="card card-kurumsal">
         <div class="card-body">
@@ -171,6 +174,7 @@
                 <tr>
                   <th>#</th>
                   <th>{% trans "Görsel" %}</th>
+                  <th>{% trans "Sıra" %}</th> 
                   <th>{% trans "Ürün" %}</th>
                   <th>{% trans "Stok" %}</th>
                   <th>{% trans "Fiyat" %}</th>
@@ -183,6 +187,7 @@
                   <tr>
                     <td>{{ forloop.counter }}</td>
                     <td>{% if p.website_image %}<img class="thumb-sm" src="{{ p.website_image.url }}">{% endif %}</td>
+                    <td>{{ p.order }}</td>
                     <td>{{ p.name }}</td>
                     <td>{{ p.stock_code }}</td>
                     <td>{{ p.price }} {{ p.currency }}</td>

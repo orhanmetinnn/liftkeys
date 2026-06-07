@@ -370,6 +370,9 @@ def product_offer_pdf_path(instance, filename):
 
 
 from django.utils.text import slugify
+from django.db import models
+from django.utils.text import slugify
+
 class Category(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Kullanıcı")
     name = models.CharField(max_length=100, blank=True, null=True, verbose_name="Kategori Adı")
@@ -383,10 +386,24 @@ class Category(models.Model):
         verbose_name="Üst Kategori"
     )
     menude_goster = models.BooleanField(default=True, verbose_name="Menüde Göster", blank=True, null=True)
+    
+    # 1. ADIM: SIRALAMA ALANI
+    # PositiveIntegerField kullanarak sadece pozitif sayılar (0, 1, 2...) girilmesini sağlıyoruz.
+    # Varsayılan değer olarak 0 verdik, böylece eski veriler hata vermeyecek.
+    order = models.PositiveIntegerField(default=0, verbose_name="Menü Sırası")
+    
     menu_image = models.ImageField(upload_to='category_menu_images/', blank=True, null=True, verbose_name="Menü Görseli")
     ust_menu_image = models.ImageField(upload_to='category_menu_images/', blank=True, null=True, verbose_name="Üst Menü Görseli")
     created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name="Oluşturulma Tarihi")
     updated_at = models.DateTimeField(auto_now=True, blank=True, null=True, verbose_name="Güncellenme Tarihi")
+
+    # 2. ADIM: VARSAYILAN SIRALAMA (META SINIFI)
+    class Meta:
+        # Django verileri çekerken önce 'order' sayısına bakar (küçükten büyüğe). 
+        # Eğer order numaraları aynıysa (örneğin ikisi de 0 ise), ID'sine göre sıralar.
+        ordering = ['order', 'id']
+        verbose_name = "Kategori"
+        verbose_name_plural = "Kategoriler"
 
     def save(self, *args, **kwargs):
         if not self.slug and self.name:
@@ -394,7 +411,8 @@ class Category(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        name_display = self.name or self.name_tr or self.name_en or "(İsimsiz)"
+        # name_tr, name_en gibi alanların modele dahil olduğunu varsayarak orijinal kodunu korudum
+        name_display = getattr(self, 'name', None) or getattr(self, 'name_tr', None) or getattr(self, 'name_en', None) or "(İsimsiz)"
         if self.parent:
             return f"{self.parent} > {name_display}"
         return name_display
@@ -441,12 +459,15 @@ class Product(models.Model):
 
     price = models.DecimalField(max_digits=30, decimal_places=2, verbose_name="Fiyat", default=0.0)
     currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES, default='USD', verbose_name="Para Cinsi", blank=True, null=True)
-
+    order = models.PositiveIntegerField(default=0, verbose_name="Sıralama")
     is_active = models.BooleanField(default=True, verbose_name="Aktif Mi?")
     warranty_period = models.CharField(max_length=50, blank=True, null=True, verbose_name="Garanti Süresi")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    class Meta:
+        # Önce senin verdiğin sıra numarasına (order) bakar. 
+        # Numaralar aynıysa (örneğin hepsi 0 ise) en son ekleneni ilk gösterir (-created_at).
+        ordering = ['order', '-created_at']
     def __str__(self):
         return self.name
 

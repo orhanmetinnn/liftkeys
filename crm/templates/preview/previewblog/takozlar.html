@@ -156,16 +156,21 @@ Teknik detaylar için tıklayın.
         <div class="row align-items-center">
             
             <div class="col-lg-7 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
-                <div class="image-container position-relative rounded-4 overflow-hidden shadow-lg">
+                <div class="image-container position-relative rounded-4 overflow-hidden shadow-lg" 
+                    onclick="loadYoutubeVideo(this)" 
+                    data-video-id="5lKGBVVg3h4" 
+                    style="cursor: pointer;">
+                    
                     <img src="{% static 'image/pageproduct/takozlar/liftkeys-asansor-vibrasyon-takozu.webp' %}" 
-                         alt="{% trans 'LIFTKEYS Asansör Vibrasyon Takozu - Titreşim önleyici sistem' %}" 
-                         class="img-fluid w-100 object-fit-cover">
+                        alt="{% trans 'LIFTKEYS Asansör Vibrasyon Takozu - Titreşim önleyici sistem' %}" 
+                        class="img-fluid w-100 object-fit-cover">
                     
                     <div class="play-overlay position-absolute top-50 start-50 translate-middle">
-                        <div class="play-button bg-white rounded-circle d-flex justify-content-center align-items-center">
-                            <div class="play-triangle"></div>
+                        <div class="play-button bg-white rounded-circle d-flex justify-content-center align-items-center" style="width: 80px; height: 80px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                            <i class="bi bi-play-fill display-4 ps-2" style="color: var(--liftkeys-orange, #F38002);"></i>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -789,6 +794,26 @@ Teknik detaylar için tıklayın.
 
 {% include "preview/iletisimformpreview.html" %}
 
+
+
+
+<script>
+    function loadYoutubeVideo(element) {
+        // 1. Tıklanan div'in içindeki video kimliğini (data-video-id) alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // 2. YouTube iframe (video oynatıcı) kodumuzu oluşturuyoruz
+        // Tasarımınla tam uyumlu olması için style kısmına min-height: 350px; ekledik
+        // autoplay=1 parametresi sayesinde video tıklandığı an otomatik oynamaya başlar
+        var iframeHTML = `
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/5lKGBVVg3h4?si=LJC2ME3TxJeAbqQm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `;
+        
+        // 3. Tıklanan alanın içindeki resmi ve Play butonunu tamamen temizleyip, 
+        // yerine hazırladığımız bu video oynatıcıyı yerleştiriyoruz
+        element.innerHTML = iframeHTML;
+    }
+</script>
 
 <script>
   AOS.init({

@@ -1,4 +1,4 @@
-{% extends "previewtemplates/previewbase.html" %}
+﻿{% extends "previewtemplates/previewbase.html" %}
 {% load static %}
 {% load i18n %}
 
@@ -178,7 +178,11 @@ Detaylar için tıklayın.
     <div class="row align-items-center">
         
         <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
-            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card">
+            <div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg feature-card"
+                 onclick="loadYoutubeVideo(this)" 
+                 data-video-id="BURAYA_VIDEO_ID_GELECEK" 
+                 style="cursor: pointer;">
+                 
                 <img src="{% static 'image/pageproduct/solid/solid-levha-video.webp' %}" 
                      class="img-fluid w-100" 
                      alt="{% trans 'LiftKeys Solid Polikarbonat Levha - Kırılmaz Asansör Tavan Malzemesi' %}"
@@ -187,7 +191,7 @@ Detaylar için tıklayın.
                 
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <div class="play-btn-pulse bg-white rounded-circle d-flex align-items-center justify-content-center text-orange" 
-                         style="width: 80px; height: 80px; cursor: pointer;">
+                         style="width: 80px; height: 80px;">
                         <i class="fa-solid fa-play fa-2x ps-1" style="color: #F08200;"></i>
                     </div>
                 </div>
@@ -800,8 +804,23 @@ Detaylar için tıklayın.
 </div>
 
 
+<script>
+    function loadYoutubeVideo(element) {
+        // 1. Tıklanan div'in içindeki video kimliğini (data-video-id) alıyoruz
+        var videoId = element.getAttribute("data-video-id");
+        
+        // 2. YouTube iframe (video oynatıcı) kodumuzu oluşturuyoruz
+        // Tasarımınla tam uyumlu olması için style kısmına min-height: 350px; ekledik
+        // autoplay=1 parametresi sayesinde video tıklandığı an otomatik oynamaya başlar
+        var iframeHTML = `
+<iframe  width="100%" height="315" src="https://www.youtube.com/embed/YtB7itpHFks?si=4_McQvLAFNeINecf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        `;
+        
+        // 3. Tıklanan alanın içindeki resmi ve Play butonunu tamamen temizleyip, 
+        // yerine hazırladığımız bu video oynatıcıyı yerleştiriyoruz
+        element.innerHTML = iframeHTML;
+    }
+</script>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     // Sayfa yüklendiğinde animasyonları başlatır
     document.addEventListener('DOMContentLoaded', function() {

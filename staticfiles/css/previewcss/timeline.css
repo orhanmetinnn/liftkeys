@@ -12,10 +12,13 @@
 /* } */ 
 .timeline-container {
     width: 100%;
-    padding: 40px 0;
+    padding: 60px 0; /* İç boşluğu biraz artırdık */
+    margin-top: 100px; /* Üstteki Liftkeys yazılarıyla arasına kesin bir mesafe koyduk */
     text-align: center;
+    position: relative;
+    display: block; /* Flex vb. karışıklıkları önler, ayrı bir blok olmasını garantiler */
+    clear: both; /* 🔑 EN KRİTİK KOD: Üstteki hiçbir elemanın bu alana sarkmasına izin vermez */
 }
-
 h2 {
     color: #333;
     margin-bottom: 50px;
@@ -43,33 +46,31 @@ h2 {
 
 .timeline-line {
     position: absolute;
-    top: 50%;
+    top: 70px; /* 🔑 DEĞİŞTİ: %50 yerine tam nokta atışı. (40px margin-top + 30px yuvarlağın yarısı = 70px) */
     left: 0;
-    transform: translateY(-50%);
-    width: 100%; /* timeline-items genişliği kadar */
+    transform: none; /* 🔑 DEĞİŞTİ: translateY iptal, çünkü tam piksel belirttik. */
+    width: 100%; 
     height: 2px;
     background-color: #ff9800;
     z-index: 1;
 }
 .timeline-items {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* 🔑 DEĞİŞTİ: center yerine flex-start. Böylece metin ne kadar uzarsa uzasın kutular hep üst çizgiden hizalanır. */
     gap: 150px;
     position: relative;
     z-index: 2;
     padding: 0 50px;
-    width: max-content; /* 🔑 içerik ne kadar uzunsa genişlik o kadar olsun */
+    width: max-content; 
 }
-
 .timeline-item {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px; /* Her bir öğenin genişliği */
-    flex-shrink: 0; /* Öğelerin küçülmesini engeller */
-    margin-top: 2em;
-    
+    width: 350px; 
+    flex-shrink: 0; 
+    margin-top: 40px; /* 🔑 DEĞİŞTİ: 2em yerine 40px sabit değer verdik ki çizgiyi hesaplayabilelim. */
 }
 
 .timeline-dot {
@@ -129,12 +130,14 @@ h2 {
 }
 
 
-#timelineh3{
+#timelineh3 {
     font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
+    color: #f77f00;
+    margin-top: 0;
+    margin-bottom: 50px; /* Alttaki turuncu çizgiyle mesafesini açtık (20'den 50'ye çıkardık) */
     letter-spacing: 2px;
     font-weight: 600;
-    color: #f77f00;
-
+    position: relative;
+    display: block; 
+    clear: both;
 }

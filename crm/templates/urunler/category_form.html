@@ -30,13 +30,11 @@
 
         <div class="container mt-5">
             <div class="row">
-                <!-- Kategori Formu -->
                 <div class="col-md-6">
                     <h2>{{ title }}</h2>
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
 
-                        <!-- 🌍 Çok Dilli Kategori Adı (Tab'lı Yapı) -->
                         <ul class="nav nav-tabs mb-3" id="langTabs" role="tablist">
                             <li class="nav-item">
                                 <button class="nav-link active" id="tr-tab" data-bs-toggle="tab" data-bs-target="#tr" type="button">TR</button>
@@ -85,7 +83,6 @@
                             </div>
                         </div>
 
-                        <!-- Diğer Alanlar -->
                         <div class="mb-3">
                             <label class="form-label">{{ form.parent.label }}</label>
                             {{ form.parent }}
@@ -99,6 +96,13 @@
                             <label class="form-check-label">{{ form.menude_goster.label }}</label>
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">{{ form.order.label }}</label>
+                            {{ form.order }}
+                            {% if form.order.errors %}
+                                <div class="text-danger">{{ form.order.errors }}</div>
+                            {% endif %}
+                        </div>
                         <div class="mb-3">
                             <label class="form-label">{{ form.menu_image.label }}</label>
                             {{ form.menu_image }}
@@ -132,12 +136,12 @@
                     </form>
                 </div>
 
-                <!-- Kategori Listesi -->
                 <div class="col-md-6">
                     <h2>Kategori Listesi</h2>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>Sıra</th>
                                 <th>Adı</th>
                                 <th>Üst Kategori</th>
                                 <th>Menüde Göster</th>
@@ -147,6 +151,7 @@
                         <tbody>
                             {% for cat in categories %}
                                 <tr>
+                                    <td>{{ cat.order }}</td>
                                     <td>{{ cat.name }}</td>
                                     <td>{% if cat.parent %}{{ cat.parent.name }}{% else %}-{% endif %}</td>
                                     <td>{{ cat.menude_goster|yesno:"Evet,Hayır" }}</td>
@@ -155,8 +160,7 @@
                                     </td>
                                 </tr>
                             {% empty %}
-                                <tr><td colspan="4" class="text-center">Kategori yok</td></tr>
-                            {% endfor %}
+                                <tr><td colspan="5" class="text-center">Kategori yok</td></tr> {% endfor %}
                         </tbody>
                     </table>
                 </div>

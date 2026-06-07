@@ -112,6 +112,58 @@
 
 /* --- MOBİL STİLLER VE DÜZELTMELER --- */
 
+/* ── Mobil Menü: Scroll + Dropdown Düzeltmesi ── */
+@media (max-width: 991.98px) {
+
+  /* max-height JS'de (show.bs.collapse) bir kez set edilir.
+     overflow-y: auto → içerik sığıyorsa scrollbar çıkmaz, taşarsa çıkar. */
+  #navbarNav.show {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+  }
+
+  /* Link/item üzerinde başlayan swipe'ı scroll say (iOS) */
+  #navbarNav.show .navbar-nav,
+  #navbarNav.show .dropdown-menu,
+  #navbarNav.show .dropdown-item,
+  #navbarNav.show a {
+    touch-action: pan-y;
+  }
+
+  /* Mobil dropdown açık olduğunda içerik akış içinde kalır,
+     navbarNav scroll container'ı ile birlikte sorunsuz kaydırılır */
+  #navbarNav.show .dropdown-menu.show {
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* Çözümlerimiz gibi uzun listelerde tüm öğeler görünür kalır */
+  #navbarNav.show .d-lg-none {
+    touch-action: pan-y;
+  }
+
+  /* position-static li'yi relative yap */
+  .navbar-collapse .nav-item.dropdown.position-static {
+    position: relative !important;
+  }
+
+  /* Dropdown-menu: inline, tam genişlik, Popper yok */
+  .navbar-collapse .dropdown-menu {
+    position: static !important;
+    width: 100% !important;
+    background-color: #f8f9fa !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    transform: none !important;
+  }
+}
+
 /* Mobilde Sepet Rozeti */
 .mobile-cart-badge {
     position: absolute; top: -5px; right: -10px;
@@ -148,9 +200,8 @@
 }
 .mobile-cart-btn i { font-size: 1.6rem; margin: 0; }
 
-/* Mobilde Dropdown ve Ürün Listesi */
+/* Mobilde Mega Menu Düzeni */
 @media (max-width: 991px) {
-    .dropdown-menu { border: none; box-shadow: none; padding-left: 0; background-color: transparent; margin-top: 0; }
     .mobile-product-grid {
         display: grid; grid-template-columns: 1fr 1fr;
         gap: 10px; padding: 10px; background: #f8f9fa;
@@ -382,4 +433,31 @@
 /* Marka Rengi Yardımcı Sınıf */
 .text-orange {
     color: #ff6600 !important;
+}
+
+/* --- MOBİL DİL DEĞİŞTİRİCİ BUTONLARI --- */
+.mobile-lang-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 1.5px solid #dee2e6;
+    border-radius: 6px;
+    background: #fff;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+}
+
+.mobile-lang-btn:hover {
+    border-color: #ff6600;
+    color: #ff6600;
+}
+
+.mobile-lang-btn--active {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: #fff;
 }

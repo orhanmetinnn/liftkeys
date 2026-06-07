@@ -21,14 +21,19 @@
 
     <div class="d-flex align-items-center">
 
+      <!-- Dil değiştirme formu — fetch değil gerçek POST, cookie kesin set edilir -->
+      <form id="lk-lang-form" action="{% url 'set_language' %}" method="post" style="display:none">
+        {% csrf_token %}
+        <input type="hidden" name="language" id="lk-lang-code">
+        <input type="hidden" name="next"     id="lk-lang-next">
+      </form>
+
       <div class="language-wrapper d-flex align-items-center">
-        {% load i18n %} 
+        {% load i18n %}
         {% get_current_language as LANGUAGE_CODE %}
         {% get_available_languages as LANGUAGES %}
 
         <i class="bi bi-globe2 text-muted me-1" style="font-size: 0.9rem;"></i>
-
-        {% csrf_token %}
 
         <select class="clean-lang-select" onchange="switchLanguage(this)">
           {% for lang_code, lang_name in LANGUAGES %}
@@ -37,38 +42,23 @@
             </option>
           {% endfor %}
         </select>
-        
+
         <i class="bi bi-chevron-down ms-1" style="font-size: 0.65rem; color: #888;"></i>
       </div>
 
       <script>
       function switchLanguage(selectElement) {
-          var selectedOption = selectElement.options[selectElement.selectedIndex];
-          var langCode = selectedOption.value;
-          var targetUrl = selectedOption.getAttribute('data-url'); // Senin etiketinin hazırladığı temiz URL
-          var csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+          var opt = selectElement.options[selectElement.selectedIndex];
+          document.getElementById('lk-lang-code').value = opt.value;
+          document.getElementById('lk-lang-next').value = opt.getAttribute('data-url');
+          document.getElementById('lk-lang-form').submit();
+      }
 
-          // Arka planda Django'ya sadece "çerezi ayarla" demek için veri hazırlıyoruz
-          var formData = new URLSearchParams();
-          formData.append('language', langCode);
-          formData.append('csrfmiddlewaretoken', csrfToken);
-
-          // Django'nun set_language adresine sayfa yenilenmeden (sessizce) istek atıyoruz
-          fetch("{% url 'set_language' %}", {
-              method: 'POST',
-              body: formData,
-              headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded'
-              }
-          }).then(function() {
-              // Django arka planda çerezi başarıyla ayarladı!
-              // Şimdi Django'nun müdahale etmesine izin vermeden doğrudan temiz URL'ye gidiyoruz.
-              window.location.href = targetUrl;
-          }).catch(function(error) {
-              // Beklenmedik bir hata olursa bile URL'ye gitmeyi dene
-              console.error('Dil değiştirme hatası:', error);
-              window.location.href = targetUrl;
-          });
+      // Mobil hamburger menüsündeki dil butonları için
+      function mobileSwitchLang(lang, targetUrl) {
+          document.getElementById('lk-lang-code').value = lang;
+          document.getElementById('lk-lang-next').value = targetUrl;
+          document.getElementById('lk-lang-form').submit();
       }
       </script>
 
@@ -210,6 +200,9 @@
 
           <div class="dropdown-menu w-100 shadow-lg border-0 mt-0 py-4" aria-labelledby="solutionsDropdown"
             style="border-radius: 0 0 16px 16px;">
+
+            <!-- DESKTOP (lg ve üstü) -->
+            <div class="d-none d-lg-block">
             <div class="container">
               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
@@ -389,6 +382,53 @@
 
               </div>
             </div>
+            </div><!-- /d-none d-lg-block -->
+
+            <!-- MOBİL (lg altı) — sade liste -->
+            <div class="d-lg-none">
+              <div class="py-2">
+                <a href="{% url 'horus_photocell' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "LKS Horus Fotosel" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'atlas_overload' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Atlas Aşırı Yük" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'zemin_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Zemin" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'switch_systems' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Switch Sistemleri" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'fan_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Havalandırma Sistemleri" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'paten_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Ağırlık Paten Sistemleri" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'solid_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Solid & Polistren Levha" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'kupeste_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Paslanmaz Küpeşte" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'takozlar_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Vibrasyon Takozları" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'keys_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Üçgen Anahtar" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'kabincam_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Dekoratif Cam" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'patenkabin_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Kabin Paten Sistemleri" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+                <a href="{% url 'spot_view' %}" class="dropdown-item d-flex justify-content-between align-items-center py-3 border-bottom px-4" style="white-space:normal;color:#333;">
+                  <span class="fw-medium">{% trans "Aydınlatma / Spot Sistemleri" %}</span><i class="bi bi-chevron-right text-orange"></i>
+                </a>
+              </div>
+            </div><!-- /d-lg-none -->
+
           </div>
         </li>
 
@@ -413,6 +453,31 @@
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
           </a>
         </li>
+
+        <!-- Mobil Dil Değiştirici (sadece hamburger menüde görünür) -->
+        <li class="nav-item d-lg-none mt-2">
+          <div class="px-3 py-3 border-top">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-globe2 me-2" style="color: #ff6600; font-size: 0.9rem;"></i>
+              <span style="font-size: 0.8rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.5px;">
+                {% trans "Dil Seçin" %}
+              </span>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              {% load i18n %}
+              {% get_current_language as MOBILE_LANG_CODE %}
+              {% get_available_languages as MOBILE_LANGUAGES %}
+              {% for lc, ln in MOBILE_LANGUAGES %}
+              <button type="button"
+                onclick="mobileSwitchLang('{{ lc }}', '{% change_lang lc %}')"
+                class="mobile-lang-btn {% if lc == MOBILE_LANG_CODE %}mobile-lang-btn--active{% endif %}">
+                {{ lc|upper }}
+              </button>
+              {% endfor %}
+            </div>
+          </div>
+        </li>
+
       </ul>
     </div>
   </div>
@@ -526,9 +591,63 @@
     const mobileGroups = document.querySelectorAll('.dropdown-menu .mobile-category-group');
     mobileGroups.forEach(group => {
       group.addEventListener('click', function (e) {
-        e.stopPropagation(); // Tıklama olayını burada durdur, menüye gönderme
+        e.stopPropagation();
       });
     });
+
+    // --- 6. MOBİL MENÜ: BODY KİLİT + MAX-HEIGHT ---
+    if (!window.matchMedia('(min-width: 992px)').matches) {
+      var navEl    = document.getElementById('navbarNav');
+      var navbarEl = document.querySelector('.navbar.sticky-top');
+
+      if (navEl && navbarEl) {
+
+        function setNavMaxHeight() {
+          var navH      = navbarEl.getBoundingClientRect().height;
+          var bottomBar = document.querySelector('.mobile-bottom-menu');
+          // Tablet (>=768px) da alt bar gizlidir; offsetHeight 0 döner
+          var bottomH   = bottomBar ? bottomBar.offsetHeight : 0;
+          var maxH      = window.innerHeight - navH - bottomH - 4;
+          navEl.style.maxHeight = maxH + 'px';
+        }
+
+        navEl.addEventListener('show.bs.collapse', function () {
+          document.body.style.overflow = 'hidden';
+          setNavMaxHeight();
+        });
+
+        navEl.addEventListener('shown.bs.collapse', function () {
+          navEl.scrollTop = 0;
+        });
+
+        // Dropdown açılınca ilk öğeyi scroll'la göster
+        navEl.addEventListener('shown.bs.dropdown', function (e) {
+          var navItem = e.target.closest('.nav-item');
+          if (!navItem) return;
+          var mobilePart = navItem.querySelector('.d-lg-none');
+          if (!mobilePart) return;
+          var firstLink = mobilePart.querySelector('a');
+          if (firstLink) {
+            setTimeout(function () {
+              firstLink.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 60);
+          }
+        });
+
+        navEl.addEventListener('hide.bs.collapse', function () {
+          document.body.style.overflow = '';
+        });
+
+        navEl.addEventListener('hidden.bs.collapse', function () {
+          navEl.style.maxHeight = '';
+        });
+
+        // Pencere boyutu değişirse yeniden hesapla
+        window.addEventListener('resize', function () {
+          if (navEl.classList.contains('show')) setNavMaxHeight();
+        });
+      }
+    }
 
   });
 </script>
