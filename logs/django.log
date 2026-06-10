@@ -12754,3 +12754,5 @@ AttributeError: 'NoneType' object has no attribute 'user'
 [2026-06-07 20:35:09,927] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
 [2026-06-07 20:35:10,006] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
 [2026-06-07 20:35:20,101] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-10 20:43:14,090] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-10 20:43:41,975] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
