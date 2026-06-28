@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-07 18:02+0300\n"
+"POT-Creation-Date: 2026-06-28 14:56+0300\n"
 "PO-Revision-Date: 2026-03-22 16:08+0300\n"
 "Last-Translator: Orhan Metin <orhanmetinnn@outlook.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,35 +24,35 @@ msgstr ""
 msgid "Kategoriler"
 msgstr ""
 
-#: .\crm\forms.py:861
+#: .\crm\forms.py:863
 msgid "Lütfen bu alanı boş bırakın"
 msgstr ""
 
-#: .\crm\forms.py:868
+#: .\crm\forms.py:870
 msgid "Lütfen robot olmadığınızı doğrulayın."
 msgstr ""
 
-#: .\crm\forms.py:879
+#: .\crm\forms.py:881
 msgid "Adınızı giriniz"
 msgstr ""
 
-#: .\crm\forms.py:885
+#: .\crm\forms.py:887
 msgid "E-posta adresinizi giriniz"
 msgstr ""
 
-#: .\crm\forms.py:891
+#: .\crm\forms.py:893
 msgid "Konu giriniz"
 msgstr ""
 
-#: .\crm\forms.py:896
+#: .\crm\forms.py:898
 msgid "Telefon numaranızı giriniz"
 msgstr ""
 
-#: .\crm\forms.py:902
+#: .\crm\forms.py:904
 msgid "Bize birkaç kelime yazın"
 msgstr ""
 
-#: .\crm\forms.py:915
+#: .\crm\forms.py:917
 msgid "Form gönderiminde şüpheli bir işlem tespit edildi."
 msgstr ""
 
@@ -116,12 +116,12 @@ msgstr ""
 
 #: .\crm\templates\blog\blog_page.html:18
 #: .\crm\templates\preview\previewblog\atlasoverload.html:50
-#: .\templates\previewtemplates\previewmenu.html:96
+#: .\templates\previewtemplates\previewmenu.html:112
 msgid "Ana Sayfa"
 msgstr ""
 
 #: .\crm\templates\blog\blog_page.html:31
-#: .\templates\previewtemplates\previewmenu.html:438
+#: .\templates\previewtemplates\previewmenu.html:454
 msgid "Blog"
 msgstr ""
 
@@ -468,16 +468,18 @@ msgid "Hızlı Erişim"
 msgstr ""
 
 #: .\crm\templates\preview\footer.html:117
-#: .\templates\previewtemplates\previewmenu.html:102
+#: .\templates\previewtemplates\previewmenu.html:118
 msgid "Hakkımızda"
 msgstr ""
 
 #: .\crm\templates\preview\footer.html:118
+#: .\templates\previewtemplates\previewmenu.html:484
 msgid "İletişim"
 msgstr ""
 
 #: .\crm\templates\preview\footer.html:119
 #: .\crm\templates\preview\index.html:208
+#: .\templates\previewtemplates\previewbase.html:350
 msgid "Katalog"
 msgstr ""
 
@@ -509,31 +511,55 @@ msgstr ""
 msgid "Kapat"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:23
+#: .\crm\templates\preview\iletisimformpreview.html:82
 msgid "Özel Müşteri Ekipleri ve Esnek Hizmetler"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:25
+#: .\crm\templates\preview\iletisimformpreview.html:84
 msgid ""
 "Dünya çapındaki varlığımız, üretim zaman çizelgelerinizin sorunsuz, maliyet "
 "etkin ve uyumlu bir şekilde yönetilmesini sağlar."
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:31
+#: .\crm\templates\preview\iletisimformpreview.html:91
 msgid "Broşürünü İndir"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:36
+#: .\crm\templates\preview\iletisimformpreview.html:106
+#: .\crm\templates\preview\index.html:225
+#: .\templates\previewtemplates\previewbase.html:373
+msgid "Katalog İndir"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:107
+#: .\crm\templates\preview\index.html:226
+#: .\templates\previewtemplates\previewbase.html:374
+msgid "Lütfen indirmek istediğiniz dili seçin:"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:110
+#: .\crm\templates\preview\index.html:229
+#: .\templates\previewtemplates\previewbase.html:377
+msgid "Türkçe Katalog (PDF)"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:113
+#: .\crm\templates\preview\index.html:232
+#: .\templates\previewtemplates\previewbase.html:380
+msgid "İngilizce Katalog (PDF)"
+msgstr ""
+
+#: .\crm\templates\preview\iletisimformpreview.html:118
 msgid "Teklif Talep Et"
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:38
+#: .\crm\templates\preview\iletisimformpreview.html:120
 msgid ""
 "Ucuz ürün sunmuyoruz; doğru ürünü, doğru kaliteyle ve doğru fiyatla "
 "sunuyoruz. <br> Kaliteyle tanışmak istersen bize yaz."
 msgstr ""
 
-#: .\crm\templates\preview\iletisimformpreview.html:93
+#: .\crm\templates\preview\iletisimformpreview.html:175
 msgid "Talebi Gönder"
 msgstr ""
 
@@ -627,24 +653,8 @@ msgstr ""
 #: .\crm\templates\preview\index.html:204
 #: .\crm\templates\preview\previewblog\atlasoverload.html:56
 #: .\crm\templates\preview\previewblog\zemin.html:225
-#: .\templates\previewtemplates\previewmenu.html:117
+#: .\templates\previewtemplates\previewmenu.html:133
 msgid "Ürünler"
-msgstr ""
-
-#: .\crm\templates\preview\index.html:225
-msgid "Katalog İndir"
-msgstr ""
-
-#: .\crm\templates\preview\index.html:226
-msgid "Lütfen indirmek istediğiniz dili seçin:"
-msgstr ""
-
-#: .\crm\templates\preview\index.html:229
-msgid "Türkçe Katalog (PDF)"
-msgstr ""
-
-#: .\crm\templates\preview\index.html:232
-msgid "İngilizce Katalog (PDF)"
 msgstr ""
 
 #: .\crm\templates\preview\index.html:251
@@ -2055,8 +2065,8 @@ msgid "Asansör Çözümleri"
 msgstr ""
 
 #: .\crm\templates\preview\previewblog\fan.html:142
-#: .\templates\previewtemplates\previewmenu.html:268
-#: .\templates\previewtemplates\previewmenu.html:403
+#: .\templates\previewtemplates\previewmenu.html:284
+#: .\templates\previewtemplates\previewmenu.html:419
 msgid "Havalandırma Sistemleri"
 msgstr ""
 
@@ -6481,8 +6491,8 @@ msgid "Adet:"
 msgstr ""
 
 #: .\crm\templates\productmanager\card_page.html:42
-#: .\crm\templates\urunler\uruncreateandupdate.html:135
-#: .\crm\templates\urunler\uruncreateandupdate.html:150
+#: .\crm\templates\urunler\uruncreateandupdate.html:157
+#: .\crm\templates\urunler\uruncreateandupdate.html:193
 msgid "Sil"
 msgstr ""
 
@@ -6682,7 +6692,7 @@ msgid "Resim"
 msgstr ""
 
 #: .\crm\templates\teklifler\offer_pdf.html:132
-#: .\crm\templates\urunler\uruncreateandupdate.html:178
+#: .\crm\templates\urunler\uruncreateandupdate.html:225
 msgid "Ürün"
 msgstr ""
 
@@ -6735,206 +6745,214 @@ msgstr ""
 msgid "Görseller"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:141
+#: .\crm\templates\urunler\uruncreateandupdate.html:167
 msgid "Yeni Görsel Ekle"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:159
+#: .\crm\templates\urunler\uruncreateandupdate.html:206
 msgid "Temizle"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:160
+#: .\crm\templates\urunler\uruncreateandupdate.html:207
 msgid "Kaydet"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:160
+#: .\crm\templates\urunler\uruncreateandupdate.html:207
 msgid "Oluştur"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:170
+#: .\crm\templates\urunler\uruncreateandupdate.html:217
 msgid "Ürün Listesi"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:176
+#: .\crm\templates\urunler\uruncreateandupdate.html:223
 msgid "Görsel"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:177
+#: .\crm\templates\urunler\uruncreateandupdate.html:224
 msgid "Sıra"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:179
+#: .\crm\templates\urunler\uruncreateandupdate.html:226
 msgid "Stok"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:180
+#: .\crm\templates\urunler\uruncreateandupdate.html:227
 msgid "Fiyat"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:181
+#: .\crm\templates\urunler\uruncreateandupdate.html:228
 msgid "Durum"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:182
+#: .\crm\templates\urunler\uruncreateandupdate.html:229
 msgid "İşlem"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:196
+#: .\crm\templates\urunler\uruncreateandupdate.html:242
+msgid "Görsel Yok"
+msgstr ""
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:251
 msgid "Aktif"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:198
+#: .\crm\templates\urunler\uruncreateandupdate.html:253
 msgid "Pasif"
 msgstr ""
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:203
+#: .\crm\templates\urunler\uruncreateandupdate.html:258
 msgid "Soruları Yönet"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:109
+#: .\templates\previewtemplates\previewmenu.html:125
 msgid "Kağıttanişler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:144
+#: .\templates\previewtemplates\previewmenu.html:160
 msgid "Tümünü Gör"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:164
+#: .\templates\previewtemplates\previewmenu.html:180
 msgid "Ürün bulunamadı."
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:187
+#: .\templates\previewtemplates\previewmenu.html:203
 msgid "Tüm Kategorileri Gör"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:198
+#: .\templates\previewtemplates\previewmenu.html:214
 msgid "Çözümlerimiz"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:216
-#: .\templates\previewtemplates\previewmenu.html:391
+#: .\templates\previewtemplates\previewmenu.html:232
+#: .\templates\previewtemplates\previewmenu.html:407
 msgid "LKS Horus Fotosel"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:217
+#: .\templates\previewtemplates\previewmenu.html:233
 msgid "Güvenli kapı sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:229
-#: .\templates\previewtemplates\previewmenu.html:394
+#: .\templates\previewtemplates\previewmenu.html:245
+#: .\templates\previewtemplates\previewmenu.html:410
 msgid "Atlas Aşırı Yük"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:230
+#: .\templates\previewtemplates\previewmenu.html:246
 msgid "Hassas yük ölçüm teknolojisi"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:242
-#: .\templates\previewtemplates\previewmenu.html:397
+#: .\templates\previewtemplates\previewmenu.html:258
+#: .\templates\previewtemplates\previewmenu.html:413
 msgid "Zemin"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:243
+#: .\templates\previewtemplates\previewmenu.html:259
 msgid "Yanmaz ve estetik PVC kaplamalar"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:255
-#: .\templates\previewtemplates\previewmenu.html:400
+#: .\templates\previewtemplates\previewmenu.html:271
+#: .\templates\previewtemplates\previewmenu.html:416
 msgid "Switch Sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:256
+#: .\templates\previewtemplates\previewmenu.html:272
 msgid "Limit ve güvenlik anahtar çözümleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:269
+#: .\templates\previewtemplates\previewmenu.html:285
 msgid "Sessiz ve güçlü kabin fanları"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:281
-#: .\templates\previewtemplates\previewmenu.html:406
+#: .\templates\previewtemplates\previewmenu.html:297
+#: .\templates\previewtemplates\previewmenu.html:422
 msgid "Ağırlık Paten Sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:282
+#: .\templates\previewtemplates\previewmenu.html:298
 msgid "Sessiz ve titreşimsiz TPU patenler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:294
-#: .\templates\previewtemplates\previewmenu.html:409
+#: .\templates\previewtemplates\previewmenu.html:310
+#: .\templates\previewtemplates\previewmenu.html:425
 msgid "Solid & Polistren Levha"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:295
+#: .\templates\previewtemplates\previewmenu.html:311
 msgid "Kırılmaz tavan ve duvar kaplamaları"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:307
-#: .\templates\previewtemplates\previewmenu.html:412
+#: .\templates\previewtemplates\previewmenu.html:323
+#: .\templates\previewtemplates\previewmenu.html:428
 msgid "Paslanmaz Küpeşte"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:308
+#: .\templates\previewtemplates\previewmenu.html:324
 msgid "Modüler sistem ve renk seçenekleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:320
-#: .\templates\previewtemplates\previewmenu.html:415
+#: .\templates\previewtemplates\previewmenu.html:336
+#: .\templates\previewtemplates\previewmenu.html:431
 msgid "Vibrasyon Takozları"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:322
+#: .\templates\previewtemplates\previewmenu.html:338
 msgid "Titreşim önleyici kauçuk sönümleyiciler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:334
-#: .\templates\previewtemplates\previewmenu.html:418
+#: .\templates\previewtemplates\previewmenu.html:350
+#: .\templates\previewtemplates\previewmenu.html:434
 msgid "Üçgen Anahtar"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:336
+#: .\templates\previewtemplates\previewmenu.html:352
 msgid "Standartlara uygun güvenli kilit sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:348
-#: .\templates\previewtemplates\previewmenu.html:421
+#: .\templates\previewtemplates\previewmenu.html:364
+#: .\templates\previewtemplates\previewmenu.html:437
 msgid "Dekoratif Cam"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:350
+#: .\templates\previewtemplates\previewmenu.html:366
 msgid "500 farklı desen seçeneği ile estetik kabinler"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:362
-#: .\templates\previewtemplates\previewmenu.html:424
+#: .\templates\previewtemplates\previewmenu.html:378
+#: .\templates\previewtemplates\previewmenu.html:440
 msgid "Kabin Paten Sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:364
+#: .\templates\previewtemplates\previewmenu.html:380
 msgid "Sessiz çalışma ve titreşim sönümleyici tasarım"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:375
-#: .\templates\previewtemplates\previewmenu.html:427
+#: .\templates\previewtemplates\previewmenu.html:391
+#: .\templates\previewtemplates\previewmenu.html:443
 msgid "Aydınlatma / Spot Sistemleri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:377
+#: .\templates\previewtemplates\previewmenu.html:393
 msgid "On-board driver teknolojisi ve alev almaz ABS kasa"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:435
+#: .\templates\previewtemplates\previewmenu.html:451
 msgid "Data Merkezi"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:443
+#: .\templates\previewtemplates\previewmenu.html:459
 msgid "Galeri"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:447
+#: .\templates\previewtemplates\previewmenu.html:463
 msgid "İLETİŞİM"
 msgstr ""
 
-#: .\templates\previewtemplates\previewmenu.html:463
+#: .\templates\previewtemplates\previewmenu.html:477
+msgid "Sepetim"
+msgstr ""
+
+#: .\templates\previewtemplates\previewmenu.html:494
 msgid "Dil Seçin"
 msgstr ""

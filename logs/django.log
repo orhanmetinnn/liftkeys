@@ -12756,3 +12756,93 @@ AttributeError: 'NoneType' object has no attribute 'user'
 [2026-06-07 20:35:20,101] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
 [2026-06-10 20:43:14,090] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
 [2026-06-10 20:43:41,975] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 12:48:03,919] ERROR django.request - Internal Server Error: /loginorcreate/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 1583, in loginorcreate
+    'form': form
+            ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+[2026-06-28 12:48:03,921] ERROR django.server - "POST /loginorcreate/ HTTP/1.1" 500 73998
+[2026-06-28 12:48:03,978] WARNING django.request - Not Found: /favicon.ico
+[2026-06-28 12:48:03,978] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 26878
+[2026-06-28 12:48:15,855] ERROR django.request - Internal Server Error: /loginorcreate/
+Traceback (most recent call last):
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhan\liftkeys\liftkeys\crm\views.py", line 1583, in loginorcreate
+    'form': form
+            ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+[2026-06-28 12:48:15,856] ERROR django.server - "POST /loginorcreate/ HTTP/1.1" 500 74271
+[2026-06-28 12:48:20,127] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 12:58:34,888] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:00:20,719] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:07:42,446] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:07:43,991] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:07:49,711] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:07:53,012] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:07:55,597] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:07:56,871] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:08:03,876] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:08:12,768] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:08:16,969] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:08:20,817] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:08:24,387] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:10:34,301] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:11:58,099] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:12:00,509] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:12:00,509] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:12:00,873] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+[2026-06-28 13:12:00,910] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:12:01,185] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+[2026-06-28 13:12:06,774] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:12:06,774] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:12:06,822] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:12:06,854] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+[2026-06-28 13:12:10,064] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:12:10,064] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:12:10,086] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:12:10,132] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+[2026-06-28 13:12:11,876] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:12:11,876] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:12:11,939] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:12:11,949] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+[2026-06-28 13:12:11,971] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+[2026-06-28 13:12:15,959] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:12:15,959] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:12:15,999] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:12:16,028] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+[2026-06-28 13:12:16,070] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+[2026-06-28 13:12:18,197] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:12:18,197] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:12:18,292] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:12:18,307] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+[2026-06-28 13:12:18,398] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+[2026-06-28 13:12:23,166] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:12:23,166] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:12:23,229] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:12:23,239] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+[2026-06-28 13:12:23,305] WARNING django.server - "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+[2026-06-28 13:18:05,768] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 13:18:06,503] WARNING django.request - Not Found: /favicon.ico
+[2026-06-28 13:18:06,503] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 26878
+[2026-06-28 13:18:16,669] WARNING django.server - "GET /static/img/default-category.png HTTP/1.1" 404 1999
+[2026-06-28 13:20:52,748] WARNING django.request - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2026-06-28 13:20:52,748] WARNING django.server - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 26989
+[2026-06-28 13:20:52,954] WARNING django.server - "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+[2026-06-28 13:20:52,978] WARNING django.server - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+[2026-06-28 13:24:22,517] WARNING django.server - "GET /static/img/default-category.png HTTP/1.1" 404 1999
+[2026-06-28 13:24:22,535] WARNING django.server - "GET /static/img/default-category.png HTTP/1.1" 404 1999
+[2026-06-28 14:56:49,430] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978
+[2026-06-28 20:57:40,589] WARNING django.server - "GET /static/font/NotoKufiArabic/NotoKufiArabic-Regular.ttf HTTP/1.1" 404 2065
+[2026-06-28 20:58:09,436] WARNING django.server - "GET /static/image/favicon.png HTTP/1.1" 404 1978

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-03h*26-ff0gikg=qodz$^r#s9+55rw3o$0yu!dq-=7#1^5wu_j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False  # Canlı sunucuda False yapmayı unutma
 
 
 
@@ -343,6 +343,12 @@ LANGUAGE_COOKIE_DOMAIN = None
 
 # === ROSETTA (ÇEVİRİ PANELİ) AYARLARI ===
 ROSETTA_SHOW_AT_ADMIN_PANEL = True # Django admin panelinde Rosetta sekmesi oluşturur
+
+# === WAGTAIL CACHE EXCLUDE PATHS ===
+# Dil yönlendirmesinin (Accept-Language / Cookie) cache'lenmesini önlemek için kök dizini hariç tutuyoruz.
+WAGTAIL_CACHE_EXCLUDE_PATHS = [
+    r'^/$',
+]
 ROSETTA_REQUIRE_AUTHENTICATION = True # Sadece giriş yapmış kullanıcılar görebilir
 
 ROSETTA_AUTO_COMPILE = True # .po dosyaları kaydedildiğinde otomatik olarak .mo'ya çevirir

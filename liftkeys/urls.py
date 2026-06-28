@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.utils.http import url_has_allowed_host_and_scheme
 from django.utils.translation import check_for_language
 from django.views.decorators.http import require_POST
+from django.views.decorators.cache import never_cache
 from django.views.generic import RedirectView  # Yönlendirme (Redirect) modülü eklendi
 import re
 
@@ -43,15 +44,16 @@ def custom_set_language(request):
             max_age=settings.LANGUAGE_COOKIE_AGE,
             path=settings.LANGUAGE_COOKIE_PATH,
             domain=settings.LANGUAGE_COOKIE_DOMAIN,
-            secure=getattr(settings, 'LANGUAGE_COOKIE_SECURE', False),
+            secure=request.is_secure(),
             httponly=getattr(settings, 'LANGUAGE_COOKIE_HTTPONLY', False),
             samesite=getattr(settings, 'LANGUAGE_COOKIE_SAMESITE', 'Lax'),
         )
     return response
 
+@never_cache
 def root_language_handler(request):
     """
-    Anasayfaya (/) gelen isteği yakalar.
+    Anasayfaya (/) gelen isteği yakalar ve dil ön ekine (örnek: /tr/, /en/) yönlendirir.
     """
     supported_codes = [l[0] for l in settings.LANGUAGES]
     default_lang = settings.LANGUAGE_CODE  # 'tr'
@@ -59,12 +61,9 @@ def root_language_handler(request):
     # 1. Cookie - kullanıcının set_language POST ile kaydettiği dil tercihi
     cookie_lang = request.COOKIES.get(settings.LANGUAGE_COOKIE_NAME, '').split('-')[0].lower()
     if cookie_lang:
-        if cookie_lang == default_lang:
-            # ÇÖZÜM 1: request.path ("/") yerine Wagtail'in beklediği boş string ("") gönderildi.
-            return wagtail_views.serve(request, '')
         if cookie_lang in supported_codes:
             return redirect(f'/{cookie_lang}/')
-        return redirect('/en/')  # desteklenmeyen cookie değeri İngilizce
+        return redirect(f'/{default_lang}/')
 
     # 2. Accept-Language başlığı tarayıcı dil tercihi
     accept = request.META.get('HTTP_ACCEPT_LANGUAGE', '')
@@ -73,18 +72,15 @@ def root_language_handler(request):
         if not m:
             continue
         lang = m.group(1).lower()
-        if lang == default_lang:
-            # ÇÖZÜM 1: request.path ("/") yerine boş string ("") gönderildi.
-            return wagtail_views.serve(request, '')
         if lang in supported_codes:
             return redirect(f'/{lang}/')
 
-    # 3. Eşleşen dil yok -> /en/ fallback
-    return redirect('/en/')
+    # 3. Eşleşen dil yok -> default dil ön eki
+    return redirect(f'/{default_lang}/')
 
 # 2. STANDART URL'LER
 urlpatterns = [
-    path('i18n/setlang/', custom_set_language, name='set_language'),
+    path('i18n/setlang/', custom_set_language, name='custom_set_language'),
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('rosetta/', include('rosetta.urls')),
@@ -102,19 +98,13 @@ urlpatterns += [
     path('', root_language_handler, name='root_language_handler'),
 ]
 
-# 5. ÇÖZÜM 2: /tr/ İÇİN MANUEL TANIMLAMA YERİNE OTOMATİK SEO YÖNLENDİRMESİ
-# Wagtail URL'lerini iki kere çağırmak yerine, /tr/ ile başlayan URL'leri prefix'siz 
-# orijinal Türkçe URL'sine yönlendiriyoruz (Örn: /tr/iletisim -> /iletisim)
-urlpatterns += [
-    re_path(r'^tr/(?P<path>.*)$', RedirectView.as_view(url='/%(path)s', permanent=True)),
-]
-
-# 6. DİĞER SAYFALAR İÇİN WAGTAIL VE I18N (/en/, /ar/ vb.)
+# 5. DİĞER SAYFALAR İÇİN WAGTAIL VE I18N (/tr/, /en/, /ar/ vb.)
+# prefix_default_language=True yaparak varsayılan dil olan Türkçe için de ön ek (/tr/) kullanılmasını zorunlu kılıyoruz.
+# Böylece diller arası çakışmalar ve tarayıcı dilinden kaynaklı yönlendirme hataları tamamen çözülür.
 urlpatterns += i18n_patterns(
     path('search/', include('crm.urls')), 
     path('', include('crm.urls')), 
     path('', include(wagtail_urls)),
     
-    # TR için otomatik ön eki iptal eder (Ana sayfanızın / açılması için)
-    prefix_default_language=False,
+    prefix_default_language=True,
 )

@@ -514,6 +514,12 @@ class ProductMarketImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="market_images")
     image = models.ImageField(upload_to="product_market_images/")
     alt_text = models.CharField(max_length=255, blank=True, null=True, verbose_name="Alternatif Metin")
+    order = models.PositiveIntegerField(default=0, verbose_name="Sıralama")
+
+    class Meta:
+        ordering = ['order', 'id']
+        verbose_name = "Ürün Market Görseli"
+        verbose_name_plural = "Ürün Market Görselleri"
 
     def __str__(self):
         return f"{self.product.name} - {self.alt_text or 'Market Görseli'}"

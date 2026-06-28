@@ -484,14 +484,16 @@ class ProductForm(forms.ModelForm):
 class ProductMarketImageForm(forms.ModelForm):
     class Meta:
         model = ProductMarketImage
-        fields = ["image", "alt_text"]
+        fields = ["image", "alt_text", "order"]
         widgets = {
             "image": forms.ClearableFileInput(attrs={"class": "form-control"}),
             "alt_text": forms.TextInput(attrs={"class": "form-control", "placeholder": "Alternatif metin (SEO)"}),
+            "order": forms.NumberInput(attrs={"class": "form-control", "placeholder": "Sıralama (Örn: 0, 1, 2)", "min": "0"}),
         }
         labels = {
             "image": "Market Görseli",
             "alt_text": "Alternatif Metin",
+            "order": "Sıralama",
         }
 
 ProductMarketImageFormSet = inlineformset_factory(

@@ -40,7 +40,5 @@ def change_lang(context, lang=None):
         else:
             break
 
-    # Hedef dil prefix'ini ekle
-    if lang == default_lang:
-        return path           # Türkçe: prefix yok  →  /solid/
-    return f'/{lang}{path}'   # Diğer:  /{lang}/path → /ar/solid/
+    # Hedef dil prefix'ini ekle (TR dahil tüm diller ön ek alır)
+    return f'/{lang}{path}'

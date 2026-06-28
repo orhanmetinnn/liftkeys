@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.conf import settings
 from django.utils import translation
 from wagtail.models import Locale
-from .models import ProductPage
+from .models import ProductPage, BlogPage, BlogIndexPage
 
 class StaticViewSitemap(Sitemap):
     priority = 0.5
@@ -81,6 +81,53 @@ class ProductPageSitemap(Sitemap):
                     translation = obj.get_translation(locale)
                     if translation and translation.live:
                         alt_loc = f"{proto}://{domain}{translation.url}"
+                        alternates_list.append({
+                            'lang_code': locale.language_code,
+                            'location': alt_loc
+                        })
+                        
+                        if locale.language_code == 'en':
+                            alternates_list.append({
+                                'lang_code': 'x-default',
+                                'location': alt_loc
+                            })
+                except Exception:
+                    continue
+            
+            url_info['alternates'] = alternates_list
+            
+        return urls
+
+
+class BlogPageSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.7
+
+    def items(self):
+        return list(BlogIndexPage.objects.live().public()) + list(BlogPage.objects.live().public())
+
+    def location(self, obj):
+        return obj.url
+
+    def lastmod(self, obj):
+        return obj.last_published_at
+
+    def get_urls(self, page=1, site=None, protocol=None):
+        urls = super().get_urls(page, site, protocol)
+        domain = site.domain if site else '127.0.0.1:8000'
+        proto = protocol or 'http'
+        
+        for url_info in urls:
+            obj = url_info.get('item')
+            if not obj:
+                continue
+
+            alternates_list = []
+            for locale in Locale.objects.all():
+                try:
+                    translation_obj = obj.get_translation(locale)
+                    if translation_obj and translation_obj.live:
+                        alt_loc = f"{proto}://{domain}{translation_obj.url}"
                         alternates_list.append({
                             'lang_code': locale.language_code,
                             'location': alt_loc

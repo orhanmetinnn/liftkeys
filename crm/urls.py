@@ -2,13 +2,14 @@ from django.urls import path, re_path
 from . import views
 from django.conf.urls import handler404
 from .views import custom_404  # views.py'deki fonksiyonu import et
-from .sitemaps import StaticViewSitemap, ProductPageSitemap
+from .sitemaps import StaticViewSitemap, ProductPageSitemap, BlogPageSitemap
 from django.contrib.sitemaps.views import sitemap
 from django.views.generic import RedirectView, TemplateView
 handler404 = custom_404
 sitemaps = {
     "static": StaticViewSitemap,
     "products": ProductPageSitemap,
+    "blog": BlogPageSitemap,
 }
 urlpatterns = [
     path('employeecreate/', views.employee_manage_view, name='employee_create'),

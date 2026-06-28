@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-07 18:02+0300\n"
+"POT-Creation-Date: 2026-06-28 14:56+0300\n"
 "PO-Revision-Date: 2026-06-07 18:03+0300\n"
 "Last-Translator: Orhan Metin <orhanmetinnn@outlook.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,35 +24,35 @@ msgstr ""
 msgid "Kategoriler"
 msgstr "Kategorien"
 
-#: .\crm\forms.py:861
+#: .\crm\forms.py:863
 msgid "Lütfen bu alanı boş bırakın"
 msgstr "Bitte lassen Sie dieses Feld leer"
 
-#: .\crm\forms.py:868
+#: .\crm\forms.py:870
 msgid "Lütfen robot olmadığınızı doğrulayın."
 msgstr "Bitte stellen Sie sicher, dass Sie kein Roboter sind."
 
-#: .\crm\forms.py:879
+#: .\crm\forms.py:881
 msgid "Adınızı giriniz"
 msgstr "Gib deinen Namen ein"
 
-#: .\crm\forms.py:885
+#: .\crm\forms.py:887
 msgid "E-posta adresinizi giriniz"
 msgstr "Gib deine E-Mail-Adresse ein"
 
-#: .\crm\forms.py:891
+#: .\crm\forms.py:893
 msgid "Konu giriniz"
 msgstr "Betreff eingeben"
 
-#: .\crm\forms.py:896
+#: .\crm\forms.py:898
 msgid "Telefon numaranızı giriniz"
 msgstr "Gib deine Telefonnummer ein"
 
-#: .\crm\forms.py:902
+#: .\crm\forms.py:904
 msgid "Bize birkaç kelime yazın"
 msgstr "Schreib uns ein paar Worte"
 
-#: .\crm\forms.py:915
+#: .\crm\forms.py:917
 msgid "Form gönderiminde şüpheli bir işlem tespit edildi."
 msgstr ""
 "Beim Absenden des Formulars wurde eine verdächtige Transaktion festgestellt."
@@ -64,15 +64,19 @@ msgstr "Ungültige Anfrage"
 #: .\crm\templates\400.html:41
 msgid ""
 "\n"
-"            Tarayıcınızın gönderdiği istek sunucumuz tarafından anlaşılamadı. \n"
-"            Lütfen adresi kontrol edip tekrar deneyin veya ana sayfaya geri dönün.\n"
+"            Tarayıcınızın gönderdiği istek sunucumuz tarafından "
+"anlaşılamadı. \n"
+"            Lütfen adresi kontrol edip tekrar deneyin veya ana sayfaya geri "
+"dönün.\n"
 "            "
 msgstr ""
 "\n"
-"Die von Ihrem Browser gesendete Anfrage konnte von unserem Server nicht verstanden werden.\n"
+"Die von Ihrem Browser gesendete Anfrage konnte von unserem Server nicht "
+"verstanden werden.\n"
 "\n"
 "\n"
-"Bitte überprüfen Sie die Adresse und versuchen Sie es erneut oder kehren Sie zur Startseite zurück."
+"Bitte überprüfen Sie die Adresse und versuchen Sie es erneut oder kehren Sie "
+"zur Startseite zurück."
 
 #: .\crm\templates\400.html:46 .\crm\templates\403.html:46
 #: .\crm\templates\404.html:46 .\crm\templates\500.html:46
@@ -87,15 +91,18 @@ msgstr "Zugriff verweigert"
 #: .\crm\templates\403.html:41
 msgid ""
 "\n"
-"            Üzgünüz, bu sayfayı görüntülemek için gerekli yetkilere sahip değilsiniz. \n"
+"            Üzgünüz, bu sayfayı görüntülemek için gerekli yetkilere sahip "
+"değilsiniz. \n"
 "            Lütfen yetkili bir hesapla giriş yapın veya ana sayfaya dönün.\n"
 "            "
 msgstr ""
 "\n"
-"Entschuldigung, Sie haben nicht die erforderlichen Berechtigungen, um diese Seite anzuzeigen.\n"
+"Entschuldigung, Sie haben nicht die erforderlichen Berechtigungen, um diese "
+"Seite anzuzeigen.\n"
 "\n"
 "\n"
-"Bitte melden Sie sich mit einem autorisierten Konto an oder kehren Sie zur Startseite zurück."
+"Bitte melden Sie sich mit einem autorisierten Konto an oder kehren Sie zur "
+"Startseite zurück."
 
 #: .\crm\templates\404.html:38
 msgid "Sayfa Bulunamadı"
@@ -121,23 +128,26 @@ msgstr "Serverfehler"
 msgid ""
 "\n"
 "            Üzgünüz! Sunucularımızda beklenmeyen bir sorun meydana geldi. \n"
-"            Teknik ekibimiz sorunu çözmek için çalışıyor. Lütfen kısa bir süre sonra tekrar deneyin veya ana sayfaya dönün.\n"
+"            Teknik ekibimiz sorunu çözmek için çalışıyor. Lütfen kısa bir "
+"süre sonra tekrar deneyin veya ana sayfaya dönün.\n"
 "            "
 msgstr ""
 "\n"
-"Entschuldigung! Auf unseren Servern ist ein unerwarteter Fehler aufgetreten.\n"
+"Entschuldigung! Auf unseren Servern ist ein unerwarteter Fehler "
+"aufgetreten.\n"
 "\n"
 "\n"
-"Unser technisches Team arbeitet an der Lösung des Problems. Bitte versuchen Sie es in Kürze erneut oder kehren Sie zur Startseite zurück."
+"Unser technisches Team arbeitet an der Lösung des Problems. Bitte versuchen "
+"Sie es in Kürze erneut oder kehren Sie zur Startseite zurück."
 
 #: .\crm\templates\blog\blog_page.html:18
 #: .\crm\templates\preview\previewblog\atlasoverload.html:50
-#: .\templates\previewtemplates\previewmenu.html:96
+#: .\templates\previewtemplates\previewmenu.html:112
 msgid "Ana Sayfa"
 msgstr "Zuhause"
 
 #: .\crm\templates\blog\blog_page.html:31
-#: .\templates\previewtemplates\previewmenu.html:438
+#: .\templates\previewtemplates\previewmenu.html:454
 msgid "Blog"
 msgstr "Blog"
 
@@ -183,8 +193,8 @@ msgstr "Über Liftkeys"
 
 #: .\crm\templates\preview\about.html:52
 msgid ""
-"Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar"
-" ile sektörde öncü bir marka olarak hizmet vermektedir."
+"Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar "
+"ile sektörde öncü bir marka olarak hizmet vermektedir."
 msgstr ""
 "Liftkeys ist mit seinen Spezialanwendungen und innovativen Ansätzen im "
 "Bereich Aufzüge eine führende Marke in der Branche."
@@ -215,11 +225,11 @@ msgstr "Branchenspezifische Lösungen, die auf Innovation basieren"
 
 #: .\crm\templates\preview\about.html:72
 msgid ""
-"Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar"
-" ile sektörde öncü bir marka olarak hizmet vermektedir. Asansör sektöründeki"
-" tecrübesini; matbu basım, asansör anahtarı, etiket imalatı ve güvenli cam "
-"alanlarına taşıyarak sektörün reklam çalışmalarına inovatif bir değer katmak"
-" amacıyla kurulmuştur."
+"Liftkeys, asansör alanında yaptığı özel uygulamalar ve yenilikçi yaklaşımlar "
+"ile sektörde öncü bir marka olarak hizmet vermektedir. Asansör sektöründeki "
+"tecrübesini; matbu basım, asansör anahtarı, etiket imalatı ve güvenli cam "
+"alanlarına taşıyarak sektörün reklam çalışmalarına inovatif bir değer katmak "
+"amacıyla kurulmuştur."
 msgstr ""
 "Liftkeys ist mit seinen Spezialanwendungen und innovativen Ansätzen im "
 "Bereich Aufzüge eine führende Marke in der Branche. Das Unternehmen wurde "
@@ -231,18 +241,17 @@ msgstr ""
 #: .\crm\templates\preview\about.html:81
 msgid ""
 "Uzun süredir asansör sektöründe çeşitli görevlerde hizmet etmiş, asansör "
-"komponentleri konusunda tecrübeli bir kadro ile çalışmalarını "
-"sürdürmektedir."
+"komponentleri konusunda tecrübeli bir kadro ile çalışmalarını sürdürmektedir."
 msgstr ""
 "Er war lange Zeit in verschiedenen Aufgaben in der Aufzugsbranche tätig und "
-"arbeitet weiterhin mit erfahrenen Mitarbeitern im Bereich Aufzugskomponenten"
-" zusammen."
+"arbeitet weiterhin mit erfahrenen Mitarbeitern im Bereich Aufzugskomponenten "
+"zusammen."
 
 #: .\crm\templates\preview\about.html:87
 msgid ""
-"Asansör sektörüne özel kurumsal kimlik çalışması ile yeni kurulmuş veya yeni"
-" bir yüze sahip olmak isteyen bütün firmalara ürünleri ile destek vermekte "
-"ve markaların kendini en doğru şekilde yansıtacağı ürünler sunmaktadır."
+"Asansör sektörüne özel kurumsal kimlik çalışması ile yeni kurulmuş veya yeni "
+"bir yüze sahip olmak isteyen bütün firmalara ürünleri ile destek vermekte ve "
+"markaların kendini en doğru şekilde yansıtacağı ürünler sunmaktadır."
 msgstr ""
 "Es unterstützt alle Unternehmen, die neu gegründet wurden oder ein neues "
 "Gesicht haben möchten, durch die für die Aufzugsbranche spezifische "
@@ -394,8 +403,8 @@ msgstr "Struktur der Organisation"
 #: .\crm\templates\preview\contactpage.html:184
 msgid "İhtiyacınıza en uygun departmanımızla iletişime geçebilirsiniz."
 msgstr ""
-"Sie können sich an unsere Abteilung wenden, die Ihren Bedürfnissen am besten"
-" entspricht."
+"Sie können sich an unsere Abteilung wenden, die Ihren Bedürfnissen am besten "
+"entspricht."
 
 #: .\crm\templates\preview\contactpage.html:204
 msgid "GENEL YÖNETİM"
@@ -495,8 +504,8 @@ msgstr ""
 "Liftkeys ist ein Hersteller von <strong>Aufzugsersatzteilen und Zubehör mit "
 "Sitz in der Türkei</strong>. Wir sind bestrebt, die Bedürfnisse der Branche "
 "zu erfüllen, indem wir unseren Kunden <strong>hochwertige</strong>, "
-"<strong>zuverlässige</strong> und <strong>langlebige "
-"Aufzugslösungen</strong> anbieten."
+"<strong>zuverlässige</strong> und <strong>langlebige Aufzugslösungen</"
+"strong> anbieten."
 
 #: .\crm\templates\preview\footer.html:98
 #: .\crm\templates\preview\kagittanisler.html:81
@@ -512,16 +521,18 @@ msgid "Hızlı Erişim"
 msgstr "Schneller Zugriff"
 
 #: .\crm\templates\preview\footer.html:117
-#: .\templates\previewtemplates\previewmenu.html:102
+#: .\templates\previewtemplates\previewmenu.html:118
 msgid "Hakkımızda"
 msgstr "Über uns"
 
 #: .\crm\templates\preview\footer.html:118
+#: .\templates\previewtemplates\previewmenu.html:484
 msgid "İletişim"
 msgstr "Kommunikation"
 
 #: .\crm\templates\preview\footer.html:119
 #: .\crm\templates\preview\index.html:208
+#: .\templates\previewtemplates\previewbase.html:350
 msgid "Katalog"
 msgstr "Katalog"
 
@@ -553,11 +564,11 @@ msgstr "Auf YouTube öffnen"
 msgid "Kapat"
 msgstr "Schliessen"
 
-#: .\crm\templates\preview\iletisimformpreview.html:23
+#: .\crm\templates\preview\iletisimformpreview.html:82
 msgid "Özel Müşteri Ekipleri ve Esnek Hizmetler"
 msgstr "Engagierte Kundenteams und flexible Services"
 
-#: .\crm\templates\preview\iletisimformpreview.html:25
+#: .\crm\templates\preview\iletisimformpreview.html:84
 msgid ""
 "Dünya çapındaki varlığımız, üretim zaman çizelgelerinizin sorunsuz, maliyet "
 "etkin ve uyumlu bir şekilde yönetilmesini sağlar."
@@ -565,15 +576,39 @@ msgstr ""
 "Unsere weltweite Präsenz stellt sicher, dass Ihre Produktionszeiten "
 "reibungslos, kostengünstig und harmonisch verwaltet werden."
 
-#: .\crm\templates\preview\iletisimformpreview.html:31
+#: .\crm\templates\preview\iletisimformpreview.html:91
 msgid "Broşürünü İndir"
 msgstr "Broschüre herunterladen"
 
-#: .\crm\templates\preview\iletisimformpreview.html:36
+#: .\crm\templates\preview\iletisimformpreview.html:106
+#: .\crm\templates\preview\index.html:225
+#: .\templates\previewtemplates\previewbase.html:373
+msgid "Katalog İndir"
+msgstr "Katalog herunterladen"
+
+#: .\crm\templates\preview\iletisimformpreview.html:107
+#: .\crm\templates\preview\index.html:226
+#: .\templates\previewtemplates\previewbase.html:374
+msgid "Lütfen indirmek istediğiniz dili seçin:"
+msgstr "Bitte wählen Sie die Sprache aus, die Sie herunterladen möchten:"
+
+#: .\crm\templates\preview\iletisimformpreview.html:110
+#: .\crm\templates\preview\index.html:229
+#: .\templates\previewtemplates\previewbase.html:377
+msgid "Türkçe Katalog (PDF)"
+msgstr "Türkischer Katalog (PDF)"
+
+#: .\crm\templates\preview\iletisimformpreview.html:113
+#: .\crm\templates\preview\index.html:232
+#: .\templates\previewtemplates\previewbase.html:380
+msgid "İngilizce Katalog (PDF)"
+msgstr "Englischer Katalog (PDF)"
+
+#: .\crm\templates\preview\iletisimformpreview.html:118
 msgid "Teklif Talep Et"
 msgstr "Fordern Sie ein Angebot an"
 
-#: .\crm\templates\preview\iletisimformpreview.html:38
+#: .\crm\templates\preview\iletisimformpreview.html:120
 msgid ""
 "Ucuz ürün sunmuyoruz; doğru ürünü, doğru kaliteyle ve doğru fiyatla "
 "sunuyoruz. <br> Kaliteyle tanışmak istersen bize yaz."
@@ -582,7 +617,7 @@ msgstr ""
 "der richtigen Qualität und dem richtigen Preis. <br>Schreiben Sie uns, wenn "
 "Sie Wert auf Qualität legen."
 
-#: .\crm\templates\preview\iletisimformpreview.html:93
+#: .\crm\templates\preview\iletisimformpreview.html:175
 msgid "Talebi Gönder"
 msgstr "Anfrage abschicken"
 
@@ -592,8 +627,8 @@ msgid ""
 "Liftkeys Asansör Sistemleri & Çözümleri | Güvenilir, Sertifikalı ve Global "
 "Ürünler"
 msgstr ""
-"Liftkeys Aufzugssysteme & Lösungen | Zuverlässige, Zertifizierte und Globale"
-" Produkte"
+"Liftkeys Aufzugssysteme & Lösungen | Zuverlässige, Zertifizierte und Globale "
+"Produkte"
 
 #: .\crm\templates\preview\index.html:10
 #: .\crm\templates\preview\kagittanisler.html:10
@@ -601,13 +636,17 @@ msgstr ""
 msgid ""
 "\n"
 "Liftkeys, güvenilir ve yenilikçi asansör sistemleri çözümleri sunar.\n"
-"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve zemini,\n"
-"elektronik ve mekanik bileşenlerle her yolculuğu güvenli ve konforlu hale getiriyoruz.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
+"elektronik ve mekanik bileşenlerle her yolculuğu güvenli ve konforlu hale "
+"getiriyoruz.\n"
 msgstr ""
 "\n"
 "Liftkeys bietet zuverlässige und innovative Lösungen für Aufzugssysteme.\n"
-"Überlastsysteme, Bremssysteme, Fotozellen, Handläufe, Kabinenglas und Boden,\n"
-"Wir machen jede Reise mit elektronischen und mechanischen Komponenten sicher und komfortabel.\n"
+"Überlastsysteme, Bremssysteme, Fotozellen, Handläufe, Kabinenglas und "
+"Boden,\n"
+"Wir machen jede Reise mit elektronischen und mechanischen Komponenten sicher "
+"und komfortabel.\n"
 
 #: .\crm\templates\preview\index.html:20
 #: .\crm\templates\preview\kagittanisler.html:20
@@ -632,13 +671,17 @@ msgstr "Liftkeys | Aufzugssysteme, Ersatzteile und Lösungen"
 #: .\crm\templates\preview\previewblog\fotosel.html:30
 msgid ""
 "\n"
-"Türkiye merkezli Liftkeys, asansör sektöründe yenilikçi ve güvenli çözümler sunar.\n"
-"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve zemini,\n"
+"Türkiye merkezli Liftkeys, asansör sektöründe yenilikçi ve güvenli çözümler "
+"sunar.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
 "elektronik ve mekanik bileşenlerle global tedarikçi.\n"
 msgstr ""
 "\n"
-"Liftkeys mit Sitz in der Türkei bietet innovative und sichere Lösungen im Aufzugssektor.\n"
-"Überlastsysteme, Bremssysteme, Fotozellen, Handläufe, Kabinenglas und Boden,\n"
+"Liftkeys mit Sitz in der Türkei bietet innovative und sichere Lösungen im "
+"Aufzugssektor.\n"
+"Überlastsysteme, Bremssysteme, Fotozellen, Handläufe, Kabinenglas und "
+"Boden,\n"
 "globaler Anbieter von elektronischen und mechanischen Komponenten.\n"
 
 #: .\crm\templates\preview\index.html:40
@@ -652,13 +695,17 @@ msgstr "Liftkeys | Zuverlässige Aufzugssysteme"
 #: .\crm\templates\preview\previewblog\fotosel.html:43
 msgid ""
 "\n"
-"Liftkeys, yüksek kalite ve güvenlik standartlarıyla asansör parçaları üretir.\n"
-"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve zemini,\n"
+"Liftkeys, yüksek kalite ve güvenlik standartlarıyla asansör parçaları "
+"üretir.\n"
+"Aşırı yük sistemleri, fren sistemleri, fotoseller, küpeşteler, kabin camı ve "
+"zemini,\n"
 "elektronik ve mekanik bileşenlerle çözümler.\n"
 msgstr ""
 "\n"
-"Liftkeys stellt Aufzugsteile mit hohen Qualitäts- und Sicherheitsstandards her.\n"
-"Überlastsysteme, Bremssysteme, Fotozellen, Handläufe, Kabinenglas und Boden,\n"
+"Liftkeys stellt Aufzugsteile mit hohen Qualitäts- und Sicherheitsstandards "
+"her.\n"
+"Überlastsysteme, Bremssysteme, Fotozellen, Handläufe, Kabinenglas und "
+"Boden,\n"
 "Lösungen mit elektronischen und mechanischen Komponenten.\n"
 
 #: .\crm\templates\preview\index.html:177
@@ -686,39 +733,21 @@ msgid ""
 "daha güvenli ve konforlu çalışır."
 msgstr ""
 "Liftkeys ist ein zuverlässiger Partner von Kabinenherstellern und "
-"Montagefirmen im Bereich <strong>Aufzugssysteme</strong><strong>, "
-"Kabinen,</strong> <strong>Aufzugsausrüstung und "
-"<strong>Ersatzteile</strong></strong> mit hohen Qualitäts- und "
-"Sicherheitsstandards. <br><strong >Kabinenhersteller, Ersatzteilhersteller, "
-"Ersatzteilhersteller</strong>, <br><strong>Überlastsysteme, Bremssysteme, "
-"Fotozellen, Handläufe, Rollschuhe und Kunststoffteile, Kabinenglas, "
-"Kabinenboden, Gummiausrüstung, Aufzugsschilder mit Beleuchtung, elektrische "
-"und mechanische Lösungen — Ihre Aufzüge laufen sicherer</strong> und "
-"komfortabler."
+"Montagefirmen im Bereich <strong>Aufzugssysteme</strong><strong>, Kabinen,</"
+"strong> <strong>Aufzugsausrüstung und <strong>Ersatzteile</strong></strong> "
+"mit hohen Qualitäts- und Sicherheitsstandards. <br><strong "
+">Kabinenhersteller, Ersatzteilhersteller, Ersatzteilhersteller</strong>, "
+"<br><strong>Überlastsysteme, Bremssysteme, Fotozellen, Handläufe, Rollschuhe "
+"und Kunststoffteile, Kabinenglas, Kabinenboden, Gummiausrüstung, "
+"Aufzugsschilder mit Beleuchtung, elektrische und mechanische Lösungen — Ihre "
+"Aufzüge laufen sicherer</strong> und komfortabler."
 
 #: .\crm\templates\preview\index.html:204
 #: .\crm\templates\preview\previewblog\atlasoverload.html:56
 #: .\crm\templates\preview\previewblog\zemin.html:225
-#: .\templates\previewtemplates\previewmenu.html:117
+#: .\templates\previewtemplates\previewmenu.html:133
 msgid "Ürünler"
 msgstr "Produkte"
-
-#: .\crm\templates\preview\index.html:225
-#| msgid "Kataloğu İndir"
-msgid "Katalog İndir"
-msgstr "Katalog herunterladen"
-
-#: .\crm\templates\preview\index.html:226
-msgid "Lütfen indirmek istediğiniz dili seçin:"
-msgstr "Bitte wählen Sie die Sprache aus, die Sie herunterladen möchten:"
-
-#: .\crm\templates\preview\index.html:229
-msgid "Türkçe Katalog (PDF)"
-msgstr "Türkischer Katalog (PDF)"
-
-#: .\crm\templates\preview\index.html:232
-msgid "İngilizce Katalog (PDF)"
-msgstr "Englischer Katalog (PDF)"
 
 #: .\crm\templates\preview\index.html:251
 msgid "Güvenilir Çözümler"
@@ -816,8 +845,8 @@ msgid ""
 "parça ve aksesuar üreticisidir.</strong> Dünya genelindeki asansör "
 "firmalarına <strong>yüksek kaliteli</strong>, <strong>dayanıklı</strong> ve "
 "maliyet avantajı sağlayan çözümler sunmaktayız. Ürün portföyümüzde, farklı "
-"ihtiyaçlara yönelik üç ana kategori bulunmaktadır: <strong>Mekanik</strong>,"
-" <strong>Dekoratif</strong> ve <strong>Elektronik</strong> Ürün Grupları."
+"ihtiyaçlara yönelik üç ana kategori bulunmaktadır: <strong>Mekanik</strong>, "
+"<strong>Dekoratif</strong> ve <strong>Elektronik</strong> Ürün Grupları."
 msgstr ""
 "<strong>Liftkeys</strong> ist ein zuverlässiger Hersteller von "
 "<strong>Aufzugsteilen</strong> und Zubehör mit Sitz in der Türkei. Wir "
@@ -918,15 +947,15 @@ msgid ""
 "<strong>Liftkeys</strong>, Türkiye merkezli, <strong>güvenilir ve yenilikçi "
 "asansör parça üreticisi</strong> olarak global pazarda faaliyet "
 "göstermektedir. Dünya genelindeki asansör firmalarına <strong>yüksek "
-"kaliteli</strong>, <strong>dayanıklı</strong> ve <strong>ekonomik "
-"çözümler</strong> sunuyoruz. Geniş ürün yelpazemizde <strong>asansör "
-"aydınlatma sistemleri</strong>, <strong>fotoseller</strong>, <strong>el "
-"tutamakları</strong>, <strong>PVC zemin kaplamaları</strong>, "
-"<strong>bakımsız bataryalar</strong>, <strong>asansör fanları</strong> ve "
-"çeşitli <strong>mekanik ile elektronik asansör bileşenleri</strong> "
-"bulunmaktadır. Müşterilerimizin farklı ihtiyaçlarına özel çözümler "
-"geliştirerek <strong>asansör güvenliği, enerji verimliliği ve "
-"performansını</strong> artırmayı hedefliyoruz."
+"kaliteli</strong>, <strong>dayanıklı</strong> ve <strong>ekonomik çözümler</"
+"strong> sunuyoruz. Geniş ürün yelpazemizde <strong>asansör aydınlatma "
+"sistemleri</strong>, <strong>fotoseller</strong>, <strong>el tutamakları</"
+"strong>, <strong>PVC zemin kaplamaları</strong>, <strong>bakımsız "
+"bataryalar</strong>, <strong>asansör fanları</strong> ve çeşitli "
+"<strong>mekanik ile elektronik asansör bileşenleri</strong> bulunmaktadır. "
+"Müşterilerimizin farklı ihtiyaçlarına özel çözümler geliştirerek "
+"<strong>asansör güvenliği, enerji verimliliği ve performansını</strong> "
+"artırmayı hedefliyoruz."
 msgstr ""
 "<strong>Liftkeys ist auf dem Weltmarkt als <strong>zuverlässiger und "
 "innovativer Hersteller von Aufzugsteilen</strong> mit Sitz in der Türkei "
@@ -973,8 +1002,8 @@ msgstr "RUFEN WIR DICH AN"
 #: .\crm\templates\preview\index.html:577
 #: .\crm\templates\preview\index.html:674
 msgid ""
-"Kabin güvenliği için hassas ölçüm yapan asansör aşırı yük (overload) sistemi"
-" ve yük sensörü"
+"Kabin güvenliği için hassas ölçüm yapan asansör aşırı yük (overload) sistemi "
+"ve yük sensörü"
 msgstr ""
 "Aufzugsüberlastsystem und Lastsensor zur Präzisionsmessung für die "
 "Kabinensicherheit"
@@ -995,12 +1024,12 @@ msgid ""
 msgstr ""
 "Das Aufzugsüberlastsystem und das <strong>Aufzugsüberlastsystem</strong>, "
 "die in Betrieb gehen, wenn Passagiere oder Ladung die Kabinenkapazität "
-"überschreiten, sind so konzipiert, dass sie die <strong>Sicherheit "
-"Ihrer</strong> Passagiere gewährleisten. Dank des "
-"<strong>Aufzugslastsensors</strong> führt das System präzise Messungen durch"
-" und warnt bei Überlastung sofort und garantiert den sicheren Betrieb Ihres "
-"Aufzugs. Mit unseren hohen Qualitätsstandards und sicherheitsorientierten "
-"Lösungen sorgen wir für eine reibungslose und sichere Fahrt."
+"überschreiten, sind so konzipiert, dass sie die <strong>Sicherheit Ihrer</"
+"strong> Passagiere gewährleisten. Dank des <strong>Aufzugslastsensors</"
+"strong> führt das System präzise Messungen durch und warnt bei Überlastung "
+"sofort und garantiert den sicheren Betrieb Ihres Aufzugs. Mit unseren hohen "
+"Qualitätsstandards und sicherheitsorientierten Lösungen sorgen wir für eine "
+"reibungslose und sichere Fahrt."
 
 #: .\crm\templates\preview\index.html:590
 #: .\crm\templates\preview\index.html:613
@@ -1022,8 +1051,8 @@ msgstr "Einzelheiten ansehen"
 #: .\crm\templates\preview\index.html:598
 #: .\crm\templates\preview\index.html:677
 msgid ""
-"500 kg'dan 20 tona kadar kapasite sunan LiftKeys asansör fren sistemi ve ani"
-" duruş güvenlik blokları"
+"500 kg'dan 20 tona kadar kapasite sunan LiftKeys asansör fren sistemi ve ani "
+"duruş güvenlik blokları"
 msgstr ""
 "LiftKeys Lift-Bremssystem und Instant-Stop-Sicherheitsblöcke mit einer "
 "Kapazität von 500 kg bis 20 Tonnen"
@@ -1069,19 +1098,17 @@ msgid ""
 "perdesi teknolojisi</strong>, kapı alanındaki en küçük hareketi bile "
 "algılayarak kapanmayı engeller. <br><br> Her ürün, LiftKeys’in "
 "“<strong>güvenlik önce gelir</strong>” anlayışıyla tasarlanır ve "
-"<strong>uluslararası standartlara uygun</strong> olarak üretilir. Bizim için"
-" bu yalnızca bir <strong>asansör fotoseli</strong> değil; insanların güvenle"
-" yolculuk etmesini sağlayan <strong>görünmez bir güvenlik "
-"duvarıdır</strong>."
+"<strong>uluslararası standartlara uygun</strong> olarak üretilir. Bizim için "
+"bu yalnızca bir <strong>asansör fotoseli</strong> değil; insanların güvenle "
+"yolculuk etmesini sağlayan <strong>görünmez bir güvenlik duvarıdır</strong>."
 msgstr ""
-"<strong>LiftKeys Aufzugstürsensoren sorgen für ein sicheres "
-"Schließen</strong> <strong>von Aufzugstüren mit hoher "
-"Erkennungsempfindlichkeit, schneller Reaktionszeit und schlanker "
-"Profilkonstruktion</strong>. Die fortschrittliche "
-"<strong>Strahlvorhangtechnologie erkennt</strong> selbst kleinste Bewegungen"
-" im Türbereich und verhindert so ein Schließen. <br><br><strong>Jedes "
-"Produkt wurde nach dem „<strong>Safety First“ -Ansatz von LiftKeys "
-"entwickelt und</strong> gemäß internationalen Standards "
+"<strong>LiftKeys Aufzugstürsensoren sorgen für ein sicheres Schließen</"
+"strong> <strong>von Aufzugstüren mit hoher Erkennungsempfindlichkeit, "
+"schneller Reaktionszeit und schlanker Profilkonstruktion</strong>. Die "
+"fortschrittliche <strong>Strahlvorhangtechnologie erkennt</strong> selbst "
+"kleinste Bewegungen im Türbereich und verhindert so ein Schließen. "
+"<br><br><strong>Jedes Produkt wurde nach dem „<strong>Safety First“ -Ansatz "
+"von LiftKeys entwickelt und</strong> gemäß internationalen Standards "
 "hergestellt.</strong> <strong>Für uns ist es nicht nur ein "
 "<strong>Aufzugsfotoshooting;</strong> es ist eine unsichtbare Firewall, die "
 "es den Menschen ermöglicht, sicher zu reisen.</strong>"
@@ -1150,15 +1177,15 @@ msgstr "Lösungen für Aufzugsböden"
 #: .\crm\templates\preview\index.html:705
 msgid ""
 "Size iki farklı çözümle yanınızdayız. <strong>Premium görünümlü zemin "
-"tasarımı</strong> sayesinde, 152 x 140 cm ölçüsündeki alanlarda özel tasarım"
-" mermerlere 3.000 dolar harcamanıza gerek kalmaz. Aynı <strong>premium "
-"mermer görünümünü</strong> çok daha düşük maliyetle sunuyoruz."
+"tasarımı</strong> sayesinde, 152 x 140 cm ölçüsündeki alanlarda özel tasarım "
+"mermerlere 3.000 dolar harcamanıza gerek kalmaz. Aynı <strong>premium mermer "
+"görünümünü</strong> çok daha düşük maliyetle sunuyoruz."
 msgstr ""
 "Wir sind mit zwei verschiedenen Lösungen für Sie da. Dank <strong>des "
 "hochwertig aussehenden Bodendesigns</strong> müssen Sie keine 3.000$ für "
-"maßgefertigte Murmeln mit einer Fläche von 152 x 140 cm ausgeben. Wir bieten"
-" den gleichen <strong>hochwertigen Marmorlook zu viel niedrigeren "
-"Kosten</strong>."
+"maßgefertigte Murmeln mit einer Fläche von 152 x 140 cm ausgeben. Wir bieten "
+"den gleichen <strong>hochwertigen Marmorlook zu viel niedrigeren Kosten</"
+"strong>."
 
 #: .\crm\templates\preview\index.html:713
 msgid ""
@@ -1174,8 +1201,8 @@ msgstr ""
 
 #: .\crm\templates\preview\index.html:728
 msgid ""
-"Titreşimi en aza indiren, &#37;100 orijinal ham maddeden üretilmiş dayanıklı"
-" asansör kauçuk takozları ve darbe emici lastikler"
+"Titreşimi en aza indiren, &#37;100 orijinal ham maddeden üretilmiş dayanıklı "
+"asansör kauçuk takozları ve darbe emici lastikler"
 msgstr ""
 "Robuste Gummikeile für Aufzüge und stoßdämpfende Reifen aus 100% echtem "
 "Rohmaterial zur Minimierung von Vibrationen"
@@ -1188,14 +1215,14 @@ msgstr "Gummi Gummiprodukte"
 msgid ""
 "LiftKeys olarak, ürettiğimiz <strong>asansör kauçuk takozları</strong> ve "
 "titreşim sönümleyici ürünlerde &#37;100 orijinal ham madde kullanıyoruz. "
-"Kaliteyi yalnızca sözle değil, sunduğumuz <strong>kauçuk malzeme orijinallik"
-" raporu</strong> ve test belgeleriyle kanıtlıyoruz."
+"Kaliteyi yalnızca sözle değil, sunduğumuz <strong>kauçuk malzeme orijinallik "
+"raporu</strong> ve test belgeleriyle kanıtlıyoruz."
 msgstr ""
 "Bei LiftKeys verwenden wir für unsere <strong>Aufzugsgummikeile und "
 "vibrationsdämpfenden</strong> Produkte 100% Originalrohstoffe. Wir beweisen "
 "die Qualität nicht nur anhand von Worten, sondern auch anhand des "
-"<strong>Echtheitsberichts über das Gummimaterial und der Testdokumente, "
-"die</strong> wir anbieten."
+"<strong>Echtheitsberichts über das Gummimaterial und der Testdokumente, die</"
+"strong> wir anbieten."
 
 #: .\crm\templates\preview\index.html:740
 msgid ""
@@ -1206,24 +1233,23 @@ msgid ""
 "sunar."
 msgstr ""
 "<strong>Unsere Produkte haben erfolgreich <strong>Tests zur Druck- und "
-"Verformungsbeständigkeit sowie Lebensdauertests bestanden</strong>.</strong>"
-" Die speziell entwickelte Metall- und Schraubenkonstruktion wurde "
-"<strong>durch Dauerhaltbarkeitstests bestätigt und bietet "
-"jahrelange</strong> sichere Leistung."
+"Verformungsbeständigkeit sowie Lebensdauertests bestanden</strong>.</strong> "
+"Die speziell entwickelte Metall- und Schraubenkonstruktion wurde "
+"<strong>durch Dauerhaltbarkeitstests bestätigt und bietet jahrelange</"
+"strong> sichere Leistung."
 
 #: .\crm\templates\preview\index.html:748
 msgid ""
 "Yüksek mühendislik ürünü kauçuklarımız, <strong>darbeyi en iyi şekilde "
-"absorbe eder</strong> ve <strong>asansör kabin ve makina "
-"titreşimini</strong> minimuma indirir. Aşınmaya ve ezilmeye karşı üstün "
-"direnç göstererek zamanla formunu kaybetmez, asansörünüzün konforunu garanti"
-" altına alır."
+"absorbe eder</strong> ve <strong>asansör kabin ve makina titreşimini</"
+"strong> minimuma indirir. Aşınmaya ve ezilmeye karşı üstün direnç göstererek "
+"zamanla formunu kaybetmez, asansörünüzün konforunu garanti altına alır."
 msgstr ""
 "Unsere hochentwickelten Gummis <strong>absorbieren Stöße optimal und "
 "minimieren Vibrationen in der <strong>Aufzugskabine</strong> und der "
 "Maschine</strong>. Dank der überragenden Abrieb- und Quetschfestigkeit "
-"verliert es im Laufe der Zeit nicht an Form und garantiert den Komfort Ihres"
-" Lifts."
+"verliert es im Laufe der Zeit nicht an Form und garantiert den Komfort Ihres "
+"Lifts."
 
 #: .\crm\templates\preview\index.html:763
 #: .\crm\templates\preview\index.html:840
@@ -1243,14 +1269,14 @@ msgid ""
 "<strong>LiftKeys Asansör Paten Blokları</strong>, yolcu güvenliğini "
 "standart, <strong>sessiz ve konforlu yolculuğu</strong> ise bir zorunluluk "
 "haline getirir. Ürünlerimiz; <strong>asansör kabin titreşimini</strong> "
-"azaltmak, seyir konforunu maksimize etmek ve <strong>ray kaynaklı "
-"hataları</strong> tolere etmek için özel olarak tasarlanmıştır."
+"azaltmak, seyir konforunu maksimize etmek ve <strong>ray kaynaklı hataları</"
+"strong> tolere etmek için özel olarak tasarlanmıştır."
 msgstr ""
 "<strong>LiftKeys Elevator Skate Blocks machen die Sicherheit der Passagiere "
 "zu</strong> einem Muss, wenn die Fahrt normal, <strong>leise</strong> und "
-"komfortabel ist. <strong>Unsere Produkte <strong>wurden speziell entwickelt,"
-" um Vibrationen in der Aufzugskabine zu reduzieren</strong>, den Fahrkomfort"
-" zu maximieren und schienenbedingte Störungen zu tolerieren.</strong>"
+"komfortabel ist. <strong>Unsere Produkte <strong>wurden speziell entwickelt, "
+"um Vibrationen in der Aufzugskabine zu reduzieren</strong>, den Fahrkomfort "
+"zu maximieren und schienenbedingte Störungen zu tolerieren.</strong>"
 
 #: .\crm\templates\preview\index.html:775
 msgid ""
@@ -1262,8 +1288,8 @@ msgstr ""
 "Dank der innovativen <strong>3-Wege-Gummikonstruktion bietet es "
 "stoßdämpfende</strong> Eigenschaften auf allen drei Oberflächen des Skates. "
 "Diese Technologie sorgt im <strong>Vergleich zu herkömmlichen "
-"Kombinationsschlittschuhen aus Stahl und Kunststoff für einen viel leiseren,"
-" stabileren und gleichmäßigeren Auftrieb</strong>."
+"Kombinationsschlittschuhen aus Stahl und Kunststoff für einen viel leiseren, "
+"stabileren und gleichmäßigeren Auftrieb</strong>."
 
 #: .\crm\templates\preview\index.html:782
 msgid ""
@@ -1276,14 +1302,14 @@ msgstr ""
 "Mit der <strong>einstellbaren Rollschuhsteifigkeit</strong> haben Sie die "
 "volle Kontrolle. <strong>Dank der speziellen <strong>Einstellschraube auf "
 "der Rückseite können Sie die Steifigkeit des</strong> Schlittschuhs an die "
-"Betriebsbedingungen des Aufzugs und den Zustand der Schiene anpassen und das"
-" Vibrationsniveau auf die gewünschte Präzision einstellen.</strong>"
+"Betriebsbedingungen des Aufzugs und den Zustand der Schiene anpassen und das "
+"Vibrationsniveau auf die gewünschte Präzision einstellen.</strong>"
 
 #: .\crm\templates\preview\index.html:798
 #: .\crm\templates\preview\index.html:843
 msgid ""
-"Sık açma kapamaya ve titreşime dayanıklı, uzun ömürlü LiftKeys asansör kabin"
-" spot aydınlatma sistemi"
+"Sık açma kapamaya ve titreşime dayanıklı, uzun ömürlü LiftKeys asansör kabin "
+"spot aydınlatma sistemi"
 msgstr ""
 "LiftKeys Spotbeleuchtungssystem für die Aufzugskabine mit häufigem Ein- und "
 "Ausschalten und Vibration"
@@ -1297,8 +1323,8 @@ msgid ""
 "Piyasada kullanılan standart spot ışıklar, genellikle ev tipi üretim olduğu "
 "için <strong>asansör kabin aydınlatma</strong> koşullarına uygun değildir. "
 "Evlerde günde sadece 1–2 kez çalışan bu ürünler, asansörlerde günde "
-"<strong>1000’e varan açma-kapama döngüsüne</strong> maruz kaldığında hızlıca"
-" arızalanır."
+"<strong>1000’e varan açma-kapama döngüsüne</strong> maruz kaldığında hızlıca "
+"arızalanır."
 msgstr ""
 "Auf dem Markt verwendete Standardscheinwerfer sind nicht für die "
 "<strong>Beleuchtung von Aufzugskabinen</strong> geeignet, da sie "
@@ -1316,8 +1342,8 @@ msgid ""
 msgstr ""
 "Wir haben dieses Problem mit der Philosophie „Wir lieben und verstehen den "
 "Aufzug“ gelöst. Anstelle gewöhnlicher Lösungen haben unsere Ingenieure "
-"<strong>speziell entwickelte Spotbeleuchtungssysteme für den Aufzug</strong>"
-" entwickelt. Es handelt sich nicht um einen Haushaltstyp, sondern um ein "
+"<strong>speziell entwickelte Spotbeleuchtungssysteme für den Aufzug</strong> "
+"entwickelt. Es handelt sich nicht um einen Haushaltstyp, sondern um ein "
 "echtes <strong>technisches Produkt von LiftKeys</strong>."
 
 #: .\crm\templates\preview\index.html:818
@@ -1327,8 +1353,8 @@ msgid ""
 "senaryolarına karşı tam dayanıklılık sağlayacak şekilde üretilmiştir. Sık "
 "bozulan ışıklara son verin, gerçek asansör kalitesiyle tanışın."
 msgstr ""
-"Die <strong>Aufzugsscheinwerfer von LiftKeys wurden</strong> im Hinblick auf"
-" hohe Betriebszyklen getestet und sind so konstruiert, dass sie den "
+"Die <strong>Aufzugsscheinwerfer von LiftKeys wurden</strong> im Hinblick auf "
+"hohe Betriebszyklen getestet und sind so konstruiert, dass sie den "
 "<strong>Vibrationen in der Kabine und im Dauerbetrieb</strong> voll "
 "standhalten. Machen Sie Schluss mit dem häufigen Dimmen der Lichter und "
 "erleben Sie die echte Aufzugsqualität."
@@ -1349,8 +1375,8 @@ msgid ""
 "Denetim ve yeşil etiket için gerekli, yönetmeliğe uygun asansör uyarı "
 "etiketleri, metal ve 3D damla etiket çözümleri"
 msgstr ""
-"Vorschriftskonforme Aufzugswarnetiketten, Metall- und "
-"3D-Tropfenetikettenlösungen, die für die Inspektion erforderlich sind, und "
+"Vorschriftskonforme Aufzugswarnetiketten, Metall- und 3D-"
+"Tropfenetikettenlösungen, die für die Inspektion erforderlich sind, und "
 "grünes Etikett"
 
 #: .\crm\templates\preview\index.html:860
@@ -1359,10 +1385,10 @@ msgstr "Aufzug-Etiketten"
 
 #: .\crm\templates\preview\index.html:862
 msgid ""
-"Etiket deyip geçmeyin; <strong>asansör uyarı ve talimat etiketleri</strong>,"
-" denetimlerden başarıyla geçmenin ve <strong>yeşil etiket</strong> almanın "
-"en kritik anahtarıdır. Yönetmeliklere uygun doğru etiketleme yapılmadığında,"
-" hem ciddi güvenlik riskleri oluşur hem de ruhsat süreci başarısız olur."
+"Etiket deyip geçmeyin; <strong>asansör uyarı ve talimat etiketleri</strong>, "
+"denetimlerden başarıyla geçmenin ve <strong>yeşil etiket</strong> almanın en "
+"kritik anahtarıdır. Yönetmeliklere uygun doğru etiketleme yapılmadığında, "
+"hem ciddi güvenlik riskleri oluşur hem de ruhsat süreci başarısız olur."
 msgstr ""
 "<strong>Sagen Sie nicht Etikett; <strong>Warn- und Hinweisschilder für "
 "Aufzüge</strong> sind der wichtigste Schlüssel, um Inspektionen erfolgreich "
@@ -1375,26 +1401,26 @@ msgstr ""
 msgid ""
 "Ayrıca etiketler, firmanızın kurumsal kimliğini ve reklamını taşıyan en "
 "görünür yüzüdür. LiftKeys olarak, sizin yerinize güncel <strong>asansör "
-"yönetmeliklerini</strong> takip ediyor; kabin içi, kapı üstü, <strong>makine"
-" dairesi ve kuyu içi güvenlik etiketlerini</strong> standartlara tam uygun "
+"yönetmeliklerini</strong> takip ediyor; kabin içi, kapı üstü, <strong>makine "
+"dairesi ve kuyu içi güvenlik etiketlerini</strong> standartlara tam uygun "
 "şekilde tasarlıyoruz."
 msgstr ""
 "Etiketten sind auch das sichtbarste Gesicht der Unternehmensidentität und "
 "Werbung Ihres Unternehmens. Bei LiftKeys halten wir uns <strong>für Sie an "
-"die aktuellen Aufzugsvorschriften. Wir entwerfen Sicherheitsetiketten in der"
-" Kabine</strong>, über der Tür, im Maschinenraum und im Innenraum, "
-"<strong>in voller</strong> Übereinstimmung mit den Normen."
+"die aktuellen Aufzugsvorschriften. Wir entwerfen Sicherheitsetiketten in der "
+"Kabine</strong>, über der Tür, im Maschinenraum und im Innenraum, <strong>in "
+"voller</strong> Übereinstimmung mit den Normen."
 
 #: .\crm\templates\preview\index.html:877
 msgid ""
 "İhtiyacınıza özel malzeme seçenekleri sunuyoruz: Ekonomik ve dayanıklı "
-"<strong>PVC etiketler</strong>, uzun ömürlü <strong>metal etiketler</strong>"
-" ve marka algınızı yükselten premium <strong>3D damla etiket</strong> "
+"<strong>PVC etiketler</strong>, uzun ömürlü <strong>metal etiketler</strong> "
+"ve marka algınızı yükselten premium <strong>3D damla etiket</strong> "
 "çözümlerimizle asansörünüze değer katıyoruz."
 msgstr ""
 "<strong>Wir bieten eine Auswahl an Materialien, die auf Ihre Bedürfnisse "
-"zugeschnitten sind: Wir werten Ihren Aufzug mit unseren wirtschaftlichen und"
-" langlebigen <strong>PVC-Etiketten</strong>, langlebigen "
+"zugeschnitten sind: Wir werten Ihren Aufzug mit unseren wirtschaftlichen und "
+"langlebigen <strong>PVC-Etiketten</strong>, langlebigen "
 "<strong>Metalletiketten</strong> und hochwertigen 3D-Tropfetikettenlösungen "
 "auf, die Ihre Markenwahrnehmung verbessern.</strong>"
 
@@ -1418,10 +1444,10 @@ msgstr ""
 
 #: .\crm\templates\preview\index.html:904
 msgid ""
-"Marka prestijinizi artırmak için tasarlanan <strong>damla etiketli "
-"anahtar</strong> modellerimiz, etkileyici <strong>3D logo tasarımı</strong> "
-"ve premium yüzeyiyle firmanıza özel olarak üretilir. Firmanızın reklamını "
-"yapan en şık donanımdır."
+"Marka prestijinizi artırmak için tasarlanan <strong>damla etiketli anahtar</"
+"strong> modellerimiz, etkileyici <strong>3D logo tasarımı</strong> ve "
+"premium yüzeyiyle firmanıza özel olarak üretilir. Firmanızın reklamını yapan "
+"en şık donanımdır."
 msgstr ""
 "Unsere <strong>Drop-Label-Schlüsselmodelle wurden speziell für Ihr "
 "Unternehmen hergestellt, um das Prestige Ihrer Marke zu steigern. Sie "
@@ -1456,8 +1482,8 @@ msgstr "Glasdesigns und sichere Spiegeltechnologie"
 
 #: .\crm\templates\preview\index.html:931
 msgid ""
-"LiftKeys olarak, asansör kabin içi dekorasyonunda **uzun ömürlü ve dekoratif"
-" cam çözümleri** üretiyoruz. Tamamen **projeye özel asansör cam tasarımı** "
+"LiftKeys olarak, asansör kabin içi dekorasyonunda **uzun ömürlü ve dekoratif "
+"cam çözümleri** üretiyoruz. Tamamen **projeye özel asansör cam tasarımı** "
 "sürecimizle; 3000’den fazla desen, renk ve model seçeneği sunarak "
 "hayalinizdeki kabini gerçeğe dönüştürüyoruz."
 msgstr ""
@@ -1469,9 +1495,9 @@ msgstr ""
 
 #: .\crm\templates\preview\index.html:938
 msgid ""
-"Üretimimizde estetik kadar güvenliği de esas alıyoruz. **Çizilmeye dayanıklı"
-" yüzey teknolojisi** sayesinde camlarımız ilk günkü parlaklığını korur. Daha"
-" da önemlisi, **kırılmaya dayanıklı güvenli cam** ve ayna yapımız, yüksek "
+"Üretimimizde estetik kadar güvenliği de esas alıyoruz. **Çizilmeye dayanıklı "
+"yüzey teknolojisi** sayesinde camlarımız ilk günkü parlaklığını korur. Daha "
+"da önemlisi, **kırılmaya dayanıklı güvenli cam** ve ayna yapımız, yüksek "
 "darbe direnci sağlar."
 msgstr ""
 "Bei unserer Produktion legen wir ebenso großen Wert auf Sicherheit wie auf "
@@ -1483,14 +1509,14 @@ msgstr ""
 #: .\crm\templates\preview\index.html:945
 msgid ""
 "Gelişmiş güvenlik katmanımız sayesinde, olası bir kırılma anında **cam "
-"parçalarının dağılmasını önleyen güvenlik tabakası** devreye girer. Parçalar"
-" etrafa saçılmaz, kabin içindeki yolcu güvenliği maksimum seviyede korunur. "
+"parçalarının dağılmasını önleyen güvenlik tabakası** devreye girer. Parçalar "
+"etrafa saçılmaz, kabin içindeki yolcu güvenliği maksimum seviyede korunur. "
 "LiftKeys ile **güvenli asansör aynası** ve estetiği bir arada yaşayın."
 msgstr ""
 "Dank unserer fortschrittlichen Sicherheitsschicht kommt die "
 "Sicherheitsschicht ** ins Spiel, die verhindert, dass sich Glassplitter ** "
-"im Falle eines möglichen Bruchs streuen. Die Teile sind nicht verstreut, die"
-" Sicherheit der Passagiere in der Kabine wird auf höchstem Niveau gehalten. "
+"im Falle eines möglichen Bruchs streuen. Die Teile sind nicht verstreut, die "
+"Sicherheit der Passagiere in der Kabine wird auf höchstem Niveau gehalten. "
 "Erleben Sie den ** Secure Elevator Mirror ** und die Ästhetik zusammen mit "
 "LiftKeys."
 
@@ -1509,17 +1535,16 @@ msgstr "Schalter für Aufzüge"
 
 #: .\crm\templates\preview\index.html:966
 msgid ""
-"<strong>Asansör güvenlik anahtarları</strong> ve <strong>limit "
-"switch</strong> çözümlerimiz; kapı, güvenlik bölgeleri ve mekanik "
-"pozisyonları denetleyerek asansörün güvenli çalışmasını garanti eder. "
-"Sistemin \"sinir uçları\" olan bu anahtarlar, olası kazaları önlemede kritik"
-" rol oynar."
+"<strong>Asansör güvenlik anahtarları</strong> ve <strong>limit switch</"
+"strong> çözümlerimiz; kapı, güvenlik bölgeleri ve mekanik pozisyonları "
+"denetleyerek asansörün güvenli çalışmasını garanti eder. Sistemin \"sinir "
+"uçları\" olan bu anahtarlar, olası kazaları önlemede kritik rol oynar."
 msgstr ""
-"Unsere <strong>Sicherheitsschalter und Endschalterlösungen für "
-"Aufzüge</strong> <strong>sorgen für</strong> einen sicheren Betrieb des "
-"Aufzugs, indem sie Türen, Sicherheitszonen und mechanische Positionen "
-"steuern. Diese Schalter, die „Nervenenden“ des Systems, spielen eine "
-"entscheidende Rolle bei der Vermeidung möglicher Unfälle."
+"Unsere <strong>Sicherheitsschalter und Endschalterlösungen für Aufzüge</"
+"strong> <strong>sorgen für</strong> einen sicheren Betrieb des Aufzugs, "
+"indem sie Türen, Sicherheitszonen und mechanische Positionen steuern. Diese "
+"Schalter, die „Nervenenden“ des Systems, spielen eine entscheidende Rolle "
+"bei der Vermeidung möglicher Unfälle."
 
 #: .\crm\templates\preview\index.html:973
 msgid ""
@@ -1540,17 +1565,16 @@ msgid ""
 "vermez, tam koruma sağlar."
 msgstr ""
 "<strong>Der Rückstellschalter (manuell<strong>) wird in Regler- und "
-"Notaussystemen verwendet</strong>, die eine hohe Sicherheit "
-"erfordern.</strong> Wenn diese Wicklungen ausgelöst werden, kann das System "
-"aufgrund des Fehlers nicht ohne manuelle Beseitigung arbeiten. Es bietet "
-"einen vollständigen Schutz."
+"Notaussystemen verwendet</strong>, die eine hohe Sicherheit erfordern.</"
+"strong> Wenn diese Wicklungen ausgelöst werden, kann das System aufgrund des "
+"Fehlers nicht ohne manuelle Beseitigung arbeiten. Es bietet einen "
+"vollständigen Schutz."
 
 #: .\crm\templates\preview\index.html:987
 msgid ""
-"Sürekli operasyonlar için tasarlanan <strong>resetsiz switch "
-"(otomatik)</strong> ise temas kesildiğinde kendiliğinden devreye girer. "
-"İnsan müdahalesi gerektirmez, asansörün <strong>hızlı ve seri "
-"çalışmasını</strong> sağlar."
+"Sürekli operasyonlar için tasarlanan <strong>resetsiz switch (otomatik)</"
+"strong> ise temas kesildiğinde kendiliğinden devreye girer. İnsan müdahalesi "
+"gerektirmez, asansörün <strong>hızlı ve seri çalışmasını</strong> sağlar."
 msgstr ""
 "Der <strong>Non-Reset-Schalter (automatisch), der für den Dauerbetrieb "
 "ausgelegt ist, wird spontan aktiviert</strong>, wenn der Kontakt "
@@ -1562,8 +1586,8 @@ msgid ""
 "Firmanıza özel 3D logolu tasarım sunan, kırılmaya dayanıklı asansör kilit "
 "açma ve güvenlik anahtarı"
 msgstr ""
-"Bruchsichere Aufzugsentriegelung und Sicherheitsschlüssel, Design mit "
-"3D-Logo, maßgeschneidert für Ihr Unternehmen"
+"Bruchsichere Aufzugsentriegelung und Sicherheitsschlüssel, Design mit 3D-"
+"Logo, maßgeschneidert für Ihr Unternehmen"
 
 #: .\crm\templates\preview\index.html:1030
 msgid "Liftkeys ile Tüm Önde Gelen Asansör Çözümlerinde Güvenilir İş Ortağı"
@@ -1634,8 +1658,8 @@ msgid ""
 "Liftkeys, <span id=\"experience-text\"></span> yıllık sektör deneyimiyle "
 "asansör yedek parça ve bileşenlerinde güvenilir çözümler sunmaktadır."
 msgstr ""
-"Mit jahrelanger Branchenerfahrung bietet<span id=\"experience-text\"></span>"
-" Liftkeys zuverlässige Lösungen für Aufzugsersatzteile und -komponenten."
+"Mit jahrelanger Branchenerfahrung bietet<span id=\"experience-text\"></span> "
+"Liftkeys zuverlässige Lösungen für Aufzugsersatzteile und -komponenten."
 
 #: .\crm\templates\preview\index.html:1096
 msgid ""
@@ -1643,9 +1667,9 @@ msgid ""
 "çözümler sunar. Atlas, Horus ve Safety Gear ürünlerimiz, yüksek kalite "
 "standartlarıyla performans ve güvenliği bir araya getirir."
 msgstr ""
-"Unser erfahrenes Team bietet mit Liftkeys sichere und effiziente Lösungen in"
-" der Aufzugsbranche. Unsere Produkte Atlas, Horus und Safety Gear "
-"kombinieren Leistung und Sicherheit mit hohen Qualitätsstandards."
+"Unser erfahrenes Team bietet mit Liftkeys sichere und effiziente Lösungen in "
+"der Aufzugsbranche. Unsere Produkte Atlas, Horus und Safety Gear kombinieren "
+"Leistung und Sicherheit mit hohen Qualitätsstandards."
 
 #: .\crm\templates\preview\index.html:1102
 msgid "Overload Atlas"
@@ -1665,8 +1689,8 @@ msgid ""
 "ve Light ürünlerimiz ile hem şık tasarım hem de yüksek performans sunuyoruz."
 msgstr ""
 "Liftkeys verbinden Ästhetik und Sicherheit in Aufzügen. Mit unseren Glass-, "
-"Floor- und Light-Produkten bieten wir sowohl stilvolles Design als auch hohe"
-" Leistung."
+"Floor- und Light-Produkten bieten wir sowohl stilvolles Design als auch hohe "
+"Leistung."
 
 #: .\crm\templates\preview\index.html:1116
 msgid "Glass"
@@ -1682,9 +1706,9 @@ msgstr "Lys"
 
 #: .\crm\templates\preview\index.html:1124
 msgid ""
-"Liftkeys, asansör komponentlerinde geniş ürün yelpazesi sunar. Rubber, Label"
-" ve Elektronic ürünlerimiz, güvenli, dayanıklı ve yüksek performanslı "
-"asansör çözümleri için idealdir."
+"Liftkeys, asansör komponentlerinde geniş ürün yelpazesi sunar. Rubber, Label "
+"ve Elektronic ürünlerimiz, güvenli, dayanıklı ve yüksek performanslı asansör "
+"çözümleri için idealdir."
 msgstr ""
 "Liftkeys bietet eine breite Palette von Aufzugskomponenten. Unsere Gummi-, "
 "Etiketten- und Elektronikprodukte sind ideal für sichere, langlebige und "
@@ -1705,8 +1729,8 @@ msgstr "Electronic"
 #: .\crm\templates\preview\index.html:1138
 msgid ""
 "Liftkeys, deneyimli ekibi ile asansör sektöründe güvenilir ve kaliteli "
-"çözümler sunar. Handrail, Guide Shose ve Mechanical ürünlerimiz, uzun ömürlü"
-" ve güvenli kullanım için tasarlanmıştır."
+"çözümler sunar. Handrail, Guide Shose ve Mechanical ürünlerimiz, uzun ömürlü "
+"ve güvenli kullanım için tasarlanmıştır."
 msgstr ""
 "Liftkeys bietet mit seinem erfahrenen Team zuverlässige und qualitativ "
 "hochwertige Lösungen in der Aufzugsbranche. Unsere Handläufe, "
@@ -1762,8 +1786,8 @@ msgstr "Gedruckte Produkte"
 #: .\crm\templates\preview\kagittanisler.html:98
 msgid ""
 "Çalıştığımız yüzlerce firmaya tasarım ve üretim konusunda çözüm ortağı "
-"oluyoruz. Logo tasarımı, kartvizit, katalog, fatura, cepli dosya ve kurumsal"
-" kimlik ürünleriniz için profesyonel destek."
+"oluyoruz. Logo tasarımı, kartvizit, katalog, fatura, cepli dosya ve kurumsal "
+"kimlik ürünleriniz için profesyonel destek."
 msgstr ""
 "Wir sind ein Lösungspartner für Hunderte von Unternehmen, mit denen wir in "
 "den Bereichen Design und Produktion zusammenarbeiten. Professionelle "
@@ -1891,8 +1915,8 @@ msgstr "Video"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:119
 msgid ""
-"\"Asansör Güvenliğinde <br> <span class=\"fw-bold text-dark display-6\">Yeni"
-" Standart\"</span>"
+"\"Asansör Güvenliğinde <br> <span class=\"fw-bold text-dark display-6\">Yeni "
+"Standart\"</span>"
 msgstr ""
 "<br><span class=\"fw-bold text-dark display-6\">„Der neue Standard für "
 "Aufzugssicherheit“</span>"
@@ -1965,8 +1989,8 @@ msgid ""
 msgstr ""
 "Kapazitätsüberkapazitäten in Aufzügen verkürzen die Lebensdauer der Geräte, "
 "erhöhen die Ausfallraten und erhöhen das Sicherheitsrisiko. "
-"<br><br><strong>Atlas</strong> misst die Kabinenlast in <u>Millisekunden und"
-" gibt dem Fahrer und dem Bedienpult eine</u> genaue Rückmeldung. Er "
+"<br><br><strong>Atlas</strong> misst die Kabinenlast in <u>Millisekunden und "
+"gibt dem Fahrer und dem Bedienpult eine</u> genaue Rückmeldung. Er "
 "verhindert den Start oder warnt bei Überlastung."
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:184
@@ -1979,8 +2003,7 @@ msgstr "Niedrige Kosten"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:194
 msgid "Arıza riskini azaltan Atlas asansör aşırı yük kontrol ünitesi"
-msgstr ""
-"Atlas-Überlaststeuergerät für Aufzüge, das das Ausfallrisiko reduziert"
+msgstr "Atlas-Überlaststeuergerät für Aufzüge, das das Ausfallrisiko reduziert"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:231
 msgid "TEKNİK ÖLÇÜLER"
@@ -2019,8 +2042,8 @@ msgid ""
 "LiftKeys Atlas aşırı yük sistemi kontrol ünitesi yan profil derinlik "
 "ölçüleri ve bağlantı noktaları"
 msgstr ""
-"LiftKeys Atlas Überlastsystem-Steuereinheit, Seitenprofiltiefenmessungen und"
-" Anschlüsse"
+"LiftKeys Atlas Überlastsystem-Steuereinheit, Seitenprofiltiefenmessungen und "
+"Anschlüsse"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:269
 msgid "Genişlik:"
@@ -2136,8 +2159,8 @@ msgid ""
 "Endüstriyel sınıf malzeme, titreşim ve yüksek sıcaklık toleransına sahip "
 "mimari yapı."
 msgstr ""
-"Material in Industriequalität, architektonische Struktur mit Vibrations- und"
-" Hochtemperaturtoleranz."
+"Material in Industriequalität, architektonische Struktur mit Vibrations- und "
+"Hochtemperaturtoleranz."
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:428
 msgid "Kullanım Senaryoları"
@@ -2174,8 +2197,8 @@ msgstr "Industrielle Anlage"
 msgid ""
 "Malzeme ve parça transferlerinde sürekli doğruluk; ekipman ömrünü uzatır."
 msgstr ""
-"Kontinuierliche Genauigkeit bei Material- und Teiletransfers; verlängert die"
-" Lebensdauer der Ausrüstung."
+"Kontinuierliche Genauigkeit bei Material- und Teiletransfers; verlängert die "
+"Lebensdauer der Ausrüstung."
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:470
 msgid "Panel Bağlantı Diyagramı"
@@ -2196,8 +2219,8 @@ msgstr "ROI: Kapitalrendite"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:490
 msgid ""
-"Atlas, kapasite aşımı kaynaklı duruşları azalttığı için bakım çağrılarını ve"
-" parça değişimlerini düşürür."
+"Atlas, kapasite aşımı kaynaklı duruşları azalttığı için bakım çağrılarını ve "
+"parça değişimlerini düşürür."
 msgstr ""
 "Atlas reduziert Wartungseinsätze und Ersatzteilwechsel, da es Ausfallzeiten "
 "reduziert, die durch Überkapazitäten verursacht werden."
@@ -2207,9 +2230,9 @@ msgid ""
 "\"Ortalama yoğun bir tesiste sistem, <span class=\"bg-success text-white "
 "px-2 py-1 rounded\">6–12 ay</span> içinde kendini amorti edebilir.\""
 msgstr ""
-"„In einer durchschnittlich ausgelasteten Einrichtung kann sich das System in"
-" <span class=\"bg-success text-white px-2 py-1 rounded\">6—12 Monaten</span>"
-" amortisieren.“"
+"„In einer durchschnittlich ausgelasteten Einrichtung kann sich das System in "
+"<span class=\"bg-success text-white px-2 py-1 rounded\">6—12 Monaten</span> "
+"amortisieren.“"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:506
 msgid "Paket İçeriği"
@@ -2261,8 +2284,8 @@ msgid ""
 "<strong>MYK belgeli personeller</strong> tarafından bağlanması gerekir."
 msgstr ""
 "<strong>Damit unser Produkt sicher und langlebig verwendet werden kann, "
-"müssen die Materialien von MYK-zertifiziertem Personal verklebt "
-"werden.</strong>"
+"müssen die Materialien von MYK-zertifiziertem Personal verklebt werden.</"
+"strong>"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:567
 msgid "Kablo Renk Kodları"
@@ -2300,8 +2323,8 @@ msgid ""
 "uygun girişe verilmesine özellikle dikkat edilmelidir."
 msgstr ""
 "Besondere Aufmerksamkeit sollte der Versorgungsspannung von 220 V am "
-"entsprechenden Eingang gelten, der sich in der <u>oberen linken Ecke der</u>"
-" Power Unit befindet."
+"entsprechenden Eingang gelten, der sich in der <u>oberen linken Ecke der</u> "
+"Power Unit befindet."
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:609
 msgid "Program Menüsü"
@@ -2326,8 +2349,8 @@ msgstr "Tonalarm (Buzzer)"
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:637
 msgid ""
-"Kart üzerinde bulunan sesli uyarı sistemidir. Açık konumda kalması önerilir,"
-" ancak projeye göre istenirse kapatılabilir."
+"Kart üzerinde bulunan sesli uyarı sistemidir. Açık konumda kalması önerilir, "
+"ancak projeye göre istenirse kapatılabilir."
 msgstr ""
 "Es handelt sich um ein akustisches Warnsystem, das sich auf der Karte "
 "befindet. Es wird empfohlen, in der offenen Position zu bleiben, diese kann "
@@ -2343,8 +2366,8 @@ msgstr "Mindestlastrelais (20%%)"
 msgid ""
 "Asansörün minimum yük rölesidir. Fabrika çıkış değeri, beyan yükünün "
 "<strong>%%20</strong> oranıdır. <br><em>Örnek: 30 kg altı birinin (çocuk "
-"vb.) asansörü tek başına kullanamaması gibi senaryolar için "
-"ayarlanabilir.</em>"
+"vb.) asansörü tek başına kullanamaması gibi senaryolar için ayarlanabilir.</"
+"em>"
 msgstr ""
 "Es ist das Mindestlastrelais des Aufzugs. Der werkseitige Ausgangswert "
 "beträgt <strong>20%%</strong> der angegebenen Last. <br><em>Beispiel: Er "
@@ -2375,9 +2398,9 @@ msgid ""
 "röledir. Pano, motor gücü ve kalkış ayarlarını bu bilgiye göre optimize "
 "edebilir."
 msgstr ""
-"Es ist das Relais, das <strong>die Tafel darüber informiert, dass der Aufzug"
-" zu 80%% voll ist</strong>. Das Armaturenbrett kann auf der Grundlage dieser"
-" Informationen die Motorleistung und die Starteinstellungen optimieren."
+"Es ist das Relais, das <strong>die Tafel darüber informiert, dass der Aufzug "
+"zu 80%% voll ist</strong>. Das Armaturenbrett kann auf der Grundlage dieser "
+"Informationen die Motorleistung und die Starteinstellungen optimieren."
 
 #: .\crm\templates\preview\previewblog\atlasoverload.html:693
 msgid "Aşırı Yük Rölesi (STOP)"
@@ -2390,9 +2413,8 @@ msgid ""
 "engel olur.</strong>"
 msgstr ""
 "Es ist das Relais, mit dem die angegebene Last entsprechend der Kapazität "
-"des Schranks gemessen wird. Wenn der Aufzug mit der angegebenen Last gefüllt"
-" ist, <strong>signalisiert er den Betrieb des Aufzugs und stört</strong> "
-"ihn."
+"des Schranks gemessen wird. Wenn der Aufzug mit der angegebenen Last gefüllt "
+"ist, <strong>signalisiert er den Betrieb des Aufzugs und stört</strong> ihn."
 
 #: .\crm\templates\preview\previewblog\fan.html:7
 msgid "LiftKeys Asansör Havalandırma Sistemleri | Sessiz Kabin Fanları"
@@ -2403,12 +2425,15 @@ msgid ""
 "\n"
 "LiftKeys ile asansör kabinlerinde temiz hava sirkülasyonu sağlayın.\n"
 "Yüksek performanslı Cross Flow (Yatay) ve Aksiyel (Kare) fan modellerimiz;\n"
-"sessiz çalışma, güçlü emiş gücü ve kolay montaj özellikleriyle konforu artırır.\n"
+"sessiz çalışma, güçlü emiş gücü ve kolay montaj özellikleriyle konforu "
+"artırır.\n"
 msgstr ""
 "\n"
 "Sorgen Sie mit LiftKeys für Frischluftzirkulation in Aufzugskabinen.\n"
-"Unsere leistungsstarken Kreuzstromlüftermodelle (horizontal) und axialer (quadratisch);\n"
-"erhöht den Komfort durch leisen Betrieb, starke Saugkraft und einfache Montage.\n"
+"Unsere leistungsstarken Kreuzstromlüftermodelle (horizontal) und axialer "
+"(quadratisch);\n"
+"erhöht den Komfort durch leisen Betrieb, starke Saugkraft und einfache "
+"Montage.\n"
 
 #: .\crm\templates\preview\previewblog\fan.html:21
 msgid ""
@@ -2428,11 +2453,13 @@ msgstr "LiftKeys | Lüftungs- und Lüftungslösungen für Aufzugskabinen"
 msgid ""
 "\n"
 "\"Nefes Alan Kabinler\" için LiftKeys teknolojisi.\n"
-"Sessiz çalışan, yüksek debili yatay ve kare asansör fanları ile yolcu konforunu garanti altına alın.\n"
+"Sessiz çalışan, yüksek debili yatay ve kare asansör fanları ile yolcu "
+"konforunu garanti altına alın.\n"
 msgstr ""
 "\n"
 "LiftKeys-Technologie für „Atmungsaktive Kabinen“.\n"
-"Horizontale und quadratische Aufzugsventilatoren mit leisem Betrieb und hoher Durchflussrate garantieren Fahrgastkomfort.\n"
+"Horizontale und quadratische Aufzugsventilatoren mit leisem Betrieb und "
+"hoher Durchflussrate garantieren Fahrgastkomfort.\n"
 
 #: .\crm\templates\preview\previewblog\fan.html:41
 msgid "LiftKeys | Sessiz ve Güçlü Asansör Fanları"
@@ -2447,7 +2474,8 @@ msgid ""
 msgstr ""
 "\n"
 "Professionelle Lösungen für die Aufzugsbelüftung.\n"
-"Schauen Sie sich unsere Modelle von horizontalen (Cross Flow) und quadratischen (Axial) Lüftern an.\n"
+"Schauen Sie sich unsere Modelle von horizontalen (Cross Flow) und "
+"quadratischen (Axial) Lüftern an.\n"
 "Klicken Sie hier, um den Katalog herunterzuladen.\n"
 
 #: .\crm\templates\preview\previewblog\fan.html:89
@@ -2481,9 +2509,9 @@ msgstr "Welches Lüftermodell sollte ich wählen: Horizontal oder Square?"
 
 #: .\crm\templates\preview\previewblog\fan.html:121
 msgid ""
-"Yatay (Cross Flow) fanlar daha geniş bir alana hava üfler ve genellikle kapı"
-" üstlerinde kullanılır. Kare (Aksiyel) fanlar ise tavan montajı için "
-"uygundur ve doğrudan hava akışı sağlar."
+"Yatay (Cross Flow) fanlar daha geniş bir alana hava üfler ve genellikle kapı "
+"üstlerinde kullanılır. Kare (Aksiyel) fanlar ise tavan montajı için uygundur "
+"ve doğrudan hava akışı sağlar."
 msgstr ""
 "Horizontale Lüfter (Cross Flow) blasen Luft über eine größere Fläche und "
 "werden häufig an Türoberflächen eingesetzt. Quadratische (Axial-) "
@@ -2500,8 +2528,8 @@ msgid "Asansör Çözümleri"
 msgstr "Lösungen für Aufzüge"
 
 #: .\crm\templates\preview\previewblog\fan.html:142
-#: .\templates\previewtemplates\previewmenu.html:268
-#: .\templates\previewtemplates\previewmenu.html:403
+#: .\templates\previewtemplates\previewmenu.html:284
+#: .\templates\previewtemplates\previewmenu.html:419
 msgid "Havalandırma Sistemleri"
 msgstr "Lüftungssysteme"
 
@@ -2617,8 +2645,8 @@ msgstr "Spezifikationen und Abmessungen"
 #: .\crm\templates\preview\previewblog\fan.html:364
 msgid "Asansör Radyal Fan Teknik Çizim Ölçüleri (95mm x 192mm)"
 msgstr ""
-"Technische Zeichnung, Abmessungen des Radialventilators für Aufzüge (95 mm x"
-" 192 mm)"
+"Technische Zeichnung, Abmessungen des Radialventilators für Aufzüge (95 mm x "
+"192 mm)"
 
 #: .\crm\templates\preview\previewblog\fan.html:368
 msgid "* 180mm ve 240mm olmak üzere 2 farklı uzunluk seçeneği mevcuttur."
@@ -2636,8 +2664,8 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\fan.html:392
 msgid ""
 "Asansör sektöründe en sık yapılan hatalardan biri, havalandırma seçiminde "
-"sadece fiyata odaklanmaktır. Piyasada yaygın olarak kullanılan 'Kare Fanlar'"
-" hakkında bilmeniz gereken gerçekler:"
+"sadece fiyata odaklanmaktır. Piyasada yaygın olarak kullanılan 'Kare Fanlar' "
+"hakkında bilmeniz gereken gerçekler:"
 msgstr ""
 "Einer der häufigsten Fehler in der Aufzugsbranche besteht darin, sich bei "
 "der Auswahl der Belüftung nur auf den Preis zu konzentrieren. Fakten, die "
@@ -2667,8 +2695,8 @@ msgid ""
 "yol açabilir."
 msgstr ""
 "Anstatt die verschmutzte Luft aus der Kabine auszustoßen, kann es manchmal "
-"einfach die vorhandene Luft im Inneren aufwirbeln. Zu wenig Schimmel kann zu"
-" Verstopfung führen, wenn die Anzahl der Passagiere zunimmt."
+"einfach die vorhandene Luft im Inneren aufwirbeln. Zu wenig Schimmel kann zu "
+"Verstopfung führen, wenn die Anzahl der Passagiere zunimmt."
 
 #: .\crm\templates\preview\previewblog\fan.html:421
 msgid "Kısa Ömür Riski:"
@@ -2689,8 +2717,7 @@ msgstr "Technische Messungen"
 #: .\crm\templates\preview\previewblog\fan.html:441
 msgid "Kare Asansör Fanı Teknik Ölçüleri (120mm x 120mm)"
 msgstr ""
-"Technische Abmessungen des quadratischen Aufzugsventilators (120 mm x 120 "
-"mm)"
+"Technische Abmessungen des quadratischen Aufzugsventilators (120 mm x 120 mm)"
 
 #: .\crm\templates\preview\previewblog\fan.html:449
 msgid "LiftKeys Kare Fan Hava Üfleme Testi"
@@ -2729,11 +2756,11 @@ msgstr "Lichtempfindlichkeit, Sicherheitsleistung"
 
 #: .\crm\templates\preview\previewblog\fotosel.html:127
 msgid ""
-"Güvenlik sadece bir fonksiyon değil, <br> LiftKeys’te bir <span "
-"class=\"text-gradient-orange\">standarttır.</span>"
+"Güvenlik sadece bir fonksiyon değil, <br> LiftKeys’te bir <span class=\"text-"
+"gradient-orange\">standarttır.</span>"
 msgstr ""
-"<span class=\"text-gradient-orange\">Sicherheit ist nicht nur eine Funktion,"
-" sie ist ein Standard bei LiftKeys.</span> <br>"
+"<span class=\"text-gradient-orange\">Sicherheit ist nicht nur eine Funktion, "
+"sie ist ein Standard bei LiftKeys.</span> <br>"
 
 #: .\crm\templates\preview\previewblog\fotosel.html:135
 msgid "LiftKeys kapı sensörleri; yüksek algılama hassasiyeti..."
@@ -2923,8 +2950,8 @@ msgstr "MONTAGEANLEITUNGEN"
 
 #: .\crm\templates\preview\previewblog\fotosel.html:405
 msgid ""
-"LKS Horus fotosel sisteminin kabin girişinde montajı için asansör projesinin"
-" durumuna göre birkaç konum seçilebilir:"
+"LKS Horus fotosel sisteminin kabin girişinde montajı için asansör projesinin "
+"durumuna göre birkaç konum seçilebilir:"
 msgstr ""
 "Für die Installation des LKS Horus-Fotozellensystems am Kabineneingang "
 "können je nach Situation des Aufzugsprojekts mehrere Positionen ausgewählt "
@@ -2955,8 +2982,8 @@ msgid ""
 "Sensörlerden çıkan TX ve RX kablolarının soketleri power ünitesi üzerindeki "
 "uygun girişlere bağlanmalıdır."
 msgstr ""
-"Die Buchsen der TX- und RX-Kabel, die aus den Sensoren kommen, müssen an die"
-" entsprechenden Eingänge des Netzteils angeschlossen werden."
+"Die Buchsen der TX- und RX-Kabel, die aus den Sensoren kommen, müssen an die "
+"entsprechenden Eingänge des Netzteils angeschlossen werden."
 
 #: .\crm\templates\preview\previewblog\fotosel.html:413
 msgid ""
@@ -3025,20 +3052,23 @@ msgstr "LiftKeys | Dekorative Glas- und Spiegel-TV-Systeme für Aufzugskabinen"
 #: .\crm\templates\preview\previewblog\kabincam.html:11
 msgid ""
 "\n"
-"LiftKeys asansör dekoratif cam ve reflektif ayna (Mirror TV) sistemleri. Pendulum testli, temperli güvenli camlar ve\n"
+"LiftKeys asansör dekoratif cam ve reflektif ayna (Mirror TV) sistemleri. "
+"Pendulum testli, temperli güvenli camlar ve\n"
 "500'den fazla desen seçeneği ile kabinlerinizi özelleştirin.\n"
 msgstr ""
 "\n"
-"LiftKeys Aufzugssysteme aus dekorativem Glas und reflektierenden Spiegeln (Mirror TV). Personalisieren Sie Ihre Kabinen mit pendelgeprüfter, gehärteter Sicherheitsverglasung und über 500 Musteroptionen.\n"
+"LiftKeys Aufzugssysteme aus dekorativem Glas und reflektierenden Spiegeln "
+"(Mirror TV). Personalisieren Sie Ihre Kabinen mit pendelgeprüfter, "
+"gehärteter Sicherheitsverglasung und über 500 Musteroptionen.\n"
 
 #: .\crm\templates\preview\previewblog\kabincam.html:20
 msgid ""
 "asansör dekoratif cam, kabin cam kaplama, asansör aynası, reflektif ayna, "
-"mirror tv asansör, temperli asansör camı, sarkaç testli asansör camı, logolu"
-" asansör camı, LiftKeys asansör cam"
+"mirror tv asansör, temperli asansör camı, sarkaç testli asansör camı, logolu "
+"asansör camı, LiftKeys asansör cam"
 msgstr ""
-"Dekoratives Aufzugsglas, Kabinenglasfurnier, Aufzugsspiegel, reflektierender"
-" Spiegel, TV-Aufzugsspiegel, gehärtetes Aufzugsglas, pendelgeprüftes "
+"Dekoratives Aufzugsglas, Kabinenglasfurnier, Aufzugsspiegel, reflektierender "
+"Spiegel, TV-Aufzugsspiegel, gehärtetes Aufzugsglas, pendelgeprüftes "
 "Aufzugsglas, Aufzugsglas mit Logo, LiftKeys Aufzugsglas"
 
 #: .\crm\templates\preview\previewblog\kabincam.html:26
@@ -3049,11 +3079,14 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\kabincam.html:30
 msgid ""
 "\n"
-"Asansörünüzde sanatı ve teknolojiyi buluşturun. 500'den fazla desen seçeneğine sahip güvenli dekoratif camlar ve çift\n"
+"Asansörünüzde sanatı ve teknolojiyi buluşturun. 500'den fazla desen "
+"seçeneğine sahip güvenli dekoratif camlar ve çift\n"
 "yönlü Mirror TV ekranları.\n"
 msgstr ""
 "\n"
-"Bringen Sie Kunst und Technologie in Ihrem Aufzug zusammen. Sichere Fernsehbildschirme aus dekorativem Glas und bidirektionalem Spiegel mit über 500 Musteroptionen.\n"
+"Bringen Sie Kunst und Technologie in Ihrem Aufzug zusammen. Sichere "
+"Fernsehbildschirme aus dekorativem Glas und bidirektionalem Spiegel mit über "
+"500 Musteroptionen.\n"
 
 #: .\crm\templates\preview\previewblog\kabincam.html:39
 msgid "LiftKeys | Dekoratif Cam ve Mirror TV Sistemleri"
@@ -3062,11 +3095,14 @@ msgstr "LiftKeys | Dekorative Glas- und Spiegel-TV-Systeme"
 #: .\crm\templates\preview\previewblog\kabincam.html:43
 msgid ""
 "\n"
-"Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece bir ayna değil, projenizin dijital imzası\n"
+"Güvenli (Sarkaç Testli), estetik ve teknolojik asansör kabin camları. Sadece "
+"bir ayna değil, projenizin dijital imzası\n"
 "olan Mirror TV'yi keşfedin.\n"
 msgstr ""
 "\n"
-"Sichere (pendelgeprüfte), ästhetische und technologische Aufzugskabinenfenster. Entdecken Sie Mirror TV, nicht nur einen Spiegel, sondern die digitale Signatur Ihres Projekts.\n"
+"Sichere (pendelgeprüfte), ästhetische und technologische "
+"Aufzugskabinenfenster. Entdecken Sie Mirror TV, nicht nur einen Spiegel, "
+"sondern die digitale Signatur Ihres Projekts.\n"
 
 #: .\crm\templates\preview\previewblog\kabincam.html:163
 msgid "LIFTKEYS – Dekoratif Cam"
@@ -3074,8 +3110,8 @@ msgstr "LIFTKEYS — Dekoratives Glas"
 
 #: .\crm\templates\preview\previewblog\kabincam.html:177
 msgid ""
-"LIFTKEYS Dekoratif Cam - 500 farklı desen seçeneği ile güvenli asansör kabin"
-" tasarımları"
+"LIFTKEYS Dekoratif Cam - 500 farklı desen seçeneği ile güvenli asansör kabin "
+"tasarımları"
 msgstr ""
 "LIFTKEYS Dekoratives Glas — Sichere Aufzugskabinendesigns mit 500 "
 "verschiedenen Musteroptionen"
@@ -3111,8 +3147,8 @@ msgstr ""
 
 #: .\crm\templates\preview\previewblog\kabincam.html:211
 msgid ""
-"Bu teknik üstünlükleri (temperli cam, özel beyaz boya, koruyucu film ve test"
-" başarısı) müşteriye güven veren profesyonel bir dille şu şekilde "
+"Bu teknik üstünlükleri (temperli cam, özel beyaz boya, koruyucu film ve test "
+"başarısı) müşteriye güven veren profesyonel bir dille şu şekilde "
 "özetleyebiliriz:"
 msgstr ""
 "Wir können diese technischen Vorteile (gehärtetes Glas, spezielle weiße "
@@ -3243,9 +3279,9 @@ msgstr "Spiegel"
 #: .\crm\templates\preview\previewblog\kabincam.html:567
 msgid ""
 "Aynaların asansör kabinindeki bu psikolojik ve işlevsel rolü gerçekten çok "
-"stratejik bir detay. Özellikle kapı açıldığında aynayı görmek, kabinin orada"
-" olduğuna dair görsel bir teyit vererek güvenlik algısını pekiştirir "
-"(boşluğa adım atma korkusunu engeller)."
+"stratejik bir detay. Özellikle kapı açıldığında aynayı görmek, kabinin orada "
+"olduğuna dair görsel bir teyit vererek güvenlik algısını pekiştirir (boşluğa "
+"adım atma korkusunu engeller)."
 msgstr ""
 "Diese psychologische und funktionale Rolle der Spiegel in der Aufzugskabine "
 "ist wirklich ein sehr strategisches Detail. Das Sehen des Spiegels, "
@@ -3289,8 +3325,7 @@ msgstr "Reflektierender Spiegel (Mirror TV) Einführungstext"
 
 #: .\crm\templates\preview\previewblog\kabincam.html:602
 msgid "\"Sadece Bir Ayna Değil, Projenizin Dijital İmzası\""
-msgstr ""
-"„Nicht nur ein Spiegel, sondern eine digitale Signatur Ihres Projekts“"
+msgstr "„Nicht nur ein Spiegel, sondern eine digitale Signatur Ihres Projekts“"
 
 #: .\crm\templates\preview\previewblog\kabincam.html:606
 msgid ""
@@ -3298,8 +3333,8 @@ msgid ""
 "Liftkeys Reflektif Aynalar ile teknolojiyi estetikle buluşturuyoruz."
 msgstr ""
 "Von Geschäftszentren bis hin zu Luxusresidenzen, von Krankenhäusern bis hin "
-"zu prestigeträchtigen Plätzen; mit den reflektierenden Spiegeln von Liftkeys"
-" verbinden wir Technologie mit Ästhetik."
+"zu prestigeträchtigen Plätzen; mit den reflektierenden Spiegeln von Liftkeys "
+"verbinden wir Technologie mit Ästhetik."
 
 #: .\crm\templates\preview\previewblog\kabincam.html:612
 msgid "Çift Yönlü Fonksiyon:"
@@ -3345,8 +3380,8 @@ msgid ""
 "Modern mimarinin vazgeçilmezi olan Mirror TV teknolojisiyle asansörünüzde "
 "premium bir atmosfer yaratın."
 msgstr ""
-"Schaffen Sie mit der Mirror-TV-Technologie, die aus der modernen Architektur"
-" nicht wegzudenken ist, eine erstklassige Atmosphäre in Ihrem Aufzug."
+"Schaffen Sie mit der Mirror-TV-Technologie, die aus der modernen Architektur "
+"nicht wegzudenken ist, eine erstklassige Atmosphäre in Ihrem Aufzug."
 
 #: .\crm\templates\preview\previewblog\keys.html:7
 msgid "LiftKeys | Kurumsal Logolu ve Döküm Asansör Üçgen Anahtarı"
@@ -3355,10 +3390,14 @@ msgstr "LiftKeys | Aufzugsdreieckschalter mit Firmenlogo und Druckguss"
 #: .\crm\templates\preview\previewblog\keys.html:11
 msgid ""
 "\n"
-"LiftKeys asansör üçgen anahtarı modelleri ile tanışın. Kurumsal logolu estetik damla etiketli tasarımlar ve yüksek tork dirençli kalıptan işlemeli döküm anahtarlar.\n"
+"LiftKeys asansör üçgen anahtarı modelleri ile tanışın. Kurumsal logolu "
+"estetik damla etiketli tasarımlar ve yüksek tork dirençli kalıptan işlemeli "
+"döküm anahtarlar.\n"
 msgstr ""
 "\n"
-"Lernen Sie die Modelle der LiftKeys-Dreieckschlüssel für Aufzüge kennen. Ästhetische Drop-Label-Designs mit Firmenlogo und druckgegossenen Schaltern, die auf einer hochdrehfesten Matrize gestickt sind.\n"
+"Lernen Sie die Modelle der LiftKeys-Dreieckschlüssel für Aufzüge kennen. "
+"Ästhetische Drop-Label-Designs mit Firmenlogo und druckgegossenen Schaltern, "
+"die auf einer hochdrehfesten Matrize gestickt sind.\n"
 
 #: .\crm\templates\preview\previewblog\keys.html:19
 msgid ""
@@ -3377,10 +3416,14 @@ msgstr "LiftKeys | Ästhetischer und zuverlässiger Aufzugsdreieckschalter"
 #: .\crm\templates\preview\previewblog\keys.html:29
 msgid ""
 "\n"
-"Firmanıza özel kurumsal renklerde damla etiketli veya kalıptan doğrudan işlenmiş mühürlü döküm asansör anahtarları. EN 81-20 standartlarına tam uyumlu.\n"
+"Firmanıza özel kurumsal renklerde damla etiketli veya kalıptan doğrudan "
+"işlenmiş mühürlü döküm asansör anahtarları. EN 81-20 standartlarına tam "
+"uyumlu.\n"
 msgstr ""
 "\n"
-"Versiegelte Druckguss-Aufzugsschalter mit Tropfenetikett oder direkt aus der Form in den für Ihr Unternehmen spezifischen Unternehmensfarben gefertigt. Vollständig konform mit den Normen EN 81-20.\n"
+"Versiegelte Druckguss-Aufzugsschalter mit Tropfenetikett oder direkt aus der "
+"Form in den für Ihr Unternehmen spezifischen Unternehmensfarben gefertigt. "
+"Vollständig konform mit den Normen EN 81-20.\n"
 
 #: .\crm\templates\preview\previewblog\keys.html:37
 msgid "LiftKeys | Kurumsal Asansör Üçgen Anahtarı"
@@ -3389,10 +3432,12 @@ msgstr "LiftKeys | Enterprise Elevator Dreiecksschalter"
 #: .\crm\templates\preview\previewblog\keys.html:41
 msgid ""
 "\n"
-"Asansör bakım firmalarına ve üreticilerine özel, yüksek kaliteli damla etiketli ve döküm asansör dış kapı anahtarları.\n"
+"Asansör bakım firmalarına ve üreticilerine özel, yüksek kaliteli damla "
+"etiketli ve döküm asansör dış kapı anahtarları.\n"
 msgstr ""
 "\n"
-"Hochwertige Aufzugsaußentürschalter mit Tropfenetikett und Druckguss, exklusiv für Aufzugswartungsunternehmen und -hersteller.\n"
+"Hochwertige Aufzugsaußentürschalter mit Tropfenetikett und Druckguss, "
+"exklusiv für Aufzugswartungsunternehmen und -hersteller.\n"
 
 #: .\crm\templates\preview\previewblog\keys.html:153
 msgid "LIFTKEYS – Asansör Anahtarı "
@@ -3468,19 +3513,18 @@ msgstr ""
 
 #: .\crm\templates\preview\previewblog\keys.html:248
 msgid ""
-"Az sayıda üretim imkanıyla, en küçük asansör firmasına bile kendi markasıyla"
-" profesyonel görünme şansı tanıyoruz. İstenilen her renkte ve tasarımda "
+"Az sayıda üretim imkanıyla, en küçük asansör firmasına bile kendi markasıyla "
+"profesyonel görünme şansı tanıyoruz. İstenilen her renkte ve tasarımda "
 "üretim yaparak markanızın kurumsal renklerini birebir anahtara yansıtıyoruz."
 msgstr ""
 "Mit wenigen Produktionsmöglichkeiten geben wir selbst dem kleinsten "
 "Aufzugsunternehmen die Möglichkeit, mit seiner eigenen Marke professionell "
-"auszusehen. Wir produzieren in jeder gewünschten Farbe und jedem gewünschten"
-" Design und spiegeln dabei die Unternehmensfarben Ihrer Marke eins zu eins "
+"auszusehen. Wir produzieren in jeder gewünschten Farbe und jedem gewünschten "
+"Design und spiegeln dabei die Unternehmensfarben Ihrer Marke eins zu eins "
 "wider."
 
 #: .\crm\templates\preview\previewblog\keys.html:254
-msgid ""
-"Stok tutma zorunluluğunu ortadan kaldıran, projeye özel esnek çözümler."
+msgid "Stok tutma zorunluluğunu ortadan kaldıran, projeye özel esnek çözümler."
 msgstr ""
 "Flexible, projektspezifische Lösungen, die eine Lagerhaltung überflüssig "
 "machen."
@@ -3499,8 +3543,8 @@ msgstr "Unverzichtbar für große Hersteller"
 
 #: .\crm\templates\preview\previewblog\keys.html:282
 msgid ""
-"Logonuz anahtarın gövdesine kalıptan doğrudan işlenir. Boya değildir, etiket"
-" değildir; metalin bir parçasıdır. Silinmez, sökülemez, eskimez."
+"Logonuz anahtarın gövdesine kalıptan doğrudan işlenir. Boya değildir, etiket "
+"değildir; metalin bir parçasıdır. Silinmez, sökülemez, eskimez."
 msgstr ""
 "Ihr Logo wird direkt von der Form bis zum Gehäuse des Schalters bearbeitet. "
 "Es ist keine Farbe, es ist kein Etikett; es ist Teil des Metalls. Es kann "
@@ -3549,8 +3593,7 @@ msgstr "LiftKeys Aufzugsschalter, dreieckiger Schlitz, Durchmesser 13 mm"
 
 #: .\crm\templates\preview\previewblog\keys.html:353
 msgid "LiftKeys Asansör Anahtarı Damla Etiket Tasarım Şablonu"
-msgstr ""
-"Designvorlage für Aufzugsschalter von LiftKeys mit Aufzugsbeschriftung"
+msgstr "Designvorlage für Aufzugsschalter von LiftKeys mit Aufzugsbeschriftung"
 
 #: .\crm\templates\preview\previewblog\keys.html:361
 msgid "LiftKeys Kurumsal Logolu Damla Etiketli Asansör Anahtarı"
@@ -3567,8 +3610,8 @@ msgstr "Gesamtabmessungen des LiftKeys Druckguss-Aufzugsschalters"
 #: .\crm\templates\preview\previewblog\keys.html:393
 msgid "LiftKeys Döküm Asansör Anahtarı Üçgen Yuva Çapı 13mm"
 msgstr ""
-"LiftKeys Aufzugsschlüssel aus Druckguss, dreieckiger Schlitz, Durchmesser 13"
-" mm"
+"LiftKeys Aufzugsschlüssel aus Druckguss, dreieckiger Schlitz, Durchmesser 13 "
+"mm"
 
 #: .\crm\templates\preview\previewblog\keys.html:401
 msgid "LiftKeys Döküm Anahtar Tasarım Şablonu"
@@ -3580,8 +3623,8 @@ msgstr "Richtiges Design: Verwendung von LiftKeys Casting Key"
 
 #: .\crm\templates\preview\previewblog\keys.html:413
 msgid ""
-"Döküm Anahtarda tasarım damlaya göre daha kısıtlıdır. mümkün mertebe az obje"
-" ve yazı daha belirgin olmasını sağlayacaktır"
+"Döküm Anahtarda tasarım damlaya göre daha kısıtlıdır. mümkün mertebe az obje "
+"ve yazı daha belirgin olmasını sağlayacaktır"
 msgstr ""
 "Das Design des Casting-Schalters ist zurückhaltender als das des Drop. "
 "Dadurch werden die kleinstmöglichen Objekte und die Schrift besser zur "
@@ -3622,8 +3665,8 @@ msgstr "Schulungsanforderung:"
 
 #: .\crm\templates\preview\previewblog\keys.html:441
 msgid ""
-"Anahtarı teslim eden asansör bakım firması, bu anahtarın hangi durumlarda ve"
-" nasıl kullanılacağına dair bina yetkilisine uygulamalı kullanma eğitimi "
+"Anahtarı teslim eden asansör bakım firması, bu anahtarın hangi durumlarda ve "
+"nasıl kullanılacağına dair bina yetkilisine uygulamalı kullanma eğitimi "
 "vermek ve bunu bir eğitim formu ile kayıt altına almak zorundadır."
 msgstr ""
 "Die Aufzugswartungsfirma, die den Schlüssel ausliefert, muss der Baubehörde "
@@ -3736,13 +3779,17 @@ msgstr "LiftKeys | Handlauf- und Griffsysteme für Aufzüge aus Edelstahl"
 msgid ""
 "\n"
 "LiftKeys paslanmaz çelik asansör küpeşte modelleri ile tanışın. \n"
-"Kaynaksız O-ring montaj teknolojisi, 5 farklı renk seçeneği (Gold, Krom, Siyah, Bronz) \n"
-"ve modüler boru sistemleri ile asansörünüze değer katın. Stoktan hemen teslim.\n"
+"Kaynaksız O-ring montaj teknolojisi, 5 farklı renk seçeneği (Gold, Krom, "
+"Siyah, Bronz) \n"
+"ve modüler boru sistemleri ile asansörünüze değer katın. Stoktan hemen "
+"teslim.\n"
 msgstr ""
 "\n"
 "Lernen Sie die Aufzugshandlaufmodelle aus Edelstahl von LiftKeys kennen. \n"
-"Schweißlose O-Ring-Montagetechnik, 5 verschiedene Farboptionen (Gold, Chrom, Schwarz, Bronze) \n"
-"und werten Sie Ihren Aufzug mit modularen Rohrleitungssystemen auf. Sofortige Lieferung ab Lager.\n"
+"Schweißlose O-Ring-Montagetechnik, 5 verschiedene Farboptionen (Gold, Chrom, "
+"Schwarz, Bronze) \n"
+"und werten Sie Ihren Aufzug mit modularen Rohrleitungssystemen auf. "
+"Sofortige Lieferung ab Lager.\n"
 
 #: .\crm\templates\preview\previewblog\kupeste.html:21
 msgid ""
@@ -3762,13 +3809,16 @@ msgstr "LiftKeys | Modulare und farbenfrohe Aufzugsgeländersysteme"
 #, python-format
 msgid ""
 "\n"
-"Kaynak gerektirmeyen, O-ring teknolojili ve %%100 modüler asansör küpeşteleri. \n"
-"Gold, Krom, Bronz ve Siyah renk seçenekleriyle kabinlerinize modern bir dokunuş yapın. \n"
+"Kaynak gerektirmeyen, O-ring teknolojili ve %%100 modüler asansör "
+"küpeşteleri. \n"
+"Gold, Krom, Bronz ve Siyah renk seçenekleriyle kabinlerinize modern bir "
+"dokunuş yapın. \n"
 "Teknik detaylar ve kolay montaj rehberi için tıklayın.\n"
 msgstr ""
 "\n"
 "Schweißfreie, zu 100%% modulare Aufzugshandläufe mit O-Ring-Technologie. \n"
-"Verleihen Sie Ihren Schränken einen modernen Touch mit den Farboptionen Gold, Chrom, Bronze und Schwarz. \n"
+"Verleihen Sie Ihren Schränken einen modernen Touch mit den Farboptionen "
+"Gold, Chrom, Bronze und Schwarz. \n"
 "Klicken Sie hier für technische Details und eine einfache Montageanleitung.\n"
 
 #: .\crm\templates\preview\previewblog\kupeste.html:41
@@ -3778,11 +3828,13 @@ msgstr "LiftKeys | Aufzugsgriffe aus Edelstahl"
 #: .\crm\templates\preview\previewblog\kupeste.html:45
 msgid ""
 "\n"
-"201 kalite paslanmaz çelikten üretilen, vidalı ve O-ringli kolay montaj küpeşte sistemleri. \n"
+"201 kalite paslanmaz çelikten üretilen, vidalı ve O-ringli kolay montaj "
+"küpeşte sistemleri. \n"
 "İstediğiniz renk ve ölçü kombinasyonunu özgürce oluşturun.\n"
 msgstr ""
 "\n"
-"Einfach zu installierende Handlaufsysteme mit Schrauben und O-Ringen aus Edelstahl der Güteklasse 201. \n"
+"Einfach zu installierende Handlaufsysteme mit Schrauben und O-Ringen aus "
+"Edelstahl der Güteklasse 201. \n"
 "Erstellen Sie nach Belieben jede gewünschte Farb- und Größenkombination.\n"
 
 #: .\crm\templates\preview\previewblog\kupeste.html:167
@@ -3834,11 +3886,14 @@ msgstr "Handläufe für Aufzüge"
 #: .\crm\templates\preview\previewblog\kupeste.html:251
 msgid ""
 "İnovatif küpeşte çözümlerimiz sayesinde, fabrikanızda talebe göre \n"
-"                    <strong style=\"color:#F08200;\">ölçü, renk ve zamanlama özgürlüğüyle</strong> \n"
+"                    <strong style=\"color:#F08200;\">ölçü, renk ve zamanlama "
+"özgürlüğüyle</strong> \n"
 "                    üretim yapabilirsiniz."
 msgstr ""
-"Dank unserer innovativen Handlauflösungen, ganz nach den Anforderungen in Ihrer Fabrik \n"
-" <strong style=\"color:#F08200;\">Mit Freiheit in Bezug auf Maß, Farbe und Zeitpunkt</strong> \n"
+"Dank unserer innovativen Handlauflösungen, ganz nach den Anforderungen in "
+"Ihrer Fabrik \n"
+" <strong style=\"color:#F08200;\">Mit Freiheit in Bezug auf Maß, Farbe und "
+"Zeitpunkt</strong> \n"
 " Sie können herstellen."
 
 #: .\crm\templates\preview\previewblog\kupeste.html:266
@@ -3922,11 +3977,15 @@ msgstr "ESB Schwarz"
 #: .\crm\templates\preview\previewblog\kupeste.html:381
 msgid ""
 "Dirseklerin duvara temas eden alanı 42 mm, boru çapı ise 30 mm’dir.<br>\n"
-"                    Bu tasarım sayesinde oluşan yük daha geniş bir alana yayılır; baskı altında dahi eğilme veya\n"
-"                    bükülme problemi yaşanmadan güvenli ve stabil çalışma sağlanır."
+"                    Bu tasarım sayesinde oluşan yük daha geniş bir alana "
+"yayılır; baskı altında dahi eğilme veya\n"
+"                    bükülme problemi yaşanmadan güvenli ve stabil çalışma "
+"sağlanır."
 msgstr ""
-"Die Fläche der Bögen, die mit der Wand in Kontakt kommen, beträgt 42 mm und der Rohrdurchmesser beträgt 30 mm. <br>\n"
-" Dank dieser Konstruktion verteilt sich die erzeugte Last auf eine größere Fläche; Biegen auch unter Druck oder\n"
+"Die Fläche der Bögen, die mit der Wand in Kontakt kommen, beträgt 42 mm und "
+"der Rohrdurchmesser beträgt 30 mm. <br>\n"
+" Dank dieser Konstruktion verteilt sich die erzeugte Last auf eine größere "
+"Fläche; Biegen auch unter Druck oder\n"
 " Ein sicherer und stabiler Betrieb ist ohne Biegeprobleme gewährleistet."
 
 #: .\crm\templates\preview\previewblog\kupeste.html:399
@@ -3998,10 +4057,12 @@ msgstr "Wie man die richtige Maßnahme ergreift"
 #: .\crm\templates\preview\previewblog\kupeste.html:487
 msgid ""
 "Küpeşte montajı yapılacak alanın ölçülerini belirleyin.<br>\n"
-"                        Küpeşte boyunu netleştirdikten sonra, sağ ve sol dirsekler için \n"
+"                        Küpeşte boyunu netleştirdikten sonra, sağ ve sol "
+"dirsekler için \n"
 "                        <strong>toplam 140 mm ölçüyü</strong> dikkate alın."
 msgstr ""
-"Ermitteln Sie die Abmessungen des Bereichs, in dem der Handlauf installiert werden soll. <br>\n"
+"Ermitteln Sie die Abmessungen des Bereichs, in dem der Handlauf installiert "
+"werden soll. <br>\n"
 " Nach Klärung der Länge des Handlaufs für den rechten und linken Ellbogen \n"
 " Berücksichtigen Sie die <strong>Gesamtgröße von 140 mm.</strong>"
 
@@ -4043,19 +4104,27 @@ msgstr ""
 
 #: .\crm\templates\preview\previewblog\kupeste.html:536
 msgid ""
-"Küpeşte dirseklerine <span class=\"highlight-text\">O-ringler</span> takılır.<br>\n"
-"                        Her bir dirseğe iki adet O-ring yerleştirilmesi, borunun ileri–geri hareket etmesini engeller."
+"Küpeşte dirseklerine <span class=\"highlight-text\">O-ringler</span> takılır."
+"<br>\n"
+"                        Her bir dirseğe iki adet O-ring yerleştirilmesi, "
+"borunun ileri–geri hareket etmesini engeller."
 msgstr ""
-"<span class=\"highlight-text\">O-Ringe sind an den Handlaufhalterungen befestigt.</span> <br>\n"
-" Das Anbringen von zwei O-Ringen an jedem Bogen verhindert, dass sich das Rohr vorwärts und rückwärts bewegt."
+"<span class=\"highlight-text\">O-Ringe sind an den Handlaufhalterungen "
+"befestigt.</span> <br>\n"
+" Das Anbringen von zwei O-Ringen an jedem Bogen verhindert, dass sich das "
+"Rohr vorwärts und rückwärts bewegt."
 
 #: .\crm\templates\preview\previewblog\kupeste.html:540
 msgid ""
-"Ayrıca boru, dirseğe döndürülerek monte edildiğinde, O-ringler sayesinde borunun dönmesi de önlenmiş olur.<br>\n"
-"                        Bu sistem, küpeştenin sabit, güvenli ve stabil şekilde çalışmasını sağlar."
+"Ayrıca boru, dirseğe döndürülerek monte edildiğinde, O-ringler sayesinde "
+"borunun dönmesi de önlenmiş olur.<br>\n"
+"                        Bu sistem, küpeştenin sabit, güvenli ve stabil "
+"şekilde çalışmasını sağlar."
 msgstr ""
-"Wenn das Rohr durch Drehen des Krümmers montiert wird, verhindern die O-Ringe außerdem, dass sich das Rohr dreht. <br>\n"
-" Dieses System gewährleistet einen stabilen, sicheren und stabilen Betrieb des Handlaufs."
+"Wenn das Rohr durch Drehen des Krümmers montiert wird, verhindern die O-"
+"Ringe außerdem, dass sich das Rohr dreht. <br>\n"
+" Dieses System gewährleistet einen stabilen, sicheren und stabilen Betrieb "
+"des Handlaufs."
 
 #: .\crm\templates\preview\previewblog\kupeste.html:547
 msgid "Küpeşte dirseklerine O-ring takılması ve montaj detayları"
@@ -4069,11 +4138,15 @@ msgstr "Vormontiertes Edelstahl-Handlaufset"
 #: .\crm\templates\preview\previewblog\kupeste.html:563
 msgid ""
 "Kendi fabrikanızda, istediğiniz anda üreteceğiniz küpeşteler sayesinde \n"
-"                        <span class=\"highlight-text\">ölçü uyumsuzluğu, stok yetersizliği ve çizik</span> \n"
-"                        gibi malzeme sorunlarını tamamen ortadan kaldırabilirsiniz."
+"                        <span class=\"highlight-text\">ölçü uyumsuzluğu, "
+"stok yetersizliği ve çizik</span> \n"
+"                        gibi malzeme sorunlarını tamamen ortadan "
+"kaldırabilirsiniz."
 msgstr ""
-"In Ihrer eigenen Fabrik, dank der Handläufe, die Sie jederzeit herstellen können \n"
-" <span class=\"highlight-text\">Maßabweichung, Mangel an Lagerbeständen und Kratzer</span> \n"
+"In Ihrer eigenen Fabrik, dank der Handläufe, die Sie jederzeit herstellen "
+"können \n"
+" <span class=\"highlight-text\">Maßabweichung, Mangel an Lagerbeständen und "
+"Kratzer</span> \n"
 " Sie können solche Materialprobleme vollständig beseitigen."
 
 #: .\crm\templates\preview\previewblog\kupeste.html:579
@@ -4157,13 +4230,17 @@ msgstr "LiftKeys Elevator Schlittschuhsysteme | TPU Silent Track Skating"
 #: .\crm\templates\preview\previewblog\paten.html:11
 msgid ""
 "\n"
-"LiftKeys TPU hammaddeli asansör ağırlık patenleri ile maksimum konfor ve sessizlik sağlayın.\n"
-"Çift bayraklı, 50'lik ve 70'lik modellerimiz, yağdanlık uyumlu yapısı ve yüksek dayanıklılığı ile\n"
+"LiftKeys TPU hammaddeli asansör ağırlık patenleri ile maksimum konfor ve "
+"sessizlik sağlayın.\n"
+"Çift bayraklı, 50'lik ve 70'lik modellerimiz, yağdanlık uyumlu yapısı ve "
+"yüksek dayanıklılığı ile\n"
 "karşı ağırlık sistemlerinde mükemmel performans sunar.\n"
 msgstr ""
 "\n"
-"Bieten Sie maximalen Komfort und Ruhe mit LiftKeys Leichtathletikschuhen aus TPU-Rohmaterial.\n"
-"Unsere Modelle mit doppelter Flagge, 50er und 70er Jahre, mit schmierstoffverträglicher Konstruktion und hoher Haltbarkeit\n"
+"Bieten Sie maximalen Komfort und Ruhe mit LiftKeys Leichtathletikschuhen aus "
+"TPU-Rohmaterial.\n"
+"Unsere Modelle mit doppelter Flagge, 50er und 70er Jahre, mit "
+"schmierstoffverträglicher Konstruktion und hoher Haltbarkeit\n"
 "bietet hervorragende Leistung in Gegengewichtssystemen.\n"
 
 #: .\crm\templates\preview\previewblog\paten.html:21
@@ -4188,7 +4265,8 @@ msgid ""
 "Hemen inceleyin ve teklif alın.\n"
 msgstr ""
 "\n"
-"Technologie, die Vibrationen und Geräusche in Ihrem Aufzug beendet: LiftKeys TPU-Skates.\n"
+"Technologie, die Vibrationen und Geräusche in Ihrem Aufzug beendet: LiftKeys "
+"TPU-Skates.\n"
 "Innengehäuse aus Kunststoff und verstärktem Stahl mit spezieller Geometrie.\n"
 "Schauen Sie es sich jetzt an und erhalten Sie ein Angebot.\n"
 
@@ -4219,10 +4297,12 @@ msgstr "LiftKeys Elevator, Gewichtschuhsystem und TPU-Kunststofftechnologie"
 #: .\crm\templates\preview\previewblog\paten.html:197
 msgid ""
 "“TPU paten plastiği ile<br>\n"
-"                    <strong style=\"color: #495057; font-weight: 700;\">üst düzey konfor, sessiz ve dengeli çalışma.”</strong>"
+"                    <strong style=\"color: #495057; font-weight: 700;\">üst "
+"düzey konfor, sessiz ve dengeli çalışma.”</strong>"
 msgstr ""
 "„Mit TPU-Skate-Kunststoff <br>\n"
-" <strong style=\"color: #495057; font-weight: 700;\">hoher Komfort, leiser und ausgewogener Betrieb.“</strong>"
+" <strong style=\"color: #495057; font-weight: 700;\">hoher Komfort, leiser "
+"und ausgewogener Betrieb.“</strong>"
 
 #: .\crm\templates\preview\previewblog\paten.html:203
 msgid ""
@@ -4295,8 +4375,7 @@ msgstr "Schienenkompatibilität"
 #: .\crm\templates\preview\previewblog\paten.html:287
 msgid "5 mm ve 9 mm’lik kılavuz raylarda kullanım imkanı sağlar."
 msgstr ""
-"Bietet die Möglichkeit der Verwendung auf Führungsschienen von 5 mm und 9 "
-"mm."
+"Bietet die Möglichkeit der Verwendung auf Führungsschienen von 5 mm und 9 mm."
 
 #: .\crm\templates\preview\previewblog\paten.html:296
 msgid "Sessiz Çalışma"
@@ -4415,10 +4494,12 @@ msgstr "TPU-Rohstoff"
 
 #: .\crm\templates\preview\previewblog\paten.html:442
 msgid ""
-"Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi sayesinde \n"
+"Özel karışımlı poliüretan malzemesi ve özel geometrili yüzey işlemesi "
+"sayesinde \n"
 "                <strong>ses yapmaz, titreşimi emer.</strong>"
 msgstr ""
-"Dank speziell gemischtem Polyurethanmaterial und Oberflächenbehandlung mit besonderer Geometrie \n"
+"Dank speziell gemischtem Polyurethanmaterial und Oberflächenbehandlung mit "
+"besonderer Geometrie \n"
 " <strong>macht keine Geräusche, absorbiert Vibrationen.</strong>"
 
 #: .\crm\templates\preview\previewblog\paten.html:452
@@ -4480,8 +4561,8 @@ msgid ""
 "bir seyir sağlar."
 msgstr ""
 "TPU (Thermoplastisches Polyurethan) hat eine viel höhere "
-"Verschleißfestigkeit als herkömmliche Kunststoffe und absorbiert Vibrationen"
-" in der Aufzugsschiene, was für eine leise Fahrt sorgt."
+"Verschleißfestigkeit als herkömmliche Kunststoffe und absorbiert Vibrationen "
+"in der Aufzugsschiene, was für eine leise Fahrt sorgt."
 
 #: .\crm\templates\preview\previewblog\paten.html:525
 msgid "Hangi ray tipleriyle uyumludur?"
@@ -4505,10 +4586,15 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\patenkabin.html:11
 msgid ""
 "\n"
-"LiftKeys asansör kabin paten sistemleri; 3 taraflı TPU kauçuk yapısı, ayarlanabilir sertlik ayarı ve tümleşik yağdanlığı ile maksimum konfor, güven ve sessiz çalışma sunar.\n"
+"LiftKeys asansör kabin paten sistemleri; 3 taraflı TPU kauçuk yapısı, "
+"ayarlanabilir sertlik ayarı ve tümleşik yağdanlığı ile maksimum konfor, "
+"güven ve sessiz çalışma sunar.\n"
 msgstr ""
 "\n"
-"Die Lift-Kabinen-Skatesysteme von LiftKeys bieten maximalen Komfort, Zuverlässigkeit und einen leisen Betrieb mit einer 3-seitigen TPU-Gummikonstruktion, einer einstellbaren Steifigkeitseinstellung und einer integrierten Schmierung.\n"
+"Die Lift-Kabinen-Skatesysteme von LiftKeys bieten maximalen Komfort, "
+"Zuverlässigkeit und einen leisen Betrieb mit einer 3-seitigen TPU-"
+"Gummikonstruktion, einer einstellbaren Steifigkeitseinstellung und einer "
+"integrierten Schmierung.\n"
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:19
 msgid ""
@@ -4518,8 +4604,8 @@ msgid ""
 msgstr ""
 "Aufzugskabinenschlittschuh, Kabinenschienenschlittschuh, TPU-"
 "Aufzugsschlittschuh, Liftkeys-Schlittschuh, verstellbarer Liftschlittschuh, "
-"3-seitige Gummischuhe, integrierte Ölschlittschuhe, Aufzug-Ersatzteile, "
-"50-mm-Schlittschuhe, 90-mm-Schlittschuhe"
+"3-seitige Gummischuhe, integrierte Ölschlittschuhe, Aufzug-Ersatzteile, 50-"
+"mm-Schlittschuhe, 90-mm-Schlittschuhe"
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:25
 msgid "LiftKeys | Sessiz ve Konforlu Asansör Kabin Paten Sistemleri"
@@ -4529,10 +4615,14 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\patenkabin.html:29
 msgid ""
 "\n"
-"Asansörünüzde titreşimi ve sesi bitiren teknoloji! ±2° esneme, yüksek kaliteli TPU hammadde ve ayarlanabilir sertlik sunan LiftKeys kabin patenlerini hemen inceleyin.\n"
+"Asansörünüzde titreşimi ve sesi bitiren teknoloji! ±2° esneme, yüksek "
+"kaliteli TPU hammadde ve ayarlanabilir sertlik sunan LiftKeys kabin "
+"patenlerini hemen inceleyin.\n"
 msgstr ""
 "\n"
-"Technologie, die Vibrationen und Geräusche in Ihrem Aufzug beendet! Schauen Sie sich die LiftKeys-Kabinenschlittschuhe an, die eine Dehnung von ±2°, hochwertige TPU-Rohmaterialien und eine einstellbare Steifigkeit bieten.\n"
+"Technologie, die Vibrationen und Geräusche in Ihrem Aufzug beendet! Schauen "
+"Sie sich die LiftKeys-Kabinenschlittschuhe an, die eine Dehnung von ±2°, "
+"hochwertige TPU-Rohmaterialien und eine einstellbare Steifigkeit bieten.\n"
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:38
 msgid "LiftKeys | Asansör Kabin Paten Sistemleri"
@@ -4541,10 +4631,13 @@ msgstr "LiftKeys | Rollschuhsysteme für Aufzugskabinen"
 #: .\crm\templates\preview\previewblog\patenkabin.html:42
 msgid ""
 "\n"
-"Daha az titreşim, daha az ses! Tümleşik yağdanlıklı ve TPU kauçuk yapılı LiftKeys kabin patenleri ile asansörünüzde konforu zirveye taşıyın.\n"
+"Daha az titreşim, daha az ses! Tümleşik yağdanlıklı ve TPU kauçuk yapılı "
+"LiftKeys kabin patenleri ile asansörünüzde konforu zirveye taşıyın.\n"
 msgstr ""
 "\n"
-"Weniger Vibration, weniger Lärm! Mit den LiftKeys-Kabinenschlittschuhen mit integrierter Schmierung und TPU-Gummikonstruktion können Sie in Ihrem Aufzug ganz nach oben fahren.\n"
+"Weniger Vibration, weniger Lärm! Mit den LiftKeys-Kabinenschlittschuhen mit "
+"integrierter Schmierung und TPU-Gummikonstruktion können Sie in Ihrem Aufzug "
+"ganz nach oben fahren.\n"
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:162
 msgid "LIFTKEYS – Kabin Paten Sistemleri"
@@ -4577,10 +4670,12 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\patenkabin.html:205
 msgid ""
 "Güvenlik sadece bir fonksiyon değil,<br>\n"
-"                    <strong class=\"text-dark fw-bold\">LiftKeys’te bir standarttır.</strong>"
+"                    <strong class=\"text-dark fw-bold\">LiftKeys’te bir "
+"standarttır.</strong>"
 msgstr ""
 "Sicherheit ist nicht nur eine Funktion, <br>\n"
-" <strong class=\"text-dark fw-bold\">Es ist ein Standard in LiftKeys.</strong>"
+" <strong class=\"text-dark fw-bold\">Es ist ein Standard in LiftKeys.</"
+"strong>"
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:229
 msgid ""
@@ -4588,8 +4683,8 @@ msgid ""
 "çalışma ve maksimum titreşim sönümleme hedeflenerek özel olarak "
 "tasarlanmıştır."
 msgstr ""
-"<strong class=\"text-dark\">Unsere Lift-Skates wurden speziell mit "
-"dem</strong> Ziel entwickelt, Komfort, leisen Betrieb und maximale "
+"<strong class=\"text-dark\">Unsere Lift-Skates wurden speziell mit dem</"
+"strong> Ziel entwickelt, Komfort, leisen Betrieb und maximale "
 "Schwingungsdämpfung zu bieten."
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:233
@@ -4651,8 +4746,7 @@ msgstr "Schlußfolgerung:"
 msgid ""
 "Daha az titreşim, daha az ses, daha fazla konfor ve uzun ömürlü performans."
 msgstr ""
-"Weniger Vibrationen, weniger Lärm, mehr Komfort und lang anhaltende "
-"Leistung."
+"Weniger Vibrationen, weniger Lärm, mehr Komfort und lang anhaltende Leistung."
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:284
 msgid ""
@@ -4906,8 +5000,8 @@ msgid ""
 msgstr ""
 "Das Flexibilitätsniveau der Schlittschuhe kann je nach Erwartung der "
 "Hubgeschwindigkeit und des Komforts angepasst werden. Die gewünschte "
-"Flexibilität wird durch Anziehen oder Lösen der Gegenmuttern erreicht. Diese"
-" Funktion sorgt für optimale Stabilität, indem sie Gleisfehler bei "
+"Flexibilität wird durch Anziehen oder Lösen der Gegenmuttern erreicht. Diese "
+"Funktion sorgt für optimale Stabilität, indem sie Gleisfehler bei "
 "unterschiedlichen Geschwindigkeiten und Betriebsbedingungen dämpft."
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:673
@@ -4921,8 +5015,8 @@ msgid ""
 "süreci hızlanır ve ek parça ihtiyacı ortadan kalkar."
 msgstr ""
 "Das System wird als Komplettset zusammen mit dem Öltank angeboten. Dank der "
-"integrierten Struktur müssen Sie sich nicht um die Installation zusätzlicher"
-" Schmiermittel kümmern, der Montageprozess wird beschleunigt und der Bedarf "
+"integrierten Struktur müssen Sie sich nicht um die Installation zusätzlicher "
+"Schmiermittel kümmern, der Montageprozess wird beschleunigt und der Bedarf "
 "an zusätzlichen Teilen entfällt."
 
 #: .\crm\templates\preview\previewblog\patenkabin.html:686
@@ -4946,13 +5040,17 @@ msgstr ""
 msgid ""
 "\n"
 "Asansör kabinleri için kırılmaz solid polikarbon ve polistren levhalar.\n"
-"B1 yanmazlık sınıfı, esnek montaj ve camdan 250 kat dayanıklı yapısıyla güvenliği artırın.\n"
+"B1 yanmazlık sınıfı, esnek montaj ve camdan 250 kat dayanıklı yapısıyla "
+"güvenliği artırın.\n"
 "Opal ve şeffaf seçenekleriyle LiftKeys kalitesini keşfedin.\n"
 msgstr ""
 "\n"
-"Unzerbrechliche Platten aus festem Polycarbonat und Polystyrol für Aufzugskabinen.\n"
-"Erhöhen Sie die Sicherheit mit der Entflammbarkeitsklasse B1, der flexiblen Halterung und der 250-fach glasfesten Konstruktion.\n"
-"Entdecken Sie die Qualität von LiftKeys mit opalen und transparenten Optionen.\n"
+"Unzerbrechliche Platten aus festem Polycarbonat und Polystyrol für "
+"Aufzugskabinen.\n"
+"Erhöhen Sie die Sicherheit mit der Entflammbarkeitsklasse B1, der flexiblen "
+"Halterung und der 250-fach glasfesten Konstruktion.\n"
+"Entdecken Sie die Qualität von LiftKeys mit opalen und transparenten "
+"Optionen.\n"
 
 #: .\crm\templates\preview\previewblog\solid.html:21
 msgid ""
@@ -4972,12 +5070,15 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\solid.html:31
 msgid ""
 "\n"
-"Kırılmaz, yanmaz ve esnek. Asansör tavan ve duvarlarında camın yerini alan güvenli teknoloji.\n"
+"Kırılmaz, yanmaz ve esnek. Asansör tavan ve duvarlarında camın yerini alan "
+"güvenli teknoloji.\n"
 "B1 sınıfı alev almaz yapısı ve kolay montaj avantajlarını inceleyin.\n"
 msgstr ""
 "\n"
-"Es ist nicht zerbrechlich, feuerfest und flexibel. Sichere Technologie, die Glas an der Decke und an den Wänden des Aufzugs ersetzt.\n"
-"Informieren Sie sich über die Vorteile der flammhemmenden Konstruktion der Klasse B1 und der einfachen Montage.\n"
+"Es ist nicht zerbrechlich, feuerfest und flexibel. Sichere Technologie, die "
+"Glas an der Decke und an den Wänden des Aufzugs ersetzt.\n"
+"Informieren Sie sich über die Vorteile der flammhemmenden Konstruktion der "
+"Klasse B1 und der einfachen Montage.\n"
 
 #: .\crm\templates\preview\previewblog\solid.html:42
 msgid "LiftKeys | Kırılmaz ve Yanmaz Asansör Levhaları"
@@ -4991,8 +5092,10 @@ msgid ""
 "Detaylar için tıklayın.\n"
 msgstr ""
 "\n"
-"Solide Polycarbonat- und Polystyrolplatten, die 250-mal stärker sind als Glas.\n"
-"Einfach zu montieren, kann mit einer Schere zugeschnitten werden, Klasse B1, feuerfest.\n"
+"Solide Polycarbonat- und Polystyrolplatten, die 250-mal stärker sind als "
+"Glas.\n"
+"Einfach zu montieren, kann mit einer Schere zugeschnitten werden, Klasse B1, "
+"feuerfest.\n"
 "Klicken Sie hier für weitere Informationen.\n"
 
 #: .\crm\templates\preview\previewblog\solid.html:172
@@ -5007,10 +5110,12 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\solid.html:205
 msgid ""
 "“Kırılmaz Bir Estetik:<br>\n"
-"                    <strong style=\"color: #495057; font-weight: 700;\">Asansörünüzün Şeffaf Zırhı!”</strong>"
+"                    <strong style=\"color: #495057; font-weight: "
+"700;\">Asansörünüzün Şeffaf Zırhı!”</strong>"
 msgstr ""
 "„Eine unzerbrechliche Ästhetik: <br>\n"
-" <strong style=\"color: #495057; font-weight: 700;\">Die durchsichtige Panzerung Ihres Aufzugs!“</strong>"
+" <strong style=\"color: #495057; font-weight: 700;\">Die durchsichtige "
+"Panzerung Ihres Aufzugs!“</strong>"
 
 #: .\crm\templates\preview\previewblog\solid.html:211
 msgid ""
@@ -5018,8 +5123,7 @@ msgid ""
 "<strong class=\"text-dark fs-4\">30 kat</strong> daha dayanıklıdır."
 msgstr ""
 "Es ist <strong class=\"text-dark fs-4\">250-mal haltbarer als</strong> Glas "
-"und <strong class=\"text-dark fs-4\">30-mal haltbarer als "
-"Plexiglas</strong>."
+"und <strong class=\"text-dark fs-4\">30-mal haltbarer als Plexiglas</strong>."
 
 #: .\crm\templates\preview\previewblog\solid.html:241
 msgid "Asansör Solid Levha Kırılmazlık Testi ve Güvenlik Camı"
@@ -5230,8 +5334,8 @@ msgid ""
 "UV korumalı yapısı sayesinde güneş ışığı veya LED ısısıyla sararmaz, ilk "
 "günkü berraklığını korur."
 msgstr ""
-"Dank seiner UV-geschützten Struktur vergilbt es nicht durch Sonnenlicht oder"
-" LED-Hitze, sondern behält die Klarheit des ersten Tages."
+"Dank seiner UV-geschützten Struktur vergilbt es nicht durch Sonnenlicht oder "
+"LED-Hitze, sondern behält die Klarheit des ersten Tages."
 
 #: .\crm\templates\preview\previewblog\solid.html:499
 msgid "Hafiflik ve Kolay Montaj"
@@ -5239,8 +5343,7 @@ msgstr "Leicht und einfach zu montieren"
 
 #: .\crm\templates\preview\previewblog\solid.html:502
 msgid ""
-"Camın yarı ağırlığındadır. Asansör kabin ağırlığını (karkas yükünü) "
-"artırmaz."
+"Camın yarı ağırlığındadır. Asansör kabin ağırlığını (karkas yükünü) artırmaz."
 msgstr ""
 "Es wiegt nur halb so viel wie Glas. Der Aufzug erhöht das Kabinengewicht "
 "nicht (Karkassenlast)."
@@ -5251,8 +5354,8 @@ msgstr "Vorteil der Montage:"
 
 #: .\crm\templates\preview\previewblog\solid.html:508
 msgid ""
-"Montajı yapan personel için büyük kolaylık ve güvenlik sağlar. Kırılma riski"
-" olmadan, tek kişiyle bile montaj yapılabilir."
+"Montajı yapan personel için büyük kolaylık ve güvenlik sağlar. Kırılma riski "
+"olmadan, tek kişiyle bile montaj yapılabilir."
 msgstr ""
 "Es bietet großen Komfort und Sicherheit für das an der Montage beteiligte "
 "Personal. Die Installation kann auch mit einer Person durchgeführt werden, "
@@ -5387,8 +5490,8 @@ msgstr "Umwerfende Transparenz, 3-mm-Lösung"
 msgid ""
 "Modern mimaride şeffaflık ve ferahlık, tasarımın anahtar unsurlarından biri "
 "haline gelmiştir. Kullanılan malzemenin güvenliği ve estetiği de büyük önem "
-"taşımaktadır. İşte bu noktada <strong>3 mm şeffaf solid polikarbon "
-"levhalar</strong> devreye giriyor."
+"taşımaktadır. İşte bu noktada <strong>3 mm şeffaf solid polikarbon levhalar</"
+"strong> devreye giriyor."
 msgstr ""
 "Transparenz und Großzügigkeit in der modernen Architektur sind zu einem der "
 "Schlüsselelemente des Designs geworden. Die Sicherheit und Ästhetik des "
@@ -5401,8 +5504,8 @@ msgstr "Visuelles Fest und technische Exzellenz"
 
 #: .\crm\templates\preview\previewblog\solid.html:663
 msgid ""
-"<strong>Kristal Berraklık:</strong> Özel olarak seçilmiş 3 mm kalınlığındaki"
-" solid polikarbon levhalar, tıpkı cam gibi pürüzsüz ve yüksek ışık "
+"<strong>Kristal Berraklık:</strong> Özel olarak seçilmiş 3 mm kalınlığındaki "
+"solid polikarbon levhalar, tıpkı cam gibi pürüzsüz ve yüksek ışık "
 "geçirgenliğine sahiptir. Bu sayede asansör yolcuları, panoramik bir deneyim "
 "yaşayarak dış mekanın tadını kesintisiz bir şekilde çıkarabilirler."
 msgstr ""
@@ -5419,13 +5522,13 @@ msgstr "Unzerbrechliche Sicherheit"
 msgid ""
 "Camın aksine, polikarbon darbelere karşı inanılmaz dirençlidir. Potansiyel "
 "çarpma veya darbe anlarında kırılıp parçalanmaz, çatlama ve dağılmaz riski "
-"taşımaz. Bu, özellikle halka açık alanlarda ve yoğun kullanımlı asansörlerde"
-" hayati önem taşır."
+"taşımaz. Bu, özellikle halka açık alanlarda ve yoğun kullanımlı asansörlerde "
+"hayati önem taşır."
 msgstr ""
 "Im Gegensatz zu Glas ist Polycarbonat unglaublich stoßfest. Es bricht und "
 "zersplittert nicht in Momenten eines möglichen Aufpralls oder Aufpralls, es "
-"besteht keine Gefahr, dass es reißt und zerfällt. Dies ist besonders wichtig"
-" in öffentlichen Bereichen und Aufzügen, die stark beansprucht werden."
+"besteht keine Gefahr, dass es reißt und zerfällt. Dies ist besonders wichtig "
+"in öffentlichen Bereichen und Aufzügen, die stark beansprucht werden."
 
 #: .\crm\templates\preview\previewblog\solid.html:691
 msgid "LiftKeys Robotu ve Göz Kamaştıran Şeffaflık"
@@ -5434,7 +5537,8 @@ msgstr "LiftKeys Robot und umwerfende Transparenz"
 #: .\crm\templates\preview\previewblog\solid.html:695
 msgid ""
 "GÖZ KAMAŞTIRAN<br>\n"
-"                            <span class=\"text-orange\" style=\"font-weight: 800;\">ŞEFFAFLIK</span>"
+"                            <span class=\"text-orange\" style=\"font-weight: "
+"800;\">ŞEFFAFLIK</span>"
 msgstr ""
 "SCHILLERND <br>\n"
 " <span class=\"text-orange\" style=\"font-weight: 800;\">TRANSPARENZ</span>"
@@ -5449,8 +5553,7 @@ msgstr "Was du im Sinn hast"
 
 #: .\crm\templates\preview\previewblog\solid.html:734
 msgid ""
-"Solid ve Polistren levhalar hakkında en çok merak edilen soruların "
-"cevapları."
+"Solid ve Polistren levhalar hakkında en çok merak edilen soruların cevapları."
 msgstr ""
 "Antworten auf die merkwürdigsten Fragen zu Massiv- und Styroporplatten."
 
@@ -5491,8 +5594,8 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\solid.html:775
 msgid "Levhalar sahada nasıl kesilir? Özel ekipman gerekir mi?"
 msgstr ""
-"Wie schneide ich die Bretter auf der Baustelle? Benötigen Sie eine spezielle"
-" Ausrüstung?"
+"Wie schneide ich die Bretter auf der Baustelle? Benötigen Sie eine spezielle "
+"Ausrüstung?"
 
 #: .\crm\templates\preview\previewblog\solid.html:780
 msgid ""
@@ -5501,8 +5604,8 @@ msgid ""
 "testereyle veya spiralle kolayca kesilebilir. Montaj sırasında oluşabilecek "
 "ölçü hatalarını anında revize edebilirsiniz."
 msgstr ""
-"Nein, es ist keine spezielle und schwere Ausrüstung erforderlich. Dank ihrer"
-" flexiblen Struktur lassen sich unsere soliden Bretter einfach auf dem Feld "
+"Nein, es ist keine spezielle und schwere Ausrüstung erforderlich. Dank ihrer "
+"flexiblen Struktur lassen sich unsere soliden Bretter einfach auf dem Feld "
 "mit <strong>einer leistungsstarken Schere</strong>, Stichsäge oder Spirale "
 "schneiden. Messfehler, die bei der Montage auftreten können, können Sie "
 "sofort korrigieren."
@@ -5514,11 +5617,11 @@ msgstr "Wie sollte es gereinigt und gepflegt werden?"
 #: .\crm\templates\preview\previewblog\solid.html:794
 msgid ""
 "Temizlik için ılık su, yumuşak bir sünger ve nötr (aşındırıcı olmayan) sıvı "
-"sabun yeterlidir. Yüzeyi çizmemek için kuru bezle silmeyiniz ve tiner/aseton"
-" gibi ağır kimyasallar kullanmayınız."
+"sabun yeterlidir. Yüzeyi çizmemek için kuru bezle silmeyiniz ve tiner/aseton "
+"gibi ağır kimyasallar kullanmayınız."
 msgstr ""
-"Warmes Wasser, ein weicher Schwamm und neutrale (nicht ätzende) Flüssigseife"
-" reichen zur Reinigung aus. Um die Oberfläche nicht zu zerkratzen, wischen "
+"Warmes Wasser, ein weicher Schwamm und neutrale (nicht ätzende) Flüssigseife "
+"reichen zur Reinigung aus. Um die Oberfläche nicht zu zerkratzen, wischen "
 "Sie sie nicht mit einem trockenen Tuch ab und verwenden Sie keine schweren "
 "Chemikalien wie Verdünner/Aceton."
 
@@ -5529,10 +5632,14 @@ msgstr "LiftKeys | Professionelle Aufzugsbeleuchtung und LED-Spotsysteme"
 #: .\crm\templates\preview\previewblog\spot.html:11
 msgid ""
 "\n"
-"LiftKeys 220V kendinden sürücülü asansör spot sistemleri: Alev almaz ABS kasa, homojen ışık dağılımı ve on-board driver teknolojisi ile güvenli ve uzun ömürlü aydınlatma.\n"
+"LiftKeys 220V kendinden sürücülü asansör spot sistemleri: Alev almaz ABS "
+"kasa, homojen ışık dağılımı ve on-board driver teknolojisi ile güvenli ve "
+"uzun ömürlü aydınlatma.\n"
 msgstr ""
 "\n"
-"Selbstfahrende LiftKeys 220-V-Aufzugs-Spotsysteme: Sichere und langlebige Beleuchtung mit flammhemmendem ABS-Chassis, gleichmäßiger Lichtverteilung und integrierter Treibertechnologie.\n"
+"Selbstfahrende LiftKeys 220-V-Aufzugs-Spotsysteme: Sichere und langlebige "
+"Beleuchtung mit flammhemmendem ABS-Chassis, gleichmäßiger Lichtverteilung "
+"und integrierter Treibertechnologie.\n"
 
 #: .\crm\templates\preview\previewblog\spot.html:19
 msgid ""
@@ -5552,10 +5659,13 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\spot.html:29
 msgid ""
 "\n"
-"Asansörlere özel tasarlanmış, harici sürücü gerektirmeyen 220V LED spotlar. Yanmaz kasa ve yüksek verimlilik sunan profesyonel aydınlatma teknolojisi.\n"
+"Asansörlere özel tasarlanmış, harici sürücü gerektirmeyen 220V LED spotlar. "
+"Yanmaz kasa ve yüksek verimlilik sunan profesyonel aydınlatma teknolojisi.\n"
 msgstr ""
 "\n"
-"220-V-LED-Strahler, die speziell für Aufzüge entwickelt wurden und keinen externen Treiber benötigen. Feuerfestes Gehäuse und professionelle Lichttechnik bieten hohe Effizienz.\n"
+"220-V-LED-Strahler, die speziell für Aufzüge entwickelt wurden und keinen "
+"externen Treiber benötigen. Feuerfestes Gehäuse und professionelle "
+"Lichttechnik bieten hohe Effizienz.\n"
 
 #: .\crm\templates\preview\previewblog\spot.html:37
 msgid "LiftKeys | Profesyonel Asansör Aydınlatma Sistemleri"
@@ -5564,10 +5674,12 @@ msgstr "LiftKeys | Professionelle Aufzugsbeleuchtungssysteme"
 #: .\crm\templates\preview\previewblog\spot.html:41
 msgid ""
 "\n"
-"220V on-board driver ve alev almaz kasa teknolojisiyle asansör kabinleri için en güvenli aydınlatma çözümü.\n"
+"220V on-board driver ve alev almaz kasa teknolojisiyle asansör kabinleri "
+"için en güvenli aydınlatma çözümü.\n"
 msgstr ""
 "\n"
-"Die sicherste Beleuchtungslösung für Aufzugskabinen mit 220-V-Bordtreiber und flammfester Fahrwerkstechnik.\n"
+"Die sicherste Beleuchtungslösung für Aufzugskabinen mit 220-V-Bordtreiber "
+"und flammfester Fahrwerkstechnik.\n"
 
 #: .\crm\templates\preview\previewblog\spot.html:148
 msgid "LIFTKEYS – Aydınlatma / Spot Sistemleri"
@@ -5591,16 +5703,14 @@ msgstr ""
 
 #: .\crm\templates\preview\previewblog\spot.html:210
 msgid ""
-"LiftKeys Asansörler için tasarlanan, hareketin temposuna ayak uyduran "
-"spotlar"
+"LiftKeys Asansörler için tasarlanan, hareketin temposuna ayak uyduran spotlar"
 msgstr ""
 "LiftKeys Spotlights wurden für Aufzüge entwickelt und halten mit dem "
 "Bewegungstempo Schritt"
 
 #: .\crm\templates\preview\previewblog\spot.html:217
 msgid ""
-"Asansörler için<br>tasarlanan, hareketin<br>temposuna ayak<br>uyduran "
-"spotlar"
+"Asansörler için<br>tasarlanan, hareketin<br>temposuna ayak<br>uyduran spotlar"
 msgstr ""
 "<br><br>Für Aufzüge konzipierte Strahler, die mit dem <br>Bewegungstempo "
 "Schritt halten"
@@ -5610,20 +5720,20 @@ msgid ""
 "LiftKeys Asansör Spotları - 220V Kendinden Sürücülü, Uzun Ömürlü ve Alev "
 "Almaz Kasa"
 msgstr ""
-"LiftKeys Aufzugsstrahler, 220 V, selbstfahrend, langlebig und flammhemmendes"
-" Gehäuse"
+"LiftKeys Aufzugsstrahler, 220 V, selbstfahrend, langlebig und flammhemmendes "
+"Gehäuse"
 
 #: .\crm\templates\preview\previewblog\spot.html:240
 msgid ""
 "Asansörler için tasarlanan, hareketin temposuna ayak uyduran spotlar: 220V "
 "ile çalışan, kendi sürücüsüne sahip, uzun ömürlü, alev almaz kasasıyla fark "
-"yaratır. Her gün binlerce açılıp kapanmaya hazır, sorunsuz performansın adı."
-" İki farklı seri ile asansörlerinize özel, gerçek profesyonel aydınlatma."
+"yaratır. Her gün binlerce açılıp kapanmaya hazır, sorunsuz performansın adı. "
+"İki farklı seri ile asansörlerinize özel, gerçek profesyonel aydınlatma."
 msgstr ""
 "Für Aufzüge konzipierte Strahler, die mit dem Tempo der Bewegung Schritt "
 "halten: Sie werden mit 220 V betrieben und verfügen über einen eigenen "
-"Fahrer. Sie zeichnen sich durch ein langlebiges, flammfestes Gehäuse aus. Es"
-" ist der Name für problemlose Leistung, die täglich zu Tausenden ein- und "
+"Fahrer. Sie zeichnen sich durch ein langlebiges, flammfestes Gehäuse aus. Es "
+"ist der Name für problemlose Leistung, die täglich zu Tausenden ein- und "
 "ausgeschaltet werden kann. Wirklich professionelle Beleuchtung für Ihre "
 "Aufzüge mit zwei verschiedenen Serien."
 
@@ -5678,8 +5788,8 @@ msgid ""
 "Ürünlerimiz, yangın yürütmeyen ve alev almayan özel EBS kasa yapısı ile "
 "üretilmiştir. Bu sayede güvenli ve dayanıklı bir kullanım sunar."
 msgstr ""
-"Unsere Produkte werden mit einer speziellen EBS-Gehäusestruktur hergestellt,"
-" die nicht brennt und sich nicht entzündet. Auf diese Weise bietet es eine "
+"Unsere Produkte werden mit einer speziellen EBS-Gehäusestruktur hergestellt, "
+"die nicht brennt und sich nicht entzündet. Auf diese Weise bietet es eine "
 "sichere und dauerhafte Verwendung."
 
 #: .\crm\templates\preview\previewblog\spot.html:307
@@ -5688,8 +5798,8 @@ msgid ""
 "görünmesini engeller ve kabin içerisinde yumuşak, dengeli ve göz yormayan "
 "bir aydınlatma sağlar."
 msgstr ""
-"Der speziell entwickelte Diffusor mit homogener Lichtstreuung verhindert das"
-" Auftreten von LED-Spots und sorgt für eine sanfte, ausgewogene und "
+"Der speziell entwickelte Diffusor mit homogener Lichtstreuung verhindert das "
+"Auftreten von LED-Spots und sorgt für eine sanfte, ausgewogene und "
 "unauffällige Beleuchtung im Inneren des Gehäuses."
 
 #: .\crm\templates\preview\previewblog\spot.html:310
@@ -5706,8 +5816,8 @@ msgstr "Dank dieser Funktionen sind unsere Produkte;"
 
 #: .\crm\templates\preview\previewblog\spot.html:316
 msgid ""
-"Asansör kullanımına uygun uzun ömürlü tasarım sunarak asansör kabinleri için"
-" profesyonel bir aydınlatma çözümü oluşturur."
+"Asansör kullanımına uygun uzun ömürlü tasarım sunarak asansör kabinleri için "
+"profesyonel bir aydınlatma çözümü oluşturur."
 msgstr ""
 "Es bietet ein langlebiges Design, das für Aufzüge geeignet ist, und bietet "
 "eine professionelle Beleuchtungslösung für Aufzugskabinen."
@@ -5777,8 +5887,8 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\spot.html:344
 msgid "Güvenli ve dayanıklı yanmaz ABS kasa asansör spot aydınlatma ürünü"
 msgstr ""
-"Sicheres und langlebiges Produkt für Aufzugs-Spotbeleuchtung aus feuerfestem"
-" ABS-Gehäuse"
+"Sicheres und langlebiges Produkt für Aufzugs-Spotbeleuchtung aus feuerfestem "
+"ABS-Gehäuse"
 
 #: .\crm\templates\preview\previewblog\spot.html:351
 msgid "Güvenli ve dayanıklı kasa yapısı"
@@ -5800,13 +5910,16 @@ msgstr "LiftKeys Aufzugsschaltersysteme | Grenz- und Sicherheitsschalter"
 msgid ""
 "\n"
 "LiftKeys, EN81-20 uyumlu asansör switch çözümleri sunar.\n"
-"Makaralı, resetsiz (son durak), otomatik resetli ve yandan baskılı limit switch\n"
+"Makaralı, resetsiz (son durak), otomatik resetli ve yandan baskılı limit "
+"switch\n"
 "modelleriyle asansör güvenliğini ve konforunu en üst düzeye taşıyın.\n"
 msgstr ""
 "\n"
 "LiftKeys bietet EN81-20-konforme Aufzugsschalterlösungen an.\n"
-"Rollschalter, Rückstellfunktion (Endstopp), automatische Rückstellung und seitlich bedruckter Endschalter\n"
-"Maximieren Sie mit ihren Modellen die Sicherheit und den Komfort von Aufzügen.\n"
+"Rollschalter, Rückstellfunktion (Endstopp), automatische Rückstellung und "
+"seitlich bedruckter Endschalter\n"
+"Maximieren Sie mit ihren Modellen die Sicherheit und den Komfort von "
+"Aufzügen.\n"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:21
 msgid ""
@@ -5826,12 +5939,14 @@ msgstr "LiftKeys | Sicherheitsschalter und Endschalter für Aufzüge"
 msgid ""
 "\n"
 "Asansörünüzün görünmez güvenlik muhafızları: LiftKeys Switch Sistemleri.\n"
-"Makaralı, manuel resetli ve dar kuyu çözümleri için yandan baskılı modeller.\n"
+"Makaralı, manuel resetli ve dar kuyu çözümleri için yandan baskılı "
+"modeller.\n"
 "EN 60947-5-1 ve IP65 standartlarında üretim.\n"
 msgstr ""
 "\n"
 "Das unsichtbare Sicherheitspersonal Ihres Aufzugs: LiftKeys Switch Systems.\n"
-"Gerollte, manuell rückstellbare und auf der Seite bedruckte Modelle für schmale Bohrlöcher.\n"
+"Gerollte, manuell rückstellbare und auf der Seite bedruckte Modelle für "
+"schmale Bohrlöcher.\n"
 "Hergestellt nach den Normen EN 60947-5-1 und IP65.\n"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:42
@@ -5865,33 +5980,35 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:213
 msgid ""
 "“Asansörün Görünmez<br>\n"
-"                    <strong style=\"color: #495057; font-weight: 700;\">Güvenlik Muhafızları:</strong><br>\n"
+"                    <strong style=\"color: #495057; font-weight: "
+"700;\">Güvenlik Muhafızları:</strong><br>\n"
 "                    Switch Sistemleri”"
 msgstr ""
 "„Der unsichtbare Aufzug <br>\n"
-" <strong style=\"color: #495057; font-weight: 700;\">Sicherheitspersonal:</strong> <br>\n"
+" <strong style=\"color: #495057; font-weight: 700;\">Sicherheitspersonal:</"
+"strong> <br>\n"
 " Systeme wechseln“"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:224
 msgid ""
 "Güvenlik sadece bir fonksiyon değil,<br>\n"
-"                <strong class=\"text-dark\">LiftKeys’te bir standarttır.</strong>"
+"                <strong class=\"text-dark\">LiftKeys’te bir standarttır.</"
+"strong>"
 msgstr ""
 "Sicherheit ist nicht nur eine Funktion, <br>\n"
 " <strong class=\"text-dark\">Es ist ein Standard in LiftKeys.</strong>"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:247
 msgid "LiftKeys Asansör Güvenlik Switch Ailesi - Limit Şalter Modelleri"
-msgstr ""
-"LiftKeys Sicherheitsschalter-Familie für Aufzüge — Endschalter-Modelle"
+msgstr "LiftKeys Sicherheitsschalter-Familie für Aufzüge — Endschalter-Modelle"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:251
 msgid ""
 "Asansörün Güvenlik Mimarları: <strong style=\"color: #495057;\">Switch "
 "Çeşitleri</strong>"
 msgstr ""
-"<strong style=\"color: #495057;\">Sicherheitsarchitekten von Aufzügen: Arten"
-" von Schaltern</strong>"
+"<strong style=\"color: #495057;\">Sicherheitsarchitekten von Aufzügen: Arten "
+"von Schaltern</strong>"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:254
 msgid ""
@@ -5909,17 +6026,16 @@ msgstr ""
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:272
 msgid ""
-"1. Makaralı Switch <span style=\"font-weight: 400; font-size: 1.2rem; color:"
-" #777;\">(Standart Sınır Kesici)</span>"
+"1. Makaralı Switch <span style=\"font-weight: 400; font-size: 1.2rem; color: "
+"#777;\">(Standart Sınır Kesici)</span>"
 msgstr ""
 "1. Rollenschalter <span style=\"font-weight: 400; font-size: 1.2rem; color: "
 "#777;\">(Standard-Grenzschneider)</span>"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:276
 msgid ""
-"Bu switchler, asansörün normal çalışma düzenindeki "
-"<strong>\"gözleridir\"</strong>. Kabin üzerindeki bir kolun (paten/cam) "
-"makaraya çarpmasıyla çalışır."
+"Bu switchler, asansörün normal çalışma düzenindeki <strong>\"gözleridir\"</"
+"strong>. Kabin üzerindeki bir kolun (paten/cam) makaraya çarpmasıyla çalışır."
 msgstr ""
 "<strong>Diese Schalter sind im normalen Betriebszustand die „Augen“ des "
 "Aufzugs.</strong> Es funktioniert, indem Sie einen Hebel an der Kabine "
@@ -5958,8 +6074,8 @@ msgstr "Einsatzbereich und Installation:"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:299
 msgid ""
-"Kat durdurucu veya yavaşlama limitlerinde kullanılır. Döner kafası sayesinde"
-" her açıdan gelen tetikleyiciye uyum sağlar."
+"Kat durdurucu veya yavaşlama limitlerinde kullanılır. Döner kafası sayesinde "
+"her açıdan gelen tetikleyiciye uyum sağlar."
 msgstr ""
 "Wird in Bodenstoppern oder Bremsbegrenzungen verwendet. Dank seines "
 "schwenkbaren Kopfes passt er sich dem Auslöser aus allen Winkeln an."
@@ -5991,8 +6107,8 @@ msgid ""
 "2. Resetsiz (Manuel Resetli) Switch <span style=\"font-weight: 400; font-"
 "size: 1.2rem; color: #dc3545;\">- \"Son Durak\"</span>"
 msgstr ""
-"2. Schalter Unreset (manuelles Zurücksetzen) <span style=\"font-weight: 400;"
-" font-size: 1.2rem; color: #dc3545;\">— „</span>Letzter Stopp“"
+"2. Schalter Unreset (manuelles Zurücksetzen) <span style=\"font-weight: 400; "
+"font-size: 1.2rem; color: #dc3545;\">— „</span>Letzter Stopp“"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:346
 msgid ""
@@ -6025,8 +6141,8 @@ msgid ""
 msgstr ""
 "<strong>Sobald dieser Schalter ausgelöst wird, erholt sich das System nicht "
 "von selbst, auch wenn sich das Gehäuse von dort entfernt.</strong> Ein "
-"technisches Personal muss in den Maschinenraum oder in den Brunnen gehen und"
-" ihn manuell zurücksetzen, indem er die Taste am Schalter drückt."
+"technisches Personal muss in den Maschinenraum oder in den Brunnen gehen und "
+"ihn manuell zurücksetzen, indem er die Taste am Schalter drückt."
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:368
 msgid "Neden Önemli?"
@@ -6035,8 +6151,7 @@ msgstr "Warum ist es wichtig?"
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:369
 msgid ""
 "Eğer asansör nihai sınırı geçtiyse, ortada büyük bir arıza var demektir. "
-"Resetsiz switch, arıza giderilmeden asansörün tekrar çalışmasına izin "
-"vermez."
+"Resetsiz switch, arıza giderilmeden asansörün tekrar çalışmasına izin vermez."
 msgstr ""
 "Wenn der Aufzug die Endgrenze überschritten hat, liegt in der Mitte eine "
 "schwerwiegende Störung vor. Durch den No-Reset-Schalter kann der Aufzug "
@@ -6104,7 +6219,8 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:453
 msgid ""
 "Dar Alanların Akıllı Çözümü:<br>\n"
-"                <span style=\"color: #F08200;\">Yandan Baskılı Switchler</span>"
+"                <span style=\"color: #F08200;\">Yandan Baskılı Switchler</"
+"span>"
 msgstr ""
 "Intelligente Lösung für enge Räume: <br>\n"
 " <span style=\"color: #F08200;\">Seitlich bedruckte Schalter</span>"
@@ -6133,13 +6249,13 @@ msgstr "AUFGABE:"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:468
 msgid ""
-"Tetikleyici mekanizmaya paralel montaj imkanı sağlar. Yandan gelen baskılara"
-" karşı güçlendirilmiş yapısı, çarpma anındaki sarsıntıyı emer ve stabiliteyi"
-" bozmaz."
+"Tetikleyici mekanizmaya paralel montaj imkanı sağlar. Yandan gelen baskılara "
+"karşı güçlendirilmiş yapısı, çarpma anındaki sarsıntıyı emer ve stabiliteyi "
+"bozmaz."
 msgstr ""
 "Bietet die Möglichkeit der parallelen Montage zum Auslösemechanismus. Seine "
-"verstärkte Struktur gegen seitlichen Druck absorbiert den Stoß im Moment des"
-" Aufpralls und beeinträchtigt die Stabilität nicht."
+"verstärkte Struktur gegen seitlichen Druck absorbiert den Stoß im Moment des "
+"Aufpralls und beeinträchtigt die Stabilität nicht."
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:484
 #: .\crm\templates\preview\previewblog\zemin.html:500
@@ -6260,19 +6376,21 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:582
 msgid ""
 "\"Asansörün Güvenlik Haritası:<br>\n"
-"                <strong style=\"color: #495057; font-weight: 600;\">Switch Kullanım Alanları\"</strong>"
+"                <strong style=\"color: #495057; font-weight: 600;\">Switch "
+"Kullanım Alanları\"</strong>"
 msgstr ""
 "„Sicherheitskarte des Aufzugs: <br>\n"
-" <strong style=\"color: #495057; font-weight: 600;\">Verwendungen wechseln“</strong>"
+" <strong style=\"color: #495057; font-weight: 600;\">Verwendungen wechseln“</"
+"strong>"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:587
 msgid ""
-"Asansörde her hareketli ve güvenlik odaklı parça, bir switch ile denetlenir."
-" İşte sizin sunduğunuz donanımlarda switchlerin hayati görevleri:"
+"Asansörde her hareketli ve güvenlik odaklı parça, bir switch ile denetlenir. "
+"İşte sizin sunduğunuz donanımlarda switchlerin hayati görevleri:"
 msgstr ""
-"Jeder bewegliche und sicherheitsgerichtete Teil des Aufzugs wird durch einen"
-" Schalter gesteuert. Hier sind die wichtigsten Funktionen der Schalter in "
-"der von Ihnen angebotenen Hardware:"
+"Jeder bewegliche und sicherheitsgerichtete Teil des Aufzugs wird durch einen "
+"Schalter gesteuert. Hier sind die wichtigsten Funktionen der Schalter in der "
+"von Ihnen angebotenen Hardware:"
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:591
 msgid "Kuyu ve Ekipmanları Güvenliği;"
@@ -6296,8 +6414,8 @@ msgid ""
 "<strong>Hidrolik Tamponlar:</strong> Kabin veya karşı ağırlık tampona "
 "oturduğunda emniyet devresini keserek sistemi korumaya alır."
 msgstr ""
-"<strong>Hydraulikpuffer: Trennen Sie</strong> den Sicherheitskreis, wenn die"
-" Kabine oder das Gegengewicht auf der Stoßstange sitzt, um das System zu "
+"<strong>Hydraulikpuffer: Trennen Sie</strong> den Sicherheitskreis, wenn die "
+"Kabine oder das Gegengewicht auf der Stoßstange sitzt, um das System zu "
 "schützen."
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:603
@@ -6305,9 +6423,9 @@ msgid ""
 "<strong>Regülatör ve Frenler:</strong> Aşırı hızlanma durumunda mekanik "
 "frenleme başladığı an elektriksel olarak da sistemi durdurur."
 msgstr ""
-"<strong>Regler und Bremsen: In dem Moment, in dem die mechanische "
-"Bremsung</strong> bei übermäßiger Beschleunigung einsetzt, stoppt sie das "
-"System auch elektrisch."
+"<strong>Regler und Bremsen: In dem Moment, in dem die mechanische Bremsung</"
+"strong> bei übermäßiger Beschleunigung einsetzt, stoppt sie das System auch "
+"elektrisch."
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:608
 msgid "Kabin Üstü ve Altı Emniyeti;"
@@ -6320,8 +6438,8 @@ msgid ""
 "moduna izin verir."
 msgstr ""
 "<strong>Bewegliches Geländer für die Kabinenmontage:</strong> Es stoppt den "
-"normalen Betrieb des Aufzugs, wenn das Geländer geschlossen ist oder sich in"
-" der falschen Position befindet. Nur der Wartungsmodus ist möglich."
+"normalen Betrieb des Aufzugs, wenn das Geländer geschlossen ist oder sich in "
+"der falschen Position befindet. Nur der Wartungsmodus ist möglich."
 
 #: .\crm\templates\preview\previewblog\switchsistemleri.html:613
 msgid ""
@@ -6386,20 +6504,23 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\takozlar.html:7
 msgid "LiftKeys Asansör Vibrasyon Takozları | Makine Motor ve Şase Lastikleri"
 msgstr ""
-"LiftKeys Vibrationskeile für Aufzüge | Maschinen-, Motor- und "
-"Fahrwerksreifen"
+"LiftKeys Vibrationskeile für Aufzüge | Maschinen-, Motor- und Fahrwerksreifen"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:11
 #, python-format
 msgid ""
 "\n"
-"LiftKeys Vibrasyon Takozları ile asansör gürültüsünü ve titreşimi kaynağında durdurun.\n"
-"%%100 gerçek kauçuk, 95 Shore sertlik, MRL kare takoz, L tipi ve yuvarlak sönümleyici\n"
+"LiftKeys Vibrasyon Takozları ile asansör gürültüsünü ve titreşimi kaynağında "
+"durdurun.\n"
+"%%100 gerçek kauçuk, 95 Shore sertlik, MRL kare takoz, L tipi ve yuvarlak "
+"sönümleyici\n"
 "modelleriyle konforu ve halat ömrünü artırın.\n"
 msgstr ""
 "\n"
-"Stoppen Sie Aufzugsgeräusche und Vibrationen an der Quelle mit den LiftKeys Vibrationskeilen.\n"
-"100%% echtes Gummi, Härtegrad 95 Shore, MRL-Vierkantkeil, L-förmiger und runder Dämpfer\n"
+"Stoppen Sie Aufzugsgeräusche und Vibrationen an der Quelle mit den LiftKeys "
+"Vibrationskeilen.\n"
+"100%% echtes Gummi, Härtegrad 95 Shore, MRL-Vierkantkeil, L-förmiger und "
+"runder Dämpfer\n"
 "Erhöhen Sie den Komfort und die Lebensdauer der Seile mit Modellen.\n"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:21
@@ -6420,12 +6541,14 @@ msgstr "LiftKeys | Schwingungsdämpfende Keile für Aufzüge"
 msgid ""
 "\n"
 "Titreşimi azaltır, konforu artırır.\n"
-"Asansör motoru ve kabin için özel üretilmiş, çökme yapmayan gerçek kauçuk takozlar.\n"
+"Asansör motoru ve kabin için özel üretilmiş, çökme yapmayan gerçek kauçuk "
+"takozlar.\n"
 "Makinenizi koruyun, gürültüyü yok edin.\n"
 msgstr ""
 "\n"
 "Reduziert Vibrationen, erhöht den Komfort.\n"
-"Echte Gummikeile, die nicht zusammenfallen, speziell für den Aufzugsmotor und die Kabine hergestellt.\n"
+"Echte Gummikeile, die nicht zusammenfallen, speziell für den Aufzugsmotor "
+"und die Kabine hergestellt.\n"
 "Schützen Sie Ihre Maschine, vermeiden Sie Geräusche.\n"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:42
@@ -6437,12 +6560,14 @@ msgstr "LiftKeys | Lösungen für die Montage von Aufzugsmaschinen und Motoren"
 msgid ""
 "\n"
 "Ucuz takozun pahalı faturasını ödemeyin.\n"
-"Halat ve kasnak ömrünü uzatan, %%100 orijinal kauçuktan üretilen LiftKeys takozlarını keşfedin.\n"
+"Halat ve kasnak ömrünü uzatan, %%100 orijinal kauçuktan üretilen LiftKeys "
+"takozlarını keşfedin.\n"
 "Teknik detaylar için tıklayın.\n"
 msgstr ""
 "\n"
 "Zahlen Sie nicht die teure Rechnung von Cheap Wedge.\n"
-"Entdecken Sie die LiftKeys-Keile aus 100%% echtem Gummi, um die Lebensdauer von Seilen und Riemenscheiben zu verlängern.\n"
+"Entdecken Sie die LiftKeys-Keile aus 100%% echtem Gummi, um die Lebensdauer "
+"von Seilen und Riemenscheiben zu verlängern.\n"
 "Klicken Sie hier für technische Details.\n"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:151
@@ -6458,7 +6583,8 @@ msgid ""
 "“Titreşimi azaltır,<br>\n"
 "                            konforu artırır,<br>\n"
 "                            yolculuğunuzu<br>\n"
-"                            <span class=\"text-dark fw-bold\">güvenle yumuşatır.”</span>"
+"                            <span class=\"text-dark fw-bold\">güvenle "
+"yumuşatır.”</span>"
 msgstr ""
 "„Reduziert Vibrationen, <br>\n"
 " erhöht den Komfort, <br>\n"
@@ -6468,10 +6594,12 @@ msgstr ""
 #: .\crm\templates\preview\previewblog\takozlar.html:201
 msgid ""
 "Güvenlik sadece bir fonksiyon değil, <br>\n"
-"                    <strong class=\"text-dark fw-bold\">LiftKeys’te bir standarttır.</strong>"
+"                    <strong class=\"text-dark fw-bold\">LiftKeys’te bir "
+"standarttır.</strong>"
 msgstr ""
 "Sicherheit ist nicht nur eine Funktion, <br>\n"
-" <strong class=\"text-dark fw-bold\">Es ist ein Standard in LiftKeys.</strong>"
+" <strong class=\"text-dark fw-bold\">Es ist ein Standard in LiftKeys.</"
+"strong>"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:222
 msgid "Asansör Makine Motor Takozu"
@@ -6556,8 +6684,8 @@ msgstr "Konisches Design:"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:302
 msgid ""
-"Makinenin ağırlığını ve baskısını sönümleyen konik yapısıyla sarsıntısız bir"
-" seyir sunar."
+"Makinenin ağırlığını ve baskısını sönümleyen konik yapısıyla sarsıntısız bir "
+"seyir sunar."
 msgstr ""
 "Es bietet eine wackelfreie Fahrt mit seiner konischen Struktur, die das "
 "Gewicht und den Druck der Maschine dämpft."
@@ -6586,8 +6714,8 @@ msgstr ""
 
 #: .\crm\templates\preview\previewblog\takozlar.html:343
 msgid ""
-"LIFTKEYS L Tipi Asansör Kabin Sabitleme Takozu - Deprem ve sarsıntı önleyici"
-" zırhlı yapı"
+"LIFTKEYS L Tipi Asansör Kabin Sabitleme Takozu - Deprem ve sarsıntı önleyici "
+"zırhlı yapı"
 msgstr ""
 "LIFTKEYS Befestigungskeil für Aufzugskabinen, Typ L, erdbeben- und "
 "erschütterungsfest"
@@ -6618,8 +6746,8 @@ msgid ""
 "noktalarındaki 8 mm’ye varan mukavemet artışı sayesinde kuvvet testlerinden "
 "en yüksek skorla geçmiştir."
 msgstr ""
-"Hergestellt mit einem Zwickelanteil aus Stahl mit einer Wandstärke von 5 mm."
-" Dank der Erhöhung der Festigkeit an den Biegepunkten um bis zu 8 mm hat es "
+"Hergestellt mit einem Zwickelanteil aus Stahl mit einer Wandstärke von 5 mm. "
+"Dank der Erhöhung der Festigkeit an den Biegepunkten um bis zu 8 mm hat es "
 "die Festigkeitstests mit der höchsten Punktzahl bestanden."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:372
@@ -6685,8 +6813,8 @@ msgstr "Stärke des gepanzerten Glieds:"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:426
 msgid ""
-"40 mm çapındaki ve 4 mm kalınlığındaki özel pullar, gövdeye çepeçevre kaynak"
-" yöntemiyle birleştirilmiştir. Kopma direnci maksimum seviyededir."
+"40 mm çapındaki ve 4 mm kalınlığındaki özel pullar, gövdeye çepeçevre kaynak "
+"yöntemiyle birleştirilmiştir. Kopma direnci maksimum seviyededir."
 msgstr ""
 "Spezialscheiben mit einem Durchmesser von 40 mm und einer Dicke von 4 mm "
 "werden durch Rundumschweißen mit der Karosserie verbunden. Die "
@@ -6702,8 +6830,8 @@ msgid ""
 "titreşimleri bağımsız emer. 'Bağımsız sönümleme' yeteneği yatay sarsıntıyı "
 "minimuma indirir."
 msgstr ""
-"Gummi mit besonderer Härte zwischen den beiden Verbindungspunkten absorbiert"
-" unabhängig voneinander Vibrationen aus der Kabine. Die Fähigkeit zur "
+"Gummi mit besonderer Härte zwischen den beiden Verbindungspunkten absorbiert "
+"unabhängig voneinander Vibrationen aus der Kabine. Die Fähigkeit zur "
 "„unabhängigen Dämpfung“ reduziert horizontale Erschütterungen auf ein "
 "Minimum."
 
@@ -6727,8 +6855,7 @@ msgstr "LIFTKEYS Round Wedge - Horizontales Schwingungsdämpfungssystem"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:489
 msgid ""
-"LIFTKEYS MRL Makine Altı Kare Takoz - 95 Shore sertlikte asansör motor "
-"takozu"
+"LIFTKEYS MRL Makine Altı Kare Takoz - 95 Shore sertlikte asansör motor takozu"
 msgstr ""
 "LIFTKEYS MRL Machine Six Square Wedge - Aufzugsmotorhalterung mit einer "
 "Steifigkeit von 95 Shore"
@@ -6760,8 +6887,8 @@ msgstr "Härte 95 Shore:"
 #: .\crm\templates\preview\previewblog\takozlar.html:511
 msgid ""
 "Kauçuk teknolojisinin en üst sınırlarında yer alan <span class=\"tech-"
-"highlight\">95 Shore</span> sertlik derecesi, en ağır makine yükleri altında"
-" bile formunu korur; çökme veya yayılma yapmaz."
+"highlight\">95 Shore</span> sertlik derecesi, en ağır makine yükleri altında "
+"bile formunu korur; çökme veya yayılma yapmaz."
 msgstr ""
 "Der Härtegrad <span class=\"tech-highlight\">95 Shore</span> liegt an den "
 "höchsten Grenzen der Gummitechnologie und behält seine Form auch unter den "
@@ -6773,8 +6900,8 @@ msgstr "Unveränderliche Form der Lebensdauer des Aufzugs:"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:518
 msgid ""
-"Özel moleküler pişirme teknolojisi sayesinde asansörün kullanım ömrü boyunca"
-" şekil değiştirmeden, ilk günkü sönümleme performansıyla çalışır."
+"Özel moleküler pişirme teknolojisi sayesinde asansörün kullanım ömrü boyunca "
+"şekil değiştirmeden, ilk günkü sönümleme performansıyla çalışır."
 msgstr ""
 "Dank der speziellen molekularen Kochtechnologie arbeitet es mit der "
 "Dämpfungsleistung des ersten Tages, ohne während der gesamten Lebensdauer "
@@ -6790,10 +6917,10 @@ msgid ""
 "class=\"tech-highlight\">M20 cıvata</span> uyumlu delik çapıyla, makinesiz "
 "asansör motorlarının montaj noktalarına tam uyum sağlar."
 msgstr ""
-"Mit einer quadratischen Form von <span class=\"tech-highlight\">70x70 "
-"mm</span> und einem Lochdurchmesser, der mit <span class=\"tech-"
-"highlight\">M20-Schrauben</span> kompatibel ist, passt es sich perfekt an "
-"die Befestigungspunkte von nicht maschinellen Hubmotoren an."
+"Mit einer quadratischen Form von <span class=\"tech-highlight\">70x70 mm</"
+"span> und einem Lochdurchmesser, der mit <span class=\"tech-highlight\">M20-"
+"Schrauben</span> kompatibel ist, passt es sich perfekt an die "
+"Befestigungspunkte von nicht maschinellen Hubmotoren an."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:530
 msgid "Maksimum Mukavemet:"
@@ -6817,8 +6944,8 @@ msgid ""
 "Tasarruf mu Yapıyorsunuz, Yoksa <span class=\"text-danger fw-"
 "bold\">Sisteminize Zarar mı Veriyorsunuz?</span>"
 msgstr ""
-"Sparen Sie Geld oder <span class=\"text-danger fw-bold\">beschädigen Sie Ihr"
-" System</span>?"
+"Sparen Sie Geld oder <span class=\"text-danger fw-bold\">beschädigen Sie Ihr "
+"System</span>?"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:554
 msgid ""
@@ -6828,8 +6955,7 @@ msgid ""
 msgstr ""
 "In der Welt der Aufzüge sind Schwingkeile nicht nur „Reifen“, sie sind ein "
 "technisches Element, das die Stabilität des Systems gewährleistet. Die "
-"versteckten Kosten der Verwendung billiger und kunststoffschwerer Keile "
-"sind:"
+"versteckten Kosten der Verwendung billiger und kunststoffschwerer Keile sind:"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:569
 msgid "Halat ve Kasnak Düşmanı"
@@ -6838,8 +6964,8 @@ msgstr "Seil und Riemenscheibe Enemy"
 #: .\crm\templates\preview\previewblog\takozlar.html:571
 #, python-format
 msgid ""
-"Esneyen veya ezilen kalitesiz takozlar, makinenin terazisini bozar. Dengesiz"
-" basan halatlar, kasnak kanallarını asimetrik aşındırır ve halat ömrünü "
+"Esneyen veya ezilen kalitesiz takozlar, makinenin terazisini bozar. Dengesiz "
+"basan halatlar, kasnak kanallarını asimetrik aşındırır ve halat ömrünü "
 "%%50’ye varan oranda kısaltır."
 msgstr ""
 "Schlechte Keile, die sich dehnen oder zerquetschen, beeinträchtigen das "
@@ -6884,9 +7010,9 @@ msgid ""
 "Makine dairesindeki titreşimi yutamayan her takoz, kabin içine uğultu ve "
 "titreşim olarak döner. Yolcu konforunu tamamen yok eder."
 msgstr ""
-"Da sie die Vibrationen im Maschinenraum nicht absorbieren können, dreht sich"
-" jeder Keil summend und vibrierend in die Kabine. Es zerstört den Komfort "
-"der Passagiere vollständig."
+"Da sie die Vibrationen im Maschinenraum nicht absorbieren können, dreht sich "
+"jeder Keil summend und vibrierend in die Kabine. Es zerstört den Komfort der "
+"Passagiere vollständig."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:625
 msgid "Uzman Görüşü"
@@ -6894,8 +7020,8 @@ msgstr "Expertenmeinung"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:627
 msgid ""
-"\"Küçük Tasarruflar, <span class=\"text-danger\">Büyük Arızalar "
-"Doğurur.</span>\""
+"\"Küçük Tasarruflar, <span class=\"text-danger\">Büyük Arızalar Doğurur.</"
+"span>\""
 msgstr ""
 "„Kleine Einsparungen führen zu <span class=\"text-danger\">großen "
 "Misserfolgen.</span> “"
@@ -6928,8 +7054,8 @@ msgid ""
 "Plastik takozlar zamanla ezilir, makinenin dengesini bozar ve halatları tek "
 "taraflı yer bitirir."
 msgstr ""
-"Kunststoffkeile werden im Laufe der Zeit zerkleinert, wodurch die Stabilität"
-" der Maschine beeinträchtigt wird und die Seile einseitig angeordnet werden."
+"Kunststoffkeile werden im Laufe der Zeit zerkleinert, wodurch die Stabilität "
+"der Maschine beeinträchtigt wird und die Seile einseitig angeordnet werden."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:668
 msgid "Enerji Kaybı"
@@ -6939,8 +7065,8 @@ msgstr "Energieverlust"
 msgid ""
 "Dengesiz makine, motorun zorlanmasına ve aşırı enerji tüketimine sebep olur."
 msgstr ""
-"Eine unausgeglichene Maschine verursacht eine Belastung des Motors und einen"
-" übermäßigen Energieverbrauch."
+"Eine unausgeglichene Maschine verursacht eine Belastung des Motors und einen "
+"übermäßigen Energieverbrauch."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:682
 msgid ""
@@ -6949,8 +7075,8 @@ msgid ""
 "Makinenizin dengesini korur, halat ömrünü uzatır ve sessizliği garanti eder."
 msgstr ""
 "Die Gummikeile von Liftkeys verändern nie ihre Form mit einer <strong>Härte "
-"von 95 Shore</strong> und einer <strong>speziellen</strong> Kochtechnologie."
-" Es sorgt für die Stabilität Ihrer Maschine, verlängert die Lebensdauer des "
+"von 95 Shore</strong> und einer <strong>speziellen</strong> Kochtechnologie. "
+"Es sorgt für die Stabilität Ihrer Maschine, verlängert die Lebensdauer des "
 "Seils und garantiert einen geräuscharmen Betrieb."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:696
@@ -6966,8 +7092,8 @@ msgid ""
 "\"Unutmayın: Takozdan ettiğiniz tasarruf, yarın kasnak ve halat değişimi "
 "olarak size geri döner.\""
 msgstr ""
-"„Denken Sie daran: Die Einsparungen, die Sie durch den Keil erzielen, werden"
-" Ihnen morgen durch einen Austausch von Riemenscheiben und Seilen "
+"„Denken Sie daran: Die Einsparungen, die Sie durch den Keil erzielen, werden "
+"Ihnen morgen durch einen Austausch von Riemenscheiben und Seilen "
 "gutgeschrieben.“"
 
 #: .\crm\templates\preview\previewblog\takozlar.html:720
@@ -6979,8 +7105,7 @@ msgid ""
 "Vibrasyon takozları ve montaj süreci hakkında en çok merak edilen soruların "
 "yanıtları."
 msgstr ""
-"Antworten auf die kuriosesten Fragen zu Schwingkeilen und zum "
-"Montageprozess."
+"Antworten auf die kuriosesten Fragen zu Schwingkeilen und zum Montageprozess."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:737
 msgid "Plastik takoz ile LiftKeys kauçuk takoz arasındaki fark nedir?"
@@ -6997,12 +7122,12 @@ msgid ""
 "özel pişirme teknolojisiyle üretilir. Yıllar geçse de elastikiyetini korur, "
 "titreşimi sönümler ve makine terazisini bozmaz."
 msgstr ""
-"Kunststoff- oder Mischkeile von schlechter Qualität härten mit der Zeit aus,"
-" reißen und verlieren, wenn sie unter Last zerkleinert werden, ihre Form. "
-"Dieser Zustand überträgt Vibrationen auf das Gebäude. Die <strong>Gummikeile"
-" von LiftKeys werden aus 100%% echtem Gummi mit spezieller Kochtechnologie "
-"hergestellt</strong>. Im Laufe der Jahre behält es seine Elastizität, dämpft"
-" Vibrationen und beeinträchtigt das Gleichgewicht der Maschine nicht."
+"Kunststoff- oder Mischkeile von schlechter Qualität härten mit der Zeit aus, "
+"reißen und verlieren, wenn sie unter Last zerkleinert werden, ihre Form. "
+"Dieser Zustand überträgt Vibrationen auf das Gebäude. Die <strong>Gummikeile "
+"von LiftKeys werden aus 100%% echtem Gummi mit spezieller Kochtechnologie "
+"hergestellt</strong>. Im Laufe der Jahre behält es seine Elastizität, dämpft "
+"Vibrationen und beeinträchtigt das Gleichgewicht der Maschine nicht."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:751
 msgid "\"95 Shore\" sertlik değeri neden bu kadar önemli?"
@@ -7035,10 +7160,9 @@ msgid ""
 "veya kopma yapmaz."
 msgstr ""
 "Die Keile von LiftKeys sind so konzipiert, dass sie bei ordnungsgemäßer "
-"Installation die gesamte mechanische Lebensdauer des "
-"<strong>Aufzugs</strong> überstehen. Es verrottet oder bricht nicht, es sei "
-"denn, es wird direkt dem Sonnenlicht ausgesetzt (in der Umgebung des "
-"Maschinenraums)."
+"Installation die gesamte mechanische Lebensdauer des <strong>Aufzugs</"
+"strong> überstehen. Es verrottet oder bricht nicht, es sei denn, es wird "
+"direkt dem Sonnenlicht ausgesetzt (in der Umgebung des Maschinenraums)."
 
 #: .\crm\templates\preview\previewblog\takozlar.html:779
 msgid "Montaj sırasında nelere dikkat edilmelidir?"
@@ -7047,14 +7171,14 @@ msgstr "Was ist bei der Montage zu beachten"
 #: .\crm\templates\preview\previewblog\takozlar.html:784
 msgid ""
 "En önemli kural, makinenin teraziye alınmasıdır. Takoz somunları sıkılırken "
-"makinenin kasnak hizasının kaymamasına dikkat edilmelidir. Ayrıca MRL (Kare)"
-" ve Motor (Yuvarlak) takozların, makine şasesindeki delik çaplarına uygun "
+"makinenin kasnak hizasının kaymamasına dikkat edilmelidir. Ayrıca MRL (Kare) "
+"ve Motor (Yuvarlak) takozların, makine şasesindeki delik çaplarına uygun "
 "seçildiğinden emin olunmalıdır."
 msgstr ""
 "Die wichtigste Regel ist, die Maschine zur Waage zu bringen. Es ist darauf "
-"zu achten, dass die Riemenscheibenausrichtung der Maschine beim Anziehen der"
-" Keilmuttern nicht verrutscht. Außerdem muss sichergestellt werden, dass die"
-" Keile MRL (quadratisch) und Motor (rund) entsprechend den Lochdurchmessern "
+"zu achten, dass die Riemenscheibenausrichtung der Maschine beim Anziehen der "
+"Keilmuttern nicht verrutscht. Außerdem muss sichergestellt werden, dass die "
+"Keile MRL (quadratisch) und Motor (rund) entsprechend den Lochdurchmessern "
 "im Maschinengehäuse ausgewählt werden."
 
 #: .\crm\templates\preview\previewblog\zemin.html:7
@@ -7066,12 +7190,15 @@ msgstr "LiftKeys PVC-Bodenbelag | Feuerfester, antibakterieller Aufzugsboden"
 msgid ""
 "\n"
 "LiftKeys asansör PVC zemin kaplamaları ile güvenliği ve estetiği artırın.\n"
-"Bfl-S1 yanmazlık sertifikası, antibakteriyel yüzey, ses yalıtımı ve özel tasarım\n"
+"Bfl-S1 yanmazlık sertifikası, antibakteriyel yüzey, ses yalıtımı ve özel "
+"tasarım\n"
 "dijital baskı seçenekleriyle asansörünüze değer katan zemin çözümleri.\n"
 msgstr ""
 "\n"
-"Verbessern Sie Sicherheit und Ästhetik mit LiftKeys PVC-Bodenbelägen für Aufzüge.\n"
-"Bfl-S1-Zertifikat für Entflammbarkeit, antibakterielle Oberfläche, Schalldämmung und spezielles Design\n"
+"Verbessern Sie Sicherheit und Ästhetik mit LiftKeys PVC-Bodenbelägen für "
+"Aufzüge.\n"
+"Bfl-S1-Zertifikat für Entflammbarkeit, antibakterielle Oberfläche, "
+"Schalldämmung und spezielles Design\n"
 "Bodenlösungen, die Ihren Aufzug mit Digitaldruckoptionen aufwerten.\n"
 
 #: .\crm\templates\preview\previewblog\zemin.html:21
@@ -7092,12 +7219,15 @@ msgstr "LiftKeys | Kundenspezifischer und feuerfester Aufzugs-PVC-Bodenbelag"
 msgid ""
 "\n"
 "Asansörünüz için en güvenli ve şık çözüm: LiftKeys PVC Zeminler.\n"
-"Yangına dayanıklı (Bfl-S1), hijyenik, kaydırmaz ve 3D dijital baskı teknolojisiyle\n"
+"Yangına dayanıklı (Bfl-S1), hijyenik, kaydırmaz ve 3D dijital baskı "
+"teknolojisiyle\n"
 "mermer estetiğini 10'da 1 maliyetle sunuyoruz.\n"
 msgstr ""
 "\n"
-"Die sicherste und eleganteste Lösung für Ihren Aufzug: LiftKeys PVC Flooring.\n"
-"Feuerfest (Bfl-S1), hygienisch, rutschfest und mit 3D-Digitaldrucktechnologie\n"
+"Die sicherste und eleganteste Lösung für Ihren Aufzug: LiftKeys PVC "
+"Flooring.\n"
+"Feuerfest (Bfl-S1), hygienisch, rutschfest und mit 3D-"
+"Digitaldrucktechnologie\n"
 "Wir bieten Marmorästhetik zum Preis von 1 zu 10 an.\n"
 
 #: .\crm\templates\preview\previewblog\zemin.html:41
@@ -7113,7 +7243,8 @@ msgid ""
 msgstr ""
 "\n"
 "Brandfeste und leichte PVC-Bodenbeläge in Marmoroptik\n"
-"Personalisieren Sie Ihren Aufzug mit LiftKeys und erhöhen Sie so Sicherheit und Komfort.\n"
+"Personalisieren Sie Ihren Aufzug mit LiftKeys und erhöhen Sie so Sicherheit "
+"und Komfort.\n"
 "Klicken Sie hier für technische Details und die Abholung der Rollen.\n"
 
 #: .\crm\templates\preview\previewblog\zemin.html:226
@@ -7128,12 +7259,16 @@ msgstr "LiftKeys Elevator PVC-Bodenbeläge und Bodenbeläge mit Granitmuster"
 #: .\crm\templates\preview\previewblog\zemin.html:268
 msgid ""
 "\"Asansör zemin PVC kaplamaları,<br>\n"
-"                <strong class=\"fw-bold\" style=\"color: #333; text-decoration: underline; text-decoration-color: var(--lk-orange);\">sadece bir yer döşemesi değil</strong><br>\n"
+"                <strong class=\"fw-bold\" style=\"color: #333; text-"
+"decoration: underline; text-decoration-color: var(--lk-orange);\">sadece bir "
+"yer döşemesi değil</strong><br>\n"
 "                asansörün konforunu ve<br>\n"
 "                güvenliğini artırır.\""
 msgstr ""
 "„PVC-Beschichtungen für den Aufzugsboden, <br>\n"
-" <strong class=\"fw-bold\" style=\"color: #333; text-decoration: underline; text-decoration-color: var(--lk-orange);\">nicht nur ein Bodenbelag</strong> <br>\n"
+" <strong class=\"fw-bold\" style=\"color: #333; text-decoration: underline; "
+"text-decoration-color: var(--lk-orange);\">nicht nur ein Bodenbelag</strong> "
+"<br>\n"
 " der Komfort des Aufzugs und <br>\n"
 " Es erhöht die Sicherheit.“"
 
@@ -7174,8 +7309,8 @@ msgstr "Antibakterielle und hygienische Struktur"
 #: .\crm\templates\preview\previewblog\zemin.html:332
 #, python-format
 msgid ""
-"Sertifikalı antibakteriyel yüzey teknolojimiz, bakteri ve küf oluşumunu %%99"
-" oranında engeller. Temiz bir nefes ve sağlıklı bir temas noktası sunar."
+"Sertifikalı antibakteriyel yüzey teknolojimiz, bakteri ve küf oluşumunu %%99 "
+"oranında engeller. Temiz bir nefes ve sağlıklı bir temas noktası sunar."
 msgstr ""
 "Unsere zertifizierte antibakterielle Oberflächentechnologie verhindert die "
 "Bildung von Bakterien und Schimmel zu 99%%. Sie bietet einen sauberen Atem "
@@ -7203,8 +7338,8 @@ msgid ""
 "Özel dokusu sayesinde ayakkabı tabanını kavrar; çocukların, yaşlıların ve "
 "evcil hayvanların kayıp düşme riskini ortadan kaldırır."
 msgstr ""
-"Dank seiner speziellen Textur liegt es an der Schuhsohle fest und verhindert"
-" so das Verlustrisiko von Kindern, älteren Menschen und Haustieren."
+"Dank seiner speziellen Textur liegt es an der Schuhsohle fest und verhindert "
+"so das Verlustrisiko von Kindern, älteren Menschen und Haustieren."
 
 #: .\crm\templates\preview\previewblog\zemin.html:376
 msgid "Tekstil Tabanlı PVC Zemin - Bej Mermer Desen"
@@ -7345,10 +7480,12 @@ msgstr "PVC-Rolle und Muster mit schwarzem Marmormuster"
 #: .\crm\templates\preview\previewblog\zemin.html:542
 msgid ""
 "$ 3.000 USD Harcamayın;<br>\n"
-"                        <span class=\"text-dark\" style=\"font-size: 1.5rem;\">Mimari Estetiği 10'da 1 Fiyatına Yakalayın!</span>"
+"                        <span class=\"text-dark\" style=\"font-size: 1.5rem;"
+"\">Mimari Estetiği 10'da 1 Fiyatına Yakalayın!</span>"
 msgstr ""
 "Gib nicht 3.000 USD aus; <br>\n"
-" <span class=\"text-dark\" style=\"font-size: 1.5rem;\">Holen Sie sich architektonische Ästhetik zum Preis von 1 von 10!</span>"
+" <span class=\"text-dark\" style=\"font-size: 1.5rem;\">Holen Sie sich "
+"architektonische Ästhetik zum Preis von 1 von 10!</span>"
 
 #: .\crm\templates\preview\previewblog\zemin.html:549
 msgid ""
@@ -7366,8 +7503,8 @@ msgstr "Kundenspezifische Drucktechnologie:"
 
 #: .\crm\templates\preview\previewblog\zemin.html:554
 msgid ""
-"En nadide mermer dokularını, ileri teknoloji baskı sistemimizle PVC yüzeyine"
-" birebir yansıtıyoruz."
+"En nadide mermer dokularını, ileri teknoloji baskı sistemimizle PVC yüzeyine "
+"birebir yansıtıyoruz."
 msgstr ""
 "Mit unserem fortschrittlichen Drucksystem projizieren wir die seltensten "
 "Marmorstrukturen auf die PVC-Oberfläche."
@@ -7378,8 +7515,8 @@ msgstr "1 von 10 kostet:"
 
 #: .\crm\templates\preview\previewblog\zemin.html:559
 msgid ""
-"Mermer plakalarına ve zahmetli montaja harcayacağınız binlerce dolar yerine,"
-" aynı ihtişamı bütçenizi yormadan yakalayın."
+"Mermer plakalarına ve zahmetli montaja harcayacağınız binlerce dolar yerine, "
+"aynı ihtişamı bütçenizi yormadan yakalayın."
 msgstr ""
 "Anstatt der Tausenden von Dollar, die Sie für Marmorplatten und aufwändige "
 "Installationen ausgeben würden, können Sie dieselbe Pracht einfangen, ohne "
@@ -7394,8 +7531,8 @@ msgid ""
 "Mermerin asansörünüze bindireceği yüzlerce kiloluk yükten kurtulun; motor "
 "ömrünü uzatın, enerji tasarrufu sağlayın."
 msgstr ""
-"Befreien Sie sich von den Hunderten von Pfund Last, die der Marmor auf Ihrem"
-" Aufzug lastet. Verlängern Sie die Lebensdauer des Motors und sparen Sie "
+"Befreien Sie sich von den Hunderten von Pfund Last, die der Marmor auf Ihrem "
+"Aufzug lastet. Verlängern Sie die Lebensdauer des Motors und sparen Sie "
 "Energie."
 
 #: .\crm\templates\preview\previewblog\zemin.html:575
@@ -7527,8 +7664,7 @@ msgid "Katman Yapısı:"
 msgstr "Schichtaufbau:"
 
 #: .\crm\templates\preview\previewblog\zemin.html:701
-msgid ""
-"Koruyucu Üst Katman<br>Yüksek Çözünürlüklü Desen<br>Dayanıklı PVC Taban"
+msgid "Koruyucu Üst Katman<br>Yüksek Çözünürlüklü Desen<br>Dayanıklı PVC Taban"
 msgstr ""
 "Schützende Oberschicht <br>mit hochauflösendem Muster, <br>strapazierfähige "
 "PVC-Sohle"
@@ -7543,8 +7679,8 @@ msgstr "Ist der PVC-Bodenbelag für Aufzüge feuerfest?"
 
 #: .\crm\templates\preview\previewblog\zemin.html:726
 msgid ""
-"Evet, LiftKeys PVC zemin kaplamaları <strong>EN 13501-1 standartlarına uygun"
-" Bfl-S1 yanmazlık sertifikasına</strong> sahiptir."
+"Evet, LiftKeys PVC zemin kaplamaları <strong>EN 13501-1 standartlarına uygun "
+"Bfl-S1 yanmazlık sertifikasına</strong> sahiptir."
 msgstr ""
 "Ja, LiftKeys PVC-Bodenbeläge verfügen über das "
 "<strong>Brandschutzzertifikat</strong> Bfl-S1 gemäß den Normen EN 13501-1."
@@ -7602,8 +7738,8 @@ msgid ""
 "kauçuk ürünleri portföye eklenmiştir. Titreşim, darbe, ses ve yüzey koruma "
 "alanlarında yüksek performanslı kauçuk çözümleri sunulmuştur."
 msgstr ""
-"Gummiprodukte, die Lösungen für vier verschiedene technische Probleme in der"
-" Aufzugsindustrie bieten, wurden in das Portfolio aufgenommen. In den "
+"Gummiprodukte, die Lösungen für vier verschiedene technische Probleme in der "
+"Aufzugsindustrie bieten, wurden in das Portfolio aufgenommen. In den "
 "Bereichen Vibrations-, Stoß-, Geräusch- und Oberflächenschutz werden "
 "leistungsstarke Gummilösungen angeboten."
 
@@ -7614,8 +7750,8 @@ msgstr "HORUS & ATLAS-PRODUKTLINIE"
 #: .\crm\templates\preview\timeline.html:52
 msgid ""
 "Horus markasıyla asansör kapı fotosellerinin, Atlas markasıyla ise mekanik "
-"ve elektronik aşırı yük sistemlerinin imalatına başlanmış; bu iki ürün grubu"
-" ile asansör güvenlik çözümleri güçlendirilmiştir."
+"ve elektronik aşırı yük sistemlerinin imalatına başlanmış; bu iki ürün grubu "
+"ile asansör güvenlik çözümleri güçlendirilmiştir."
 msgstr ""
 "Mit der Marke Horus wurde mit der Herstellung von Fotozellen für "
 "Aufzugstüren sowie von mechanischen und elektronischen Überlastsystemen der "
@@ -7628,14 +7764,13 @@ msgstr "F1 AUFZUGSBREMSEN"
 
 #: .\crm\templates\preview\timeline.html:67
 msgid ""
-"Her kapasite ve hızda ihtiyaca özel fren sistemi çözümleri geliştirilmiştir."
-" 500 kg’dan 20 tona, 0,25 m/s’ten 2,5 m/s hıza kadar 6 farklı modelde "
-"asansör freni üretilerek, tüm projelere güvenli ve etkin çözümler "
-"sunulmuştur."
+"Her kapasite ve hızda ihtiyaca özel fren sistemi çözümleri geliştirilmiştir. "
+"500 kg’dan 20 tona, 0,25 m/s’ten 2,5 m/s hıza kadar 6 farklı modelde asansör "
+"freni üretilerek, tüm projelere güvenli ve etkin çözümler sunulmuştur."
 msgstr ""
 "Spezielle Bremssystemlösungen wurden für jede Kapazität und Geschwindigkeit "
-"entwickelt. Aufzugsbremsen werden in 6 verschiedenen Modellen von 500 kg bis"
-" 20 Tonnen, 0,25 m/s bis 2,5 m/s, hergestellt und bieten sichere und "
+"entwickelt. Aufzugsbremsen werden in 6 verschiedenen Modellen von 500 kg bis "
+"20 Tonnen, 0,25 m/s bis 2,5 m/s, hergestellt und bieten sichere und "
 "effektive Lösungen für alle Projekte."
 
 #: .\crm\templates\preview\timeline.html:82
@@ -7673,8 +7808,8 @@ msgid ""
 "verilmiştir."
 msgstr ""
 "Unter der Marke Decovetro wurden Fleischschneidebretter, Tischgläser, "
-"Kaffeetischgläser, Glastische und dekorative Spiegel hergestellt und für den"
-" Heimdekorationssektor verkauft."
+"Kaffeetischgläser, Glastische und dekorative Spiegel hergestellt und für den "
+"Heimdekorationssektor verkauft."
 
 #: .\crm\templates\preview\timeline.html:125
 msgid "ASANSÖR ZEMİN MALZEMELERİ"
@@ -7727,9 +7862,9 @@ msgid ""
 "yapılmıştır. Yılda 1 milyon adet satış yapılarak 50 ülkeye ihracat "
 "gerçekleştirilmiştir."
 msgstr ""
-"Es wurden Dreieckschlüssel nach Weltstandards hergestellt, die die Tür jeder"
-" Marke öffnen können. Jährlich wurden 1 Million Einheiten verkauft und in 50"
-" Länder exportiert."
+"Es wurden Dreieckschlüssel nach Weltstandards hergestellt, die die Tür jeder "
+"Marke öffnen können. Jährlich wurden 1 Million Einheiten verkauft und in 50 "
+"Länder exportiert."
 
 #: .\crm\templates\preview\timeline.html:186
 msgid "ETİKET - TASARIM"
@@ -7771,8 +7906,8 @@ msgid "Adet:"
 msgstr "Menge:"
 
 #: .\crm\templates\productmanager\card_page.html:42
-#: .\crm\templates\urunler\uruncreateandupdate.html:135
-#: .\crm\templates\urunler\uruncreateandupdate.html:150
+#: .\crm\templates\urunler\uruncreateandupdate.html:157
+#: .\crm\templates\urunler\uruncreateandupdate.html:193
 msgid "Sil"
 msgstr "Löschen"
 
@@ -7840,8 +7975,7 @@ msgstr "Telefon"
 
 #: .\crm\templates\productmanager\checkout.html:47
 msgid "Siparişiniz hakkında eklemek istediğiniz not..."
-msgstr ""
-"Beachten Sie, dass Sie etwas zu Ihrer Bestellung hinzufügen möchten..."
+msgstr "Beachten Sie, dass Sie etwas zu Ihrer Bestellung hinzufügen möchten..."
 
 #: .\crm\templates\productmanager\checkout.html:52
 msgid "Siparişi Tamamla"
@@ -7880,8 +8014,7 @@ msgstr ""
 #: .\crm\templates\productmanager\product_page.html:34
 msgid "Liftkeys, asansör sektörü için inovatif ve sertifikalı çözümler sunar."
 msgstr ""
-"Liftkeys bietet innovative und zertifizierte Lösungen für die "
-"Aufzugsbranche."
+"Liftkeys bietet innovative und zertifizierte Lösungen für die Aufzugsbranche."
 
 #: .\crm\templates\productmanager\product_page.html:138
 msgid "Sepete Ekle"
@@ -7981,7 +8114,7 @@ msgid "Resim"
 msgstr "Malerei"
 
 #: .\crm\templates\teklifler\offer_pdf.html:132
-#: .\crm\templates\urunler\uruncreateandupdate.html:178
+#: .\crm\templates\urunler\uruncreateandupdate.html:225
 msgid "Ürün"
 msgstr "Produkt"
 
@@ -8034,207 +8167,219 @@ msgstr "Kleine Zahlen werden zuerst im Menü angezeigt."
 msgid "Görseller"
 msgstr "Bildmaterial"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:141
+#: .\crm\templates\urunler\uruncreateandupdate.html:167
 msgid "Yeni Görsel Ekle"
 msgstr "Neues Bild hinzufügen"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:159
+#: .\crm\templates\urunler\uruncreateandupdate.html:206
 msgid "Temizle"
 msgstr "Klar"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:160
+#: .\crm\templates\urunler\uruncreateandupdate.html:207
 msgid "Kaydet"
 msgstr "Speichern"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:160
+#: .\crm\templates\urunler\uruncreateandupdate.html:207
 msgid "Oluştur"
 msgstr "Erstellen"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:170
+#: .\crm\templates\urunler\uruncreateandupdate.html:217
 msgid "Ürün Listesi"
 msgstr "Liste der Produkte"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:176
+#: .\crm\templates\urunler\uruncreateandupdate.html:223
 msgid "Görsel"
 msgstr "Visuell"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:177
+#: .\crm\templates\urunler\uruncreateandupdate.html:224
 msgid "Sıra"
 msgstr "Reihenfolge"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:179
+#: .\crm\templates\urunler\uruncreateandupdate.html:226
 msgid "Stok"
 msgstr "Aktie"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:180
+#: .\crm\templates\urunler\uruncreateandupdate.html:227
 msgid "Fiyat"
 msgstr "Preis"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:181
+#: .\crm\templates\urunler\uruncreateandupdate.html:228
 msgid "Durum"
 msgstr "Bundesland"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:182
+#: .\crm\templates\urunler\uruncreateandupdate.html:229
 msgid "İşlem"
 msgstr "Transaktion"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:196
+#: .\crm\templates\urunler\uruncreateandupdate.html:242
+#, fuzzy
+#| msgid "Görsel"
+msgid "Görsel Yok"
+msgstr "Visuell"
+
+#: .\crm\templates\urunler\uruncreateandupdate.html:251
 msgid "Aktif"
 msgstr "Aktiv"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:198
+#: .\crm\templates\urunler\uruncreateandupdate.html:253
 msgid "Pasif"
 msgstr "Passiv"
 
-#: .\crm\templates\urunler\uruncreateandupdate.html:203
+#: .\crm\templates\urunler\uruncreateandupdate.html:258
 msgid "Soruları Yönet"
 msgstr "Fragen verwalten"
 
-#: .\templates\previewtemplates\previewmenu.html:109
+#: .\templates\previewtemplates\previewmenu.html:125
 msgid "Kağıttanişler"
 msgstr "Zeitungsjungen"
 
-#: .\templates\previewtemplates\previewmenu.html:144
+#: .\templates\previewtemplates\previewmenu.html:160
 msgid "Tümünü Gör"
 msgstr "Alles ansehen"
 
-#: .\templates\previewtemplates\previewmenu.html:164
+#: .\templates\previewtemplates\previewmenu.html:180
 msgid "Ürün bulunamadı."
 msgstr "Es wurde kein Produkt gefunden."
 
-#: .\templates\previewtemplates\previewmenu.html:187
+#: .\templates\previewtemplates\previewmenu.html:203
 msgid "Tüm Kategorileri Gör"
 msgstr "Alle Kategorien ansehen"
 
-#: .\templates\previewtemplates\previewmenu.html:198
+#: .\templates\previewtemplates\previewmenu.html:214
 msgid "Çözümlerimiz"
 msgstr "Unsere Lösungen"
 
-#: .\templates\previewtemplates\previewmenu.html:216
-#: .\templates\previewtemplates\previewmenu.html:391
+#: .\templates\previewtemplates\previewmenu.html:232
+#: .\templates\previewtemplates\previewmenu.html:407
 msgid "LKS Horus Fotosel"
 msgstr "LKS Horus Fotozelle"
 
-#: .\templates\previewtemplates\previewmenu.html:217
+#: .\templates\previewtemplates\previewmenu.html:233
 msgid "Güvenli kapı sistemleri"
 msgstr "Sichere Türsysteme"
 
-#: .\templates\previewtemplates\previewmenu.html:229
-#: .\templates\previewtemplates\previewmenu.html:394
+#: .\templates\previewtemplates\previewmenu.html:245
+#: .\templates\previewtemplates\previewmenu.html:410
 msgid "Atlas Aşırı Yük"
 msgstr "Atlas-Überlastung"
 
-#: .\templates\previewtemplates\previewmenu.html:230
+#: .\templates\previewtemplates\previewmenu.html:246
 msgid "Hassas yük ölçüm teknolojisi"
 msgstr "Präzise Lastmesstechnik"
 
-#: .\templates\previewtemplates\previewmenu.html:242
-#: .\templates\previewtemplates\previewmenu.html:397
+#: .\templates\previewtemplates\previewmenu.html:258
+#: .\templates\previewtemplates\previewmenu.html:413
 msgid "Zemin"
 msgstr "Zemin"
 
-#: .\templates\previewtemplates\previewmenu.html:243
+#: .\templates\previewtemplates\previewmenu.html:259
 msgid "Yanmaz ve estetik PVC kaplamalar"
 msgstr "Feuerfeste und ästhetische PVC-Beschichtungen"
 
-#: .\templates\previewtemplates\previewmenu.html:255
-#: .\templates\previewtemplates\previewmenu.html:400
+#: .\templates\previewtemplates\previewmenu.html:271
+#: .\templates\previewtemplates\previewmenu.html:416
 msgid "Switch Sistemleri"
 msgstr "Switch-Systeme"
 
-#: .\templates\previewtemplates\previewmenu.html:256
+#: .\templates\previewtemplates\previewmenu.html:272
 msgid "Limit ve güvenlik anahtar çözümleri"
 msgstr "Schlüssellösungen für Limit und Sicherheit"
 
-#: .\templates\previewtemplates\previewmenu.html:269
+#: .\templates\previewtemplates\previewmenu.html:285
 msgid "Sessiz ve güçlü kabin fanları"
 msgstr "Leise und leistungsstarke Kabinenventilatoren"
 
-#: .\templates\previewtemplates\previewmenu.html:281
-#: .\templates\previewtemplates\previewmenu.html:406
+#: .\templates\previewtemplates\previewmenu.html:297
+#: .\templates\previewtemplates\previewmenu.html:422
 msgid "Ağırlık Paten Sistemleri"
 msgstr "Systeme zum Gewichtsskaten"
 
-#: .\templates\previewtemplates\previewmenu.html:282
+#: .\templates\previewtemplates\previewmenu.html:298
 msgid "Sessiz ve titreşimsiz TPU patenler"
 msgstr "Leise und vibrationsfreie TPU-Skates"
 
-#: .\templates\previewtemplates\previewmenu.html:294
-#: .\templates\previewtemplates\previewmenu.html:409
+#: .\templates\previewtemplates\previewmenu.html:310
+#: .\templates\previewtemplates\previewmenu.html:425
 msgid "Solid & Polistren Levha"
 msgstr "Solide Platte und Polystyrolplatte"
 
-#: .\templates\previewtemplates\previewmenu.html:295
+#: .\templates\previewtemplates\previewmenu.html:311
 msgid "Kırılmaz tavan ve duvar kaplamaları"
 msgstr "Unzerbrechliche Decken- und Wandverkleidungen"
 
-#: .\templates\previewtemplates\previewmenu.html:307
-#: .\templates\previewtemplates\previewmenu.html:412
+#: .\templates\previewtemplates\previewmenu.html:323
+#: .\templates\previewtemplates\previewmenu.html:428
 msgid "Paslanmaz Küpeşte"
 msgstr "Handlauf aus Edelstahl"
 
-#: .\templates\previewtemplates\previewmenu.html:308
+#: .\templates\previewtemplates\previewmenu.html:324
 msgid "Modüler sistem ve renk seçenekleri"
 msgstr "Modulares System und Farboptionen"
 
-#: .\templates\previewtemplates\previewmenu.html:320
-#: .\templates\previewtemplates\previewmenu.html:415
+#: .\templates\previewtemplates\previewmenu.html:336
+#: .\templates\previewtemplates\previewmenu.html:431
 msgid "Vibrasyon Takozları"
 msgstr "Vibrationskeile"
 
-#: .\templates\previewtemplates\previewmenu.html:322
+#: .\templates\previewtemplates\previewmenu.html:338
 msgid "Titreşim önleyici kauçuk sönümleyiciler"
 msgstr "Antivibrationsgummidämpfer"
 
-#: .\templates\previewtemplates\previewmenu.html:334
-#: .\templates\previewtemplates\previewmenu.html:418
+#: .\templates\previewtemplates\previewmenu.html:350
+#: .\templates\previewtemplates\previewmenu.html:434
 msgid "Üçgen Anahtar"
 msgstr "Dreieckschlüssel"
 
-#: .\templates\previewtemplates\previewmenu.html:336
+#: .\templates\previewtemplates\previewmenu.html:352
 msgid "Standartlara uygun güvenli kilit sistemleri"
 msgstr "Normkonforme sichere Schließsysteme"
 
-#: .\templates\previewtemplates\previewmenu.html:348
-#: .\templates\previewtemplates\previewmenu.html:421
+#: .\templates\previewtemplates\previewmenu.html:364
+#: .\templates\previewtemplates\previewmenu.html:437
 msgid "Dekoratif Cam"
 msgstr "Dekoratives Glas"
 
-#: .\templates\previewtemplates\previewmenu.html:350
+#: .\templates\previewtemplates\previewmenu.html:366
 msgid "500 farklı desen seçeneği ile estetik kabinler"
 msgstr "Ästhetische Kabinen mit 500 verschiedenen Musteroptionen"
 
-#: .\templates\previewtemplates\previewmenu.html:362
-#: .\templates\previewtemplates\previewmenu.html:424
+#: .\templates\previewtemplates\previewmenu.html:378
+#: .\templates\previewtemplates\previewmenu.html:440
 msgid "Kabin Paten Sistemleri"
 msgstr "Kabinen-Skate-Systeme"
 
-#: .\templates\previewtemplates\previewmenu.html:364
+#: .\templates\previewtemplates\previewmenu.html:380
 msgid "Sessiz çalışma ve titreşim sönümleyici tasarım"
 msgstr "Geräuscharmer Betrieb und vibrationsdämpfendes Design"
 
-#: .\templates\previewtemplates\previewmenu.html:375
-#: .\templates\previewtemplates\previewmenu.html:427
+#: .\templates\previewtemplates\previewmenu.html:391
+#: .\templates\previewtemplates\previewmenu.html:443
 msgid "Aydınlatma / Spot Sistemleri"
 msgstr "Licht-/Spotsysteme"
 
-#: .\templates\previewtemplates\previewmenu.html:377
+#: .\templates\previewtemplates\previewmenu.html:393
 msgid "On-board driver teknolojisi ve alev almaz ABS kasa"
 msgstr "Integrierte Treibertechnologie und flammhemmendes ABS-Chassis"
 
-#: .\templates\previewtemplates\previewmenu.html:435
+#: .\templates\previewtemplates\previewmenu.html:451
 msgid "Data Merkezi"
 msgstr "Rechenzentrum"
 
-#: .\templates\previewtemplates\previewmenu.html:443
+#: .\templates\previewtemplates\previewmenu.html:459
 msgid "Galeri"
 msgstr "Gallerie"
 
-#: .\templates\previewtemplates\previewmenu.html:447
+#: .\templates\previewtemplates\previewmenu.html:463
 msgid "İLETİŞİM"
 msgstr "KOMMUNIKATION"
 
-#: .\templates\previewtemplates\previewmenu.html:463
+#: .\templates\previewtemplates\previewmenu.html:477
+#, fuzzy
+#| msgid "Sepetiniz"
+msgid "Sepetim"
+msgstr "Dein Einkaufswagen"
+
+#: .\templates\previewtemplates\previewmenu.html:494
 msgid "Dil Seçin"
 msgstr "Sprache wählen"
 

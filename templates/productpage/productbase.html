@@ -72,6 +72,38 @@
         body {
             overflow-x: hidden;
         }
+
+        /* Çözümler Sayfası Videoları İçin Eşit Genişlik ve Yükseklik Oranı (16:9) */
+        .video-placeholder,
+        .video-wrapper,
+        .video-wrapper-web3,
+        .video-container {
+            position: relative !important;
+            width: 100% !important;
+            max-width: 800px !important;
+            aspect-ratio: 16 / 9 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            height: auto !important;
+            overflow: hidden !important;
+        }
+
+        .video-placeholder img,
+        .video-wrapper img,
+        .video-wrapper-web3 img,
+        .video-container img,
+        .video-placeholder iframe,
+        .video-wrapper iframe,
+        .video-wrapper-web3 iframe,
+        .video-container iframe {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: unset !important;
+            object-fit: cover !important;
+        }
         /* WhatsApp Widget CSS */
         .whatsapp-widget {
             position: fixed;

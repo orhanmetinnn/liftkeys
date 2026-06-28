@@ -22,7 +22,7 @@
     <div class="d-flex align-items-center">
 
       <!-- Dil değiştirme formu — fetch değil gerçek POST, cookie kesin set edilir -->
-      <form id="lk-lang-form" action="{% url 'set_language' %}" method="post" style="display:none">
+      <form id="lk-lang-form" action="{% url 'custom_set_language' %}" method="post" style="display:none">
         {% csrf_token %}
         <input type="hidden" name="language" id="lk-lang-code">
         <input type="hidden" name="next"     id="lk-lang-next">
@@ -77,15 +77,31 @@
   </div>
 </div>
 
+<style>
+  @media (max-width: 991px) {
+    #navbarNav.navbar-collapse {
+      overflow-y: auto !important;
+    }
+  }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="{% url "indexpage" %}">
       <img src="{% static 'image/logo-liftkeys-menu.png' %}" alt="LiftKeys Logo" width="150" height="30">
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="d-flex align-items-center gap-2">
+      <!-- Mobil Sepet İkonu (Her zaman üst barda görünür) -->
+      <a class="nav-link position-relative d-lg-none px-2" href="{% url 'cart_page' %}" style="color: #333;">
+        <i class="bi bi-cart3 fs-3"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mobile-cart-badge" style="font-size: 0.65rem; display: none;">0</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav align-items-lg-center">
@@ -451,6 +467,21 @@
             <i class="bi bi-cart3 fs-5"></i>
             <span id="cart-count-desktop"
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </li>
+
+        <!-- Mobil Sepet ve İletişim (Sadece mobilde hamburger menü içinde de görünür) -->
+        <li class="nav-item d-lg-none border-top pt-2">
+          <a class="nav-link position-relative d-flex align-items-center py-3 px-3" href="{% url 'cart_page' %}" style="color: #333;">
+            <i class="bi bi-cart3 fs-4 me-2"></i>
+            <span class="fw-semibold">{% trans "Sepetim" %}</span>
+            <span class="badge rounded-pill bg-danger mobile-cart-badge ms-2" style="display: none;">0</span>
+          </a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link d-flex align-items-center py-3 px-3" href="{% url 'contact' %}" style="color: #333;">
+            <i class="bi bi-envelope me-2 fs-4"></i>
+            <span class="fw-semibold">{% trans "İletişim" %}</span>
           </a>
         </li>
 
